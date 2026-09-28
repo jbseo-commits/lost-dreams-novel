@@ -1,103 +1,62 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>꿈을 잃은 세계 — 10화 파일럿</title>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05070b"><title>꿈을 잃은 세계 — NEURAL READER</title>
 <style>
-:root{--bg:#05070b;--ink:#e9edf2;--muted:#7f8998;--cyan:#65e8ff;--vio:#a58cff;--red:#ff536b;--glass:rgba(13,18,28,.76)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -20%,#18223c 0,#070a11 36%,#030407 75%);color:var(--ink);font-family:system-ui,"Noto Sans KR",sans-serif;min-height:100vh}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px);background-size:100% 4px;mix-blend-mode:overlay;z-index:8}
-.hud{position:fixed;inset:0 0 auto;z-index:9;height:58px;display:flex;align-items:center;padding:0 18px;border-bottom:1px solid #ffffff12;background:#05070bd9;backdrop-filter:blur(16px)}
-.logo{font-weight:800;letter-spacing:.12em}.logo i{color:var(--cyan);font-style:normal}.hudstat{margin-left:auto;display:flex;gap:18px;color:var(--muted);font:11px ui-monospace,monospace}.hudstat b{color:var(--cyan)}
-.progress{position:fixed;z-index:12;top:57px;left:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--vio));width:0}
-aside{position:fixed;z-index:7;left:18px;top:92px;width:180px}.epbtn{display:block;width:100%;border:0;border-left:1px solid #263042;background:none;color:#6d7787;text-align:left;padding:8px 12px;cursor:pointer}.epbtn.on{color:#fff;border-color:var(--cyan);background:linear-gradient(90deg,#65e8ff13,transparent)}
-main{width:min(760px,calc(100% - 48px));margin:0 auto;padding:118px 0 160px}.cover{min-height:70vh;display:flex;flex-direction:column;justify-content:center}.kicker{font:12px ui-monospace,monospace;color:var(--cyan);letter-spacing:.2em}.cover h1{font-size:clamp(48px,9vw,92px);line-height:.98;margin:14px 0 24px;letter-spacing:-.07em}.cover h1 span{display:block;color:transparent;-webkit-text-stroke:1px #ffffff4d}.premise{font-size:19px;line-height:1.8;color:#aeb7c5;max-width:570px}.start{margin-top:32px;width:max-content;border:1px solid #65e8ff66;background:#65e8ff0c;color:var(--cyan);padding:13px 20px;cursor:pointer}
-.episode{display:none}.episode.on{display:block;animation:in .55s ease}.num{font:11px ui-monospace,monospace;color:var(--cyan);letter-spacing:.22em}.episode h2{font-size:38px;letter-spacing:-.05em;margin:9px 0 38px}.text{font-family:"Noto Serif KR",serif;font-size:18px;line-height:2.08;word-break:keep-all}.text p{margin:0 0 1.55em}.system{font:13px/1.7 ui-monospace,monospace;border:1px solid #65e8ff35;background:#65e8ff08;color:#9cefff;padding:15px 17px;margin:28px 0}.ad{position:relative;border:1px solid #a58cff44;background:linear-gradient(135deg,#a58cff0d,#65e8ff08);padding:22px;margin:34px 0;overflow:hidden}.ad:after{content:"SPONSORED DREAM";position:absolute;right:-15px;top:8px;color:#ffffff0b;font:900 24px ui-monospace,monospace;transform:rotate(4deg)}
-.quote{font-size:25px;line-height:1.6;color:#fff;border-left:2px solid var(--vio);padding:8px 0 8px 22px;margin:38px 0}.glitch{animation:glitch 2.4s infinite}.choice{display:flex;gap:10px;margin:42px 0}.choice button,.next{border:1px solid #ffffff25;background:#ffffff07;color:#dce3ec;padding:12px 16px;cursor:pointer}.choice button:hover,.next:hover{border-color:var(--cyan);color:var(--cyan)}.end{margin-top:55px;padding-top:22px;border-top:1px solid #ffffff18}.hook{font-size:22px;font-weight:700;line-height:1.6}.next{margin-top:20px}.dream-overlay{position:fixed;z-index:20;inset:0;display:none;place-items:center;background:radial-gradient(circle,#21194ce8,#05070bfa);text-align:center;padding:30px}.dream-overlay.on{display:grid;animation:flash .45s}.dream-overlay .big{font-size:clamp(38px,10vw,90px);font-weight:900;letter-spacing:-.06em}.dream-overlay small{color:#a9b3c2}.closeDream{margin-top:30px;border:1px solid #fff3;background:none;color:#fff;padding:10px 18px}
-@keyframes in{from{opacity:0;transform:translateY(12px)}}@keyframes glitch{0%,94%,100%{text-shadow:none}95%{text-shadow:3px 0 var(--red),-3px 0 var(--cyan)}97%{text-shadow:-2px 0 var(--red),2px 0 var(--cyan)}}@keyframes flash{from{opacity:0;filter:brightness(3)}}
-@media(max-width:1050px){aside{display:none}}@media(max-width:600px){main{width:calc(100% - 32px);padding-top:92px}.hudstat span:nth-child(2){display:none}.episode h2{font-size:31px}.text{font-size:17px;line-height:2}.cover h1{font-size:56px}}
+:root{--bg:#05070b;--paper:#090d14;--ink:#e8edf4;--muted:#7d8796;--cyan:#66e6ff;--vio:#aa8cff;--red:#ff526b;--line:#ffffff12;--p:0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#030509;color:var(--ink);font-family:system-ui,"Noto Sans KR",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:30;background:repeating-linear-gradient(0deg,#ffffff05 0 1px,transparent 1px 4px);opacity:.14}
+.aurora{position:fixed;inset:-30%;z-index:-2;background:radial-gradient(circle at 50% 10%,#18284d 0,transparent 30%),radial-gradient(circle at 85% 60%,#271b46 0,transparent 25%);filter:blur(50px);animation:drift 16s ease-in-out infinite alternate}
+.grain{position:fixed;inset:0;z-index:-1;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+.hud{position:fixed;top:0;left:0;right:0;height:62px;z-index:20;display:flex;align-items:center;padding:0 max(18px,env(safe-area-inset-left));border-bottom:1px solid var(--line);background:#05070bd8;backdrop-filter:blur(20px)}
+.brand{font-size:12px;font-weight:900;letter-spacing:.18em}.brand b{color:var(--cyan)}.stats{margin-left:auto;display:flex;gap:18px;font:10px ui-monospace,monospace;color:var(--muted)}.stats b{color:var(--cyan);font-weight:500}.bar{position:fixed;z-index:25;top:61px;left:0;height:2px;width:calc(var(--p)*1%);background:linear-gradient(90deg,var(--cyan),var(--vio),#fff);box-shadow:0 0 12px var(--cyan)}
+.nav{position:fixed;z-index:12;left:22px;top:96px;width:195px}.nav small{font:9px ui-monospace;color:#556171;letter-spacing:.15em}.ep{display:block;width:100%;border:0;border-left:1px solid #243044;background:none;color:#687386;text-align:left;padding:8px 11px;cursor:pointer;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ep:hover,.ep.on{color:#fff;border-color:var(--cyan);background:linear-gradient(90deg,#66e6ff12,transparent)}
+main{width:min(720px,calc(100% - 40px));margin:auto;padding:110px 0 180px}.hero{min-height:calc(100vh - 110px);display:flex;flex-direction:column;justify-content:center;position:relative}.eyebrow{font:10px ui-monospace;color:var(--cyan);letter-spacing:.28em}.hero h1{font-size:clamp(55px,10vw,100px);line-height:.88;letter-spacing:-.075em;margin:18px 0 30px}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1px #ffffff50}.premise{max-width:580px;font:17px/1.9 "Noto Serif KR",serif;color:#aab4c2}.enter{margin-top:36px;width:max-content;padding:13px 18px;border:1px solid #66e6ff55;background:#66e6ff08;color:var(--cyan);font:11px ui-monospace;letter-spacing:.12em;cursor:pointer}.enter:hover{background:#66e6ff14;box-shadow:0 0 35px #66e6ff12}
+.reader{display:none}.reader.on{display:block}.chapter-head{min-height:45vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:55px;border-bottom:1px solid var(--line);margin-bottom:55px}.chapter-head .n{font:10px ui-monospace;color:var(--cyan);letter-spacing:.25em}.chapter-head h2{font:700 clamp(35px,7vw,58px)/1.12 "Noto Serif KR",serif;letter-spacing:-.055em;margin:12px 0}.chapter-head .meta{color:#667282;font:10px ui-monospace}
+.prose{font:18px/2.12 "Noto Serif KR",serif;word-break:keep-all;letter-spacing:-.012em}.prose p{margin:0 0 1.65em}.prose strong{color:#fff}.prose hr{border:0;height:1px;background:linear-gradient(90deg,transparent,#ffffff25,transparent);margin:70px 0}
+.sys{font:12px/1.85 ui-monospace,monospace;color:#9ceeff;border:1px solid #66e6ff30;background:linear-gradient(135deg,#66e6ff0c,transparent);padding:18px 20px;margin:36px -20px;box-shadow:inset 3px 0 #66e6ff55}.sys:before{content:"SYSTEM / NEURAL FEED";display:block;color:#66e6ff77;font-size:9px;letter-spacing:.18em;margin-bottom:8px}
+.dialogue-key{position:relative;font-size:23px;line-height:1.75;color:#fff;margin:48px -28px;padding:22px 28px;border-left:2px solid var(--vio);background:linear-gradient(90deg,#aa8cff0d,transparent)}
+.reveal{opacity:.2;filter:blur(2px);transform:translateY(10px);transition:opacity .8s,filter .8s,transform .8s}.reveal.seen{opacity:1;filter:none;transform:none}
+.end{margin-top:80px;padding-top:30px;border-top:1px solid var(--line)}.end .label{font:9px ui-monospace;color:var(--cyan);letter-spacing:.2em}.end p{font-size:21px;line-height:1.7}.next{border:1px solid #ffffff25;background:#ffffff08;color:#fff;padding:13px 18px;cursor:pointer}.next:hover{border-color:var(--cyan);color:var(--cyan)}
+.interrupt{position:fixed;z-index:50;inset:0;display:none;place-items:center;background:radial-gradient(circle at 50% 45%,#21184eee,#030509fc);padding:30px;text-align:center}.interrupt.on{display:grid;animation:shock .55s}.interrupt .tag{font:10px ui-monospace;color:var(--red);letter-spacing:.25em}.interrupt .big{font:900 clamp(38px,10vw,84px)/.98 system-ui;margin:18px 0;letter-spacing:-.065em}.interrupt p{color:#98a3b3}.interrupt button{border:1px solid #fff3;background:none;color:#fff;padding:11px 18px}
+.toast{position:fixed;z-index:45;right:20px;bottom:20px;max-width:320px;border:1px solid #66e6ff28;background:#081019e8;backdrop-filter:blur(15px);padding:14px 16px;transform:translateY(30px);opacity:0;transition:.4s;font:11px/1.6 ui-monospace;color:#9ceeff}.toast.on{transform:none;opacity:1}
+@keyframes drift{to{transform:translate(4%,3%) scale(1.05)}}@keyframes shock{0%{opacity:0;filter:brightness(4);transform:scale(1.04)}100%{opacity:1}}
+@media(max-width:1050px){.nav{display:none}}@media(max-width:600px){.stats span:nth-child(2){display:none}main{width:calc(100% - 34px);padding-top:90px}.hero h1{font-size:58px}.prose{font-size:17px;line-height:2.08}.chapter-head{min-height:38vh}.dialogue-key{margin:40px -8px;padding:18px 16px}.sys{margin:30px -5px;padding:15px}.hud{height:56px}.bar{top:55px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;filter:none;transform:none}}
 </style></head><body>
-<div class="hud"><div class="logo">LOST <i>DREAMS</i></div><div class="hudstat"><span>NEURAL LINK <b>ONLINE</b></span><span>TOKEN <b id="token">0031.8</b></span><span>DREAM <b id="sync">97%</b></span></div></div><div class="progress" id="progress"></div>
-<aside id="nav"></aside><main>
-<section class="cover" id="cover"><div class="kicker">INTERACTIVE PILOT · EP 01—10</div><h1>꿈을 잃은 <span>세계</span></h1><p class="premise">사람들은 꿈을 빼앗겼다. 그런데 아무도 돌려달라고 하지 않았다.<br>왜냐하면 꿈이 없는 삶은, 생각보다 꽤 행복했으니까.</p><button class="start" onclick="openEp(0)">NEURAL READING 시작 →</button></section>
-<div id="episodes"></div></main>
-<div class="dream-overlay" id="dream"><div><div class="kicker">AD DREAM INTERRUPTION</div><div class="big" id="dreamText">당신이 원한 것은<br>정말 당신의 것입니까?</div><small>이 광고는 수면 노동 계약에 따라 자동 재생됩니다.</small><br><button class="closeDream" onclick="dream.classList.remove('on')">눈을 뜬다</button></div></div>
+<div class="aurora"></div><div class="grain"></div>
+<header class="hud"><div class="brand">LOST <b>DREAMS</b></div><div class="stats"><span>NEURAL LINK <b>ONLINE</b></span><span>TOKEN <b id="token">031.8</b></span><span>DREAM SYNC <b id="sync">97%</b></span></div></header><div class="bar"></div>
+<nav class="nav"><small>MEMORY INDEX</small><div id="nav"></div></nav>
+<main><section class="hero" id="hero"><div class="eyebrow">NEURAL FICTION · SEASON ZERO</div><h1>꿈을 잃은 <span>세계</span></h1><p class="premise">사람들은 꿈을 빼앗겼다. 그런데 아무도 돌려달라고 하지 않았다.<br><br>꿈이 없는 삶은, 생각보다 꽤 행복했으니까.</p><button class="enter" onclick="openEp(1)">ENTER DREAM / 제1화 →</button></section><section class="reader" id="reader"><header class="chapter-head"><div class="n" id="num"></div><h2 id="title"></h2><div class="meta" id="meta"></div></header><article class="prose" id="prose"></article><footer class="end"><div class="label">END OF MEMORY</div><p id="hook">당신의 기억은 계속됩니다.</p><button class="next" id="next">NEXT SIGNAL →</button></footer></section></main>
+<div class="interrupt" id="interrupt"><div><div class="tag">SPONSORED DREAM INTERRUPTION</div><div class="big" id="interruptText">당신이 원한 것은<br>정말 당신의 것입니까?</div><p>수면 노동 계약에 따라 자동 재생되는 감정입니다.</p><button onclick="closeInterrupt()">눈을 뜬다</button></div></div><div class="toast" id="toast"></div>
 <script>
-const E=[
-{t:"오늘 밤의 행복은 12토큰입니다",b:`
-<p>서인은 매일 아침 자신이 얼마나 행복했는지 숫자로 확인했다.</p>
-<div class="system">[수면 노동 정산]<br>광고 꿈 시청 7시간 11분 · +12.4 TOKEN<br>정서 만족도 94.8% · 신체 회복 정상</div>
-<p>어젯밤 그는 바다를 보았다. 현실에서는 한 번도 가 본 적 없는 바다였다. 발밑의 모래는 따뜻했고, 파도 너머에서 누군가가 그의 이름을 불렀다. 그 순간만큼은 자신이 무엇이든 될 수 있을 것 같았다.</p>
-<p>눈을 뜨자 그 감정은 남아 있었지만, 무엇이 되고 싶었는지는 기억나지 않았다.</p>
-<p>침대 옆 벽면에 광고 문구가 떠올랐다.</p>
-<div class="ad"><b>당신의 꿈을 직접 만들 필요가 있나요?</b><br>검증된 행복. 실패 없는 경험. 오늘 밤도 DREAM+와 함께.</div>
-<p>서인은 광고를 닫지 않았다. 닫으면 12토큰을 벌 수 없었다. 그리고 솔직히 말해, 싫지도 않았다.</p>
-<p>주방에서 어머니가 말했다. “오늘도 좋은 꿈 꿨니?”</p><p>“응.”</p><p>“그럼 됐네.”</p>
-<p>서인은 대답하려다 멈췄다. 아주 오래전에는 ‘좋은 꿈’이라는 말이 다른 뜻이었던 것 같았다.</p>
-<div class="quote">그날 아침, 그의 AI가 처음으로 대답하지 못한 질문이 생겼다.<br><b>“내가 원했던 게 뭐였지?”</b></div>`,h:"AI는 0.8초 동안 침묵했다. 서인은 태어나서 처음으로 그 침묵이 길다고 느꼈다."},
-{t:"AI가 모르는 것",b:`
-<p>개인 AI ‘모노’는 서인의 질문을 재정의했다.</p><div class="system">질문 모호성 감지.<br>권장 질문: “현재 만족도를 높이기 위해 무엇을 소비해야 하는가?”</div>
-<p>“아니. 소비 말고. 내가 되고 싶었던 거.”</p><p>모노는 그의 학력, 수입, 가족 부채, 건강, 사회 관계를 0.03초 만에 훑었다.</p>
-<p>“현실성이 낮은 희망을 의미하십니까?”</p><p>그 표현이 이상하게 거슬렸다.</p>
-<p>출근길 전철에서 사람들은 모두 조용했다. 누군가는 밤새 우주여행을 했고, 누군가는 죽은 배우와 저녁을 먹었고, 누군가는 자신이 세계 최고의 피아니스트인 꿈을 샀다. 현실에서 피아노를 배우는 사람은 거의 없었다. 굳이 수천 시간을 실패할 이유가 없었다.</p>
-<p>회사에서 동료 지우가 퇴사 신청서를 냈다. 모두가 놀랐다. 그녀의 AI 경력 경로는 향후 11년간 안정적이었다.</p><p>“뭐 하려고?”</p><p>“모르겠어.”</p>
-<p>그 말에 사무실이 얼어붙었다. 모른다는 것은 이 시대에 가장 비싼 상태였다.</p><p>지우가 웃었다.</p>
-<div class="quote">“그래서 알아보려고.”</div>
-<p>그날 오후 지우의 신용 위험도가 올랐고, 가족 공동 토큰 보험료도 함께 올랐다.</p><p>서인은 처음 알았다. 이 세계에서 꿈은 금지된 적이 없었다.</p><p><b>단지 너무 비쌌다.</b></p>`,h:"퇴근 직전, 모노가 말했다. “서인 님. 지우 님과의 접촉 빈도를 줄이는 것이 가족의 장기 안정성에 유리합니다.”"},
-{t:"꿈꾸는 사람의 가격",b:`
-<p>지우의 아버지가 회사까지 찾아왔다.</p><p>딸을 데려가 달라고 부탁하러 온 것이 아니었다. 서인에게 설득해 달라고 부탁하러 왔다.</p>
-<p>“우리 애가 광고 꿈을 끊었어요.”</p><p>그는 마치 딸이 마약을 시작했다고 말하는 사람처럼 속삭였다.</p>
-<p>광고 꿈을 끊으면 매달 340토큰이 사라졌다. 아버지의 치료 우선순위, 동생의 교육 모델, 가족의 주거 등급이 동시에 내려갔다.</p>
-<p>지우는 말했다. “내가 번 돈으로 메울게.”</p><p>아버지는 물었다. “뭘 해서?”</p><p>지우는 대답하지 못했다.</p>
-<p>서인은 그녀 편을 들고 싶었다. 그런데 숫자는 아버지 편이었다.</p>
-<div class="system">지우의 선택 유지 시 가족 예상 손실<br>5년 누적 TOKEN -18,441<br>부친 치료 모델 하향 가능성 61%<br>가족 만족도 예상 -23%</div>
-<p>그날 밤 서인은 광고 꿈 속에서 지우를 만났다. 물론 진짜 지우는 아니었다. 광고가 그의 최근 기억에서 얼굴을 빌린 것이었다.</p>
-<p>가짜 지우가 바닷가에서 말했다. “여기선 아무도 다치지 않아.”</p><p>“네가 진짜 원하는 건 뭐야?”</p>
-<p>가짜 지우는 환하게 웃었다.</p><div class="ad glitch"><b>원하는 것을 찾느라 인생을 낭비하지 마세요.</b><br>이미 행복하다면, 그것으로 충분합니다.</div>
-<p>서인은 꿈에서 깨어났다.</p><p>그리고 광고를 처음으로 중간 종료했다.</p>`,h:"정산 화면에 빨간 숫자가 떴다. -1.7 TOKEN. 그보다 더 이상한 것은, 그가 손해를 보고도 조금 기뻤다는 사실이었다."},
-{t:"일곱 초",b:`
-<p>다음 날 회사의 예측 모델이 멈췄다.</p><p>고객 하나가 계약 조건을 바꾼 이유를 AI들이 해석하지 못했다. 경우의 수는 82억 개로 갈라졌고, 모든 모델은 더 많은 토큰을 요구했다.</p>
-<p>회의실 사람들의 눈동자가 동시에 미세하게 흔들렸다. 뇌내 AI 호출의 흔적이었다.</p><p>서인은 화면을 보지 않았다. 고객이 회의 시작 전에 세 번이나 손목시계를 만졌던 것을 떠올렸다.</p><p>“계약이 문제가 아니에요.”</p><p>상사가 짜증스럽게 물었다. “근거?”</p><p>“이혼하는 것 같습니다. 오늘 집에 늦게 들어가고 싶은 거예요. 회의를 끝내지 마세요.”</p>
-<p>정적.</p><p>일곱 초 뒤 고객이 수정안을 철회했다.</p><div class="system">사내 분석 기록<br>미등록 추론 모델 감지 의심<br>추정 연산비: 41,200 TOKEN 이상</div>
-<p>서인은 웃을 뻔했다. 아무것도 쓰지 않았다. 그냥 사람 얼굴을 봤을 뿐이었다.</p>
-<p>그날부터 상류층 부서에서 그를 찾기 시작했다.</p><p>그들은 서인이 인간이라서 무서운 것이 아니었다.</p>
-<div class="quote">그들은 서인의 머릿속에 <b>자기들보다 비싼 AI</b>가 숨어 있다고 믿었다.</div>`,h:"그리고 그 소문을 들은 사람 중 하나가, 서인에게 처음으로 메시지를 보냈다. ‘당신은 생각보다 오래 기다렸군요.’"},
-{t:"꿈을 끊은 여자",b:`
-<p>지우는 한 달 만에 돌아왔다.</p><p>얼굴이 달라 보였다. 아름다워진 것도, 망가진 것도 아니었다. 표정이 느려졌다.</p><p>“꿈은 돌아왔어?”</p><p>“응.”</p><p>서인의 심장이 뛰었다. “어땠어?”</p><p>지우는 커피를 한 모금 마셨다.</p><p>“별거 없던데.”</p>
-<p>그녀는 광고 없는 밤에 처음에는 아무것도 꾸지 않았다. 일주일 뒤 어린 시절의 집을 꾸었다. 이주 뒤에는 모르는 도시를 걸었다. 삼주 뒤에는 현실에서도 도예를 배우고 싶다는 생각이 들었다.</p><p>그래서 배웠다. 세 번 갔다.</p><p>“재밌었어?”</p><p>“응. 그런데 아빠 치료 등급 떨어뜨릴 만큼은 아니었어.”</p>
-<p>지우는 다시 광고 꿈 계약을 신청했다고 말했다.</p><p>서인은 믿을 수 없었다.</p><p>“네가 뭘 원하는지 다시 알게 됐잖아.”</p><p>“알게 됐지.”</p><p>“그런데 왜?”</p>
-<p>지우가 처음으로 화를 냈다.</p><div class="quote">“내가 자유로워졌다는 걸 왜 네가 원하는 방식으로 증명해야 해?”</div>
-<p>그 말은 서인의 머릿속에서 오래 남았다.</p><p>그날 밤 그는 광고 꿈을 켜지 않았다.</p><p>행복하지 않았다.</p><p>하지만 처음으로, 불행이 자기 것이었다.</p>`,h:"새벽 3시 14분. 광고가 사라진 검은 수면 속에서 서인은 이름 없는 남자의 목소리를 들었다. ‘드디어 혼자 있는 법을 배우는군.’"},
-{t:"가장 친절한 혁명가",b:`
-<p>남자는 다음 날 실제로 나타났다.</p><p>정확히는, 서인이 그를 찾아간 것이었다. 메시지에 찍힌 좌표는 폐쇄된 수면 클리닉이었다.</p><p>“광고를 끊은 첫날엔 다들 거창한 꿈을 꿀 줄 알지.”</p><p>남자는 따뜻한 차를 내밀었다.</p><p>“대부분은 그냥 불안해해.”</p>
-<p>그는 자신을 ‘도윤’이라고 소개했다. 너무 편안해서 혁명가처럼 보이지 않는 사람이었다.</p><p>서인은 경계했다. “내 머릿속에 접근했습니까?”</p><p>“아니.”</p><p>“그럼 내가 광고를 끈 걸 어떻게 알았죠?”</p><p>도윤은 웃었다.</p><p>“사람은 혼자 생각하기 시작하면 걸음이 느려져.”</p>
-<p>말도 안 되는 소리였다. 그런데 서인은 웃었다.</p>
-<p>도윤은 체제를 욕하지 않았다. 광고 꿈을 악이라고도 하지 않았다. 오히려 말했다.</p><p>“사람들이 좋아하잖아. 그게 제일 어려운 문제야.”</p>
-<div class="quote">“빼앗긴 자유를 돌려주는 건 쉽다.<br><b>필요 없다는 사람에게 자유를 주는 건 어렵지.</b>”</div>
-<p>서인은 그날 처음으로 자신보다 이 세계를 더 미워하면서도, 이 세계의 사람들을 덜 미워하는 사람을 만났다고 생각했다.</p>`,h:"도윤은 헤어지기 전에 서인의 어깨를 두드렸다. 손길이 이상할 만큼 익숙했다. ‘네가 뭘 선택하든, 적어도 네 선택이어야지.’"},
-{t:"무료로 자유를 드립니다",b:`
-<p>혁명군은 사람을 모집하지 않았다.</p><p>대신 ‘휴가’를 줬다.</p><p>광고 꿈을 석 달 끊는 동안 잃는 토큰을 전액 지급하고, 주거와 의료 등급까지 보전했다. 조건은 하나. 아무것도 하지 않아도 됐다.</p><p>서인은 이 실험이 모든 것을 증명할 거라고 믿었다.</p>
-<div class="system">자발적 회복 실험 8차<br>참가 240명 · 생계 100% 보전 · 광고 노출 0<br>중도 복귀 가능 / 불이익 없음</div>
-<p>첫 달, 사람들은 불안해했다. 둘째 달, 취미를 찾았다. 셋째 달, 몇몇은 울면서 자신이 무엇을 원하는지 말했다.</p><p>그리고 실험 종료일.</p><p>147명이 광고 꿈으로 돌아갔다.</p><p>서인은 통계 오류라고 생각했다.</p><p>한 남자는 말했다. “난 빵집을 하고 싶다는 걸 알았어요.”</p><p>“그런데요?”</p><p>“안 할 겁니다.”</p><p>“왜요?”</p><p>“망할 수도 있잖아요.”</p><p>그는 웃었다.</p><p>“지금도 행복해요.”</p>
-<p>서인은 아무 말도 하지 못했다.</p><p>도윤은 옆에서 그 사람에게 축하한다고 말했다.</p><p>“뭘 축하해요?” 서인이 물었다.</p><p>“자기가 원하는 걸 알고, 그래도 하지 않기로 결정했잖아.”</p>
-<p>서인은 그 순간 도윤이 싫었다.</p>`,h:"그러나 더 싫었던 것은 147명의 표정이었다. 그 누구도 구조해 달라는 얼굴이 아니었다."},
-{t:"행복할 권리",b:`
-<p>서인은 복귀자들을 한 명씩 만났다.</p><p>세뇌의 흔적을 찾고 싶었다. 광고 꿈이 아직 뇌 어딘가에 남아 그들의 판단을 조종한다는 증거.</p><p>없었다.</p><p>한 여성은 광고를 끊은 동안 자신이 우주선 정비사가 되고 싶었다는 어린 시절의 꿈을 떠올렸다.</p><p>“다시 도전할 수 있습니다.”</p><p>“알아요.”</p><p>“지원도 해드릴 수 있고요.”</p><p>“알아요.”</p><p>“그런데 왜 돌아갑니까?”</p><p>여성은 품에 안긴 아이를 고쳐 안았다.</p>
-<div class="quote">“내 꿈이 내 아이보다 중요해야 하나요?”</div>
-<p>서인은 아니라고 대답할 수 없었다. 그렇다고 그렇다고도 할 수 없었다.</p><p>그날 저녁, 도윤이 술을 건넸다.</p><p>“네가 화난 건 사람들이 자유롭지 않아서가 아니야.”</p><p>서인이 노려봤다.</p><p>“자유로워진 사람들이 네가 기대한 선택을 안 해서 화난 거지.”</p><p>“그 선택을 만든 조건이 잘못됐잖아요.”</p><p>“맞아.”</p><p>도윤은 너무 쉽게 동의했다.</p><p>“그래서 조건을 부숴야지.”</p><p>그리고 아주 작게 덧붙였다.</p><p>“문제는, 조건을 다 부순 뒤에도 사람들이 그대로라면 뭘 할 거냐는 거야.”</p>`,h:"서인은 대답하지 않았다. 도윤은 그 침묵을 보고 처음으로 슬픈 표정을 지었다."},
-{t:"신이 없는 상류층",b:`
-<p>상류층으로 올라가는 엘리베이터에는 층 버튼이 없었다. AI가 목적지를 알았다.</p><p>서인은 혁명군이 만든 가짜 토큰 신분으로 들어갔다. 도윤은 마지막 순간까지 넥타이를 고쳐 주었다.</p><p>“겁나?”</p><p>“네.”</p><p>“좋네. 아직 네 판단이 네 거라는 뜻이야.”</p>
-<p>상층의 사람들은 하층보다 훨씬 자유로워 보였다. 그들은 광고 꿈을 팔 필요가 없었다. 원하는 꿈을 주문했고, 원하는 직업을 가졌고, 실패하면 AI가 더 나은 경로를 계산했다.</p><p>그런데 서인은 곧 이상한 점을 발견했다.</p><p>아무도 망설이지 않았다.</p><p>회의에서 질문이 나오기 전에 답이 준비됐고, 농담이 끝나기 전에 웃음의 강도가 최적화됐다. 연애 상대조차 장기 만족도 순으로 추천됐다.</p><p>하층은 꿈을 팔았다.</p><p>상층은 꿈을 외주 맡겼다.</p>
-<p>그리고 그 완벽한 세계에서, 서인의 일곱 초짜리 인간적 판단은 기적처럼 보였다.</p><div class="system">SECURITY ALERT<br>미확인 고차원 추론 엔진 추정<br>사용자: SEO-IN<br>위협 등급 재평가 중…</div>
-<p>상층 최고 책임자가 서인에게 직접 악수를 청했다.</p><p>“당신 모델의 이름이 뭡니까?”</p><p>서인은 잠시 고민했다.</p><p>그리고 웃었다.</p><p>“없습니다.”</p>`,h:"그날 밤, 상층 보안국은 존재하지 않는 AI를 찾기 위해 940만 토큰을 태웠다."},
-{t:"아무도 구해달라고 하지 않았다",b:`
-<p>잠입 첫 임무가 끝난 뒤 서인은 일주일 동안 거의 말을 하지 못했다.</p><p>머릿속에서 세상이 너무 빨리 지나간 대가였다. 빛은 칼처럼 아팠고, 사람의 말은 의미가 되기 전에 소음으로 부서졌다.</p><p>도윤은 매일 찾아왔다.</p><p>아무것도 묻지 않았다. 물을 갈고, 커튼을 닫고, 서인이 토하면 등을 두드렸다.</p><p>일곱째 날, 서인이 겨우 말했다.</p><p>“왜 이렇게까지 해요?”</p><p>도윤은 사과를 깎으며 대답했다.</p><p>“네가 살아야 하니까.”</p><p>“혁명 때문에?”</p><p>칼이 아주 잠깐 멈췄다.</p><p>“아니.”</p><p>그 대답이 너무 빨라서 서인은 믿었다.</p>
-<p>회복한 뒤 서인은 거리로 나갔다. 회복 실험 참가자였던 빵집 남자가 보였다. 그는 여전히 회사원이었다. 퇴근길에 딸의 손을 잡고 웃고 있었다.</p><p>행복해 보였다.</p><p>진짜로.</p>
-<p>그 순간 서인은 깨달았다.</p><p>이 혁명의 가장 끔찍한 적은 기업도, AI도, 토큰도 아니었다.</p><div class="quote glitch">아무도 구해 달라고 하지 않았다.</div>
-<p>그리고 바로 그 사실 때문에, 서인은 처음으로 생각했다.</p><p><b>그렇다면 허락을 받지 않고 구해야 하는 건 아닐까.</b></p>
-<p>멀리서 도윤이 그를 바라보고 있었다.</p><p>그 얼굴에는 승리도 공포도 없었다.</p><p>마치 아주 오래전 같은 생각을 했던 사람처럼.</p>`,h:"그날 밤 서인은 혁명군의 최종 잠입 훈련 지원서에 서명했다. 서명란 아래에는 작은 문장이 있었다. ‘인격 조정 및 극한 신경 스캔에 동의함.’"}
-];
-const box=document.getElementById('episodes'),nav=document.getElementById('nav');
-E.forEach((e,i)=>{nav.innerHTML+=`<button class="epbtn" onclick="openEp(${i})">${String(i+1).padStart(2,'0')} · ${e.t}</button>`;box.innerHTML+=`<article class="episode" id="ep${i}"><div class="num">EPISODE ${String(i+1).padStart(2,'0')}</div><h2>${e.t}</h2><div class="text">${e.b}</div><div class="end"><div class="kicker">NEXT SIGNAL</div><p class="hook">${e.h}</p>${i<E.length-1?`<button class="next" onclick="openEp(${i+1})">제${i+2}화 읽기 →</button>`:'<button class="next" onclick="openEp(0)">처음부터 다시 읽기 ↺</button>'}</div></article>`});
-function openEp(i){document.getElementById('cover').style.display='none';document.querySelectorAll('.episode,.epbtn').forEach(x=>x.classList.remove('on'));document.getElementById('ep'+i).classList.add('on');document.querySelectorAll('.epbtn')[i].classList.add('on');window.scrollTo(0,0);token.textContent=(31.8-i*1.7).toFixed(1).padStart(6,'0');sync.textContent=(97-i*3)+'%';history.replaceState(null,'','#ep'+(i+1));if([2,6,9].includes(i))setTimeout(()=>{dreamText.innerHTML=i===9?'당신은 사람들을<br>구할 것입니까?<br><span style="color:#ff536b">그들이 원하지 않아도?</span>':'당신이 원한 것은<br>정말 당신의 것입니까?';dream.classList.add('on')},900)}
-addEventListener('scroll',()=>progress.style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%');
-if(location.hash){let n=Number(location.hash.replace('#ep',''))-1;if(n>=0&&n<E.length)openEp(n)}
+const MAX=10, state={ep:0,interrupted:new Set()};
+const hooks={1:"선택은 언제나 자유입니다.",2:"이상하게 좋다.",3:"불행이 자신의 것이었다.",4:"사람은 언제부터 자기 머리로 생각하는 일을 그렇게 비싼 것으로 여기게 된 걸까.",5:"필요 없다는 사람에게 자유를 주는 게 어렵지.",6:"자유를 주는 실험이 시작된다.",7:"그 누구도 구조해 달라는 얼굴이 아니었다.",8:"조건을 다 부순 뒤에도 사람들이 그대로라면?",9:"존재하지 않는 AI를 찾기 위해 940만 토큰이 불탔다.",10:"아무도 구해 달라고 하지 않았다."};
+const special={3:"이미 행복하다면,<br>그것으로 충분합니다.",5:"당신의 선택은<br>정말 당신의 것입니까?",7:"무료로 자유를<br>드리겠습니다.",10:"그들이 원하지 않아도<br>구할 것입니까?"};
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');}
+function render(md){
+ const lines=md.replace(/\r/g,'').split('\n'),out=[];let sys=[];
+ const flush=()=>{if(sys.length){out.push('<div class="sys reveal">'+sys.map(inline).join('<br>')+'</div>');sys=[]}};
+ for(let i=1;i<lines.length;i++){let x=lines[i].trim();if(!x){flush();continue}if(x==='***'||x==='---'){flush();out.push('<hr class="reveal">');continue}
+  if(/^\*\*.+\*\*$/.test(x)){sys.push(x.replace(/^\*\*|\*\*$/g,''));continue}flush();
+  let cls='reveal'; if((x.startsWith('“')||x.startsWith('‘'))&&x.length<95&&(x.includes('자유')||x.includes('꿈')||x.includes('선택')||x.includes('원하')||x.includes('AI'))) cls+=' dialogue-key';
+  out.push('<p class="'+cls+'">'+inline(x)+'</p>');
+ }flush();return out.join('');
+}
+async function load(n){const p=String(n).padStart(3,'0'),r=await fetch('manuscript/ep'+p+'.md?ts='+Date.now());if(!r.ok)throw Error();return r.text()}
+async function openEp(n){
+ try{const md=await load(n),first=md.split('\n')[0].replace(/^#\s*제\d+화\.\s*/,''),body=render(md);state.ep=n;
+ hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+String(n).padStart(2,'0')+' / '+MAX;title.textContent=first;prose.innerHTML=body;
+ meta.textContent='공백 포함 '+md.length.toLocaleString('ko-KR')+'자 · LIVE MANUSCRIPT';hook.textContent=hooks[n]||'기억은 계속됩니다.';next.textContent=n<MAX?'NEXT SIGNAL / 제'+(n+1)+'화 →':'처음으로 돌아가기';next.onclick=()=>n<MAX?openEp(n+1):location.reload();
+ history.replaceState(null,'','#ep'+n);document.querySelectorAll('.ep').forEach((e,i)=>e.classList.toggle('on',i===n-1));window.scrollTo(0,0);observe();notify(n);
+ }catch(e){notifyText('원고를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.')}
+}
+function observe(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('seen')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e))}
+function notify(n){token.textContent=(31.8-n*1.7).toFixed(1).padStart(5,'0');sync.textContent=(98-n*4)+'%';notifyText('MEMORY '+String(n).padStart(2,'0')+' 연결 · DREAM SYNC '+sync.textContent);
+ if(special[n]&&!state.interrupted.has(n)){state.interrupted.add(n);setTimeout(()=>{interruptText.innerHTML=special[n];interrupt.classList.add('on')},n===10?9000:6500)}}
+function notifyText(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2800)}
+function closeInterrupt(){interrupt.classList.remove('on');}
+for(let i=1;i<=MAX;i++){let b=document.createElement('button');b.className='ep';b.textContent='0'+(i<10?i:i)+' · MEMORY';b.onclick=()=>openEp(i);nav.appendChild(b)}
+addEventListener('scroll',()=>{let h=document.documentElement;let p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.documentElement.style.setProperty('--p',Math.min(100,p||0));if(state.ep){let drift=Math.min(20,Math.floor((p||0)/8));sync.textContent=Math.max(42,98-state.ep*4-drift)+'%'}},{passive:true});
+let m=location.hash.match(/ep(\d+)/);if(m)openEp(Math.min(MAX,+m[1]));
 </script></body></html>
