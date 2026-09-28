@@ -11,6 +11,7 @@
 | `settings/05-open-questions.md` | 아직 정하지 않은 것들 (체크리스트) |
 | `manuscript/` | 원고. 한 화에 파일 하나 (`ep001.md`, `ep002.md` …) |
 | `CHANGELOG.md` | 누가 언제 무엇을 바꿨는지 기록 |
+| `loop/` | 자율 집필 루프: 절차(`LOOP.md`), 설정(`config.md`), 기록(`log.md`), 줄거리 요약(`story-so-far.md`) |
 | `index.html`, `app.js`, `style.css` | 설정과 원고를 읽고 쓰는 웹 (건드릴 필요 없음) |
 | `manifest.json` | 웹이 읽는 목록. **자동 생성되므로 직접 고치지 마세요.** |
 
