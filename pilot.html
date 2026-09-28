@@ -99,6 +99,41 @@ body[data-ep="2"].deep-read .world{filter:saturate(.35);opacity:.55}body[data-ep
 @keyframes entryCut{0%{opacity:.85}100%{opacity:0}}
 @keyframes heroLeave{to{opacity:.08;transform:scale(1.018);filter:blur(5px)}}
 
+/* EP11 reauth: the hesitation changes owners; the reader is measured without being shown */
+#reauth .veil{background:#04060af7;animation:raFrom 1.2s ease backwards}
+.ra-wrap{width:min(560px,100%);text-align:left;animation:raFrom .8s ease .4s backwards}
+.ra-q{font:500 clamp(22px,6vw,28px)/1.45 "Noto Serif KR",serif;color:#eef2f5;letter-spacing:-.02em;margin:14px 0 28px}
+.ra-lanes{position:relative}
+.ra-lane{display:grid;grid-template-columns:56px 1fr 64px;align-items:center;height:56px}.ra-lane+.ra-lane{margin-top:12px}
+.ra-who{font:12px ui-monospace;letter-spacing:.12em;color:#c9d2dc}
+.ra-lane.mono .ra-who{color:#d9e3ea;animation:raDim .6s ease 2s backwards}
+.ra-lane.you{animation:raFrom .5s ease 2.8s backwards}
+.ra-track{position:relative;height:100%;border-left:1px solid #ffffff40}
+.ra-track:before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:#ffffff1c}
+.ra-lane:first-child .ra-track:after{content:"";position:absolute;left:0;top:14px;height:28px;width:45%;border:1px dashed #d9e3ea66;opacity:0;animation:raGhost .6s ease 2s}
+.ra-val{justify-self:end;font:13px ui-monospace;letter-spacing:.04em}
+.ra-lane:first-child .ra-val{color:var(--accent2);animation:raFrom .1s linear 2s backwards}
+.ra-lane.mono .ra-val{color:var(--accent);animation:raFrom .4s ease 2.7s backwards}
+.ra-lane.you .ra-val{color:#fff;visibility:hidden}
+#reauth.measured .ra-lane.you .ra-val{visibility:visible}
+.ra-tick{position:absolute;left:4%;top:6px;width:2px;height:44px;background:var(--accent2);box-shadow:0 0 14px var(--accent2);animation:raFrom .1s linear 2s backwards}
+.ra-bandlayer{position:absolute;left:56px;right:64px;top:0;height:124px;pointer-events:none}
+.ra-band{position:absolute;left:0;top:14px;height:28px;width:80%;transform:translateY(68px);background:repeating-linear-gradient(90deg,#d9e3ea2e 0 2px,transparent 2px 7px);border:1px dashed #d9e3ea77;animation:raBreath 1.4s ease-in-out .6s both,raShift .6s cubic-bezier(.7,0,.3,1) 2s forwards}
+.ra-you{position:absolute;left:0;top:14px;height:28px;width:0;background:#ffffff14;border:1px solid #ffffff66;border-left:0;visibility:hidden;transition:width .35s cubic-bezier(.2,.8,.2,1)}
+#reauth.measured .ra-you{visibility:visible}
+.ra-you.over{border-right:2px solid #fff;box-shadow:8px 0 20px #ffffff38}
+.ra-scale{display:flex;justify-content:space-between;margin:10px 64px 0 56px;font:11px ui-monospace;color:#7a8594;letter-spacing:.08em}
+#reauth.breach .ra-scale span:last-child{opacity:.25;text-decoration:line-through}
+.ra-yes{display:block;margin-top:28px;min-width:128px;padding:14px 24px;border:1px solid #ffffff55;background:#ffffff0a;color:#fff;font:600 18px "Noto Serif KR",serif;cursor:pointer;animation:raBtnFrom .4s ease 2.8s backwards}
+.ra-yes:disabled{opacity:.35;cursor:default}
+.ra-final{margin-top:18px;min-height:14px;font:12px ui-monospace;letter-spacing:.2em;color:var(--accent);opacity:0;transition:opacity .5s}
+.ra-final.on{opacity:1}
+@keyframes raFrom{from{opacity:0}}
+@keyframes raDim{from{color:#56616e}}
+@keyframes raGhost{0%{opacity:.9}100%{opacity:0}}
+@keyframes raBreath{0%{width:41%;transform:none}25%{width:38%;transform:none}50%{width:63%;transform:none}75%{width:52%;transform:none}100%{width:45%;transform:none}}
+@keyframes raShift{from{width:45%;transform:translateY(0)}to{width:80%;transform:translateY(68px)}}
+@keyframes raBtnFrom{from{opacity:0;visibility:hidden}}
 </style></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><div class="stats"><span>NEURAL LINK <b id="link">ONLINE</b></span><span>FX <b id="fxState">LIVE</b></span><span>TOKEN <b id="token">031.8</b></span><span>DREAM <b id="sync">97%</b></span></div></header><div class="progress"></div>
@@ -121,11 +156,12 @@ body[data-ep="2"].deep-read .world{filter:saturate(.35);opacity:.55}body[data-ep
 <div class="setpiece" id="compute"><div class="veil"></div><div class="sp-center"><div class="compute-wrap"><div class="sp-label" style="color:#111">UPPER LAYER · UNLIMITED COMPUTE</div><div class="compute-num" id="computeN">0</div><div>토큰이 아니라 미래를 태우는 중</div><div class="compute-feed" id="feed"></div></div></div></div>
 <div class="setpiece" id="recovery"><div class="veil"></div><div class="sp-center"><div><div class="pulse"></div><div class="recovery-copy">COGNITIVE COOLING · DAY 05 / 07<br>말하지 마. 지금은 살아 있는 것만 해.</div></div></div></div>
 <div class="setpiece interactive" id="consent"><div class="veil"></div><div class="sp-center"><div class="consent-card" id="consentCard"><div class="sp-label" style="color:#555">EXTREME COGNITIVE EXPANSION PROGRAM</div><h3>자발적 동의</h3><div class="legal">극단 신경 스캔 · 성격 반응 조정 · 기억 접근 경로 재구성 가능 · 영구적 후유증 또는 사망 가능<br><br>성공 3 / 17 · 사망 2 · 중단 12</div><p>본인은 모든 위험을 이해했으며 자발적으로 동의합니다.</p><div class="consent-actions"><button onclick="rejectConsent()">동의하지 않음</button><button class="accept" onclick="acceptConsent()">동의합니다</button></div></div></div></div>
+<div class="setpiece interactive" id="reauth"><div class="veil" onanimationstart="runReauth(event)"></div><div class="sp-center"><div class="ra-wrap"><div class="sp-label">NEURAL SIGNATURE CHANGED · RE-AUTHENTICATION</div><div class="ra-q">본인이 맞습니까?</div><div class="ra-lanes"><div class="ra-lane"><span class="ra-who">서인</span><div class="ra-track"><i class="ra-tick"></i></div><span class="ra-val">0.04s</span></div><div class="ra-lane mono"><span class="ra-who">MONO</span><div class="ra-track"></div><span class="ra-val">0.80s</span></div><div class="ra-lane you"><span class="ra-who">YOU</span><div class="ra-track"><i class="ra-you" id="raYouBar"></i></div><span class="ra-val" id="raYouT"></span></div><div class="ra-bandlayer"><div class="ra-band"></div></div></div><div class="ra-scale"><span>0.00s</span><span>1.00s</span></div><button class="ra-yes" id="raYes" onclick="runReauth(event)">응.</button><div class="ra-final" id="raFinal"></div></div></div></div>
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
-const MAX=10,state={ep:0,fired:new Set(),timers:[],observer:null};
+const MAX=11,state={ep:0,fired:new Set(),timers:[],observer:null};
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24},
@@ -136,7 +172,8 @@ const D={
 7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:'끌어당기고 있던 것은 누구였을까.',sp:'question',at:.66},
 8:{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'9,400,000',hook:'서버는 그의 뇌였다.',sp:'compute',at:.54},
 9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:'혼자 들어가도 혼자라고 생각하지 말라고.',sp:'recovery',at:.12},
-10:{a:'#ff607c',b:'#a88cff',token:'∞',sync:39,ghost:'I CONSENT',hook:'자기 머릿속의 모든 문이 한꺼번에 열렸다.',sp:'consent',at:.72}
+10:{a:'#ff607c',b:'#a88cff',token:'∞',sync:39,ghost:'I CONSENT',hook:'자기 머릿속의 모든 문이 한꺼번에 열렸다.',sp:'consent',at:.72},
+11:{a:'#d9e3ea',b:'#ff9a62',token:'013.9',sync:32,ghost:'0.04s',hook:'오래 쥐는 것만큼은 아직 할 수 있었다.',sp:'reauth',at:.99}
 };
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}
@@ -178,6 +215,7 @@ function closeSp(silent=false){document.querySelectorAll('.setpiece.on').forEach
 function runSeven(){let n=7;countEl.textContent=n;pathsEl.textContent='PREDICTIVE PATHS 1,204,118';const iv=setInterval(()=>{n--;countEl.textContent=n;if(n>0)pathsEl.textContent='PREDICTIVE PATHS '+Math.floor(1204118*Math.pow(3.1,7-n)).toLocaleString();else{clearInterval(iv);countEl.textContent='결정';pathsEl.textContent='AI: 계산 중 · HUMAN: 회의를 끝내지 마세요.'}},900);state.timers.push(iv)}
 function runMatrix(){dotsEl.innerHTML='';for(let i=0;i<240;i++){let q=document.createElement('i');q.className='dot';dotsEl.appendChild(q)}let n=0;const all=[...dotsEl.children];const iv=setInterval(()=>{for(let k=0;k<7&&n<147;k++,n++)all[239-n].classList.add('return');returnNEl.textContent=n;if(n>=147){clearInterval(iv);stayNEl.textContent='93';returnNEl.textContent='147'}},55);state.timers.push(iv)}
 function runCompute(){let n=0;feedEl.innerHTML='';for(let i=0;i<48;i++)feedEl.innerHTML+='PATH '+String(i+1).padStart(4,'0')+' · COUNTERMODEL · RECURSE · '+Math.floor(Math.random()*9999999).toLocaleString()+'<br>';const iv=setInterval(()=>{n=Math.min(9400000,n+Math.floor(170000+Math.random()*390000));computeNEl.textContent=n.toLocaleString();if(n>=9400000)clearInterval(iv)},90);state.timers.push(iv)}
+function runReauth(e){const f=runReauth,el=$('reauth'),bar=$('raYouBar'),val=$('raYouT'),yes=$('raYes'),fin=$('raFinal'),REVEAL=2.8,WAIT=7;const show=(t,label)=>{el.classList.add('measured');if(t==null){val.textContent='—';bar.style.width='0'}else{val.textContent=t.toFixed(2)+'s';bar.classList.toggle('over',t>1);el.classList.toggle('breach',t>1);void bar.offsetWidth;bar.style.width=t>1?'calc(100% + 12px)':t*100+'%'}yes.disabled=true;fin.textContent=label;fin.classList.add('on');state.timers.push(setTimeout(()=>closeSp(),1800))};if(e.type==='animationstart'){if(e.target!==e.currentTarget)return;f.t0=performance.now();f.done=false;const g=f.gen=(f.gen||0)+1;el.classList.remove('measured','breach');bar.style.width='0';bar.classList.remove('over');val.textContent='';yes.disabled=false;fin.classList.remove('on');fin.textContent='';state.timers.push(setTimeout(()=>{if(g===f.gen&&!f.done&&el.classList.contains('on')){f.done=true;show(null,'CONFIRMED · NO RESPONSE')}},(REVEAL+WAIT)*1000));return}if(e.type==='click'&&!f.done){f.done=true;show(f.t0?Math.max(0,(performance.now()-f.t0)/1000-REVEAL):null,'CONFIRMED BY YOU')}}
 function rejectConsent(){consentCardEl.querySelector('p').innerHTML='동의하지 않을 자유가 있습니다.<br><br><b>그런데 구하려는 사람들에게도 그 자유를 줄 것입니까?</b>';toastMsg('CONSENT REJECTED')}
 function acceptConsent(){consentCardEl.classList.add('danger');consentCardEl.querySelector('h3').textContent='동의가 완료되었습니다.';consentCardEl.querySelector('p').innerHTML='<b>그렇다면 허락을 받지 않고 구해야 하는 건 아닐까.</b>';state.timers.push(setTimeout(()=>closeSp(),3200))}
 function toastMsg(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2200)}
