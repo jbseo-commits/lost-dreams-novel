@@ -57,11 +57,29 @@ body[data-ep="2"].deep-read .world{filter:saturate(.35);opacity:.55}body[data-ep
 #dreamAd{overflow:hidden}#dreamAd .sp-center{transition:filter 1.3s,transform 1.3s}#dreamAd.corrupt .sp-center{filter:saturate(.15) contrast(1.18);transform:scale(1.015)}#dreamAd.corrupt .sea{opacity:.2}#dreamAd.corrupt .ad-price{text-decoration:line-through;text-decoration-thickness:1px}
 .ad-question{opacity:0;max-height:0;overflow:hidden;transition:1s;color:#fff;font:20px/1.6 "Noto Serif KR",serif;margin-top:14px}#dreamAd.corrupt .ad-question{opacity:1;max-height:100px}
 @media(max-width:600px){.scene-card{margin:44px 0;padding:22px 0}.scene-card .scene-main{font-size:28px}.memory-whisper{bottom:10vh;font-size:14px}.chapter-head{min-height:240px;padding-top:54px;margin-bottom:28px}.chapter-head h2{font-size:36px;max-width:330px}.prose{font-size:18px;line-height:2.02}.reveal{opacity:.55;filter:none;transform:translateY(5px)}.reveal.seen{opacity:1}}
+
+/* V7 cover: editorial, not game-menu */
+.hero{position:relative;min-height:calc(100svh - 76px);padding:8vh 0 5vh;justify-content:flex-start}
+.cover-mark{font:700 9px ui-monospace;color:#657180;letter-spacing:.24em;margin-bottom:auto}
+.hero .eyebrow{margin-top:8vh;color:#8edff0;opacity:.78}
+.hero h1{margin:18px 0 24px;display:flex;flex-direction:column;font-family:"Noto Serif KR",serif;font-weight:700;line-height:.93;letter-spacing:-.085em}
+.hero h1 .title-main{font-size:clamp(58px,10vw,92px);color:#f2f4f5;-webkit-text-stroke:0}
+.hero h1 .title-world{font-size:clamp(72px,13vw,120px);color:transparent;-webkit-text-stroke:1px #b9dce055;margin-top:-.04em}
+.cover-rule{display:flex;align-items:center;gap:12px;width:min(520px,100%);font:8px ui-monospace;color:#596674;letter-spacing:.18em;margin:0 0 48px}.cover-rule i{height:1px;flex:1;background:linear-gradient(90deg,#ffffff24,transparent)}
+.hero .premise{margin:0 0 24px;font:18px/1.85 "Noto Serif KR",serif;color:#b6bdc7}.premise-em{margin:0 0 38px;font:500 22px/1.65 "Noto Serif KR",serif;color:#eef2f5;letter-spacing:-.035em}
+.enter{position:relative;width:100%;max-width:520px;min-height:76px;padding:16px 54px 16px 18px;text-align:left;display:flex;flex-direction:column;justify-content:center;gap:5px;border:1px solid #8cecff45;background:linear-gradient(110deg,#76e7ff0d,transparent 65%);color:#eafcff;font:700 14px system-ui;letter-spacing:-.02em;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.enter span{display:block;color:#748493;font:9px/1.4 ui-monospace;letter-spacing:.06em}.enter b{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:22px;font-weight:300}.enter:active{transform:scale(.99);background:#76e7ff16}
+@media(max-width:600px){
+ .hero{min-height:calc(100svh - 58px);padding:7vh 0 5vh}.cover-mark{margin-bottom:6vh}.hero .eyebrow{margin-top:0;font-size:8px;letter-spacing:.22em}
+ .hero h1{margin:14px 0 20px}.hero h1 .title-main{font-size:clamp(48px,15.5vw,64px);line-height:1.02}.hero h1 .title-world{font-size:clamp(64px,22vw,90px);line-height:.88;margin-top:2px}
+ .cover-rule{margin-bottom:9vh}.hero .premise{font-size:17px;line-height:1.85;margin-bottom:20px}.premise-em{font-size:21px;line-height:1.6;margin-bottom:30px}
+ .enter{min-height:72px;margin-bottom:max(8px,env(safe-area-inset-bottom))}
+}
 </style></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><div class="stats"><span>NEURAL LINK <b id="link">ONLINE</b></span><span>TOKEN <b id="token">031.8</b></span><span>DREAM <b id="sync">97%</b></span></div></header><div class="progress"></div>
 <nav class="nav"><small>MEMORY INDEX</small><div id="nav"></div></nav>
-<main><section class="hero" id="hero"><div class="eyebrow">IMMERSIVE FICTION · SESSION 01</div><h1>꿈을 잃은 <span>세계</span></h1><p class="premise">사람들은 꿈을 빼앗겼다. 그런데 아무도 돌려달라고 하지 않았다.<br><br>꿈이 없는 삶은, 생각보다 꽤 행복했으니까.</p><button class="enter" onclick="openEp(1)">ENTER DREAM / 제1화 →</button></section>
+<main><section class="hero" id="hero"><div class="cover-mark">LD / 01</div><div class="eyebrow">A NOVEL ABOUT THE RIGHT TO DREAM</div><h1><span class="title-main">꿈을 잃은</span><span class="title-world">세계</span></h1><div class="cover-rule"><span>NEURAL FICTION</span><i></i><span>2026</span></div><p class="premise">사람들은 꿈을 빼앗겼다.<br>그런데 아무도 돌려달라고 하지 않았다.</p><p class="premise-em">꿈이 없는 삶은,<br>생각보다 꽤 행복했으니까.</p><button type="button" class="enter" id="enterDream">제1화 읽기 <span>오늘 밤의 행복은 12토큰입니다</span><b>→</b></button></section>
 <section class="reader" id="reader"><header class="chapter-head" id="chapterHead"><div class="n" id="num"></div><h2 id="title"></h2><div class="meta" id="meta"></div></header><article class="prose" id="prose"></article><footer class="end"><small>END OF MEMORY</small><p id="hook"></p><button class="next" id="next"></button></footer></section></main>
 <div class="toast" id="toast"></div>
 <div class="setpiece interactive" id="dreamAd"><div class="veil"></div><div class="sea"></div><div class="sp-center"><div><div class="sp-label">SPONSORED DREAM · OCEAN MEMORY</div><div class="ad-price">+12.4</div><div class="sp-big">행복이<br>정산되었습니다</div><div class="sp-sub">당신이 그 바다를 좋아했는지는 중요하지 않습니다.<br>만족도 91.6% · 광고 적합도 94.8%</div><div class="ad-question">그런데 이 행복은<br><b>누구의 것입니까?</b></div><button class="sp-close" onclick="closeSp()">눈을 뜬다</button></div></div></div>
@@ -114,5 +132,9 @@ function acceptConsent(){consentCard.classList.add('danger');consentCard.querySe
 function toastMsg(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2200)}
 for(let i=1;i<=MAX;i++){let b=document.createElement('button');b.className='ep';b.textContent=String(i).padStart(2,'0')+' · MEMORY';b.onclick=()=>openEp(i);nav.appendChild(b)}
 addEventListener('scroll',()=>{const h=document.documentElement,p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);document.documentElement.style.setProperty('--p',Math.min(100,p*100));const d=D[state.ep];if(d){sync.textContent=Math.max(18,Math.round(d.sync-p*14))+'%';epAtmosphere(p);if(p>=d.at)fire()}},{passive:true});
+const enterDream=document.getElementById('enterDream');
+function startFirstEpisode(e){if(e){e.preventDefault();e.stopPropagation()}openEp(1)}
+enterDream.addEventListener('click',startFirstEpisode,{passive:false});
+enterDream.addEventListener('pointerup',e=>{if(e.pointerType==='touch')startFirstEpisode(e)},{passive:false});
 let m=location.hash.match(/ep(\d+)/);if(m)openEp(Math.min(MAX,+m[1]));
 </script></body></html>
