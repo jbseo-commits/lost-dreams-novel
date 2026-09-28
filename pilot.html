@@ -221,6 +221,7 @@ function acceptConsent(){consentCardEl.classList.add('danger');consentCardEl.que
 function toastMsg(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2200)}
 for(let i=1;i<=MAX;i++){let b=document.createElement('button');b.className='ep';b.textContent=String(i).padStart(2,'0')+' · MEMORY';b.onclick=()=>openEp(i);navEl.appendChild(b)}
 addEventListener('scroll',()=>{const h=document.documentElement,p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);document.documentElement.style.setProperty('--p',Math.min(100,p*100));const d=D[state.ep];if(d){sync.textContent=Math.max(18,Math.round(d.sync-p*14))+'%';epAtmosphere(p);if(p>=d.at)fire()}},{passive:true});
+nextBtn.onclick=()=>openEp(2); // 표지 입장 없이 스크롤로 1화 끝에 와도 다음 화로 넘어가게
 const enterDream=$('enterDream');
 function activateStaticEp1(){
  state.ep=1;const d=D[1];document.body.className='reading';document.body.dataset.ep=1;
