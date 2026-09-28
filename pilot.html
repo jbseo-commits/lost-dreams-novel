@@ -227,7 +227,9 @@ function activateStaticEp1(){
  state.ep=1;const d=D[1];document.body.className='reading';document.body.dataset.ep=1;
  document.documentElement.style.setProperty('--accent',d.a);document.documentElement.style.setProperty('--accent2',d.b);
  token.textContent=d.token;sync.textContent=d.sync+'%';linkEl.textContent='ONLINE';
- nextBtn.textContent='NEXT SIGNAL / 제2화 →';nextBtn.onclick=()=>openEp(2);observe();
+ nextBtn.textContent='NEXT SIGNAL / 제2화 →';nextBtn.onclick=()=>openEp(2);
+ prose.querySelectorAll('.reveal.seen').forEach(e=>e.classList.remove('seen')); // 1화도 2화부터처럼 스크롤에 맞춰 문단이 떠오르게
+ observe();
  document.querySelectorAll('.ep').forEach((e,i)=>e.classList.toggle('on',i===0));
 }
 let entering=false;
