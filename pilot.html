@@ -22,41 +22,84 @@ main{width:min(720px,calc(100% - 40px));margin:auto;padding:110px 0 180px}.hero{
 @keyframes drift{to{transform:translate(4%,3%) scale(1.05)}}@keyframes shock{0%{opacity:0;filter:brightness(4);transform:scale(1.04)}100%{opacity:1}}
 @media(max-width:1050px){.nav{display:none}}@media(max-width:600px){.stats span:nth-child(2){display:none}main{width:calc(100% - 34px);padding-top:90px}.hero h1{font-size:58px}.prose{font-size:17px;line-height:2.08}.chapter-head{min-height:38vh}.dialogue-key{margin:40px -8px;padding:18px 16px}.sys{margin:30px -5px;padding:15px}.hud{height:56px}.bar{top:55px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;filter:none;transform:none}}
+
+body[data-ep="1"]{--accent:#6fe7ff;--accent2:#5d8cff}
+body[data-ep="2"]{--accent:#80e8ce;--accent2:#557dff}
+body[data-ep="3"]{--accent:#ffb06a;--accent2:#9d72ff}
+body[data-ep="4"]{--accent:#73f3ff;--accent2:#ffda72}
+body[data-ep="5"]{--accent:#b397ff;--accent2:#6fe7ff}
+body[data-ep="6"]{--accent:#8ff0bc;--accent2:#ffd56b}
+body[data-ep="7"]{--accent:#ff9c86;--accent2:#967cff}
+body[data-ep="8"]{--accent:#7ddcff;--accent2:#ffffff}
+body[data-ep="9"]{--accent:#94a6ff;--accent2:#ff8c9b}
+body[data-ep="10"]{--accent:#ff607c;--accent2:#a88cff}
+body[data-ep] .bar{background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 0 18px var(--accent)}
+body[data-ep] .brand b,body[data-ep] .chapter-head .n,body[data-ep] .end .label{color:var(--accent)}
+.chapter-head{position:relative;overflow:hidden}.chapter-head:after{content:attr(data-ghost);position:absolute;right:-5px;bottom:-18px;font:900 100px/1 ui-monospace;color:#ffffff035;letter-spacing:-.08em;pointer-events:none}
+.episode-stage{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.9;transition:1.2s;background:radial-gradient(circle at 70% 20%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 31%),radial-gradient(circle at 25% 78%,color-mix(in srgb,var(--accent2) 10%,transparent),transparent 32%)}
+.cue{margin:55px -54px;padding:25px 30px;border-top:1px solid color-mix(in srgb,var(--accent) 35%,transparent);border-bottom:1px solid #ffffff0b;background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 8%,transparent),transparent);position:relative}
+.cue:before{content:attr(data-cue);display:block;margin-bottom:11px;font:9px ui-monospace;color:var(--accent);letter-spacing:.22em}
+.cue p{margin:0!important;font-size:22px;line-height:1.85;color:#f6f8fb}
+.metric{margin:42px -25px;padding:22px 25px;border:1px solid #ffffff12;background:#05080dd9;box-shadow:0 22px 80px #0008}
+.metric .metric-label{font:9px ui-monospace;color:var(--accent);letter-spacing:.2em;margin-bottom:12px}.metric .metric-value{font:800 clamp(34px,8vw,64px)/1 ui-monospace;letter-spacing:-.07em}.metric .metric-sub{margin-top:10px;color:#7f8a99;font:11px/1.7 ui-monospace}
+.pulse-line{height:1px;margin:55px 0;background:linear-gradient(90deg,transparent,var(--accent),transparent);transform:scaleX(.25);opacity:.2;transition:1.4s}.pulse-line.seen{transform:scaleX(1);opacity:.65}
+.thought{margin:48px -24px;padding:22px 24px;font-size:21px!important;color:#e9e1ff!important;background:linear-gradient(90deg,#a88cff12,transparent);border-left:1px solid #a88cff88}
+body.overload{animation:overload .16s steps(2) 5}body.overload .hud{filter:contrast(1.3)}@keyframes overload{50%{transform:translateX(1px);filter:hue-rotate(8deg) brightness(1.12)}}
+.flash{position:fixed;inset:0;z-index:60;background:#eafcff;opacity:0;pointer-events:none}.flash.go{animation:flash .8s ease-out}@keyframes flash{0%{opacity:.8}100%{opacity:0}}
+@media(max-width:600px){.cue{margin:42px -8px;padding:20px 16px}.cue p{font-size:19px}.metric{margin:35px -4px;padding:18px}.chapter-head:after{font-size:64px}}
 </style></head><body>
-<div class="aurora"></div><div class="grain"></div>
+<div class="aurora"></div><div class="grain"></div><div class="episode-stage"></div><div class="flash" id="flash"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><div class="stats"><span>NEURAL LINK <b>ONLINE</b></span><span>TOKEN <b id="token">031.8</b></span><span>DREAM SYNC <b id="sync">97%</b></span></div></header><div class="bar"></div>
 <nav class="nav"><small>MEMORY INDEX</small><div id="nav"></div></nav>
-<main><section class="hero" id="hero"><div class="eyebrow">NEURAL FICTION · SEASON ZERO</div><h1>꿈을 잃은 <span>세계</span></h1><p class="premise">사람들은 꿈을 빼앗겼다. 그런데 아무도 돌려달라고 하지 않았다.<br><br>꿈이 없는 삶은, 생각보다 꽤 행복했으니까.</p><button class="enter" onclick="openEp(1)">ENTER DREAM / 제1화 →</button></section><section class="reader" id="reader"><header class="chapter-head"><div class="n" id="num"></div><h2 id="title"></h2><div class="meta" id="meta"></div></header><article class="prose" id="prose"></article><footer class="end"><div class="label">END OF MEMORY</div><p id="hook">당신의 기억은 계속됩니다.</p><button class="next" id="next">NEXT SIGNAL →</button></footer></section></main>
+<main><section class="hero" id="hero"><div class="eyebrow">NEURAL FICTION · SEASON ZERO</div><h1>꿈을 잃은 <span>세계</span></h1><p class="premise">사람들은 꿈을 빼앗겼다. 그런데 아무도 돌려달라고 하지 않았다.<br><br>꿈이 없는 삶은, 생각보다 꽤 행복했으니까.</p><button class="enter" onclick="openEp(1)">ENTER DREAM / 제1화 →</button></section><section class="reader" id="reader"><header class="chapter-head" id="chapterHead"><div class="n" id="num"></div><h2 id="title"></h2><div class="meta" id="meta"></div></header><article class="prose" id="prose"></article><footer class="end"><div class="label">END OF MEMORY</div><p id="hook">당신의 기억은 계속됩니다.</p><button class="next" id="next">NEXT SIGNAL →</button></footer></section></main>
 <div class="interrupt" id="interrupt"><div><div class="tag">SPONSORED DREAM INTERRUPTION</div><div class="big" id="interruptText">당신이 원한 것은<br>정말 당신의 것입니까?</div><p>수면 노동 계약에 따라 자동 재생되는 감정입니다.</p><button onclick="closeInterrupt()">눈을 뜬다</button></div></div><div class="toast" id="toast"></div>
 <script>
-const MAX=10, state={ep:0,interrupted:new Set()};
-const hooks={1:"선택은 언제나 자유입니다.",2:"이상하게 좋다.",3:"불행이 자신의 것이었다.",4:"사람은 언제부터 자기 머리로 생각하는 일을 그렇게 비싼 것으로 여기게 된 걸까.",5:"필요 없다는 사람에게 자유를 주는 게 어렵지.",6:"자유를 주는 실험이 시작된다.",7:"그 누구도 구조해 달라는 얼굴이 아니었다.",8:"조건을 다 부순 뒤에도 사람들이 그대로라면?",9:"존재하지 않는 AI를 찾기 위해 940만 토큰이 불탔다.",10:"아무도 구해 달라고 하지 않았다."};
-const special={3:"이미 행복하다면,<br>그것으로 충분합니다.",5:"당신의 선택은<br>정말 당신의 것입니까?",7:"무료로 자유를<br>드리겠습니다.",10:"그들이 원하지 않아도<br>구할 것입니까?"};
+const MAX=10,state={ep:0,interrupted:new Set(),timers:[]};
+const direction={
+1:{token:31.8,sync:97,ghost:"SELL YOUR DREAM",hook:"선택은 언제나 자유입니다.",cue:"DREAM LABOR",interrupt:"오늘 밤의 행복은<br>12토큰입니다"},
+2:{token:29.4,sync:91,ghost:"NO SIGNAL",hook:"이상하게 좋다.",cue:"AD-FREE NIGHT",interrupt:"행복하지 않아도<br>괜찮습니까?"},
+3:{token:25.2,sync:84,ghost:"YOUR CHOICE",hook:"불행이 자신의 것이었다.",cue:"PRICE OF A DREAM",interrupt:"이미 행복하다면,<br>그것으로 충분합니다."},
+4:{token:22.7,sync:78,ghost:"00:00:07",hook:"자기 머리로 생각하는 일은 언제부터 그렇게 비싸졌을까.",cue:"HUMAN LATENCY",metric:["00:00:07","AI가 끝내지 못한 판단","41,200 TOKEN+"],interrupt:"SECRET MODEL<br>NOT FOUND"},
+5:{token:20.3,sync:73,ghost:"DOYUN",hook:"필요 없다는 사람에게 자유를 주는 게 어렵지.",cue:"UNAUTHORIZED CONTACT",interrupt:"고를 수 없는 것을<br>싫어합니다."},
+6:{token:18.1,sync:67,ghost:"240 → 147",hook:"그들은 알고도 돌아갔다.",cue:"90-DAY TRIAL",metric:["147 / 240","광고꿈 재가입 희망","회복률과 재가입은 반대말이 아니었다."],interrupt:"무료로 자유를<br>드리겠습니다."},
+7:{token:16.8,sync:61,ghost:"WHO DECIDES?",hook:"끌어당기고 있던 것은 누구였을까.",cue:"CONSENT CONFLICT",interrupt:"왜 꼭 하나만<br>진짜여야 해요?"},
+8:{token:999.9,sync:54,ghost:"9,400,000",hook:"서버는 그의 뇌였다.",cue:"UPPER LAYER",metric:["9,400,000","존재하지 않는 AI 탐색 비용","그리고 집에서는 6.8토큰이 아까웠다."],interrupt:"ADDITIONAL<br>COMPUTE REQUIRED"},
+9:{token:999.9,sync:47,ghost:"HUMAN WEAPON",hook:"혼자 들어가도 혼자라고 생각하지 말라고.",cue:"COGNITIVE RECOVERY",interrupt:"비밀 AI는<br>존재하지 않습니다."},
+10:{token:999.9,sync:39,ghost:"I CONSENT",hook:"자기 머릿속의 모든 문이 한꺼번에 열렸다.",cue:"VOLUNTARY CONSENT",metric:["3 / 17","인지 확장 성공 사례","사망 2 · 중단 12"],interrupt:"그들이 원하지 않아도<br>구할 것입니까?"}
+};
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');}
-function render(md){
- const lines=md.replace(/\r/g,'').split('\n'),out=[];let sys=[];
+function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}
+function render(md,n){
+ const lines=md.replace(/\r/g,'').split('\n'),out=[];let sys=[],paragraphs=0;const d=direction[n];
  const flush=()=>{if(sys.length){out.push('<div class="sys reveal">'+sys.map(inline).join('<br>')+'</div>');sys=[]}};
- for(let i=1;i<lines.length;i++){let x=lines[i].trim();if(!x){flush();continue}if(x==='***'||x==='---'){flush();out.push('<hr class="reveal">');continue}
-  if(/^\*\*.+\*\*$/.test(x)){sys.push(x.replace(/^\*\*|\*\*$/g,''));continue}flush();
-  let cls='reveal'; if((x.startsWith('“')||x.startsWith('‘'))&&x.length<95&&(x.includes('자유')||x.includes('꿈')||x.includes('선택')||x.includes('원하')||x.includes('AI'))) cls+=' dialogue-key';
-  out.push('<p class="'+cls+'">'+inline(x)+'</p>');
- }flush();return out.join('');
+ for(let i=1;i<lines.length;i++){let x=lines[i].trim();if(!x){flush();continue}if(x==='***'||x==='---'){flush();out.push('<div class="pulse-line reveal"></div>');continue}
+  if(/^\*\*.+\*\*$/.test(x)){sys.push(x.replace(/^\*\*|\*\*$/g,''));continue}flush();paragraphs++;
+  let cls='reveal',wrap=false;
+  const key=(x.startsWith('“')||x.startsWith('‘'))&&x.length<105&&(x.includes('자유')||x.includes('꿈')||x.includes('선택')||x.includes('원하')||x.includes('행복')||x.includes('AI'));
+  if(key)cls+=' dialogue-key';
+  if(x.startsWith('**')&&x.endsWith('**'))cls+=' thought';
+  if(paragraphs===Math.max(6,Math.floor(lines.length*.16))){out.push('<div class="cue reveal" data-cue="'+d.cue+'"><p>'+inline(x)+'</p></div>');wrap=true}
+  if(!wrap)out.push('<p class="'+cls+'">'+inline(x)+'</p>');
+ }flush();
+ if(d.metric){const m=d.metric;out.splice(Math.floor(out.length*.58),0,'<div class="metric reveal"><div class="metric-label">LIVE SYSTEM METRIC</div><div class="metric-value">'+m[0]+'</div><div class="metric-sub">'+m[1]+'<br>'+m[2]+'</div></div>')}
+ return out.join('')
 }
-async function load(n){const p=String(n).padStart(3,'0'),r=await fetch('manuscript/ep'+p+'.md?ts='+Date.now());if(!r.ok)throw Error();return r.text()}
+async function load(n){const p=String(n).padStart(3,'0'),r=await fetch('manuscript/ep'+p+'.md?v=3');if(!r.ok)throw Error();return r.text()}
 async function openEp(n){
- try{const md=await load(n),first=md.split('\n')[0].replace(/^#\s*제\d+화\.\s*/,''),body=render(md);state.ep=n;
- hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+String(n).padStart(2,'0')+' / '+MAX;title.textContent=first;prose.innerHTML=body;
- meta.textContent='공백 포함 '+md.length.toLocaleString('ko-KR')+'자 · LIVE MANUSCRIPT';hook.textContent=hooks[n]||'기억은 계속됩니다.';next.textContent=n<MAX?'NEXT SIGNAL / 제'+(n+1)+'화 →':'처음으로 돌아가기';next.onclick=()=>n<MAX?openEp(n+1):location.reload();
- history.replaceState(null,'','#ep'+n);document.querySelectorAll('.ep').forEach((e,i)=>e.classList.toggle('on',i===n-1));window.scrollTo(0,0);observe();notify(n);
- }catch(e){notifyText('원고를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.')}
+ state.timers.forEach(clearTimeout);state.timers=[];const d=direction[n];
+ try{const md=await load(n),first=md.split('\n')[0].replace(/^#\s*제\d+화\.\s*/,'');state.ep=n;document.body.dataset.ep=n;
+ hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+String(n).padStart(2,'0')+' / '+MAX;title.textContent=first;chapterHead.dataset.ghost=d.ghost;prose.innerHTML=render(md,n);
+ meta.textContent='공백 포함 '+md.length.toLocaleString('ko-KR')+'자 · LIVE MANUSCRIPT';hook.textContent=d.hook;next.textContent=n<MAX?'NEXT SIGNAL / 제'+(n+1)+'화 →':'처음으로 돌아가기';next.onclick=()=>n<MAX?openEp(n+1):location.reload();
+ token.textContent=d.token>100?'∞':d.token.toFixed(1).padStart(5,'0');sync.textContent=d.sync+'%';
+ history.replaceState(null,'','#ep'+n);document.querySelectorAll('.ep').forEach((e,i)=>e.classList.toggle('on',i===n-1));scrollTo(0,0);observe();notifyText('MEMORY '+String(n).padStart(2,'0')+' · '+d.cue);
+ if([4,8,10].includes(n))state.timers.push(setTimeout(()=>{document.body.classList.add('overload');flash.classList.add('go');setTimeout(()=>{document.body.classList.remove('overload');flash.classList.remove('go')},900)},7000));
+ if(!state.interrupted.has(n)){state.interrupted.add(n);state.timers.push(setTimeout(()=>{interruptText.innerHTML=d.interrupt;interrupt.classList.add('on')},[1,2,3].includes(n)?9000:n===10?13000:11000))}
+ }catch(e){notifyText('원고를 불러오지 못했습니다.')}
 }
-function observe(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('seen')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e))}
-function notify(n){token.textContent=(31.8-n*1.7).toFixed(1).padStart(5,'0');sync.textContent=(98-n*4)+'%';notifyText('MEMORY '+String(n).padStart(2,'0')+' 연결 · DREAM SYNC '+sync.textContent);
- if(special[n]&&!state.interrupted.has(n)){state.interrupted.add(n);setTimeout(()=>{interruptText.innerHTML=special[n];interrupt.classList.add('on')},n===10?9000:6500)}}
+function observe(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('seen')}),{threshold:.1});document.querySelectorAll('.reveal').forEach(e=>io.observe(e))}
 function notifyText(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2800)}
-function closeInterrupt(){interrupt.classList.remove('on');}
-for(let i=1;i<=MAX;i++){let b=document.createElement('button');b.className='ep';b.textContent='0'+(i<10?i:i)+' · MEMORY';b.onclick=()=>openEp(i);nav.appendChild(b)}
-addEventListener('scroll',()=>{let h=document.documentElement;let p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.documentElement.style.setProperty('--p',Math.min(100,p||0));if(state.ep){let drift=Math.min(20,Math.floor((p||0)/8));sync.textContent=Math.max(42,98-state.ep*4-drift)+'%'}},{passive:true});
+function closeInterrupt(){interrupt.classList.remove('on')}
+for(let i=1;i<=MAX;i++){let b=document.createElement('button');b.className='ep';b.textContent=String(i).padStart(2,'0')+' · MEMORY';b.onclick=()=>openEp(i);nav.appendChild(b)}
+addEventListener('scroll',()=>{let h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0;document.documentElement.style.setProperty('--p',Math.min(100,p));if(state.ep){let d=direction[state.ep],drift=Math.min(17,Math.floor(p/9));sync.textContent=Math.max(22,d.sync-drift)+'%'}},{passive:true});
 let m=location.hash.match(/ep(\d+)/);if(m)openEp(Math.min(MAX,+m[1]));
 </script></body></html>
