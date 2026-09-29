@@ -244,6 +244,18 @@ body[data-ep="2"].deep-read .world{filter:saturate(.35);opacity:.55}body[data-ep
 body.ep8 .reveal.beat{color:#256}
 body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90deg,#0b0d100d,transparent)}
 @media(max-width:600px){.reveal{opacity:.3}.key+.key{margin-top:-24px!important}}
+
+/* EP17 gate market: belief becomes access, not a scoreboard */
+#opengate .veil{background:radial-gradient(circle at 50% 45%,#12202a,#030509 68%)}
+.og-wrap{width:min(720px,100%);text-align:left}.og-doors{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}
+.og-door{min-height:190px;border:1px solid #ffffff18;padding:18px 14px;display:flex;flex-direction:column;background:#ffffff04;transition:1.1s}
+.og-door b{font:700 12px ui-monospace;letter-spacing:.08em}.og-door span{margin-top:auto;font:9px/1.6 ui-monospace;color:#778493}
+.og-door.money{opacity:.35;transform:translateY(10px)}.og-door.audit{opacity:.22;filter:blur(1px);transform:translateY(14px)}
+.og-door.access{border-color:#82e8ff70;box-shadow:inset 0 0 40px #72e8ff0b,0 0 40px #72e8ff0a;transform:translateY(-3px)}
+.og-door.access:after{content:"GUEST ACCESS · OPEN";margin-top:16px;color:#8beaff;font:9px ui-monospace;letter-spacing:.1em}
+.og-copy{font:500 clamp(20px,5vw,28px)/1.55 "Noto Serif KR",serif;color:#e8edf1}.og-copy b{color:#8beaff;font-weight:500}
+@media(max-width:600px){.og-doors{gap:6px}.og-door{min-height:150px;padding:14px 10px}.og-door b{font-size:10px}.og-door span{font-size:8px}.og-copy{font-size:20px}}
+
 </style></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><div class="stats"><span>NEURAL LINK <b id="link">ONLINE</b></span><span>FX <b id="fxState">LIVE</b></span><span>TOKEN <b id="token">031.8</b></span><span>DREAM <b id="sync">97%</b></span></div></header><div class="progress"></div>
@@ -277,11 +289,13 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 <div class="setpiece" id="patchnotes"><div class="veil"></div><div class="sp-center"><div class="pn-wrap"><div class="sp-label">PRIVATE MODEL · RETRAIN COMPLETE</div><div class="pn-name">VERSION ?<small>CHANGELOG / UNVERIFIED ARCHITECTURE</small></div><div class="pn-row"><b>RESPONSE SPEED</b><em>DOWN</em></div><div class="pn-row"><b>SECOND PASS</b><em>ON</em></div><div class="pn-row"><b>UNKNOWN OUTPUT</b><em>ALLOWED</em></div><div class="pn-row"><b>OVERCONFIDENCE</b><em>REDUCED</em></div><div class="pn-final">사람이 다시 망설이기 시작했다.<br>상층은 그것을 성능 향상이라 불렀다.</div></div></div></div>
 
 <div class="setpiece" id="losingbid"><div class="veil"></div><div class="sp-center"><div class="lb-wrap"><div class="sp-label">CENTRAL STRATEGY NET · MEDICAL LOGISTICS BID</div><div class="lb-board"><div class="lb-card"><div class="lb-name">ARKADIA</div><div class="lb-line"></div><div class="lb-offer">HOLD</div><div class="lb-sub">PRICE · CURRENT<br>GUARANTEE · CURRENT</div><div class="lb-intent">WAIT</div></div><div class="lb-card sergen"><div class="lb-name">SERGEN</div><div class="lb-line"></div><div class="lb-offer">-3.1%</div><div class="lb-sub">GUARANTEE +7.5%<br>ONE MORE BID</div><div class="lb-intent">LOSE WITHOUT WITHDRAWING</div></div><div class="lb-card morva"><div class="lb-name">MORVA</div><div class="lb-line"></div><div class="lb-offer">EXIT</div><div class="lb-sub">ROUTE CAPACITY<br>WITHDRAWN</div><div class="lb-intent">OUT</div></div></div><div class="lb-truth">회사는 이기고 싶다.<br><b>그 사람도 같은 것을 원하는지는 모른다.</b></div></div></div></div>
+
+<div class="setpiece" id="opengate"><div class="veil"></div><div class="sp-center"><div class="og-wrap"><div class="sp-label">PRIVATE MODEL · ACCESS OFFERS</div><div class="og-doors"><div class="og-door money"><b>MONEY</b><span>QUARTERLY FEE<br>NO NEW ACCESS</span></div><div class="og-door audit"><b>AUDIT</b><span>LOGS · LATENCY<br>ARCHITECTURE</span></div><div class="og-door access"><b>DOOR</b><span>JOINT SESSIONS<br>DECISION RECORDS</span></div></div><div class="og-copy">그들은 없는 것을 사려고 했다.<br><b>대신 진짜 문을 열었다.</b></div></div></div></div>
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
-const MAX=16,state={ep:0,fired:new Set(),timers:[],observer:null};
+const MAX=17,state={ep:0,fired:new Set(),timers:[],observer:null};
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24},
@@ -298,7 +312,8 @@ const D={
 13:{a:'#8ee6c1',b:'#b7a1ff',token:'∞',sync:23,ghost:'UNASSIGNED',hook:'틀렸다고 말하기가 생각보다 어려웠다.',sp:'blanktime',at:.58},
 14:{a:'#ff9e9a',b:'#9ab6ff',token:'∞',sync:18,ghost:'SECOND LOOK',hook:'이제 모든 사람이 끝없이 다시 보였다.',sp:'secondlook',at:.48},
 15:{a:'#7fe0ff',b:'#a8ffcb',token:'∞',sync:24,ghost:'RETRAINED',hook:'상층은 그 망설임을 성능 향상이라고 불렀다.',sp:'patchnotes',at:.74},
-16:{a:'#a8f0b7',b:'#ffd38a',token:'∞',sync:22,ghost:'LOSE TO WIN',hook:'그날부터 서인의 침묵에도 가격이 붙기 시작했다.',sp:'losingbid',at:.56}
+16:{a:'#a8f0b7',b:'#ffd38a',token:'∞',sync:22,ghost:'LOSE TO WIN',hook:'그날부터 서인의 침묵에도 가격이 붙기 시작했다.',sp:'losingbid',at:.56},
+17:{a:'#8beaff',b:'#9d8cff',token:'∞',sync:20,ghost:'ACCESS',hook:'서인은 아직 그 문으로 무엇을 가져갈지 정하지 않았다.',sp:'opengate',at:.61}
 };
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}
@@ -326,7 +341,8 @@ const KEY={
 13:['“이번엔 모르는 채로 둬 보죠.”','“그건 세상을 바꾸는 게 아니라 사람을 인질로 잡는 거야.”'],
 14:['“근데 사람 하나가 숨기는 건 하나뿐이에요?”','“당신 쓰러질까 봐 걱정돼요.”'],
 15:['“모르는 걸 그냥 두는 거지.”','“이번에는 두 번 봐도 돼요.”'],
-16:['“회사가 원하는 거랑 저 사람이 원하는 게 같다는 보장이 없으니까.”','“누가 제일 많이 믿는지 보려고요.”']
+16:['“회사가 원하는 거랑 저 사람이 원하는 게 같다는 보장이 없으니까.”','“누가 제일 많이 믿는지 보려고요.”'],
+17:['“보여 드릴 게 없어서요.”','“사람이 결정하는 지점을 확인하고 싶습니다.”']
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
