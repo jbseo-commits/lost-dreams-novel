@@ -1,5 +1,7 @@
 # 변경 기록
 
+- 2026-10-01 · Claude · 작가 지적(read.html에 텍스트 연출이 없음)에 따라 읽기 페이지를 연출이 있는 `pilot.html`로 합침. pilot 상단 왼쪽에 「EP 03 · 제목 ▾」 화 선택을 넣고(폰에서도 보임), 데스크톱 전용이던 왼쪽 MEMORY INDEX는 숨김. `read.html`은 `pilot.html#epN`으로 넘겨줌.
+
 - 2026-10-01 · Claude · 소설 읽기 전용 페이지 `read.html` 추가. 왼쪽 위 「제N화 ▾」 버튼으로 화 선택, 이전/다음 화, 읽던 위치·글자 크기·밝기 기억.
 
 - 2026-10-01 · Claude · GitHub 계정 제한으로 저장소를 `jbseo-commits/lost-dreams-novel`로 옮김. 웹 주소(README·LOOP)와 웹의 저장 대상 저장소(`app.js`)를 새 계정으로 바꿈.
