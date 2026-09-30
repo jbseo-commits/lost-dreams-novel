@@ -2,7 +2,7 @@
 
 장편소설 「꿈을 잃은 세계」(가제)의 설정집과 원고입니다.
 
-- 웹에서 읽기와 쓰기: https://jjsjb88-alt.github.io/lost-dreams-novel/
+- 웹에서 읽기와 쓰기: https://jbseo-commit.github.io/lost-dreams-novel/
 - 설정집: [`settings/`](settings/)
 - 원고: [`manuscript/`](manuscript/)
 - AI 작업 규칙: [`AGENTS.md`](AGENTS.md)
