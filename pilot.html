@@ -312,7 +312,7 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="setpiece" id="matrix"><div class="veil"></div><div class="sp-center"><div><div class="sp-label">90-DAY FREEDOM TRIAL · FINAL RESULT</div><div class="matrix-number"><span id="stayN">240</span> → <span id="returnN">0</span></div><div class="dots" id="dots"></div><div class="sp-sub">회복은 됐습니다.<br>그런데 그들은 알고도 돌아갔습니다.</div></div></div></div>
 <div class="setpiece" id="question"><div class="veil"></div><div class="sp-center"><div class="question">조건을 전부 바꾼 뒤에도<br>사람들이 같은 선택을 한다면,<br><em>누가 틀린 겁니까?</em></div></div></div>
 <div class="setpiece" id="compute"><div class="veil"></div><div class="sp-center"><div class="compute-wrap"><div class="sp-label" style="color:#111">UPPER LAYER · UNLIMITED COMPUTE</div><div class="compute-num" id="computeN">0</div><div>토큰이 아니라 미래를 태우는 중</div><div class="compute-feed" id="feed"></div></div></div></div>
-<div class="setpiece" id="recovery"><div class="veil"></div><div class="sp-center"><div><div class="pulse"></div><div class="recovery-copy">COGNITIVE COOLING · DAY 05 / 07<br>말하지 마. 지금은 살아 있는 것만 해.</div></div></div></div>
+<div class="setpiece" id="recovery"><div class="veil"></div><div class="sp-center"><div><div class="pulse"></div><div class="recovery-copy">COGNITIVE COOLING · DAY 01 / 07<br>말하지 마. 지금은 살아 있는 것만 해.</div></div></div></div>
 <div class="setpiece interactive" id="consent"><div class="veil"></div><div class="sp-center"><div class="consent-card" id="consentCard"><div class="sp-label" style="color:#555">EXTREME COGNITIVE EXPANSION PROGRAM</div><h3>자발적 동의</h3><div class="legal">극단 신경 스캔 · 성격 반응 조정 · 기억 접근 경로 재구성 가능 · 영구적 후유증 또는 사망 가능<br><br>성공 3 / 17 · 사망 2 · 중단 12</div><p>본인은 모든 위험을 이해했으며 자발적으로 동의합니다.</p><div class="consent-actions"><button onclick="rejectConsent()">동의하지 않음</button><button class="accept" onclick="acceptConsent()">동의합니다</button></div></div></div></div>
 <div class="setpiece interactive" id="reauth"><div class="veil" onanimationstart="runReauth(event)"></div><div class="sp-center"><div class="ra-wrap"><div class="sp-label">NEURAL SIGNATURE CHANGED · RE-AUTHENTICATION</div><div class="ra-q">본인이 맞습니까?</div><div class="ra-lanes"><div class="ra-lane"><span class="ra-who">서인</span><div class="ra-track"><i class="ra-tick"></i></div><span class="ra-val">0.04s</span></div><div class="ra-lane mono"><span class="ra-who">MONO</span><div class="ra-track"></div><span class="ra-val">0.80s</span></div><div class="ra-lane you"><span class="ra-who">YOU</span><div class="ra-track"><i class="ra-you" id="raYouBar"></i></div><span class="ra-val" id="raYouT"></span></div><div class="ra-bandlayer"><div class="ra-band"></div></div></div><div class="ra-scale"><span>0.00s</span><span>1.00s</span></div><button class="ra-yes" id="raYes" onclick="runReauth(event)">응.</button><div class="ra-final" id="raFinal"></div></div></div></div>
 
@@ -335,27 +335,28 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
-const MAX=20,state={ep:0,fired:new Set(),timers:[],observer:null};
+const MAX=20,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const D={
-1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28},
-2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24},
-3:{a:'#ffb06a',b:'#9b72ff',token:'025.2',sync:84,ghost:'YOUR CHOICE',hook:'불행이 자신의 것이었다.',sp:'choice',at:.58},
-4:{a:'#73f3ff',b:'#ffda72',token:'022.7',sync:78,ghost:'00:00:07',hook:'자기 머리로 생각하는 일은 언제부터 그렇게 비싸졌을까.',sp:'seven',at:.47},
-5:{a:'#b397ff',b:'#6fe7ff',token:'020.3',sync:73,ghost:'DOYUN',hook:'필요 없다는 사람에게 자유를 주는 게 어렵지.',sp:'terminal',at:.16},
-6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:'그들은 알고도 돌아갔다.',sp:'matrix',at:.72},
-7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:'끌어당기고 있던 것은 누구였을까.',sp:'question',at:.66},
-8:{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'9,400,000',hook:'서버는 그의 뇌였다.',sp:'compute',at:.54},
-9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:'혼자 들어가도 혼자라고 생각하지 말라고.',sp:'recovery',at:.12},
-10:{a:'#ff607c',b:'#a88cff',token:'∞',sync:39,ghost:'I CONSENT',hook:'자기 머릿속의 모든 문이 한꺼번에 열렸다.',sp:'consent',at:.72},
-11:{a:'#d9e3ea',b:'#ff9a62',token:'013.9',sync:32,ghost:'0.04s',hook:'오래 쥐는 것만큼은 아직 할 수 있었다.',sp:'reauth',at:.99},
-12:{a:'#7ee8ff',b:'#b38cff',token:'∞',sync:27,ghost:'PRUNE',hook:'다른 사람의 내일을 결정할 권한이었다.',sp:'prune',at:.47},
-13:{a:'#8ee6c1',b:'#b7a1ff',token:'∞',sync:23,ghost:'UNASSIGNED',hook:'틀렸다고 말하기가 생각보다 어려웠다.',sp:'blanktime',at:.58},
-14:{a:'#ff9e9a',b:'#9ab6ff',token:'∞',sync:18,ghost:'SECOND LOOK',hook:'이제 모든 사람이 끝없이 다시 보였다.',sp:'secondlook',at:.48},
-15:{a:'#7fe0ff',b:'#a8ffcb',token:'∞',sync:24,ghost:'SOURCE UNKNOWN',hook:'상층의 일부는 그 망설임을 성능 향상이라고 불렀다.',sp:'patchnotes',at:.74},
-16:{a:'#a8f0b7',b:'#ffd38a',token:'∞',sync:22,ghost:'LOSE TO WIN',hook:'그날부터 서인의 침묵에도 가격이 붙기 시작했다.',sp:'losingbid',at:.56},
-17:{a:'#8beaff',b:'#9d8cff',token:'∞',sync:20,ghost:'ACCESS',hook:'서인은 아직 그 문으로 무엇을 가져갈지 정하지 않았다.',sp:'opengate',at:.61},
-19:{a:'#b8ffe8',b:'#7dbdff',token:'∞',sync:19,ghost:'LEVEL 5',hook:'서인은 열쇠보다 먼저 그 구멍을 들여다보기로 했다.',sp:'peephole',at:.72},
-20:{a:'#caffea',b:'#8cbcff',token:'∞',sync:18,ghost:'LEVEL 6',hook:'문은 열렸다. 서인은 그 문을 닫지 않을 방법을 먼저 생각했다.',sp:'trikey',at:.78}
+1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
+2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1600},
+3:{a:'#ffb06a',b:'#9b72ff',token:'025.2',sync:84,ghost:'YOUR CHOICE',hook:'불행이 자신의 것이었다.',sp:'choice',at:.58,on:"다른 하나가 거짓이",w:1600},
+4:{a:'#73f3ff',b:'#ffda72',token:'022.7',sync:78,ghost:'00:00:07',hook:'자기 머리로 생각하는 일은 언제부터 그렇게 비싸졌을까.',sp:'seven',at:.47,on:"딱 7초",w:500},
+5:{a:'#b397ff',b:'#6fe7ff',token:'020.3',sync:73,ghost:'DOYUN',hook:'필요 없다는 사람에게 자유를 주는 게 어렵지.',sp:'terminal',at:.16,on:"메시지에 적힌 대로",w:1600},
+6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:'그들은 알고도 돌아갔다.',sp:'matrix',at:.72,on:"결과는 같았다",w:1600},
+7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:'끌어당기고 있던 것은 누구였을까.',sp:'question',at:.66,on:"다 부순 다음에도 사람들이 똑같이 선택하면?",w:1600},
+8:{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'9,400,000',hook:'서버는 그의 뇌였다.',sp:'compute',at:.54,on:"경우의 수가 늘어났다",w:1600},
+9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:'혼자 들어가도 혼자라고 생각하지 말라고.',sp:'recovery',at:.12,on:"서인은 다시 잠들었다",w:1600},
+10:{a:'#ff607c',b:'#a88cff',token:'∞',sync:39,ghost:'I CONSENT',hook:'자기 머릿속의 모든 문이 한꺼번에 열렸다.',sp:'consent',at:.72,on:"손가락이 승인 버튼 위에서 멈췄다",w:1400},
+11:{a:'#d9e3ea',b:'#ff9a62',token:'013.9',sync:32,ghost:'0.04s',hook:'오래 쥐는 것만큼은 아직 할 수 있었다.',sp:'reauth',at:.99,on:"본인이 맞습니까?",w:500},
+12:{a:'#7ee8ff',b:'#b38cff',token:'∞',sync:27,ghost:'PRUNE',hook:'다른 사람의 내일을 결정할 권한이었다.',sp:'prune',at:.47,on:"경로가 한꺼번에 사라졌다",w:1200},
+13:{a:'#8ee6c1',b:'#b7a1ff',token:'∞',sync:23,ghost:'UNASSIGNED',hook:'틀렸다고 말하기가 생각보다 어려웠다.',sp:'blanktime',at:.58,on:"보고할 필요 없음",w:1600},
+14:{a:'#ff9e9a',b:'#9ab6ff',token:'∞',sync:18,ghost:'SECOND LOOK',hook:'이제 모든 사람이 끝없이 다시 보였다.',sp:'secondlook',at:.48,on:"사람이 숨기는 게 꼭 하나뿐일까요?",w:1800},
+15:{a:'#7fe0ff',b:'#a8ffcb',token:'∞',sync:24,ghost:'SOURCE UNKNOWN',hook:'상층의 일부는 그 망설임을 성능 향상이라고 불렀다.',sp:'patchnotes',at:.74,on:"소문 속 버전은 올라갔어요",w:1600},
+16:{a:'#a8f0b7',b:'#ffd38a',token:'∞',sync:22,ghost:'LOSE TO WIN',hook:'그날부터 서인의 침묵에도 가격이 붙기 시작했다.',sp:'losingbid',at:.56,on:"배송 보증: +7.5%",w:1200},
+17:{a:'#8beaff',b:'#9d8cff',token:'∞',sync:20,ghost:'ACCESS',hook:'서인은 아직 그 문으로 무엇을 가져갈지 정하지 않았다.',sp:'opengate',at:.61,on:"그래서 열어 보고 싶어요",w:1600},
+18:{a:'#9fe3ff',b:'#c0a4ff',token:'∞',sync:21,ghost:'v2.1',hook:'서인은 처음으로, 그 오해가 자신을 어디까지 데려갈 수 있는지보다 어디에서 멈춰야 하는지를 적어 두었다.',sp:null,at:1},
+19:{a:'#b8ffe8',b:'#7dbdff',token:'∞',sync:19,ghost:'LEVEL 5',hook:'서인은 열쇠보다 먼저 그 구멍을 들여다보기로 했다.',sp:'peephole',at:.72,on:"감사하는 자리에 넣었다",w:1600},
+20:{a:'#caffea',b:'#8cbcff',token:'∞',sync:18,ghost:'LEVEL 6',hook:'문은 열렸다. 서인은 그 문을 닫지 않을 방법을 먼저 생각했다.',sp:'trikey',at:.78,on:"혼자서는 아무것도 끌 수 없었다",w:1600}
 };
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}
@@ -407,7 +408,7 @@ return items.map((q,k)=>{if(q.raw)return q.raw;const extra=q.last?' last':'';
  return '<p class="reveal'+(keys.includes(q.x)?' key':'')+extra+'">'+inline(q.x)+'</p>'}).join('')}
 async function load(n){const r=await fetch(new URL('manuscript/ep'+String(n).padStart(3,'0')+'.md?v=8',document.baseURI).href,{cache:'no-store'});if(!r.ok)throw Error();return r.text()}
 async function openEp(n){
- closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];const d=D[n];state.ep=n;
+ closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];state.armed=0;const d=D[n];state.ep=n;
  document.body.className=n===8?'ep8':'reading';document.body.dataset.ep=n;
  document.documentElement.style.setProperty('--accent',d.a);document.documentElement.style.setProperty('--accent2',d.b);
  hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+String(n).padStart(2,'0')+' / '+MAX;
@@ -428,9 +429,14 @@ async function openEp(n){
 }
 let revealAt=0;
 function reveal(el){el.classList.add('seen');if(el.classList.contains('unread'))state.timers.push(setTimeout(()=>el.classList.add('closed'),1600))}
-function observe(){if(state.observer)state.observer.disconnect();revealAt=0;state.observer=new IntersectionObserver(es=>{const now=performance.now();es.filter(e=>e.isIntersecting).map(e=>e.target).sort((a,b)=>a.compareDocumentPosition(b)&4?-1:1).forEach(el=>{state.observer.unobserve(el);const t=Math.max(revealAt,now);if(t-now>1600){reveal(el);return}const ms=+el.dataset.ms||0;revealAt=t+(ms||90);if(t===now)reveal(el);else state.timers.push(setTimeout(()=>reveal(el),t-now))})},{threshold:.1});document.querySelectorAll('.reveal:not(.seen)').forEach(e=>state.observer.observe(e))}
+function observe(){if(state.observer)state.observer.disconnect();revealAt=0;state.observer=new IntersectionObserver(es=>{const now=performance.now();es.filter(e=>e.isIntersecting).map(e=>e.target).sort((a,b)=>a.compareDocumentPosition(b)&4?-1:1).forEach(el=>{state.observer.unobserve(el);const t=Math.max(revealAt,now);if(t-now>1600){reveal(el);return}const ms=+el.dataset.ms||0;revealAt=t+(ms||90);if(t===now)reveal(el);else state.timers.push(setTimeout(()=>reveal(el),t-now))})},{threshold:.1});document.querySelectorAll('.reveal:not(.seen)').forEach(e=>state.observer.observe(e));findAnchor()}
+// 팝업은 글이 그 장면에 닿았을 때 뜬다: 기준 문장(on)이 읽히고 w밀리초 뒤. 문장을 못 찾으면 예전처럼 스크롤 위치(at)로 띄운다.
+function findAnchor(){const d=D[state.ep];state.anchorEl=d&&d.on?[...prose.children].find(e=>e.textContent.includes(d.on))||null:null;state.timers.push(setTimeout(()=>checkAnchor(),1500))}
+function checkAnchor(p){const n=state.ep,d=D[n];if(!d||!d.sp||state.fired.has(n))return;const el=state.anchorEl;
+ if(!el){if(p!==undefined&&p>=d.at)fire();return}
+ const r=el.getBoundingClientRect();if(state.armed===n){if(r.bottom<-innerHeight*.5)fire();return}if((el.classList.contains('seen')||r.bottom<0)&&r.top<innerHeight*.62){state.armed=n;state.timers.push(setTimeout(()=>{state.armed=0;if(state.ep===n)fire()},d.w||1600))}}
 function epAtmosphere(p){const n=state.ep;if(!n)return;document.body.classList.toggle('deep-read',p>.45);let msg='';if(n===1&&p>.68)msg='좋은 꿈이었는데, <b>왜 좋았는지는 기억나지 않았다.</b>';if(n===2&&p>.72)msg='<b>내가 없잖아.</b>';if(n===3&&p>.76)msg='<b>왜 그건 내 꿈으로 안 쳐 줘?</b>';whisper.innerHTML=msg;whisper.classList.toggle('on',!!msg)}
-function fire(){const d=D[state.ep];if(!d||state.fired.has(state.ep))return;state.fired.add(state.ep);showSp(d.sp);if(state.ep===4)runSeven();if(state.ep===6)runMatrix();if(state.ep===8)runCompute();if(state.ep===12)runPrune()}
+function fire(){const d=D[state.ep];if(!d||!d.sp||state.fired.has(state.ep))return;state.fired.add(state.ep);showSp(d.sp);if(state.ep===4)runSeven();if(state.ep===6)runMatrix();if(state.ep===8)runCompute();if(state.ep===12)runPrune()}
 function showSp(id){const el=document.getElementById(id);el.classList.add('on');if(state.ep===1){state.timers.push(setTimeout(()=>el.classList.add('corrupt'),2300))}if(!el.classList.contains('interactive'))state.timers.push(setTimeout(()=>closeSp(),state.ep===4?7600:state.ep===8?6200:5200))}
 function closeSp(silent=false){document.querySelectorAll('.setpiece.on').forEach(e=>{e.classList.remove('on','corrupt')});if(!silent&&state.ep)toastMsg('MEMORY RESUMED')}
 function runSeven(){let n=7;countEl.textContent=n;pathsEl.textContent='PREDICTIVE PATHS 1,204,118';const iv=setInterval(()=>{n--;countEl.textContent=n;if(n>0)pathsEl.textContent='PREDICTIVE PATHS '+Math.floor(1204118*Math.pow(3.1,7-n)).toLocaleString();else{clearInterval(iv);countEl.textContent='결정';pathsEl.textContent='AI: 계산 중 · HUMAN: 회의를 끝내지 마세요.'}},900);state.timers.push(iv)}
@@ -442,7 +448,7 @@ function rejectConsent(){consentCardEl.querySelector('p').innerHTML='동의하�
 function acceptConsent(){consentCardEl.classList.add('danger');consentCardEl.querySelector('h3').textContent='동의가 완료되었습니다.';consentCardEl.querySelector('p').innerHTML='<b>그렇다면 허락을 받지 않고 구해야 하는 건 아닐까.</b>';state.timers.push(setTimeout(()=>closeSp(),3200))}
 function toastMsg(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2200)}
 for(let i=1;i<=MAX;i++){let b=document.createElement('button');b.className='ep';b.textContent=String(i).padStart(2,'0')+' · MEMORY';b.onclick=()=>openEp(i);navEl.appendChild(b)}
-addEventListener('scroll',()=>{const h=document.documentElement,p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);document.documentElement.style.setProperty('--p',Math.min(100,p*100));const d=D[state.ep];if(d){sync.textContent=Math.max(18,Math.round(d.sync-p*14))+'%';epAtmosphere(p);if(p>=d.at)fire()}},{passive:true});
+addEventListener('scroll',()=>{const h=document.documentElement,p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);document.documentElement.style.setProperty('--p',Math.min(100,p*100));const d=D[state.ep];if(d){sync.textContent=Math.max(18,Math.round(d.sync-p*14))+'%';epAtmosphere(p);checkAnchor(p)}},{passive:true});
 nextBtn.onclick=()=>openEp(2); // 표지 입장 없이 스크롤로 1화 끝에 와도 다음 화로 넘어가게
 const enterDream=$('enterDream');
 function activateStaticEp1(){
