@@ -169,7 +169,7 @@
 1. `node scripts/build-manifest.mjs`로 목록이 제대로 만들어지는지 확인합니다. (manifest.json은 커밋하지 않습니다.)
 2. 커밋 메시지: `원고: 제N화 「제목」 (자율 루프)`
 3. `git push`. 실패하면 `git pull --rebase` 후 한 번만 다시 시도합니다. 그래도 실패하면 로그에 적고 끝냅니다.
-4. GitHub Actions의 "웹 배포"가 성공했는지 확인하고, `https://jjsjb88-alt.github.io/lost-dreams-novel/manuscript/epNNN.md`가 열리는지 확인합니다.
+4. GitHub Actions의 "웹 배포"가 성공했는지 확인하고, `https://jbseo-commits.github.io/lost-dreams-novel/manuscript/epNNN.md`가 열리는지 확인합니다.
 5. 배포 결과를 `loop/log.md`에 반영해야 하면 작은 커밋 하나로 올립니다.
 
 ## 하지 않는 것
