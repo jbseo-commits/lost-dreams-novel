@@ -306,6 +306,20 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .tp-slip.b{border-color:#9fd0ff55}.tp-slip.b .tp-amt{color:#bfe0ff}
 .tp-copy{font:500 clamp(17px,4.4vw,25px)/1.65 "Noto Serif KR",serif;color:#e9e3da;opacity:0;animation:tpLine .6s 2.5s forwards}
 @keyframes tpLine{to{opacity:1}}
+/* EP28 eight minutes: 어머니의 동네 반경 안에는 병원 8분·시장 3분·약국 1분·이웃이 있고, 제안받은 단지는 병원 1분이지만 이웃이 0이다 */
+#eightmin .veil{background:radial-gradient(circle at 50% 46%,#16120d,#030508 72%)}
+.em-wrap{width:min(760px,94vw);text-align:center}
+.em-map{position:relative;width:min(300px,76vw);height:min(300px,76vw);margin:30px auto 18px}
+.em-ring{position:absolute;left:50%;top:50%;border:1px solid #ffd9a855;border-radius:50%;transform:translate(-50%,-50%) scale(.2);opacity:0;animation:emRing .7s forwards}
+.em-ring.r1{width:30%;height:30%;animation-delay:.3s}.em-ring.r2{width:62%;height:62%;animation-delay:.7s}.em-ring.r3{width:96%;height:96%;animation-delay:1.1s;border-color:#ffd9a899}
+.em-home{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px;border-radius:50%;background:#ffd9a8;box-shadow:0 0 18px #ffd9a8aa}
+.em-pin{position:absolute;font:9px ui-monospace,monospace;letter-spacing:.08em;color:#e8d8c4;opacity:0;animation:emPin .4s forwards;white-space:nowrap}
+.em-pin:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#ffd9a8;margin-right:5px}
+.em-pin.p1{left:50%;top:39%;margin-left:6px;animation-delay:.9s}.em-pin.p2{left:20%;top:63%;animation-delay:1.3s}.em-pin.p3{right:3%;top:78%;animation-delay:1.7s}
+.em-offer{border:1px dashed #9fb8ff66;padding:12px 14px;max-width:360px;margin:6px auto 0;font:10px/1.8 ui-monospace,monospace;color:#9fb0c8;text-align:left;opacity:0;animation:emPin .5s 2.3s forwards}
+.em-offer b{color:#ffb4a0;font-weight:700}
+@keyframes emRing{to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes emPin{to{opacity:1}}
 /* 화 선택: HUD 왼쪽 위에서 펼쳐진다. 닫혀 있을 때는 display:none */
 .pick{display:flex;align-items:center;gap:8px;min-width:0;max-width:min(52vw,380px);height:34px;margin-left:14px;padding:0 10px;border:1px solid #ffffff14;background:#ffffff06;color:inherit;cursor:pointer;font:10px ui-monospace,monospace;letter-spacing:.12em}
 .pick:hover,.pick[aria-expanded="true"]{border-color:color-mix(in srgb,var(--accent) 45%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
@@ -369,11 +383,12 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="setpiece" id="samechoice"><div class="veil"></div><div class="sp-center"><div class="sc-wrap"><div class="sp-label">SAME OFFER · SAME BUTTON · DIFFERENT WEIGHT</div><div class="sc-rule">+3.0 TOKEN · PRIVATE · WITHDRAWABLE</div><div class="sc-grid"><div class="sc-cell hot"><span>EAST 27</span><div class="sc-check">✓</div><b>82%</b><span>VOLUNTARY</span></div><div class="sc-cell hot"><span>SOUTH 14</span><div class="sc-check">✓</div><b>57%</b><span>VOLUNTARY</span></div><div class="sc-cell"><span>CENTRAL 6</span><div class="sc-check">✓</div><b>21%</b><span>VOLUNTARY</span></div><div class="sc-cell"><span>NORTHWEST 3</span><div class="sc-check">✓</div><b>11%</b><span>VOLUNTARY</span></div></div><div class="sc-copy">선택지는 같았다.<br><b>그 선택의 무게가 같지는 않았다.</b></div></div></div></div>
 <div class="setpiece" id="queuejump"><div class="veil"></div><div class="sp-center"><div class="qj-wrap"><div class="sp-label">NIGHT POOL · EAST 27 · WAITLIST</div><div class="qj-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="gap"></i><i></i><i></i><i></i><i></i><b class="qj-me"></b><span class="qj-tag">R-17</span></div><div class="qj-copy">줄은 그대로였다.<br><b>앞자리만 하나 먼저 찼다.</b></div></div></div></div>
 <div class="setpiece" id="twoprices"><div class="veil"></div><div class="sp-center"><div class="tp-wrap"><div class="sp-label">ONE NIGHT · TWO PRICES</div><div class="tp-row"><div class="tp-slip a"><small>MOTHER · SURVEY REWARD</small><p>3 QUESTIONS</p><p>MARKET ZONE 3</p><p>PRICE SET BY: —</p><span class="tp-amt">+3.0</span></div><div class="tp-slip b"><small>MARKET · NEW LISTING</small><p>TESTIMONY · AGE 12</p><p>INQUIRIES 11</p><p>PRICE SET BY: MARKET</p><span class="tp-amt">4,200</span></div></div></div></div></div>
+<div class="setpiece" id="eightmin"><div class="veil"></div><div class="sp-center"><div class="em-wrap"><div class="sp-label">EAST 27 · 21 YEARS · WALKING RADIUS</div><div class="em-map"><i class="em-ring r1"></i><i class="em-ring r2"></i><i class="em-ring r3"></i><i class="em-home"></i><span class="em-pin p1">PHARMACY 1 MIN</span><span class="em-pin p2">MARKET 3 MIN</span><span class="em-pin p3">HOSPITAL 8 MIN</span></div><div class="em-offer">OFFER · 12 MONTHS RESIDENCY<br>HOSPITAL 1 MIN · SECURITY 24H · RENT FROZEN<br>NEIGHBORS: <b>0</b></div></div></div></div>
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
-const MAX=27,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=28,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1600},
@@ -401,7 +416,8 @@ const D={
 24:{a:'#ffd2a0',b:'#a8dfff',token:'∞',sync:14,ghost:'BORROWED NAME',hook:'이제는, 그의 이름만 있어도 판단을 빌린 척할 수 있었다.',sp:'borrowedname',at:.7,on:"이름은 지금 빼고",w:1600},
 25:{a:'#baffda',b:'#ffcf9e',token:'∞',sync:13,ghost:'SAME CHOICE',hook:'같은 방향으로만 움직이지 않았다.',sp:'samechoice',at:.58,on:"비참여 및 참여 사유는 수집하지 않습니다",w:1600},
 26:{a:'#ffd9a8',b:'#9fb8ff',token:'∞',sync:12,ghost:'R-17',hook:'서인은 어머니가 모르는 숫자 하나를 혼자 들고 있었다.',sp:'queuejump',at:.50,on:"신원은 안 보게 해 놨으니까",w:1400},
-27:{a:'#ffe1b8',b:'#9fd0ff',token:'∞',sync:11,ghost:'4,200',hook:'서인은 그 값을 계산하지 않았다.',sp:'twoprices',at:.80,on:"같은 이야기였다.",w:1400}
+27:{a:'#ffe1b8',b:'#9fd0ff',token:'∞',sync:11,ghost:'4,200',hook:'서인은 그 값을 계산하지 않았다.',sp:'twoprices',at:.80,on:"같은 이야기였다.",w:1400},
+28:{a:'#ffcf9e',b:'#a6c8ff',token:'∞',sync:10,ghost:'8 MIN',hook:'담요 하나를 서인 쪽으로 던지고 문을 닫았다.',sp:'eightmin',at:.50,on:"그거예요.",w:1400}
 };
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}
@@ -439,7 +455,8 @@ const KEY={
 24:['“제가 눌렀는데요.”','“이름은 지금 빼고.”'],
 25:['“안 해도 되는데 내가 했다고.”','“나는 하고 싶었는데.”'],
 26:['“아시면 푸셨을 테니까요.”','“그럼 그건 서인 씨 마음 편하자고 하는 거네요.”'],
-27:['“질문 하나 고르느라.”','“내 밤이기도 해.”']
+27:['“질문 하나 고르느라.”','“내 밤이기도 해.”'],
+28:['“그런데 이사 가서 모르는 사람들 틈에서 자는 게 더 무서워.”','“지금은 내가 정하고 싶어요.”']
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
