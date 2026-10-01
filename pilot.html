@@ -293,6 +293,19 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 @keyframes qjJump{30%{transform:translateY(-1.3em) scale(1.35)}100%{left:1.3em;transform:translateY(0) scale(1.15)}}
 @keyframes qjGap{to{background:transparent;box-shadow:inset 0 0 0 1px #ffffff40}}
 @keyframes qjTag{to{opacity:1}}
+/* EP27 two prices: 같은 이야기가 어머니에게는 +3.0, 시장에서는 4,200으로 매겨진다 */
+#twoprices .veil{background:radial-gradient(circle at 50% 44%,#171310,#030508 72%)}
+.tp-wrap{width:min(760px,94vw);text-align:center}
+.tp-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:28px auto;max-width:640px;align-items:start;padding:0 2px}
+.tp-slip{min-width:0;border:1px solid #ffffff22;background:#0b0e12d8;padding:16px 12px 18px;text-align:left;font:10px/1.8 ui-monospace,monospace;color:#9aa3ad;min-height:190px}
+.tp-slip small{display:block;letter-spacing:.18em;font-size:8px;color:#6f7a86;margin-bottom:10px}
+.tp-slip p{margin:0;opacity:0;animation:tpLine .35s forwards}
+.tp-slip p:nth-of-type(1){animation-delay:.4s}.tp-slip p:nth-of-type(2){animation-delay:.8s}.tp-slip p:nth-of-type(3){animation-delay:1.2s}
+.tp-amt{display:block;margin-top:16px;font:800 clamp(30px,9vw,54px)/1 ui-monospace,monospace;letter-spacing:-.04em;opacity:0;animation:tpLine .5s 1.7s forwards}
+.tp-slip.a{border-color:#ffd9a844}.tp-slip.a .tp-amt{color:#ffd9a8;font-size:clamp(24px,6vw,34px)}
+.tp-slip.b{border-color:#9fd0ff55}.tp-slip.b .tp-amt{color:#bfe0ff}
+.tp-copy{font:500 clamp(17px,4.4vw,25px)/1.65 "Noto Serif KR",serif;color:#e9e3da;opacity:0;animation:tpLine .6s 2.5s forwards}
+@keyframes tpLine{to{opacity:1}}
 /* 화 선택: HUD 왼쪽 위에서 펼쳐진다. 닫혀 있을 때는 display:none */
 .pick{display:flex;align-items:center;gap:8px;min-width:0;max-width:min(52vw,380px);height:34px;margin-left:14px;padding:0 10px;border:1px solid #ffffff14;background:#ffffff06;color:inherit;cursor:pointer;font:10px ui-monospace,monospace;letter-spacing:.12em}
 .pick:hover,.pick[aria-expanded="true"]{border-color:color-mix(in srgb,var(--accent) 45%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
@@ -355,11 +368,12 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="setpiece" id="borrowedname"><div class="veil"></div><div class="sp-center"><div class="bn-wrap"><div class="sp-label">MARKET CERTIFICATE · BORROWED AUTHORITY</div><div class="bn-paper"><div class="bn-title">SEO-IN<br>CONSENT STANDARD</div><div class="bn-stamp">NAME REMOVED</div></div><div class="bn-copy">판단을 빌리기 어려워지자,<br><b>시장은 이름부터 빌리기 시작했다.</b></div></div></div></div>
 <div class="setpiece" id="samechoice"><div class="veil"></div><div class="sp-center"><div class="sc-wrap"><div class="sp-label">SAME OFFER · SAME BUTTON · DIFFERENT WEIGHT</div><div class="sc-rule">+3.0 TOKEN · PRIVATE · WITHDRAWABLE</div><div class="sc-grid"><div class="sc-cell hot"><span>EAST 27</span><div class="sc-check">✓</div><b>82%</b><span>VOLUNTARY</span></div><div class="sc-cell hot"><span>SOUTH 14</span><div class="sc-check">✓</div><b>57%</b><span>VOLUNTARY</span></div><div class="sc-cell"><span>CENTRAL 6</span><div class="sc-check">✓</div><b>21%</b><span>VOLUNTARY</span></div><div class="sc-cell"><span>NORTHWEST 3</span><div class="sc-check">✓</div><b>11%</b><span>VOLUNTARY</span></div></div><div class="sc-copy">선택지는 같았다.<br><b>그 선택의 무게가 같지는 않았다.</b></div></div></div></div>
 <div class="setpiece" id="queuejump"><div class="veil"></div><div class="sp-center"><div class="qj-wrap"><div class="sp-label">NIGHT POOL · EAST 27 · WAITLIST</div><div class="qj-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="gap"></i><i></i><i></i><i></i><i></i><b class="qj-me"></b><span class="qj-tag">R-17</span></div><div class="qj-copy">줄은 그대로였다.<br><b>앞자리만 하나 먼저 찼다.</b></div></div></div></div>
+<div class="setpiece" id="twoprices"><div class="veil"></div><div class="sp-center"><div class="tp-wrap"><div class="sp-label">ONE NIGHT · TWO PRICES</div><div class="tp-row"><div class="tp-slip a"><small>MOTHER · SURVEY REWARD</small><p>3 QUESTIONS</p><p>MARKET ZONE 3</p><p>EGG −4.9</p><span class="tp-amt">+3.0</span></div><div class="tp-slip b"><small>MARKET · NEW LISTING</small><p>TESTIMONY · AGE 12</p><p>MEDICAL JUDGMENT</p><p>INQUIRIES 11</p><span class="tp-amt">4,200</span></div></div><div class="tp-copy">값은 말한 사람이 정하지 못했다.</div></div></div></div>
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
-const MAX=26,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=27,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1600},
@@ -386,7 +400,8 @@ const D={
 23:{a:'#b8ffe8',b:'#ffcf9a',token:'∞',sync:15,ghost:'71 → 43',hook:'사람들이 그를 믿기 시작하면서, 처음으로 그의 말에도 사용 한도가 필요해졌다.',sp:'consentvalue',at:.67,on:"조직별 참여율 표시 제거",w:1600},
 24:{a:'#ffd2a0',b:'#a8dfff',token:'∞',sync:14,ghost:'BORROWED NAME',hook:'이제는, 그의 이름만 있어도 판단을 빌린 척할 수 있었다.',sp:'borrowedname',at:.7,on:"이름은 지금 빼고",w:1600},
 25:{a:'#baffda',b:'#ffcf9e',token:'∞',sync:13,ghost:'SAME CHOICE',hook:'같은 방향으로만 움직이지 않았다.',sp:'samechoice',at:.58,on:"비참여 및 참여 사유는 수집하지 않습니다",w:1600},
-26:{a:'#ffd9a8',b:'#9fb8ff',token:'∞',sync:12,ghost:'R-17',hook:'서인은 어머니가 모르는 숫자 하나를 혼자 들고 있었다.',sp:'queuejump',at:.50,on:"신원은 안 보게 해 놨으니까",w:1400}
+26:{a:'#ffd9a8',b:'#9fb8ff',token:'∞',sync:12,ghost:'R-17',hook:'서인은 어머니가 모르는 숫자 하나를 혼자 들고 있었다.',sp:'queuejump',at:.50,on:"신원은 안 보게 해 놨으니까",w:1400},
+27:{a:'#ffe1b8',b:'#9fd0ff',token:'∞',sync:11,ghost:'4,200',hook:'서인은 그 값을 계산하지 않았다.',sp:'twoprices',at:.80,on:"같은 이야기였다.",w:1400}
 };
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}
@@ -423,7 +438,8 @@ const KEY={
 23:['“우리 집에는 네 번째 검증이 없습니다.”','“저 사람까지 밀어서 만든 숫자면요.”'],
 24:['“제가 눌렀는데요.”','“이름은 지금 빼고.”'],
 25:['“안 해도 되는데 내가 했다고.”','“나는 하고 싶었는데.”'],
-26:['“아시면 푸셨을 테니까요.”','“그럼 그건 서인 씨 마음 편하자고 하는 거네요.”']
+26:['“아시면 푸셨을 테니까요.”','“그럼 그건 서인 씨 마음 편하자고 하는 거네요.”'],
+27:['“질문 하나 고르느라.”','“내 밤이기도 해.”']
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
