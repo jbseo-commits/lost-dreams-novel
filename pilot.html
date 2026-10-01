@@ -384,6 +384,18 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .sp3-line{position:absolute;top:34px;bottom:46px;left:calc(16px + (100% - 32px) * .56);width:calc((100% - 32px) * .14);background:#9fc0ff22;border-left:1px solid #9fc0ff;border-right:1px solid #9fc0ff;opacity:0;animation:s3In .4s 1.8s forwards}
 .sp3-tag{margin-top:14px;display:flex;justify-content:space-between;opacity:0;animation:s3In .4s 2.5s forwards}.sp3-tag b{color:#9fc0ff}
 @keyframes s3In{to{opacity:1}}
+/* EP34 name released: 서인 방식 상표 표시가 떨어지고 소유자 칸이 비어 일반 명칭이 된다 */
+#namereleased .veil{background:radial-gradient(circle at 50% 46%,#16161a,#030508 72%)}
+.nr-wrap{text-align:center;font:10px/1.9 ui-monospace,monospace;color:#a7b0ba}
+.nr-term{font:800 clamp(34px,10vw,64px)/1.1 "Noto Serif KR",serif;color:#f2e6d2;margin:22px 0 6px;position:relative;display:inline-block}
+.nr-tm{position:absolute;right:-1.6em;top:-.3em;font:700 .32em ui-monospace,monospace;color:#ffd9a8;animation:nrDrop 1s 1.6s forwards}
+.nr-row{display:flex;justify-content:center;gap:10px;margin-top:10px}
+.nr-own{opacity:1;animation:nrFade .5s 2s forwards}.nr-own2{opacity:0;animation:nrIn .5s 2.4s forwards;position:absolute}
+.nr-own-w{position:relative;display:inline-block;min-width:120px;height:20px}
+.nr-gen{margin-top:16px;border:2px solid #9fc0ff;color:#9fc0ff;display:inline-block;padding:4px 10px;font-weight:800;letter-spacing:.14em;opacity:0;transform:scale(1.5) rotate(-4deg);animation:nrStamp .35s 3s forwards}
+@keyframes nrDrop{to{opacity:0;transform:translateY(40px) rotate(18deg)}}
+@keyframes nrFade{to{opacity:0}}@keyframes nrIn{to{opacity:1}}
+@keyframes nrStamp{to{opacity:.95;transform:scale(1) rotate(-4deg)}}
 /* 화 선택: HUD 왼쪽 위에서 펼쳐진다. 닫혀 있을 때는 display:none */
 .pick{display:flex;align-items:center;gap:8px;min-width:0;max-width:min(52vw,380px);height:34px;margin-left:14px;padding:0 10px;border:1px solid #ffffff14;background:#ffffff06;color:inherit;cursor:pointer;font:10px ui-monospace,monospace;letter-spacing:.12em}
 .pick:hover,.pick[aria-expanded="true"]{border-color:color-mix(in srgb,var(--accent) 45%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
@@ -448,6 +460,7 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="setpiece" id="queuejump"><div class="veil"></div><div class="sp-center"><div class="qj-wrap"><div class="sp-label">NIGHT POOL · EAST 27 · WAITLIST</div><div class="qj-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="gap"></i><i></i><i></i><i></i><i></i><b class="qj-me"></b><span class="qj-tag">R-17</span></div><div class="qj-copy">줄은 그대로였다.<br><b>앞자리만 하나 먼저 찼다.</b></div></div></div></div>
 <div class="setpiece" id="twoprices"><div class="veil"></div><div class="sp-center"><div class="tp-wrap"><div class="sp-label">ONE NIGHT · TWO PRICES</div><div class="tp-row"><div class="tp-slip a"><small>MOTHER · SURVEY REWARD</small><p>3 QUESTIONS</p><p>MARKET ZONE 3</p><p>PRICE SET BY: —</p><span class="tp-amt">+3.0</span></div><div class="tp-slip b"><small>MARKET · NEW LISTING</small><p>TESTIMONY · AGE 12</p><p>INQUIRIES 11</p><p>PRICE SET BY: MARKET</p><span class="tp-amt">4,200</span></div></div></div></div></div>
 <div class="setpiece" id="eightmin"><div class="veil"></div><div class="sp-center"><div class="em-wrap"><div class="sp-label">EAST 27 · 21 YEARS · WALKING RADIUS</div><div class="em-map"><i class="em-ring r1"></i><i class="em-ring r2"></i><i class="em-ring r3"></i><i class="em-home"></i><span class="em-pin p1">PHARMACY 1 MIN</span><span class="em-pin p2">MARKET 3 MIN</span><span class="em-pin p3">HOSPITAL 8 MIN</span></div><div class="em-offer">OFFER · 12 MONTHS RESIDENCY<br>HOSPITAL 1 MIN · SECURITY 24H · RENT FROZEN<br>NEIGHBORS: <b>0</b></div></div></div></div>
+<div class="setpiece" id="namereleased"><div class="veil"></div><div class="sp-center"><div class="nr-wrap"><div class="sp-label">TRADE NAME · CLAIM WITHDRAWN</div><div class="nr-term">서인 방식<span class="nr-tm">TM</span></div><div class="nr-row"><span>OWNER</span><span class="nr-own-w"><span class="nr-own">서인</span><span class="nr-own2">—</span></span></div><div class="nr-gen">GENERIC TERM</div></div></div></div>
 <div class="setpiece" id="samepause"><div class="veil"></div><div class="sp-center"><div class="sp3-wrap"><div class="sp-label" style="text-align:center">TYPING PAUSE · 4 OF 2,100</div><div class="sp3-card"><div class="sp3-row"><em>0512</em><i style="left:10%;width:18%"></i><i style="left:30%;width:16%"></i><i style="left:48%;width:8%"></i><i style="left:70%;width:24%"></i></div><div class="sp3-row"><em>0519</em><i style="left:12%;width:12%"></i><i style="left:24%;width:22%"></i><i style="left:48%;width:8%"></i><i style="left:70%;width:24%"></i></div><div class="sp3-row"><em>0502</em><i style="left:12%;width:10%"></i><i style="left:24%;width:24%"></i><i style="left:48%;width:8%"></i><i style="left:70%;width:24%"></i></div><div class="sp3-row"><em>0526</em><i style="left:8%;width:20%"></i><i style="left:32%;width:14%"></i><i style="left:48%;width:8%"></i><i style="left:70%;width:24%"></i></div><div class="sp3-line"></div><div class="sp3-tag"><span>PAUSE <b>3.0 s</b> · SAME OFFSET</span><span>HUMAN-LIKE: SYNTHETIC</span></div></div></div></div></div>
 <div class="setpiece" id="emptyfloor"><div class="veil"></div><div class="sp-center"><div class="ef-wrap"><div class="sp-label">EAST 27 · BLDG</div><div class="ef-bld"><div class="ef-w on"></div><div class="ef-w off5"></div><div class="ef-w on"></div><div class="ef-w on"></div><div class="ef-w on"></div><div class="ef-w on"></div></div><div class="ef-lbl"><span>TOP ROW · 502 <b>MOVED OUT</b></span><span>LOWER ROW · 402 <b>STAYED</b></span></div></div></div></div>
 <div class="setpiece" id="erasedlines"><div class="veil"></div><div class="sp-center"><div class="el-wrap"><div class="sp-label" style="text-align:center">HIGHLIGHT CUT</div><div class="el-card"><div class="el-t"><span>ROUND 1 · 15:00</span><span>HUMAN ONLY OPEN</span></div><div class="el-lines"><div class="el-line cut">엄마한테 물어본다.</div><div class="el-line cut">모르겠습니다.</div><div class="el-line">아니오.</div></div><div class="el-shown"><span>TYPED 3 · SHOWN IN HIGHLIGHT</span><b><span class="el-n1">3 / 3</span><span class="el-n2">1 / 3</span>&nbsp;</b></div></div></div></div></div>
@@ -457,7 +470,7 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
-const MAX=33,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=34,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1600},
@@ -491,7 +504,8 @@ const D={
 30:{a:'#ffd9a8',b:'#a8c8ff',token:'∞',sync:8,ghost:'OVERDUE',hook:'컵라면으로 일흔세 개였다.',sp:'paidledger',at:.62,on:"지금 나가요. 1,400.",w:1400},
 31:{a:'#ffe0b8',b:'#a8c0ff',token:'∞',sync:7,ghost:'0%',hook:'다음 라운드 신청자 명단 첫 줄에 정다은이 있었다.',sp:'erasedlines',at:.30,on:"하이라이트에는 지운 두 줄이 없었다.",w:1400},
 32:{a:'#ffd6a4',b:'#9db8ff',token:'∞',sync:6,ghost:'502',hook:'항목: 단체방 참여 기록.',sp:'emptyfloor',at:.78,on:"두 칸이 비어 있었다.",w:1400},
-33:{a:'#ffdca8',b:'#a4c4ff',token:'∞',sync:5,ghost:'3.0 s',hook:'어머니는 그 세 개는 자기가 아니라고 했다.',sp:'samepause',at:.30,on:"같은 구간에서 같은 만큼 멈췄다.",w:1400}
+33:{a:'#ffdca8',b:'#a4c4ff',token:'∞',sync:5,ghost:'3.0 s',hook:'어머니는 그 세 개는 자기가 아니라고 했다.',sp:'samepause',at:.30,on:"같은 구간에서 같은 만큼 멈췄다.",w:1400},
+34:{a:'#ffd2a2',b:'#a6bfff',token:'∞',sync:4,ghost:'OWNER —',hook:'서인.',sp:'namereleased',at:.80,on:"청구를 취하합니다.",w:1400}
 };
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}
@@ -535,7 +549,8 @@ const KEY={
 30:['“이건 밀린 거예요. 그러니까 고맙다고 안 하셔도 돼요.”','“근데 이건 알겠어요. 안 급할 때 정하는 게 맞아요.”'],
 31:['“오늘은 이름을 아는 한 명이 먼저였어요.”','“저는 제 답이니까.”'],
 32:['“위층이 빌 줄은 몰랐네.”','“그건 그냥 쓸쓸한 거야. 이사하고 싶은 거랑은 다른 거고.”'],
-33:['“그리고 그건 제 흔적이 아니잖아요.”','“제가 쓰는 거니까요.”']
+33:['“그리고 그건 제 흔적이 아니잖아요.”','“제가 쓰는 거니까요.”'],
+34:['“알아보면 안 팔게 될까 봐서요.”','“이름은 가진 적이 없어요.”']
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
