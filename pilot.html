@@ -909,6 +909,11 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="sc-row" data-t="3.8"><span>3.0 − 2.80</span><b class="sc-n sc-gold" data-p="4.3">0.2</b></div>
 <div class="sc-q s" data-t="5">대파 한 단, 안쪽까지 걸어가서 번 만큼이었다.</div>
 <div style="margin-top:8px;text-align:center" data-t="5.9"><span class="sc-stamp" style="border-color:#9ff0c6;color:#9ff0c6">신청 완료</span></div></div></div></div>
+<div class="setpiece" id="redcell"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">동부 27번 · 가계 정산 · 열흘째 밤</div>
+<div class="sc-row" data-t=".1"><span>검진 예약</span><b>뒤로 밀림 → 다시 앞으로 <span class="sc-gold" data-t="1.2">· 빨간 칸 1</span></b></div>
+<div class="sc-card" data-t="2.4"><small>야간 인지 콘텐츠</small><strong>젖어도 되는 밤 · 고강도 감정형 +4.0</strong></div>
+<div class="sc-row" data-t="3.6"><span data-d="3.6">빨간 칸</span><b class="sc-n sc-gold" data-p="4.2">노란 칸</b></div>
+<div class="sc-q s" data-t="5">비 때문이었는지, 4.0 때문이었는지는 어머니도 몰랐다.</div></div></div></div>
 <div class="setpiece" id="wedlog"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">수요일 14:00 – 18:00 · 공백 시간</div>
 <div class="sc-row" data-t=".1"><span>작업대 2시간</span><b>2.8 · 컵라면보다 싸게</b></div>
 <div class="sc-row" data-t=".9"><span data-d="1.6">물레에서 무너진 흙</span><b><span data-d="1.6">3번</span></b></div>
@@ -937,7 +942,7 @@ const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterH
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=40,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={13:['13-1'],25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={11:['11-1'],13:['13-1'],25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -979,6 +984,7 @@ const D={
 38:{a:'#ffc994',b:'#9cb4ff',token:'∞',sync:0,ghost:'K-7 · 41',hook:'동생 방 문틈으로도 불빛이 새고 있었다.',sp:'facedown',at:.90,on:"태블릿을 식탁에 엎어 놓았다.",w:1200},
 39:{a:'#ffe6b0',b:'#9fc4ff',token:'∞',sync:0,ghost:'LAST ONE OUT',hook:'손바닥에 열쇠 톱니 자국이 남아 있었다.',sp:'lightsout',at:.93,on:"서인은 스위치를 내렸다.",w:700},
 40:{a:'#e8cf94',b:'#a3b47c',token:'∞',sync:0,ghost:'NOT IN LINE',hook:'“두 번 오면 이 방 사람이야.”',sp:'offblanket',at:.62,on:"패가 담요 끝을 넘어가 장판 위로 떨어졌다.",w:900,ms:8400},
+'11-1':{a:'#ffc9a8',b:'#a9c7ff',token:'∞',sync:24,ghost:'RED CELL',hook:'“출장이 길었네.”',sp:'redcell',at:.7,on:'젖어도 되는 밤.',w:1400,ms:6800},
 '13-1':{a:'#ffd9a0',b:'#9fd4c4',token:'∞',sync:21,ghost:'BLANK WED',hook:'아무도 추천해 주지 않은 모양이었다.',sp:'wedlog',at:.84,on:'활용 기록: 없음.',w:1400,ms:6800},
 '25-1':{a:'#ffe2b0',b:'#bfe6c8',token:'∞',sync:13,ghost:'UPSTAIRS',hook:'어머니는 그 소리를 한동안 올려다봤다.',sp:'eggmath',at:.82,on:"0.2가 남았다.",w:1400,ms:7200}
 };
