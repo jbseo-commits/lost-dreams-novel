@@ -811,6 +811,11 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .nav{display:none}
 body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 @media(max-width:600px){.pick{margin-left:10px;max-width:none;padding:0 9px}.pick .pk-t{display:none}.brand{display:none}.pick-menu{top:62px}}
+
+/* early Seo-in bumpers: ordinary choices become the visual grammar */
+#firstdate .veil,#mealrepair .veil,#twobuttons .veil{background:radial-gradient(circle at 50% 42%,#11171a 0,#06090b 58%,#020304 100%)}
+.eb-wrap{width:min(650px,100%);text-align:left}.eb-row{display:grid;grid-template-columns:1fr auto;gap:18px;padding:15px 0;border-top:1px solid #ffffff16;font:11px ui-monospace;color:#9ca8b2}.eb-row b{color:#eef4f6}.eb-row.pick{border-color:var(--accent);background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 8%,transparent),transparent);padding-left:12px}.eb-q{margin-top:24px;font:650 clamp(20px,5vw,29px)/1.55 "Noto Serif KR",serif;color:#fff}.eb-small{margin-top:8px;font:10px ui-monospace;letter-spacing:.12em;color:#78858f}.eb-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.eb-btn{padding:18px;border:1px solid #ffffff24;text-align:center;font:700 12px ui-monospace;color:#aab4bd}.eb-btn.reject{border-color:#ffffff55;color:#fff}.eb-dim{opacity:.34}.eb-cost{font:900 clamp(48px,14vw,92px)/1 ui-monospace;letter-spacing:-.07em;color:#fff}.eb-arrow{color:var(--accent);padding:0 .15em}
+
 </style></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><button class="pick" id="pick" aria-haspopup="true" aria-expanded="false" aria-controls="pickMenu"><b id="pickNo">EP 01</b><span class="pk-t" id="pickT">오늘 밤의 행복은 12토큰입니다</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="stats"><span>NEURAL LINK <b id="link">ONLINE</b></span><span>FX <b id="fxState">LIVE</b></span><span>TOKEN <b id="token">031.8</b></span><span>DREAM <b id="sync">97%</b></span></div></header><div class="progress"></div>
@@ -1204,13 +1209,18 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="sc-dots" id="ncDots"></div>
 <div class="sc-q s" data-t="5.9">예측보다 덜 떨어졌다. 예정했던 세 번째 노드는 빠졌다.</div></div></div></div>
 <div class="setpiece" id="pathburn"><div class="veil"></div><div class="sp-center"><div class="pb-wrap"><div class="sp-label" style="text-align:center">CENTRAL STRATEGY NET · RECURSIVE BIDDING</div><div class="pb-top"><div class="pb-paths">PATHS<b id="pbPaths">1</b></div><div style="text-align:right">COMPUTE (TOKEN)<b id="pbTok">18,440,000</b></div></div><div class="pb-best">CURRENT BEST <b id="pbBest">—</b><span id="pbRate"></span></div><div class="pb-stage"><svg class="pb-svg" id="pbSvg" viewBox="0 0 320 200" preserveAspectRatio="none"></svg><div class="pb-chips" id="pbChips"></div></div><div class="pb-rec" id="pbRec"><small>ARKADIA AI · RECOMMENDED PATH</small>3차 입찰 −2.4% · 배송 보증 +6.0% · 예상 성공률 61.8%</div></div></div></div>
+
+<div class="setpiece" id="firstdate"><div class="veil"></div><div class="sp-center"><div class="eb-wrap"><div class="sp-label">검진 예약 · 세 가지 날짜</div><div class="eb-row"><span>두 번째</span><b>가장 쌈</b></div><div class="eb-row"><span>세 번째</span><b>다니기 편한 시간</b></div><div class="eb-row pick"><span>첫 번째</span><b>미경 씨가 오는 날</b></div><div class="eb-q">“첫 번째로 해?”</div><div class="eb-small">예약 완료 · 확인 화면을 한 번 더 봄</div></div></div></div>
+<div class="setpiece" id="mealrepair"><div class="veil"></div><div class="sp-center"><div class="eb-wrap" style="text-align:center"><div class="sp-label">라면 빚</div><div class="eb-cost">3.4 <span class="eb-arrow">→</span> 12.8</div><div class="eb-q">“다음엔 내가 살게.”</div><div class="eb-small">밥 · 천장 누수 · 문 잠그기<br>혁명 이야기는 하지 않았다</div></div></div></div>
+<div class="setpiece" id="twobuttons"><div class="veil"></div><div class="sp-center"><div class="eb-wrap"><div class="sp-label">특별 인지 평가 · 응답 기한 12:00</div><div class="eb-btns"><div class="eb-btn eb-dim">승인</div><div class="eb-btn reject">거절</div></div><div class="eb-q">오늘 같은 날이 계속되어도 괜찮을 것 같았다.</div><div class="eb-small">화면이 어두워짐 → 다시 켬 → 아무 버튼도 누르지 않음</div></div></div></div>
+
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=40,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={6:['6-1'],11:['11-1'],13:['13-1'],15:['15-1'],25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={3:['3-1'],5:['5-1'],6:['6-1'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -1252,6 +1262,9 @@ const D={
 38:{a:'#ffc994',b:'#9cb4ff',token:'∞',sync:0,ghost:'K-7 · 41',hook:'동생 방 문틈으로도 불빛이 새고 있었다.',sp:'unlink41',at:.90,on:"태블릿을 식탁에 엎어 놓았다.",w:1200,ms:9800},
 39:{a:'#ffe6b0',b:'#9fc4ff',token:'∞',sync:0,ghost:'LAST ONE OUT',hook:'손바닥에 열쇠 톱니 자국이 남아 있었다.',sp:'lastout',at:.93,on:"서인은 스위치를 내렸다.",w:700,ms:9400},
 40:{a:'#e8cf94',b:'#a3b47c',token:'∞',sync:0,ghost:'NOT IN LINE',hook:'“두 번 오면 이 방 사람이야.”',sp:'offblanket',at:.62,on:"패가 담요 끝을 넘어가 장판 위로 떨어졌다.",w:900,ms:8400},
+'3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'두 번째가 더 쌌다는 생각은 집에 도착할 때까지 세 번 났다.',sp:'firstdate',at:.82,on:'예약이 완료되었습니다.',w:900,ms:7200},
+'5-1':{a:'#e7c69a',b:'#86a8a0',token:'020.3',sync:70,ghost:'3.4 → 12.8',hook:'클리닉 문을 잠근 뒤에도 둘은 혁명 이야기를 하지 않았다.',sp:'mealrepair',at:.78,on:'3.4 갚는데 12.8 썼네.',w:900,ms:7200},
+'9-1':{a:'#d9c4ff',b:'#8fc9bc',token:'∞',sync:43,ghost:'JUST TOMORROW',hook:'그래도 한 번 더 읽었다.',sp:'twobuttons',at:.82,on:'두 버튼이 있었다.',w:900,ms:7600},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:'현관문의 모서리 하나가 밤새 들려 있었다.',sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
 '11-1':{a:'#ffc9a8',b:'#a9c7ff',token:'∞',sync:24,ghost:'RED CELL',hook:'“출장이 길었네.”',sp:'redcell',at:.8,on:'신청을 누르자 빨간 칸이 노랗게 바뀌었다.',w:1200,ms:6800},
 '15-1':{a:'#f2d3a0',b:'#8fb8a8',token:'∞',sync:34,ghost:'SEVENTH POT',hook:'주머니 속 냅킨은 꺼내지 않았다.',sp:'seventhpot',at:.78,on:'바닥을 긁지 않았다.',w:1400,ms:7200},
@@ -1274,12 +1287,15 @@ const KEY={
 1:['“내가 원래 무슨 꿈을 꿨는지.”','“내 꿈은?”'],
 2:['“내가 없잖아.”'],
 3:['“왜 그건 내 꿈으로 안 쳐 줘?”','“내가 자유로워졌다는 걸 왜 네가 원하는 방식으로 증명해야 해?”'],
+'3-1':['“그날 미경 씨가 온대.”','“응.”'],
 4:['“7초만 기다려 주세요.”'],
 5:['“그럼 조건을 바꿔.”','“사람을 바꾸지 말고.”'],
+'5-1':['“같이 올라와요.”','“그건 빚 갚은 거고.”'],
 6:['“이번엔 알고 고르는 거잖아요.”'],
 7:['“왜 꼭 하나만 진짜여야 해요?”','“근데 가끔 네가 내 인생 채점하는 것 같아.”'],
 8:['하층은 꿈을 팔았다.','상층은 꿈을 골랐다.'],
 9:['“근데 체제는 불행한 사람만으로 유지되지 않아.”'],
+'9-1':['“너는? 뭐 하고 싶은데.”','“내일까지 생각할게요.”'],
 10:['“너 요즘 자꾸 세상에 버튼 하나만 있는 것처럼 말해.”'],
 11:['“네가 쥔 건지, 네 손이 쥔 건지.”'],
 12:['“볼 게 없으니까요.”','“틀렸을 때 얼마나 틀렸는지 아는 데 써요.”'],
