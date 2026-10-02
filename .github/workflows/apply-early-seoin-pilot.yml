@@ -1,0 +1,31 @@
+name: Apply early Seo-in pilot bumpers
+on:
+  push:
+    branches: [chatgpt/pilot-runner]
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Apply guarded patch
+        run: node scripts/apply-early-bumpers-to-pilot.mjs
+      - name: Verify
+        run: |
+          grep -F "'3-1'" pilot.html
+          grep -F "id=\"firstdate\"" pilot.html
+          grep -F "id=\"mealrepair\"" pilot.html
+          grep -F "id=\"twobuttons\"" pilot.html
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pilot.html
+          git diff --cached --quiet && exit 0
+          git commit -m "웹: 초반 서인 범퍼를 pilot에 반영"
+          git push
