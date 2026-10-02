@@ -6,7 +6,7 @@ const list = dir => {
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
     .filter(f => f.endsWith('.md'))
-    .sort()
+    .sort((a, b) => (a.slice(0, -3) < b.slice(0, -3) ? -1 : 1)) // ep025.md 다음에 ep025-1.md
     .map(f => {
       const path = `${dir}/${f}`;
       const text = readFileSync(path, 'utf8');

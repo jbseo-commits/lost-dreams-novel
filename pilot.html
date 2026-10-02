@@ -901,6 +901,14 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="sc-card" data-t="3.8"><small>보호자</small>계약상 4중 검증 보장인데 왜 사전 동의 없이 변경됐습니까?</div>
 <div class="sc-q s" data-t="4.6"><small>백윤하</small>보상 조항을 적용하겠습니다.</div>
 <div class="sc-q" data-t="5.5"><small>보호자</small>“보상 문제가 아닙니다. 아이 문제입니다.”</div></div></div></div>
+<div class="setpiece" id="eggmath"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">동부 27번 시장 · 오늘 장바구니</div>
+<div class="sc-row" data-t=".1"><span>대파 1단</span><b><span data-k="1.1">입구 2.1</span> → 안쪽 1.9 <span class="sc-gold" data-t="1.4">· 걸어서 0.2</span></b></div>
+<div class="sc-row" data-t=".5"><span>합성 달걀 12구</span><b>0.65 · 담음</b></div>
+<div class="sc-row" data-t=".9"><span data-d="2.4">자연란 12구</span><b><span data-d="2.4">2.80</span> <span class="sc-stamp" data-p="2.2">주말에</span></b></div>
+<div class="sc-card" data-t="3"><small>오후 3시 50분 · 자발적 야간 인지 공급 풀</small><strong>참여 보상 +3.0 TOKEN</strong></div>
+<div class="sc-row" data-t="3.8"><span>3.0 − 2.80</span><b class="sc-n sc-gold" data-p="4.3">0.2</b></div>
+<div class="sc-q s" data-t="5">대파 한 단, 안쪽까지 걸어가서 번 만큼이었다.</div>
+<div style="margin-top:8px;text-align:center" data-t="5.9"><span class="sc-stamp" style="border-color:#9ff0c6;color:#9ff0c6">신청 완료</span></div></div></div></div>
 <div class="setpiece" id="namecount"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">세르젠 자발적 공유 · 공공망 연동</div>
 <div class="nc-search" data-t=".1">서인 ⌕</div>
 <div class="nc-name" data-t=".6" data-k="3.4">SEO-IN CONSENT STANDARD</div>
@@ -922,7 +930,9 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
+const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=40,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const BUMP={25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:'선택은 언제나 자유입니다.',sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:'이상하게 좋다.',sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -963,7 +973,8 @@ const D={
 37:{a:'#ffcc98',b:'#9eb6ff',token:'∞',sync:1,ghost:'SAME ADDRESS',hook:'전화 너머에서 주경태가 번호표를 한 장 뜯는 소리가 났다.',sp:'sameaddr',at:.86,on:"주소만요.",w:1400},
 38:{a:'#ffc994',b:'#9cb4ff',token:'∞',sync:0,ghost:'K-7 · 41',hook:'동생 방 문틈으로도 불빛이 새고 있었다.',sp:'facedown',at:.90,on:"태블릿을 식탁에 엎어 놓았다.",w:1200},
 39:{a:'#ffe6b0',b:'#9fc4ff',token:'∞',sync:0,ghost:'LAST ONE OUT',hook:'손바닥에 열쇠 톱니 자국이 남아 있었다.',sp:'lightsout',at:.93,on:"서인은 스위치를 내렸다.",w:700},
-40:{a:'#e8cf94',b:'#a3b47c',token:'∞',sync:0,ghost:'NOT IN LINE',hook:'“두 번 오면 이 방 사람이야.”',sp:'offblanket',at:.62,on:"패가 담요 끝을 넘어가 장판 위로 떨어졌다.",w:900,ms:8400}
+40:{a:'#e8cf94',b:'#a3b47c',token:'∞',sync:0,ghost:'NOT IN LINE',hook:'“두 번 오면 이 방 사람이야.”',sp:'offblanket',at:.62,on:"패가 담요 끝을 넘어가 장판 위로 떨어졌다.",w:900,ms:8400},
+'25-1':{a:'#ffe2b0',b:'#bfe6c8',token:'∞',sync:13,ghost:'UPSTAIRS',hook:'아직은 같은 줄에 서 있었다.',sp:'eggmath',at:.82,on:"0.2가 남았다.",w:1400,ms:7200}
 };
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}
@@ -1036,21 +1047,21 @@ return items.map((q,k)=>{if(q.raw)return q.raw;const extra=q.last?' last':'';
  const fx=FX[state.ep];if(fx){const di=fx.nest?fx.nest.indexOf(q.x):-1;if(di>=0)return '<p class="reveal nest" data-ms="680" style="--d:'+(di+1)+'">'+inline(q.x)+'</p>';if(fx.fan===q.x)return '<p class="reveal fx-fan" data-ms="900">'+inline(q.x)+'</p>';if(fx.mirror&&fx.mirror.includes(q.x))return '<p class="reveal fx-mirror" data-t="'+esc(q.x)+'">'+inline(q.x)+'</p>'}
  const ms=beatMs(q.x);if(ms)return '<p class="reveal beat'+extra+'" data-ms="'+ms+'" style="--ms:'+ms+'ms">'+inline(q.x)+'</p>';
  return '<p class="reveal'+(keys.includes(q.x)?' key':'')+extra+'">'+inline(q.x)+'</p>'}).join('')}
-async function load(n){const r=await fetch(new URL('manuscript/ep'+String(n).padStart(3,'0')+'.md?v=8',document.baseURI).href,{cache:'no-store'});if(!r.ok)throw Error();return r.text()}
+async function load(n){const r=await fetch(new URL('manuscript/ep'+epFile(n)+'.md?v=8',document.baseURI).href,{cache:'no-store'});if(!r.ok)throw Error();return r.text()}
 async function openEp(n){
  closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];state.armed=0;const d=D[n];state.ep=n;
  document.body.className=n===8?'ep8':'reading';document.body.dataset.ep=n;
  document.documentElement.style.setProperty('--accent',d.a);document.documentElement.style.setProperty('--accent2',d.b);
- hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+String(n).padStart(2,'0')+' / '+MAX;
+ hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+epNo(n)+' / '+MAX;
  titleEl.textContent='기억을 불러오는 중';meta.textContent='CONNECTING MANUSCRIPT…';prose.innerHTML='<div class="scene-card"><div class="scene-kicker">NEURAL READER</div><div class="scene-main">제'+n+'화 연결 중</div><div class="scene-sub">잠시만 기다려 주세요.</div></div>';
  hook.textContent='';nextBtn.textContent='';token.textContent=d.token;sync.textContent=d.sync+'%';linkEl.textContent='CONNECTING';
- document.querySelectorAll('.ep').forEach((e,i)=>e.classList.toggle('on',i===n-1));history.replaceState(null,'','#ep'+n);scrollTo(0,0);
+ document.querySelectorAll('.ep').forEach((e,i)=>e.classList.toggle('on',i===ORDER.indexOf(n)));history.replaceState(null,'','#ep'+n);scrollTo(0,0);
  try{
   const md=await load(n);
-  titleEl.textContent=md.split('\n')[0].replace(/^#\s*제\d+화\.\s*/,'');chapterHead.dataset.ghost=d.ghost;meta.textContent='LIVE MANUSCRIPT · '+md.length.toLocaleString('ko-KR')+'자';
+  titleEl.textContent=md.split('\n')[0].replace(/^#\s*제[\d-]+화\.\s*/,'');chapterHead.dataset.ghost=d.ghost;meta.textContent='LIVE MANUSCRIPT · '+md.length.toLocaleString('ko-KR')+'자';
   prose.innerHTML=render(md);hook.textContent=d.hook;linkEl.textContent=n===2?'OFFLINE':'ONLINE';
-  nextBtn.textContent=n<MAX?'NEXT SIGNAL / 제'+(n+1)+'화 →':'처음으로 돌아가기';nextBtn.onclick=()=>n<MAX?openEp(n+1):location.reload();
-  observe();toastMsg('MEMORY '+String(n).padStart(2,'0')+' CONNECTED');
+  const nx=ORDER[ORDER.indexOf(n)+1];nextBtn.textContent=nx?'NEXT SIGNAL / 제'+nx+'화 →':'처음으로 돌아가기';nextBtn.onclick=()=>nx?openEp(nx):location.reload();
+  observe();toastMsg('MEMORY '+epNo(n)+' CONNECTED');
  }catch(e){
   console.error(e);linkEl.textContent='ERROR';titleEl.textContent='연결에 실패했습니다';meta.textContent='MANUSCRIPT LOAD ERROR';
   prose.innerHTML='<div class="scene-card"><div class="scene-kicker">CONNECTION ERROR</div><div class="scene-main">원고를 불러오지 못했습니다.</div><div class="scene-sub">'+esc(String(e&&e.message||'NETWORK ERROR'))+'</div></div><button class="next" onclick="openEp('+n+')">다시 연결 →</button>';
@@ -1156,7 +1167,7 @@ function runReauth(e){const f=runReauth,el=$('reauth'),bar=$('raYouBar'),val=$('
 function rejectConsent(){consentCardEl.querySelector('p').innerHTML='동의하지 않을 자유가 있습니다.<br><br><b>그런데 구하려는 사람들에게도 그 자유를 줄 것입니까?</b>';toastMsg('CONSENT REJECTED')}
 function acceptConsent(){consentCardEl.classList.add('danger');consentCardEl.querySelector('h3').textContent='동의가 완료되었습니다.';consentCardEl.querySelector('p').innerHTML='<b>그렇다면 허락을 받지 않고 구해야 하는 건 아닐까.</b>';state.timers.push(setTimeout(()=>closeSp(),3200))}
 function toastMsg(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2200)}
-for(let i=1;i<=MAX;i++){let b=document.createElement('button');b.className='ep';b.textContent=String(i).padStart(2,'0')+' · MEMORY';b.onclick=()=>openEp(i);navEl.appendChild(b)}
+ORDER.forEach(i=>{let b=document.createElement('button');b.className='ep';b.textContent=epNo(i)+' · MEMORY';b.onclick=()=>openEp(i);navEl.appendChild(b)})
 addEventListener('scroll',()=>{const h=document.documentElement,p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);document.documentElement.style.setProperty('--p',Math.min(100,p*100));const d=D[state.ep];if(d){sync.textContent=Math.max(18,Math.round(d.sync-p*14))+'%';epAtmosphere(p);checkAnchor(p)}},{passive:true});
 nextBtn.onclick=()=>openEp(2); // 표지 입장 없이 스크롤로 1화 끝에 와도 다음 화로 넘어가게
 const enterDream=$('enterDream');
@@ -1185,17 +1196,17 @@ enterDream.addEventListener('click',e=>{
 // 화 선택: 제목은 manifest.json에서, 없으면 원고 첫 줄에서 가져온다
 const pick=$('pick'),pickMenu=$('pickMenu'),pickScrim=$('pickScrim'),pickList=$('pickList'),pickTitles={};
 $('pickTotal').textContent=MAX;
-pickList.innerHTML=Array.from({length:MAX},(_,i)=>'<li><button data-n="'+(i+1)+'"><i>EP '+String(i+1).padStart(2,'0')+'</i><span>제'+(i+1)+'화</span></button></li>').join('');
+pickList.innerHTML=ORDER.map(k=>'<li><button data-n="'+k+'"><i>EP '+epNo(k)+'</i><span>제'+k+'화</span></button></li>').join('');
 function setPickTitle(n,t){if(!t)return;pickTitles[n]=t;const b=pickList.querySelector('[data-n="'+n+'"] span');if(b)b.textContent=t;if(n===(state.ep||1))$('pickT').textContent=t}
-fetch('manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(m=>(m.manuscript||[]).forEach(e=>{const k=+(e.path.match(/ep(\d+)\.md$/)||[])[1];if(k)setPickTitle(k,e.title.replace(/^제\d+화\.\s*/,''))})).catch(()=>{for(let i=1;i<=MAX;i++)load(i).then(md=>setPickTitle(i,md.split('\n')[0].replace(/^#\s*/,'').replace(/^제\d+화\.\s*/,''))).catch(()=>{})});
-function syncPick(){const n=state.ep||1;$('pickNo').textContent='EP '+String(n).padStart(2,'0');$('pickT').textContent=pickTitles[n]||(n===state.ep&&titleEl.textContent)||'';pickList.querySelectorAll('button').forEach(b=>b.toggleAttribute('aria-current',+b.dataset.n===state.ep))}
+fetch('manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(m=>(m.manuscript||[]).forEach(e=>{const m=e.path.match(/ep(\d+(?:-\d+)?)\.md$/);if(m)setPickTitle(epKey(m[1]),e.title.replace(/^제[\d-]+화\.\s*/,''))})).catch(()=>{ORDER.forEach(i=>load(i).then(md=>setPickTitle(i,md.split('\n')[0].replace(/^#\s*/,'').replace(/^제[\d-]+화\.\s*/,''))).catch(()=>{}))});
+function syncPick(){const n=state.ep||1;$('pickNo').textContent='EP '+epNo(n);$('pickT').textContent=pickTitles[n]||(n===state.ep&&titleEl.textContent)||'';pickList.querySelectorAll('button').forEach(b=>b.toggleAttribute('aria-current',b.dataset.n===String(state.ep)))}
 function setPick(open){pickMenu.classList.toggle('on',open);pickScrim.classList.toggle('on',open);pick.setAttribute('aria-expanded',open);if(open){syncPick();const c=pickList.querySelector('[aria-current]')||pickList.querySelector('button');c.scrollIntoView({block:'center'});c.focus({preventScroll:true})}}
 pick.onclick=()=>setPick(!pickMenu.classList.contains('on'));pickScrim.onclick=()=>setPick(false);
 addEventListener('keydown',e=>{if(e.key==='Escape'&&pickMenu.classList.contains('on')){setPick(false);pick.focus()}});
-pickList.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const n=+b.dataset.n;setPick(false);if(n===state.ep){scrollTo(0,0);return}
+pickList.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const n=epKey(b.dataset.n);setPick(false);if(n===state.ep){scrollTo(0,0);return}
  if(n===1&&!state.ep&&hero.style.display!=='none'){enterDream.click();return}openEp(n)});
 new MutationObserver(syncPick).observe(titleEl,{childList:true});
-function route(){const m=location.hash.match(/^#ep(\d+)$/);if(m){const n=Math.min(MAX,+m[1]);if(n===1){activateStaticEp1();hero.style.display='none';scrollTo(0,0)}else openEp(n)}}
+function route(){const m=location.hash.match(/^#ep(\d+(?:-\d+)?)$/);if(m){const n=/-/.test(m[1])?(D[m[1]]?m[1]:MAX):Math.min(MAX,+m[1]);if(n===1){activateStaticEp1();hero.style.display='none';scrollTo(0,0)}else openEp(n)}}
 addEventListener('hashchange',route);
 if(location.hash==='#reader'){activateStaticEp1()}else route();
 syncPick();
