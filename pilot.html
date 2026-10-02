@@ -567,6 +567,17 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .sc-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}.sc-cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .sc-dots{display:grid;grid-template-columns:repeat(21,1fr);gap:3px;margin-top:8px}.sc-dots i{aspect-ratio:1;background:#ffffff1a;transition:background .35s,opacity .35s}
 .sc-dots i.r{background:#9ab6ff}.sc-dots i.x{background:#ffd38a;box-shadow:0 0 6px #ffd38a}.sc-dots i.h{background:#ff8c9b;box-shadow:0 0 8px #ff8c9b}.sc-dots i.off{opacity:.12}
+#unlink41 .veil{background:radial-gradient(circle at 50% 40%,#11131a,#030305 72%)}
+.ul-tab{perspective:600px;margin-top:12px}.ul-face{border:1px solid #9ab6ff66;background:#0d1522;padding:10px 12px;transform-origin:50% 100%;transition:transform 1s cubic-bezier(.5,0,.3,1),filter 1s}.ul-face small{font-size:8px;letter-spacing:.14em;color:#7d8794}.ul-face p{margin:3px 0;font:12px/1.55 "Noto Sans KR",sans-serif;color:#dfe4ea}
+#unlink41.flip .ul-face{transform:rotateX(88deg);filter:brightness(.2)}
+#samebox .veil{background:radial-gradient(circle at 50% 40%,#12131a,#030305 72%)}
+.sb-map{position:relative;height:170px;margin-top:10px;border:1px dashed #ffffff18}.sb-box{position:absolute;left:50%;top:50%;width:118px;height:74px;margin:-37px 0 0 -59px;border:1px solid #c9f27a;background:#c9f27a14;box-shadow:0 0 24px #c9f27a33}.sb-box small{position:absolute;bottom:-15px;left:0;right:0;text-align:center;font:8px ui-monospace,monospace;color:#c9f27a;white-space:nowrap}
+.sb-map i{position:absolute;width:7px;height:7px;background:#ff8c9b;transition:left 1.8s cubic-bezier(.3,.7,.2,1),top 1.8s cubic-bezier(.3,.7,.2,1),background .4s}.sb-map i.ok{background:#ffd38a}.sb-map i.off{background:#ff8c9b55}
+#tenticks2 .veil{background:radial-gradient(circle at 50% 35%,#16130d,#040303 72%)}
+.tk-wrap{display:flex;gap:14px;align-items:center;justify-content:center}.tk-clock{width:96px;height:96px;border-radius:50%;border:3px solid #d8d2c4;background:#f2efe6;position:relative;flex:none;box-shadow:inset 0 0 0 4px #f2efe6,inset 0 0 0 5px #0002}
+.tk-clock i{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%}.tk-h{width:4px;height:30px;margin-left:-2px;background:#222;transform:rotate(-6deg)}.tk-s{width:2px;height:40px;margin-left:-1px;background:#d33;transition:transform .12s}
+.tk-lid{background:#d9c19a;color:#2a1b0c;padding:8px 10px;transform:rotate(-2deg);font-family:"Noto Sans KR",sans-serif}.tk-lid b{display:block;font-size:13px}.tk-lid b.big{font-size:20px;font-weight:900}.tk-lid small{display:block;font-size:8px;opacity:.6}
+.tk-slots{display:grid;grid-template-columns:repeat(29,minmax(0,1fr));gap:2px;margin-top:8px}.tk-slots i{height:14px;background:#9ab6ff44;transition:background .3s}.tk-slots i.x{background:#ffd38a}.tk-slots i.h{background:#ff8c9b}
 #midnight100 .veil{background:radial-gradient(circle at 50% 38%,#121018,#040305 72%)}
 .md-clock{font:800 clamp(34px,11vw,52px)/1 ui-monospace,monospace;color:#f1f4f7;text-align:center;margin:12px 0 6px}.md-door{display:flex;justify-content:space-between;font:10px ui-monospace,monospace;color:#7d8794}.md-door b{color:#ff8c9b;font-weight:400}
 .md-g{grid-template-columns:repeat(20,1fr)!important}.md-g i.h{background:#ff8c9b!important}
@@ -577,7 +588,7 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 #views38 .veil{background:radial-gradient(circle at 50% 38%,#16120b,#040302 72%)}
 .v3-l{font:600 17px/1.6 "Noto Sans KR",sans-serif;color:#f1f4f7;border-left:2px solid #ffcf9e;padding-left:10px;margin:4px 0}
 #threesec .veil{background:radial-gradient(circle at 50% 38%,#101419,#030405 72%)}
-.ts-wrap{margin-top:10px}.ts-l{display:grid;grid-template-columns:34px 1fr;gap:6px;align-items:center;margin:5px 0}.ts-l small{font:9px ui-monospace,monospace;color:#7d8794}.ts-l i{position:relative;height:10px;display:block;background:#ffffff08}
+.ts-wrap{margin-top:10px}.ts-l{display:grid;grid-template-columns:34px minmax(0,1fr);gap:6px;align-items:center;margin:5px 0}.ts-l small{font:9px ui-monospace,monospace;color:#7d8794}.ts-l i{position:relative;height:10px;display:block;background:#ffffff08}
 .ts-l b{position:absolute;left:0;top:0;bottom:0;width:0;background:#ffcf9e}.ts-l u{position:absolute;left:46%;width:14%;top:-3px;bottom:-3px;border:1px solid #9ab6ff;background:#9ab6ff22;opacity:0;transition:opacity .3s}
 #threesec.ts-hit .ts-l u{opacity:1}
 #twopots .veil{background:radial-gradient(circle at 50% 40%,#121509,#040502 72%)}
@@ -1128,6 +1139,31 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="sc-row" data-t="5.4"><span>어르신들 휴대폰</span><b class="sc-gold">72 · 81 · 89 · 96</b></div>
 <div class="sc-card" data-t="6.2" style="border-color:#ff8c9b66"><small>서인의 화면 · 신청 개시 접수 결과</small><b class="sc-red">1~100번 점유: 계정 군 K-7 (71개)</b></div>
 <div class="sc-q" data-t="7.2"><small>서인</small>“저 문 안에서 눌렀군요.” <small style="display:inline">주경태</small> “누르는 게 아니에요. 저건 돌리는 거예요.”</div></div></div></div>
+<div class="setpiece" id="tenticks2"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">시장 2층 · 벽에 걸린 둥근 건전지 시계</div>
+<div class="tk-wrap" data-t=".1"><div class="tk-clock"><i class="tk-h"></i><i class="tk-s" id="tkS"></i></div><div class="tk-lid"><b>밤 11시 59분 50초.</b><b class="big">10초 일찍.</b><small>달걀 상자 뚜껑 · 매직 두 번 덧칠</small></div></div>
+<div class="sc-q s" data-t=".6"><small>주경태</small>“시계 약 갈 때나 만지지, 초침 돌리는 건 처음이네.”</div>
+<div class="sc-row" data-t="2.8"><span>1~100번 · 23:59:50</span><b>K-7 71 · 개별 계정 29</b></div>
+<div class="tk-slots" id="tkG" data-t="3"></div>
+<div class="sc-row" data-t="3.2"><span id="tkL">어제 · 이 방에서 신속 배정</span><b class="sc-gold sc-n" id="tkN" style="font-size:26px">4</b></div>
+<div class="sc-row" data-t="5.6"><span>열두 시 정각에 누른 사람들 · 다른 데서</span><b class="sc-red">13자리 밀려남</b></div>
+<div class="sc-q" data-t="6.8"><small>주경태</small>“그 사람들은 시계를 안 돌렸겠네요.”</div></div></div></div>
+<div class="setpiece" id="samebox"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">같은 주소 군 · 신속 배정 하루 3건 · 공지 없음</div>
+<div class="sc-row" data-t=".1"><span>빈 컵라면 용기 · 접은 종이 11장</span><b class="sc-gold">동그라미 3</b></div>
+<div class="sc-row" data-t=".5"><span>23:59:50 · 뜨개 가방 할머니 47 · 털모자 55 · 지팡이 62 · 옥순 언니 63</span><b></b></div>
+<div class="sc-row" data-t=".9"><span>사무실 여덟 분 · 길 건너 할아버지</span><b class="sc-red">칠천 번대</b></div>
+<div class="sc-row" data-t="1.3"><span>1~100번</span><b>K-7 <span class="sc-gold">3</span> · 개별 계정 <span class="sc-mint">97</span></b></div>
+<div class="sb-map" id="sbMap" data-t="1.7"><div class="sb-box"><small>시장 2층 옆방 · 형광 불빛</small></div></div>
+<div class="sc-row" data-t="2" id="sbT"><span id="sbL">0시 9분 · 옆방에서 다시 소리 · 길게</span><b id="sbN">K-7 고정 단말 71</b></div>
+<div class="sc-q" data-t="7.4"><small>주경태</small>“저 방, 이사 갔네요. 불은 그대로 켜져 있는데.” <b style="color:#ffd38a">“주소만요.”</b></div></div></div></div>
+<div class="setpiece" id="unlink41"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">아버지의 휴대폰 · 계정 설정 · 연결된 기기</div>
+<div class="sc-row" data-t=".1"><span>아빠 휴대폰</span><b>이 기기</b></div>
+<div class="sc-row" data-t=".2"><span>투약 포트</span><b>거실</b></div>
+<div class="sc-row ul-k" data-t=".3" data-k="1.6"><span>K-7 · 41 · 연결 9일</span><b class="sc-gold">+5 · 매월</b></div>
+<div class="sc-row" data-t="1"><span>오늘 밤 저쪽</span><b class="sc-n" id="ulN" style="font-size:28px">71</b></div>
+<div class="sc-row" data-t="1.9"><span>문 안의 팬 소리</span><b>그대로</b></div>
+<div class="sc-row" data-t="2.4"><span>노인용 휴대폰 · 열 시면 주무시는 어머니</span><b data-k="3">K-7 · 17 · 연결 20일</b></div>
+<div class="ul-tab" data-t="4.4"><div class="ul-face"><small>가계 시뮬레이션 · 재계산</small><p><span data-k="4.9">+5 · 매월 · 계정 대여</span> — 해지</p><p>차녀 교육 AI 등급 유지 가능성 <b>52% → <span class="sc-red">51%</span></b></p><p class="sc-gold">대체 수입 후보 3건</p></div></div>
+<div class="sc-q" data-t="7.6"><small>아버지</small>“끊은 건 나다.” “근데 데려간 건 너야.”</div></div></div></div>
 <div class="setpiece" id="eggmath"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">동부 27번 시장 · 오늘 장바구니</div>
 <div class="sc-row" data-t=".1"><span>대파 1단</span><b><span data-k="1.1">입구 2.1</span> → 안쪽 1.9 <span class="sc-gold" data-t="1.4">· 걸어서 0.2</span></b></div>
 <div class="sc-row" data-t=".5"><span>합성 달걀 12구</span><b>0.65 · 담음</b></div>
@@ -1201,9 +1237,9 @@ const D={
 33:{a:'#ffdca8',b:'#a4c4ff',token:'∞',sync:5,ghost:'3.0 s',hook:'어머니는 그 세 개는 자기가 아니라고 했다.',sp:'threesec',at:.30,on:"같은 구간에서 같은 만큼 멈췄다.",w:1400,ms:8600,more:[{sp:'views38',on:"어머니는 그 세 개는 자기가 아니라고 했다.",w:700,ms:7600}]},
 34:{a:'#ffd2a2',b:'#a6bfff',token:'∞',sync:4,ghost:'WITHDRAWN',hook:'서인.',sp:'letname',at:.80,on:"청구를 취하합니다.",w:1400,ms:9600},
 35:{a:'#ffd0a0',b:'#a2bcff',token:'∞',sync:3,ghost:'FAST SLOT',hook:'열두 시 정각에 맞춰 손가락을 올리던 노인들은 오늘부터 이미 10초 늦었다.',sp:'midnight100',at:.52,on:"저 문 안에서 눌렀군요.",w:1400,ms:9400},
-36:{a:'#ffcf9c',b:'#a0b8ff',token:'∞',sync:2,ghost:'23:59:50',hook:'서인이 요청서 첫 줄을 쓰기도 전에, 누군가는 2초 간격으로 두 번 써 낸 뒤였다.',sp:'tenticks',at:.80,on:"그 사람들은 시계를 안 돌렸겠네요.",w:1400},
-37:{a:'#ffcc98',b:'#9eb6ff',token:'∞',sync:1,ghost:'SAME ADDRESS',hook:'전화 너머에서 주경태가 번호표를 한 장 뜯는 소리가 났다.',sp:'sameaddr',at:.86,on:"주소만요.",w:1400},
-38:{a:'#ffc994',b:'#9cb4ff',token:'∞',sync:0,ghost:'K-7 · 41',hook:'동생 방 문틈으로도 불빛이 새고 있었다.',sp:'facedown',at:.90,on:"태블릿을 식탁에 엎어 놓았다.",w:1200},
+36:{a:'#ffcf9c',b:'#a0b8ff',token:'∞',sync:2,ghost:'23:59:50',hook:'서인이 요청서 첫 줄을 쓰기도 전에, 누군가는 2초 간격으로 두 번 써 낸 뒤였다.',sp:'tenticks2',at:.80,on:"그 사람들은 시계를 안 돌렸겠네요.",w:1400,ms:9600},
+37:{a:'#ffcc98',b:'#9eb6ff',token:'∞',sync:1,ghost:'SAME ADDRESS',hook:'전화 너머에서 주경태가 번호표를 한 장 뜯는 소리가 났다.',sp:'samebox',at:.86,on:"주소만요.",w:1400,ms:10000},
+38:{a:'#ffc994',b:'#9cb4ff',token:'∞',sync:0,ghost:'K-7 · 41',hook:'동생 방 문틈으로도 불빛이 새고 있었다.',sp:'unlink41',at:.90,on:"태블릿을 식탁에 엎어 놓았다.",w:1200,ms:9800},
 39:{a:'#ffe6b0',b:'#9fc4ff',token:'∞',sync:0,ghost:'LAST ONE OUT',hook:'손바닥에 열쇠 톱니 자국이 남아 있었다.',sp:'lightsout',at:.93,on:"서인은 스위치를 내렸다.",w:700},
 40:{a:'#e8cf94',b:'#a3b47c',token:'∞',sync:0,ghost:'NOT IN LINE',hook:'“두 번 오면 이 방 사람이야.”',sp:'offblanket',at:.62,on:"패가 담요 끝을 넘어가 장판 위로 떨어졌다.",w:900,ms:8400},
 '13-1':{a:'#ffd9a0',b:'#9fd4c4',token:'∞',sync:21,ghost:'BLANK WED',hook:'아무도 추천해 주지 않은 모양이었다.',sp:'wedlog',at:.84,on:'활용 기록: 없음.',w:1400,ms:6800},
@@ -1315,7 +1351,7 @@ function checkAnchor(p){checkExtra();const n=state.ep,d=D[n];if(!d||!d.sp||state
  const r=el.getBoundingClientRect();if(state.armed===n){if(r.bottom<-innerHeight*.5)fire();return}if((el.classList.contains('seen')||r.bottom<0)&&r.top<innerHeight*.62){state.armed=n;state.timers.push(setTimeout(()=>{state.armed=0;if(state.ep===n)fire()},d.w||1600))}}
 function epAtmosphere(p){const n=state.ep;if(!n)return;document.body.classList.toggle('deep-read',p>.45);let msg='';if(n===1&&p>.68)msg='좋은 꿈이었는데, <b>왜 좋았는지는 기억나지 않았다.</b>';if(n===2&&p>.72)msg='<b>내가 없잖아.</b>';if(n===3&&p>.76)msg='<b>왜 그건 내 꿈으로 안 쳐 줘?</b>';whisper.innerHTML=msg;whisper.classList.toggle('on',!!msg)}
 function fire(){const d=D[state.ep];if(!d||!d.sp||state.fired.has(state.ep))return;if(document.querySelector('.setpiece.on')){const n=state.ep;state.timers.push(setTimeout(()=>{if(state.ep===n)fire()},900));return}state.fired.add(state.ep);showSp(d.sp,d.ms);if(state.ep===4)runSeven();if(state.ep===6)runMatrix();if(state.ep===8)runCompute();if(state.ep===12)runPrune()}
-const RUN={pathburn:()=>runPathburn(),overseen:()=>runOverseen(),leakclock:()=>runLeak(),channel:()=>runChannel(),nightload:()=>runNight(),restore:()=>runRestore(),records147:()=>runRecords(),rumorpatch:()=>runRumor(),threedoors:()=>runDoors(),node31b:()=>runNode(),familyday:()=>runFamily(),graybutton:()=>runGray(),fourcheck:()=>runFour(),namecount:()=>runName(),midnight100:()=>runMidnight(),views38:()=>runViews(),threesec:()=>runThreeSec(),erased2:()=>runErased(),ledger288:()=>runLedger(),row400:()=>runRow400(),samethree:()=>runSameThree(),recount43:()=>runRecount(),glasspick:()=>runGlass(),thirdplan:()=>runThird(),rejoin147:()=>runRejoin(),sevensec:()=>runSevenSec()};
+const RUN={pathburn:()=>runPathburn(),overseen:()=>runOverseen(),leakclock:()=>runLeak(),channel:()=>runChannel(),nightload:()=>runNight(),restore:()=>runRestore(),records147:()=>runRecords(),rumorpatch:()=>runRumor(),threedoors:()=>runDoors(),node31b:()=>runNode(),familyday:()=>runFamily(),graybutton:()=>runGray(),fourcheck:()=>runFour(),namecount:()=>runName(),unlink41:()=>runUnlink(),samebox:()=>runSameBox(),tenticks2:()=>runTicks(),midnight100:()=>runMidnight(),views38:()=>runViews(),threesec:()=>runThreeSec(),erased2:()=>runErased(),ledger288:()=>runLedger(),row400:()=>runRow400(),samethree:()=>runSameThree(),recount43:()=>runRecount(),glasspick:()=>runGlass(),thirdplan:()=>runThird(),rejoin147:()=>runRejoin(),sevensec:()=>runSevenSec()};
 function showSp(id,dur){const el=document.getElementById(id);stage(el);if(RUN[id])RUN[id]();el.classList.add('on');if(state.ep===1){state.timers.push(setTimeout(()=>el.classList.add('corrupt'),2300))}if(!el.classList.contains('interactive')){if(!el.querySelector('.sp-ff')){const f=document.createElement('div');f.className='sp-ff';el.appendChild(f)}state.spCloseT=setTimeout(()=>closeSp(),dur||(state.ep===4?7600:state.ep===8?6200:5200));state.timers.push(state.spCloseT)}}
 // 팝업 배속: 떠 있는 팝업을 한 번 누르면 남은 연출을 빠르게 끝까지 돌리고, 한 번 더 누르면 닫는다
 function fastForward(el){if(el.classList.contains('fast')){closeSp();return}el.classList.add('fast');(el.getAnimations?el.getAnimations({subtree:true}):[]).forEach(a=>{try{a.playbackRate=8}catch(e){}});if(state.ff){const f=state.ff;state.ff=null;f()}clearTimeout(state.spCloseT);state.spCloseT=setTimeout(()=>closeSp(),1800);state.timers.push(state.spCloseT)}
@@ -1410,6 +1446,16 @@ function runViews(){const C=mkClock(),N=$('v3N');N.textContent='38';N.classList.
 function runMidnight(){const C=mkClock(),T=$('mdC'),S=$('mdS'),G=$('mdDots');G.innerHTML='';S.textContent='…';T.classList.remove('sc-red');const ds=[];for(let i=0;i<100;i++){const d=document.createElement('i');G.appendChild(d);ds.push(d)}
 [['23:58:00',0],['23:59:00',700],['23:59:30',1400],['23:59:57',2100],['23:59:58',2400],['23:59:59',2700]].forEach(([s,t])=>C.at(t,()=>T.textContent=s));C.at(2300,()=>S.textContent='기계가 두드리는 소리 · 규칙적');
 C.at(3000,()=>{T.textContent='00:00:00';T.classList.add('sc-red')});for(let i=0;i<71;i++)C.at(3050+i*12,()=>ds[i].classList.add('h'));[71,80,88,95].forEach((n,k)=>C.at(4200+k*180,()=>ds[n].classList.add('x')));for(let i=71;i<100;i++)if(![71,80,88,95].includes(i))C.at(4100+((i*37)%600),()=>ds[i].classList.add('r'))}
+function runTicks(){const C=mkClock(),S=$('tkS'),G=$('tkG'),N=$('tkN'),L=$('tkL');let a=0;S.style.transform='rotate(0deg)';G.innerHTML='';N.textContent='4';L.textContent='어제 · 이 방에서 신속 배정';const ds=[];for(let i=0;i<29;i++){const d=document.createElement('i');G.appendChild(d);ds.push(d)}
+for(let k=1;k<=10;k++)C.at(900+k*150,()=>{a=k*6;S.style.transform='rotate('+a+'deg)'});
+C.at(3100,()=>{for(let i=0;i<4;i++)ds[i].classList.add('x')});
+C.at(4300,()=>{L.textContent='오늘 · 이 방에서 신속 배정';for(let i=4;i<17;i++){ds[i].classList.add('h')}});
+C.at(4900,()=>{for(let i=4;i<17;i++){ds[i].classList.remove('h');ds[i].classList.add('x')}N.textContent='17'})}
+function runSameBox(){const C=mkClock(),M=$('sbMap'),L=$('sbL'),N=$('sbN');M.querySelectorAll('i').forEach(e=>e.remove());L.textContent='23:59:50 · 같은 주소 하루 3건';N.textContent='K-7 고정 단말 71';const W=M.clientWidth||330,ds=[];for(let i=0;i<71;i++){const d=document.createElement('i'),c=i%12,r=(i/12)|0;d.style.left=(W/2-51+c*9)+'px';d.style.top=(85-31+r*9)+'px';M.appendChild(d);ds.push(d)}
+C.at(1900,()=>ds.forEach((d,i)=>d.classList.add(i<3?'ok':'off')));C.at(3400,()=>{L.textContent='0시 9분 · 옆방에서 다시 소리 · 길게 · 2분 넘게'});
+C.at(4400,()=>{ds.slice(3).forEach((d,i)=>{const a=Math.random()*6.283,rx=(W/2-10)*(.55+Math.random()*.45),ry=78*(.55+Math.random()*.45);d.style.left=(W/2+Math.cos(a)*rx)+'px';d.style.top=(85+Math.sin(a)*ry)+'px';d.classList.remove('off')})});
+C.at(6400,()=>{L.textContent='등록 주소 변경 68건 · 사유: 명의자 거주지';N.textContent='내일부터 다시 71'})}
+function runUnlink(){const C=mkClock(),el=$('unlink41'),N=$('ulN');el.classList.remove('flip');N.textContent='71';C.at(1700,()=>N.textContent='70');C.at(3100,()=>N.textContent='69');C.at(6600,()=>el.classList.add('flip'))}
 function runFour(){const C=mkClock(),D=$('fcD');D.textContent='+0분';for(let m=3;m<=57;m+=3)C.at(1700+m*30,()=>D.textContent='+'+m+'분');C.at(1700+57*30+50,()=>D.textContent='+57분 지연')}
 // 24화: 이름을 쓴 동안 76→78%, 이름을 빼자 78→73→69→61%
 function runName(){const C=mkClock(),P=$('ncP'),G=$('ncDots');G.innerHTML='';const ds=[];for(let i=0;i<84;i++){const d=document.createElement('i');d.className='r';G.appendChild(d);ds.push(d)}const set=v=>{P.textContent=v+'%';const k=Math.round(84*v/78);ds.forEach((d,i)=>d.classList.toggle('off',i>=k))};
