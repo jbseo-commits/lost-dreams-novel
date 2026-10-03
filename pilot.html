@@ -811,6 +811,11 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .nav{display:none}
 body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 @media(max-width:600px){.pick{margin-left:10px;max-width:none;padding:0 9px}.pick .pk-t{display:none}.brand{display:none}.pick-menu{top:62px}}
+/* 1화의 미래 장면: 객실의 경계만 남긴다. 본문과 터치를 가리지 않는다. */
+.eh1-room{height:64px;margin:4px 0 28px;position:relative;overflow:hidden;border-bottom:1px solid #9cb4ce32;pointer-events:none;background:linear-gradient(135deg,#8bdfff0d,transparent 55%)}
+.eh1-room i{position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(transparent,#b9dfff70);transform:skewX(-18deg)}
+.eh1-room i:nth-child(1){left:22%}.eh1-room i:nth-child(2){left:51%;opacity:.5}.eh1-room i:nth-child(3){left:80%;opacity:.25}
+.ldx-off .eh1-room{display:none}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1265,7 +1270,7 @@ const D={
 };
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}
-function sceneMarkup(){return ""}
+function sceneMarkup(n,pi){return n===1&&pi===4?'<div class="eh1-room reveal" aria-hidden="true"><i></i><i></i><i></i></div>':""}
 // 화마다 주제를 짊어진 대사만 강조한다 (단어 기준 자동 강조는 쓰지 않는다)
 // 글자 연출: 문단 단위 효과. nest = 서로의 수를 예상하는 사슬이 한 칸씩 안으로 들어가고, fan = 경로가 퍼지며, mirror = 상대가 같은 것을 본다.
 const FX={};/* 문단 단위 글자 연출 자리. 예: {16:{nest:[...],fan:'...',mirror:[...]}} */
