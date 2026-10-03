@@ -816,6 +816,36 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 .eh1-room i{position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(transparent,#b9dfff70);transform:skewX(-18deg)}
 .eh1-room i:nth-child(1){left:22%}.eh1-room i:nth-child(2){left:51%;opacity:.5}.eh1-room i:nth-child(3){left:80%;opacity:.25}
 .ldx-off .eh1-room{display:none}
+/* 2-1화: 다른 얼굴 아래 남은 손버릇. 원본 공개 뒤에만 겹쳐 보인다. */
+#eh2-touch{display:none;pointer-events:none}
+#eh2-touch.on{display:block;pointer-events:auto}
+.eh2-film{width:min(330px,100%);text-align:left;color:#e9dfcc}
+.eh2-frame{position:relative;height:158px;margin-top:14px;overflow:hidden;border:1px solid #b9dfff36;background:repeating-linear-gradient(90deg,#172940 0 24px,#22354a 25px 39px);box-shadow:0 12px 40px #0005}
+.eh2-frame small{position:absolute;z-index:2;left:12px;top:10px;font:10px/1.5 "Noto Sans KR",sans-serif;letter-spacing:.06em;color:#d5e4ee}
+.eh2-memory{background:linear-gradient(110deg,#49382d,#8a7151 49%,#4b443b);border-color:#e9cc963b}
+.eh2-memory small{color:#f5e2bd}
+.eh2-person{position:absolute;bottom:-15px;left:24%;width:106px;height:119px;border-radius:46% 46% 8% 8%;background:linear-gradient(120deg,#343c49,#677280);box-shadow:inset 0 1px 0 #c6d0da32}
+.eh2-person:before{content:"";position:absolute;top:-28px;left:32px;width:38px;height:48px;border-radius:45% 46% 35% 37%;background:#b29881;box-shadow:0 -8px 0 3px #25272d}
+.eh2-person:before{box-shadow:0 -8px 0 3px #25272d,0 -18px 0 -7px #25272d}
+.eh2-lover{position:absolute;bottom:15px;right:11%;width:87px;height:90px;border-radius:40% 45% 6% 6%;background:linear-gradient(120deg,#182332,#354658);box-shadow:inset 0 1px 0 #a6c5d622}
+.eh2-lover:before{content:"";position:absolute;top:-45px;left:26px;width:38px;height:51px;border-radius:20% 24% 34% 35%;background:#baa087;box-shadow:0 -8px 0 2px #17202a}
+.eh2-memory .eh2-lover{background:linear-gradient(120deg,#312929,#5e4c40)}
+.eh2-memory .eh2-lover:before{left:22px;width:44px;border-radius:44% 43% 40% 45%;box-shadow:0 -7px 0 2px #342a26}
+.eh2-chain{position:absolute;left:29px;top:16px;width:48px;height:42px;border:1px solid #decaa0;border-top:0;border-radius:0 0 50% 50%;transform:rotate(-5deg)}
+.eh2-chain:after{content:"";position:absolute;bottom:-4px;left:21px;width:5px;height:8px;border:1px solid #eedaa6;background:#a38a5c;transform:rotate(8deg)}
+.eh2-hand{position:absolute;left:64%;bottom:19px;width:75px;height:32px;border-radius:40% 40% 30% 30%;background:#ad947e;transform:rotate(-17deg);box-shadow:inset -10px -2px 15px #523e3644}
+.eh2-hand:after{content:"";position:absolute;left:65px;bottom:-1px;width:31px;height:27px;border-radius:0 6px 6px 0;background:linear-gradient(90deg,#b49b83 0 6px,#354658 7px);transform:rotate(-5deg)}
+.eh2-hand i{position:absolute;top:-20px;left:20px;width:9px;height:30px;background:#bda58c;border-radius:6px 6px 0 0;transform-origin:bottom}
+.eh2-hand i:nth-child(2){left:31px;top:-25px;height:35px}.eh2-hand i:nth-child(3){left:42px;top:-21px;height:31px}.eh2-hand i:nth-child(4){left:53px;top:-12px;height:23px}
+.eh2-thumb{position:absolute;left:calc(64% + 24px);bottom:35px;width:45px;height:14px;border-radius:8px;background:#c6ac90;transform:rotate(-14deg);transform-origin:right}
+.eh2-thumb:before{content:"";position:absolute;left:35px;top:-5px;width:37px;height:26px;border-radius:0 7px 7px 0;background:linear-gradient(90deg,#b49b83 0 7px,#354658 8px);transform:rotate(8deg)}
+.eh2-memory .eh2-hand:after,.eh2-memory .eh2-thumb:before{background:linear-gradient(90deg,#b49b83 0 7px,#5e4c40 8px)}
+#eh2-touch.on .eh2-hand i:nth-child(3){animation:eh2Press 1.45s 3.6s 1 both}
+#eh2-touch.on .eh2-thumb{animation:eh2Thumb 1.45s 3.6s 1 both}
+.eh2-film blockquote{margin:24px 0 0;text-align:center;font:16px/1.8 "Noto Serif KR",serif;color:#f4e7cc}
+@keyframes eh2Press{0%,35%,70%,100%{transform:rotate(0)}15%,53%{transform:rotate(19deg);background:#e0c19b}}
+@keyframes eh2Thumb{0%,35%,70%,100%{transform:rotate(-14deg) translateX(0)}15%,53%{transform:rotate(-2deg) translateX(-2px)}}
+@media(prefers-reduced-motion:reduce){#eh2-touch.on .eh2-hand i,#eh2-touch.on .eh2-thumb{animation:none}}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1210,6 +1240,11 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="sc-dots" id="ncDots"></div>
 <div class="sc-q s" data-t="5.9">예측보다 덜 떨어졌다. 예정했던 세 번째 노드는 빠졌다.</div></div></div></div>
 <div class="setpiece" id="pathburn"><div class="veil"></div><div class="sp-center"><div class="pb-wrap"><div class="sp-label" style="text-align:center">CENTRAL STRATEGY NET · RECURSIVE BIDDING</div><div class="pb-top"><div class="pb-paths">PATHS<b id="pbPaths">1</b></div><div style="text-align:right">COMPUTE (TOKEN)<b id="pbTok">18,440,000</b></div></div><div class="pb-best">CURRENT BEST <b id="pbBest">—</b><span id="pbRate"></span></div><div class="pb-stage"><svg class="pb-svg" id="pbSvg" viewBox="0 0 320 200" preserveAspectRatio="none"></svg><div class="pb-chips" id="pbChips"></div></div><div class="pb-rec" id="pbRec"><small>ARKADIA AI · RECOMMENDED PATH</small>3차 입찰 −2.4% · 배송 보증 +6.0% · 예상 성공률 61.8%</div></div></div></div>
+<div class="setpiece" id="eh2-touch"><div class="veil"></div><div class="sp-center"><div class="eh2-film">
+<div class="eh2-frame" data-t=".2"><small>맞춤형 서사 꿈 · 미리 보기</small><div class="eh2-lover" aria-hidden="true"></div><div class="eh2-person" aria-hidden="true"><i class="eh2-chain"></i></div><div class="eh2-hand" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="eh2-thumb" aria-hidden="true"></div></div>
+<div class="eh2-frame eh2-memory" data-t="2.6"><small>태린의 결혼식 영상</small><div class="eh2-lover" aria-hidden="true"></div><div class="eh2-person" aria-hidden="true"><i class="eh2-chain"></i></div><div class="eh2-hand" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="eh2-thumb" aria-hidden="true"></div></div>
+<blockquote data-t="6.2">“손부터 닦고 만져.”</blockquote>
+</div></div></div>
 <script src="reader-effects.js"></script>
 <script>
 const $=id=>document.getElementById(id);
@@ -1217,7 +1252,7 @@ const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterH
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=40,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={3:['3-1'],6:['6-1','6-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={2:['2-1'],3:['3-1'],6:['6-1','6-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:"이상하게 좋다.",sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -1259,6 +1294,7 @@ const D={
 38:{a:'#ffc994',b:'#9cb4ff',token:'∞',sync:0,ghost:'K-7 · 41',hook:"동생 방 문틈으로도 불빛이 새고 있었다.",sp:'unlink41',at:.90,on:"태블릿을 식탁에 엎어 놓았다.",w:1200,ms:9800},
 39:{a:'#ffe6b0',b:'#9fc4ff',token:'∞',sync:0,ghost:'LAST ONE OUT',hook:"서인은 열쇠를 문틀 위에 올리고 손을 내렸다. 손바닥에 열쇠 톱니 자국이 남아 있었다.",sp:'lastout',at:.93,on:"서인은 스위치를 내렸다.",w:700,ms:9400},
 40:{a:'#e8cf94',b:'#a3b47c',token:'∞',sync:0,ghost:'NOT IN LINE',hook:"“두 번 오면 이 방 사람이야.”",sp:'offblanket',at:.62,on:"패가 담요 끝을 넘어가 장판 위로 떨어졌다.",w:900,ms:8400},
+'2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'THE SAME TOUCH',hook:'서인은 지우가 통화를 끝낼 때까지 뜨거운 컵 두 개를 들고 있었다.',sp:'eh2-touch',at:.65,on:'태린도 웃었다.',w:700,ms:8800},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'두 번째가 더 쌌다는 생각은 집에 도착할 때까지 세 번 났다.',sp:'ldx-crosswalk',at:.95,on:'어머니 걸음에 맞춰 건넜다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
 '6-2':{a:'#f0c58d',b:'#83b8ad',token:'019.7',sync:70,ghost:'NEXT MEAL',hook:'서인의 정산 칸은 그 소리 뒤에도 비어 있었다.',sp:'ldx-unsettled',at:.99,on:'서인의 정산 칸은 그 소리 뒤에도 비어 있었다.',w:300},
@@ -1275,6 +1311,7 @@ function sceneMarkup(n,pi){return n===1&&pi===4?'<div class="eh1-room reveal" ar
 // 글자 연출: 문단 단위 효과. nest = 서로의 수를 예상하는 사슬이 한 칸씩 안으로 들어가고, fan = 경로가 퍼지며, mirror = 상대가 같은 것을 본다.
 const FX={};/* 문단 단위 글자 연출 자리. 예: {16:{nest:[...],fan:'...',mirror:[...]}} */
 const KEY={
+'2-1':['“취소는 안 해요.”','“너도 눌렀잖아.”'],
 1:['“내가 원래 무슨 꿈을 꿨는지.”','“내 꿈은?”'],
 2:['“내가 없잖아.”'],
 3:['“왜 그건 내 꿈으로 안 쳐 줘?”','“내가 자유로워졌다는 걸 왜 네가 원하는 방식으로 증명해야 해?”'],
