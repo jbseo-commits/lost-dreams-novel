@@ -15,6 +15,26 @@ const draftKey = path => `ldn-draft:${path || 'new'}`;
 
 let manifest = { settings: [], manuscript: [] };
 
+const HIDDEN_MANUSCRIPT = new Set([
+  'ep002-1.md',
+  'ep003-1.md',
+  'ep006-1.md',
+  'ep006-2.md',
+  'ep011-1.md',
+]);
+
+const episodeKey = filename => {
+  const m = filename.match(/^ep(\d+)(?:-(\d+))?\.md$/);
+  if (!m) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, filename];
+  return [Number(m[1]), Number(m[2] || 0), filename];
+};
+
+const compareEpisode = (a, b) => {
+  const ak = episodeKey(a.name);
+  const bk = episodeKey(b.name);
+  return ak[0] - bk[0] || ak[1] - bk[1] || ak[2].localeCompare(bk[2]);
+};
+
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const md = text => DOMPurify.sanitize(marked.parse(text));
@@ -31,7 +51,6 @@ function toast(msg) {
   toastTimer = setTimeout(() => el.classList.remove('show'), 4000);
 }
 
-// ---------- GitHub API ----------
 function ghHeaders(extra = {}) {
   const h = { Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', ...extra };
   if (token()) h.Authorization = `Bearer ${token()}`;
@@ -46,7 +65,6 @@ const toBase64 = text => {
 };
 const fromBase64 = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\n/g, '')), c => c.charCodeAt(0)));
 
-// 최신 내용과 sha. 연결돼 있으면 API에서 바로 읽어서 방금 저장한 것도 보인다.
 async function loadFile(path) {
   if (token()) {
     const r = await fetch(`${API}/contents/${path}?ref=${REPO.branch}`, { headers: ghHeaders(), cache: 'no-store' });
@@ -71,11 +89,15 @@ async function saveFile(path, text, message, sha) {
   throw new Error(`GitHub 응답 ${r.status}`);
 }
 
-// 목록: 배포 때 만든 manifest.json. 없거나 연결돼 있으면 GitHub에서 최신 목록을 읽는다.
 async function listDir(dir) {
   const r = await fetch(`${API}/contents/${dir}?ref=${REPO.branch}`, { headers: ghHeaders(), cache: 'no-store' });
   if (!r.ok) return [];
-  const files = (await r.json()).filter(f => f.name.endsWith('.md')).sort((a, b) => a.name.localeCompare(b.name));
+  let files = (await r.json()).filter(f => f.name.endsWith('.md'));
+  if (dir === 'manuscript') {
+    files = files.filter(f => !HIDDEN_MANUSCRIPT.has(f.name)).sort(compareEpisode);
+  } else {
+    files.sort((a, b) => a.name.localeCompare(b.name));
+  }
   return files.map(f => ({ path: f.path, title: f.name.replace(/\.md$/, ''), chars: null }));
 }
 
@@ -92,7 +114,6 @@ async function loadManifest() {
   }
 }
 
-// ---------- 화면 ----------
 function renderNav(active) {
   const item = i => `<li><a href="#/read/${i.path}" class="${i.path === active ? 'active' : ''}">${esc(i.title)}</a></li>`;
   $('#settingsList').innerHTML = manifest.settings.map(item).join('') || '<li class="empty">아직 없어요</li>';
@@ -178,142 +199,101 @@ async function viewEditor(path) {
       if (f) { original = f.text; sha = f.sha; }
     } catch {}
   }
-  const n = isNew ? await nextEpisodeNumber() : null;
-  const saved = store.get(draftKey(path));
-  let draft = saved ? JSON.parse(saved) : null;
-
+  const initial = original || (isNew ? `# 제${await nextEpisodeNumber()}화. 제목\n\n` : '');
   main.innerHTML = `
     <section class="editor">
-      <h1>${isNew ? '새 화 쓰기' : `고치기 · <span class="muted">${esc(path)}</span>`}</h1>
-      <p class="muted">${isNew ? '채팅에서 쓴 글을 본문에 그대로 붙여넣어도 돼요.' : '채팅에서 정리한 내용으로 통째로 바꾸려면 전체 선택 후 붙여넣으세요.'} 쓰는 동안 이 브라우저에 자동으로 임시 저장돼요.</p>
-      ${draft ? `<p class="notice">임시 저장된 글을 불러왔어요. <button class="link" id="discard">버리고 원래대로</button></p>` : ''}
-      ${isNew ? `
-        <div class="row">
-          <label>화 번호<input id="epNum" type="number" min="1" value="${draft?.num ?? n}"></label>
-          <label class="grow">제목<input id="epTitle" type="text" placeholder="예: 광고가 끝난 밤" value="${esc(draft?.title ?? '')}"></label>
-        </div>` : ''}
-      <label class="grow">본문
-        <textarea id="body" spellcheck="false" placeholder="여기에 쓰거나 붙여넣으세요">${esc(draft?.body ?? original)}</textarea>
-      </label>
-      <div class="editor-foot">
-        <span class="muted" id="count"></span>
-        <label class="grow">저장 메모<input id="msg" type="text" value=""></label>
-        <button class="btn primary" id="save">GitHub에 저장</button>
+      <div class="editor-head">
+        <h2>${isNew ? '새 화 쓰기' : '원고 고치기'}</h2>
+        <span id="count" class="muted"></span>
       </div>
-      ${token() ? '' : `<p class="notice">아직 GitHub에 연결되지 않았어요. <a href="#/connect">한 번만 연결</a>해두면 이 버튼으로 바로 저장돼요. 연결 전에는 GitHub 편집 화면을 열어드려요.</p>`}
+      ${isNew ? `<label>파일명 <input id="filename" value="ep${pad(await nextEpisodeNumber())}.md" /></label>` : ''}
+      <textarea id="editor" spellcheck="false"></textarea>
+      <div class="editor-actions">
+        <button id="save" class="btn primary">GitHub에 저장</button>
+        <button id="preview" class="btn">미리보기</button>
+        <button id="clearDraft" class="btn ghost">임시저장 지우기</button>
+      </div>
+      <div id="previewBox" class="prose manuscript hidden"></div>
     </section>`;
-
-  const body = $('#body'), msg = $('#msg');
-  const num = () => Number($('#epNum')?.value || n);
-  const title = () => ($('#epTitle')?.value || '').trim();
-  const target = () => isNew ? `manuscript/ep${pad(num())}.md` : path;
-  const content = () => isNew ? `# 제${num()}화. ${title() || '제목 없음'}\n\n${body.value.trim()}\n` : body.value;
-  const defaultMsg = () => isNew ? `원고: 제${num()}화 ${title()}`.trim() : `${path.startsWith('settings/') ? '설정' : '원고'}: ${path.split('/').at(-1)} 수정`;
-  msg.value = defaultMsg();
-
-  const update = () => {
-    const c = countChars(body.value);
-    $('#count').textContent = `공백 포함 ${c.all.toLocaleString('ko-KR')}자 · 제외 ${c.noSpace.toLocaleString('ko-KR')}자`;
-    store.set(draftKey(path), JSON.stringify({ body: body.value, num: isNew ? num() : undefined, title: isNew ? title() : undefined }));
+  const ta = $('#editor');
+  ta.value = store.get(draftKey(path)) || initial;
+  const updateCount = () => {
+    const c = countChars(ta.value);
+    $('#count').textContent = `공백 제외 ${c.noSpace.toLocaleString('ko-KR')}자`;
   };
-  [body, $('#epNum'), $('#epTitle')].forEach(el => el?.addEventListener('input', () => {
-    update();
-    if (el !== body) msg.value = defaultMsg();
-  }));
-  update();
-  if (!draft) store.del(draftKey(path));
-
-  $('#discard')?.addEventListener('click', () => { store.del(draftKey(path)); viewEditor(path); });
-
-  $('#save').addEventListener('click', async () => {
-    if (!body.value.trim()) return toast('본문이 비어 있어요.');
-    if (!token()) return openGitHubEditor(target(), content(), isNew);
-    const btn = $('#save');
-    btn.disabled = true;
-    btn.textContent = '저장 중…';
-    try {
-      await saveFile(target(), content(), msg.value.trim() || defaultMsg(), isNew ? null : sha);
-      store.del(draftKey(path));
-      toast('GitHub에 저장했어요. 웹사이트 목록에는 1~2분 뒤 반영돼요.');
-      if (isNew && !manifest.manuscript.some(i => i.path === target())) {
-        manifest.manuscript.push({ path: target(), title: `제${num()}화. ${title() || '제목 없음'}`, chars: countChars(body.value).noSpace });
-      }
-      location.hash = `#/read/${target()}`;
-    } catch (e) {
-      const why = {
-        conflict: isNew ? '이미 같은 번호의 화가 있어요. 화 번호를 바꿔주세요.' : '그사이 다른 곳(AI 등)에서 이 파일이 바뀌었어요. 글은 임시 저장돼 있으니 복사해두고, 새로고침해서 최신 내용을 확인해주세요.',
-        token: '토큰이 만료됐거나 잘못됐어요. 다시 연결해주세요.',
-        permission: '이 토큰에는 저장 권한이 없어요. 연결 화면의 안내대로 권한을 확인해주세요.',
-      }[e.message] || `저장하지 못했어요 (${e.message}).`;
-      toast(why);
-      btn.disabled = false;
-      btn.textContent = 'GitHub에 저장';
+  updateCount();
+  ta.addEventListener('input', () => { updateCount(); store.set(draftKey(path), ta.value); });
+  $('#preview').onclick = () => { const p = $('#previewBox'); p.innerHTML = md(ta.value); p.classList.toggle('hidden'); };
+  $('#clearDraft').onclick = () => { store.del(draftKey(path)); toast('임시저장을 지웠어요.'); };
+  $('#save').onclick = async () => {
+    if (!token()) { location.hash = '#/connect'; toast('먼저 GitHub에 연결해 주세요.'); return; }
+    let target = path;
+    if (isNew) {
+      const raw = $('#filename').value.trim();
+      target = `manuscript/${raw.endsWith('.md') ? raw : raw + '.md'}`;
+      if (!/^manuscript\/ep\d{3}\.md$/.test(target)) { toast('파일명은 ep012.md 같은 형식으로 입력해 주세요.'); return; }
     }
-  });
-}
-
-async function openGitHubEditor(path, text, isNew) {
-  try { await navigator.clipboard.writeText(text); } catch {}
-  const dir = path.split('/').slice(0, -1).join('/');
-  const file = path.split('/').at(-1);
-  const url = isNew ? `${GH}/new/${REPO.branch}/${dir}?filename=${encodeURIComponent(file)}` : `${GH}/edit/${REPO.branch}/${path}`;
-  window.open(url, '_blank', 'noopener');
-  toast('글을 복사했어요. 열린 GitHub 화면에 붙여넣고 Commit changes를 누르세요.');
+    $('#save').disabled = true;
+    try {
+      const msg = `${target.split('/').pop()} ${isNew ? '집필' : '수정'}`;
+      sha = await saveFile(target, ta.value, msg, sha);
+      store.del(draftKey(path));
+      toast('GitHub에 저장했습니다.');
+      if (isNew) location.hash = `#/read/${target}`;
+    } catch (e) {
+      if (e.message === 'conflict') toast('다른 곳에서 파일이 바뀌었습니다. 새로고침 후 다시 저장해 주세요.');
+      else if (e.message === 'token') toast('토큰이 만료되었거나 잘못되었습니다.');
+      else if (e.message === 'permission') toast('저장 권한이 없습니다. 토큰 권한과 저장소 접근을 확인해 주세요.');
+      else toast(`저장 실패: ${e.message}`);
+    } finally { $('#save').disabled = false; }
+  };
 }
 
 function viewConnect() {
   renderNav(null);
+  const has = !!token();
   $('#main').innerHTML = `
     <section class="connect">
-      <h1>GitHub 연결</h1>
-      <p>한 번만 연결해두면 이 웹에서 쓴 글이 저장 버튼 하나로 저장소에 올라가요. 연결 정보(토큰)는 <strong>이 브라우저에만</strong> 저장되고, 다른 곳으로는 보내지 않아요.</p>
-      ${token() ? `
-        <p class="notice ok">지금 연결돼 있어요.</p>
-        <button class="btn" id="disconnect">연결 끊기</button>` : `
-        <ol class="steps">
-          <li><a href="${TOKEN_PAGE}" target="_blank" rel="noopener">GitHub 토큰 만들기 화면</a>을 열어요.</li>
-          <li><b>Token name</b>은 아무거나 (예: 소설 웹), <b>Expiration</b>은 원하는 기간으로 정해요.</li>
-          <li><b>Repository access</b>에서 <b>Only select repositories</b>를 고르고 <code>${REPO.name}</code> 하나만 선택해요.</li>
-          <li><b>Permissions → Repository permissions → Contents</b>를 <b>Read and write</b>로 바꿔요.</li>
-          <li><b>Generate token</b>을 누르고, 나온 값을 복사해서 아래에 붙여넣어요.</li>
-        </ol>
-        <label>토큰<input id="tokenInput" type="password" autocomplete="off" placeholder="github_pat_로 시작하는 값"></label>
-        <button class="btn primary" id="connectBtn">연결</button>
-        <p class="muted small">토큰은 비밀번호와 같아요. 다른 사람에게 보여주거나 채팅에 붙여넣지 마세요. 공용 PC에서는 쓰지 않는 게 좋아요.</p>`}
+      <p class="eyebrow">GitHub 연결</p>
+      <h1>${has ? '연결되어 있습니다' : '저장소에 직접 저장하기'}</h1>
+      <p>Fine-grained personal access token을 한 번 넣어 두면 이 브라우저에서 원고를 바로 읽고 수정할 수 있습니다.</p>
+      <p class="muted">토큰은 이 브라우저에만 저장되며 서버로 보내지지 않습니다. 이 페이지는 GitHub API에 직접 요청합니다.</p>
+      <div class="connect-form">
+        <input id="tokenInput" type="password" placeholder="github_pat_…" autocomplete="off" />
+        <button id="tokenSave" class="btn primary">저장하고 연결</button>
+        ${has ? '<button id="tokenClear" class="btn">연결 해제</button>' : ''}
+      </div>
+      <p><a href="${TOKEN_PAGE}" target="_blank" rel="noopener">Fine-grained token 만들기 ↗</a> · <a href="${GH}" target="_blank" rel="noopener">저장소 열기 ↗</a></p>
+      <p class="muted">권장 권한: 이 저장소만 선택 → Contents: Read and write.</p>
     </section>`;
-
-  $('#disconnect')?.addEventListener('click', () => { store.del(TOKEN_KEY); toast('연결을 끊었어요.'); viewConnect(); });
-  $('#connectBtn')?.addEventListener('click', async () => {
-    const t = $('#tokenInput').value.trim();
-    if (!t) return toast('토큰을 붙여넣어 주세요.');
-    const r = await fetch(API, { headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${t}` } }).catch(() => null);
-    if (!r || !r.ok) return toast('이 토큰으로는 저장소에 접근할 수 없어요. 저장소 선택을 확인해주세요.');
-    const j = await r.json();
-    if (!j.permissions?.push) return toast('읽기만 되는 토큰이에요. Contents를 Read and write로 바꿔주세요.');
-    store.set(TOKEN_KEY, t);
-    toast('연결됐어요. 이제 저장 버튼으로 바로 올라가요.');
-    await loadManifest();
-    location.hash = '#/';
-  });
+  $('#tokenSave').onclick = async () => {
+    const v = $('#tokenInput').value.trim();
+    if (!v) return toast('토큰을 입력해 주세요.');
+    store.set(TOKEN_KEY, v);
+    try {
+      const r = await fetch(`${API}/contents/AGENTS.md?ref=${REPO.branch}`, { headers: ghHeaders(), cache: 'no-store' });
+      if (!r.ok) throw new Error();
+      toast('연결되었습니다.');
+      await loadManifest();
+      location.hash = '#/';
+    } catch {
+      store.del(TOKEN_KEY);
+      toast('연결하지 못했습니다. 토큰과 저장소 권한을 확인해 주세요.');
+    }
+  };
+  if (has) $('#tokenClear').onclick = () => { store.del(TOKEN_KEY); toast('연결을 해제했습니다.'); location.hash = '#/'; };
 }
 
-// ---------- 라우터 ----------
-function route() {
-  const h = decodeURIComponent(location.hash.slice(1)) || '/';
-  document.body.classList.remove('nav-open');
-  $('#menuBtn').setAttribute('aria-expanded', 'false');
-  if (h.startsWith('/read/')) return viewRead(h.slice(6));
-  if (h.startsWith('/edit/')) return viewEditor(h.slice(6));
-  if (h === '/write') return viewEditor(null);
-  if (h === '/connect') return viewConnect();
+async function router() {
+  const hash = decodeURIComponent(location.hash || '#/');
+  if (hash === '#/' || hash === '#') return viewHome();
+  if (hash === '#/write') return viewEditor(null);
+  if (hash === '#/connect') return viewConnect();
+  if (hash.startsWith('#/read/')) return viewRead(hash.slice(7));
+  if (hash.startsWith('#/edit/')) return viewEditor(hash.slice(7));
   viewHome();
 }
 
-$('#menuBtn').addEventListener('click', () => {
-  const open = document.body.classList.toggle('nav-open');
-  $('#menuBtn').setAttribute('aria-expanded', String(open));
-});
-$('#repoLink').href = GH;
-window.addEventListener('hashchange', route);
-
-loadManifest().then(route);
+window.addEventListener('hashchange', router);
+await loadManifest();
+await router();
