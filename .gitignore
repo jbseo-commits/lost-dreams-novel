@@ -4,3 +4,6 @@ manifest.json
 # 로컬 미리보기 캐시
 .vite/
 undefined/
+
+# Local AI loop telemetry (never commit session data)
+loop/.runtime/
