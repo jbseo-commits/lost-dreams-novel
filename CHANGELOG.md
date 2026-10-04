@@ -1,5 +1,7 @@
 # 변경 기록
 
+- 2026-10-04: Codex 역할 분업과 Claude/Codex 로컬 진행 대시보드 추가. 원고·설정·목표 화수 변경 없음.
+
 - 2026-10-04 · Codex · Fable 미보유 환경에 맞춰 기존 분업 프로필의 advisor를 Opus로 변경. 프로젝트 설정·실행 인자·진단·사용량 안내를 함께 수정하고 메인 Opus/high·Sonnet/medium 작업·별도 Opus 편집 검수는 유지.
 
 - 2026-10-04 · Codex · Claude 분업 루프 설정: 메인 Opus/high, Sonnet/medium 탐색·작업·조사·연속성 검수, 별도 Opus 편집 검수, Fable advisor 상담 시점과 진단·한 바퀴 런처 연결. 원고·확정 설정·목표 화수·배포 워크플로는 변경하지 않음.
