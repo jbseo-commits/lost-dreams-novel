@@ -15,6 +15,26 @@ const draftKey = path => `ldn-draft:${path || 'new'}`;
 
 let manifest = { settings: [], manuscript: [] };
 
+const HIDDEN_MANUSCRIPT = new Set([
+  'ep002-1.md',
+  'ep003-1.md',
+  'ep006-1.md',
+  'ep006-2.md',
+  'ep011-1.md',
+]);
+
+const episodeKey = filename => {
+  const m = filename.match(/^ep(\d+)(?:-(\d+))?\.md$/);
+  if (!m) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, filename];
+  return [Number(m[1]), Number(m[2] || 0), filename];
+};
+
+const compareEpisode = (a, b) => {
+  const ak = episodeKey(a.name);
+  const bk = episodeKey(b.name);
+  return ak[0] - bk[0] || ak[1] - bk[1] || ak[2].localeCompare(bk[2]);
+};
+
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const md = text => DOMPurify.sanitize(marked.parse(text));
@@ -75,7 +95,12 @@ async function saveFile(path, text, message, sha) {
 async function listDir(dir) {
   const r = await fetch(`${API}/contents/${dir}?ref=${REPO.branch}`, { headers: ghHeaders(), cache: 'no-store' });
   if (!r.ok) return [];
-  const files = (await r.json()).filter(f => f.name.endsWith('.md')).sort((a, b) => a.name.localeCompare(b.name));
+  let files = (await r.json()).filter(f => f.name.endsWith('.md'));
+  if (dir === 'manuscript') {
+    files = files.filter(f => !HIDDEN_MANUSCRIPT.has(f.name)).sort(compareEpisode);
+  } else {
+    files.sort((a, b) => a.name.localeCompare(b.name));
+  }
   return files.map(f => ({ path: f.path, title: f.name.replace(/\.md$/, ''), chars: null }));
 }
 
