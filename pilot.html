@@ -1243,7 +1243,7 @@ const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterH
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=44,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={2:['2-1'],3:['3-1'],6:['6-1','6-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],22:['22-1'],25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={2:['2-1'],3:['3-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],22:['22-1'],25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:"이상하게 좋다.",sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -1292,7 +1292,7 @@ const D={
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'지우의 커피가 줄어드는 동안, 서인은 좋았다고 말한 곳에 표시를 남겼다.',sp:'eh2-voice',at:.99,on:'지우의 커피가 줄어드는 동안, 서인은 좋았다고 말한 곳에 표시를 남겼다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'두 번째가 더 쌌다는 생각은 집에 도착할 때까지 세 번 났다.',sp:'ldx-crosswalk',at:.95,on:'어머니 걸음에 맞춰 건넜다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
-'6-2':{a:'#f0c58d',b:'#83b8ad',token:'019.7',sync:70,ghost:'NEXT MEAL',hook:'서인의 정산 칸은 그 소리 뒤에도 비어 있었다.',sp:'ldx-unsettled',at:.99,on:'서인의 정산 칸은 그 소리 뒤에도 비어 있었다.',w:300},
+'7-2':{a:'#f0c58d',b:'#83b8ad',token:'019.7',sync:70,ghost:'NEXT MEAL',hook:'서인의 정산 칸은 그 소리 뒤에도 비어 있었다.',sp:'ldx-unsettled',at:.99,on:'서인의 정산 칸은 그 소리 뒤에도 비어 있었다.',w:300},
 '9-1':{a:'#b6a7ff',b:'#e6b8a2',token:'∞',sync:43,ghost:'JUST TOMORROW',hook:'메시지를 보내고도 한 번 더 읽었다.',sp:'ldx-claymark',at:.8,on:'손톱 밑의 흙은 아직 남아 있었다.',w:300},
 '11-1':{a:'#ffc9a8',b:'#a9c7ff',token:'∞',sync:24,ghost:'RED CELL',hook:"“출장이 길었네.”",sp:'redcell',at:.8,on:'“출장이 길었네.”',w:1200,ms:6800},
 '15-1':{a:'#f2d3a0',b:'#8fb8a8',token:'∞',sync:34,ghost:'SEVENTH POT',hook:"주머니 속 냅킨은 꺼내지 않았다.",sp:'seventhpot',at:.78,on:'주머니 속 냅킨은 꺼내지 않았다.',w:1400,ms:7200},
