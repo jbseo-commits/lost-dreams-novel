@@ -19,6 +19,7 @@ Claude Code에서는 [모델 분업](../docs/MODEL-ROUTING.md)을 함께 따른�
 반드시 모두 읽습니다.
 
 - `AGENTS.md`, `settings/` 전체, `loop/config.md`의 작가 메모
+- `loop/SCENE-VISIBILITY-GATE.md` (장면 시작의 공간·인물 배치, 대사 화자/시선/행동, 추상 정보의 물리적 결과, 모바일 원인→반응 거리까지 확인하는 필수 품질 게이트)
 - `loop/story-so-far.md` (화별 요약과 인물/수치 연속성 표)
   - 파일이 없거나 마지막 화가 빠져 있으면, 빠진 화를 **원문으로 읽고** 요약을 먼저 채웁니다.
 - 직전 3화 원문 전체
@@ -100,8 +101,11 @@ Claude Code에서는 [모델 분업](../docs/MODEL-ROUTING.md)을 함께 따른�
 
 - 이번 화 원고 전문과 직전 3화 원문
 - `loop/story-so-far.md`, `settings/` 전체, 이 4단계 표
+- `loop/SCENE-VISIBILITY-GATE.md`
 - 연출 변경분(`git diff pilot.html`)
 - 직전 3화보다 앞선 화는 통째로 읽히지 않습니다. 연속성 확인이 필요하면 그 장면만 검색해서 봅니다.
+
+장면 가시성은 `loop/SCENE-VISIBILITY-GATE.md` 기준으로 별도 **PASS / CHANGES** 판정을 냅니다. CHANGES면 해당 결함을 고친 뒤 재검수하며, 이 판정은 아래 4-1 통과 조건 및 4-2 점수와 별개로 반드시 통과해야 합니다.
 
 ### 4-1. 통과 조건 (하나라도 어기면 불합격)
 
