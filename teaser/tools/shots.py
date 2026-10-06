@@ -571,3 +571,200 @@ def s19v6_render(s, t, dur):
 
 
 SHOTS.update({"SA": (sa_setup, sa_render), "S16": (s16v6_setup, s16v6_render), "S17": (s17_setup, s17v6_render), "S19": (s19_setup, s19v6_render)})
+
+
+# ================================================================ V7: S05 6.8 TOKEN revived
+def s05v7_setup():
+    s = s05_setup()
+    img = plate("p05")
+    # floating chip under the panel: what is left after paying
+    chip = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(chip)
+    d.rounded_rectangle([960, 598, 1230, 640], radius=10, fill=(8, 14, 30, 200), outline=(255, 176, 92, 230), width=1)
+    d.text((1095, 619), "결제 후 잔액   0.3 TOKEN", font=font("sans-b", 20), fill=(255, 196, 120, 255), anchor="mm")
+    c = np.asarray(chip, np.float32) / 255.0
+    with_chip = img * (1 - c[..., 3:]) + c[..., :3] * c[..., 3:]
+    s["chipL"] = Layer(with_chip)
+    s["chipglow"] = blur(c[..., 3], 8)
+    s["row68"] = rect_mask(958, 322, 1232, 422, 2, 12)
+    s["row68g"] = blur(s["row68"], 9) - s["row68"] * 0.6
+    s["bal"] = rect_mask(1110, 452, 1215, 486, 3, 4)
+    return s
+
+
+def s05v7_render(s, t, dur):
+    # beats: 0-0.7 settle | 0.7 price row lights | 1.3 "after payment 0.3" chip | 1.9-2.6 finger hovers, pulls back | 2.6-end button glow fades (does not pay)
+    p = ease(t / dur)
+    cam = (1.0 + 0.035 * p, 1040, 430, 0, 0)
+    retreat = smooth(t, 2.0, 2.7)
+    dx = 1.6 * retreat * s["finger"]
+    dy = -0.6 * np.sin(TAU * t / 3.6) * s["mother"] - 0.35 * np.sin(TAU * t / 3.0 + 1) * s["boy"]
+    ys = 20 + (t / 2.4 % 1.0) * 640
+    scan = np.exp(-((YY - ys) / 2.5) ** 2) * 0.08 + np.exp(-((YY - ys) / 30) ** 2) * 0.02
+    want = 1 - 0.75 * smooth(t, 2.4, 3.2)
+    pulse = (0.5 + 0.5 * np.sin(TAU * 0.75 * t)) * want
+    row = s["row68g"] * 0.10 * smooth(t, 0.6, 0.9) * (0.75 + 0.25 * np.sin(TAU * 1.1 * t))
+    light = (s["panel"] * scan + s["button_glow"] * 0.07 * pulse + row)[..., None] * np.array([0.45, 0.75, 1.0], np.float32)
+    chip_a = smooth(t, 1.25, 1.6)
+    light = light + (s["chipglow"] * 0.05 * chip_a)[..., None] * np.array([1.0, 0.65, 0.3], np.float32)
+    mult = 1 + s["button"] * 0.10 * pulse + 0.16 * twinkle_map(55, t, (100, 56), 0.5) * s["window"] - s["bal"] * 0.25 * chip_a
+    base, _ = s["L"].render(cam, (dx, dy), light, mult)
+    if chip_a <= 0:
+        return base
+    ch, _ = s["chipL"].render(cam, (dx, dy), light, mult)
+    return base * (1 - chip_a) + ch * chip_a
+
+
+# ================================================================ V7: analysis take, rise fast -> freeze -> unknown -> overload burst
+B_T = dict(r1=0.0, r2=0.42, r3=0.84, r4=1.26, freeze=1.40, unk=2.35, burst=3.75, end=5.20)
+
+
+def sb_setup():
+    s = sa_setup()
+    s["hud"] = np.maximum(s["hud"], rect_mask(920, 30, 1190, 305, 30, 10) * 0.55)  # brain hologram also steps back
+    return s
+
+
+def sb_render(s, t, dur):
+    T = B_T
+    if t < T["freeze"]:
+        stage = 0.2 + 0.8 * smooth(t, 0.0, T["r4"] + 0.1)
+        sc = 1.0 + 0.03 * smooth(t, 0.0, T["freeze"])
+        f = over_render(s, t, stage, (sc, *C, 0, 0), shake=0.6 * smooth(t, T["r3"], T["r4"]))
+        hud = 0.45
+    elif t < T["unk"]:
+        # 9.4M: everything stops for a beat
+        f = over_render(s, T["freeze"], 1.0, (1.03, *C, 0, 0), freeze=True)
+        g = lum(f)[..., None]
+        k = 0.35 * smooth(t, T["freeze"], T["freeze"] + 0.12)
+        f = f * (1 - k) + g * k
+        hud = 0.45
+    elif t < T["burst"]:
+        sc = 1.03 - 0.01 * smooth(t, T["unk"], T["burst"])
+        f = over_render(s, T["freeze"], 0.5, (sc, *C, 0, 0), freeze=True)
+        hud = 0.45 - 0.15 * smooth(t, T["unk"], T["unk"] + 0.8)
+        if abs(t - (T["unk"] + 0.45)) < 0.021:
+            f = f * 0.85
+            f[300:306] *= 0.4
+    else:
+        k = smooth(t, T["burst"], T["burst"] + 0.9)
+        hit = np.exp(-((t - T["burst"]) / 0.12) ** 2)
+        f = over_render(s, t * 1.4, 0.7 + 0.3 * k, (1.02 + 0.012 * k, *C, 0, 0), shake=3.0 * k, focus=0.4 * k)
+        f = f + (1 - vig(1.0))[..., None] * np.array([0.35, 0.03, 0.03], np.float32) * (0.5 * k + hit)
+        f = f * (1 + 0.25 * hit)
+        hud = 0.30
+    b, _ = s["blur"].render((1.02, *C, 0, 0))
+    m = s["hud"][..., None]
+    f = f * (1 - m * 0.5) + b * (m * 0.5)
+    f = f * (1 - m * (1 - hud))
+    return f * vig(0.25)[..., None]
+
+
+SHOTS.update({"S05": (s05v7_setup, s05v7_render), "SB": (sb_setup, sb_render)})
+
+
+# ================================================================ V8: revolution montage (4 independent hard cuts, no subtitles)
+def _embers(seed, n):
+    rng = np.random.default_rng(seed)
+    return [(rng.uniform(0, W), rng.uniform(200, H + 100), rng.uniform(0.7, 2.0), rng.uniform(0.3, 0.9), rng.uniform(-40, 40), rng.uniform(60, 220)) for _ in range(n)]
+
+
+def _draw_embers(em, t, color, gain=1.0):
+    acc = np.zeros((H, W), np.float32)
+    for (x, y, r, a, vx, vy) in em:
+        cx, cy = x + vx * t, y - vy * t
+        if not (-10 < cx < W + 10 and -10 < cy < H + 10):
+            continue
+        x0, x1 = int(max(0, cx - 7)), int(min(W, cx + 8))
+        y0, y1 = int(max(0, cy - 9)), int(min(H, cy + 9))
+        if x1 <= x0 or y1 <= y0:
+            continue
+        flick = 0.6 + 0.4 * np.sin(t * 23 + x)
+        acc[y0:y1, x0:x1] += a * flick * np.exp(-(((XX[y0:y1, x0:x1] - cx) ** 2) / (2 * r * r) + ((YY[y0:y1, x0:x1] - cy) ** 2) / (2 * (r * 2.2) ** 2)))
+    return acc[..., None] * np.array(color, np.float32) * gain
+
+
+def rev_setup(name, seed):
+    img = plate(name)
+    L = lum(img)
+    fire = ((img[..., 0] > img[..., 2] + 0.15) & (L > 0.45)).astype(np.float32)
+    red = ((img[..., 0] > img[..., 1] + 0.35) & (img[..., 0] > 0.6)).astype(np.float32)
+    cyan = ((img[..., 2] > img[..., 0] + 0.15) & (L > 0.55)).astype(np.float32)
+    return dict(L=Layer(img), fire=blur(fire, 2), red=blur(red, 3), cyan=blur(cyan, 2), em=_embers(seed, 70), smoke_seed=seed)
+
+
+def _shake(seed, t, amp):
+    return amp * scalar_noise(seed, t, 0.06), amp * scalar_noise(seed + 1, t, 0.055)
+
+
+def r1_setup():
+    return rev_setup("r1", 801)
+
+
+def r1_render(s, t, dur):
+    # the dream billboard breaks apart: fast push, fire flicker, embers, impact shake
+    p = 1 - (1 - min(t / dur, 1)) ** 2
+    hit = np.exp(-(t / 0.10) ** 2)
+    ox, oy = _shake(811, t, 3.0 * (0.4 + hit))
+    fl = twinkle_map(812, t, (60, 34), 0.12)
+    mult = 1 + (0.25 * fl + 0.15) * s["fire"]
+    f, _ = s["L"].render((1.0 + 0.06 * p, 470, 200, ox, oy), None, None, mult)
+    f = f + _draw_embers(s["em"], t + 0.3, (1.0, 0.55, 0.2), 0.9)
+    return f * (1 + 0.35 * hit)
+
+
+def r2_setup():
+    return rev_setup("r2", 802)
+
+
+def r2_render(s, t, dur):
+    # people tear the interface off: white severing flash, cyan cable glints, small push
+    p = ease(t / dur)
+    flash = np.exp(-(t / 0.09) ** 2) * 0.55
+    gl = (0.5 + 0.5 * twinkle_map(822, t, (90, 50), 0.08)) * s["cyan"] * 0.35
+    ox, oy = _shake(821, t, 1.2)
+    f, _ = s["L"].render((1.0 + 0.04 * p, 640, 260, ox, oy), None, gl[..., None] * np.array([0.6, 0.9, 1.0], np.float32))
+    return f + flash
+
+
+def r3_setup():
+    return rev_setup("r3", 803)
+
+
+def r3_render(s, t, dur):
+    # riot line vs crowd: lateral slide, red beacons pulsing, smoke drifting
+    p = ease(t / dur)
+    beacon = 0.5 + 0.5 * np.sign(np.sin(TAU * 3.2 * t))
+    mult = 1 + 0.45 * beacon * s["red"]
+    ox, oy = _shake(831, t, 1.0)
+    f, _ = s["L"].render((1.03, 640, 420, 14 - 28 * p + ox, oy), None, None, mult)
+    smoke = (0.5 + 0.35 * noise_field(832, t * 2.0, (6, 4), 1.0)) * np.exp(-((YY - 520) / 140) ** 2) * 0.10
+    return f * (1 - smoke[..., None] * 0.4) + smoke[..., None] * np.array([0.75, 0.72, 0.8], np.float32)
+
+
+def r4_setup():
+    return rev_setup("r4", 804)
+
+
+def r4_render(s, t, dur):
+    # Seoin watches from a distance: slow push, distant fires breathing, embers drifting across
+    p = ease(t / dur)
+    fl = twinkle_map(842, t, (60, 34), 0.3)
+    mult = 1 + (0.18 * fl + 0.08) * s["fire"]
+    f, _ = s["L"].render((1.0 + 0.025 * p, 900, 360, 0, 0), None, None, mult)
+    return f + _draw_embers(s["em"], t + 1.2, (1.0, 0.6, 0.25), 0.55)
+
+
+def s17v8_render(s, t, dur):
+    # after the montage: the city simply goes quiet (short)
+    front = 1280 - smooth(t, 0.15, 1.15) * 1500
+    local = smooth(XX - front, -60, 60)
+    dimk = 0.62 * local * s["lights"] + 0.10 * smooth(t, 0.15, 1.2)
+    mist = noise_field(171, t * 0.6, (5, 3), 3.0)
+    mist = (0.5 + 0.25 * mist) * np.exp(-((YY - 470) / 110) ** 2) * 0.05
+    f, _ = s["L"].render((1.0, 640, 360, 0, 0), None, None, 1 - dimk)
+    return f + mist[..., None] * np.array([0.55, 0.62, 0.8], np.float32)
+
+
+SHOTS.update({"R1": (r1_setup, r1_render), "R2": (r2_setup, r2_render), "R3": (r3_setup, r3_render), "R4": (r4_setup, r4_render),
+              "S17": (s17_setup, s17v8_render)})

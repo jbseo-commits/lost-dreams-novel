@@ -10,11 +10,12 @@ FPS = 24
 # (id, start, end) seconds; transition INTO the shot: 'dip' | 'cut' | 'dissolve'
 TL = [
     ("S01", 0.00, 3.08, "fadein"), ("S02", 3.33, 6.38, "dip"), ("S03", 6.63, 9.79, "dip"), ("S04", 10.04, 13.29, "dip"),
-    ("S05", 13.50, 16.00, "dip"), ("S06", 16.00, 18.50, "cut"), ("S07", 18.50, 21.04, "cut"), ("S08", 21.04, 23.21, "dissolve"),
-    ("S09", 23.46, 25.42, "dip"), ("SA", 25.67, 31.37, "dip"), ("S16", 31.62, 36.12, "dip"),
-    ("S17", 36.12, 39.32, "cut"), ("S18", 39.82, 44.62, "black"), ("S19", 45.02, 50.02, "black"),
+    ("S05", 13.29, 16.79, "xfade"), ("S06", 16.79, 19.29, "cut"), ("S07", 19.29, 21.83, "cut"), ("S08", 21.83, 24.00, "dissolve"),
+    ("S09", 24.25, 26.21, "dip"), ("SB", 26.46, 31.66, "dip"), ("S16", 31.91, 36.41, "dip"),
+    ("R1", 36.81, 37.61, "blackcut"), ("R2", 37.61, 38.41, "cut"), ("R3", 38.41, 39.31, "cut"), ("R4", 39.31, 40.31, "cut"),
+    ("S17", 40.61, 42.61, "black"), ("S18", 43.41, 49.41, "black"), ("S19", 50.01, 55.01, "black"),
 ]
-END = 50.02
+END = 55.01
 NFR = int(round(END * FPS))
 
 SANS = lambda: font("sans-m", 29)
@@ -80,6 +81,28 @@ def counter_layer(val):
 
 
 def overlay_text(frame, sid, t, dur):
+    if sid == "SB":
+        T = SH.B_T
+        if t >= T["burst"]:
+            return frame
+        if t < T["unk"]:
+            vals = [1_200_000, 3_800_000, 6_400_000, 9_400_000]
+            v = vals[0]
+            for i, b in enumerate([T["r2"], T["r3"], T["r4"]]):
+                v += (vals[i + 1] - vals[i]) * ease((t - b) / 0.16) if t > b else 0
+            v = int(round(v / 1000.0)) * 1000
+            tl, total = counter_layer(v)
+            rect = (int(W / 2 - total / 2 - 48), 545, int(W / 2 + total / 2 + 48), 650)
+            op = 1 - smooth(t, T["unk"] - 0.08, T["unk"])
+            frame = subtitle_box(frame, rect, opacity=op)
+            return put_text(frame, tl, op)
+        lines = ["추론 출처:  미확인", "인간 단독 가설:  배제 불가"]
+        fnt = SANS()
+        tw = max(fnt.getlength(x) for x in lines)
+        rect = (int(W / 2 - tw / 2 - 48), 514, int(W / 2 + tw / 2 + 48), 669)
+        op = smooth(t, T["unk"], T["unk"] + 0.12) * (1 - smooth(t, T["burst"] - 0.1, T["burst"]))
+        frame = subtitle_box(frame, rect, opacity=op)
+        return put_text(frame, text_layer(lines, fnt, 591, 50), op)
     if sid == "SA":
         A = SH.A_T
         if t >= A[5]:
@@ -104,7 +127,7 @@ def overlay_text(frame, sid, t, dur):
         return put_text(frame, text_layer(lines, fnt, 591, 50), op)
     if sid == "S18":
         f = font("serif-l", 34)
-        for i, (ln, y, t0) in enumerate([("사람들은 꿈을 빼앗긴 걸까.", 298, 0.40), ("아니면, 꿈꾸기를 포기한 걸까.", 410, 2.00)]):
+        for i, (ln, y, t0) in enumerate([("사람들은 꿈을 빼앗긴 걸까.", 298, 0.50), ("아니면, 꿈꾸기를 포기한 걸까.", 410, 2.40)]):
             op = smooth(t, t0, t0 + 0.8)
             if op <= 0:
                 continue
@@ -153,6 +176,10 @@ def frame_at(n):
                 if tr in ("dip", "fadein"):
                     k = (t - a) * FPS
                     f = f * min(1.0, (k + 1) / 3.0)
+                if tr == "xfade" and t - a < 0.33 and i > 0:
+                    pid, pa, pb, _ = TL[i - 1]
+                    k = smooth(t - a, 0.0, 0.33)
+                    f = f * k + shot_frame(pid, t - pa, pb - pa) * (1 - k)
                 if tr == "black":
                     f = f * smooth(t - a, 0.0, 0.35)
                 if sid == "S19":
@@ -160,7 +187,7 @@ def frame_at(n):
                 return f
             # gap between shots
             gap = nb - b
-            if nxt[3] == "black":
+            if nxt[3] in ("black", "blackcut"):
                 return np.zeros((H, W, 3), np.float32)
             if nxt[3] == "dissolve":
                 return shot_frame(sid, t - a, dur)
