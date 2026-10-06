@@ -782,3 +782,97 @@ def s17v10_render(s, t, dur):
 
 
 SHOTS.update({"S17": (s17_setup, s17v10_render)})
+
+
+# ================================================================ V12: new opening (dream -> wake -> TV replays the dream -> "나 바다 좋아해?")
+def o1_setup():
+    img = plate("o1")
+    L = lum(img)
+    boy = poly_mask([[(560, 230), (700, 200), (820, 230), (900, 330), (960, 470), (980, 640), (560, 650), (540, 500)]], feather=0)
+    sea = rect_mask(0, 345, 1280, 570, 10) * (1 - blur(boy, 8)) * (1 - rect_mask(960, 0, 1280, 420, 20))
+    spec = smooth(L, 0.62, 0.95) * sea
+    rng = np.random.default_rng(91)
+    return dict(L=Layer(img), sea=sea, spec=spec, ph=rng.uniform(0, TAU, (H, W)).astype(np.float32), om=rng.uniform(3, 7, (H, W)).astype(np.float32))
+
+
+def o1_render(s, t, dur):
+    p = ease(t / dur)
+    yamp = 0.4 + 1.2 * np.clip((YY - 345) / 225, 0, 1)
+    dy = yamp * np.sin(0.09 * YY - TAU * 0.42 * t + 0.012 * XX) * s["sea"]
+    dx = 0.5 * noise_field(911, t, (24, 14), 1.4) * s["sea"]
+    tw = np.maximum(np.sin(s["om"] * t + s["ph"]), 0) ** 6
+    light = (s["spec"] * tw * 0.30)[..., None] * np.ones(3, np.float32)
+    f, _ = s["L"].render((1.0 + 0.03 * p, 640, 300, 0, 0), (dx, dy), light)
+    g = smooth(t, dur - 0.32, dur - 0.02)  # the dream breaks at the end
+    if g > 0:
+        rng = np.random.default_rng(int(t * 240))
+        out = f.copy()
+        for _ in range(int(4 + 14 * g)):
+            y0 = int(rng.integers(0, H - 8)); h = int(rng.integers(3, 18 + int(40 * g)))
+            sh = int(rng.integers(-60, 60) * g)
+            out[y0:y0 + h] = np.roll(f[y0:y0 + h], sh, axis=1)
+        k = int(3 + 10 * g)
+        out[..., 0] = np.roll(out[..., 0], k, axis=1)
+        out[..., 2] = np.roll(out[..., 2], -k, axis=1)
+        f = out * (1 - 0.35 * g * (rng.random() > 0.5)) + 0.08 * g
+    return f
+
+
+def o2_setup():
+    img = plate("o2-fixed")
+    check = np.exp(-(((XX - 904) / 40) ** 2 + ((YY - 150) / 40) ** 2))
+    hud = rect_mask(564, 74, 986, 552, 3, 24)
+    return dict(L=Layer(img), check=check, hud=hud)
+
+
+def o2_render(s, t, dur):
+    p = ease(t / dur)
+    flash = np.exp(-((t - 0.25) / 0.18) ** 2)
+    light = (s["check"] * 0.25 * flash + s["hud"] * 0.03 * (0.5 + 0.5 * np.sin(TAU * 0.8 * t)))[..., None] * np.array([0.6, 0.85, 1.0], np.float32)
+    f, _ = s["L"].render((1.0 + 0.02 * p, 300, 300, 0, 0), None, light)
+    return f
+
+
+def o3_setup():
+    img = plate("o3")
+    L = lum(img)
+    tvsea = rect_mask(356, 290, 640, 430, 6)
+    spec = smooth(L, 0.6, 0.95) * rect_mask(356, 240, 845, 450, 6)
+    screen = rect_mask(352, 50, 1280, 560, 8)
+    viewer = blur(rect_mask(0, 80, 330, 720, 0), 40)
+    rng = np.random.default_rng(93)
+    return dict(L=Layer(img), tvsea=tvsea, spec=spec, screen=screen, viewer=viewer, ph=rng.uniform(0, TAU, (H, W)).astype(np.float32), om=rng.uniform(3, 7, (H, W)).astype(np.float32))
+
+
+def o3_render(s, t, dur):
+    p = ease(t / dur)
+    dy = 0.9 * np.sin(0.1 * YY - TAU * 0.42 * t + 0.012 * XX) * s["tvsea"]
+    tw = np.maximum(np.sin(s["om"] * t + s["ph"]), 0) ** 6
+    flick = 0.5 + 0.5 * np.sin(TAU * 0.42 * t)
+    light = (s["spec"] * tw * 0.22)[..., None] * np.ones(3, np.float32) + (s["viewer"] * (0.03 + 0.03 * flick))[..., None] * np.array([1.0, 0.6, 0.45], np.float32)
+    f, _ = s["L"].render((1.0 + 0.04 * p, 640, 300, 0, 0), (dy * 0, dy), light)
+    return f
+
+
+def o4_setup():
+    return dict(full=Layer(plate("o4")), one=Layer(plate("o4-one")), none=Layer(plate("o4-none")),
+                g1=blur(rect_mask(676, 118, 1120, 316, 0, 18), 14), g2=blur(rect_mask(624, 344, 1264, 688, 0, 18), 16))
+
+
+O4_T = (0.15, 1.30)
+
+
+def o4_render(s, t, dur):
+    cam = (1.0 + 0.015 * ease(t / dur), 420, 360, 0, 0)
+    a, _ = s["none"].render(cam)
+    b, _ = s["one"].render(cam)
+    c, _ = s["full"].render(cam)
+    k1 = smooth(t, O4_T[0], O4_T[0] + 0.18)
+    k2 = smooth(t, O4_T[1], O4_T[1] + 0.22)
+    f = a * (1 - k1) + b * k1
+    f = f * (1 - k2) + c * k2
+    glow = s["g2"] * 0.12 * np.exp(-max(t - O4_T[1], 0) / 0.3) * (t >= O4_T[1])
+    return f + glow[..., None] * np.array([0.4, 0.7, 1.0], np.float32)
+
+
+SHOTS.update({"O1": (o1_setup, o1_render), "O2": (o2_setup, o2_render), "O3": (o3_setup, o3_render), "O4": (o4_setup, o4_render)})
