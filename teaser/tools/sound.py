@@ -1,6 +1,7 @@
 """Procedural sound design for teaser V8 (55.0s). Writes a 48k stereo float WAV. Usage: sound.py OUT.wav"""
-import sys, wave
+import sys, wave, os
 import numpy as np
+NO_MUSIC = os.environ.get("NO_MUSIC") == "1"  # BGM supplies the music: skip pads/notes
 
 SR = 48000
 DUR = 55.01
@@ -227,6 +228,8 @@ add(40.61, fade(band_noise(2.0, 100, 1200, tilt=-1, seed=33), 0.35, 0.6), 0.03)
 
 # S18 question (43.41-49.41): low pad
 def pad(t0, dur, freqs, gain):
+    if NO_MUSIC:
+        return
     n = int(dur * SR)
     t = np.arange(n) / SR
     y = np.zeros(n)
@@ -238,14 +241,16 @@ def pad(t0, dur, freqs, gain):
 
 
 pad(43.41, 6.0, (110.0, 164.8, 220.0, 261.6), 0.06)  # A minor-ish, sparse
-blip(43.41 + 0.5, 440.0, 0.025, -0.2, 2.0)
-blip(43.41 + 2.4, 392.0, 0.025, 0.2, 2.0)
+if not NO_MUSIC:
+    blip(43.41 + 0.5, 440.0, 0.025, -0.2, 2.0)
+    blip(43.41 + 2.4, 392.0, 0.025, 0.2, 2.0)
 
 # S19 title (50.01-55.01): one resonant low note at the light sweep, pad under
-note = tone(55.0, 4.5, (1.0, 0.5, 0.35, 0.2, 0.12), decay=2.2, attack=0.01)
-add(50.01 + 1.0, reverb(note, 3.5, 0.45)[: int(4.0 * SR)], 0.22)
-note2 = tone(220.0, 4.0, (1.0, 0.3, 0.1), decay=1.6, attack=0.01)
-add(50.01 + 1.0, reverb(note2, 3.5, 0.5)[: int(4.0 * SR)], 0.07)
+if not NO_MUSIC:
+  note = tone(55.0, 4.5, (1.0, 0.5, 0.35, 0.2, 0.12), decay=2.2, attack=0.01)
+  add(50.01 + 1.0, reverb(note, 3.5, 0.45)[: int(4.0 * SR)], 0.22)
+  note2 = tone(220.0, 4.0, (1.0, 0.3, 0.1), decay=1.6, attack=0.01)
+  add(50.01 + 1.0, reverb(note2, 3.5, 0.5)[: int(4.0 * SR)], 0.07)
 pad(50.01, 5.0, (55.0, 82.4, 110.0), 0.05)
 
 # ------------------------------------------------------------------ master

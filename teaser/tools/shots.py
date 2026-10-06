@@ -768,3 +768,17 @@ def s17v8_render(s, t, dur):
 
 SHOTS.update({"R1": (r1_setup, r1_render), "R2": (r2_setup, r2_render), "R3": (r3_setup, r3_render), "R4": (r4_setup, r4_render),
               "S17": (s17_setup, s17v8_render)})
+
+
+# ================================================================ V10: blackout comes right after "꺼." (before the revolution)
+def s17v10_render(s, t, dur):
+    front = 1280 - smooth(t, 0.20, 1.60) * 1500
+    local = smooth(XX - front, -60, 60)
+    dimk = 0.66 * local * s["lights"] + 0.12 * smooth(t, 0.2, 1.7)
+    mist = noise_field(171, t * 0.6, (5, 3), 3.0)
+    mist = (0.5 + 0.25 * mist) * np.exp(-((YY - 470) / 110) ** 2) * 0.05
+    f, _ = s["L"].render((1.0, 640, 360, 0, 0), None, None, 1 - dimk)
+    return f + mist[..., None] * np.array([0.55, 0.62, 0.8], np.float32)
+
+
+SHOTS.update({"S17": (s17_setup, s17v10_render)})

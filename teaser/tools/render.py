@@ -12,10 +12,12 @@ TL = [
     ("S01", 0.00, 3.08, "fadein"), ("S02", 3.33, 6.38, "dip"), ("S03", 6.63, 9.79, "dip"), ("S04", 10.04, 13.29, "dip"),
     ("S05", 13.29, 16.79, "xfade"), ("S06", 16.79, 19.29, "cut"), ("S07", 19.29, 21.83, "cut"), ("S08", 21.83, 24.00, "dissolve"),
     ("S09", 24.25, 26.21, "dip"), ("SB", 26.46, 31.66, "dip"), ("S16", 31.91, 36.41, "dip"),
-    ("R1", 36.81, 37.61, "blackcut"), ("R2", 37.61, 38.41, "cut"), ("R3", 38.41, 39.31, "cut"), ("R4", 39.31, 40.31, "cut"),
-    ("S17", 40.61, 42.61, "black"), ("S18", 43.41, 49.41, "black"), ("S19", 50.01, 55.01, "black"),
+    ("S17", 36.41, 38.81, "cut"),
+    ("R4", 39.41, 40.11, "blackcut"), ("R1", 40.11, 40.91, "cut"), ("R2", 40.91, 41.61, "cut"), ("R3", 41.61, 42.41, "cut"),
+    ("S18", 42.81, 48.81, "black"), ("S19", 48.81, 54.81, "xfade"),
 ]
-END = 55.01
+END = 54.81
+XF = {"S18": 0.6, "S19": 0.8}  # dissolve length into the ending
 NFR = int(round(END * FPS))
 
 SANS = lambda: font("sans-m", 29)
@@ -128,7 +130,7 @@ def overlay_text(frame, sid, t, dur):
     if sid == "S18":
         f = font("serif-l", 34)
         for i, (ln, y, t0) in enumerate([("사람들은 꿈을 빼앗긴 걸까.", 298, 0.50), ("아니면, 꿈꾸기를 포기한 걸까.", 410, 2.40)]):
-            op = smooth(t, t0, t0 + 0.8)
+            op = smooth(t, t0, t0 + 0.8) * (1 - smooth(t, dur - 1.0, dur - 0.25))
             if op <= 0:
                 continue
             rgb, a, sh = text_layer([ln], f, y, 0, color=(232, 237, 247), shadow=0.0)
@@ -176,14 +178,14 @@ def frame_at(n):
                 if tr in ("dip", "fadein"):
                     k = (t - a) * FPS
                     f = f * min(1.0, (k + 1) / 3.0)
-                if tr == "xfade" and t - a < 0.33 and i > 0:
+                if tr == "xfade" and t - a < XF.get(sid, 0.33) and i > 0:
                     pid, pa, pb, _ = TL[i - 1]
-                    k = smooth(t - a, 0.0, 0.33)
+                    k = smooth(t - a, 0.0, XF.get(sid, 0.33))
                     f = f * k + shot_frame(pid, t - pa, pb - pa) * (1 - k)
                 if tr == "black":
                     f = f * smooth(t - a, 0.0, 0.35)
                 if sid == "S19":
-                    f = f * (1 - smooth(t, END - 1.0, END - 0.04))
+                    f = f * (1 - smooth(t, END - 1.5, END - 0.04))
                 return f
             # gap between shots
             gap = nb - b

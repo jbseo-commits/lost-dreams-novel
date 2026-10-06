@@ -1,5 +1,7 @@
 # 변경 기록
 
+- 2026-10-06 · Claude · 티저 영상을 V11로 교체(`teaser/output/lost-dreams-teaser-v11.mp4`, 54.8s). BGM 「A Pendulum at Rest」 중심 믹스, 「꺼.」 → 도시 정전 → 암전 브리지 → 혁명 몽타주 3.0s → 질문 → 타이틀로 엔딩 재구성. 곡 편집 스크립트 `tools/mix.py` 추가. V8 영상 파일은 삭제(git 기록에 남음).
+
 - 2026-10-06 · Claude · 티저 영상을 V8로 교체(`teaser/output/lost-dreams-teaser-v8.mp4`, 55.0s, 합성 사운드 포함). 6.8 TOKEN 복구, 과부하 구간 재구성, 「꺼.」 뒤 혁명 4컷 삽입, BGM 프롬프트 추가. V6 영상 파일은 삭제(git 기록에 남음).
 
 - 2026-10-06 · Claude · 티저 영상 V6 최종본(`teaser/output/`)과 렌더 코드·clean plate·제작 계획·V6 수정 지시서를 `teaser/`에 추가.
