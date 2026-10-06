@@ -45,13 +45,11 @@ def automate(points):
 DUR = 54.81
 N = int(DUR * SR)
 out_bgm = np.zeros((N, 2), np.float32)
-# 1) 0 -> "꺼." (34.29): song straight through. 34.29-36.41 silence after "꺼.".
+# 1) 0 -> "꺼." (34.29): song straight through.
 place(0.00, 34.29, 0.00, 0.0, fi=0.3, fo=0.02)
 # 2) "꺼." (34.29) -> blackout -> black bridge: total silence. The sound comes back only with the revolution.
-# 4) revolution montage 39.41-42.41: the climax (onset 49.99) on the first cut
-place(39.41, 42.41, 49.99, 0.0, fi=0.005, fo=0.03)
-# 5) 0.4 s of silence, then the song resumes where it would be (as if it kept running) under question + title
-place(42.81, DUR, 49.99 + (42.81 - 39.41), 0.0, fi=0.25, fo=1.5)
+# 3) revolution 39.41 -> end: the climax (onset 49.99) lands on the first cut
+place(39.41, DUR, 49.99, 0.0, fi=0.005, fo=1.5)  # no gap: the climax runs on through the 0.4 s black, the question and the title
 
 # level automation (dB): BGM sits under the SFX, ducks under dialogue/beats, opens for revolution and title
 import os
