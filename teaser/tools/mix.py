@@ -47,15 +47,7 @@ N = int(DUR * SR)
 out_bgm = np.zeros((N, 2), np.float32)
 # 1) 0 -> "꺼." (34.29): song straight through. 34.29-36.41 silence after "꺼.".
 place(0.00, 34.29, 0.00, 0.0, fi=0.3, fo=0.02)
-# 2) city blackout 36.41-38.81: the song's near-silent passage, low
-place(36.41, 38.81, 67.0, 0.0, fi=0.25, fo=0.15)
-# 3) bridge 38.81-39.41: full black + one clean sub drop (future jump)
-t = np.arange(int(1.6 * SR)) / SR
-f = 52 * np.exp(-t * 0.35)
-sub = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t / 0.55) * np.minimum(1, t / 0.004)
-sub += 0.25 * np.sin(2 * np.pi * np.cumsum(f * 2) / SR) * np.exp(-t / 0.3)
-i0 = int(38.86 * SR)
-out_bgm[i0:i0 + len(sub)] += (sub[:, None] * np.array([1.0, 1.0]) * 0.55).astype(np.float32)
+# 2) "꺼." (34.29) -> blackout -> black bridge: total silence. The sound comes back only with the revolution.
 # 4) revolution montage 39.41-42.41: the climax (onset 49.99) on the first cut
 place(39.41, 42.41, 49.99, 0.0, fi=0.005, fo=0.03)
 # 5) 0.4 s of silence, then the song resumes where it would be (as if it kept running) under question + title
@@ -69,7 +61,7 @@ if SFX_GAIN < 0.5:
     auto = automate([
         (0.0, 8), (12.8, 8), (13.4, 3), (25.9, 3), (26.45, 0), (27.86, 0),
         (28.81, -3), (30.15, -3), (30.25, 4), (31.6, 4), (31.9, -4), (34.3, -4),
-        (36.41, 12), (38.80, 12), (38.82, 0), (39.4, 0), (39.41, 2), (42.41, 2), (42.81, 0), (48.81, 1), (52.4, 3), (54.81, 8),
+        (39.41, 2), (42.41, 2), (42.81, 0), (48.81, 1), (52.4, 3), (54.81, 8),
     ])
 else:
     auto = automate([
