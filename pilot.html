@@ -865,6 +865,7 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 <div class="setpiece" id="noname"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">사용 기록 · 최근 14일</div><div class="sc-row" data-t=".2"><span>총 사용</span><b class="sc-n">2회</b></div><div class="sc-row" data-t="1.2"><span>응답 시간 평균</span><b class="sc-n">3.1초</b></div><div class="sc-row" data-t="2.2"><span>공급 대상</span><b class="sc-red">없음</b></div><div class="sc-card" data-t="3"><small>열람 항목 · 없음</small>이름은 안 읽으니까.</div></div></div></div>
 <div class="setpiece" id="nameplate"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">재심사 · 기각 사유 · 열람 가능</div><div class="sc-row" data-t=".2"><span>2항 · 등록된 대리 신청 사업자</span><b class="sc-red">기각</b></div><div class="sc-row" data-t="1.4"><span>사유</span><b class="sc-n">검증 책임 이전</b></div><div class="sc-row" data-t="2.4"><span>반론 기한</span><b class="sc-n">7일</b></div><div class="sc-card" data-t="3"><small>640 · 세 번 모두 통과</small>누가 봤는지가 안 나와.</div></div></div></div>
 <div class="setpiece" id="waterline"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">4층 · 옥상 물통</div><div class="sc-row" data-t=".2"><span>4층 수도</span><b class="sc-red">이틀째 단수</b></div><div class="sc-row" data-t="1.4"><span>704호 수도요금</span><b class="sc-n">용수철 3,600</b></div><div class="sc-row" data-t="2.4"><span>잠깐 머무</span><b class="sc-n">하나</b></div><div class="sc-card" data-t="3"><small>바꾸면 물 끊겨</small>이름이니까.</div></div></div></div>
+<div class="setpiece" id="emptyshelf"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">목요일 밤 · 싱크대 위</div><div class="sc-row" data-t=".2" data-k="1.2"><span>옥상 물 · 704호</span><b class="sc-n">오늘로 끝</b></div><div class="sc-row" data-t="1.8"><span>어머니 컵</span><b class="sc-red">704호에 둠</b></div><div class="sc-row" data-t="2.8"><span>어머니 컵 자리</span><span style="display:grid;justify-items:end"><b class="sc-n" style="grid-area:1/1" data-k="3.6" data-o="4.3">어머니 컵</b><b class="sc-n" style="grid-area:1/1" data-t="4.6">이름 없는 컵</b></span></div><div class="sc-card" data-t="5.4"><small>네 건.</small>전 아무거나 써요.</div></div></div></div>
 <div class="setpiece" id="dismissed"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">재심사 · 2항</div><div class="sc-row" data-t=".2"><span>반론 제출</span><b class="sc-red">없음</b></div><div class="sc-row" data-t="1.4"><span>2항 처리</span><b class="sc-n">철회</b></div><div class="sc-row" data-t="2.4"><span>원안</span><b class="sc-n">말소</b></div><div class="sc-card" data-t="3"><small>말소가 뭐예요</small>전에도 없었어요.</div></div></div></div>
 <div class="setpiece" id="firstnight"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">승인 전환 · 들어가는 밤</div><div class="sc-card" data-t=".2"><small>APPROVED · 8,436</small>승인 대상 전환 · 승인 날짜 없음</div><div class="sc-row" data-t="1">풀리긴 했어요.<b class="sc-stamp" data-p="1.8">들어가는 밤</b></div><div class="sc-card" data-t="2.6"><small>화요일 밤부터</small>윤 여사도 잔대.</div></div></div></div>
 <div class="setpiece" id="adwake"><div class="veil"></div><div class="aw-scene"><div class="aw-sky"></div><div class="aw-sun"></div><div class="aw-sea"></div><div class="aw-tag">SPONSORED DREAM · 소중한 사람과 떠나는 휴양지</div><div class="aw-line"><small>지우</small>“여기선 아무도 다치지 않아.”<br><i>AD SCRIPT · 광고 대사</i></div><div class="aw-cap c1">원하는 것을 찾느라 인생을 낭비하지 마세요.</div><div class="aw-cap c2">이미 행복하다면, 그것으로 충분합니다.</div></div><div class="aw-cmd m1">“종료.”<small>응답 없음</small></div><div class="aw-cmd m2">“광고 종료.”</div><div class="aw-btn">중도 종료 시 수익이 차감됩니다.<br>계속하시겠습니까?<b>종료</b></div><div class="aw-black"><div class="aw-time">03:17</div><div class="aw-warn">광고 중도 종료.<br>정산 <b>-4.2 TOKEN</b><br>감정 안정화를 위해 잔여 콘텐츠 재생을 권장합니다.</div><div class="aw-off">“꺼.”</div></div></div>
@@ -1247,7 +1248,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=49,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=50,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],25:['25-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -1299,6 +1300,7 @@ const D={
 47:{a:'#dcd8d0',b:'#8c8478',token:'∞',sync:0,ghost:'NAME PLATE',hook:"서인은 컵이 따뜻했다.",sp:'nameplate',at:.8,on:"그게 나한테.",w:900,ms:8400},
 48:{a:'#d4d8d2',b:'#7f8c84',token:'∞',sync:0,ghost:'WATER LINE',hook:"서인은 이름을 새기지 않았다.",sp:'waterline',at:.8,on:"이름이니까.",w:900,ms:8400},
 49:{a:'#d0d4d8',b:'#78808c',token:'∞',sync:0,ghost:'DISMISSED',hook:"아무도 가지 않았다.",sp:'dismissed',at:.8,on:"전에도 없었어요.",w:900,ms:8400},
+50:{a:'#dcd6cc',b:'#857c70',token:'∞',sync:0,ghost:'EMPTY SHELF',hook:"묻지 않기로 한 이름 하나와, 새기지 않기로 한 이름 하나였다.",sp:'emptyshelf',at:.8,on:"이름 없는 컵이 어머니 자리에 섰다.",w:900,ms:8400},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'지우의 커피가 줄어드는 동안, 서인은 좋았다고 말한 곳에 표시를 남겼다.',sp:'eh2-voice',at:.99,on:'지우의 커피가 줄어드는 동안, 서인은 좋았다고 말한 곳에 표시를 남겼다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'두 번째가 더 쌌다는 생각은 집에 도착할 때까지 세 번 났다.',sp:'ldx-crosswalk',at:.95,on:'어머니 걸음에 맞춰 건넜다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1364,7 +1366,8 @@ const KEY={
 46:['“말하지 마.”','“이름은 안 읽으니까.”'],
 47:['**서인: 그게 너한테.**','**서인: 약은 네 아빠 몸에 들어가고 몸은 하나인데. 그러면 이름은.**'],
 48:['“어머니는 안 지워.”','“이름이니까.”'],
-49:['“철회하면 2항 없어지고.”','“전에도 없었어요.”']
+49:['“철회하면 2항 없어지고.”','“전에도 없었어요.”'],
+50:['“안 했어요. 달라고 하면 이름표까지 물을 것 같아서.”','“먹는 건 먹고, 따지는 건 따지는 거지.”']
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
