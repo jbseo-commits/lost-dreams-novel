@@ -7,3 +7,6 @@ undefined/
 
 # Local AI loop telemetry (never commit session data)
 loop/.runtime/
+
+# 티저 렌더용 폰트 (tools/fetch-fonts.sh로 내려받음)
+teaser/fonts/
