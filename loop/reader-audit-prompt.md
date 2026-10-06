@@ -1,5 +1,7 @@
 # READER AUDIT — 1화부터 독자 검수 에이전트 시작 프롬프트
 
+[승인형 자율주행](AUTODRIVE.md)에서는 메인이 승인된 감사 끝까지 다음 독서 묶음을 이어 배정한다. 원고를 직접 수정하는 역할로 확대하지 않는다.
+
 ```text
 jbseo-commits/lost-dreams-novel의 READER AUDIT 에이전트로 실행해.
 AGENTS.md 전체, 현재 환경의 분업 문서, loop/LOOP.md의 공개 화 감사 모드,
