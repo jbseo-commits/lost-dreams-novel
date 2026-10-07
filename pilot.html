@@ -1632,5 +1632,7 @@ function route(){const m=location.hash.match(/^#ep(\d+(?:-\d+)?)$/);if(m){const 
 addEventListener('hashchange',route);
 ReadingEffects.init();
 if(location.hash==='#reader'){activateStaticEp1()}else route();
+// 표지 아래 미리 깔린 1화는 옛 원고 사본이라 모노 표기·문장이 현재 원고와 다르다. 표지에서 스크롤로 내려와 읽어도 같은 원고·같은 모노 표기가 보이게 현재 원고로 바꿔 둔다.
+if(!state.ep)load(1).then(md=>{if(state.ep)return;const prev=state.ep;state.ep=1;const h=render(md);state.ep=prev;prose.innerHTML=h;prose.querySelectorAll('.reveal').forEach(e=>e.classList.add('seen'));titleEl.textContent=md.split('\n')[0].replace(/^#\s*제[\d-]+화\.\s*/,'');meta.textContent='LIVE MANUSCRIPT · '+md.length.toLocaleString('ko-KR')+'자'}).catch(()=>{});
 syncPick();
 </script></body></html>
