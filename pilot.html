@@ -1436,7 +1436,7 @@ return items.map((q,k)=>{if(q.raw)return q.raw;const extra=q.last?' last':'';
  return '<p class="reveal'+(keys.includes(q.x)?' key':'')+extra+'">'+inline(q.x)+'</p>'}).join('')}
 async function load(n){const r=await fetch(new URL('manuscript/ep'+epFile(n)+'.md?v=8',document.baseURI).href,{cache:'no-store'});if(!r.ok)throw Error();return r.text()}
 async function openEp(n){
- ReadingEffects.restore();closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];state.armed=0;const d=D[n];state.ep=n;
+ ReadingEffects.restore();closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];state.armed=0;state.userScrolled=false;state.openedAt=performance.now();const d=D[n];state.ep=n;
  document.body.className=n===8?'ep8':'reading';document.body.dataset.ep=n;ReadingEffects.apply();
  document.documentElement.style.setProperty('--accent',d.a);document.documentElement.style.setProperty('--accent2',d.b);
  hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+epNo(n)+' / '+MAX;
@@ -1466,9 +1466,10 @@ function findAnchor(){const d=D[state.ep];state.anchorEl=d&&d.on?[...prose.child
 // 한 화에 팝업이 둘 이상일 때(more): 각 기준 문장이 읽히면 w밀리초 뒤 띄운다. 다른 팝업이 떠 있으면 기다린다.
 function anchorReached(r){return r.top<innerHeight*.62||(scrollY+innerHeight>=document.documentElement.scrollHeight-2&&r.bottom<=innerHeight-24)}
 function checkExtra(){if(!ReadingEffects.enabled())return;const n=state.ep;(state.extra||[]).forEach(x=>{if(!x.el||x.armed||state.fired.has(x.key))return;const r=x.el.getBoundingClientRect();if((x.el.classList.contains('seen')||r.bottom<0)&&anchorReached(r)){x.armed=true;const go=()=>{if(state.ep!==n||state.fired.has(x.key))return;if(document.querySelector('.setpiece.on')){state.timers.push(setTimeout(go,900));return}state.fired.add(x.key);showSp(x.m.sp,x.m.ms)};state.timers.push(setTimeout(go,x.m.w||1200))}})}
-function checkAnchor(p){if(!ReadingEffects.enabled())return;checkExtra();const n=state.ep,d=D[n];if(!d||!d.sp||state.fired.has(n))return;const el=state.anchorEl;
- if(!el){if(p!==undefined&&p>=d.at)fire();return}
- const r=el.getBoundingClientRect();if(state.armed===n){if(r.bottom<-innerHeight*.5)fire();return}if((el.classList.contains('seen')||r.bottom<0)&&anchorReached(r)){state.armed=n;state.timers.push(setTimeout(()=>{state.armed=0;if(state.ep===n)fire()},d.w||1600))}}
+// 2026-10-07 작가 지시: 팝업(세트피스)은 화 본문이 모두 끝나고 독자가 마지막 문단을 지나 스크롤한 뒤에만 뜬다. 페이지를 열자마자 뜨지 않게 사용자의 스크롤이 있어야 한다.
+function endReached(){const kids=[...prose.children].filter(e=>e.matches('p,.sys'));const last=kids[kids.length-1];if(!last||!state.userScrolled)return false;const r=last.getBoundingClientRect();const atBottom=scrollY+innerHeight>=document.documentElement.scrollHeight-2;return r.bottom<innerHeight*.35||(atBottom&&r.bottom<=innerHeight)}
+function checkAnchor(p){if(!ReadingEffects.enabled())return;const n=state.ep,d=D[n];if(!d||state.armed===n||!endReached())return;state.armed=n;
+ state.timers.push(setTimeout(()=>{if(state.ep!==n)return;if(d.sp)fire();(state.extra||[]).forEach(x=>{const go=()=>{if(state.ep!==n||state.fired.has(x.key))return;if(document.querySelector('.setpiece.on')||(d.sp&&!state.fired.has(n))){state.timers.push(setTimeout(go,900));return}state.fired.add(x.key);showSp(x.m.sp,x.m.ms)};state.timers.push(setTimeout(go,1200))})},700))}
 function epAtmosphere(p){document.body.classList.toggle("deep-read",p>.45);whisper.innerHTML="";whisper.classList.remove("on")}
 function fire(){const d=D[state.ep];if(!d||!d.sp||state.fired.has(state.ep))return;if(document.querySelector('.setpiece.on')){const n=state.ep;state.timers.push(setTimeout(()=>{if(state.ep===n)fire()},900));return}state.fired.add(state.ep);showSp(d.sp,d.ms)}
 const RUN={pathburn:()=>runPathburn(),overseen:()=>runOverseen(),leakclock:()=>runLeak(),channel:()=>runChannel(),nightload:()=>runNight(),restore:()=>runRestore(),records147:()=>runRecords(),rumorpatch:()=>runRumor(),node31b:()=>runNode(),familyday:()=>runFamily(),graybutton:()=>runGray(),fourcheck:()=>runFour(),namecount:()=>runName(),lastout:()=>runLastOut(),unlink41:()=>runUnlink(),samebox:()=>runSameBox(),tenticks2:()=>runTicks(),midnight100:()=>runMidnight(),views38:()=>runViews(),threesec:()=>runThreeSec(),erased2:()=>runErased(),ledger288:()=>runLedger(),row400:()=>runRow400(),samethree:()=>runSameThree(),recount43:()=>runRecount(),glasspick:()=>runGlass(),thirdplan:()=>runThird(),rejoin147:()=>runRejoin(),sevensec:()=>runSevenSec()};
@@ -1589,7 +1590,7 @@ function rejectConsent(){closeSp()}
 function acceptConsent(){consentCardEl.classList.add('danger');consentCardEl.querySelector('h3').textContent='서인은 승인했다.';consentCardEl.querySelector('p').textContent='동의가 완료되었습니다.';state.timers.push(setTimeout(()=>closeSp(),3200))}
 function toastMsg(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2200)}
 ORDER.forEach(i=>{let b=document.createElement('button');b.className='ep';b.textContent=epNo(i)+' · MEMORY';b.onclick=()=>openEp(i);navEl.appendChild(b)})
-addEventListener('scroll',()=>{const h=document.documentElement,p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);document.documentElement.style.setProperty('--p',Math.min(100,p*100));const d=D[state.ep];if(d){sync.textContent=Math.round(Math.min(1,p)*100)+'%';epAtmosphere(p);checkAnchor(p)}},{passive:true});
+addEventListener('scroll',()=>{if(state.ep&&performance.now()-(state.openedAt||0)>900&&scrollY>40)state.userScrolled=true;const h=document.documentElement,p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);document.documentElement.style.setProperty('--p',Math.min(100,p*100));const d=D[state.ep];if(d){sync.textContent=Math.round(Math.min(1,p)*100)+'%';epAtmosphere(p);checkAnchor(p)}},{passive:true});
 nextBtn.onclick=()=>openEp(2); // 표지 입장 없이 스크롤로 1화 끝에 와도 다음 화로 넘어가게
 const enterDream=$('enterDream');
 function activateStaticEp1(){return openEp(1)}
