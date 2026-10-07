@@ -846,6 +846,14 @@ body.ep8 .pick{border-color:#0002}body.ep8 .pick b{color:#0b6f8a}
 .nx-dangle{transform-origin:100% 0}
 #fourtitles.on .nx-dangle{animation:nxDangle .7s 4.8s ease-in-out both}
 @keyframes nxDangle{to{transform:rotate(-6deg)}}
+/* 모노의 목소리: 사람 대사(따옴표)·뉴럴 피드(.sys 상자)와 다른 결. 머리 안으로 '도착'하는 목소리라 흐림 없이 나타나고, 따옴표 대신 가는 선과 맥박 점 하나만 남긴다. */
+.prose p.mono{position:relative;font:400 15.5px/1.95 system-ui,-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;letter-spacing:.015em;color:color-mix(in srgb,var(--accent) 38%,#e6edf2);padding-left:16px;margin-left:2px;border-left:1px solid color-mix(in srgb,var(--accent) 40%,transparent)}
+.prose p.mono.reveal{filter:none;transform:none;transition:opacity .25s linear}
+.prose p.mono .mono-tag{position:absolute;left:-3px;top:.95em;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.75;pointer-events:none}
+.prose p.mono.seen .mono-tag{animation:monoPulse 1.6s ease-out 1}
+@keyframes monoPulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 70%,transparent)}100%{box-shadow:0 0 0 9px transparent}}
+body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
+@media (prefers-reduced-motion:reduce){.prose p.mono .mono-tag{animation:none!important}}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1426,6 +1434,7 @@ const real=items.filter(q=>!q.raw);if(real.length)real[real.length-1].last=true;
 return items.map((q,k)=>{if(q.raw)return q.raw;const extra=q.last?' last':'';
  if(q.t==='sys'){const nx=items[k+1];const unread=nx&&nx.t==='p'&&nx.x.includes('읽기 전에 눈을 감았다')?' unread':'';return '<div class="sys reveal'+unread+extra+'">'+q.html+'</div>'}
  const fx=FX[state.ep];if(fx){const di=fx.nest?fx.nest.indexOf(q.x):-1;if(di>=0)return '<p class="reveal nest" data-ms="680" style="--d:'+(di+1)+'">'+inline(q.x)+'</p>';if(fx.fan===q.x)return '<p class="reveal fx-fan" data-ms="900">'+inline(q.x)+'</p>';if(fx.mirror&&fx.mirror.includes(q.x))return '<p class="reveal fx-mirror" data-t="'+esc(q.x)+'">'+inline(q.x)+'</p>'}
+ if(/^〈[\s\S]*〉$/.test(q.x))return '<p class="reveal mono'+(keys.includes(q.x)?' key':'')+extra+'"><span class="mono-tag" aria-hidden="true"></span>'+inline(q.x.slice(1,-1))+'</p>';
  const ms=state.ep===4?0:beatMs(q.x);if(ms)return '<p class="reveal beat'+extra+'" data-ms="'+ms+'" style="--ms:'+ms+'ms">'+inline(q.x)+'</p>';
  return '<p class="reveal'+(keys.includes(q.x)?' key':'')+extra+'">'+inline(q.x)+'</p>'}).join('')}
 async function load(n){const r=await fetch(new URL('manuscript/ep'+epFile(n)+'.md?v=8',document.baseURI).href,{cache:'no-store'});if(!r.ok)throw Error();return r.text()}
