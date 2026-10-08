@@ -1247,6 +1247,18 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .ds-card span{display:block;font-size:9px;color:#7086a3}
 .ds-quote{margin-top:12px;padding:12px;border:1px solid #526e9455;background:#526e9414;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#f0f5fc}
 .ds-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#6b829e}
+/* 92화 powerofmemory: 기억하는 자의 권력과 화차의 묘비명 */
+#powerofmemory .veil{background:radial-gradient(circle at 50% 40%,#1c1310,#0d0705 75%)}
+.pm-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#140b08e0;font:11px/1.8 ui-monospace,monospace;color:#c9a69b}
+.pm-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.pm-title{font-size:12px;font-weight:700;color:#fae8e3}
+.pm-badge{font-size:10px;font-weight:700;color:#bd7968;padding:2px 8px;border:1px solid #bd796844;background:#bd796810}
+.pm-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.pm-item{padding:6px 8px;border:1px solid #9c4c3833;background:#9c4c3808;font-size:9px}
+.pm-item b{color:#fae1db;display:block;margin-bottom:1px}
+.pm-item span{color:#bd8373}
+.pm-quote{margin-top:12px;padding:12px;border:1px solid #9c4c3855;background:#9c4c3814;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#fff2ef}
+.pm-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#a87467}
 /* 91화 alreadytried: 그건 이미 해봤다와 실패의 독점 */
 #alreadytried .veil{background:radial-gradient(circle at 50% 40%,#1a1518,#0a080a 75%)}
 .at-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#140c10e0;font:11px/1.8 ui-monospace,monospace;color:#c9a9b5}
@@ -1638,6 +1650,19 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 
 
 
+
+<div class="setpiece" id="powerofmemory"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">THE WALL OF NAMES · EP092</div>
+<div class="pm-box">
+<div class="pm-header"><span class="pm-title">폐화차 12미터 묘비명과 절대 권력</span><span class="pm-badge">POWER OF MEMORY</span></div>
+<div class="pm-grid">
+  <div class="pm-item"><b>1999 남동공단</b><span>최진석(31세) 투신</span></div>
+  <div class="pm-item"><b>2004 새벽뜰</b><span>박미순(28세) 음독</span></div>
+  <div class="pm-item"><b>2008 시청조례</b><span>김대환(44세) 뇌출혈</span></div>
+  <div class="pm-item"><b>2012 서부14</b><span>이동진(6세) 폐렴사망</span></div>
+</div>
+<div class="pm-quote" data-t="1.8">“당신의 기억은 살아 있는 동지들을 가두는 거대한 납골당입니다.”</div>
+<div class="pm-sub" data-t="3.2">죽지 않기 위해 노예로 살라는 것은 혁명이 아니다. 실패의 장부는 덮여야 한다.</div>
+</div></div></div></div>
 
 <div class="setpiece" id="alreadytried"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">MONOPOLY OF FAILURE · EP091</div>
 <div class="at-box">
@@ -2215,7 +2240,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=91,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=92,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -2309,6 +2334,7 @@ const D={
 89:{a:'#754f8a',b:'#361f42',token:'0',sync:0,ghost:"WALL OF 2012",hook:"다음에 마주해야 할 것은, 그 실패들을 홀로 짊어진 채 15년 동안 침묵해 온 거대한 거인, 도윤과의 진정한 결산이었다.",sp:'wall2012',at:.8,on:"“자유는 성벽 안에서 자급될 수 없다. 조건을 아무리 완벽하게 깔아주어도, 성벽을 깨지 못하는 자는 결국 성벽 안의 죄수들을 먹여 살리는 간수가 될 뿐이다.”",w:900,ms:10000},
 90:{a:'#993d4c',b:'#4a141d',token:'0',sync:0,ghost:"MAP OF FAILURES",hook:"닫혀버린 네 개의 문 너머, 마침내 체제의 심장을 향해 직격하는 단 하나의 가장 끔찍하고 거대한 질문이 고개를 들기 시작하고 있었다.",sp:'mapoffailures',at:.8,on:"“당신은 단지…… 지난 30년간 이 땅의 모든 인간들이 시도했던 모든 실패를 홀로 짊어진 '거대한 실패의 데이터베이스'였을 뿐입니다.”",w:900,ms:10000},
 91:{a:'#9e4368',b:'#4a172c',token:'0',sync:0,ghost:"ALREADY TRIED",hook:"스승이 독점해 온 15년의 권력을 향해, 제자가 처음으로 정면에서 비수를 들이댄 순간이었다.",sp:'alreadytried',at:.8,on:"“당신은 '그건 이미 해봤다'고 말하며 문을 닫아버릴 뿐, '그렇다면 어디로 가야 하는가'라는 질문에는 15년 동안 단 한 번도 대답하지 않았습니다.”",w:900,ms:10000},
+92:{a:'#9c4c38',b:'#47190e',token:'0',sync:0,ghost:"POWER OF MEMORY",hook:"과거의 망령들에게 발목을 잡힌 채 영원한 패배주의의 늪에서 썩어갈 수는 없었다.",sp:'powerofmemory',at:.8,on:"“당신의 기억은 살아 있는 동지들을 지키는 방패가 아닙니다. 아무도 성벽을 넘지 못하게 가두어두는 거대한 납골당입니다.”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -2432,7 +2458,8 @@ const KEY={
 88:["“우리가 피땀 흘려 만든 법률이, 오르비스의 시장 점유율을 40%에서 85%로 단숨에 끌어올려 주는 공인 보증서가 되어버린 거요!”","“당신들이 법을 만들면, 자본은 그 법을 집행하는 외주 업체를 만들어 법 자체를 사버릴 겁니다. 체제의 국가에 복지를 요구하는 것은, 늑대에게 어린 양을 관리할 사료 값을 대달라고 청원하는 짓입니다.”","“내가 만든 그 조례안은…… 체제가 자신을 합법화하기 위해 쓴 가장 완벽한 대본이었소.”","‘제도는 체제를 길들이지 못한다. 체제가 제도를 먹어 치운다.’"],
 89:["‘- 총괄 설계자: 강도윤.’","“그놈들은 그냥 레미콘 트럭 수십 대를 몰고 와서 14구역으로 들어오는 길목에 저 콘크리트 벽을 쳐버렸지.”","“자유는 성벽 안에서 자급될 수 없다. 조건을 아무리 완벽하게 깔아주어도, 성벽을 깨지 못하는 자는 결국 성벽 안의 죄수들을 먹여 살리는 간수가 될 뿐이다.”","도윤은 선대의 모든 실패를 자신의 뼈와 살로 받아내며, 네 개의 무덤을 차례로 파헤치고 살아남은 거대한 '실패의 화석'이었던 것이다."],
 90:["“선대의 실패는 체제에게 가장 완벽한 백신이었던 거야. 체제는 매번 항체를 만들어냈고, 우리는 이미 면역이 형성된 괴물 앞에서 똑같은 칼을 휘두르고 있었던 셈이지.”","“당신은 단지…… 지난 30년간 이 땅의 모든 인간들이 시도했던 모든 실패를 홀로 짊어진 '거대한 실패의 데이터베이스'였을 뿐입니다.”","“네 개의 길이 다 막혔다면, 남은 문은 단 하나뿐입니다. 저는 멈추지 않습니다. 당신이 서 있는 그 절벽의 끝에서, 다음 걸음을 내딛겠습니다.”","닫혀버린 네 개의 문 너머, 마침내 체제의 심장을 향해 직격하는 단 하나의 가장 끔찍하고 거대한 질문이 고개를 들기 시작하고 있었다."],
-91:["“셋 다 치워라. 그건 이미 해봤다.”","그 처절한 실패의 기억을 홀로 쥐고 있다는 사실 그 자체가, 혁명군 전체를 지배하는 가장 강력하고 절대적인 권력이 되어 있었던 것이다.","“당신은 '그건 이미 해봤다'고 말하며 문을 닫아버릴 뿐, '그렇다면 어디로 가야 하는가'라는 질문에는 15년 동안 단 한 번도 대답하지 않았습니다.”","“당신은 정말로 이 싸움에서 이길 생각이 있습니까? 아니면…… 동지들이 죽지 않도록 관리하는, 가장 안전하고 거대한 장례식장의 상주로 남고 싶은 겁니까?”"]
+91:["“셋 다 치워라. 그건 이미 해봤다.”","그 처절한 실패의 기억을 홀로 쥐고 있다는 사실 그 자체가, 혁명군 전체를 지배하는 가장 강력하고 절대적인 권력이 되어 있었던 것이다.","“당신은 '그건 이미 해봤다'고 말하며 문을 닫아버릴 뿐, '그렇다면 어디로 가야 하는가'라는 질문에는 15년 동안 단 한 번도 대답하지 않았습니다.”","“당신은 정말로 이 싸움에서 이길 생각이 있습니까? 아니면…… 동지들이 죽지 않도록 관리하는, 가장 안전하고 거대한 장례식장의 상주로 남고 싶은 겁니까?”"],
+92:["“내가 기억하지 않으면, 저자들은 또 똑같이 죽으러 간다.”","“이 벽면의 기록들은…… 동지들을 향한 추모가 아닙니다. 살아남은 자들을 영원히 무릎 꿇려 앉히는 '절대적인 권력의 장부'입니다.”","“두려움 때문에 아무것도 하지 않는 것은 평화가 아닙니다. 그것은 단지…… 잘 관리된 가축 우리 안에서 가축들이 도살당할 순서를 기다리는 것과 같습니다.”","실패의 장부는 이제 덮여야 했다. 그리고 그 피 묻은 장부가 닫힌 자리에, 선대들이 감히 시도하지 못했던 가장 위험하고 결정적인 다음 질문이 올라서야 했다."]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
