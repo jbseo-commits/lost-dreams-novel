@@ -1,5 +1,7 @@
 # 변경 기록
 
+- 2026-10-09 · Antigravity · 원고: 제76화(«돌아온 밤» / «광고꿈을 줄였는데 사람들이 다시 켠다» 아크 시작) 집필 및 pilot.html 웹 연출(quietreturn 및 65~75 세트피스 DOM 전수 장착) 구현, §4-2 구조·인과·단서·반대 검수 통과(평균 9.68 / 치명·중대 결함 0건). 지게차 기사 강철진의 절규("자연스러운 잠이 축복이 아니라 고문이더라고요")를 통해 '맨정신으로 건널 수 없는 밤의 심연에 놓인 저렴한 마취제의 체제' 직시.
+
 - 2026-10-09 · Antigravity · 원고: 제71~75화(«질문할 수 있는 사람» / «TOKEN 개혁의 성공과 새로운 불평등» 아크) 집필 및 pilot.html 웹 연출(zerotoken, askagain, waitprice, questionassist, whattoask) 동시 구현, §4-2 구조·인과·단서·반대 검수 전원 통과(평균 9.6+ / 치명·중대 결함 0건). 제75화 «무엇을 물어야 하는지»로 0 TOKEN 이후 남는 4대 불평등 층위(화폐 장벽 ➔ 문해력 ➔ 시간 빈곤 ➔ 심리적 안전망) 및 31화 등급표(1.2M~9.4M) 완전 회수.
 
 - 2026-10-09 · Antigravity · 원고: 제61~70화(«물리력 없는 강제» 및 «혁명 실험실» 아크) 집필 및 pilot.html 웹 연출(coercionzero, fouryears, fiveeleven, sixoptions, opendoor, thirtydays, betters, notbetters, whosesuccess, turnonagain) 동시 구현, §4-2 구조·인과·단서·반대 검수 전원 통과(평균 9.5+ / 치명·중대 결함 0건). 제70화 «다시 켜는 날»로 모자이크 자율 선택 및 재선택권 테마 확정.
