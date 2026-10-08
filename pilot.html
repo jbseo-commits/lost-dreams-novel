@@ -1092,6 +1092,17 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .om-card span{color:#64b0ff;font-size:9px}
 .om-quote{margin-top:12px;padding:12px;border:1px solid #4a90e255;background:#4a90e214;text-align:center;font:700 15px/1.6 "Noto Serif KR",serif;color:#f0f7ff}
 .om-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#6797c2}
+/* 72화 samebutton: 같은 버튼과 질문의 격차 */
+#samebutton .veil{background:radial-gradient(circle at 50% 40%,#241412,#090302 75%)}
+.sb-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#140806e0;font:11px/1.8 ui-monospace,monospace;color:#d99b9b}
+.sb-compare{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.sb-card{padding:8px;border:1px solid #e26d5c33;background:#e26d5c08}
+.sb-card b{color:#fbedeb;display:block;margin-bottom:2px}
+.sb-card p{font-size:9px;color:#a87a7a;margin:4px 0}
+.sb-card .res-rej{color:#ff6b6b;font-weight:700;font-size:10px}
+.sb-card .res-app{color:#6bffb8;font-weight:700;font-size:10px}
+.sb-quote{margin-top:12px;padding:12px;border:1px solid #e26d5c55;background:#e26d5c14;text-align:center;font:700 15px/1.6 "Noto Serif KR",serif;color:#fdf2f0}
+.sb-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#a86767}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1655,7 +1666,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=71,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=72,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -1729,6 +1740,7 @@ const D={
 69:{a:'#b08968',b:'#5e432f',token:'∞',sync:0,ghost:"WHOSE SUCCESS?",hook:"누구의 성공도 아닌, 그러나 모두의 성공이기도 한 숫자들.",sp:'whosesuccess',at:.8,on:"“자유로워진 사람이 제 손으로 다시 광고꿈을 켜면, 그건 성공이냐, 실패냐?”",w:900,ms:10000},
 70:{a:'#e0a96d',b:'#7c5328',token:'∞',sync:0,ghost:"MOSAIC CHOICE",hook:"무엇을 고르는가보다 다시 고를 수 있는가가 더 중요할지도 모른다.",sp:'turnonagain',at:.8,on:"“내 건데 내가 섞지, 그럼 남이 시키는 대로 통째로 사니?”",w:900,ms:10000},
 71:{a:'#4a90e2',b:'#1b4f8a',token:'0',sync:0,ghost:"RE-CHECK: 0 TOKEN",hook:"이것은 진짜 승리였다.",sp:'oncemore',at:.8,on:"“이제 이건 안 아껴도 되는 거네.”",w:900,ms:10000},
+72:{a:'#e26d5c',b:'#722b20',token:'0',sync:0,ghost:"SAME BUTTON",hook:"세상은 이제 돈보다 더 차갑고 견고한 '질문하는 계급'의 거대한 벽을 마주하고 있었다.",sp:'samebutton',at:.8,on:"“우리는 같은 권리를 준 게 아니라, 같은 버튼을 준 겁니다.”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1832,7 +1844,8 @@ const KEY={
 68:["“돈 안 줘도 볼 건데요? 좋아서요.”","“편하게 살려고 기계 쓰는 거지, 자유롭자고 사서 고생하는 놈이 세상에 어디 있어?”","어떤 논리로도, 어떤 이념으로도 그 세 글자를 반박할 수 없었다.","서인의 가슴속에서는 첫날의 환호가 싸늘하게 식어가고 있었다."],
 69:["“우리가 지난 한 달 동안 한 이 실험은, 총체적으로 보았을 때 성공한 겁니까, 아니면 실패한 겁니까?”","“뭐가 좋아져야 성공인데?”","“자유로워진 사람이 제 손으로 다시 광고꿈을 켜면, 그건 성공이냐, 실패냐?”","진짜 사람들이 자기 인생을 어떻게 쪼개서 가져가는지."],
 70:["“내 건데 내가 섞지, 그럼 남이 시키는 대로 통째로 사니?”","“사람들은 당신들의 교리집을 완성해 주려고 태어난 게 아니니까요.”","“이거 나중에 또 바꿔도 되지?”","서인은 그날 처음으로, 무엇을 고르는가보다 다시 고를 수 있는가가 더 중요할지도 모른다고 생각했다."],
-71:["“이거…… 한 번 더 물어봐도 진짜 돈 안 들어?”","“이제 이건 안 아껴도 되는 거네.”","“응. 이제 이건 안 아껴도 돼. 아프면 한 번 더 물어보고, 이상하면 다시 봐달라고 해도 돼.”","이것은 진짜 승리였다."]
+71:["“이거…… 한 번 더 물어봐도 진짜 돈 안 들어?”","“이제 이건 안 아껴도 되는 거네.”","“응. 이제 이건 안 아껴도 돼. 아프면 한 번 더 물어보고, 이상하면 다시 봐달라고 해도 돼.”","이것은 진짜 승리였다."],
+72:["“우리는 같은 권리를 준 게 아닙니다. 같은 버튼을 준 겁니다.”","“나는…… 뭘 더 물었어야 했어요?”","돈을 빼앗는 것보다 말을 빼앗는 게 훨씬 더 오래된 지배 방식입니다.","세상은 이제 돈보다 더 차갑고 견고한 '질문하는 계급'의 거대한 벽을 마주하고 있었다."]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
