@@ -1221,6 +1221,20 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .nr-wcard .rage{color:#ff5e78;font-weight:700}
 .nr-quote{margin-top:12px;padding:12px;border:1px solid #4a8cd455;background:#4a8cd414;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#f0f7fe}
 .nr-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#6b92ba}
+/* 83화 endofmoderation: 온건의 종말과 거버넌스 타협의 거부 */
+#endofmoderation .veil{background:radial-gradient(circle at 50% 40%,#261510,#0a0503 75%)}
+.em-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#140a06e0;font:11px/1.8 ui-monospace,monospace;color:#d9a896}
+.em-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.em-title{font-size:12px;font-weight:700;color:#faebe6}
+.em-badge{font-size:10px;font-weight:700;color:#e67e5c;padding:2px 8px;border:1px solid #e67e5c44;background:#e67e5c10}
+.em-clauses{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.em-clause{padding:8px;border:1px solid #c9654433;background:#c9654408}
+.em-clause b{color:#faece8;display:block;margin-bottom:2px}
+.em-clause span{display:block;font-size:9px;color:#b87963}
+.em-clause .fund{color:#6bffb8;font-weight:700}
+.em-clause .leash{color:#ff6b6b;font-weight:700}
+.em-quote{margin-top:12px;padding:12px;border:1px solid #c9654455;background:#c9654414;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#fdf5f2}
+.em-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#a86752}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1525,6 +1539,18 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 
 
 
+
+
+<div class="setpiece" id="endofmoderation"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">COMPROMISE GOVERNANCE REFUSAL · EP083</div>
+<div class="em-box">
+<div class="em-header"><span class="em-title">상생 수면 거버넌스 협약서</span><span class="em-badge">120억 TOKEN / 상임이사 3석</span></div>
+<div class="em-clauses">
+  <div class="em-clause"><b>민석의 현실론</b><span>사면 복권·제도권 안착</span><div class="fund">“현실적 최대치 승리”</div></div>
+  <div class="em-clause"><b>서인의 직시</b><span>벨벳 목줄 덧대기</span><div class="leash">“체제의 공인 간수 계약”</div></div>
+</div>
+<div class="em-quote" data-t="1.8">“체제가 던져주는 사료를 받아먹으며 동지들의 목에 목줄을 채우진 않는다.”</div>
+<div class="em-sub" data-t="3.2">서명용 만년필은 바닥에 부러졌다. 온건한 타협의 문은 영원히 닫혔다.</div>
+</div></div></div></div>
 
 <div class="setpiece" id="neuralreset"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">NEURAL INTERVENTION AUDIT · TRP-7</div>
 <div class="nr-box">
@@ -1986,7 +2012,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=82,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=83,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -2071,6 +2097,7 @@ const D={
 80:{a:'#2ea86e',b:'#135434',token:'0',sync:0,ghost:"EMPIRE OF FATIGUE",hook:"서인이 평생을 바쳐 쌓아 올렸던 첫 번째 신념이, 이 거대한 밤의 침묵 속으로 완전히 가라앉고 있었다.",sp:'empireoffatigue',at:.8,on:"“체제가 없으면 하루도 버틸 수 없는 인간의 삶을 부수지 않고, 체제만 들어내는 방법은 없어.”",w:900,ms:10000},
 81:{a:'#8a8a99',b:'#3d3d47',token:'0',sync:0,ghost:"SHAKEN PILLAR",hook:"부서진 기둥의 파편 사이로, 칠흑 같은 암흑과 냉혹한 유혹의 바람이 휘몰아쳐 들어오고 있었다.",sp:'shakenpillar',at:.8,on:"“우리한테 필요한 건 자유가 아니라 망각이에요. 왜 자꾸 날 깨우려 합니까?”",w:900,ms:10000},
 82:{a:'#4a8cd4',b:'#1b4473',token:'0',sync:0,ghost:"NEURAL RESET",hook:"서인은 자신이 그토록 증오했던 거대한 괴물의 형상을 조금씩 닮아가는 스스로의 그림자를 바라보고 있었다.",sp:'neuralreset',at:.8,on:"“결정하세요. 사람을 고쳐서라도 체제를 부술 것인지, 영원히 썩게 둘 것인지.”",w:900,ms:10000},
+83:{a:'#c96544',b:'#6e2e1a',token:'0',sync:0,ghost:"END OF MODERATION",hook:"온건한 타협의 문은 서인 자신의 손으로 영원히 불태워버렸다.",sp:'endofmoderation',at:.8,on:"“체제가 던져주는 사료를 받아먹으며 동지들의 목에 벨벳 목줄을 채우진 않는다.”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -2185,7 +2212,8 @@ const KEY={
 79:["“영웅은 몇 명 없지만, 피곤한 사람은 세상에 널렸어. 피곤한 사람을 이기려고 들지 마라.”","“우리가 준 자유가…… 그들에게는 단지 '혼자 감당해야 하는 불안'이었을 뿐이라면.”","“대체 누구를 위해 해방을 외쳐온 겁니까?”","혁명이 인간의 연약함을 품지 못하고 단죄하려 들 때, 혁명은 스스로 내부에서부터 무너지는 것이었다."],
 80:["“이 도시는 인간을 착취하기 위해 세워진 단순한 감옥이 아니었습니다. 인간의 피로를 먹고 자라는 거대한 유기체였습니다.”","“체제가 없으면 단 하루도 버텨낼 수 없는 저 나약한 인간들의 삶을 부수지 않고, 체제만 안전하게 들어내는 방법은 이 세상에 없어.”","“조건을 바꿔주면 사람이 스스로 자유로워질 거라는 환상…… 그게 통하지 않는다는 걸 이제 네 두 눈으로 똑똑히 봤잖아.”","서인이 평생을 바쳐 쌓아 올렸던 첫 번째 신념이, 이 거대한 밤의 침묵 속으로 완전히 가라앉고 있었다."],
 81:["‘조건을 바꿔라. 사람을 바꾸려 하지 말고.’","“우리한테 필요한 건 거창한 자유나 존엄이 아니에요. 단 몇 시간이라도 현실을 완전히 잊게 해주는 망각이에요.”","“인간은 버그를 고치면 정답으로 수렴하는 기계가 아니었다.”","서인의 가슴 깊은 곳에서, 평생 동안 스스로를 지탱해 왔던 가장 단단한 기둥이 거대한 굉음을 내며 두 동강 나고 있었다."],
-82:["“결정하세요. 사람의 뇌를 손대서라도 체제를 끝장낼 것인지, 영원한 마취 속에서 썩어가는 것을 지켜볼 것인지.”","“인간의 뇌신경을 뜯어고쳐서 거리로 내모는 게 어떻게 해방이야? 그건 또 다른 세뇌일 뿐이야!”","“체제를 설계하는 오만함과 인간을 개조하려는 오만함. 그 두 개는 놀라울 정도로 완벽하게 닮아 있었다.”","서인은 자신이 그토록 증오했던 괴물의 형상을 닮아가는 스스로의 그림자를 바라보며 전율했다."]
+82:["“결정하세요. 사람의 뇌를 손대서라도 체제를 끝장낼 것인지, 영원한 마취 속에서 썩어가는 것을 지켜볼 것인지.”","“인간의 뇌신경을 뜯어고쳐서 거리로 내모는 게 어떻게 해방이야? 그건 또 다른 세뇌일 뿐이야!”","“체제를 설계하는 오만함과 인간을 개조하려는 오만함. 그 두 개는 놀라울 정도로 완벽하게 닮아 있었다.”","서인은 자신이 그토록 증오했던 괴물의 형상을 닮아가는 스스로의 그림자를 바라보며 전율했다."],
+83:["“이건 노예의 쇠사슬을 끊어주는 계약서가 아니에요. 쇠사슬에 벨벳을 덧대어주고 수수료를 챙기는 '공인 간수' 계약서입니다!”","“혁명은 시가 아니야! 100퍼센트 순결한 승리 따윈 이 세상에 없어!”","“체제가 던져주는 사료를 받아먹으며 동지들의 목에 벨벳 목줄을 채우는 짓은, 당신들끼리 하십시오.”","서인의 가슴속에 남아 있던 온건 개혁에 대한 마지막 미련이, 완전히 산산조각 났다."]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
