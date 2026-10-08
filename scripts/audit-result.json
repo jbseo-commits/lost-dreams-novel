@@ -1,0 +1,763 @@
+{
+  "totalFiles": 119,
+  "lengthStats": [
+    {
+      "file": "ep001.md",
+      "total": 6084,
+      "nonWs": 4037
+    },
+    {
+      "file": "ep002.md",
+      "total": 6048,
+      "nonWs": 3951
+    },
+    {
+      "file": "ep002-1.md",
+      "total": 4810,
+      "nonWs": 3053
+    },
+    {
+      "file": "ep003.md",
+      "total": 4407,
+      "nonWs": 2807
+    },
+    {
+      "file": "ep003-1.md",
+      "total": 3281,
+      "nonWs": 2058
+    },
+    {
+      "file": "ep004.md",
+      "total": 7547,
+      "nonWs": 4886
+    },
+    {
+      "file": "ep004-1.md",
+      "total": 4509,
+      "nonWs": 3058
+    },
+    {
+      "file": "ep005.md",
+      "total": 9904,
+      "nonWs": 6389
+    },
+    {
+      "file": "ep006.md",
+      "total": 8272,
+      "nonWs": 5330
+    },
+    {
+      "file": "ep006-1.md",
+      "total": 2105,
+      "nonWs": 1347
+    },
+    {
+      "file": "ep006-2.md",
+      "total": 4006,
+      "nonWs": 2523
+    },
+    {
+      "file": "ep007.md",
+      "total": 6695,
+      "nonWs": 4292
+    },
+    {
+      "file": "ep007-2.md",
+      "total": 2299,
+      "nonWs": 1460
+    },
+    {
+      "file": "ep008.md",
+      "total": 8102,
+      "nonWs": 5400
+    },
+    {
+      "file": "ep009.md",
+      "total": 5312,
+      "nonWs": 3338
+    },
+    {
+      "file": "ep009-1.md",
+      "total": 3883,
+      "nonWs": 2390
+    },
+    {
+      "file": "ep010.md",
+      "total": 6363,
+      "nonWs": 4030
+    },
+    {
+      "file": "ep011.md",
+      "total": 5422,
+      "nonWs": 3508
+    },
+    {
+      "file": "ep011-1.md",
+      "total": 2275,
+      "nonWs": 1446
+    },
+    {
+      "file": "ep012.md",
+      "total": 5715,
+      "nonWs": 3707
+    },
+    {
+      "file": "ep013.md",
+      "total": 5259,
+      "nonWs": 3330
+    },
+    {
+      "file": "ep013-1.md",
+      "total": 2569,
+      "nonWs": 1651
+    },
+    {
+      "file": "ep014.md",
+      "total": 6698,
+      "nonWs": 4230
+    },
+    {
+      "file": "ep015.md",
+      "total": 5879,
+      "nonWs": 3754
+    },
+    {
+      "file": "ep015-1.md",
+      "total": 1757,
+      "nonWs": 1109
+    },
+    {
+      "file": "ep016.md",
+      "total": 5898,
+      "nonWs": 3824
+    },
+    {
+      "file": "ep017.md",
+      "total": 5843,
+      "nonWs": 3764
+    },
+    {
+      "file": "ep018.md",
+      "total": 5384,
+      "nonWs": 3518
+    },
+    {
+      "file": "ep019.md",
+      "total": 6774,
+      "nonWs": 4339
+    },
+    {
+      "file": "ep020.md",
+      "total": 6915,
+      "nonWs": 4391
+    },
+    {
+      "file": "ep020-1.md",
+      "total": 1830,
+      "nonWs": 1172
+    },
+    {
+      "file": "ep021.md",
+      "total": 5482,
+      "nonWs": 3535
+    },
+    {
+      "file": "ep021-1.md",
+      "total": 3801,
+      "nonWs": 2569
+    },
+    {
+      "file": "ep022.md",
+      "total": 5940,
+      "nonWs": 3852
+    },
+    {
+      "file": "ep022-1.md",
+      "total": 4018,
+      "nonWs": 2747
+    },
+    {
+      "file": "ep023.md",
+      "total": 5511,
+      "nonWs": 3614
+    },
+    {
+      "file": "ep024.md",
+      "total": 5718,
+      "nonWs": 3736
+    },
+    {
+      "file": "ep024-1.md",
+      "total": 5819,
+      "nonWs": 3974
+    },
+    {
+      "file": "ep025.md",
+      "total": 5632,
+      "nonWs": 3632
+    },
+    {
+      "file": "ep025-1.md",
+      "total": 5637,
+      "nonWs": 3627
+    },
+    {
+      "file": "ep026.md",
+      "total": 6767,
+      "nonWs": 4439
+    },
+    {
+      "file": "ep027.md",
+      "total": 5833,
+      "nonWs": 3828
+    },
+    {
+      "file": "ep028.md",
+      "total": 5531,
+      "nonWs": 3645
+    },
+    {
+      "file": "ep029.md",
+      "total": 5826,
+      "nonWs": 3776
+    },
+    {
+      "file": "ep030.md",
+      "total": 5858,
+      "nonWs": 3861
+    },
+    {
+      "file": "ep030-1.md",
+      "total": 3827,
+      "nonWs": 2603
+    },
+    {
+      "file": "ep030-2.md",
+      "total": 4760,
+      "nonWs": 3086
+    },
+    {
+      "file": "ep031.md",
+      "total": 5285,
+      "nonWs": 3448
+    },
+    {
+      "file": "ep032.md",
+      "total": 5228,
+      "nonWs": 3397
+    },
+    {
+      "file": "ep033.md",
+      "total": 5444,
+      "nonWs": 3579
+    },
+    {
+      "file": "ep034.md",
+      "total": 5798,
+      "nonWs": 3849
+    },
+    {
+      "file": "ep035.md",
+      "total": 6117,
+      "nonWs": 3977
+    },
+    {
+      "file": "ep036.md",
+      "total": 6370,
+      "nonWs": 4212
+    },
+    {
+      "file": "ep037.md",
+      "total": 5810,
+      "nonWs": 3832
+    },
+    {
+      "file": "ep038.md",
+      "total": 7083,
+      "nonWs": 4536
+    },
+    {
+      "file": "ep039.md",
+      "total": 5966,
+      "nonWs": 3819
+    },
+    {
+      "file": "ep040.md",
+      "total": 7186,
+      "nonWs": 4660
+    },
+    {
+      "file": "ep041.md",
+      "total": 6338,
+      "nonWs": 4259
+    },
+    {
+      "file": "ep042.md",
+      "total": 6134,
+      "nonWs": 4217
+    },
+    {
+      "file": "ep043.md",
+      "total": 5480,
+      "nonWs": 3679
+    },
+    {
+      "file": "ep044.md",
+      "total": 6003,
+      "nonWs": 4075
+    },
+    {
+      "file": "ep045.md",
+      "total": 5670,
+      "nonWs": 3856
+    },
+    {
+      "file": "ep046.md",
+      "total": 5903,
+      "nonWs": 3948
+    },
+    {
+      "file": "ep047.md",
+      "total": 6023,
+      "nonWs": 4081
+    },
+    {
+      "file": "ep048.md",
+      "total": 5659,
+      "nonWs": 3825
+    },
+    {
+      "file": "ep049.md",
+      "total": 5192,
+      "nonWs": 3506
+    },
+    {
+      "file": "ep049-1.md",
+      "total": 3290,
+      "nonWs": 2171
+    },
+    {
+      "file": "ep050.md",
+      "total": 5539,
+      "nonWs": 3747
+    },
+    {
+      "file": "ep050-1.md",
+      "total": 4104,
+      "nonWs": 2820
+    },
+    {
+      "file": "ep051.md",
+      "total": 5509,
+      "nonWs": 3719
+    },
+    {
+      "file": "ep052.md",
+      "total": 5345,
+      "nonWs": 3641
+    },
+    {
+      "file": "ep053.md",
+      "total": 5198,
+      "nonWs": 3509
+    },
+    {
+      "file": "ep054.md",
+      "total": 5274,
+      "nonWs": 3555
+    },
+    {
+      "file": "ep055.md",
+      "total": 5140,
+      "nonWs": 3564
+    },
+    {
+      "file": "ep056.md",
+      "total": 5843,
+      "nonWs": 4164
+    },
+    {
+      "file": "ep057.md",
+      "total": 5464,
+      "nonWs": 4067
+    },
+    {
+      "file": "ep058.md",
+      "total": 6190,
+      "nonWs": 4639
+    },
+    {
+      "file": "ep059.md",
+      "total": 5219,
+      "nonWs": 3880
+    },
+    {
+      "file": "ep060.md",
+      "total": 5470,
+      "nonWs": 4037
+    },
+    {
+      "file": "ep061.md",
+      "total": 5140,
+      "nonWs": 3875
+    },
+    {
+      "file": "ep062.md",
+      "total": 4946,
+      "nonWs": 3699
+    },
+    {
+      "file": "ep063.md",
+      "total": 4931,
+      "nonWs": 3653
+    },
+    {
+      "file": "ep064.md",
+      "total": 4839,
+      "nonWs": 3623
+    },
+    {
+      "file": "ep065.md",
+      "total": 5530,
+      "nonWs": 4112
+    },
+    {
+      "file": "ep066.md",
+      "total": 5327,
+      "nonWs": 3960
+    },
+    {
+      "file": "ep067.md",
+      "total": 4995,
+      "nonWs": 3738
+    },
+    {
+      "file": "ep068.md",
+      "total": 4815,
+      "nonWs": 3590
+    },
+    {
+      "file": "ep069.md",
+      "total": 4914,
+      "nonWs": 3670
+    },
+    {
+      "file": "ep070.md",
+      "total": 4937,
+      "nonWs": 3651
+    },
+    {
+      "file": "ep071.md",
+      "total": 4864,
+      "nonWs": 3586
+    },
+    {
+      "file": "ep072.md",
+      "total": 4785,
+      "nonWs": 3549
+    },
+    {
+      "file": "ep073.md",
+      "total": 4776,
+      "nonWs": 3520
+    },
+    {
+      "file": "ep074.md",
+      "total": 4762,
+      "nonWs": 3535
+    },
+    {
+      "file": "ep075.md",
+      "total": 4769,
+      "nonWs": 3524
+    },
+    {
+      "file": "ep076.md",
+      "total": 5310,
+      "nonWs": 3947
+    },
+    {
+      "file": "ep077.md",
+      "total": 4886,
+      "nonWs": 3639
+    },
+    {
+      "file": "ep078.md",
+      "total": 4772,
+      "nonWs": 3564
+    },
+    {
+      "file": "ep079.md",
+      "total": 5167,
+      "nonWs": 3870
+    },
+    {
+      "file": "ep080.md",
+      "total": 5261,
+      "nonWs": 3933
+    },
+    {
+      "file": "ep081.md",
+      "total": 5195,
+      "nonWs": 3854
+    },
+    {
+      "file": "ep082.md",
+      "total": 5012,
+      "nonWs": 3753
+    },
+    {
+      "file": "ep083.md",
+      "total": 5166,
+      "nonWs": 3852
+    },
+    {
+      "file": "ep084.md",
+      "total": 4979,
+      "nonWs": 3689
+    },
+    {
+      "file": "ep085.md",
+      "total": 4810,
+      "nonWs": 3532
+    },
+    {
+      "file": "ep086.md",
+      "total": 4934,
+      "nonWs": 3660
+    },
+    {
+      "file": "ep087.md",
+      "total": 5007,
+      "nonWs": 3707
+    },
+    {
+      "file": "ep088.md",
+      "total": 5156,
+      "nonWs": 3853
+    },
+    {
+      "file": "ep089.md",
+      "total": 4948,
+      "nonWs": 3671
+    },
+    {
+      "file": "ep090.md",
+      "total": 4947,
+      "nonWs": 3657
+    },
+    {
+      "file": "ep091.md",
+      "total": 5011,
+      "nonWs": 3704
+    },
+    {
+      "file": "ep092.md",
+      "total": 4977,
+      "nonWs": 3666
+    },
+    {
+      "file": "ep093.md",
+      "total": 4958,
+      "nonWs": 3674
+    },
+    {
+      "file": "ep094.md",
+      "total": 4862,
+      "nonWs": 3600
+    },
+    {
+      "file": "ep095.md",
+      "total": 5020,
+      "nonWs": 3707
+    },
+    {
+      "file": "ep096.md",
+      "total": 6803,
+      "nonWs": 5052
+    },
+    {
+      "file": "ep097.md",
+      "total": 5643,
+      "nonWs": 4191
+    },
+    {
+      "file": "ep098.md",
+      "total": 5290,
+      "nonWs": 3904
+    },
+    {
+      "file": "ep099.md",
+      "total": 4999,
+      "nonWs": 3735
+    },
+    {
+      "file": "ep100.md",
+      "total": 5106,
+      "nonWs": 3814
+    }
+  ],
+  "under3500": [
+    {
+      "file": "ep002-1.md",
+      "nonWs": 3053
+    },
+    {
+      "file": "ep003.md",
+      "nonWs": 2807
+    },
+    {
+      "file": "ep003-1.md",
+      "nonWs": 2058
+    },
+    {
+      "file": "ep004-1.md",
+      "nonWs": 3058
+    },
+    {
+      "file": "ep006-1.md",
+      "nonWs": 1347
+    },
+    {
+      "file": "ep006-2.md",
+      "nonWs": 2523
+    },
+    {
+      "file": "ep007-2.md",
+      "nonWs": 1460
+    },
+    {
+      "file": "ep009.md",
+      "nonWs": 3338
+    },
+    {
+      "file": "ep009-1.md",
+      "nonWs": 2390
+    },
+    {
+      "file": "ep011-1.md",
+      "nonWs": 1446
+    },
+    {
+      "file": "ep013.md",
+      "nonWs": 3330
+    },
+    {
+      "file": "ep013-1.md",
+      "nonWs": 1651
+    },
+    {
+      "file": "ep015-1.md",
+      "nonWs": 1109
+    },
+    {
+      "file": "ep020-1.md",
+      "nonWs": 1172
+    },
+    {
+      "file": "ep021-1.md",
+      "nonWs": 2569
+    },
+    {
+      "file": "ep022-1.md",
+      "nonWs": 2747
+    },
+    {
+      "file": "ep030-1.md",
+      "nonWs": 2603
+    },
+    {
+      "file": "ep030-2.md",
+      "nonWs": 3086
+    },
+    {
+      "file": "ep031.md",
+      "nonWs": 3448
+    },
+    {
+      "file": "ep032.md",
+      "nonWs": 3397
+    },
+    {
+      "file": "ep049-1.md",
+      "nonWs": 2171
+    },
+    {
+      "file": "ep050-1.md",
+      "nonWs": 2820
+    }
+  ],
+  "tabooViolations": {
+    "doyunHyung": [],
+    "messageWriteDelete": [],
+    "signatureHesitate": [],
+    "refrigeratorMotor": [
+      {
+        "file": "ep051.md",
+        "snippet": "큰 소리는 없었다. 할머니의 몸이 움찔하지도 않았다. 냉장고 모터가 한 번 돌았다가 멈췄다.\r \r 담당자가 말했다.\r \r “끝났습니다.”\r \r "
+      },
+      {
+        "file": "ep054.md",
+        "snippet": "다.\r \r “내가 하겠다고.”\r \r 거실이 조용했다. 냉장고 모터가 한 번 돌았다 멈췄다. 어머니는 할머니 뒤에 서 있었다. 손이 할머니 어깨 "
+      },
+      {
+        "file": "ep055.md",
+        "snippet": "OL: RELEASED.**\r \r 큰 소리는 없었다. 냉장고 모터가 한 번 돌았다가 멈췄다.\r \r 담당자가 단말을 덮었다. 승인자 4가 먼저 방"
+      }
+    ],
+    "couldNotKnowEnding": [
+      {
+        "file": "ep054.md",
+        "lastLine": "전화가 끊겼다.\r 서인은 의자에서 일어나지 않았다. 주머니에 손을 넣었다. 패가 손가락에 걸렸다. 내일 오후 노인정 매트는 김 영감이 내릴 것이었다. 열 시 상담에는 요청자 자리가 하나 있을 것이었다. 그 자리에서 먼저 말할 사람은 서인이 아니었다.\r 빵집 셔터가 반쯤 내려와 있었다. 9층 창 하나에 아직 불이 켜져 있었다. 이번에는 냉장고 앞인지 식탁인지 알 수 없었다."
+      }
+    ],
+    "seoinFemale": [
+      {
+        "file": "ep012.md",
+        "snippet": "있고, 없을 수도 있고.”\r \r 대답이 너무 평범해서 서인이 오히려 그녀를 봤다.\r \r 강연우가 웃었다.\r \r “못 찾았다는 사실이 존재한다는 "
+      },
+      {
+        "file": "ep012.md",
+        "snippet": "은 정답을 사는 데 토큰을 쓰는 게 아니에요.”\r \r 서인이 그녀를 봤다.\r \r “그럼요?”\r \r “틀렸을 때 얼마나 틀렸는지 아는 데 써요.”"
+      },
+      {
+        "file": "ep014.md",
+        "snippet": "화면을 닫았다.\r \r “오늘은 여기까지 하죠.”\r \r 서인은 그녀를 봤다.\r \r 손가락이 테이블을 두드렸다.\r \r 한 번.\r \r 멈춤.\r \r 다"
+      },
+      {
+        "file": "ep022.md",
+        "snippet": ". 모른다고 말할 줄 아는 건 보고서대로네요.”\r \r 서인이 그녀를 봤다.\r \r “보고서 믿어요?”\r \r “일부는요.”\r \r “비밀 모델도?”\r"
+      },
+      {
+        "file": "ep023.md",
+        "snippet": "\r \r 백윤하가 바로 고쳤다.\r \r “아니요.”\r \r 서인이 그녀를 봤다.\r \r “있었습니다.”\r \r “뭐가요.”\r \r “당신에 대한 신뢰도 있"
+      },
+      {
+        "file": "ep036.md",
+        "snippet": "이 바뀌지 않았는지 확인하는 쪽에 가깝습니다.”\r \r 서인은 그녀를 봤다.\r \r “누가요.”\r \r “AI가요.”\r \r “사람이 안 바뀌었는지를 "
+      },
+      {
+        "file": "ep036.md",
+        "snippet": "1시 18분.\r \r 백윤하가 회의실로 들어왔다.\r \r 서인이 화면을 보여 주자 그녀는 먼저 문을 닫았다. 그다음 블라인드 줄을 당겨 복도 쪽 유"
+      },
+      {
+        "file": "ep037.md",
+        "snippet": " 직원 한 명 몫을 따로 적지 않는 것처럼요.”\r \r 서인이 그녀를 봤다.\r \r “직원이요?”\r \r “비유입니다.”\r \r “사람을 인프라처럼 말"
+      },
+      {
+        "file": "ep037.md",
+        "snippet": "가 있으니까요.”\r \r 백윤하는 피하지 않았다.\r \r 그녀는 태블릿을 서인 쪽으로 밀었다.\r \r 공개 가능한 계약 네 건의 첫 장이었다.\r \r "
+      },
+      {
+        "file": "ep038.md",
+        "snippet": " “괜찮아요. 다들 처음 보면 그렇게 물어요.”\r \r 서인이 그녀를 봤다.\r \r “처음 보는 사람이 많아요?”\r \r “많지는 않아요.”\r \r “"
+      },
+      {
+        "file": "ep048.md",
+        "snippet": " 이번에는 끝까지 먹었다.\r \r 현관에서 신발을 신는 서인에게 그녀가 말했다.\r \r “오늘 그 종이, 버리지 마십시오.”\r \r “나간 사람이 없"
+      }
+    ]
+  },
+  "titleFormatIssues": [],
+  "settingsTimelineIssues": []
+}
