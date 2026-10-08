@@ -952,6 +952,17 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .et-counter{margin-top:14px;padding:12px;border:1px solid #ff728555;background:#ff526d10;text-align:center}
 .et-counter .digits{font:900 clamp(42px,12vw,72px)/1 ui-monospace,monospace;color:#ff536d;letter-spacing:.02em}
 .et-counter small{display:block;color:#ffa0ad;font-size:9px;letter-spacing:.2em;margin-top:4px}
+/* 58화 counterfactual: 반사실적 사후 분석 61.3%와 은우의 작은 손 */
+#counterfactual .veil{background:radial-gradient(circle at 50% 40%,#1f1416,#080305 72%)}
+.cf-box{width:min(460px,92vw);padding:18px;border:1px solid #ffffff14;background:#120a0ed0;font:11px/1.8 ui-monospace,monospace;color:#b4a8b0}
+.cf-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.cf-stat{padding:8px 10px;border:1px solid #ffffff12;background:#ffffff04;text-align:left}
+.cf-stat b{display:block;color:#f3e8ee;font-size:12px;margin-bottom:2px}
+.cf-main{margin:12px 0;padding:14px;border:1px solid #ff728555;background:#ff526d10;text-align:center}
+.cf-main .pct{font:900 clamp(48px,13vw,80px)/1 ui-monospace,monospace;color:#ff6278;letter-spacing:.02em}
+.cf-main small{display:block;color:#ffa2ae;font-size:9px;letter-spacing:.18em;margin-top:4px}
+.cf-hand{margin-top:12px;border-top:1px dashed #ffffff22;padding-top:10px;text-align:center;font:12px/1.7 "Noto Serif KR",serif;color:#e2d9df}
+.cf-hand small{display:block;color:#8f7e8a;font:9px ui-monospace;letter-spacing:.12em}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1051,6 +1062,19 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 <small>ADDITIONAL PROCESSING LATENCY</small>
 </div>
 <div style="margin-top:12px;text-align:center;font:11px/1.6 'Noto Serif KR',serif;color:#c9c1d0" data-t="3.8">“그 숫자는 여전히 재난으로 보이지 않았다.”</div>
+</div></div></div></div>
+<div class="setpiece" id="counterfactual"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">COUNTERFACTUAL ANALYSIS · EP058</div>
+<div class="cf-box">
+<div style="font-size:9px;color:#857582;letter-spacing:.15em">SCENARIO: LINE 07 ONLINE AT 23:47</div>
+<div class="cf-stats">
+<div class="cf-stat" data-t=".3"><b>EXPECTED DECISION</b>5.1 sec<br><span style="color:#8ff0bc">골든타임 +9s 안전</span></div>
+<div class="cf-stat" data-t=".7"><b>OBSERVED DECISION</b>88.4 sec<br><span style="color:#ff8a9a">골든타임 +74s 초과</span></div>
+</div>
+<div class="cf-main" data-t="1.8">
+<div class="pct">61.3<span style="font-size:24px;margin-left:2px">%</span></div>
+<small>OUTCOME DIFFERENCE PROBABILITY</small>
+</div>
+<div class="cf-hand" data-t="3.2"><small>EUN-WOO · 18 MONTHS · RIGHT HAND</small>“모든 비극에 꼭 나쁜 놈이 있어야 하는 건 아니야.”</div>
 </div></div></div></div>
 <div class="setpiece" id="twozero"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">보안 검토 · 연산 사용 기록</div><div class="sc-row" data-t=".3"><span>신고서 작성</span><b class="sc-red">2,640 TOKEN</b></div><div class="sc-row" data-t="1.6"><span>서인 · 판단 시점</span><b class="sc-n">0 TOKEN</b></div><div class="sc-card" data-t="2.8"><small>나란히</small>2,640 : 0</div></div></div></div>
 <div class="setpiece" id="retape"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">현관문 안쪽 · 다시 붙인 밤</div><div class="sc-row" data-t=".2"><span>테이프</span><b class="sc-n">네 귀퉁이</b></div><div class="sc-row" data-t="1.1"><span>손바닥으로 누름</span><b class="sc-n">세 번</b></div><div class="sc-card" data-t="2.2"><small>김하린 빵집</small><span style="display:inline-block;transform:rotate(-9deg) translateY(2px)">매</span>일 엽니다</div></div></div></div>
@@ -1434,7 +1458,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=57,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=58,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -1494,6 +1518,7 @@ const D={
 55:{a:'#dfe3e8',b:'#7f8a96',token:'∞',sync:0,ghost:"7 / 7",hook:"그 뒤에서 커서가 깜박였다. 서인은 아무것도 쓰지 않고 저장했다.",sp:'sevenyes',at:.8,on:"토요일에 바다 가고. 그다음 날.",w:900,ms:14000},
 56:{a:'#d0d8e8',b:'#7b8a9e',token:'∞',sync:0,ghost:"+0.006%",hook:"세상은 그가 떠난 것을 눈치채지 못했다.",sp:'pointzerosix',at:.8,on:"“내가 뭘 좋아하는지 한번 알아보고 싶습니다.”",w:900,ms:10000},
 57:{a:'#d99a9a',b:'#826070',token:'∞',sync:0,ghost:"+83s",hook:"그 숫자는 여전히 재난으로 보이지 않았다.",sp:'eightythree',at:.8,on:"“내가 진짜로 살아서 내 위장으로 벌을 받는구나.”",w:900,ms:10000},
+58:{a:'#e2a4a4',b:'#8a6d7c',token:'∞',sync:0,ghost:"61.3%",hook:"그 평화의 장부 맨 아랫줄에는 누구의 서명도 들어가지 않은 청구서 한 장이 차갑게 적혀 있었다.",sp:'counterfactual',at:.8,on:"“모든 비극에 꼭 나쁜 놈이 있어야 하는 건 아니야.”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1583,7 +1608,8 @@ const KEY={
 54:["“내가 하겠다고.”","“그때는 내가 안 나와 봤으니까.”"],
 55:["“토요일에 바다 가고. 그다음 날.”","“이거 이제 꺼 줘.”"],
 56:["“내가 뭘 좋아하는지 한번 알아보고 싶습니다.”","“그래서 좋네요.”"],
-57:["“내가 진짜로 살아서 내 위장으로 벌을 받는구나.”","“일어나지도 않은 일에 미리 빚지지 마. 그 사람이 식당에서 밥 먹은 건 죄가 아니야.”"]
+57:["“내가 진짜로 살아서 내 위장으로 벌을 받는구나.”","“일어나지도 않은 일에 미리 빚지지 마. 그 사람이 식당에서 밥 먹은 건 죄가 아니야.”"],
+58:["“모든 비극에 꼭 나쁜 놈이 있어야 하는 건 아니야.”","“오히려 제일 잔인한 비극은, 모두가 가장 정당한 선택을 내렸는데도 맨 밑바닥에서 누군가의 삶이 으스러질 때 생기지.”"]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
