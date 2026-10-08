@@ -1156,6 +1156,20 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .sf-card .anesthesia{color:#7ee7ff;font-weight:700}
 .sf-quote{margin-top:12px;padding:12px;border:1px solid #c95b9d55;background:#c95b9d14;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#fdf4fb}
 .sf-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#a8678d}
+/* 78화 carechoice: 좋아서 선택하는 체제와 케어 드림 */
+#carechoice .veil{background:radial-gradient(circle at 50% 40%,#102419,#030d07 75%)}
+.cc-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#08140ee0;font:11px/1.8 ui-monospace,monospace;color:#9cd6b4}
+.cc-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.cc-title{font-size:12px;font-weight:700;color:#e6faee}
+.cc-badge{font-size:10px;font-weight:700;color:#5ce69a;padding:2px 8px;border:1px solid #5ce69a44;background:#5ce69a10}
+.cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.cc-card{padding:8px;border:1px solid #3da87233;background:#3da87208}
+.cc-card b{color:#e8faef;display:block;margin-bottom:2px}
+.cc-card span{display:block;font-size:9px;color:#78b894}
+.cc-card .free{color:#5ce69a;font-weight:700}
+.cc-card .loss{color:#ff8a7a;font-weight:700}
+.cc-quote{margin-top:12px;padding:12px;border:1px solid #3da87255;background:#3da87214;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#f2fdf7}
+.cc-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#5fa87d}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1455,6 +1469,18 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 <div class="wta-sub" data-t="3.2">TOKEN은 단순한 화폐가 아니었다. 틀린 답을 거부할 수 있는 여유를 배분하는 사다리였다.</div>
 </div></div></div></div>
 
+
+
+<div class="setpiece" id="carechoice"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">CARE DREAM INTERFACE · EP078</div>
+<div class="cc-box">
+<div class="cc-header"><span class="cc-title">케어 드림 (멘탈 안정 수면 케어)</span><span class="cc-badge">강제성: 0% / 무상</span></div>
+<div class="cc-grid">
+  <div class="cc-card"><b>제공되는 가치</b><span>숲속 오솔길·백색소음</span><div class="free">피로도 -38% (안도)</div></div>
+  <div class="cc-card"><b>지불되는 대가</b><span>불안의 매입·뇌 임대</span><div class="loss">정신적 면역력 상실</div></div>
+</div>
+<div class="cc-quote" data-t="1.8">“나를 안 아프게 재워준다는데, 내가 왜 거절해야 하죠?”</div>
+<div class="cc-sub" data-t="3.2">사람들이 체제를 자신의 이익이라고 확신할 때, 체제는 무적이 된다.</div>
+</div></div></div></div>
 
 <div class="setpiece" id="sweetfatigue"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">YOUTH & UNCONSCIOUS AUDIT · EP077</div>
 <div class="sf-box">
@@ -1860,7 +1886,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=77,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=78,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -1940,6 +1966,7 @@ const D={
 75:{a:'#c97b63',b:'#6e3725',token:'0',sync:0,ghost:"QUESTION CLASS",hook:"혁명이란 끝없이 새로운 질문을 던지며 스스로를 갈아 넣는 싸움이었다.",sp:'whattoask',at:.8,on:"“뭘 물어봐야 할지조차 모르는 게, 세상에서 제일 지독한 가난이야.”",w:900,ms:10000},
 76:{a:'#9b5de5',b:'#5c2b94',token:'0',sync:0,ghost:"QUIET RETURN",hook:"사람들은 다시 체제의 자궁 속으로 조용히 돌아가고 있었다.",sp:'quietreturn',at:.8,on:"“가난한 놈한테는 자연스러운 잠이 축복이 아니라 고문이더라고요.”",w:900,ms:10000},
 77:{a:'#c95b9d',b:'#6e2552',token:'0',sync:0,ghost:"SWEET FATIGUE",hook:"자유라는 단어가, 이토록 무겁고 잔인하게 가슴을 짓누른 적은 없었다.",sp:'sweetfatigue',at:.8,on:"“가난한 놈들의 자연꿈은 휴식이 아니라 지옥의 생중계예요.”",w:900,ms:10000},
+78:{a:'#3da872',b:'#1b5738',token:'0',sync:0,ghost:"CARE CHOICE",hook:"도시 전체가, 거대한 자본의 품 안에서 가장 행복하고 완벽한 최면에 빠져들고 있었다.",sp:'carechoice',at:.8,on:"“나를 안 아프게 재워준다는데, 내가 왜 거절해야 하죠?”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -2049,7 +2076,8 @@ const KEY={
 74:["“이 단말기가 시키는 대로 버튼만 눌렀는데, 관청에서 한 시간 만에 문자가 왔어요.”","“왜 그걸 물어보셨습니까? AI 추천 목록에는 그런 배전반이나 센서 먹통 질문은 단 한 줄도 없었는데요.”","“그냥…… 이상해서요.”","진짜 진실은 언제나 완벽하게 정리된 추천 목록의 바깥, 그 어두운 진흙탕 속에 묻혀 있었다."],
 75:["“뭘 물어봐야 할지조차 모르는 게, 세상에서 제일 지독한 가난이야.”","“너 없으면?”","“그걸 알았으면 진작 끝났겠지.”","TOKEN은 단순한 화폐가 아니었다. 그것은 '다시 물을 수 있는 자격', '틀린 답을 거부할 수 있는 여유'를 배분하는 잔인한 계급의 사다리였다."],
 76:["“가난한 놈한테는 자연스러운 잠이 축복이 아니라 고문이더라고요.”","“맨정신으로 자는 게 너무 아파서 견딜 수가 없어요.”","체제는 가장 취약한 자들의 고단한 현실 위에 ‘가장 저렴하고 달콤한 마취제’를 다리로 놓아준 것이었다.","사람들은 다시 체제의 자궁 속으로 조용히 돌아가고 있었다."],
-77:["“가난한 놈들의 자연꿈은 휴식이 아니라 지옥의 생중계예요.”","“마취제를 뺏는 건 해방이 아니라 살인이야.”","“체제가 길러낸 '인간의 피로'라는 가장 거대한 괴물과 마주친 거지.”","자유라는 단어가, 이토록 무겁고 잔인하게 가슴을 짓누른 적은 없었다."]
+77:["“가난한 놈들의 자연꿈은 휴식이 아니라 지옥의 생중계예요.”","“마취제를 뺏는 건 해방이 아니라 살인이야.”","“체제가 길러낸 '인간의 피로'라는 가장 거대한 괴물과 마주친 거지.”","자유라는 단어가, 이토록 무겁고 잔인하게 가슴을 짓누른 적은 없었다."],
+78:["“나를 안 아프게 재워준다는데, 내가 왜 거절해야 하죠?”","“사람들이 체제를 '자신의 이익'이라고 확신할 때, 체제는 무적이 된다.”","“조건을 아무리 완벽하게 깔아줘도, 인간은 가장 편안한 노예의 길을 골라 걸어간다.”","도시 전체가, 거대한 자본의 품 안에서 가장 행복하고 완벽한 최면에 빠져들고 있었다."]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
