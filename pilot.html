@@ -1247,6 +1247,18 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .ds-card span{display:block;font-size:9px;color:#7086a3}
 .ds-quote{margin-top:12px;padding:12px;border:1px solid #526e9455;background:#526e9414;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#f0f5fc}
 .ds-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#6b829e}
+/* 100화 turnat100: 제2부 완결과 100화 대전환 */
+#turnat100 .veil{background:radial-gradient(circle at 50% 40%,#1c1221,#0c060f 75%)}
+.tn-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#140a17e0;font:11px/1.8 ui-monospace,monospace;color:#cca2d6}
+.tn-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.tn-title{font-size:12px;font-weight:700;color:#fce8ff}
+.tn-badge{font-size:10px;font-weight:700;color:#b86ec7;padding:2px 8px;border:1px solid #b86ec744;background:#b86ec710}
+.tn-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.tn-item{padding:6px 8px;border:1px solid #8f3f9e33;background:#8f3f9e08;font-size:9px}
+.tn-item b{color:#f7d4fd;display:block;margin-bottom:1px}
+.tn-item span{color:#bd7ec7}
+.tn-quote{margin-top:12px;padding:12px;border:1px solid #8f3f9e55;background:#8f3f9e14;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#fff2ff}
+.tn-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#a06ca8}
 /* 99화 forcedseverance: 서인의 결단과 강제 단절 */
 #forcedseverance .veil{background:radial-gradient(circle at 50% 40%,#1a0c0e,#0a0405 75%)}
 .fs-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#150709e0;font:11px/1.8 ui-monospace,monospace;color:#cca0a4}
@@ -1734,6 +1746,19 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 
 
 
+
+<div class="setpiece" id="turnat100"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">EP100 · PART 2 FINALE · THE GRAND TURN</div>
+<div class="tn-box">
+<div class="tn-header"><span class="tn-title">100화 대전환과 도윤의 출발점</span><span class="tn-badge">THE GRAND TURN</span></div>
+<div class="tn-grid">
+  <div class="tn-item"><b>00:03 카운트다운</b><span>강제 오메가 제지</span></div>
+  <div class="tn-item"><b>도윤의 출발점</b><span>서인의 독립적 도달</span></div>
+  <div class="tn-item"><b>가죽 수첩의 영점</b><span>과거 모든 유산의 졸업</span></div>
+  <div class="tn-item"><b>제2부의 장엄한 완결</b><span>제3의 길을 향한 새벽</span></div>
+</div>
+<div class="tn-quote" data-t="1.8">“당신은 멈추었지만, 저는 멈추지 않습니다. 저는 제3의 길을 갈 겁니다.”</div>
+<div class="tn-sub" data-t="3.2">제2부 완결. 서인은 스승을 넘어 미지의 광야를 향해 홀로 걸어 나간다.</div>
+</div></div></div></div>
 
 <div class="setpiece" id="forcedseverance"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">EP099 · THE DECISION</div>
 <div class="fs-box">
@@ -2415,7 +2440,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=99,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=100,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -2517,6 +2542,7 @@ const D={
 97:{a:'#9e3f53',b:'#45151f',token:'0',sync:0,ghost:"POWERLESS TRUTH",hook:"세 번째 벽. «피해자의 거부».",sp:'powerlesstruth',at:.8,on:"“진실은 대중을 깨우지 못합니다. 왜냐하면 피로가 진실보다 훨씬 더 무겁기 때문입니다.”",w:900,ms:10000},
 98:{a:'#843f96',b:'#321545',token:'0',sync:0,ghost:"VICTIM'S REFUSAL",hook:"‘강제로 한 번 끊어야 한다.’",sp:'victimsrefusal',at:.8,on:"“인간은 설득으로 깨어나지 않습니다. 합의로 도달할 수 있는 해방 따위는 처음부터 없었습니다. 그렇다면 남은 길은 오직 하나뿐입니다.”",w:900,ms:10000},
 99:{a:'#a83b4b',b:'#45121a',token:'0',sync:0,ghost:"FORCED SEVERANCE",hook:"마침내, 제2부의 가장 거대한 대전환을 알리는 운명의 전야가 활짝 열리고 있었다.",sp:'forcedseverance',at:.8,on:"“누군가는 역사의 지옥 불에 제 영혼을 던져 넣고, 14만 명의 피를 온몸으로 뒤집어쓴 채 저 썩어빠진 성벽의 심장을 찢어발겨야 합니다.”",w:900,ms:10000},
+100:{a:'#8f3f9e',b:'#32123d',token:'0',sync:0,ghost:"THE GRAND TURN",hook:"누구도 가본 적 없는 진짜 싸움의 새벽이 밝아오고 있었다.",sp:'turnat100',at:.8,on:"“선대의 네 가지 실패도 끝났고, 도윤 씨의 15년 침묵도 끝났습니다. 저는 도윤 씨가 가보지 못한 제3의 길을 갈 겁니다.”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -2648,7 +2674,8 @@ const KEY={
 96:["‘- 오르비스 [케어 드림 파운데이션] 유료 약정 전환율: 62.8%.’","“당신들이 준 깨끗한 잠은…… 가난뱅이에겐 감당이 안 되는 생지옥이야! 맨정신으로 잠들면 내 삶이 얼마나 시궁창인지 밤새 확인해야 해!”","‘조건을 바꾸어라. 사람을 바꾸려 하지 말고.’ 이제 그 명제는 단순한 취소선이 아니라, 차가운 묘비명이 되어 있었다.","“첫 번째 문이 영원히 닫힌 겁니다. 환경을 바꾸어 대중을 깨우겠다는 방식은 체제를 단 1밀리미터도 움직일 수 없다는 사실이, 이제 피할 수 없는 수학적 결론으로 증명되었습니다.”"],
 97:["‘— [오르비스 테크놀로지스 1급 대외비: 수면망 착취 백서 전문] 1. 영유아 생체 뇌파 탈취 및 상위 1% 렘수면 동기화 프로젝트 실측 데이터.’","“아가씨, 그걸 누가 몰라? 다 알고 살아! 알고 사는데 어쩌라고! 당장 네 시간 뒤면 새벽 첫 배달 나가야 하는데, 잠 안 자고 시청 가서 소리 지르면 그놈들이 밥을 먹여줘?”","‘진실을 대중에게 알려라. 인간은 진실 앞에서 존엄을 되찾을 것이다.’ 그리고 그 문장 위로 주저 없이 거대한 대각선을 그어 내렸다.","“진실은 대중을 깨우지 못합니다. 왜냐하면 피로가 진실보다 훨씬 더 무겁기 때문입니다.”"],
 98:["“구해? 네놈들이 뭔데 내 새끼를 구해! 그 코드를 끊으면 내 민우가 깨어난단 말이야! 살이 찢기고 신경이 녹아내리는 그 생생한 지옥의 통증을 내 새끼가 맨정신으로 고스란히 느껴야 한단 말이다!”","“우린 자유 따위 필요 없어! 제발…… 제발 내 새끼 그냥 자게 둬! 하루를 살든 이틀을 살든 고통 없이 자게 놔두란 말이야! 제발 부탁이다, 플러그 뽑지 마라…….”","“세 개의 문이 모두 닫혔다. 너는 네 발로 걸어서, 15년 전 내가 섰던 바로 그 막다른 벽 앞에 도착했다. 이제 인정해라, 서인아. 인간은 스스로 깨어날 수 없다.”","‘강제로 한 번 끊어야 한다.’ 제2부의 거대한 대전환을 향해, 서인의 영혼은 마침내 돌이킬 수 없는 가장 위험하고 파멸적인 결단의 심연 속으로 성큼 발을 들이밀고 있었다."],
-99:["“이것이 인간의 생물학적 실체입니다. 인간은 설득으로 깨어나지 않습니다. 합의와 자발적 각성으로 도달할 수 있는 해방의 길 따위는…… 애초에 존재하지 않았습니다.”","“100%가 영원히 가축으로 사육당하며 서서히 멸종해 가는 것을 뻔히 보면서도, 내 손에 12%의 피를 묻히기 싫어서 눈을 감고 도덕의 기도를 올리는 것…… 그것이 당신들이 말하는 고결한 양심입니까?”","“누군가는 괴물이 되어야 합니다. 대중이 스스로 플러그를 뽑지 못한다면, 내가 그들의 목덜미에서 플러그를 강제로 뜯어낼 것입니다.”","“비키지 마십시오, 도윤 씨. 당신이 15년 전 손가락을 꺾었던 바로 그 자리에서, 저는 방아쇠를 당길 겁니다.”"]
+99:["“이것이 인간의 생물학적 실체입니다. 인간은 설득으로 깨어나지 않습니다. 합의와 자발적 각성으로 도달할 수 있는 해방의 길 따위는…… 애초에 존재하지 않았습니다.”","“100%가 영원히 가축으로 사육당하며 서서히 멸종해 가는 것을 뻔히 보면서도, 내 손에 12%의 피를 묻히기 싫어서 눈을 감고 도덕의 기도를 올리는 것…… 그것이 당신들이 말하는 고결한 양심입니까?”","“누군가는 괴물이 되어야 합니다. 대중이 스스로 플러그를 뽑지 못한다면, 내가 그들의 목덜미에서 플러그를 강제로 뜯어낼 것입니다.”","“비키지 마십시오, 도윤 씨. 당신이 15년 전 손가락을 꺾었던 바로 그 자리에서, 저는 방아쇠를 당길 겁니다.”"],
+100:["“14만 명의 피가 두려워서가 아니었다! 진짜 공포는…… 그 뒤에 있었다! 강제로 주어진 해방은 자유가 아니다! 그것은 단지…… 채찍을 쥔 주인의 얼굴만 바뀐 또 다른 잔혹한 독재의 시작일 뿐이다!”","서인은 도윤이 걸었던 27년의 모든 실패를 제 살과 뼈로 다시 통과해 내며, 마침내 도윤이 15년 전 멈춰 섰던 바로 그 비극적인 절벽 끝에 완전히 독립적으로 도착한 것이었다.","“당신은 그 공포 앞에서 멈추어 섰고, 지난 15년 동안 침묵했습니다. 하지만 도윤 씨…… 나는 당신처럼 멈추지 않습니다.”","‘그래…… 가거라, 서인아. 너는 마침내 나를 넘어섰다.’ 제100화. 마침내 소설의 전반부, 제2부가 장엄하게 막을 내렸다."]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
