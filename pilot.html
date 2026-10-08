@@ -1235,6 +1235,18 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .em-clause .leash{color:#ff6b6b;font-weight:700}
 .em-quote{margin-top:12px;padding:12px;border:1px solid #c9654455;background:#c9654414;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#fdf5f2}
 .em-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#a86752}
+/* 84화 doyunsilence: 도윤의 침묵과 끊어진 선로 */
+#doyunsilence .veil{background:radial-gradient(circle at 50% 40%,#151b26,#05080d 75%)}
+.ds-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#090d14e0;font:11px/1.8 ui-monospace,monospace;color:#9eb0c9}
+.ds-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.ds-title{font-size:12px;font-weight:700;color:#e8f0fa}
+.ds-badge{font-size:10px;font-weight:700;color:#789ac2;padding:2px 8px;border:1px solid #789ac244;background:#789ac210}
+.ds-elements{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.ds-card{padding:8px;border:1px solid #526e9433;background:#526e9408}
+.ds-card b{color:#dce7f5;display:block;margin-bottom:2px}
+.ds-card span{display:block;font-size:9px;color:#7086a3}
+.ds-quote{margin-top:12px;padding:12px;border:1px solid #526e9455;background:#526e9414;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#f0f5fc}
+.ds-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#6b829e}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1540,6 +1552,18 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 
 
 
+
+
+<div class="setpiece" id="doyunsilence"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">THE YARD OF BROKEN TRACKS · EP084</div>
+<div class="ds-box">
+<div class="ds-header"><span class="ds-title">폐철도 조차장의 침묵</span><span class="ds-badge">THE SILENCE</span></div>
+<div class="ds-elements">
+  <div class="ds-card"><b>15년 전 차단기 쇳조각</b><span>하수도 맨홀의 쓰라린 기억</span><span style="color:#789ac2;font-size:9px">체제는 피로로 굴러간다</span></div>
+  <div class="ds-card"><b>스승의 가혹한 존중</b><span>남의 확신을 쥐여주지 않음</span><span style="color:#9eb0c9;font-size:9px">바닥을 치고 스스로 서라</span></div>
+</div>
+<div class="ds-quote" data-t="1.8">“남이 쥐여준 칼로는 아무것도 벨 수 없어. 바닥을 쳐라, 서인아.”</div>
+<div class="ds-sub" data-t="3.2">쉽게 답을 내어주는 자는 노예를 만들지만, 끝까지 침묵하는 자만이 인간을 홀로 세운다.</div>
+</div></div></div></div>
 
 <div class="setpiece" id="endofmoderation"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">COMPROMISE GOVERNANCE REFUSAL · EP083</div>
 <div class="em-box">
@@ -2012,7 +2036,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=83,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=84,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -2098,6 +2122,7 @@ const D={
 81:{a:'#8a8a99',b:'#3d3d47',token:'0',sync:0,ghost:"SHAKEN PILLAR",hook:"부서진 기둥의 파편 사이로, 칠흑 같은 암흑과 냉혹한 유혹의 바람이 휘몰아쳐 들어오고 있었다.",sp:'shakenpillar',at:.8,on:"“우리한테 필요한 건 자유가 아니라 망각이에요. 왜 자꾸 날 깨우려 합니까?”",w:900,ms:10000},
 82:{a:'#4a8cd4',b:'#1b4473',token:'0',sync:0,ghost:"NEURAL RESET",hook:"서인은 자신이 그토록 증오했던 거대한 괴물의 형상을 조금씩 닮아가는 스스로의 그림자를 바라보고 있었다.",sp:'neuralreset',at:.8,on:"“결정하세요. 사람을 고쳐서라도 체제를 부술 것인지, 영원히 썩게 둘 것인지.”",w:900,ms:10000},
 83:{a:'#c96544',b:'#6e2e1a',token:'0',sync:0,ghost:"END OF MODERATION",hook:"온건한 타협의 문은 서인 자신의 손으로 영원히 불태워버렸다.",sp:'endofmoderation',at:.8,on:"“체제가 던져주는 사료를 받아먹으며 동지들의 목에 벨벳 목줄을 채우진 않는다.”",w:900,ms:10000},
+84:{a:'#6b829e',b:'#27374a',token:'0',sync:0,ghost:"DOYUN'S SILENCE",hook:"누구에게도 기댈 수 없는 절대적인 고독 속에서만이, 다음 시대로 나아갈 진짜 문이 열린다.",sp:'doyunsilence',at:.8,on:"“남이 쥐여준 칼로는 아무것도 벨 수 없어. 바닥을 쳐라, 서인아.”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -2213,7 +2238,8 @@ const KEY={
 80:["“이 도시는 인간을 착취하기 위해 세워진 단순한 감옥이 아니었습니다. 인간의 피로를 먹고 자라는 거대한 유기체였습니다.”","“체제가 없으면 단 하루도 버텨낼 수 없는 저 나약한 인간들의 삶을 부수지 않고, 체제만 안전하게 들어내는 방법은 이 세상에 없어.”","“조건을 바꿔주면 사람이 스스로 자유로워질 거라는 환상…… 그게 통하지 않는다는 걸 이제 네 두 눈으로 똑똑히 봤잖아.”","서인이 평생을 바쳐 쌓아 올렸던 첫 번째 신념이, 이 거대한 밤의 침묵 속으로 완전히 가라앉고 있었다."],
 81:["‘조건을 바꿔라. 사람을 바꾸려 하지 말고.’","“우리한테 필요한 건 거창한 자유나 존엄이 아니에요. 단 몇 시간이라도 현실을 완전히 잊게 해주는 망각이에요.”","“인간은 버그를 고치면 정답으로 수렴하는 기계가 아니었다.”","서인의 가슴 깊은 곳에서, 평생 동안 스스로를 지탱해 왔던 가장 단단한 기둥이 거대한 굉음을 내며 두 동강 나고 있었다."],
 82:["“결정하세요. 사람의 뇌를 손대서라도 체제를 끝장낼 것인지, 영원한 마취 속에서 썩어가는 것을 지켜볼 것인지.”","“인간의 뇌신경을 뜯어고쳐서 거리로 내모는 게 어떻게 해방이야? 그건 또 다른 세뇌일 뿐이야!”","“체제를 설계하는 오만함과 인간을 개조하려는 오만함. 그 두 개는 놀라울 정도로 완벽하게 닮아 있었다.”","서인은 자신이 그토록 증오했던 괴물의 형상을 닮아가는 스스로의 그림자를 바라보며 전율했다."],
-83:["“이건 노예의 쇠사슬을 끊어주는 계약서가 아니에요. 쇠사슬에 벨벳을 덧대어주고 수수료를 챙기는 '공인 간수' 계약서입니다!”","“혁명은 시가 아니야! 100퍼센트 순결한 승리 따윈 이 세상에 없어!”","“체제가 던져주는 사료를 받아먹으며 동지들의 목에 벨벳 목줄을 채우는 짓은, 당신들끼리 하십시오.”","서인의 가슴속에 남아 있던 온건 개혁에 대한 마지막 미련이, 완전히 산산조각 났다."]
+83:["“이건 노예의 쇠사슬을 끊어주는 계약서가 아니에요. 쇠사슬에 벨벳을 덧대어주고 수수료를 챙기는 '공인 간수' 계약서입니다!”","“혁명은 시가 아니야! 100퍼센트 순결한 승리 따윈 이 세상에 없어!”","“체제가 던져주는 사료를 받아먹으며 동지들의 목에 벨벳 목줄을 채우는 짓은, 당신들끼리 하십시오.”","서인의 가슴속에 남아 있던 온건 개혁에 대한 마지막 미련이, 완전히 산산조각 났다."],
+84:["“남이 쥐여준 칼로는 아무것도 벨 수 없으니까.”","“바닥을 쳐라, 서인아. 네 손에 쥐고 있는 마지막 미련의 부스러기까지 모조리 재로 태워버려라.”","“쉽게 답을 내어주는 자는 노예를 만들지만, 끝까지 침묵하는 자만이 인간을 홀로 세운다.”","누구에게도 기댈 수 없는 절대적인 고독 속에서만이, 다음 시대로 나아갈 진짜 문이 열린다."]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
