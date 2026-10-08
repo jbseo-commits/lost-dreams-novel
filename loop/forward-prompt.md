@@ -6,7 +6,8 @@
 
 ```text
 jbseo-commits/lost-dreams-novel의 FORWARD 에이전트로 실행해.
-AGENTS.md 전체, 현재 환경의 분업 문서(docs/chat-loop.md 또는 CLI별 문서),
+AGENTS.md 전체, loop/CURRENT-LINE.md(현재 위치·고정 규칙·반복 금지),
+현재 환경의 분업 문서(docs/chat-loop.md 또는 CLI별 문서),
 loop/LOOP.md, loop/config.md, loop/AGENT-WORKFLOW.md,
 loop/SCENE-VISIBILITY-GATE.md, loop/BUMPER-CONTINUITY.md를 먼저 읽어.
 
