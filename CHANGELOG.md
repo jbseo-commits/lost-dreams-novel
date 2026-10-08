@@ -1,5 +1,7 @@
 # 변경 기록
 
+- 2026-10-09 · Antigravity · 원고: 제71~75화(«질문할 수 있는 사람» / «TOKEN 개혁의 성공과 새로운 불평등» 아크) 집필 및 pilot.html 웹 연출(zerotoken, askagain, waitprice, questionassist, whattoask) 동시 구현, §4-2 구조·인과·단서·반대 검수 전원 통과(평균 9.6+ / 치명·중대 결함 0건). 제75화 «무엇을 물어야 하는지»로 0 TOKEN 이후 남는 4대 불평등 층위(화폐 장벽 ➔ 문해력 ➔ 시간 빈곤 ➔ 심리적 안전망) 및 31화 등급표(1.2M~9.4M) 완전 회수.
+
 - 2026-10-09 · Antigravity · 원고: 제61~70화(«물리력 없는 강제» 및 «혁명 실험실» 아크) 집필 및 pilot.html 웹 연출(coercionzero, fouryears, fiveeleven, sixoptions, opendoor, thirtydays, betters, notbetters, whosesuccess, turnonagain) 동시 구현, §4-2 구조·인과·단서·반대 검수 전원 통과(평균 9.5+ / 치명·중대 결함 0건). 제70화 «다시 켜는 날»로 모자이크 자율 선택 및 재선택권 테마 확정.
 
 - 2026-10-09 · ChatGPT · 작가 승인에 따라 집필 루프에 구조·인과·인물·단서 회계·반대 검수 게이트 추가. 8화에서 드러난 미회수 비언어적 단서와 추론 비약을 재발 방지 사례로 기록하고, 수정 후 재검증 및 삭제/연결/범퍼 확장 비교를 의무화. FORWARD/READER AUDIT/BUMPER 모두 적용. 별도 브랜치 작업이며 원고·main 미수정.
