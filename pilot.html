@@ -1193,6 +1193,20 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .ef-node b{color:#d6fae5;display:block;margin-bottom:2px}
 .ef-quote{margin-top:12px;padding:12px;border:1px solid #3da87255;background:#3da87214;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#f2fdf7}
 .ef-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#5ca87c}
+/* 81화 shakenpillar: 흔들리는 기둥과 신념의 붕괴 */
+#shakenpillar .veil{background:radial-gradient(circle at 50% 40%,#1f1f24,#08080a 75%)}
+.sp-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#101014e0;font:11px/1.8 ui-monospace,monospace;color:#b0b0ba}
+.sp-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sp-title{font-size:12px;font-weight:700;color:#f0f0f5}
+.sp-badge{font-size:10px;font-weight:700;color:#e68a8a;padding:2px 8px;border:1px solid #e68a8a44;background:#e68a8a10}
+.sp-contrast{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.sp-card{padding:8px;border:1px solid #ffffff10;background:#ffffff04}
+.sp-card b{color:#ffffff;display:block;margin-bottom:2px}
+.sp-card span{display:block;font-size:9px;color:#8a8a99}
+.sp-card .fail{color:#ff6b6b;font-weight:700}
+.sp-card .anesthesia{color:#7ee7ff;font-weight:700}
+.sp-quote{margin-top:12px;padding:12px;border:1px solid #e68a8a55;background:#e68a8a14;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#fdf0f0}
+.sp-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#a87a7a}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1495,6 +1509,18 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 
 
 
+
+
+<div class="setpiece" id="shakenpillar"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">FIRST PRINCIPLE COLLAPSE · EP081</div>
+<div class="sp-box">
+<div class="sp-header"><span class="sp-title">서인의 첫 번째 신조</span><span class="sp-badge">명제 붕괴 (CRACKED)</span></div>
+<div class="sp-contrast">
+  <div class="sp-card"><b>초기 명제</b><span>“조건을 바꿔라, 사람 말고”</span><div class="fail">밑 빠진 독의 한계</div></div>
+  <div class="sp-card"><b>현실의 대답</b><span>“가난뱅이의 1등석 휴가”</span><div class="anesthesia">마취를 향한 자발적 도피</div></div>
+</div>
+<div class="sp-quote" data-t="1.8">“우리에게 필요한 건 자유가 아니라 망각이에요. 왜 자꾸 날 깨우려 합니까?”</div>
+<div class="sp-sub" data-t="3.2">평생을 지탱해 온 기둥이 부러졌다. 사람을 바꾸지 않고는 체제를 끝낼 수 없다.</div>
+</div></div></div></div>
 
 <div class="setpiece" id="empireoffatigue"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">EP076-080 SYNTHESIS · THE EMPIRE OF FATIGUE</div>
 <div class="ef-box">
@@ -1934,7 +1960,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=80,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=81,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -2017,6 +2043,7 @@ const D={
 78:{a:'#3da872',b:'#1b5738',token:'0',sync:0,ghost:"CARE CHOICE",hook:"도시 전체가, 거대한 자본의 품 안에서 가장 행복하고 완벽한 최면에 빠져들고 있었다.",sp:'carechoice',at:.8,on:"“나를 안 아프게 재워준다는데, 내가 왜 거절해야 하죠?”",w:900,ms:10000},
 79:{a:'#c94d63',b:'#6e1b2b',token:'0',sync:0,ghost:"WHOSE LIBERTY",hook:"자신들이 믿어왔던 혁명의 도덕적 정당성이, 현실의 비참함 앞에서 한 줌의 모래처럼 바스러졌다.",sp:'whoseliberty',at:.8,on:"“영웅은 몇 명 없지만, 피곤한 사람은 세상에 널렸어.”",w:900,ms:10000},
 80:{a:'#2ea86e',b:'#135434',token:'0',sync:0,ghost:"EMPIRE OF FATIGUE",hook:"서인이 평생을 바쳐 쌓아 올렸던 첫 번째 신념이, 이 거대한 밤의 침묵 속으로 완전히 가라앉고 있었다.",sp:'empireoffatigue',at:.8,on:"“체제가 없으면 하루도 버틸 수 없는 인간의 삶을 부수지 않고, 체제만 들어내는 방법은 없어.”",w:900,ms:10000},
+81:{a:'#8a8a99',b:'#3d3d47',token:'0',sync:0,ghost:"SHAKEN PILLAR",hook:"부서진 기둥의 파편 사이로, 칠흑 같은 암흑과 냉혹한 유혹의 바람이 휘몰아쳐 들어오고 있었다.",sp:'shakenpillar',at:.8,on:"“우리한테 필요한 건 자유가 아니라 망각이에요. 왜 자꾸 날 깨우려 합니까?”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -2129,7 +2156,8 @@ const KEY={
 77:["“가난한 놈들의 자연꿈은 휴식이 아니라 지옥의 생중계예요.”","“마취제를 뺏는 건 해방이 아니라 살인이야.”","“체제가 길러낸 '인간의 피로'라는 가장 거대한 괴물과 마주친 거지.”","자유라는 단어가, 이토록 무겁고 잔인하게 가슴을 짓누른 적은 없었다."],
 78:["“나를 안 아프게 재워준다는데, 내가 왜 거절해야 하죠?”","“사람들이 체제를 '자신의 이익'이라고 확신할 때, 체제는 무적이 된다.”","“조건을 아무리 완벽하게 깔아줘도, 인간은 가장 편안한 노예의 길을 골라 걸어간다.”","도시 전체가, 거대한 자본의 품 안에서 가장 행복하고 완벽한 최면에 빠져들고 있었다."],
 79:["“영웅은 몇 명 없지만, 피곤한 사람은 세상에 널렸어. 피곤한 사람을 이기려고 들지 마라.”","“우리가 준 자유가…… 그들에게는 단지 '혼자 감당해야 하는 불안'이었을 뿐이라면.”","“대체 누구를 위해 해방을 외쳐온 겁니까?”","혁명이 인간의 연약함을 품지 못하고 단죄하려 들 때, 혁명은 스스로 내부에서부터 무너지는 것이었다."],
-80:["“이 도시는 인간을 착취하기 위해 세워진 단순한 감옥이 아니었습니다. 인간의 피로를 먹고 자라는 거대한 유기체였습니다.”","“체제가 없으면 단 하루도 버텨낼 수 없는 저 나약한 인간들의 삶을 부수지 않고, 체제만 안전하게 들어내는 방법은 이 세상에 없어.”","“조건을 바꿔주면 사람이 스스로 자유로워질 거라는 환상…… 그게 통하지 않는다는 걸 이제 네 두 눈으로 똑똑히 봤잖아.”","서인이 평생을 바쳐 쌓아 올렸던 첫 번째 신념이, 이 거대한 밤의 침묵 속으로 완전히 가라앉고 있었다."]
+80:["“이 도시는 인간을 착취하기 위해 세워진 단순한 감옥이 아니었습니다. 인간의 피로를 먹고 자라는 거대한 유기체였습니다.”","“체제가 없으면 단 하루도 버텨낼 수 없는 저 나약한 인간들의 삶을 부수지 않고, 체제만 안전하게 들어내는 방법은 이 세상에 없어.”","“조건을 바꿔주면 사람이 스스로 자유로워질 거라는 환상…… 그게 통하지 않는다는 걸 이제 네 두 눈으로 똑똑히 봤잖아.”","서인이 평생을 바쳐 쌓아 올렸던 첫 번째 신념이, 이 거대한 밤의 침묵 속으로 완전히 가라앉고 있었다."],
+81:["‘조건을 바꿔라. 사람을 바꾸려 하지 말고.’","“우리한테 필요한 건 거창한 자유나 존엄이 아니에요. 단 몇 시간이라도 현실을 완전히 잊게 해주는 망각이에요.”","“인간은 버그를 고치면 정답으로 수렴하는 기계가 아니었다.”","서인의 가슴 깊은 곳에서, 평생 동안 스스로를 지탱해 왔던 가장 단단한 기둥이 거대한 굉음을 내며 두 동강 나고 있었다."]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
