@@ -1247,6 +1247,18 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .ds-card span{display:block;font-size:9px;color:#7086a3}
 .ds-quote{margin-top:12px;padding:12px;border:1px solid #526e9455;background:#526e9414;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#f0f5fc}
 .ds-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#6b829e}
+/* 94화 finalquestion: 마지막 질문과 프로젝트 오메가 */
+#finalquestion .veil{background:radial-gradient(circle at 50% 40%,#1c1012,#0a0506 75%)}
+.fq-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#14080ae0;font:11px/1.8 ui-monospace,monospace;color:#c9a2a7}
+.fq-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.fq-title{font-size:12px;font-weight:700;color:#fae6e9}
+.fq-badge{font-size:10px;font-weight:700;color:#bd6a76;padding:2px 8px;border:1px solid #bd6a7644;background:#bd6a7610}
+.fq-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.fq-item{padding:6px 8px;border:1px solid #9c3b4933;background:#9c3b4908;font-size:9px}
+.fq-item b{color:#fae1e5;display:block;margin-bottom:1px}
+.fq-item span{color:#bd7581}
+.fq-quote{margin-top:12px;padding:12px;border:1px solid #9c3b4955;background:#9c3b4914;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#fff0f2}
+.fq-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#a86772}
 /* 93화 nothingnew: 새로운 것은 없다와 조건의 감옥 */
 #nothingnew .veil{background:radial-gradient(circle at 50% 40%,#17161b,#08070d 75%)}
 .nn-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#100f17e0;font:11px/1.8 ui-monospace,monospace;color:#aba6c7}
@@ -1662,6 +1674,19 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 
 
 
+
+<div class="setpiece" id="finalquestion"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">PROJECT OMEGA · EP094</div>
+<div class="fq-box">
+<div class="fq-header"><span class="fq-title">프로젝트 오메가와 금기의 심연</span><span class="fq-badge">THE LAST QUESTION</span></div>
+<div class="fq-grid">
+  <div class="fq-item"><b>14만 6천 명</b><span>12.2% 뇌사 추산치</span></div>
+  <div class="fq-item"><b>도윤의 봉인</b><span>“학살자가 될 수 없다”</span></div>
+  <div class="fq-item"><b>서인의 직격</b><span>“100% 뇌사의 만성 가스실”</span></div>
+  <div class="fq-item"><b>마지막 질문</b><span>강제 단절인가 공멸인가</span></div>
+</div>
+<div class="fq-quote" data-t="1.8">“체제를 강제로 끊어낼 것인가, 아니면 영원한 마취 속에서 함께 썩어갈 것인가.”</div>
+<div class="fq-sub" data-t="3.2">금기는 열렸다. 피를 흘리기 싫다고 도망치는 자는 혁명가가 아니다.</div>
+</div></div></div></div>
 
 <div class="setpiece" id="nothingnew"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">BEYOND THE CONDITIONS · EP093</div>
 <div class="nn-box">
@@ -2265,7 +2290,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=93,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=94,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -2361,6 +2386,7 @@ const D={
 91:{a:'#9e4368',b:'#4a172c',token:'0',sync:0,ghost:"ALREADY TRIED",hook:"스승이 독점해 온 15년의 권력을 향해, 제자가 처음으로 정면에서 비수를 들이댄 순간이었다.",sp:'alreadytried',at:.8,on:"“당신은 '그건 이미 해봤다'고 말하며 문을 닫아버릴 뿐, '그렇다면 어디로 가야 하는가'라는 질문에는 15년 동안 단 한 번도 대답하지 않았습니다.”",w:900,ms:10000},
 92:{a:'#9c4c38',b:'#47190e',token:'0',sync:0,ghost:"POWER OF MEMORY",hook:"과거의 망령들에게 발목을 잡힌 채 영원한 패배주의의 늪에서 썩어갈 수는 없었다.",sp:'powerofmemory',at:.8,on:"“당신의 기억은 살아 있는 동지들을 지키는 방패가 아닙니다. 아무도 성벽을 넘지 못하게 가두어두는 거대한 납골당입니다.”",w:900,ms:10000},
 93:{a:'#58469e',b:'#221647',token:'0',sync:0,ghost:"NOTHING NEW",hook:"새로운 것은 없다는 도윤의 철옹성에, 마침내 돌이킬 수 없는 거대한 균열이 쩍 하고 갈라져 터지는 순간이었다.",sp:'nothingnew',at:.8,on:"“조건을 바꾸는 것이 아니라, '인간과 체제를 잇는 연결선 자체를 강제로 단절하는 것'.”",w:900,ms:10000},
+94:{a:'#9c3b49',b:'#45121a',token:'0',sync:0,ghost:"THE LAST QUESTION",hook:"선대의 모든 실패를 지나, 스승의 가장 깊은 금기를 정면으로 돌파한 서인의 발걸음은, 마침내 제2부의 종착점이자 거대한 대전환의 문턱을 향해 거침없이 전진하고 있었다.",sp:'finalquestion',at:.8,on:"“체제를 강제로 끊어낼 것인가, 아니면 영원한 마취 속에서 모두가 함께 썩어갈 것인가.”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -2486,7 +2512,8 @@ const KEY={
 90:["“선대의 실패는 체제에게 가장 완벽한 백신이었던 거야. 체제는 매번 항체를 만들어냈고, 우리는 이미 면역이 형성된 괴물 앞에서 똑같은 칼을 휘두르고 있었던 셈이지.”","“당신은 단지…… 지난 30년간 이 땅의 모든 인간들이 시도했던 모든 실패를 홀로 짊어진 '거대한 실패의 데이터베이스'였을 뿐입니다.”","“네 개의 길이 다 막혔다면, 남은 문은 단 하나뿐입니다. 저는 멈추지 않습니다. 당신이 서 있는 그 절벽의 끝에서, 다음 걸음을 내딛겠습니다.”","닫혀버린 네 개의 문 너머, 마침내 체제의 심장을 향해 직격하는 단 하나의 가장 끔찍하고 거대한 질문이 고개를 들기 시작하고 있었다."],
 91:["“셋 다 치워라. 그건 이미 해봤다.”","그 처절한 실패의 기억을 홀로 쥐고 있다는 사실 그 자체가, 혁명군 전체를 지배하는 가장 강력하고 절대적인 권력이 되어 있었던 것이다.","“당신은 '그건 이미 해봤다'고 말하며 문을 닫아버릴 뿐, '그렇다면 어디로 가야 하는가'라는 질문에는 15년 동안 단 한 번도 대답하지 않았습니다.”","“당신은 정말로 이 싸움에서 이길 생각이 있습니까? 아니면…… 동지들이 죽지 않도록 관리하는, 가장 안전하고 거대한 장례식장의 상주로 남고 싶은 겁니까?”"],
 92:["“내가 기억하지 않으면, 저자들은 또 똑같이 죽으러 간다.”","“이 벽면의 기록들은…… 동지들을 향한 추모가 아닙니다. 살아남은 자들을 영원히 무릎 꿇려 앉히는 '절대적인 권력의 장부'입니다.”","“두려움 때문에 아무것도 하지 않는 것은 평화가 아닙니다. 그것은 단지…… 잘 관리된 가축 우리 안에서 가축들이 도살당할 순서를 기다리는 것과 같습니다.”","실패의 장부는 이제 덮여야 했다. 그리고 그 피 묻은 장부가 닫힌 자리에, 선대들이 감히 시도하지 못했던 가장 위험하고 결정적인 다음 질문이 올라서야 했다."],
-93:["“새로운 게 없대요. 도윤 씨는 이 세상에 이제 새로운 저항이란 없대요. 싸워보지도 못하고 이미 패잔병이 되어버린 기분이에요.”","“새로운 길이가 없었던 게 아닙니다. 당신이 지난 27년 동안 걸어왔던 그 네 가지 실패는, 실은 '단 하나의 길'에 불과했습니다. 전부 '조건을 바꾸는 방식'이었다는 점입니다!”","“조건을 바꾸는 것이 아니라, '인간과 체제를 잇는 연결선 자체를 강제로 단절하는 것'. 대중이 원하든 원하지 않든 체제의 마취제를 물리적으로 뜯어내고 강제로 단절시키는 것. 도윤 씨, 당신은 이 길을 가본 적이 있습니까?”","새로운 것은 없다는 도윤의 철옹성에, 마침내 돌이킬 수 없는 거대한 균열이 쩍 하고 갈라져 터지는 순간이었다."]
+93:["“새로운 게 없대요. 도윤 씨는 이 세상에 이제 새로운 저항이란 없대요. 싸워보지도 못하고 이미 패잔병이 되어버린 기분이에요.”","“새로운 길이가 없었던 게 아닙니다. 당신이 지난 27년 동안 걸어왔던 그 네 가지 실패는, 실은 '단 하나의 길'에 불과했습니다. 전부 '조건을 바꾸는 방식'이었다는 점입니다!”","“조건을 바꾸는 것이 아니라, '인간과 체제를 잇는 연결선 자체를 강제로 단절하는 것'. 대중이 원하든 원하지 않든 체제의 마취제를 물리적으로 뜯어내고 강제로 단절시키는 것. 도윤 씨, 당신은 이 길을 가본 적이 있습니까?”","새로운 것은 없다는 도윤의 철옹성에, 마침내 돌이킬 수 없는 거대한 균열이 쩍 하고 갈라져 터지는 순간이었다."],
+94:["‘- 총 치명적 희생자: 도시 인구의 약 12.2% (약 14만 6천 명 추산).’","“체제를 부수겠다는 명분으로 14만 명의 목숨을 도살장에 밀어 넣고, 살아남은 자들을 지옥의 아비규환에 빠뜨리는 것…… 그게 학살자가 아니면 대체 뭐란 말이냐!”","“12%를 죽이는 것이 괴물이라면, 100%가 서서히 도살당하는 것을 뻔히 보면서도 손에 피를 묻히기 싫어 눈을 감고 방관하는 자는…… 과연 인간입니까?”","‘체제를 강제로 끊어낼 것인가, 아니면 영원한 마취 속에서 모두가 함께 썩어갈 것인가.’"]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
