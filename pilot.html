@@ -862,32 +862,29 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 /* 51화 seniorline: 세 줄 중 선임 줄의 박동이 멎고, 맨 아래 이름 없는 번호 하나가 켜진다 */
 #seniorline .veil{background:radial-gradient(circle at 50% 40%,#13161c,#030405 72%)}
 .sl-row{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:center;gap:8px;margin:8px 0}
-.sl-row small{font:9px ui-monospace,monospace;color:#7d8794;letter-spacing:.12em;text-align:left}
+.sl-row small{font:11px ui-monospace,monospace;color:#7d8794;letter-spacing:.12em;text-align:left}
 .sl-row svg{width:100%;height:36px;overflow:visible}
 .sl-row path{fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
 .sl-base{stroke:#9ab6ff40}.sl-pulse{stroke:#cfe0ff;stroke-dasharray:9 100;stroke-dashoffset:109}
 .setpiece.on .sl-pulse{animation:slRun 1.7s linear infinite}
 .sl-row.cur .sl-pulse{animation-duration:1.9s!important}
 @keyframes slRun{to{stroke-dashoffset:0}}
-.sl-flat{stroke:#ff8c9b;opacity:0}
 .setpiece.on .sl-row.sen .sl-base,.setpiece.on .sl-row.sen .sl-pulse{animation:slRun 1.7s linear infinite,fxOut .7s 2.2s forwards}
 .setpiece.on .sl-row.sen .sl-base{animation:fxOut .7s 2.2s forwards}
-.setpiece.on .sl-row.sen .sl-flat{animation:slFlat .8s 2.5s forwards}
-@keyframes slFlat{to{opacity:.55}}
 .sl-row.suc path{stroke:#ffffff26;stroke-dasharray:3 5}
-.sl-state{margin-top:14px;font:10px ui-monospace,monospace;color:#9aa3ae;text-align:center;letter-spacing:.06em}
-.sl-pool{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:9px;font:10px ui-monospace,monospace;color:#c7cdd6}
+.sl-state{margin-top:14px;font:12px ui-monospace,monospace;color:#9aa3ae;text-align:center;letter-spacing:.06em}
+.sl-pool{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:9px;font:12px ui-monospace,monospace;color:#c7cdd6}
 .sl-pool i{width:7px;height:7px;border-radius:50%;background:#ffd38a;box-shadow:0 0 9px #ffd38a}
 .setpiece.on .sl-pool i{animation:slBeat 1.5s ease-in-out 5.6s infinite}
 @keyframes slBeat{50%{opacity:.2;box-shadow:none}}
 /* 52화 sandsticks: 광고꿈 바다 카드가 흐려지는 동안 실제 모래가 발바닥에 떨어져 붙고, 발을 들어도 남는다 */
 #sandsticks .veil{background:radial-gradient(circle at 50% 62%,#1d1912,#050403 72%)}
 .ss-ad{margin:0 auto;border:1px solid #9ab6ff44;background:#9ab6ff0d;color:#b9c8e6;padding:7px 11px;font:12px/1.6 "Noto Serif KR",serif;width:max-content;max-width:100%;text-align:center}
-.ss-ad small{display:block;font:8px ui-monospace,monospace;letter-spacing:.16em;color:#7d8794}
+.ss-ad small{display:block;font:11px ui-monospace,monospace;letter-spacing:.16em;color:#7d8794}
 .ss-stage{position:relative;width:170px;height:236px;margin:16px auto 4px}
 .ss-foot{position:absolute;left:0;top:0;width:170px;height:230px;transform-origin:50% 100%}
-.setpiece.on .ss-foot{animation:ssLift 1.3s cubic-bezier(.3,.7,.2,1) 3.5s both}
-@keyframes ssLift{to{transform:translateY(-22px) rotate(-5deg)}}
+.setpiece.on .ss-foot{animation:ssLift 2.6s ease-in-out 2.4s both}
+@keyframes ssLift{0%{transform:none}23%,54%{transform:translateY(-40px) rotate(-6deg)}69%,85%{transform:none}100%{transform:translateY(-40px) rotate(-6deg)}}
 .ss-foot svg{position:absolute;inset:0;width:100%;height:100%}
 .ss-foot svg *{fill:#e9dcc6;fill-opacity:.07;stroke:#e9dcc6;stroke-opacity:.7;stroke-width:1.1}
 .ss-g{position:absolute;width:3px;height:3px;margin:-1.5px;border-radius:50%;background:#e8c98f;opacity:0}
@@ -901,38 +898,39 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .fn-one{font:900 clamp(120px,38vw,190px)/1 ui-monospace,monospace;color:#eef3ec;letter-spacing:-.06em}
 .fn-candy{position:absolute;left:calc(50% + clamp(34px,10vw,52px));bottom:12%;width:44px;height:20px}
 .fn-candy svg{width:100%;height:100%}.fn-candy svg *{fill:#e7f5ee;stroke:#9ff0c6;stroke-width:1}
-.fn-alarm{margin:14px auto 0;width:min(300px,100%);border:1px solid #ffffff22;padding:9px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:baseline;font:10px ui-monospace,monospace;color:#7d8794;text-align:left}
+.fn-qs{width:min(300px,100%);margin:0 auto}
+.fn-alarm{margin:14px auto 0;width:min(300px,100%);border:1px solid #ffffff22;padding:9px 12px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:baseline;font:11px ui-monospace,monospace;color:#7d8794;text-align:left}
 .fn-alarm b{font:800 22px ui-monospace,monospace;color:#f1f4f7}
 .fn-blank{display:inline-block;width:100%;border-bottom:1px solid #ffffff44;height:12px}
 /* 54화 tworings: 9층 휴대폰의 이름 없는 10시 알람이 세 번 울릴 때, 원룸의 21:58은 이미 진행 중이다 */
 #tworings .veil{background:radial-gradient(circle at 50% 40%,#17130f,#040303 72%)}
 .tr-wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
 .tr-cell{position:relative;height:150px;display:grid;place-items:center;border:1px solid #ffffff14;overflow:hidden}
-.tr-cell>small{position:absolute;top:6px;left:8px;font:8px ui-monospace,monospace;letter-spacing:.14em;color:#7d8794}
-.tr-time{position:relative;font:800 clamp(24px,8vw,32px)/1 ui-monospace,monospace;color:#f1f4f7;text-align:center}
+.tr-cell>small{position:absolute;z-index:3;top:6px;left:8px;font:11px ui-monospace,monospace;letter-spacing:.14em;color:#7d8794}
+.tr-time{position:relative;z-index:1;font:800 clamp(24px,8vw,32px)/1 ui-monospace,monospace;color:#f1f4f7;text-align:center}
 .tr-time span{display:block}.tr-time span+span{position:absolute;inset:0}
 .tr-time em{display:block;margin-top:8px;font:9px ui-monospace,monospace;font-style:normal;color:#ffd38a;letter-spacing:.1em}
-.tr-ring{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px;border:1px solid #ffd38a;border-radius:50%;opacity:0;pointer-events:none}
+.tr-ring{position:absolute;z-index:0;left:50%;top:50%;width:96px;height:96px;margin:-48px;border:1px solid #ffd38a;border-radius:50%;opacity:0;pointer-events:none}
 .setpiece.on .tr-ring{animation:trRing 1s ease-out var(--d) both}
-@keyframes trRing{0%{opacity:.9;transform:scale(.6)}100%{opacity:0;transform:scale(2.6)}}
-.tr-hand{position:absolute;inset:0;background:#020303;opacity:0}
+@keyframes trRing{0%{opacity:0;transform:scale(.9)}8%{opacity:.9}100%{opacity:0;transform:scale(2)}}
+.tr-hand{position:absolute;z-index:2;inset:0;background:#020303;opacity:0}
 .setpiece.on .tr-hand{animation:trCover .6s ease 3.5s forwards}
 @keyframes trCover{to{opacity:.88}}
-.tr-room{font:9px/1.7 ui-monospace,monospace;color:#c7cdd6;text-align:center}.tr-room b{display:block;font:800 clamp(24px,8vw,32px)/1 ui-monospace,monospace;color:#cfd6df;margin-bottom:8px}
+.tr-room{font:11px/1.7 ui-monospace,monospace;color:#c7cdd6;text-align:center}.tr-room b{display:block;font:800 clamp(24px,8vw,32px)/1 ui-monospace,monospace;color:#cfd6df;margin-bottom:8px}
 .tr-room i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#9ab6ff;margin-right:6px;vertical-align:1px}
 .setpiece.on .tr-room i{animation:slBeat 2.4s ease-in-out 1s infinite}
 /* 55화 sevenyes: 일곱 단계의 '네'가 같은 높이로 쌓이고, 4는 비어 있고, 6에서 알람이 멈춰 세운다 */
 #sevenyes .veil{background:radial-gradient(circle at 50% 38%,#12151a,#030405 72%)}
 .sy-list{display:grid;gap:4px;margin-top:8px}
-.sy-s{display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:8px;align-items:center;border:1px solid #ffffff16;padding:5px 9px;font:10px ui-monospace,monospace;color:#9aa3ae;min-height:27px}
+.sy-s{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:8px;align-items:center;border:1px solid #ffffff16;padding:5px 9px;font:12px ui-monospace,monospace;color:#9aa3ae;min-height:30px}
 .sy-s b{color:#e7edf3;font-weight:600;position:relative;text-align:right}
 .sy-s b span+span{position:absolute;right:0;top:0;white-space:nowrap}
 .sy-s.gap{border-style:dashed;border-color:#ffffff1a;color:#ffffff38}
-.sy-al{display:flex;gap:8px;align-items:center;justify-content:center;font:10px ui-monospace,monospace;color:#ffd38a;margin:2px 0}
+.sy-al{display:flex;gap:8px;align-items:center;justify-content:center;font:12px ui-monospace,monospace;color:#ffd38a;margin:2px 0}
 .sy-al i{width:7px;height:7px;border-radius:50%;background:#ffd38a;opacity:.15}
 .setpiece.on .sy-al i{animation:syRing .5s ease var(--d) 2 alternate}
 @keyframes syRing{to{opacity:1;box-shadow:0 0 10px #ffd38a}}
-.sy-res{margin-top:10px;text-align:center;font:10px ui-monospace,monospace;color:#c7cdd6;letter-spacing:.05em}
+.sy-res{margin-top:10px;text-align:center;font:11px ui-monospace,monospace;color:#c7cdd6;letter-spacing:.05em}
 .sy-end{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;font:16px/1.7 "Noto Serif KR",serif;color:#e8ecf2}
 .sy-cur{display:inline-block;width:2px;height:1.1em;background:#e8ecf2;margin-left:4px;vertical-align:-3px;opacity:0}
 .setpiece.on .sy-cur{animation:syBlink 1s steps(1) 11s infinite}
@@ -981,23 +979,23 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 <div class="setpiece" id="ledgersplit"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">클리닉 지하 2층 · 장부실</div><div class="sc-row" data-t=".2"><span>앵커 전환 공동 적립 · 미사용</span><b class="sc-n" style="font-size:22px">0.36M</b></div><div class="nx-bar" data-t=".6"><i style="--w:58.3%;--c:#9ab6ff;--d:1.2s"></i><i style="--w:8.3%;--c:#9ff0c6;--d:2s"></i><i style="--w:33.4%;--c:#ffd38a;--d:2.4s"></i></div><div class="sc-row" data-t="1.4"><span>동부 급수 펌프 비상 전원</span><b>0.21M</b></div><div class="sc-row" data-t="2.2"><span>전환 계획 표준안 공개</span><b>0.03M</b></div><div class="sc-row" data-t="2.8"><span>대기 후보 생활 지원</span><b>0.12M</b></div><div class="sc-q s" data-t="4"><small>장부 한 줄</small>반대는 없고, 동의도 아니에요.</div><div style="text-align:center;margin-top:8px" data-t="5"><span class="sc-stamp">처리 완료</span></div></div></div></div>
 <div class="setpiece" id="outsidetest"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">OUTSIDE CONDITION TEST</div><div class="sc-card" data-t=".2"><small>외부조건 분리 실험 (초안)</small>장소: 동부 27 노인정 · 24시간</div><div class="sc-row" data-t="1"><span>광고꿈 송출</span><b>없음</b></div><div class="sc-row" data-t="1.5"><span>TOKEN 인센티브</span><b>없음</b></div><div class="sc-row" data-t="2"><span>개인 AI 추천</span><b>없음</b></div><div class="sc-row" data-t="2.5"><span>참가</span><b>자원 · 중도 이탈 자유</b></div><div class="sc-row" data-t="3"><span>종료 후</span><b>다시 선택</b></div><div class="sc-row" data-t="4" data-g="5"><span>실행</span><b class="sc-gold">미정</b></div></div></div></div>
 <div class="setpiece" id="seniorline"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">REFERENCE LINE 04</div>
-<div data-t=".2"><div class="sl-row sen"><small>선임</small><svg viewBox="0 0 300 36" preserveAspectRatio="none"><path class="sl-base" pathLength="100" d="M0 18 H40 l6 -12 l7 24 l6 -12 H120 l6 -12 l7 24 l6 -12 H200 l6 -12 l7 24 l6 -12 H300"/><path class="sl-pulse" pathLength="100" d="M0 18 H40 l6 -12 l7 24 l6 -12 H120 l6 -12 l7 24 l6 -12 H200 l6 -12 l7 24 l6 -12 H300"/><path class="sl-flat" d="M0 18 H300"/></svg></div></div>
+<div data-t=".2"><div class="sl-row sen"><small>선임</small><svg viewBox="0 0 300 36" preserveAspectRatio="none"><path class="sl-base" pathLength="100" d="M0 18 H40 l6 -12 l7 24 l6 -12 H120 l6 -12 l7 24 l6 -12 H200 l6 -12 l7 24 l6 -12 H300"/><path class="sl-pulse" pathLength="100" d="M0 18 H40 l6 -12 l7 24 l6 -12 H120 l6 -12 l7 24 l6 -12 H200 l6 -12 l7 24 l6 -12 H300"/></svg></div></div>
 <div data-t=".5"><div class="sl-row cur"><small>현역</small><svg viewBox="0 0 300 36" preserveAspectRatio="none"><path class="sl-base" pathLength="100" d="M0 18 H40 l6 -12 l7 24 l6 -12 H120 l6 -12 l7 24 l6 -12 H200 l6 -12 l7 24 l6 -12 H300"/><path class="sl-pulse" pathLength="100" d="M0 18 H40 l6 -12 l7 24 l6 -12 H120 l6 -12 l7 24 l6 -12 H200 l6 -12 l7 24 l6 -12 H300"/></svg></div></div>
 <div data-t=".8"><div class="sl-row suc"><small>후계</small><svg viewBox="0 0 300 36" preserveAspectRatio="none"><path d="M0 18 H300"/></svg></div></div>
-<div class="sl-state" data-t="2.8">SENIOR REFERENCE: <b class="sc-red">OFFLINE</b></div>
+<div class="sl-state" data-t="2.8">SENIOR REFERENCE: <b>OFFLINE</b></div>
 <div class="sc-q" data-t="3.9" style="text-align:center">“평생인데.”</div>
 <div class="sl-pool" data-t="5.2"><i></i>참여자 1 · 입면 21:58 · 진행 중</div></div></div></div>
-<div class="setpiece" id="sandsticks"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">REAL SAND</div>
+<div class="setpiece" id="sandsticks"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">토요일 · 바다</div>
 <div class="ss-ad" data-t=".2" data-d="1.9"><small>광고꿈 바다</small>안 붙는대.</div>
 <div class="ss-stage"><div class="ss-foot"><svg viewBox="0 0 170 230"><path d="M85 224 C60 224 50 200 52 170 C54 140 44 118 46 88 C48 58 62 40 85 40 C108 40 124 58 122 90 C120 120 112 140 116 170 C119 200 110 224 85 224 Z"/><ellipse cx="60" cy="24" rx="7" ry="9"/><ellipse cx="75" cy="16" rx="8" ry="10"/><ellipse cx="92" cy="14" rx="9" ry="11"/><ellipse cx="108" cy="18" rx="7" ry="9"/><ellipse cx="120" cy="28" rx="6" ry="8"/></svg><i class="ss-g" style="left:97px;top:50px;--d:1.27s"></i><i class="ss-g" style="left:75px;top:46px;--d:1.40s"></i><i class="ss-g" style="left:61px;top:92px;--d:2.37s"></i><i class="ss-g" style="left:92px;top:161px;--d:1.16s"></i><i class="ss-g" style="left:88px;top:75px;--d:1.11s"></i><i class="ss-g" style="left:103px;top:185px;--d:2.61s"></i><i class="ss-g" style="left:99px;top:118px;--d:1.41s"></i><i class="ss-g" style="left:99px;top:136px;--d:2.66s"></i><i class="ss-g" style="left:81px;top:74px;--d:0.82s"></i><i class="ss-g" style="left:68px;top:141px;--d:0.98s"></i><i class="ss-g" style="left:79px;top:139px;--d:1.22s"></i><i class="ss-g" style="left:81px;top:210px;--d:1.58s"></i><i class="ss-g" style="left:113px;top:86px;--d:1.88s"></i><i class="ss-g" style="left:102px;top:192px;--d:1.46s"></i><i class="ss-g" style="left:108px;top:201px;--d:2.73s"></i><i class="ss-g" style="left:88px;top:161px;--d:2.69s"></i><i class="ss-g" style="left:87px;top:71px;--d:1.94s"></i><i class="ss-g" style="left:85px;top:161px;--d:2.77s"></i><i class="ss-g" style="left:111px;top:71px;--d:2.52s"></i><i class="ss-g" style="left:102px;top:217px;--d:2.75s"></i><i class="ss-g" style="left:69px;top:80px;--d:1.97s"></i><i class="ss-g" style="left:63px;top:189px;--d:1.01s"></i><i class="ss-g" style="left:69px;top:196px;--d:1.93s"></i><i class="ss-g" style="left:67px;top:73px;--d:0.90s"></i><i class="ss-g" style="left:77px;top:59px;--d:1.62s"></i><i class="ss-g" style="left:69px;top:76px;--d:2.79s"></i><i class="ss-g" style="left:90px;top:157px;--d:1.59s"></i><i class="ss-g" style="left:92px;top:190px;--d:2.17s"></i><i class="ss-g" style="left:102px;top:91px;--d:2.70s"></i><i class="ss-g" style="left:99px;top:132px;--d:2.22s"></i><i class="ss-g" style="left:81px;top:212px;--d:1.57s"></i><i class="ss-g" style="left:62px;top:64px;--d:1.83s"></i><i class="ss-g" style="left:71px;top:62px;--d:1.05s"></i><i class="ss-g" style="left:103px;top:188px;--d:2.37s"></i><i class="ss-g" style="left:101px;top:135px;--d:2.10s"></i><i class="ss-g" style="left:92px;top:90px;--d:1.45s"></i><i class="ss-g" style="left:112px;top:46px;--d:1.67s"></i><i class="ss-g" style="left:78px;top:71px;--d:2.51s"></i><i class="ss-g" style="left:77px;top:157px;--d:0.90s"></i><i class="ss-g" style="left:109px;top:58px;--d:1.24s"></i><i class="ss-g" style="left:82px;top:201px;--d:2.06s"></i><i class="ss-g" style="left:84px;top:198px;--d:2.38s"></i><i class="ss-g" style="left:99px;top:63px;--d:1.88s"></i><i class="ss-g" style="left:68px;top:132px;--d:2.06s"></i><i class="ss-g" style="left:88px;top:178px;--d:0.82s"></i><i class="ss-g" style="left:89px;top:204px;--d:1.94s"></i><i class="ss-g" style="left:62px;top:25px;--d:1.91s"></i><i class="ss-g" style="left:58px;top:25px;--d:0.95s"></i><i class="ss-g" style="left:75px;top:18px;--d:1.86s"></i><i class="ss-g" style="left:73px;top:18px;--d:1.31s"></i><i class="ss-g" style="left:94px;top:11px;--d:1.49s"></i><i class="ss-g" style="left:96px;top:14px;--d:2.38s"></i><i class="ss-g" style="left:108px;top:17px;--d:2.47s"></i><i class="ss-g" style="left:107px;top:20px;--d:0.82s"></i><i class="ss-g" style="left:123px;top:28px;--d:0.97s"></i><i class="ss-g" style="left:120px;top:28px;--d:2.07s"></i><i class="ss-g" style="left:68px;top:29px;--d:2.65s"></i><i class="ss-g" style="left:84px;top:32px;--d:2.07s"></i><i class="ss-g" style="left:100px;top:30px;--d:1.48s"></i><i class="ss-g" style="left:114px;top:28px;--d:2.29s"></i></div><div class="ss-floor"></div></div>
-<div class="ss-qs"><div class="sc-q" data-t="3.1">“붙네.”</div><div class="sc-q" data-t="4.9">“붙어.”</div></div>
-<div class="sc-q" data-t="6.4" style="text-align:center">“몰랐어.”</div></div></div></div>
-<div class="setpiece" id="facenumber"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">PARTICIPANT</div>
+<div class="ss-qs"><div class="sc-q" data-t="3.4">“붙네.”</div><div class="sc-q" data-t="5.2">“붙어.”</div></div>
+<div class="sc-q" data-t="6.6" style="text-align:center">“몰랐어.”</div></div></div></div>
+<div class="setpiece" id="facenumber"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">참여자 1</div>
 <div class="fn-top"><div class="fn-one" data-t=".1" data-d="4.6">1</div><div class="fn-candy" data-p="3.2"><svg viewBox="0 0 44 20"><path d="M2 4 L11 10 L2 16 Z"/><path d="M42 4 L33 10 L42 16 Z"/><ellipse cx="22" cy="10" rx="11" ry="8"/></svg></div></div>
-<div class="sc-q s" data-t=".9"><small>할머니</small>“몇 번이에요?”</div>
+<div class="fn-qs"><div class="sc-q s" data-t=".9"><small>할머니</small>“몇 번이에요?”</div>
 <div class="sc-q s" data-t="1.9"><small>정수기 옆 남자</small>“1번이요. 번호가 그렇게 나와요.”</div>
-<div class="sc-q s" data-t="3.5">“졸릴 때 먹어요.”</div>
-<div class="fn-alarm" data-t="5"><small>알람</small><b>22:00</b><small>이름</small><span class="fn-blank"></span></div>
+<div class="sc-q s" data-t="3.5"><small>할머니</small>“졸릴 때 먹어요.”</div></div>
+<div class="fn-alarm" data-t="5"><small>알람</small><b>22:00</b><span></span><span class="fn-blank"></span></div>
 <div class="sc-q" data-t="6.3" style="text-align:center">“그냥 둬.”</div></div></div></div>
 <div class="setpiece" id="tworings"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label" data-t=".1">변경 요청자: 본인</div>
 <div class="tr-wrap"><div class="tr-cell" data-t=".3"><small>9층 식탁</small><div class="tr-time"><span data-o="1.6">21:57</span><span data-t="1.6">22:00</span></div><i class="tr-ring" style="--d:1.7s"></i><i class="tr-ring" style="--d:2.3s"></i><i class="tr-ring" style="--d:2.9s"></i><div class="tr-hand"></div></div>
@@ -1009,7 +1007,7 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 <div class="sy-s" data-t=".3"><span>1 / 7</span><span>계속하시겠습니까.</span><b>네.</b></div>
 <div class="sy-s" data-t=".9"><span>2 / 7</span><span>계속하시겠습니까.</span><b>네.</b></div>
 <div class="sy-s" data-t="1.5"><span>3 / 7</span><span>계속하시겠습니까.</span><b>네.</b></div>
-<div class="sy-s gap" data-t="2.1"><span>4 / 7</span><span></span><b></b></div>
+<div class="sy-s gap" data-t="2.1"><span>4 / 7</span><span>계속하시겠습니까.</span><b></b></div>
 <div class="sy-s" data-t="2.6"><span>5 / 7</span><span>계속하시겠습니까.</span><b>네.</b></div>
 <div class="sy-s" data-t="3.3"><span>6 / 7</span><span>계속하시겠습니까.</span><b><span class="sc-gold" data-t="3.9" data-o="7">잠깐만.</span><span data-t="7.1">계속해요.</span></b></div>
 <div class="sy-al" data-t="4.3" data-k="6.6"><span>10:00</span><i style="--d:4.5s"></i><i style="--d:5s"></i><i style="--d:5.5s"></i></div>
