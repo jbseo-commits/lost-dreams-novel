@@ -1019,6 +1019,21 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .so-card .val{font-size:12px;font-weight:700;color:#72e8ff}
 .so-quote{margin-top:14px;padding:12px;border:1px solid #72e8ff44;background:#72e8ff08;text-align:center;font:700 15px/1.5 "Noto Serif KR",serif;color:#edf9fc}
 .so-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#6d8090}
+/* 65화 opendoor: 열린 문과 바닥의 경사 */
+#opendoor .veil{background:radial-gradient(circle at 50% 40%,#141920,#05070a 75%)}
+.od-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#080b0fe0;font:11px/1.8 ui-monospace,monospace;color:#95a5b5}
+.od-gate{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #75899b44;background:#75899b0c;margin:10px 0}
+.od-gate-title{font-size:12px;font-weight:700;color:#d8e3ec;letter-spacing:.05em}
+.od-gate-badge{padding:3px 8px;background:#44aa7722;border:1px solid #44aa7766;color:#66dd99;font-size:10px;font-weight:700;border-radius:2px}
+.od-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.od-stat{padding:8px;border:1px solid #ffffff0c;background:#ffffff03}
+.od-stat span{display:block;font-size:9px;color:#667b8d}
+.od-stat b{font-size:13px;color:#e1ebf2}
+.od-slope{position:relative;height:54px;margin:12px 0;border:1px dashed #75899b33;border-radius:3px;overflow:hidden;background:#040608}
+.od-slope-line{position:absolute;top:10px;left:0;right:0;bottom:10px;background:linear-gradient(170deg,transparent 48%,#75899b55 49%,#75899b88 51%,transparent 53%)}
+.od-slope-tag{position:absolute;bottom:4px;right:8px;font-size:9px;color:#75899b;letter-spacing:.1em}
+.od-quote{margin-top:12px;padding:12px;border:1px solid #75899b55;background:#75899b10;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#edf3f8}
+.od-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#6b7d8e}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1582,7 +1597,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=64,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=65,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -1649,6 +1664,7 @@ const D={
 62:{a:'#d4a373',b:'#7d5e42',token:'∞',sync:0,ghost:"+4 YEARS",hook:"그 어떤 반란도 시작조차 되지 않는 무결점의 감옥.",sp:'fouryears',at:.8,on:"“하라고 했으면 미워하면 되잖아요.”",w:900,ms:10000},
 63:{a:'#c97a8e',b:'#6e4550',token:'∞',sync:0,ghost:"+5Y 11M",hook:"이 도시는 가장 순결한 사랑을 가장 잔인한 부품으로 갈아 넣고 있었다.",sp:'fiveeleven',at:.8,on:"“엄마를 버리고 얻은 행복은…… 저한테는 행복이 아니에요.”",w:900,ms:10000},
 64:{a:'#7eb8d4',b:'#496d80',token:'∞',sync:0,ghost:"6 OPTIONS",hook:"그래서 더더욱, 그 누구도 깨부술 수 없는 무적의 벽이 되어 서인의 앞을 가로막고 있었다.",sp:'sixoptions',at:.8,on:"“선택지를 늘린 게 아니야. 부담을 고르는 방법이 늘어난 거지.”",w:900,ms:10000},
+65:{a:'#75899b',b:'#425261',token:'∞',sync:0,ghost:"OPEN DOOR",hook:"서인은 이제 문보다 바닥을 봐야 한다고 생각했다.",sp:'opendoor',at:.8,on:"“열려 있는데 아무도 못 나가는 문은 무엇을 고쳐야 합니까?”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1745,7 +1761,8 @@ const KEY={
 61:["“우리는 단 한 번도 앵커를 강제로 연결한 적이 없습니다.”","“사람들은 바보가 아닙니다. 다 자기 머리로 계산하고 자기 손으로 고른 겁니다.”"],
 62:["“하라고 했으면 미워하면 되잖아요.”","“문은 활짝 열려 있었습니다. 하지만 그 문밖으로 걸어 나가려면, 내 등 뒤에 서 있는 가장 소중한 사람의 발목을 밟고 지나가야만 했습니다.”"],
 63:["“엄마를 버리고 얻은 행복은…… 저한테는 행복이 아니에요.”","“차라리 엄마가 나쁜 사람이었으면 좋겠어요.”"],
-64:["“선택지를 늘린 게 아니야. 부담을 고르는 방법이 늘어난 거지.”","“자기가 판 구덩이가 얼마나 깊은지는 직접 파본 놈만 아는 법이니까.”"]
+64:["“선택지를 늘린 게 아니야. 부담을 고르는 방법이 늘어난 거지.”","“자기가 판 구덩이가 얼마나 깊은지는 직접 파본 놈만 아는 법이니까.”"],
+65:["“열려 있는데 아무도 못 나가는 문은 무엇을 고쳐야 합니까?”","“그 둘이 같이 참이라 제일 귀찮지.”","문은 열려 있었다.","서인은 이제 문보다 바닥을 봐야 한다고 생각했다."]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
