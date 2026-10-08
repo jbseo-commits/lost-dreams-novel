@@ -1,5 +1,7 @@
 # 변경 기록
 
+- 2026-10-09 · Antigravity · 원고: 제61~70화(«물리력 없는 강제» 및 «혁명 실험실» 아크) 집필 및 pilot.html 웹 연출(coercionzero, fouryears, fiveeleven, sixoptions, opendoor, thirtydays, betters, notbetters, whosesuccess, turnonagain) 동시 구현, §4-2 구조·인과·단서·반대 검수 전원 통과(평균 9.5+ / 치명·중대 결함 0건). 제70화 «다시 켜는 날»로 모자이크 자율 선택 및 재선택권 테마 확정.
+
 - 2026-10-09 · ChatGPT · 작가 승인에 따라 집필 루프에 구조·인과·인물·단서 회계·반대 검수 게이트 추가. 8화에서 드러난 미회수 비언어적 단서와 추론 비약을 재발 방지 사례로 기록하고, 수정 후 재검증 및 삭제/연결/범퍼 확장 비교를 의무화. FORWARD/READER AUDIT/BUMPER 모두 적용. 별도 브랜치 작업이며 원고·main 미수정.
 
 - 2026-10-08 · Claude · 제51~55화 공개(새 노선, 하진의 할머니 해방과 자발 재연결): 원고 5화와 웹 연출 5종(seniorline·sandsticks·facenumber·tworings·sevenyes). 작가 지시 "연출은 언제나 마스터피스로"에 따라 연출도 편집 검수 9점으로 통과시킨 뒤 공개. story-so-far·settings/05(제안, 미체크)·CURRENT-LINE 갱신. 옛 노선 51·52 제안은 폐기 표시.
