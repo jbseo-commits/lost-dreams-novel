@@ -1247,6 +1247,18 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .ds-card span{display:block;font-size:9px;color:#7086a3}
 .ds-quote{margin-top:12px;padding:12px;border:1px solid #526e9455;background:#526e9414;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#f0f5fc}
 .ds-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#6b829e}
+/* 97화 powerlesstruth: 두 번째 벽과 진실의 무력함 */
+#powerlesstruth .veil{background:radial-gradient(circle at 50% 40%,#191012,#0a0506 75%)}
+.pt-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#14080ae0;font:11px/1.8 ui-monospace,monospace;color:#c9a2a7}
+.pt-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.pt-title{font-size:12px;font-weight:700;color:#fce8ea}
+.pt-badge{font-size:10px;font-weight:700;color:#b86e7a;padding:2px 8px;border:1px solid #b86e7a44;background:#b86e7a10}
+.pt-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.pt-item{padding:6px 8px;border:1px solid #963f4f33;background:#963f4f08;font-size:9px}
+.pt-item b{color:#f7d4d9;display:block;margin-bottom:1px}
+.pt-item span{color:#c07e8b}
+.pt-quote{margin-top:12px;padding:12px;border:1px solid #963f4f55;background:#963f4f14;text-align:center;font:700 14px/1.6 "Noto Serif KR",serif;color:#fff2f4}
+.pt-sub{margin-top:10px;text-align:center;font:10px ui-monospace;color:#9e6d75}
 /* 96화 deathofcondition: 첫 번째 벽과 조건의 죽음 */
 #deathofcondition .veil{background:radial-gradient(circle at 50% 40%,#180e0e,#0a0505 75%)}
 .dc-box{width:min(490px,94vw);padding:18px;border:1px solid #ffffff14;background:#140808e0;font:11px/1.8 ui-monospace,monospace;color:#c79e9e}
@@ -1698,6 +1710,19 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 
 
 
+
+<div class="setpiece" id="powerlesstruth"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">EP097 · THE SECOND WALL</div>
+<div class="pt-box">
+<div class="pt-header"><span class="pt-title">진실의 무력함과 피로의 벽</span><span class="pt-badge">POWERLESS TRUTH</span></div>
+<div class="pt-grid">
+  <div class="pt-item"><b>420만 대 강제 살포</b><span>영유아 착취 백서 폭로</span></div>
+  <div class="pt-item"><b>대중의 냉소적 반응</b><span>“다 알고 써, 스팸 꺼라”</span></div>
+  <div class="pt-item"><b>검색 트렌드 1위</b><span>‘팝업 끄는 법 우회 팁’</span></div>
+  <div class="pt-item"><b>명제의 사망</b><span>[진실을 알려라] 폐기</span></div>
+</div>
+<div class="pt-quote" data-t="1.8">“진실은 대중을 깨우지 못합니다. 피로가 진실보다 훨씬 더 무겁기 때문입니다.”</div>
+<div class="pt-sub" data-t="3.2">진실 공개의 완전한 실패. 서인은 최하층 진짜 피해자들의 심연을 향해 나아간다.</div>
+</div></div></div></div>
 
 <div class="setpiece" id="deathofcondition"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">EP096 · THE FIRST WALL</div>
 <div class="dc-box">
@@ -2340,7 +2365,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=96,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=97,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -2439,6 +2464,7 @@ const D={
 94:{a:'#9c3b49',b:'#45121a',token:'0',sync:0,ghost:"THE LAST QUESTION",hook:"선대의 모든 실패를 지나, 스승의 가장 깊은 금기를 정면으로 돌파한 서인의 발걸음은, 마침내 제2부의 종착점이자 거대한 대전환의 문턱을 향해 거침없이 전진하고 있었다.",sp:'finalquestion',at:.8,on:"“체제를 강제로 끊어낼 것인가, 아니면 영원한 마취 속에서 모두가 함께 썩어갈 것인가.”",w:900,ms:10000},
 95:{a:'#753f96',b:'#321545',token:'0',sync:0,ghost:"END OF MONOPOLY",hook:"그 지옥의 질문을 향해, 서인은 단 한 걸음도 물러서지 않고 마침내 마지막 아크의 문을 열어젖히기 시작했다.",sp:'endofmonopoly',at:.8,on:"“내 독점은 끝났다. 내가 15년 동안 혼자 틀어쥐고 있었던 저 무덤의 문을 열고, 다음 걸음을 내딛는 것은…… 이제 네 몫이다.”",w:900,ms:10000},
 96:{a:'#9e3f3f',b:'#451515',token:'0',sync:0,ghost:"DEATH OF CONDITION",hook:"두 번째 거대한 절벽을 향해, 서인의 차가운 발걸음이 단호하게 내딛어졌다.",sp:'deathofcondition',at:.8,on:"“첫 번째 문이 영원히 닫힌 겁니다. 환경을 바꾸어 대중을 깨우겠다는 방식은 체제를 단 1밀리미터도 움직일 수 없다는 사실이, 이제 피할 수 없는 수학적 결론으로 증명되었습니다.”",w:900,ms:10000},
+97:{a:'#9e3f53',b:'#45151f',token:'0',sync:0,ghost:"POWERLESS TRUTH",hook:"세 번째 벽. «피해자의 거부».",sp:'powerlesstruth',at:.8,on:"“진실은 대중을 깨우지 못합니다. 왜냐하면 피로가 진실보다 훨씬 더 무겁기 때문입니다.”",w:900,ms:10000},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -2567,7 +2593,8 @@ const KEY={
 93:["“새로운 게 없대요. 도윤 씨는 이 세상에 이제 새로운 저항이란 없대요. 싸워보지도 못하고 이미 패잔병이 되어버린 기분이에요.”","“새로운 길이가 없었던 게 아닙니다. 당신이 지난 27년 동안 걸어왔던 그 네 가지 실패는, 실은 '단 하나의 길'에 불과했습니다. 전부 '조건을 바꾸는 방식'이었다는 점입니다!”","“조건을 바꾸는 것이 아니라, '인간과 체제를 잇는 연결선 자체를 강제로 단절하는 것'. 대중이 원하든 원하지 않든 체제의 마취제를 물리적으로 뜯어내고 강제로 단절시키는 것. 도윤 씨, 당신은 이 길을 가본 적이 있습니까?”","새로운 것은 없다는 도윤의 철옹성에, 마침내 돌이킬 수 없는 거대한 균열이 쩍 하고 갈라져 터지는 순간이었다."],
 94:["‘- 총 치명적 희생자: 도시 인구의 약 12.2% (약 14만 6천 명 추산).’","“체제를 부수겠다는 명분으로 14만 명의 목숨을 도살장에 밀어 넣고, 살아남은 자들을 지옥의 아비규환에 빠뜨리는 것…… 그게 학살자가 아니면 대체 뭐란 말이냐!”","“12%를 죽이는 것이 괴물이라면, 100%가 서서히 도살당하는 것을 뻔히 보면서도 손에 피를 묻히기 싫어 눈을 감고 방관하는 자는…… 과연 인간입니까?”","‘체제를 강제로 끊어낼 것인가, 아니면 영원한 마취 속에서 모두가 함께 썩어갈 것인가.’"],
 95:["“우리는 도윤 씨를 해방해야 합니다. 도윤 씨를 저 끔찍한 장례식장의 상주 자리에서 끌어내리고, 실패의 공포와 피의 무게를 우리 모두가 나누어 짊어져야 합니다! 실패의 독점은 오늘로 끝납니다.”","“……그래, 서인아. 내 독점은 끝났다. 내가 15년 동안 혼자 틀어쥐고 있었던 저 무덤의 문을 열고, 다음 걸음을 내딛는 것은…… 이제 네 몫이다.”","이제 서인은 더 이상 스승의 보호를 받는 분석관이 아니었다. 선대의 모든 실패를 흡수하고, 스승의 독점적 권력을 해체하며, 가장 잔혹한 진짜 질문의 무게를 두 어깨에 짊어진 새로운 역사의 주체였다.","‘강제로 한 번 끊어야 하는가.’ 그 지옥의 질문을 향해, 서인은 단 한 걸음도 물러서지 않고 마침내 마지막 아크의 문을 열어젖히기 시작했다."],
-96:["‘- 오르비스 [케어 드림 파운데이션] 유료 약정 전환율: 62.8%.’","“당신들이 준 깨끗한 잠은…… 가난뱅이에겐 감당이 안 되는 생지옥이야! 맨정신으로 잠들면 내 삶이 얼마나 시궁창인지 밤새 확인해야 해!”","‘조건을 바꾸어라. 사람을 바꾸려 하지 말고.’ 이제 그 명제는 단순한 취소선이 아니라, 차가운 묘비명이 되어 있었다.","“첫 번째 문이 영원히 닫힌 겁니다. 환경을 바꾸어 대중을 깨우겠다는 방식은 체제를 단 1밀리미터도 움직일 수 없다는 사실이, 이제 피할 수 없는 수학적 결론으로 증명되었습니다.”"]
+96:["‘- 오르비스 [케어 드림 파운데이션] 유료 약정 전환율: 62.8%.’","“당신들이 준 깨끗한 잠은…… 가난뱅이에겐 감당이 안 되는 생지옥이야! 맨정신으로 잠들면 내 삶이 얼마나 시궁창인지 밤새 확인해야 해!”","‘조건을 바꾸어라. 사람을 바꾸려 하지 말고.’ 이제 그 명제는 단순한 취소선이 아니라, 차가운 묘비명이 되어 있었다.","“첫 번째 문이 영원히 닫힌 겁니다. 환경을 바꾸어 대중을 깨우겠다는 방식은 체제를 단 1밀리미터도 움직일 수 없다는 사실이, 이제 피할 수 없는 수학적 결론으로 증명되었습니다.”"],
+97:["‘— [오르비스 테크놀로지스 1급 대외비: 수면망 착취 백서 전문] 1. 영유아 생체 뇌파 탈취 및 상위 1% 렘수면 동기화 프로젝트 실측 데이터.’","“아가씨, 그걸 누가 몰라? 다 알고 살아! 알고 사는데 어쩌라고! 당장 네 시간 뒤면 새벽 첫 배달 나가야 하는데, 잠 안 자고 시청 가서 소리 지르면 그놈들이 밥을 먹여줘?”","‘진실을 대중에게 알려라. 인간은 진실 앞에서 존엄을 되찾을 것이다.’ 그리고 그 문장 위로 주저 없이 거대한 대각선을 그어 내렸다.","“진실은 대중을 깨우지 못합니다. 왜냐하면 피로가 진실보다 훨씬 더 무겁기 때문입니다.”"]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
