@@ -1086,6 +1086,28 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .spr-out{display:flex;justify-content:flex-end;width:min(320px,100%);margin:0 auto}
 .spr-sheet{background:#efeadf;color:#2a2622;padding:8px 10px;transform:rotate(1.2deg);box-shadow:0 6px 18px #0008;font:21px/1.3 "Nanum Pen Script",cursive;white-space:nowrap}
 .spr-sheet small{display:block;font:9.5px ui-monospace,monospace;color:#6f6a5f}
+/* 65화 slope: 열린 문 앞을 안내선 따라 지나가는 걸음. 바닥이 기울어 있다는 게 보이는 순간 */
+#slope .veil{background:radial-gradient(circle at 50% 44%,#0f1216,#030405 72%)}
+.sl-stage{position:relative;width:300px;height:150px;margin:40px auto 0}
+.setpiece.on .sl-stage{animation:slTilt 1.6s cubic-bezier(.4,0,.2,1) 4.6s forwards}
+@keyframes slTilt{to{transform:rotate(7deg)}}
+.sl-wall{position:absolute;left:0;right:0;top:30px;height:0;border-top:1.5px solid #8d96a2}
+.sl-floor{position:absolute;left:0;right:0;top:112px;border-top:1.5px solid #8d96a2}
+.sl-gap{position:absolute;left:96px;top:26px;width:46px;height:10px;background:#0b0e12}
+.sl-door{position:absolute;left:96px;top:30px;width:44px;border-top:2px solid #c7cdd6;transform-origin:0 0;transform:rotate(-62deg)}
+.sl-stop{position:absolute;left:120px;top:2px;width:6px;height:5px;background:#5d6570;border-radius:1px}
+.sl-sign{position:absolute;left:146px;top:4px;font:9.5px ui-monospace,monospace;color:#c7cdd6;white-space:nowrap;transform:translateY(-14px)}
+.sl-line{position:absolute;left:10px;right:40px;top:78px;border-top:2px solid #5fbf8a88}
+.sl-elev{position:absolute;right:6px;top:58px;width:28px;height:40px;border:1.5px solid #8d96a2;border-radius:2px}
+.sl-elev::after{content:"";position:absolute;left:13px;top:0;bottom:0;border-left:1px solid #8d96a2}
+.sl-who{position:absolute;left:12px;top:70px;width:14px;height:14px;border-radius:50%;background:#e9edf2;box-shadow:0 0 10px #ffffff55}
+.setpiece.on .sl-who{animation:slWalk 3.2s linear .8s forwards}
+@keyframes slWalk{80%{opacity:1}to{transform:translateX(252px);opacity:0}}
+.sl-drop{position:absolute;top:107px;width:4px;height:4px;border-radius:50%;background:#c7cdd6;opacity:0}
+.setpiece.on .sl-drop{animation:slRun 2.4s ease-in var(--d) infinite}
+@keyframes slRun{0%{opacity:0;transform:translateX(0)}15%{opacity:.9}100%{opacity:0;transform:translateX(150px)}}
+.sl-cap{margin:22px auto 0;max-width:300px;text-align:center;font:14px/1.6 "Noto Serif KR",serif;color:#e9edf2;word-break:keep-all}
+
 
 
 .sy-cap{margin-top:16px;text-align:center;font:14px/1.5 "Noto Serif KR",serif;color:#e9edf2}
@@ -1238,6 +1260,9 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="spr-tot" data-t="4.2">부담 총량 · 시범 전 대비 <b>−8%</b></div>
 <div class="spr-flow"><i style="--d:5.2s;--x:90px"></i><i style="--d:5.5s;--x:96px"></i><i style="--d:5.8s;--x:102px"></i><i style="--d:6.1s;--x:96px"></i><i style="--d:6.4s;--x:108px"></i></div></div>
 <div class="spr-out" data-t="5"><div class="spr-sheet"><small>계열 10 분산 참조풀</small>1번 · 밤 9시 소등.</div></div></div></div></div>
+<div class="setpiece" id="slope"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">기준계열 정기 점검 센터 · 복도 끝</div>
+<div class="sl-stage"><span class="sl-sign">해제 상담실 · 예약 없이 들어오세요.</span><i class="sl-wall"></i><i class="sl-gap"></i><i class="sl-door"></i><i class="sl-line"></i><i class="sl-elev"></i><i class="sl-who"></i><i class="sl-floor"></i><i class="sl-drop" style="left:20px;--d:5.4s"></i><i class="sl-drop" style="left:70px;--d:5.9s"></i><i class="sl-drop" style="left:40px;--d:6.4s"></i><i class="sl-drop" style="left:110px;--d:6.9s"></i></div>
+<div class="sl-cap" data-t="7.2">“열려 있는데 아무도 못 나가는 문은 무엇을 고쳐야 합니까.”</div></div></div></div>
 <div class="setpiece" id="twozero"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">보안 검토 · 연산 사용 기록</div><div class="sc-row" data-t=".3"><span>신고서 작성</span><b class="sc-red">2,640 TOKEN</b></div><div class="sc-row" data-t="1.6"><span>서인 · 판단 시점</span><b class="sc-n">0 TOKEN</b></div><div class="sc-card" data-t="2.8"><small>나란히</small>2,640 : 0</div></div></div></div>
 <div class="setpiece" id="retape"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">현관문 안쪽 · 다시 붙인 밤</div><div class="sc-row" data-t=".2"><span>테이프</span><b class="sc-n">네 귀퉁이</b></div><div class="sc-row" data-t="1.1"><span>손바닥으로 누름</span><b class="sc-n">세 번</b></div><div class="sc-card" data-t="2.2"><small>김하린 빵집</small><span style="display:inline-block;transform:rotate(-9deg) translateY(2px)">매</span>일 엽니다</div></div></div></div>
 <div class="setpiece" id="reasons"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">공방 앞 계단 · 준비해 온 말</div><div class="sc-row" data-t=".2"><span data-k="1">이자 없어</span><b class="sc-red" data-t="1">잘림</b></div><div class="sc-row" data-t=".5"><span data-k="1.6">나중에 갚을게</span><b class="sc-red" data-t="1.6">잘림</b></div><div class="sc-row" data-t=".8"><span data-k="2.2">약값 말고 그냥</span><b class="sc-red" data-t="2.2">잘림</b></div><div class="sc-row" data-t="2.8"><span>약</span><b class="sc-red">아빠 약병에 이름</b></div><div class="sc-card" style="text-align:center" data-t="3.8"><small>이유 0 · 남은 것</small><strong data-g="4.6">핑계 하나</strong></div></div></div></div>
@@ -1620,7 +1645,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=64,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=65,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],8:['8-1','8-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -1689,6 +1714,7 @@ const D={
 62:{a:'#e6dfd2',b:'#8f877a',token:'∞',sync:0,ghost:"4",hook:"다른 줄들은 아직 그 음에 맞춰지기를 기다리고 있었다.",sp:'sympathetic',at:.8,on:"“하라고 했으면 미워하면 되잖아요.”",w:900,ms:9400},
 63:{a:'#dde2ea',b:'#7f8996',token:'∞',sync:0,ghost:"5년 11개월",hook:"안방 쪽 벽 너머에서는 아무 소리도 나지 않았다. 엄마는 11시에 이미 연결돼 있었다.",sp:'prefilled',at:.8,on:"후보 1순위 · 이나래.",w:900,ms:9600},
 64:{a:'#e4e2d6',b:'#8a8676',token:'∞',sync:0,ghost:"−8%",hook:"벽에 붙은 어느 줄보다 이른 시각이었다.",sp:'spread',at:.8,on:"“부담을 고르는 방법이 늘어난 거죠.”",w:900,ms:9800},
+65:{a:'#d8e0e8',b:'#7b8794',token:'∞',sync:0,ghost:"OPEN",hook:"그리고 다시 같은 쪽으로 흘렀다.",sp:'slope',at:.8,on:"“닫아 놓은 적도 없습니다.”",w:900,ms:9800},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1785,7 +1811,8 @@ const KEY={
 61:["“우리는 단 한 번도 앵커를 강제로 연결한 적이 없습니다.”","“그건 강제라고 하지 않고 사정이라고 합니다.”"],
 62:["“하라고 했으면 미워하면 되잖아요.”","“다시 돌아가도 안 합니다.”"],
 63:["“네가 안 해도 우리 괜찮아.”","“5년 11개월.”"],
-64:["“부담을 고르는 방법이 늘어난 거죠.”","“그러니까 쓰는 거야. 나 나가는 데 쓰는 거야. 엄마 나오는 데도.”"]
+64:["“부담을 고르는 방법이 늘어난 거죠.”","“그러니까 쓰는 거야. 나 나가는 데 쓰는 거야. 엄마 나오는 데도.”"],
+65:["“열려 있는데 아무도 못 나가는 문은 무엇을 고쳐야 합니까.”","“제가 부르면, 제가 경사가 되잖아요.”"]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
