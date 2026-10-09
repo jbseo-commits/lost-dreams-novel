@@ -977,17 +977,17 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 /* 59화 tenthirty: 아무도 시키지 않은 소등 시각이 손글씨로 그어지고, 그 아래 9층의 10시 반이 희미하게 겹친다 */
 #tenthirty .veil{background:radial-gradient(circle at 50% 40%,#14140f,#040403 72%)}
 .tt-sheet{position:relative;margin:8px auto 0;width:min(300px,100%);background:#efeadf;color:#2b2a26;padding:16px 16px 22px;transform:rotate(-.8deg);box-shadow:0 8px 24px #0009}
-.tt-print{font:12px ui-monospace,monospace;letter-spacing:.04em;border-bottom:1px solid #2b2a2633;padding-bottom:8px}
+.tt-print{font:21px/1.2 "Nanum Brush Script",cursive;white-space:nowrap;color:#1f2b3a;border-bottom:1px solid #2b2a2622;padding-bottom:6px}
 .tt-print s{color:#8a857a}
-.tt-hand{display:block;position:relative;width:max-content;max-width:100%;margin-top:14px;font:600 20px/1.3 "Noto Serif KR",serif;white-space:nowrap;clip-path:inset(0 100% 0 0);transform-origin:0 100%}
+.tt-hand{display:block;position:relative;width:max-content;max-width:100%;margin-top:10px;font:30px/1.2 "Nanum Pen Script",cursive;color:#2a2622;white-space:nowrap;clip-path:inset(0 100% 0 0);transform-origin:0 100%}
 .setpiece.on .tt-hand{animation:ttWrite 2.4s steps(14,end) 1.4s forwards,ttTilt .9s ease-out 3.4s forwards}
-@keyframes ttWrite{to{clip-path:inset(0 0 0 0)}}@keyframes ttTilt{to{transform:rotate(-3.2deg)}}
+@keyframes ttWrite{to{clip-path:inset(0 0 0 0)}}@keyframes ttTilt{to{transform:rotate(-5deg)}}
 .tt-echo{margin-top:22px;text-align:center;font:11px ui-monospace,monospace;color:#8d96a2;letter-spacing:.06em}
 .tt-echo b{color:#c7cdd6;font-weight:600}
 .hc-cap{text-align:center;font:11px ui-monospace,monospace;color:#8d96a2;margin-top:10px}
 .hc-one{text-align:center;font:12px ui-monospace,monospace;color:#ffd38a;letter-spacing:.2em;margin-top:6px}
 </style>
-<link rel="stylesheet" href="reader-effects.css"></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.0124567%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B2%88%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><button class="pick" id="pick" aria-haspopup="true" aria-expanded="false" aria-controls="pickMenu"><b id="pickNo">EP 01</b><span class="pk-t" id="pickT">오늘 밤의 행복은 12토큰입니다</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ldx-controls"><button type="button" id="fxToggle" aria-pressed="true"><b id="fxState">연출 켜짐</b></button><button type="button" id="soundToggle" aria-pressed="false">생활음 꺼짐</button><span class="ldx-position" aria-label="읽은 위치"><b id="sync">0%</b></span><span hidden><b id="link">ONLINE</b><b id="token"></b></span></div></header><div class="progress"></div>
 <nav class="nav"><small>MEMORY INDEX</small><div id="nav"></div></nav><div class="pick-scrim" id="pickScrim"></div><nav class="pick-menu" id="pickMenu" aria-label="화 선택"><small>MEMORY INDEX · 전체 <span id="pickTotal"></span>화</small><ol id="pickList"></ol></nav>
