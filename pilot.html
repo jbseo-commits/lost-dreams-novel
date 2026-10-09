@@ -935,6 +935,24 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .sy-cur{display:inline-block;width:2px;height:1.1em;background:#e8ecf2;margin-left:4px;vertical-align:-3px;opacity:0}
 .setpiece.on .sy-cur{animation:syBlink 1s steps(1) 11s infinite}
 @keyframes syBlink{0%{opacity:1}50%{opacity:0}}
+/* EP8: 밝은 독서면에서도 초대장과 업무 자료의 재질·대비를 보존한다. */
+body.ep8{background:#f4f2ed;color:#202124}
+body.ep8 .world{background:linear-gradient(135deg,#f7f5f0,#eeece6);opacity:1}
+body.ep8 .noise,body.ep8:before{opacity:.012}
+body.ep8 .hud{background:#f4f2edf2;border-color:#20212425}
+body.ep8 .prose{color:#262625}
+body.ep8 .meta,body.ep8 .stats{color:#625e55}
+body.ep8 .pick{min-height:44px}body.ep8 .pick b{color:var(--accent)}
+body.ep8 .sys{color:#292a2c;border-color:#68625755;background:#eae7df;font-family:system-ui,"Noto Sans KR",sans-serif;box-shadow:none}
+body.ep8 .sys:before{display:none}
+body.ep8 .end .next{background:#202124;color:#f4f0e6;border-color:#202124}
+body.ep8 .pick-menu,body.ep8 .toast{--accent:#ded4bd;--accent2:#c6baa0}
+body.ep8 .toast{color:#ded4bd}
+body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #44423f;padding:30px 26px;box-shadow:0 14px 32px #1b191b16,inset 0 0 0 5px #ffffff02}
+.invitation-brand{display:block;font:600 11px/1.5 system-ui,sans-serif;letter-spacing:.24em;color:#c9bea6}
+.invitation-title{display:block;margin:20px 0 24px;font:500 clamp(18px,4.8vw,25px)/1.4 Georgia,"Noto Serif KR",serif;letter-spacing:.04em;overflow-wrap:break-word}
+.invitation-recipient{display:block;border-top:1px solid #eee9dc30;padding-top:16px;font:14px/1.8 system-ui,"Noto Sans KR",sans-serif;color:#eee9dc}
+@media(max-width:600px){body.ep8 .sys.invitation{margin:32px 0;padding:26px 22px}}
 </style>
 <link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1398,7 +1416,7 @@ const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterH
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=55,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],8:['8-1','8-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:"이상하게 좋다.",sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -1407,7 +1425,9 @@ const D={
 5:{a:'#b397ff',b:'#6fe7ff',token:'020.3',sync:73,ghost:'DOYUN',hook:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",sp:'ldx-meal',at:.99,on:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",w:400},
 6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:"그 사실까지 마음에 들지 않았다.",sp:'rejoin147',at:.72,on:"결과는 같았다",w:1600,ms:7800},
 7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:"그 생각이 무서웠다.",sp:'records147',at:.2,on:"너무 평범했다.",w:900,ms:7800,more:[{sp:'verdict',on:"“돈도, 의료도, 가족 눈치도 없어. 그래도 재호 씨가 다시 광고를 켜면?”",w:900,ms:6800}]},
-8:{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'9,400,000',hook:"서인은 하나도 고르지 못했다.",sp:'thirdplan',at:.54,on:"폐기된 세 번째 안이 채택됐다.",w:1600,ms:8800},
+8:{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
+'8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
+'8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
 9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:"금속 조각을 쥔 서인의 손을 한 번 보고는 먼저 돌아섰다.",sp:'overseen',at:.3,on:"가능성이 너무 많이 보였다.",w:900,ms:8600},
 10:{a:'#ff607c',b:'#a88cff',token:'∞',sync:39,ghost:'I CONSENT',hook:"자기 머릿속에 있는 모든 문이 한꺼번에 열렸다.",sp:'consent',at:.9,on:"서인은 승인했다.",w:1400},
 11:{a:'#d9e3ea',b:'#ff9a62',token:'013.9',sync:32,ghost:'0.04s',hook:"알림: 고위 전략직 전환 면담까지 9시간 8분.",sp:'reauth',at:.99,on:"본인이 맞습니까?",w:500},
@@ -1556,8 +1576,14 @@ let pi=0;for(let i=1;i<lines.length;i++){let x=lines[i].trim();
  if(x.startsWith('**')&&!x.slice(2).includes('**')){flush();inBold=true;sys.push(x.slice(2));continue}
  flush();pi++;const sc=sceneMarkup(state.ep,pi);if(sc)items.push({raw:sc});items.push({t:'p',x});const trace=ReadingEffects.paragraph(state.ep,x);if(trace)items.push({raw:trace})}
 flush();
+// 구판 초대장에 실제로 적힌 두 필드만 결합한다. 개정 원고에 없는 내용을 만들지 않는다.
+if(state.ep===8){for(let k=0;k<items.length-1;k++){const q=items[k],recipient=items[k+1];
+ if(q.t==='sys'&&q.x==='ARKADIA PRIVATE STRATEGY SESSION'&&recipient.t==='sys'&&/^참석자:\s*\S/.test(recipient.x)){
+  q.t='invitation';q.html='<span class="invitation-brand">ARKADIA</span><span class="invitation-title">PRIVATE STRATEGY SESSION</span><span class="invitation-recipient">'+recipient.html+'</span>';items.splice(k+1,1);
+ }}}
 const real=items.filter(q=>!q.raw);if(real.length)real[real.length-1].last=true;
 return items.map((q,k)=>{if(q.raw)return q.raw;const extra=q.last?' last':'';
+ if(q.t==='invitation')return '<div class="sys invitation reveal'+extra+'" role="group" aria-label="아르카디아 전략회의 초대장">'+q.html+'</div>';
  if(q.t==='sys'){const nx=items[k+1];const unread=nx&&nx.t==='p'&&nx.x.includes('읽기 전에 눈을 감았다')?' unread':'';return '<div class="sys reveal'+unread+extra+'">'+q.html+'</div>'}
  const fx=FX[state.ep];if(fx){const di=fx.nest?fx.nest.indexOf(q.x):-1;if(di>=0)return '<p class="reveal nest" data-ms="680" style="--d:'+(di+1)+'">'+inline(q.x)+'</p>';if(fx.fan===q.x)return '<p class="reveal fx-fan" data-ms="900">'+inline(q.x)+'</p>';if(fx.mirror&&fx.mirror.includes(q.x))return '<p class="reveal fx-mirror" data-t="'+esc(q.x)+'">'+inline(q.x)+'</p>'}
  if(/^〈[\s\S]*〉$/.test(q.x))return '<p class="reveal mono'+(keys.includes(q.x)?' key':'')+extra+'"><span class="mono-tag" aria-hidden="true"></span><span class="mono-sr">모노: </span>'+inline(q.x.slice(1,-1))+'</p>';
@@ -1566,7 +1592,7 @@ return items.map((q,k)=>{if(q.raw)return q.raw;const extra=q.last?' last':'';
 async function load(n){const r=await fetch(new URL('manuscript/ep'+epFile(n)+'.md?v=8',document.baseURI).href,{cache:'no-store'});if(!r.ok)throw Error();return r.text()}
 async function openEp(n){
  ReadingEffects.restore();closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];state.armed=0;state.userScrolled=false;state.openedAt=performance.now();const d=D[n];state.ep=n;
- document.body.className=n===8?'ep8':'reading';document.body.dataset.ep=n;ReadingEffects.apply();
+ document.body.className=(n===8||n==='8-1'||n==='8-2')?'ep8':'reading';document.body.dataset.ep=n;ReadingEffects.apply();
  document.documentElement.style.setProperty('--accent',d.a);document.documentElement.style.setProperty('--accent2',d.b);
  hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+epNo(n)+' / '+MAX;
  titleEl.textContent='기억을 불러오는 중';meta.textContent='CONNECTING MANUSCRIPT…';prose.innerHTML='<div class="scene-card"><div class="scene-kicker">NEURAL READER</div><div class="scene-main">제'+n+'화 연결 중</div><div class="scene-sub">잠시만 기다려 주세요.</div></div>';
@@ -1580,7 +1606,8 @@ async function openEp(n){
   observe();toastMsg('MEMORY '+epNo(n)+' CONNECTED');
  }catch(e){
   console.error(e);linkEl.textContent='ERROR';titleEl.textContent='연결에 실패했습니다';meta.textContent='MANUSCRIPT LOAD ERROR';
-  prose.innerHTML='<div class="scene-card ldx-error"><div class="scene-kicker">CONNECTION ERROR</div><div class="scene-main">원고를 불러오지 못했습니다.</div><div class="scene-sub">'+esc(String(e&&e.message||'NETWORK ERROR'))+'</div></div><button class="next" onclick="openEp('+n+')">다시 연결 →</button>';
+  prose.innerHTML='<div class="scene-card ldx-error"><div class="scene-kicker">CONNECTION ERROR</div><div class="scene-main">원고를 불러오지 못했습니다.</div><div class="scene-sub">'+esc(String(e&&e.message||'NETWORK ERROR'))+'</div></div><button class="next" id="retryEp">다시 연결 →</button>';
+  $('retryEp').onclick=()=>openEp(n);
   toastMsg('원고 연결 실패');
  }
 }
