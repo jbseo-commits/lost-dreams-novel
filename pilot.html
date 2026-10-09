@@ -1086,7 +1086,24 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .spr-out{display:flex;justify-content:flex-end;width:min(320px,100%);margin:0 auto}
 .spr-sheet{background:#efeadf;color:#2a2622;padding:8px 10px;transform:rotate(1.2deg);box-shadow:0 6px 18px #0008;font:21px/1.3 "Nanum Pen Script",cursive;white-space:nowrap}
 .spr-sheet small{display:block;font:9.5px ui-monospace,monospace;color:#6f6a5f}
-/* 66화 twopaper: 다섯 줄에 같은 날짜가 한꺼번에 찍히는 새 안내문, 그 옆에 그대로인 손글씨 한 장. 불이 꺼져도 둘 다 하얗다 */
+/* 67화 rail: 약국 계단 열두 칸. 아침엔 여섯째 칸에서 난간을 놓고, 밤엔 처음부터 안 잡는다 */
+#rail .veil{background:radial-gradient(circle at 50% 45%,#11140f,#040504 72%)}
+#rail .sc{width:min(320px,100%)}
+.rl-pass{position:relative;width:288px;height:170px;margin:6px auto 0}
+.rl-pass small{position:absolute;left:0;top:0;font:9px ui-monospace,monospace;letter-spacing:.18em;color:#8d96a2}
+.rl-step{position:absolute;width:24px;height:10px;border-top:1.5px solid #9aa39a;border-left:1.5px solid #9aa39a}
+.rl-railline{position:absolute;left:4px;top:16px;width:300px;height:0;border-top:1.5px solid #c9b98f;transform-origin:0 0;transform:rotate(23.35deg)}
+.rl-man{position:absolute;left:6px;top:39px;width:9px;height:9px;border-radius:50%;background:#ece6d8;opacity:0}
+.rl-hand{position:absolute;left:10px;top:19px;width:1.5px;height:21px;background:#ece6d8;opacity:0}
+.setpiece.on .p1 .rl-man{animation:rlWalk 3s linear .4s forwards}
+.setpiece.on .p1 .rl-hand{animation:rlWalkH 3s linear .4s forwards}
+.setpiece.on .p2 .rl-man{animation:rlWalk 3s linear 4.2s forwards}
+@keyframes rlWalk{0%{opacity:1;transform:translate(0,0)}100%{opacity:1;transform:translate(264px,110px)}}
+@keyframes rlWalkH{0%{opacity:1;transform:translate(0,0)}49%{opacity:1;transform:translate(130px,55px)}52%{opacity:0;transform:translate(136px,57px)}100%{opacity:0;transform:translate(264px,110px)}}
+.rl-note{position:absolute;right:0;top:0;font:9.5px ui-monospace,monospace;color:#c9b98f;opacity:0}
+.setpiece.on .p1 .rl-note{animation:rlNote .4s ease 1.95s forwards}
+@keyframes rlNote{to{opacity:1}}
+/* 66화 twopaper: 다섯 줄에 '첫날'이 한꺼번에 뜨는 새 안내문, 그 옆에 그대로인 손글씨 한 장. 불이 꺼져도 둘 다 하얗다 */
 #twopaper .veil{background:#07080b;transition:none}
 #twopaper .sc{width:min(330px,100%)}
 .tp-door{position:relative;margin:10px auto 0;width:300px;height:250px;border:1px solid #ffffff1c;border-radius:3px;background:#1b1d22}
@@ -1098,11 +1115,10 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .tp-off b{display:block;font-size:10.5px;line-height:1.4;margin-bottom:6px;font-weight:700}
 .tp-row{display:flex;justify-content:space-between;align-items:center;height:22px;line-height:22px;margin:0;border-top:1px solid #0000001a;padding:0}
 .tp-row i{font-style:normal;color:#b0452f;opacity:0}
-.setpiece.on .tp-row i{animation:tpStamp .25s ease-out 2.6s forwards}
-@keyframes tpStamp{from{opacity:0}to{opacity:1}}
+.setpiece.on .tp-row i{animation:tpFirst .25s ease-out 2.6s forwards}
+@keyframes tpFirst{from{opacity:0}to{opacity:1}}
 .setpiece.on .tp-hand,.setpiece.on .tp-off{animation:tpPale 1.4s ease 5.4s forwards}
 @keyframes tpPale{to{filter:brightness(.42)}}
-.tp-cap{margin-top:16px;text-align:center;font:12px/1.6 "Noto Serif KR",serif;color:#cfd5de}
 /* 8화 order: 조사 요청서 목록. 한 사람의 줄만 맨 위로 미끄러져 올라가고, 다른 이름은 제자리에 남는다 */
 #order .veil{background:radial-gradient(circle at 50% 44%,#15140f,#050504 72%)}
 #order .sc{width:min(340px,100%)}
@@ -1322,6 +1338,9 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="spr-tot" data-t="4.2">부담 총량 · 시범 전 대비 <b>−8%</b></div>
 <div class="spr-flow"><i style="--d:5.2s;--x:90px"></i><i style="--d:5.5s;--x:96px"></i><i style="--d:5.8s;--x:102px"></i><i style="--d:6.1s;--x:96px"></i><i style="--d:6.4s;--x:108px"></i></div></div>
 <div class="spr-out" data-t="5"><div class="spr-sheet"><small>계열 10 분산 참조풀</small>1번 · 밤 9시 소등.</div></div></div></div></div>
+<div class="setpiece" id="rail"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">계단 · 열두 칸</div>
+<div class="rl-pass p1"><small>아침 · 약국 앞</small><span class="rl-note">여섯째 칸</span><i class="rl-railline"></i><i class="rl-step" style="left:4px;top:46px"></i><i class="rl-step" style="left:26px;top:55px"></i><i class="rl-step" style="left:48px;top:65px"></i><i class="rl-step" style="left:70px;top:74px"></i><i class="rl-step" style="left:92px;top:84px"></i><i class="rl-step" style="left:114px;top:93px"></i><i class="rl-step" style="left:136px;top:103px"></i><i class="rl-step" style="left:158px;top:112px"></i><i class="rl-step" style="left:180px;top:122px"></i><i class="rl-step" style="left:202px;top:131px"></i><i class="rl-step" style="left:224px;top:141px"></i><i class="rl-step" style="left:246px;top:150px"></i><i class="rl-hand"></i><i class="rl-man"></i></div>
+<div class="rl-pass p2" data-t="3.8"><small>밤 11시 · 노인정 앞</small><i class="rl-railline"></i><i class="rl-step" style="left:4px;top:46px"></i><i class="rl-step" style="left:26px;top:55px"></i><i class="rl-step" style="left:48px;top:65px"></i><i class="rl-step" style="left:70px;top:74px"></i><i class="rl-step" style="left:92px;top:84px"></i><i class="rl-step" style="left:114px;top:93px"></i><i class="rl-step" style="left:136px;top:103px"></i><i class="rl-step" style="left:158px;top:112px"></i><i class="rl-step" style="left:180px;top:122px"></i><i class="rl-step" style="left:202px;top:131px"></i><i class="rl-step" style="left:224px;top:141px"></i><i class="rl-step" style="left:246px;top:150px"></i><i class="rl-man"></i></div></div></div></div>
 <div class="setpiece" id="twopaper"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">노인정 문 · 시범 첫날</div><div class="tp-door"><div class="tp-hand">소등 밤 11시.<br>마지막 사람이 끄고 갈 것.<small>마지막 사람 = 김.</small></div><div class="tp-off"><b>동부 27번 선택조건 개선 시범구역 · 30일</b><div class="tp-row"><span>생활 보전</span><i>첫날</i></div><div class="tp-row"><span>재검증 분리</span><i>첫날</i></div><div class="tp-row"><span>회복 기간</span><i>첫날</i></div><div class="tp-row"><span>추천 해제</span><i>첫날</i></div><div class="tp-row"><span>참조 분산</span><i>첫날</i></div></div></div></div></div></div>
 <div class="setpiece" id="order"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">조사 요청서 · 예약 조건을 본 사람</div><div class="od-list"><div class="od-row dn" style="top:0px"><span>임원</span><small>의결</small></div><div class="od-row dn" style="top:34px"><span>임원</span><small>의결</small></div><div class="od-row dn" style="top:68px"><span>운송사</span><small>예약 조건</small></div><div class="od-row dn" style="top:102px"><span>고객사</span><small>일정 안내</small></div><div class="od-row dn" style="top:136px"><span>차민서</span><small>계약구조</small></div><div class="od-row me" style="top:170px;--up:170px"><span>최유석</span><small>인수 담당</small></div><div class="od-ghost" data-t="3.9" style="top:204px"><span>최유석</span><small>원래 자리</small></div></div><span class="od-stamp" data-p="3.2">제출</span></div></div></div>
 <div class="setpiece" id="scatter"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">동부거점 · 다음 주 교대표</div><div class="sx-grid"><div class="sx-row" style="top:4px"><i></i><b style="--x:-50px;--d:1.2s"></b></div><div class="sx-row" style="top:34px"><i></i><b style="--x:40px;--d:1.5s"></b></div><div class="sx-row" style="top:64px"><i></i><b style="--x:-70px;--d:1.9s"></b></div><div class="sx-row" style="top:94px"><i></i><b style="--x:90px;--d:2.2s"></b></div><div class="sx-row" style="top:124px"><i></i><b style="--x:-20px;--d:2.6s"></b></div><div class="sx-row" style="top:154px"><i></i><b style="--x:60px;--d:3.0s"></b></div></div><div class="sx-cap"><span>이름</span><span>주소</span></div><div class="sx-out"></div></div></div></div>
@@ -1786,6 +1805,7 @@ const D={
 64:{a:'#e4e2d6',b:'#8a8676',token:'∞',sync:0,ghost:"−8%",hook:"벽에 붙은 어느 줄보다 이른 시각이었다.",sp:'spread',at:.8,on:"“부담을 고르는 방법이 늘어난 거죠.”",w:900,ms:9800},
 65:{a:'#d8e0e8',b:'#7b8794',token:'∞',sync:0,ghost:"OPEN",hook:"그리고 다시 같은 쪽으로 흘렀다.",sp:'slope',at:.8,on:"“닫아 놓은 적도 없습니다.”",w:900,ms:9800},
 66:{a:'#e9c983',b:'#3b4252',token:'∞',sync:0,ghost:'',hook:'그 창만 평소와 같았다.',sp:'twopaper',at:.9,on:'11시, 김 영감이 일어나 불을 껐다. 문 종이 두 장이 어둠 속에서 같이 하얬다.',w:900,ms:8400},
+67:{a:'#c9b98f',b:'#4a5040',token:'∞',sync:0,ghost:'',hook:'아직은 좋은 날이었다.',sp:'rail',at:.9,on:'김 영감이 일어나 불을 끄고 문을 잠갔다.',w:900,ms:8400},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1887,6 +1907,7 @@ const KEY={
 64:["“부담을 고르는 방법이 늘어난 거죠.”","“그러니까 쓰는 거야. 나 나가는 데 쓰는 거야. 엄마 나오는 데도.”"],
 65:["“열려 있는데 아무도 못 나가는 문은 무엇을 고쳐야 합니까.”","“제가 부르면, 제가 경사가 되잖아요.”"],
 66:['“그건 나오는 거고.”','“이건 내가 사는 거야.”'],
+67:['“돈 들었으면 안 물었어. 그냥 계단을 천천히 내려갔겠지.”','“그거 붙이면 안 끊은 사람이 이유를 대야 돼요. 문 앞을 지날 때마다요.”'],
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
