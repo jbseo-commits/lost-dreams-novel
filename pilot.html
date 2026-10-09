@@ -1086,6 +1086,31 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .spr-out{display:flex;justify-content:flex-end;width:min(320px,100%);margin:0 auto}
 .spr-sheet{background:#efeadf;color:#2a2622;padding:8px 10px;transform:rotate(1.2deg);box-shadow:0 6px 18px #0008;font:21px/1.3 "Nanum Pen Script",cursive;white-space:nowrap}
 .spr-sheet small{display:block;font:9.5px ui-monospace,monospace;color:#6f6a5f}
+/* 8화 order: 조사 요청서 목록. 한 사람의 줄만 맨 위로 미끄러져 올라가고, 다른 이름은 제자리에 남는다 */
+#order .veil{background:radial-gradient(circle at 50% 44%,#15140f,#050504 72%)}
+#order .sc{width:min(340px,100%)}
+.od-list{position:relative;height:206px;margin-top:6px}
+.od-row{position:absolute;left:0;right:0;height:34px;display:flex;justify-content:space-between;align-items:center;padding:0 8px;border-bottom:1px solid #ffffff14;font:11px ui-monospace,monospace;color:#bdb6a6;transition:none}
+.od-row small{color:#7d776b;font-size:9.5px}
+.od-row.me{color:#ece6d8}
+.setpiece.on .od-row.me{animation:odUp .9s cubic-bezier(.5,0,.2,1) 1.8s forwards}
+.setpiece.on .od-row.dn{animation:odDn .9s cubic-bezier(.5,0,.2,1) 1.8s forwards}
+@keyframes odUp{to{transform:translateY(calc(-1 * var(--up)))}}
+@keyframes odDn{to{transform:translateY(34px)}}
+.od-stamp{display:block;margin:16px auto 0;width:max-content;border:1px solid #c9a46a;color:#e8c98f;padding:4px 12px;font:11px ui-monospace,monospace;letter-spacing:.2em;transform:rotate(-4deg)}
+/* 8-2화 scatter: 같은 주소 한 줄이던 교대표가 서로 다른 주소로 흩어진다. 칸은 다 찼는데, 표 밖에 빈칸 하나 */
+#scatter .veil{background:radial-gradient(circle at 50% 44%,#121214,#040405 72%)}
+#scatter .sc{width:min(330px,100%)}
+.sx-grid{position:relative;height:184px;margin-top:8px;border-top:1px solid #ffffff22}
+.sx-row{position:absolute;left:0;right:0;height:26px;border-bottom:1px solid #ffffff12}
+.sx-row i{position:absolute;left:8px;top:9px;width:64px;height:7px;border-radius:2px;background:#8e8a80}
+.sx-row b{position:absolute;left:150px;top:7px;width:58px;height:11px;border-radius:2px;background:#c9c2b2}
+.setpiece.on .sx-row b{animation:sxGo 1.1s cubic-bezier(.4,0,.2,1) var(--d) forwards}
+@keyframes sxGo{to{transform:translateX(var(--x));background:#8f9aa8}}
+.sx-cap{margin-top:12px;display:flex;justify-content:space-between;font:9.5px ui-monospace,monospace;color:#7f7b72}
+.sx-out{margin:26px auto 0;width:110px;height:26px;border:1px dashed #e9e3d3;opacity:0}
+.setpiece.on .sx-out{animation:sxBlink 1.2s ease-in-out 4.6s infinite}
+@keyframes sxBlink{0%,100%{opacity:.15}50%{opacity:.9}}
 /* 8-1화 deadline: 서명선 위에 불이 켜진다 — 서명처럼. 글자가 붙고서야 칸이 비어 있다는 게 보인다. 시계는 작게, 칸이 주인공 */
 #deadline .veil{background:radial-gradient(circle at 50% 46%,#16130e,#050403 72%)}
 #deadline .sc{width:min(360px,100%)}
@@ -1279,6 +1304,8 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="spr-tot" data-t="4.2">부담 총량 · 시범 전 대비 <b>−8%</b></div>
 <div class="spr-flow"><i style="--d:5.2s;--x:90px"></i><i style="--d:5.5s;--x:96px"></i><i style="--d:5.8s;--x:102px"></i><i style="--d:6.1s;--x:96px"></i><i style="--d:6.4s;--x:108px"></i></div></div>
 <div class="spr-out" data-t="5"><div class="spr-sheet"><small>계열 10 분산 참조풀</small>1번 · 밤 9시 소등.</div></div></div></div></div>
+<div class="setpiece" id="order"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">조사 요청서 · 예약 조건을 본 사람</div><div class="od-list"><div class="od-row dn" style="top:0px"><span>임원</span><small>의결</small></div><div class="od-row dn" style="top:34px"><span>임원</span><small>의결</small></div><div class="od-row dn" style="top:68px"><span>운송사</span><small>예약 조건</small></div><div class="od-row dn" style="top:102px"><span>고객사</span><small>일정 안내</small></div><div class="od-row dn" style="top:136px"><span>차민서</span><small>계약구조</small></div><div class="od-row me" style="top:170px;--up:170px"><span>최유석</span><small>인수 담당</small></div></div><span class="od-stamp" data-p="3.2">제출</span></div></div></div>
+<div class="setpiece" id="scatter"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">동부거점 · 다음 주 교대표</div><div class="sx-grid"><div class="sx-row" style="top:4px"><i></i><b style="--x:-50px;--d:1.2s"></b></div><div class="sx-row" style="top:34px"><i></i><b style="--x:40px;--d:1.5s"></b></div><div class="sx-row" style="top:64px"><i></i><b style="--x:-70px;--d:1.9s"></b></div><div class="sx-row" style="top:94px"><i></i><b style="--x:90px;--d:2.2s"></b></div><div class="sx-row" style="top:124px"><i></i><b style="--x:-20px;--d:2.6s"></b></div><div class="sx-row" style="top:154px"><i></i><b style="--x:60px;--d:3.0s"></b></div></div><div class="sx-cap"><span>이름</span><span>주소</span></div><div class="sx-out"></div></div></div></div>
 <div class="setpiece" id="deadline"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="dl-top"><div class="sp-label">회의실 벽 · 고객사 서명란</div><div class="dl-clock"><span data-o="3.4">12:10</span><span data-t="3.4" data-o="4.6">12:19</span><span class="r" data-t="4.6">12:20</span></div></div>
 <div class="dl-slots" data-d="5.3"><div class="dl-slot"><small>고객사 1</small><span class="dl-sig"><i style="--d:.4s"></i></span><span class="dl-rx" data-t="2.5">수신 확인</span></div><div class="dl-slot"><small>고객사 2</small><span class="dl-sig"><i style="--d:.8s"></i></span><span class="dl-rx" data-t="2.5">수신 확인</span></div><div class="dl-slot"><small>고객사 3</small><span class="dl-sig"><i style="--d:1.2s"></i></span><span class="dl-rx" data-t="2.5">수신 확인</span></div></div>
 <div class="dl-row" data-k="4.9" data-d="5.3"><span>C안 · 독립 운송</span><b>주간 서른</b></div>
@@ -1679,9 +1706,9 @@ const D={
 5:{a:'#b397ff',b:'#6fe7ff',token:'020.3',sync:73,ghost:'DOYUN',hook:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",sp:'ldx-meal',at:.99,on:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",w:400},
 6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:"그 사실까지 마음에 들지 않았다.",sp:'rejoin147',at:.72,on:"결과는 같았다",w:1600,ms:7800},
 7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:"그 생각이 무서웠다.",sp:'records147',at:.2,on:"너무 평범했다.",w:900,ms:7800,more:[{sp:'verdict',on:"“돈도, 의료도, 가족 눈치도 없어. 그래도 재호 씨가 다시 광고를 켜면?”",w:900,ms:6800}]},
-8:{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
+8:{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:'서인은 그 순서를 그대로 제출했다.',sp:'order',at:.95,on:'맞은편에서 차민서가 최종 문안을 넘기고 있었다. 그녀의 이름도 목록에 있었다.',w:900,ms:6200},
 '8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'12:20',hook:'실행할 수 없는 쪽으로.',sp:'deadline',at:.88,on:'아무도 반대하지 않았다. 아무도 다른 말을 하지 않았다. 시계만 넘어갔다.',w:900,ms:9600},
-'8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
+'8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:'누가 내일 아이를 데려올지, 어느 표에도 없는 칸이 남았다.',sp:'scatter',at:.75,on:'현장대표가 통화를 끝냈다.',w:900,ms:8200},
 9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:"금속 조각을 쥔 서인의 손을 한 번 보고는 먼저 돌아섰다.",sp:'overseen',at:.3,on:"가능성이 너무 많이 보였다.",w:900,ms:8600},
 10:{a:'#ff607c',b:'#a88cff',token:'∞',sync:39,ghost:'I CONSENT',hook:"자기 머릿속에 있는 모든 문이 한꺼번에 열렸다.",sp:'consent',at:.9,on:"서인은 승인했다.",w:1400},
 11:{a:'#d9e3ea',b:'#ff9a62',token:'013.9',sync:32,ghost:'0.04s',hook:"알림: 고위 전략직 전환 면담까지 9시간 8분.",sp:'reauth',at:.99,on:"본인이 맞습니까?",w:500},
@@ -1780,7 +1807,8 @@ const KEY={
 5:['“그럼 조건을 바꿔.”','“사람을 바꾸지 말고.”'],
 6:['“이번엔 알고 고르는 거잖아요.”'],
 7:['“왜 꼭 하나만 진짜여야 해요?”','“근데 가끔 네가 내 인생 채점하는 것 같아.”'],
-8:['모노의 화면은 꺼졌는데도 경우의 수는 계속 늘어났다.'],
+8:['“내가 숨긴 걸 지적하십시오. 당신에게 보여 준 걸 숨긴 동기라고 바꾸지 말고.”','“당신이 지금 기다리게 한 사람은 경쟁사가 아닙니다.”'],
+'8-2':['“그렇다고 기다리게 한 시간이 없어지는 건 아니잖아요.”'],
 '8-1':['“내가 기다려 달라고 하면, 뭘 걸어 줄 수 있습니까?”','차민서는 그래야 한다고 말했다. 그렇게 된다고는 말하지 않았다.'],
 9:['“저 사람한테 가서 다시 끄라고 할 수 있어?”'],
 10:['“너 요즘 자꾸 세상에 버튼 하나만 있는 것처럼 말해.”'],
