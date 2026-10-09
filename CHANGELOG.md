@@ -1,5 +1,7 @@
 # 변경 기록
 
+- 2026-10-09 · Claude · 작가 지시("플래쉬에서 쓸만한것만 가져가자"): Flash 56–100화 폐기, 재활용 재료 10건을 planning/flash-salvage-20261009.md로 정리, CURRENT-LINE 인계에 연결. Codex 8화 브랜치는 현 상태로 둠.
+
 - 2026-10-08 · Claude · 제51~55화 공개(새 노선, 하진의 할머니 해방과 자발 재연결): 원고 5화와 웹 연출 5종(seniorline·sandsticks·facenumber·tworings·sevenyes). 작가 지시 "연출은 언제나 마스터피스로"에 따라 연출도 편집 검수 9점으로 통과시킨 뒤 공개. story-so-far·settings/05(제안, 미체크)·CURRENT-LINE 갱신. 옛 노선 51·52 제안은 폐기 표시.
 
 - 2026-10-08 · Claude · 작가 지시(루프 집필을 최근 상황에 맞게): loop/CURRENT-LINE.md 추가(현재 위치 1–50 공개·51–55 공개 대기·다음 56화, 기준 문서 우선순위, 작가 확정 고정 규칙, 51–55 검수에서 나온 반복 금지 목록, 56–60 인계). LOOP.md 0·1·2·9·10장, forward-prompt, AUTODRIVE(체인 예외), story-so-far(옛 51·52 폐기 표시), config 작가 메모에 연결.
