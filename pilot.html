@@ -1086,6 +1086,19 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .spr-out{display:flex;justify-content:flex-end;width:min(320px,100%);margin:0 auto}
 .spr-sheet{background:#efeadf;color:#2a2622;padding:8px 10px;transform:rotate(1.2deg);box-shadow:0 6px 18px #0008;font:21px/1.3 "Nanum Pen Script",cursive;white-space:nowrap}
 .spr-sheet small{display:block;font:9.5px ui-monospace,monospace;color:#6f6a5f}
+/* 66화 litwin: 평소엔 다 꺼져 있던 동네(밤이 돈이 되는 동네). 첫날 밤 불이 켜진 채 남고, 4층 창 하나만 평소 시각에 꺼진다 */
+#litwin .veil{background:linear-gradient(#05070c,#0a0d14 70%,#11131a)}
+#litwin .sc{width:min(300px,100%)}
+.lw-lab{position:relative;height:16px;text-align:center}
+.lw-lab span{position:absolute;left:0;right:0;font:9px ui-monospace,monospace;letter-spacing:.24em;color:#8d96a2}
+.lw-bld{position:relative;margin:14px auto 0;width:210px;padding:12px 12px 0;background:#0f1219;border:1px solid #ffffff14;border-bottom:none;display:grid;grid-template-columns:repeat(6,1fr);gap:9px}
+.lw-w{height:20px;background:#161a22;border:1px solid #ffffff0d}
+.setpiece.on .lw-w.on{animation:lwOn .5s ease-out var(--d) forwards}
+@keyframes lwOn{to{background:#e9c983;box-shadow:0 0 10px #e9c98366;border-color:#e9c98388}}
+.setpiece.on .lw-w.mom{animation:lwOn .5s ease-out var(--d) forwards,lwOff .35s ease-in 5.6s forwards}
+@keyframes lwOff{from{background:#e9c983;box-shadow:0 0 10px #e9c98366}to{background:#161a22;box-shadow:none;border-color:#ffffff0d}}
+.lw-ground{width:250px;margin:0 auto;border-top:1px solid #ffffff22;height:1px}
+.lw-t{margin-top:16px;text-align:center;font:12px/1.6 "Noto Serif KR",serif;color:#cfd5de}
 /* 8화 order: 조사 요청서 목록. 한 사람의 줄만 맨 위로 미끄러져 올라가고, 다른 이름은 제자리에 남는다 */
 #order .veil{background:radial-gradient(circle at 50% 44%,#15140f,#050504 72%)}
 #order .sc{width:min(340px,100%)}
@@ -1305,6 +1318,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="spr-tot" data-t="4.2">부담 총량 · 시범 전 대비 <b>−8%</b></div>
 <div class="spr-flow"><i style="--d:5.2s;--x:90px"></i><i style="--d:5.5s;--x:96px"></i><i style="--d:5.8s;--x:102px"></i><i style="--d:6.1s;--x:96px"></i><i style="--d:6.4s;--x:108px"></i></div></div>
 <div class="spr-out" data-t="5"><div class="spr-sheet"><small>계열 10 분산 참조풀</small>1번 · 밤 9시 소등.</div></div></div></div></div>
+<div class="setpiece" id="litwin"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="lw-lab"><span data-o="1.3">동부 27번 · 평소 밤</span><span data-t="1.3">동부 27번 · 시범 첫날 밤</span></div><div class="lw-bld"><i class="lw-w on" style="--d:2.73s"></i><i class="lw-w on" style="--d:2.76s"></i><i class="lw-w on" style="--d:3.84s"></i><i class="lw-w on" style="--d:3.54s"></i><i class="lw-w"></i><i class="lw-w on" style="--d:2.82s"></i><i class="lw-w on" style="--d:3.64s"></i><i class="lw-w on" style="--d:2.54s"></i><i class="lw-w mom" style="--d:2.6s"></i><i class="lw-w on" style="--d:3.49s"></i><i class="lw-w on" style="--d:2.91s"></i><i class="lw-w on" style="--d:3.79s"></i><i class="lw-w"></i><i class="lw-w on" style="--d:3.89s"></i><i class="lw-w"></i><i class="lw-w"></i><i class="lw-w"></i><i class="lw-w on" style="--d:2.43s"></i><i class="lw-w on" style="--d:2.40s"></i><i class="lw-w on" style="--d:2.12s"></i><i class="lw-w"></i><i class="lw-w"></i><i class="lw-w"></i><i class="lw-w"></i><i class="lw-w on" style="--d:2.41s"></i><i class="lw-w on" style="--d:1.64s"></i><i class="lw-w on" style="--d:2.83s"></i><i class="lw-w on" style="--d:3.30s"></i><i class="lw-w on" style="--d:1.86s"></i><i class="lw-w"></i></div><div class="lw-ground"></div><div class="lw-t" data-t="5.2">열한 시 반.</div></div></div></div>
 <div class="setpiece" id="order"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">조사 요청서 · 예약 조건을 본 사람</div><div class="od-list"><div class="od-row dn" style="top:0px"><span>임원</span><small>의결</small></div><div class="od-row dn" style="top:34px"><span>임원</span><small>의결</small></div><div class="od-row dn" style="top:68px"><span>운송사</span><small>예약 조건</small></div><div class="od-row dn" style="top:102px"><span>고객사</span><small>일정 안내</small></div><div class="od-row dn" style="top:136px"><span>차민서</span><small>계약구조</small></div><div class="od-row me" style="top:170px;--up:170px"><span>최유석</span><small>인수 담당</small></div><div class="od-ghost" data-t="3.9" style="top:204px"><span>최유석</span><small>원래 자리</small></div></div><span class="od-stamp" data-p="3.2">제출</span></div></div></div>
 <div class="setpiece" id="scatter"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">동부거점 · 다음 주 교대표</div><div class="sx-grid"><div class="sx-row" style="top:4px"><i></i><b style="--x:-50px;--d:1.2s"></b></div><div class="sx-row" style="top:34px"><i></i><b style="--x:40px;--d:1.5s"></b></div><div class="sx-row" style="top:64px"><i></i><b style="--x:-70px;--d:1.9s"></b></div><div class="sx-row" style="top:94px"><i></i><b style="--x:90px;--d:2.2s"></b></div><div class="sx-row" style="top:124px"><i></i><b style="--x:-20px;--d:2.6s"></b></div><div class="sx-row" style="top:154px"><i></i><b style="--x:60px;--d:3.0s"></b></div></div><div class="sx-cap"><span>이름</span><span>주소</span></div><div class="sx-out"></div></div></div></div>
 <div class="setpiece" id="deadline"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="dl-top"><div class="sp-label">회의실 벽 · 고객사 서명란</div><div class="dl-clock"><span data-o="3.4">12:10</span><span data-t="3.4" data-o="4.6">12:19</span><span class="r" data-t="4.6">12:20</span></div></div>
@@ -1767,6 +1781,7 @@ const D={
 63:{a:'#dde2ea',b:'#7f8996',token:'∞',sync:0,ghost:"5년 11개월",hook:"안방 쪽 벽 너머에서는 아무 소리도 나지 않았다. 엄마는 11시에 이미 연결돼 있었다.",sp:'prefilled',at:.8,on:"후보 1순위 · 이나래.",w:900,ms:9600},
 64:{a:'#e4e2d6',b:'#8a8676',token:'∞',sync:0,ghost:"−8%",hook:"벽에 붙은 어느 줄보다 이른 시각이었다.",sp:'spread',at:.8,on:"“부담을 고르는 방법이 늘어난 거죠.”",w:900,ms:9800},
 65:{a:'#d8e0e8',b:'#7b8794',token:'∞',sync:0,ghost:"OPEN",hook:"그리고 다시 같은 쪽으로 흘렀다.",sp:'slope',at:.8,on:"“닫아 놓은 적도 없습니다.”",w:900,ms:9800},
+66:{a:'#e9c983',b:'#3b4252',token:'∞',sync:0,ghost:'',hook:'평소와 같은 시각이었다.',sp:'litwin',at:.9,on:'오늘은 불 켜진 창이 많았다.',w:900,ms:7600},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1866,7 +1881,8 @@ const KEY={
 62:["“하라고 했으면 미워하면 되잖아요.”","“다시 돌아가도 안 합니다.”"],
 63:["“네가 안 해도 우리 괜찮아.”","“5년 11개월.”"],
 64:["“부담을 고르는 방법이 늘어난 거죠.”","“그러니까 쓰는 거야. 나 나가는 데 쓰는 거야. 엄마 나오는 데도.”"],
-65:["“열려 있는데 아무도 못 나가는 문은 무엇을 고쳐야 합니까.”","“제가 부르면, 제가 경사가 되잖아요.”"]
+65:["“열려 있는데 아무도 못 나가는 문은 무엇을 고쳐야 합니까.”","“제가 부르면, 제가 경사가 되잖아요.”"],
+66:['“그건 나오는 거고.”','“이건 내가 사는 거야.”'],
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
