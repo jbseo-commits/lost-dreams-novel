@@ -1009,23 +1009,80 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .hc-cap{text-align:center;font:11px ui-monospace,monospace;color:#8d96a2;margin-top:10px}
 .hc-one{text-align:center;font:12px ui-monospace,monospace;color:#ffd38a;letter-spacing:.2em;margin-top:6px}
 /* EP8: 밝은 독서면에서도 초대장과 업무 자료의 재질·대비를 보존한다. */
-body.ep8{background:#f4f2ed;color:#202124}
-body.ep8 .world{background:linear-gradient(135deg,#f7f5f0,#eeece6);opacity:1}
-body.ep8 .noise,body.ep8:before{opacity:.012}
-body.ep8 .hud{background:#f4f2edf2;border-color:#20212425}
-body.ep8 .prose{color:#262625}
-body.ep8 .meta,body.ep8 .stats{color:#625e55}
-body.ep8 .pick{min-height:44px}body.ep8 .pick b{color:var(--accent)}
-body.ep8 .sys{color:#292a2c;border-color:#68625755;background:#eae7df;font-family:system-ui,"Noto Sans KR",sans-serif;box-shadow:none}
+/* 8화 세 회차: 앞뒤의 신경계 바탕을 유지하고 공유 문서만 종이색으로 둔다. */
+body.ep8{background:#06080d;color:#e5e9ef}
+body.ep8 .world{background:radial-gradient(ellipse at 75% 15%,#c9bda610,transparent 42%),radial-gradient(ellipse at 18% 80%,#7b91ac0c,transparent 38%);opacity:1}
+body.ep8 .noise,body.ep8:before{opacity:.018}
+body.ep8 .hud{background:#080b11ee;color:#e5e9ef;border-color:#e5e9ef18}
+body.ep8 .brand,body.ep8 .pick{color:#e5e9ef}
+body.ep8 .hud .ldx-controls button{color:#ded4bd;border-color:#c9bda650;background:#c9bda607}
+body.ep8 .hud .ldx-position{color:#ded4bd}
+body.ep8 .prose{color:#e5e9ef}
+body.ep8 .meta,body.ep8 .stats{color:#a0a8b4}
+body.ep8 .chapter-head,body.ep8 .end{border-color:#e5e9ef20}
+body.ep8 .chapter-head:after{color:#e5e9ef06}
+body.ep8 .pick{min-height:44px;border-color:#e5e9ef30}body.ep8 .pick b{color:var(--accent)}
+body.ep8 .sys{color:#24272d;border-color:#d9d1c4;background:#eae6dd;font-family:system-ui,"Noto Sans KR",sans-serif;box-shadow:inset 2px 0 #9b8d73}
 body.ep8 .sys:before{display:none}
-body.ep8 .end .next{background:#202124;color:#f4f0e6;border-color:#202124}
+body.ep8 .prose p.mono{color:#c9bda6;border-left-color:#c9bda64d}
+body.ep8 .key{color:#f0e9dc;border-color:#c9bda6;background:linear-gradient(90deg,#c9bda60e,transparent)}
+body.ep8 .reveal.beat{color:#c9bda6}
+body.ep8 .end .next{background:#c9bda610;color:#ded4bd;border-color:#c9bda650}
 body.ep8 .pick-menu,body.ep8 .toast{--accent:#ded4bd;--accent2:#c6baa0}
 body.ep8 .toast{color:#ded4bd}
-body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #44423f;padding:30px 26px;box-shadow:0 14px 32px #1b191b16,inset 0 0 0 5px #ffffff02}
-.invitation-brand{display:block;font:600 11px/1.5 system-ui,sans-serif;letter-spacing:.24em;color:#c9bea6}
-.invitation-title{display:block;margin:20px 0 24px;font:500 clamp(18px,4.8vw,25px)/1.4 Georgia,"Noto Serif KR",serif;letter-spacing:.04em;overflow-wrap:break-word}
-.invitation-recipient{display:block;border-top:1px solid #eee9dc30;padding-top:16px;font:14px/1.8 system-ui,"Noto Sans KR",sans-serif;color:#eee9dc}
-@media(max-width:600px){body.ep8 .sys.invitation{margin:32px 0;padding:26px 22px}}
+body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #44423f;padding:30px 26px;box-shadow:0 14px 32px #0005,inset 0 0 0 5px #ffffff02}
+.sys.invitation .invitation-brand{display:block;color:#c9bea6;font:11px ui-monospace,monospace;letter-spacing:.24em;margin-bottom:14px}
+.sys.invitation .invitation-title{display:block;font:600 clamp(18px,4.4vw,25px)/1.45 "Noto Serif KR",serif;letter-spacing:.025em}
+.sys.invitation .invitation-recipient{display:block;border-top:1px solid #eee9dc22;margin-top:22px;padding-top:16px;font:13px/1.7 system-ui,sans-serif}
+
+/* 이미 읽은 세 장면. 숫자를 세거나 승리 판정을 하지 않는다. */
+.e8-scene{--paper:#eae6dd;--line:#c9bda6;--quiet:#a8b0bd;--cut:#d89e92;color:#e5e9ef;width:min(520px,100%);font:14px/1.7 "Noto Serif KR",serif;text-align:left}
+.e8-scene .sp-label{color:#c9bda6;font-size:11px;margin-bottom:18px}
+.e8-scene h3{font:600 clamp(23px,5.7vw,34px)/1.3 "Noto Serif KR",serif;letter-spacing:-.04em;margin:0 0 22px;color:#f0e9dc}
+.e8-scene small{font:11px/1.6 system-ui,sans-serif;color:var(--quiet)}
+.e8-document{background:var(--paper);color:#24272d;padding:18px 20px;border-left:2px solid #9b8d73}
+.e8-document small{color:#555047}.e8-document strong{display:block;font-size:18px;margin-top:4px}
+.e8-allocation{display:grid;grid-template-columns:2fr 5fr;gap:4px;margin-top:16px}
+.e8-allocation>div{padding:14px 10px;border-top:2px solid #c9bda666;background:#c9bda606}
+.e8-allocation b{font:500 27px ui-monospace,monospace;display:block;color:#e8dfcd;margin:6px 0}
+.e8-allocation span{font:12px/1.6 system-ui,sans-serif;display:block;color:#c3c8d0}
+.e8-route{margin-top:20px;padding-top:16px;position:relative;border-top:1px solid #c9bda634}
+.e8-route svg{width:100%;height:48px;color:#c9bda6;display:block}
+.e8-route .e8-route-line{stroke-dasharray:6 6}
+.setpiece.on .e8-route-line{animation:e8Route 3s linear 2.5s 1}
+@keyframes e8Route{to{stroke-dashoffset:-36}}
+.e8-signature{margin-top:18px;border:1px dashed #c9bda660;padding:14px 16px;display:flex;justify-content:space-between;gap:12px;font:13px/1.7 system-ui,sans-serif}
+.e8-signature b{font-weight:500;color:#e4c1b6}
+#allocation8 .veil,#deadline8 .veil,#handoff8 .veil{background:radial-gradient(ellipse at 50% 38%,#151821,#04060af7 75%)}
+.e8-tickets{position:relative;padding-left:20px;border-left:1px solid #c9bda64d}
+.e8-ticket{position:relative;padding:14px 16px;margin-bottom:12px;border:1px solid #c9bda633;background:#c9bda605}
+.e8-ticket:before{content:"";position:absolute;width:7px;height:7px;border-radius:50%;left:-24px;top:26px;background:#c9bda6}
+.e8-ticket b{display:block;font:500 clamp(29px,7vw,40px)/1.1 ui-monospace,monospace;margin-bottom:9px;letter-spacing:-.06em}
+.e8-ticket span{font:14px/1.7 system-ui,sans-serif;color:#d5dae2;display:block}
+.e8-ticket.expiry{border-bottom:1px dashed #d89e9277}.e8-ticket.expiry b{color:#e6b0a3}
+.e8-ticket .e8-away{position:absolute;right:15px;top:18px;max-width:110px}
+.e8-away svg{width:72px;height:30px;stroke:#c9bda6;fill:none;stroke-width:1.5}
+.setpiece.on .e8-away{animation:e8Away 1.6s ease-in 3s forwards}
+@keyframes e8Away{to{transform:translateX(25px);opacity:0}}
+.e8-after{color:#d89e92;font:13px/1.8 system-ui,sans-serif;margin:16px 0 0;text-align:right}
+.e8-roster{position:relative;border:1px solid #c9bda644;padding:18px;background:#c9bda606}
+.e8-roster-head{display:flex;justify-content:space-between;gap:16px;margin-bottom:22px;font:12px/1.6 system-ui,sans-serif;color:#c9bda6}
+.e8-handoffs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.e8-handoffs div{text-align:center;padding:11px 3px;border-bottom:1px solid #c9bda655;color:#dfd5c3;font:13px/1.6 system-ui,sans-serif}
+.e8-handoffs small{display:block;color:#a8b0bd;margin-top:3px}
+.e8-common-room{width:76%;height:78px;margin:24px auto 0;border:1px solid #c9bda680;display:grid;place-items:center;font:15px/1.6 "Noto Serif KR",serif;position:relative;color:#e5dccb}
+.e8-common-room:before{content:"";position:absolute;left:50%;bottom:100%;height:25px;border-left:1px solid #c9bda650}
+.e8-addresses{display:flex;justify-content:space-between;gap:16px;margin-top:18px}
+.e8-addresses i{flex:1}
+.e8-addresses i{height:34px;border:1px solid #c9bda677;display:block;position:relative}
+.e8-addresses i:before{content:"";position:absolute;left:50%;top:100%;height:12px;border-left:1px dashed #c9bda644}
+.e8-address-label{font:12px/1.7 system-ui,sans-serif;color:#c5c9d1;text-align:center;margin-top:15px}
+.e8-last-slot{margin-top:25px;font:15px/1.9 "Noto Serif KR",serif;color:#e5dccb}
+.e8-last-slot span{display:block;width:60%;height:22px;border-bottom:1px solid #c9bda677;margin-top:8px}
+.e8-scene .ldx-popup-controls{font-family:system-ui,sans-serif}
+@media(max-width:600px){body.ep8 .sys.invitation{margin:32px 0;padding:26px 22px}.e8-document{padding:15px}.e8-signature{display:block}.e8-signature b{display:block;margin-top:5px}.e8-handoffs div{font-size:12px}.e8-addresses{gap:12px}.e8-scene h3{margin-bottom:18px}}
+@media(prefers-reduced-motion:reduce){.setpiece.on .e8-route-line,.setpiece.on .e8-away{animation:none}.e8-away{display:none}}
+
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.0124567%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B2%88%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
@@ -1281,6 +1338,37 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="sc-row" data-t="5.3"><span>재검증</span><b>147 <span class="sc-stamp" data-p="5.6">결과 같음</span></b></div>
 <div class="rj-raw" data-t="6.1">재가입. 재가입. 재가입.</div>
 <div class="sc-q" data-t="6.8">240명 중. 147명.</div></div></div></div>
+<!-- 8화: 소유권 문서가 물량 확약을 대신하지 않는다. -->
+<div class="setpiece" id="allocation8"><div class="veil"></div><div class="sp-center"><div class="e8-scene">
+<div class="sp-label">상층 전략회의 · 공유 자료</div>
+<h3 data-t=".2">시설·운영권</h3>
+<div class="e8-document" data-t=".5"><small>B안 · 동부운송 지분 인수</small><strong>차량 · 거점 · 운영권</strong></div>
+<div data-t="1.4"><small style="display:block;margin-top:20px">고객 주간 물량 · 같은 운송 단위</small><div class="e8-allocation"><div><span>독점 운송</span><b>20</b></div><div><span>고객이 재배정할 수 있는 물량</span><b>50</b><small>기존 최소 운임은 남는다.</small></div></div></div>
+<div class="e8-route" data-t="2.5"><small>C안 · 동부와 무관한 독립 운송사</small><svg viewBox="0 0 400 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="10" width="82" height="28"/><path class="e8-route-line" d="M88 24H302"/><path d="M291 18L302 24 291 30"/><rect x="307" y="10" width="87" height="28"/></svg><small>운송용량 40단위 · 고객 배정 목표 30단위</small></div>
+<div class="e8-signature" data-t="4.2"><span>고객 배정 확약</span><b>미확인</b></div>
+</div></div></div>
+<!-- 8-1화: 실제 만료 뒤에도 공동 승인 절차는 남는다. -->
+<div class="setpiece" id="deadline8"><div class="veil"></div><div class="sp-center"><div class="e8-scene">
+<div class="sp-label">최종 요청서 · 고객 회신 · 운송사 통지</div>
+<h3 data-t=".2">서명이 없었다.</h3>
+<div class="e8-tickets">
+<div class="e8-ticket" data-t=".6"><b>12:10</b><span>서명 요청서 발송</span><small>수신 확인 · 배정 확약 미확인</small></div>
+<div class="e8-ticket expiry" data-t="1.7"><b>12:20</b><span>운송 예약 조건 만료</span><small>고객 배정 목표: 30단위</small><div class="e8-away" aria-hidden="true"><svg viewBox="0 0 80 30"><path d="M4 5H50V22H4ZM50 11H63L73 19V22H50"/><circle cx="17" cy="24" r="4"/><circle cx="61" cy="24" r="4"/></svg></div></div>
+<div class="e8-ticket" data-t="3.6"><b>12:25</b><span>공동 승인 회의에서 검토</span></div>
+</div><p class="e8-after" data-t="5">운송사는 다음 고객의 예약을 받았다.</p>
+</div></div></div>
+<!-- 8-2화: 실제 새 교대표. 빈 상자는 주소 표기 자리이며 이름·주소를 만들지 않는다. -->
+<div class="setpiece" id="handoff8"><div class="veil"></div><div class="sp-center"><div class="e8-scene">
+<div class="sp-label">동부거점 · 현장대표가 공유한 교대표</div>
+<h3 data-t=".2">다음 주</h3>
+<div class="e8-roster" data-t=".6"><div class="e8-roster-head"><span>아이 인계</span><span>차량 교대</span></div>
+<div class="e8-handoffs"><div>새벽 네 시<small>04:00</small></div><div>아홉 시<small>09:00</small></div><div>밤 열한 시<small>23:00</small></div></div>
+<div class="e8-common-room" data-t="1.2" data-d="3.4">공동돌봄실</div>
+<div class="e8-addresses" aria-hidden="true"><i data-t="3.7"></i><i data-t="4.1"></i><i data-t="4.5"></i></div>
+<div class="e8-address-label" data-t="4.8">이름 옆에 붙은, 서로 다른 주소.</div></div>
+<div class="e8-last-slot" data-t="5.8">누가 내일 아이를 데려올지.<span aria-hidden="true"></span></div>
+</div></div></div>
+
 <div class="setpiece" id="thirdplan"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">상층 전략 회의 · 도시 물류망 인수 · 13명</div>
 <div class="sc-row" data-t=".1"><span>예측 경로</span><b class="sc-n" id="tpN" style="font-size:24px">1,840,221</b></div>
 <div class="tp-log" data-t="1.1">경로 재구성.</div><div class="tp-log" data-t="1.4">외부 모델 충돌 감지.</div><div class="tp-log sc-gold" data-t="1.7">상대 모델의 대응 예측을 포함한 2차 예측 수행.</div>
@@ -1527,9 +1615,9 @@ const D={
 5:{a:'#b397ff',b:'#6fe7ff',token:'020.3',sync:73,ghost:'DOYUN',hook:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",sp:'ldx-meal',at:.99,on:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",w:400},
 6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:"그 사실까지 마음에 들지 않았다.",sp:'rejoin147',at:.72,on:"결과는 같았다",w:1600,ms:7800},
 7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:"그 생각이 무서웠다.",sp:'records147',at:.2,on:"너무 평범했다.",w:900,ms:7800,more:[{sp:'verdict',on:"“돈도, 의료도, 가족 눈치도 없어. 그래도 재호 씨가 다시 광고를 켜면?”",w:900,ms:6800}]},
-8:{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
-'8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
-'8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
+8:{a:'#c9bda6',b:'#7b91ac',token:'∞',sync:54,ghost:'',hook:'',sp:'allocation8',on:'기존 최소 운임 부담 포함. 고객 확약 확보 시 실행 가능.',w:500,ms:8200},
+'8-1':{a:'#c9bda6',b:'#7b91ac',token:'∞',sync:54,ghost:'',hook:'',sp:'deadline8',on:'서른을 옮길 수 있던 안이 꺼졌다.',w:500,ms:8400},
+'8-2':{a:'#c9bda6',b:'#7b91ac',token:'∞',sync:54,ghost:'',hook:'',sp:'handoff8',on:'누가 내일 아이를 데려올지, 끝내 정하지 못한 칸이 남았다.',w:500,ms:9800},
 9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:"금속 조각을 쥔 서인의 손을 한 번 보고는 먼저 돌아섰다.",sp:'overseen',at:.3,on:"가능성이 너무 많이 보였다.",w:900,ms:8600},
 10:{a:'#ff607c',b:'#a88cff',token:'∞',sync:39,ghost:'I CONSENT',hook:"자기 머릿속에 있는 모든 문이 한꺼번에 열렸다.",sp:'consent',at:.9,on:"서인은 승인했다.",w:1400},
 11:{a:'#d9e3ea',b:'#ff9a62',token:'013.9',sync:32,ghost:'0.04s',hook:"알림: 고위 전략직 전환 면담까지 9시간 8분.",sp:'reauth',at:.99,on:"본인이 맞습니까?",w:500},
@@ -1623,7 +1711,9 @@ const KEY={
 5:['“그럼 조건을 바꿔.”','“사람을 바꾸지 말고.”'],
 6:['“이번엔 알고 고르는 거잖아요.”'],
 7:['“왜 꼭 하나만 진짜여야 해요?”','“근데 가끔 네가 내 인생 채점하는 것 같아.”'],
-8:['모노의 화면은 꺼졌는데도 경우의 수는 계속 늘어났다.'],
+8:['“당신이 지금 기다리게 한 사람은 경쟁사가 아닙니다.”'],
+'8-1':['“지급하지 마십시오. 서명이 없습니다.”'],
+'8-2':['서인의 이름에는 찬성표가 없었다.','질문만 계속됐다.'],
 9:['“저 사람한테 가서 다시 끄라고 할 수 있어?”'],
 10:['“너 요즘 자꾸 세상에 버튼 하나만 있는 것처럼 말해.”'],
 11:['“네가 쥔 건지, 네 손이 쥔 건지.”'],
@@ -1898,3 +1988,4 @@ if(location.hash==='#reader'){activateStaticEp1()}else route();
 if(!state.ep)load(1).then(md=>{if(state.ep)return;const prev=state.ep;state.ep=1;const h=render(md);state.ep=prev;prose.innerHTML=h;prose.querySelectorAll('.reveal').forEach(e=>e.classList.add('seen'));titleEl.textContent=md.split('\n')[0].replace(/^#\s*제[\d-]+화\.\s*/,'');meta.textContent='LIVE MANUSCRIPT · '+md.length.toLocaleString('ko-KR')+'자'}).catch(()=>{});
 syncPick();
 </script></body></html>
+
