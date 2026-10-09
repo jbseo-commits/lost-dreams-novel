@@ -1086,6 +1086,19 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .spr-out{display:flex;justify-content:flex-end;width:min(320px,100%);margin:0 auto}
 .spr-sheet{background:#efeadf;color:#2a2622;padding:8px 10px;transform:rotate(1.2deg);box-shadow:0 6px 18px #0008;font:21px/1.3 "Nanum Pen Script",cursive;white-space:nowrap}
 .spr-sheet small{display:block;font:9.5px ui-monospace,monospace;color:#6f6a5f}
+/* 8-1화 deadline: 수신 확인의 불이 서명처럼 켜지지만 칸은 비어 있다. 시계가 넘어가면 서른이 꺼진다 */
+#deadline .veil{background:radial-gradient(circle at 50% 40%,#16130e,#050403 72%)}
+.dl-clock{position:relative;height:64px;margin:6px auto 14px;width:200px}
+.dl-clock span{position:absolute;inset:0;text-align:center;font:300 54px/64px ui-monospace,monospace;color:#e9e2d2;letter-spacing:.02em}
+.dl-clock span.r{color:#ff8a7a}
+.dl-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.dl-slot{border:1px solid #ffffff26;padding:9px 6px 8px;text-align:center;background:#ffffff05}
+.dl-slot small{display:block;font:9px ui-monospace,monospace;color:#8d877a;letter-spacing:.08em}
+.dl-sig{display:block;margin:8px auto 6px;width:70%;border-bottom:1px solid #ffffff55;height:16px}
+.dl-rx{font:9px ui-monospace,monospace;color:#ffd38a;white-space:nowrap}
+.dl-rx i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#ffd38a;margin-right:5px;box-shadow:0 0 8px #ffd38a}
+.dl-row{display:flex;justify-content:space-between;margin-top:14px;padding:7px 2px;border-top:1px solid #ffffff1a;border-bottom:1px solid #ffffff1a;font:11px ui-monospace,monospace;color:#e9e2d2}
+.dl-note{margin-top:14px;text-align:center;font:10px/1.6 ui-monospace,monospace;color:#9a9385}
 /* 65화 slope: 열린 문 앞을 안내선 따라 지나가는 걸음. 바닥이 기울어 있다는 게 보이는 순간 */
 #slope .veil{background:radial-gradient(circle at 50% 44%,#0f1216,#030405 72%)}
 .sl-stage{position:relative;width:300px;height:150px;margin:40px auto 0}
@@ -1260,6 +1273,11 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="spr-tot" data-t="4.2">부담 총량 · 시범 전 대비 <b>−8%</b></div>
 <div class="spr-flow"><i style="--d:5.2s;--x:90px"></i><i style="--d:5.5s;--x:96px"></i><i style="--d:5.8s;--x:102px"></i><i style="--d:6.1s;--x:96px"></i><i style="--d:6.4s;--x:108px"></i></div></div>
 <div class="spr-out" data-t="5"><div class="spr-sheet"><small>계열 10 분산 참조풀</small>1번 · 밤 9시 소등.</div></div></div></div></div>
+<div class="setpiece" id="deadline"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">회의실 벽 · 독립 운송 예약 · 고객사 서명란</div>
+<div class="dl-clock"><span data-o="1.9">12:18</span><span data-t="1.9" data-o="3.6">12:19</span><span class="r" data-t="3.6">12:20</span></div>
+<div class="dl-slots" data-d="4.3"><div class="dl-slot"><small>고객사 1</small><i class="dl-sig"></i><span class="dl-rx" data-t=".6"><i></i>수신 확인</span></div><div class="dl-slot"><small>고객사 2</small><i class="dl-sig"></i><span class="dl-rx" data-t="1.1"><i></i>수신 확인</span></div><div class="dl-slot"><small>고객사 3</small><i class="dl-sig"></i><span class="dl-rx" data-t="1.6"><i></i>수신 확인</span></div></div>
+<div class="dl-row" data-k="3.9" data-d="4.3"><span>C안 · 독립 운송</span><b>주간 서른</b></div>
+<div class="dl-note" data-t="4.9">운송사 통지 · 다음 고객의 예약을 받았습니다.</div></div></div></div>
 <div class="setpiece" id="slope"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">기준계열 정기 점검 센터 · 복도 끝</div>
 <div class="sl-stage"><span class="sl-sign">해제 상담실 · 예약 없이 들어오세요.</span><i class="sl-wall"></i><i class="sl-gap"></i><i class="sl-door"></i><i class="sl-line"></i><i class="sl-elev"></i><i class="sl-who"></i><i class="sl-floor"></i><i class="sl-drop" style="left:20px;--d:5.4s"></i><i class="sl-drop" style="left:70px;--d:5.9s"></i><i class="sl-drop" style="left:40px;--d:6.4s"></i><i class="sl-drop" style="left:110px;--d:6.9s"></i></div>
 <div class="sl-cap" data-t="7.2">“열려 있는데 아무도 못 나가는 문은 무엇을 고쳐야 합니까.”</div></div></div></div>
@@ -1656,7 +1674,7 @@ const D={
 6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:"그 사실까지 마음에 들지 않았다.",sp:'rejoin147',at:.72,on:"결과는 같았다",w:1600,ms:7800},
 7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:"그 생각이 무서웠다.",sp:'records147',at:.2,on:"너무 평범했다.",w:900,ms:7800,more:[{sp:'verdict',on:"“돈도, 의료도, 가족 눈치도 없어. 그래도 재호 씨가 다시 광고를 켜면?”",w:900,ms:6800}]},
 8:{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
-'8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
+'8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'12:20',hook:'실행할 수 없는 쪽으로.',sp:'deadline',at:.88,on:'“지급하지 마십시오. 서명이 없습니다.”',w:900,ms:7400},
 '8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:''},
 9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:"금속 조각을 쥔 서인의 손을 한 번 보고는 먼저 돌아섰다.",sp:'overseen',at:.3,on:"가능성이 너무 많이 보였다.",w:900,ms:8600},
 10:{a:'#ff607c',b:'#a88cff',token:'∞',sync:39,ghost:'I CONSENT',hook:"자기 머릿속에 있는 모든 문이 한꺼번에 열렸다.",sp:'consent',at:.9,on:"서인은 승인했다.",w:1400},
@@ -1757,6 +1775,7 @@ const KEY={
 6:['“이번엔 알고 고르는 거잖아요.”'],
 7:['“왜 꼭 하나만 진짜여야 해요?”','“근데 가끔 네가 내 인생 채점하는 것 같아.”'],
 8:['모노의 화면은 꺼졌는데도 경우의 수는 계속 늘어났다.'],
+'8-1':['“내가 기다려 달라고 하면, 뭘 걸어 줄 수 있습니까?”','차민서는 그래야 한다고 말했다. 그렇게 된다고는 말하지 않았다.'],
 9:['“저 사람한테 가서 다시 끄라고 할 수 있어?”'],
 10:['“너 요즘 자꾸 세상에 버튼 하나만 있는 것처럼 말해.”'],
 11:['“네가 쥔 건지, 네 손이 쥔 건지.”'],
