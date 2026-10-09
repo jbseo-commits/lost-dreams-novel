@@ -1068,6 +1068,25 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .pf-gray{color:#7d8794!important;font-size:12px!important}
 .pf-echo{margin-top:16px;text-align:center;font:11px ui-monospace,monospace;color:#8d96a2;letter-spacing:.06em}
 .pf-echo b{color:#c7cdd6;font-weight:600}
+/* 64화 spread: 여섯 칸으로 흩어진 아홉 개의 점. 빠진 건 조금이고, 나머지는 표 바깥 한 사람에게로 흘러간다 */
+#spread .veil{background:radial-gradient(circle at 50% 42%,#12130f,#040403 72%)}
+.spr-wrap{position:relative;width:min(320px,100%);margin:8px auto 0}
+.spr-cols{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;height:120px;align-items:end;border-bottom:1px solid #ffffff2a}
+.spr-col{display:flex;flex-direction:column-reverse;align-items:center;gap:5px;padding-bottom:6px}
+.spr-dot{width:12px;height:12px;border-radius:50%;background:#c7cdd6;opacity:0;transform:translateY(-70px)}
+.setpiece.on .spr-dot{animation:sprFall .6s cubic-bezier(.3,.7,.4,1) var(--d) forwards}
+@keyframes sprFall{to{opacity:1;transform:none}}
+.spr-lab{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:6px;font:10px/1.3 ui-monospace,monospace;color:#8d96a2;text-align:center}
+.spr-tot{margin-top:14px;text-align:center;font:12px ui-monospace,monospace;color:#c7cdd6;letter-spacing:.05em}
+.spr-tot b{color:#ffd38a}
+.spr-flow{position:relative;height:40px;margin-top:6px}
+.spr-flow i{position:absolute;left:50%;top:0;width:6px;height:6px;border-radius:50%;background:#ffd38a;opacity:0}
+.setpiece.on .spr-flow i{animation:sprFlow 1.1s ease-in var(--d) forwards}
+@keyframes sprFlow{0%{opacity:0;transform:translate(0,0)}20%{opacity:1}80%{opacity:.9}100%{opacity:0;transform:translate(var(--x),52px)}}
+.spr-out{display:flex;justify-content:flex-end;width:min(320px,100%);margin:0 auto}
+.spr-sheet{background:#efeadf;color:#2a2622;padding:8px 10px;transform:rotate(1.2deg);box-shadow:0 6px 18px #0008;font:21px/1.3 "Nanum Pen Script",cursive;white-space:nowrap}
+.spr-sheet small{display:block;font:9.5px ui-monospace,monospace;color:#6f6a5f}
+
 
 .sy-cap{margin-top:16px;text-align:center;font:14px/1.5 "Noto Serif KR",serif;color:#e9edf2}
 
@@ -1091,7 +1110,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 .invitation-recipient{display:block;border-top:1px solid #eee9dc30;padding-top:16px;font:14px/1.8 system-ui,"Noto Sans KR",sans-serif;color:#eee9dc}
 @media(max-width:600px){body.ep8 .sys.invitation{margin:32px 0;padding:26px 22px}}
 </style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.0124567%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B2%88%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B2%88%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><button class="pick" id="pick" aria-haspopup="true" aria-expanded="false" aria-controls="pickMenu"><b id="pickNo">EP 01</b><span class="pk-t" id="pickT">오늘 밤의 행복은 12토큰입니다</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ldx-controls"><button type="button" id="fxToggle" aria-pressed="true"><b id="fxState">연출 켜짐</b></button><button type="button" id="soundToggle" aria-pressed="false">생활음 꺼짐</button><span class="ldx-position" aria-label="읽은 위치"><b id="sync">0%</b></span><span hidden><b id="link">ONLINE</b><b id="token"></b></span></div></header><div class="progress"></div>
 <nav class="nav"><small>MEMORY INDEX</small><div id="nav"></div></nav><div class="pick-scrim" id="pickScrim"></div><nav class="pick-menu" id="pickMenu" aria-label="화 선택"><small>MEMORY INDEX · 전체 <span id="pickTotal"></span>화</small><ol id="pickList"></ol></nav>
@@ -1214,6 +1233,11 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="pf-f" data-t="3"><small>참여 형태</small><div class="pf-box">선택</div><div class="pf-menu"><div>완전 참여</div></div></div>
 <div class="pf-f" data-t="5.6"><small>시작일</small><div class="pf-box"></div></div></div>
 <div class="pf-echo" data-t="7.4">같은 시각 · 안방 · 현 기준자 · <b>23:00</b>부터 연결 중</div></div></div></div>
+<div class="setpiece" id="spread"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">장부실 · 시범 결과표 · 후보 아홉</div>
+<div class="spr-wrap"><div class="spr-cols"><div class="spr-col"><i class="spr-dot" style="--d:0.2s"></i><i class="spr-dot" style="--d:0.6s"></i></div><div class="spr-col"><i class="spr-dot" style="--d:0.9s"></i><i class="spr-dot" style="--d:1.2s"></i></div><div class="spr-col"><i class="spr-dot" style="--d:1.6s"></i></div><div class="spr-col"><i class="spr-dot" style="--d:2.0s"></i></div><div class="spr-col"><i class="spr-dot" style="--d:2.3s"></i><i class="spr-dot" style="--d:2.7s"></i></div><div class="spr-col"><i class="spr-dot" style="--d:3.0s"></i></div></div><div class="spr-lab"><span>완전</span><span>단기</span><span>저강도</span><span>분산풀</span><span>TOKEN</span><span>거부</span></div>
+<div class="spr-tot" data-t="4.2">부담 총량 · 시범 전 대비 <b>−8%</b></div>
+<div class="spr-flow"><i style="--d:5.2s;--x:90px"></i><i style="--d:5.5s;--x:96px"></i><i style="--d:5.8s;--x:102px"></i><i style="--d:6.1s;--x:96px"></i><i style="--d:6.4s;--x:108px"></i></div></div>
+<div class="spr-out" data-t="5"><div class="spr-sheet"><small>계열 10 분산 참조풀</small>1번 · 밤 9시 소등.</div></div></div></div></div>
 <div class="setpiece" id="twozero"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">보안 검토 · 연산 사용 기록</div><div class="sc-row" data-t=".3"><span>신고서 작성</span><b class="sc-red">2,640 TOKEN</b></div><div class="sc-row" data-t="1.6"><span>서인 · 판단 시점</span><b class="sc-n">0 TOKEN</b></div><div class="sc-card" data-t="2.8"><small>나란히</small>2,640 : 0</div></div></div></div>
 <div class="setpiece" id="retape"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">현관문 안쪽 · 다시 붙인 밤</div><div class="sc-row" data-t=".2"><span>테이프</span><b class="sc-n">네 귀퉁이</b></div><div class="sc-row" data-t="1.1"><span>손바닥으로 누름</span><b class="sc-n">세 번</b></div><div class="sc-card" data-t="2.2"><small>김하린 빵집</small><span style="display:inline-block;transform:rotate(-9deg) translateY(2px)">매</span>일 엽니다</div></div></div></div>
 <div class="setpiece" id="reasons"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">공방 앞 계단 · 준비해 온 말</div><div class="sc-row" data-t=".2"><span data-k="1">이자 없어</span><b class="sc-red" data-t="1">잘림</b></div><div class="sc-row" data-t=".5"><span data-k="1.6">나중에 갚을게</span><b class="sc-red" data-t="1.6">잘림</b></div><div class="sc-row" data-t=".8"><span data-k="2.2">약값 말고 그냥</span><b class="sc-red" data-t="2.2">잘림</b></div><div class="sc-row" data-t="2.8"><span>약</span><b class="sc-red">아빠 약병에 이름</b></div><div class="sc-card" style="text-align:center" data-t="3.8"><small>이유 0 · 남은 것</small><strong data-g="4.6">핑계 하나</strong></div></div></div></div>
@@ -1596,7 +1620,7 @@ const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=63,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=64,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],8:['8-1','8-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -1664,6 +1688,7 @@ const D={
 61:{a:'#d9dee6',b:'#7d8794',token:'∞',sync:0,ghost:"0",hook:"서인은 봉투를 들고 그 종이 앞에 섰다. 가로줄은 볼펜 한 번에 그어져 있었다. 망설인 자국이 없었다.",sp:'zerorows',at:.8,on:"“우리는 단 한 번도 앵커를 강제로 연결한 적이 없습니다.”",w:900,ms:10400},
 62:{a:'#e6dfd2',b:'#8f877a',token:'∞',sync:0,ghost:"4",hook:"다른 줄들은 아직 그 음에 맞춰지기를 기다리고 있었다.",sp:'sympathetic',at:.8,on:"“하라고 했으면 미워하면 되잖아요.”",w:900,ms:9400},
 63:{a:'#dde2ea',b:'#7f8996',token:'∞',sync:0,ghost:"5년 11개월",hook:"안방 쪽 벽 너머에서는 아무 소리도 나지 않았다. 엄마는 11시에 이미 연결돼 있었다.",sp:'prefilled',at:.8,on:"후보 1순위 · 이나래.",w:900,ms:9600},
+64:{a:'#e4e2d6',b:'#8a8676',token:'∞',sync:0,ghost:"−8%",hook:"벽에 붙은 어느 줄보다 이른 시각이었다.",sp:'spread',at:.8,on:"“부담을 고르는 방법이 늘어난 거죠.”",w:900,ms:9800},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1759,7 +1784,8 @@ const KEY={
 60:["“그래도 제 평생을 다시 내놓지는 않겠습니다.”","“왜 네가 골라야 하는데.”"],
 61:["“우리는 단 한 번도 앵커를 강제로 연결한 적이 없습니다.”","“그건 강제라고 하지 않고 사정이라고 합니다.”"],
 62:["“하라고 했으면 미워하면 되잖아요.”","“다시 돌아가도 안 합니다.”"],
-63:["“네가 안 해도 우리 괜찮아.”","“5년 11개월.”"]
+63:["“네가 안 해도 우리 괜찮아.”","“5년 11개월.”"],
+64:["“부담을 고르는 방법이 늘어난 거죠.”","“그러니까 쓰는 거야. 나 나가는 데 쓰는 거야. 엄마 나오는 데도.”"]
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
