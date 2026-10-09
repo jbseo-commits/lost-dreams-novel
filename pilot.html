@@ -1086,6 +1086,21 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .spr-out{display:flex;justify-content:flex-end;width:min(320px,100%);margin:0 auto}
 .spr-sheet{background:#efeadf;color:#2a2622;padding:8px 10px;transform:rotate(1.2deg);box-shadow:0 6px 18px #0008;font:21px/1.3 "Nanum Pen Script",cursive;white-space:nowrap}
 .spr-sheet small{display:block;font:9.5px ui-monospace,monospace;color:#6f6a5f}
+/* 68화 cushion: 위에서 본 노인정 담요 판. 9시에 한 자리가 비고(늘 그렇듯), 9시 반에 순덕 할머니 방석이 벽에 세워진다 — 지난주엔 11시까지 바닥에 있던 방석 */
+#cushion .veil{background:radial-gradient(circle at 50% 45%,#14110d,#050404 72%)}
+#cushion .sc{width:min(300px,100%)}
+.cs-room{position:relative;width:260px;height:200px;margin:8px auto 0;border:1.5px solid #6e6656}
+.cs-blanket{position:absolute;left:70px;top:55px;width:120px;height:90px;background:#3f4a35;border:1px solid #5f6b52}
+.cs-c{position:absolute;width:34px;height:30px;border-radius:5px;background:#8a5a4a}
+.cs-c i{position:absolute;left:11px;top:9px;width:12px;height:12px;border-radius:50%;background:#ece6d8}
+.cs-c.y{left:113px;top:14px}.cs-c.k{left:113px;top:156px}.cs-c.m{left:24px;top:85px}.cs-c.s{left:202px;top:85px}
+.setpiece.on .cs-c.y i{animation:csLeave .5s ease 1.6s forwards}
+@keyframes csLeave{to{opacity:0;transform:translateY(-14px)}}
+.setpiece.on .cs-c.s i{animation:csLeave .5s ease 3.4s forwards}
+.setpiece.on .cs-c.s{animation:csWall 1s cubic-bezier(.4,0,.2,1) 4.2s forwards}
+@keyframes csWall{to{left:250px;top:76px;width:7px;height:48px;border-radius:2px}}
+.cs-t{position:absolute;right:6px;top:-18px;font:10px ui-monospace,monospace;color:#c9b98f}
+.cs-t span{position:absolute;right:0;white-space:nowrap}
 /* 67화 rail: 약국 계단 열두 칸. 아침엔 여섯째 칸에서 난간을 놓고, 밤엔 처음부터 안 잡는다 */
 #rail .veil{background:radial-gradient(circle at 50% 45%,#11140f,#040504 72%)}
 #rail .sc{width:min(320px,100%)}
@@ -1339,6 +1354,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="spr-tot" data-t="4.2">부담 총량 · 시범 전 대비 <b>−8%</b></div>
 <div class="spr-flow"><i style="--d:5.2s;--x:90px"></i><i style="--d:5.5s;--x:96px"></i><i style="--d:5.8s;--x:102px"></i><i style="--d:6.1s;--x:96px"></i><i style="--d:6.4s;--x:108px"></i></div></div>
 <div class="spr-out" data-t="5"><div class="spr-sheet"><small>계열 10 분산 참조풀</small>1번 · 밤 9시 소등.</div></div></div></div></div>
+<div class="setpiece" id="cushion"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">노인정 · 담요 판</div><div class="cs-room"><div class="cs-t"><span data-o="1.6">8시 반</span><span data-t="1.6" data-o="3.4">9시</span><span data-t="3.4">9시 반</span></div><i class="cs-blanket"></i><div class="cs-c y"><i></i></div><div class="cs-c k"><i></i></div><div class="cs-c m"><i></i></div><div class="cs-c s"><i></i></div></div></div></div></div>
 <div class="setpiece" id="rail"><div class="veil"></div><div class="sp-center"><div class="sc">
 <div class="rl-pass p1"><small>아침 · 약국 앞 계단 · 열두 칸</small><span class="rl-note">여섯째 칸</span><i class="rl-railline"></i><i class="rl-step" style="left:4px;top:46px"></i><i class="rl-step" style="left:26px;top:55px"></i><i class="rl-step" style="left:48px;top:65px"></i><i class="rl-step" style="left:70px;top:74px"></i><i class="rl-step" style="left:92px;top:84px"></i><i class="rl-step" style="left:114px;top:93px"></i><i class="rl-step" style="left:136px;top:103px"></i><i class="rl-step" style="left:158px;top:112px"></i><i class="rl-step" style="left:180px;top:122px"></i><i class="rl-step" style="left:202px;top:131px"></i><i class="rl-step" style="left:224px;top:141px"></i><i class="rl-step" style="left:246px;top:150px"></i><i class="rl-hand"></i><i class="rl-man"></i></div>
 <div class="rl-pass p2" data-t="3.8"><small>밤 11시 · 노인정 계단</small><i class="rl-railline" style="width:170px"></i><i class="rl-step" style="left:4px;top:46px"></i><i class="rl-step" style="left:26px;top:55px"></i><i class="rl-step" style="left:48px;top:65px"></i><i class="rl-step" style="left:70px;top:74px"></i><i class="rl-step" style="left:92px;top:84px"></i><i class="rl-step" style="left:114px;top:93px"></i><i class="rl-step" style="left:136px;top:103px"></i><i class="rl-man"></i></div></div></div></div>
@@ -1807,6 +1823,7 @@ const D={
 65:{a:'#d8e0e8',b:'#7b8794',token:'∞',sync:0,ghost:"OPEN",hook:"그리고 다시 같은 쪽으로 흘렀다.",sp:'slope',at:.8,on:"“닫아 놓은 적도 없습니다.”",w:900,ms:9800},
 66:{a:'#e9c983',b:'#3b4252',token:'∞',sync:0,ghost:'',hook:'그 창만 평소와 같았다.',sp:'twopaper',at:.9,on:'11시, 김 영감이 일어나 불을 껐다. 문 종이 두 장이 어둠 속에서 같이 하얬다.',w:900,ms:8400},
 67:{a:'#c9b98f',b:'#4a5040',token:'∞',sync:0,ghost:'',hook:'서인은 한 칸 뒤에서 따라 내려갔다.',sp:'rail',at:.9,on:'김 영감이 일어나 불을 끄고 문을 잠갔다.',w:900,ms:8400},
+68:{a:'#c98a6a',b:'#3f4a35',token:'∞',sync:0,ghost:'',hook:'그 두 글자를 자기 손으로 칠 수가 아직 없었다.',sp:'cushion',at:.75,on:'“안 졸린데 가네.”',w:900,ms:7200},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1909,6 +1926,7 @@ const KEY={
 65:["“열려 있는데 아무도 못 나가는 문은 무엇을 고쳐야 합니까.”","“제가 부르면, 제가 경사가 되잖아요.”"],
 66:['“그건 나오는 거고.”','“이건 내가 사는 거야.”'],
 67:['“돈 들었으면 안 물었어. 그냥 계단을 천천히 내려갔겠지.”','“그거 붙이면 안 끊은 사람이 이유를 대야 돼요. 문 앞을 지날 때마다요.”'],
+68:['“좋아서.”','“나는 쓰는 거고, 쟤는 보는 거야. 다른 거야.”'],
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
