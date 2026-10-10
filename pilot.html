@@ -1103,7 +1103,7 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .cs-c.k b{top:32px}.setpiece.on .cs-c.s b{animation:csLeave .5s ease 4.2s forwards}
 .cs-t{position:absolute;right:6px;top:-18px;font:10px ui-monospace,monospace;color:#c9b98f}
 .cs-t span{position:absolute;right:0;white-space:nowrap}
-/* 69화 inks: 장부실 화이트보드. 검은 줄(다섯 쪽)과 빨간 줄(운영국)이 번갈아 — 전부 사실. 맨 아래 빨간 줄에만 검은 동그라미. 판정 칸은 주민 선택으로 갈음되고, 순덕 할머니의 두 글자는 보드 밖에 남는다 */
+/* 69화 inks: 장부실 화이트보드. 검은 줄(다섯 쪽)과 빨간 줄(운영국)이 번갈아 — 전부 사실. 맨 아래 빨간 줄에만 검은 동그라미. 판정 칸은 주민 선택으로 갈음되고, 장소가 바뀌어(노인정) 판정 칸·별첨이 쓰이고, 순덕 할머니의 '좋아서.'는 담요 판 밖에 남는다 */
 #inks .veil{background:radial-gradient(circle at 50% 45%,#121214,#040405 72%)}
 #inks .sc{width:min(320px,100%)}
 .ik-board{position:relative;margin:8px auto 0;width:min(300px,100%);box-sizing:border-box;background:#e6e4dc;padding:12px 12px 10px;border:3px solid #9a9890;font:10.5px/1.75 system-ui,sans-serif;text-align:left;word-break:keep-all}
@@ -1113,6 +1113,12 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .ik-ring{position:absolute;right:-8px;top:-3px;width:52px;height:24px;border:1.5px solid #1f1f22;border-radius:50%}
 .ik-verdict{margin:12px auto 0;width:min(300px,100%);text-align:left;font:11px/1.6 ui-monospace,monospace;color:#c7cdd6;word-break:keep-all}
 .ik-verdict b{color:#ffd38a;font-weight:400}
+.ik-loc{display:block;margin:0 auto 4px;width:min(300px,100%);text-align:left;font:9px ui-monospace,monospace;letter-spacing:.18em;color:#8d96a2}
+.ik-room{position:relative;margin:6px auto 0;width:min(300px,100%);height:120px}
+.ik-room .ik-verdict{margin:0;width:100%}
+.ik-mat{position:absolute;left:30px;top:58px;width:130px;height:56px;background:#3f4a35;border:1px solid #5f6b52}
+.ik-mat i{position:absolute;top:18px;width:14px;height:20px;background:#ece6d8;border-radius:2px}
+.ik-room .ik-hand{position:absolute;right:18px;top:70px;margin:0}
 .ik-hand{display:block;width:max-content;margin:16px 6px 0 auto;padding:6px 10px;background:#efeadf;color:#2a2622;transform:rotate(-3deg);font:24px/1.1 "Nanum Pen Script",cursive;box-shadow:0 6px 16px #0008}
 /* 67화 rail: 약국 계단 열두 칸. 아침엔 여섯째 칸에서 난간을 놓고, 밤엔 처음부터 안 잡는다 */
 #rail .veil{background:radial-gradient(circle at 50% 45%,#11140f,#040504 72%)}
@@ -1368,7 +1374,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="spr-flow"><i style="--d:5.2s;--x:90px"></i><i style="--d:5.5s;--x:96px"></i><i style="--d:5.8s;--x:102px"></i><i style="--d:6.1s;--x:96px"></i><i style="--d:6.4s;--x:108px"></i></div></div>
 <div class="spr-out" data-t="5"><div class="spr-sheet"><small>계열 10 분산 참조풀</small>1번 · 밤 9시 소등.</div></div></div></div></div>
 <div class="setpiece" id="cushion"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">노인정 · 담요 판</div><div class="cs-room"><div class="cs-t"><span data-o="1.6">8시 반</span><span data-t="1.6" data-o="3.4">9시</span><span data-t="3.4">9시 반</span></div><i class="cs-blanket"></i><div class="cs-c y"><i></i><b>윤</b></div><div class="cs-c k"><i></i><b>김</b></div><div class="cs-c m"><i></i><b>서인</b></div><div class="cs-c s"><i></i><b>순덕</b></div></div></div></div></div>
-<div class="setpiece" id="inks"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">장부실 · 화이트보드</div><div class="ik-board"><p data-t="0.30">월세 밀린 집 없음 · 성공</p><p class="r" data-t="0.72">생활 보전 지출 · 예상 초과</p><p data-t="1.14">두 번째 검증 세 배 · 성공</p><p class="r" data-t="1.56">검증 결과까지 대기 · 사흘에서 엿새로</p><p data-t="1.98">자기 꿈 꾼 사람 절반 넘어 · 성공</p><p class="r" data-t="2.40">광고꿈 재가입 · 중단자의 절반 가까이</p><p data-t="2.82">안 뜬 가게가 살아남 · 성공</p><p class="r" data-t="3.24">추천 재활성화 · 끈 사람의 셋 중 둘</p><p class="r last" data-t="3.80">분산 풀 이탈 · 두 사람<i class="ik-ring" data-p="4.70"></i></p></div><div class="ik-verdict"><span data-t="5.40">종합 판정:</span> <b data-t="6.10">30일째 주민 선택 결과로 갈음.</b></div><span class="ik-hand" data-t="7.20">좋아서.</span></div></div></div>
+<div class="setpiece" id="inks"><div class="veil"></div><div class="sp-center"><div class="sc"><div data-d="5.00"><span class="ik-loc">장부실 · 화이트보드</span><div class="ik-board"><p data-t="0.30">월세 밀린 집 없음 · 성공</p><p class="r" data-t="0.70">생활 보전 지출 · 예상 초과</p><p data-t="1.10">두 번째 검증 세 배 · 성공</p><p class="r" data-t="1.50">검증 결과까지 대기 · 사흘에서 엿새로</p><p data-t="1.90">자기 꿈 얘기 · 성공</p><p class="r" data-t="2.30">광고꿈 재가입 · 보름째부터 계속 증가</p><p data-t="2.70">안 뜬 가게가 살아남 · 성공</p><p class="r" data-t="3.10">추천 재활성화 · 상인 쪽부터</p><p class="r last" data-t="3.60">분산 풀 이탈 · 두 사람<i class="ik-ring" data-p="4.30"></i></p></div></div><div class="ik-room"><span class="ik-loc" data-t="5.40">이튿날 · 노인정</span><div class="ik-verdict"><span data-t="5.90">종합 판정:</span> <b data-t="6.40">30일째 주민 선택 결과로 갈음.</b><br><span data-t="7.00">별첨: 분산 풀 이탈 · 두 사람.</span></div><i class="ik-mat" data-t="7.60"><i style="left:22px"></i><i style="left:58px"></i><i style="left:94px"></i></i><span class="ik-hand" data-t="8.30">좋아서.</span></div></div></div></div>
 <div class="setpiece" id="rail"><div class="veil"></div><div class="sp-center"><div class="sc">
 <div class="rl-pass p1"><small>아침 · 약국 앞 계단 · 열두 칸</small><span class="rl-note">여섯째 칸</span><i class="rl-railline"></i><i class="rl-step" style="left:4px;top:46px"></i><i class="rl-step" style="left:26px;top:55px"></i><i class="rl-step" style="left:48px;top:65px"></i><i class="rl-step" style="left:70px;top:74px"></i><i class="rl-step" style="left:92px;top:84px"></i><i class="rl-step" style="left:114px;top:93px"></i><i class="rl-step" style="left:136px;top:103px"></i><i class="rl-step" style="left:158px;top:112px"></i><i class="rl-step" style="left:180px;top:122px"></i><i class="rl-step" style="left:202px;top:131px"></i><i class="rl-step" style="left:224px;top:141px"></i><i class="rl-step" style="left:246px;top:150px"></i><i class="rl-hand"></i><i class="rl-man"></i></div>
 <div class="rl-pass p2" data-t="3.8"><small>밤 11시 · 노인정 계단</small><i class="rl-railline" style="width:170px"></i><i class="rl-step" style="left:4px;top:46px"></i><i class="rl-step" style="left:26px;top:55px"></i><i class="rl-step" style="left:48px;top:65px"></i><i class="rl-step" style="left:70px;top:74px"></i><i class="rl-step" style="left:92px;top:84px"></i><i class="rl-step" style="left:114px;top:93px"></i><i class="rl-step" style="left:136px;top:103px"></i><i class="rl-man"></i></div></div></div></div>
@@ -1838,7 +1844,7 @@ const D={
 66:{a:'#e9c983',b:'#3b4252',token:'∞',sync:0,ghost:'',hook:'그 창은 평소와 같았다.',sp:'twopaper',at:.9,on:'11시, 김 영감이 일어나 불을 껐다. 문 종이 두 장이 어둠 속에서 같이 하얬다.',w:900,ms:8400},
 67:{a:'#c9b98f',b:'#4a5040',token:'∞',sync:0,ghost:'',hook:'서인은 한 칸 뒤에서 따라 내려갔다.',sp:'rail',at:.9,on:'김 영감이 일어나 불을 끄고 문을 잠갔다.',w:900,ms:8400},
 68:{a:'#c98a6a',b:'#3f4a35',token:'∞',sync:0,ghost:'',hook:'풀은 내일 아침 한 사람만큼 얇아질 것이었다.',sp:'cushion',at:.75,on:'“안 졸린데 가네.”',w:900,ms:7200},
-69:{a:'#d9d4c8',b:'#8a2f2a',token:'∞',sync:0,ghost:'',hook:'두 글자는 판 밖에 남았다.',sp:'inks',at:.9,on:'두 글자는 판 밖에 남았다.',w:900,ms:8800},
+69:{a:'#d9d4c8',b:'#8a2f2a',token:'∞',sync:0,ghost:'',hook:'세 글자는 판 밖에 남았다.',sp:'inks',at:.9,on:'세 글자는 판 밖에 남았다.',w:900,ms:9800},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
