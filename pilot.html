@@ -1120,6 +1120,19 @@ body.ep8 .prose p.mono{color:#1d5466;border-left-color:#1d546655}
 .ik-mat i{position:absolute;top:18px;width:14px;height:20px;background:#ece6d8;border-radius:2px}
 .ik-room .ik-hand{position:absolute;right:18px;top:70px;margin:0}
 .ik-hand{display:block;width:max-content;margin:16px 6px 0 auto;padding:6px 10px;background:#efeadf;color:#2a2622;transform:rotate(-3deg);font:24px/1.1 "Nanum Pen Script",cursive;box-shadow:0 6px 16px #0008}
+/* 70화 mix: 30일째 고른 칸. 어머니는 누른 순서대로(야간 먼저), 윤 여사는 넷 다 '그대로'를 한 칸씩, 순덕 할머니는 큰 버튼 한 번(한 줄이 통째로), 김 영감은 고를 게 없어서 다 골랐다. 맨 아래 다 켠 집·다 끈 집은 둘 다 작다 */
+#mix .veil{background:radial-gradient(circle at 50% 45%,#12110f,#040404 72%)}
+#mix .sc{width:min(320px,100%)}
+.mx-grid{display:grid;grid-template-columns:48px repeat(4,1fr);gap:4px;width:min(300px,100%);margin:10px auto 0;font:10px/1 system-ui,sans-serif;word-break:keep-all}
+.mx-grid>span{display:flex;align-items:center;justify-content:center;height:26px;border-radius:3px;white-space:nowrap}
+.mx-grid .h{height:16px;color:#8d96a2;font:9px ui-monospace,monospace;letter-spacing:.06em}
+.mx-grid .n{justify-content:flex-start;color:#d8d0bf}
+.mx-grid .on{background:#c98a4a;color:#1b140c}
+.mx-grid .off{background:#3c4a5a;color:#d6dde6}
+.mx-grid .kp{background:#5a554c;color:#ece6d8}
+.mx-grid .one{grid-column:span 4;background:#5a554c;color:#ece6d8}
+.mx-foot{display:flex;justify-content:center;gap:22px;margin:16px auto 0;font:9.5px ui-monospace,monospace;color:#9aa3ad}
+.mx-foot b{display:inline-block;width:6px;height:10px;margin-left:6px;vertical-align:-1px;background:#9aa3ad}
 /* 67화 rail: 약국 계단 열두 칸. 아침엔 여섯째 칸에서 난간을 놓고, 밤엔 처음부터 안 잡는다 */
 #rail .veil{background:radial-gradient(circle at 50% 45%,#11140f,#040504 72%)}
 #rail .sc{width:min(320px,100%)}
@@ -1375,6 +1388,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="spr-out" data-t="5"><div class="spr-sheet"><small>계열 10 분산 참조풀</small>1번 · 밤 9시 소등.</div></div></div></div></div>
 <div class="setpiece" id="cushion"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">노인정 · 담요 판</div><div class="cs-room"><div class="cs-t"><span data-o="1.6">8시 반</span><span data-t="1.6" data-o="3.4">9시</span><span data-t="3.4">9시 반</span></div><i class="cs-blanket"></i><div class="cs-c y"><i></i><b>윤</b></div><div class="cs-c k"><i></i><b>김</b></div><div class="cs-c m"><i></i><b>서인</b></div><div class="cs-c s"><i></i><b>순덕</b></div></div></div></div></div>
 <div class="setpiece" id="inks"><div class="veil"></div><div class="sp-center"><div class="sc"><div data-d="5.00"><span class="ik-loc">장부실 · 화이트보드</span><div class="ik-board"><p data-t="0.30">월세 밀린 집 없음 · 성공</p><p class="r" data-t="0.70">생활 보전 지출 · 예상 초과</p><p data-t="1.10">두 번째 검증 세 배 · 성공</p><p class="r" data-t="1.50">검증 결과까지 대기 · 사흘에서 엿새로</p><p data-t="1.90">자기 꿈 얘기 · 성공</p><p class="r" data-t="2.30">광고꿈 재가입 · 보름째부터 계속 증가</p><p data-t="2.70">안 뜬 가게가 살아남 · 성공</p><p class="r" data-t="3.10">추천 재활성화 · 상인 쪽부터</p><p class="r last" data-t="3.60">분산 풀 이탈 · 두 사람<i class="ik-ring" data-p="4.30"></i></p></div></div><div class="ik-room"><span class="ik-loc" data-t="5.40">이튿날 · 노인정</span><div class="ik-verdict"><span data-t="5.90">종합 판정:</span> <b data-t="6.40">30일째 주민 선택 결과로 갈음.</b><br><span data-t="7.00">별첨: 분산 풀 이탈 · 두 사람.</span></div><i class="ik-mat" data-t="7.60"><i style="left:22px"></i><i style="left:58px"></i><i style="left:94px"></i></i><span class="ik-hand" data-t="8.30">좋아서.</span></div></div></div></div>
+<div class="setpiece" id="mix"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">30일째 · 고른 칸</div><div class="mx-grid"><span class="h"></span><span class="h">광고꿈</span><span class="h">추천</span><span class="h">야간</span><span class="h">데이터</span><span class="n" data-t="0.3">어머니</span><span class="off" data-t="1.1">끔</span><span class="on" data-t="1.6">켬</span><span class="on" data-t="0.6">계속</span><span class="off" data-t="2.1">제한</span><span class="n" data-t="2.6">윤 여사</span><span class="kp" data-t="2.9">그대로</span><span class="kp" data-t="3.6">그대로</span><span class="kp" data-t="4.3">그대로</span><span class="kp" data-t="5.0">그대로</span><span class="n" data-t="5.5">순덕</span><span class="one" data-t="5.9">한 번에 · 지금 그대로</span><span class="n" data-t="6.4">김 영감</span><span class="off" data-t="6.7">안 함</span><span class="off" data-t="7.0">안 씀</span><span class="off" data-t="7.3">안 함</span><span class="kp" data-t="7.6">그대로</span></div><div class="mx-foot"><span data-t="8.4">다 켠 집<b></b></span><span data-t="8.4">다 끈 집<b></b></span></div></div></div></div>
 <div class="setpiece" id="rail"><div class="veil"></div><div class="sp-center"><div class="sc">
 <div class="rl-pass p1"><small>아침 · 약국 앞 계단 · 열두 칸</small><span class="rl-note">여섯째 칸</span><i class="rl-railline"></i><i class="rl-step" style="left:4px;top:46px"></i><i class="rl-step" style="left:26px;top:55px"></i><i class="rl-step" style="left:48px;top:65px"></i><i class="rl-step" style="left:70px;top:74px"></i><i class="rl-step" style="left:92px;top:84px"></i><i class="rl-step" style="left:114px;top:93px"></i><i class="rl-step" style="left:136px;top:103px"></i><i class="rl-step" style="left:158px;top:112px"></i><i class="rl-step" style="left:180px;top:122px"></i><i class="rl-step" style="left:202px;top:131px"></i><i class="rl-step" style="left:224px;top:141px"></i><i class="rl-step" style="left:246px;top:150px"></i><i class="rl-hand"></i><i class="rl-man"></i></div>
 <div class="rl-pass p2" data-t="3.8"><small>밤 11시 · 노인정 계단</small><i class="rl-railline" style="width:170px"></i><i class="rl-step" style="left:4px;top:46px"></i><i class="rl-step" style="left:26px;top:55px"></i><i class="rl-step" style="left:48px;top:65px"></i><i class="rl-step" style="left:70px;top:74px"></i><i class="rl-step" style="left:92px;top:84px"></i><i class="rl-step" style="left:114px;top:93px"></i><i class="rl-step" style="left:136px;top:103px"></i><i class="rl-man"></i></div></div></div></div>
@@ -1845,6 +1859,7 @@ const D={
 67:{a:'#c9b98f',b:'#4a5040',token:'∞',sync:0,ghost:'',hook:'서인은 한 칸 뒤에서 따라 내려갔다.',sp:'rail',at:.9,on:'김 영감이 일어나 불을 끄고 문을 잠갔다.',w:900,ms:8400},
 68:{a:'#c98a6a',b:'#3f4a35',token:'∞',sync:0,ghost:'',hook:'풀은 내일 아침 한 사람만큼 얇아질 것이었다.',sp:'cushion',at:.75,on:'“안 졸린데 가네.”',w:900,ms:7200},
 69:{a:'#d9d4c8',b:'#8a2f2a',token:'∞',sync:0,ghost:'',hook:'세 글자는 판 밖에 남았다.',sp:'inks',at:.9,on:'세 글자는 판 밖에 남았다.',w:900,ms:9800},
+70:{a:'#c98a4a',b:'#3c4a5a',token:'∞',sync:0,ghost:'',hook:'실행: 미정.은 그 위에 그대로 있었다.',sp:'mix',at:.9,on:'그 위에 그대로 있었다.',w:900,ms:9800},
 '2-1':{a:'#d6bb92',b:'#9bbdd7',token:'',sync:0,ghost:'A MARK IN THE VOICE',hook:'서인은 따라갔다.',sp:'eh2-voice',at:.95,on:'녹음 속 지우의 목소리가 아주 작게 새어 나왔다.',w:600,ms:7200},
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
@@ -1949,6 +1964,7 @@ const KEY={
 67:['“돈 들었으면 안 물었어. 그냥 계단을 천천히 내려갔겠지.”','“그거 붙이면 안 끊은 사람이 이유를 대야 돼요. 문 앞을 지날 때마다요.”'],
 68:['“좋아서.”','“나는 쓰는 거고, 쟤는 보는 거야. 다른 거야.”'],
 69:['“자유로워진 사람이 다시 광고꿈 켜면?”','“하나 적으면 다음엔 물어야 돼요. 안 적은 사람한테도요.”'],
+70:['“내 건데 내가 섞지.”','“한 번에 누르면 안 고른 거지.”'],
 };
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
