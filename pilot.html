@@ -557,6 +557,52 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .rs-cv{display:block;width:100%;height:auto;margin-top:10px;border:1px solid #ffffff12;background:#060b0d}
 .rs-sub{margin-top:6px;color:#ffb39b;opacity:0}#restore.on .rs-sub{animation:fxIn .3s .5s both}
 .rs-foot{margin-top:12px;font:15px/1.8 "Noto Serif KR",serif;color:#aeb7c2;opacity:0}#restore.on .rs-foot{animation:fxIn .5s 5.4s both}
+/* 7-3 의결권 없음: 쓰고 보내지 않고 지운 한 줄 */
+.us-wrap{width:min(400px,100%);display:grid;gap:16px;text-align:left;font:10px/1.7 ui-monospace,monospace}
+.us-flag{display:flex;justify-content:space-between;gap:10px;padding:7px 10px;border-left:3px solid #f2c94c;background:#f2c94c14;color:#f2d98a;opacity:0}
+.us-done{font-weight:600;color:#8a93a0;opacity:0}
+.us-box{border:1px solid #ffffff1f;background:#0b1118;padding:12px 14px 14px;opacity:0}
+.us-to{font-size:9px;letter-spacing:.18em;color:#7d8794;margin-bottom:10px}
+.us-field{min-height:34px;font:600 20px/1.6 "Noto Serif KR",serif;color:#eef2f6;border-bottom:1px solid #ffffff22;white-space:nowrap}
+.us-field i{font-style:normal;opacity:0;display:inline-block;max-width:1.2em;overflow:hidden;vertical-align:bottom}
+.us-caret{display:inline-block;width:2px;height:20px;margin-left:2px;vertical-align:-3px;background:#eef2f6;text-decoration:none}
+.us-send{margin-top:10px;display:inline-block;padding:5px 14px;border:1px solid #7fb6ff66;color:#9cc7ff;font-size:10px;letter-spacing:.2em}
+.us-room{display:flex;align-items:center;gap:8px;color:#e9dcb0;font-size:11px;opacity:0}.us-room i{width:9px;height:9px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px #ffe9a8}
+.us-clock{font-size:12px;color:#aeb7c2;opacity:0}.us-clock span{color:#7d8794}.us-clock b{color:#fff;font-size:15px}
+#unsent.on .us-flag{animation:fxIn .4s .1s both,usGray .6s 3.4s forwards}
+#unsent.on .us-done{animation:fxIn .3s 3.6s both}
+#unsent.on .us-box{animation:usShow .4s .6s both}
+#unsent.on .us-field i{animation:usShow .01s var(--a) both,usHide .01s var(--d) forwards}
+#unsent.on .us-caret{animation:usBlink 1s steps(1) 0s 2,usBlink 1s steps(1) 3.6s infinite}
+#unsent.on .us-send{animation:usPress 1.3s 2.3s both,usDim .5s 6.6s forwards}
+#unsent.on .us-room{animation:fxIn .3s 4.3s both,usOff .5s 4.7s forwards}
+#unsent.on .us-room i{animation:usLamp .3s 4.7s forwards}
+#unsent.on .us-clock{animation:fxIn .6s 7s both}
+@keyframes usShow{from{opacity:0}to{opacity:1}}@keyframes usHide{to{opacity:0;max-width:0}}@keyframes usBlink{50%{opacity:0}}
+@keyframes usGray{to{border-left-color:#5b6470;background:#ffffff06;color:#6f7884}}
+@keyframes usPress{0%,100%{background:transparent}12%,80%{background:#7fb6ff59;border-color:#d7e8ff;color:#fff;transform:scale(.95)}}
+@keyframes usDim{to{opacity:.25}}@keyframes usOff{to{color:#5d636c}}@keyframes usLamp{to{background:#2a2e34;box-shadow:none}}
+/* 12-1 확인 전: 지우는 줄(위)과 긋는 줄(아래) */
+.cp-wrap{width:min(420px,100%);display:grid;gap:22px;text-align:left}
+.cp-screen{font:10px/1.8 ui-monospace,monospace;color:#8fb3d6;border:1px solid #8fb3d633;background:#07111c;padding:12px 14px}
+.cp-loc{font:10px ui-monospace,monospace;letter-spacing:.22em;opacity:.7;margin-bottom:8px}
+.cp-ln{opacity:0}.cp-hyp{font-size:12px;color:#d6e6f5}.cp-low{color:#ffd38a;font-size:12px}
+.cp-tag{position:relative;color:#d6e6f5}.cp-tag:after{content:"";position:absolute;left:-2px;right:-2px;top:52%;height:2px;background:#ff8c9b;transform:scaleX(0);transform-origin:left}
+.cp-paper{position:relative;background:#e8e0cb;color:#2a2620;padding:14px 18px 18px;transform:rotate(-1.2deg);box-shadow:0 10px 30px #0008;font:15px/1.9 "Noto Serif KR",serif;opacity:0}
+.cp-paper .cp-loc{color:#6d6457}.cp-paper p{margin:0;opacity:0}
+.cp-rule{display:block;height:2px;background:#2a2620;margin:10px 0 8px;transform:scaleX(0);transform-origin:left}
+.cp-paper .cp-last{font:700 30px/1.3 "Noto Serif KR",serif;letter-spacing:-.02em}
+#checkpend.on .cp-note{animation:fxIn .4s .1s both,cpFade .6s 2.2s forwards}
+#checkpend.on .cp-hyp{animation:fxIn .4s .7s both}
+#checkpend.on .cp-tag:after{animation:cpDraw .35s 1.7s forwards}
+#checkpend.on .cp-tag{animation:cpTag .35s 1.9s forwards}
+#checkpend.on .cp-low{animation:fxIn .4s 2.3s both}
+#checkpend.on .cp-screen{animation:cpFade 1s 4.6s forwards}
+#checkpend.on .cp-paper{animation:cpShow .5s 2.9s both}
+#checkpend.on .cp-h1{animation:fxIn .4s 3.2s both}#checkpend.on .cp-h2{animation:fxIn .4s 3.6s both}#checkpend.on .cp-h3{animation:fxIn .4s 4s both}
+#checkpend.on .cp-rule{animation:cpDraw .9s 4.8s cubic-bezier(.6,.1,.3,1) forwards}
+#checkpend.on .cp-last{animation:fxIn .6s 5.9s both}
+@keyframes cpShow{from{opacity:0}to{opacity:1}}@keyframes cpDraw{to{transform:scaleX(1)}}@keyframes cpFade{to{opacity:.22}}@keyframes cpTag{to{color:#6f8296}}
 /* 장면 재현 공통 부품: data-t(등장)·data-d(흐려짐)·data-k(취소선)·data-g(강조)·data-o(사라짐)·data-p(도장) 초 단위 */
 @keyframes fxStrike{to{text-decoration:line-through;opacity:.5}}@keyframes fxGlow{to{color:#ffd38a;border-color:#ffd38a;background:#ffd38a14}}@keyframes fxPop{from{opacity:0;transform:scale(1.7) rotate(-6deg)}to{opacity:1;transform:scale(1) rotate(-6deg)}}@keyframes fxRed{to{color:#ff8c9b;border-color:#ff8c9b88}}
 .sc{width:min(460px,100%);font:10px/1.7 ui-monospace,monospace;color:#9aa3ae;text-align:left}.sc .sp-label{text-align:center;margin-bottom:12px}
@@ -1759,6 +1805,21 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="sc-card" data-t=".9"><small>18:00 · 공백 시간 종료</small><strong>활용 기록: 없음 · 상태: 정상</strong></div>
 <div class="sc-row" data-t="2.2"><span>공백 시간은 어떠셨나요? (선택 · 익명)</span><b><span class="sc-stamp" data-p="3">제출</span></b></div>
 <div class="sc-q s" data-t="3.8">응답은 서비스 개선에 활용될 수 있습니다.</div></div></div></div>
+<div class="setpiece" id="unsent"><div class="veil"></div><div class="sp-center"><div class="us-wrap">
+<div class="us-flag"><span>외부 발송 · 19:52 · 해당 안 폐기 상태</span><b class="us-done">검토 완료</b></div>
+<div class="us-box"><div class="us-to">수신 · 회의 주재자</div><div class="us-field"><i style="--a:1.00s;--d:6.20s">발</i><i style="--a:1.14s;--d:6.05s">신</i><i style="--a:1.28s;--d:5.90s">&nbsp;</i><i style="--a:1.42s;--d:5.75s">확</i><i style="--a:1.56s;--d:5.60s">인</i><i style="--a:1.70s;--d:5.45s">&nbsp;</i><i style="--a:1.84s;--d:5.30s">요</i><i style="--a:1.98s;--d:5.15s">망</i><i style="--a:2.12s;--d:5.00s">.</i><u class="us-caret"></u></div><div class="us-send">전송</div></div>
+<div class="us-room"><i></i>상층 객실 · 조명 꺼짐 · 수면 메뉴 선택 없음.</div>
+<div class="us-clock"><span>11:58</span> · 낮 12시 20분까지 <b>열두 시간 이십이 분</b></div>
+</div></div></div>
+<div class="setpiece" id="checkpend"><div class="veil"></div><div class="sp-center"><div class="cp-wrap">
+<div class="cp-screen"><div class="cp-loc">최고위 전략실 · 12:03</div>
+<div class="cp-ln cp-note">비고 · 보안 진술서 외부 열람 이력 1건 · 출처 확인 중</div>
+<div class="cp-ln cp-hyp">가설 E / 인간 단독 판단 · <span class="cp-tag">배제 불가</span></div>
+<div class="cp-ln cp-low">우선순위: 최하</div></div>
+<div class="cp-paper"><div class="cp-loc">글러브박스 수첩 · 볼펜</div>
+<p class="cp-h1">MC-7302.</p><p class="cp-h2">뒷문 카메라 · 찍혔을 수 있음.</p><p class="cp-h3">수신: 최고위 전략실.</p>
+<i class="cp-rule"></i><p class="cp-last">확인 전.</p></div>
+</div></div></div>
 <div class="setpiece" id="namecount"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">세르젠 자발적 공유 · 공공망 연동</div>
 <div class="nc-search" data-t=".1">서인 ⌕</div>
 <div class="nc-name" data-t=".6" data-k="3.4">SEO-IN CONSENT STANDARD</div>
@@ -1783,7 +1844,7 @@ const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterH
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=70,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],8:['8-1','8-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2','7-3'],8:['8-1','8-2'],9:['9-1'],11:['11-1'],13:['13-1'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:"이상하게 좋다.",sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -1793,6 +1854,7 @@ const D={
 6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:"그 사실까지 마음에 들지 않았다.",sp:'rejoin147',at:.72,on:"결과는 같았다",w:1600,ms:7800},
 7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:"그 생각이 무서웠다.",sp:'records147',at:.2,on:"너무 평범했다.",w:900,ms:7800,more:[{sp:'verdict',on:"“돈도, 의료도, 가족 눈치도 없어. 그래도 재호 씨가 다시 광고를 켜면?”",w:900,ms:6800}]},
 8:{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'12:20',hook:'서인은 물을 마셨다. 차가웠다.',sp:'thirdplan',at:.9,on:'서인은 물을 마셨다. 차가웠다.',w:1600,ms:8800},
+'7-3':{a:'#9cc7ff',b:'#f2c94c',token:'019.7',sync:68,ghost:'UNSENT',hook:"그는 보내지 않은 그 한 줄을 지웠다.",sp:'unsent',at:.8,on:'그는 보내지 않은 그 한 줄을 지웠다.',w:1400,ms:9800},
 '8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'12:20',hook:'실행할 수 없는 쪽으로.',sp:'deadline',at:.88,on:'실행할 수 없는 쪽으로.',w:900,ms:9600},
 '8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:'누가 내일 아이를 데려올지, 어느 표에도 없는 칸이 남았다.',sp:'scatter',at:.75,on:'현장대표가 통화를 끝냈다.',w:900,ms:8200},
 9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:"금속 조각을 쥔 서인의 손을 한 번 보고는 먼저 돌아섰다.",sp:'overseen',at:.3,on:"가능성이 너무 많이 보였다.",w:900,ms:8600},
@@ -1864,6 +1926,7 @@ const D={
 '9-1':{a:'#b6a7ff',b:'#e6b8a2',token:'∞',sync:43,ghost:'JUST TOMORROW',hook:'메시지를 보내고도 한 번 더 읽었다.',sp:'ldx-claymark',at:.8,on:'손톱 밑의 흙은 아직 남아 있었다.',w:300},
 '11-1':{a:'#ffc9a8',b:'#a9c7ff',token:'∞',sync:24,ghost:'RED CELL',hook:"“출장이 길었네.”",sp:'redcell',at:.8,on:'“출장이 길었네.”',w:1200,ms:6800},
 '15-1':{a:'#f2d3a0',b:'#8fb8a8',token:'∞',sync:34,ghost:'SEVENTH POT',hook:"주머니 속 냅킨은 꺼내지 않았다.",sp:'seventhpot',at:.78,on:'주머니 속 냅킨은 꺼내지 않았다.',w:1400,ms:7200},
+'12-1':{a:'#c9d6e3',b:'#ffb36b',token:'∞',sync:26,ghost:'UNCONFIRMED',hook:"저녁 일곱 시부터 칸이 비어 있었다.",sp:'checkpend',at:.8,on:'그 아래에 줄을 하나 긋고 적었다.',w:1400,ms:8400},
 '13-1':{a:'#ffd9a0',b:'#9fd4c4',token:'∞',sync:21,ghost:'BLANK WED',hook:"그 옆 칸이 비어 있었다. 다음 수요일 것이었다.",sp:'wedlog',at:.8,on:'지우는 마지막 줄을 읽지 않고 화면을 껐다.',w:1400,ms:6800},
 '21-1':{a:'#ff8c6b',b:'#ffd38a',token:'∞',sync:21,ghost:'12 / 12',hook:"우유 두 개. 큰 걸로. 지각하면 반 개만. 재조정이 뭔지도 알아 와.",sp:'rescue',at:0.57,on:"“이겼다.”",w:900,ms:7600},
 '22-1':{a:'#d9e2ff',b:'#ffd38a',token:'∞',sync:22,ghost:'SIGNED BY YOU',hook:"첫 숫자가 0에서 올라가기 시작했다.",sp:'clause',at:0.45,on:"“제안, 전략본부 마정훈.”",w:700,ms:7400},

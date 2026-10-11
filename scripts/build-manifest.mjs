@@ -9,6 +9,7 @@ const HIDDEN_MANUSCRIPT = new Set([
   'ep003-1.md', // 핵심 선택권 장면을 9-1에 흡수
   'ep006-2.md', // ep007-2.md로 이동(394f6d3) — 원본 보존용
   'ep011-1.md', // ep011.md 인터컷으로 흡수
+  'ep012-1.md', // 검수 통과, 회수 범퍼(13화 밤 태석 시점)와 함께 공개 예정(작가 2026-10-11)
 ]);
 
 const episodeKey = filename => {
