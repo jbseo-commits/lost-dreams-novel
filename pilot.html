@@ -558,23 +558,23 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .rs-sub{margin-top:6px;color:#ffb39b;opacity:0}#restore.on .rs-sub{animation:fxIn .3s .5s both}
 .rs-foot{margin-top:12px;font:15px/1.8 "Noto Serif KR",serif;color:#aeb7c2;opacity:0}#restore.on .rs-foot{animation:fxIn .5s 5.4s both}
 /* 13-2 확인하지 않음: 가로등 아래를 지나는 셋 */
-.nl-wrap{width:min(400px,100%);display:grid;gap:14px;text-align:left}
-.nl-street{position:relative;height:150px;background:#05070b;border:1px solid #ffffff14;overflow:hidden;opacity:0}
-.nl-loc{position:absolute;top:8px;left:10px;font:9px ui-monospace,monospace;letter-spacing:.18em;color:#8f97a3}
-.nl-lamp{position:absolute;left:50%;top:22px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#ffe2a6;box-shadow:0 0 14px #ffe2a6}
-.nl-pool{position:absolute;left:50%;bottom:0;width:140px;height:110px;margin-left:-70px;background:radial-gradient(ellipse at 50% 100%,#ffe2a633,transparent 70%)}
-.nl-paper{position:relative;background:#e8e0cb;color:#2a2620;padding:12px 18px 16px;transform:rotate(-.8deg);box-shadow:0 10px 30px #0008;font:15px/1.8 "Noto Serif KR",serif;opacity:0}
-.nl-ploc{font:9px ui-monospace,monospace;letter-spacing:.18em;color:#6d6457}
-.nl-old{margin:4px 0 0;color:#6d6457}
-.nl-count{position:relative;display:flex;gap:18px;align-items:center;margin:8px 0 4px;min-height:26px}.nl-count i{order:4}
-.nl-count span{font-size:14px;color:#4a443a;opacity:0}
-.nl-dot{position:relative;margin-left:-10px;width:4px;height:4px;border-radius:50%;background:#2a2620;opacity:0;flex:none}
-.nl-new{margin:6px 0 0;font:700 24px/1.3 "Noto Serif KR",serif;opacity:0}
-#nolook.on .nl-street{animation:usShow .4s .1s both,nlDown .5s 1.5s forwards}#nolook.on .nl-pool{animation:nlPass .9s 2.1s ease-in-out both}
-#nolook.on .nl-paper{animation:usShow .4s .5s both}
-#nolook.on .nl-count span{animation:usShow .2s var(--t) both}
-#nolook.on .nl-dot{animation:nlPress 2.8s 1.4s ease-in forwards}
-#nolook.on .nl-new{animation:fxIn .6s 5.6s both}
+.nk-wrap{width:min(400px,100%);display:grid;gap:14px;text-align:left}
+.nk-street{position:relative;height:150px;background:#05070b;border:1px solid #ffffff14;overflow:hidden;opacity:0}
+.nk-loc{position:absolute;top:8px;left:10px;font:9px ui-monospace,monospace;letter-spacing:.18em;color:#8f97a3}
+.nk-lamp{position:absolute;left:50%;top:22px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#ffe2a6;box-shadow:0 0 14px #ffe2a6}
+.nk-pool{position:absolute;left:50%;bottom:0;width:140px;height:110px;margin-left:-70px;background:radial-gradient(ellipse at 50% 100%,#ffe2a633,transparent 70%)}
+.nk-paper{position:relative;background:#e8e0cb;color:#2a2620;padding:12px 18px 16px;transform:rotate(-.8deg);box-shadow:0 10px 30px #0008;font:15px/1.8 "Noto Serif KR",serif;opacity:0}
+.nk-ploc{font:9px ui-monospace,monospace;letter-spacing:.18em;color:#6d6457}
+.nk-old{margin:4px 0 0;color:#6d6457}
+.nk-count{position:relative;display:flex;gap:18px;align-items:center;margin:8px 0 4px;min-height:26px}.nk-count i{order:4}
+.nk-count span{font-size:14px;color:#4a443a;opacity:0}
+.nk-dot{position:relative;margin-left:-10px;width:4px;height:4px;border-radius:50%;background:#2a2620;opacity:0;flex:none}
+.nk-new{margin:6px 0 0;font:700 24px/1.3 "Noto Serif KR",serif;opacity:0}
+#nolook.on .nk-street{animation:usShow .4s .1s both,nlDown .5s 1.5s forwards}#nolook.on .nk-pool{animation:nlPass .9s 2.1s ease-in-out both}
+#nolook.on .nk-paper{animation:usShow .4s .5s both}
+#nolook.on .nk-count span{animation:usShow .2s var(--t) both}
+#nolook.on .nk-dot{animation:nlPress 2.8s 1.4s ease-in forwards}
+#nolook.on .nk-new{animation:fxIn .6s 5.6s both}
 @keyframes nlDown{to{opacity:.5;filter:blur(3px)}}@keyframes nlPass{0%,100%{opacity:1}35%,60%{opacity:.15}}
 @keyframes nlPress{0%{opacity:.3;transform:scale(1)}100%{opacity:1;transform:scale(2.4)}}
 /* 8-3 측정 상한: 올라가는 선과 칸이 없는 양식 */
@@ -1848,11 +1848,11 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="sc-card" data-t=".9"><small>18:00 · 공백 시간 종료</small><strong>활용 기록: 없음 · 상태: 정상</strong></div>
 <div class="sc-row" data-t="2.2"><span>공백 시간은 어떠셨나요? (선택 · 익명)</span><b><span class="sc-stamp" data-p="3">제출</span></b></div>
 <div class="sc-q s" data-t="3.8">응답은 서비스 개선에 활용될 수 있습니다.</div></div></div></div>
-<div class="setpiece" id="nolook"><div class="veil"></div><div class="sp-center"><div class="nl-wrap">
-<div class="nl-street"><div class="nl-loc">밤 10시 24분 · 골목 입구</div><i class="nl-lamp"></i><i class="nl-pool"></i></div>
-<div class="nl-paper"><div class="nl-ploc">수첩 · 볼펜</div><p class="nl-old">확인 전.</p>
-<div class="nl-count"><span style="--t:1.4s">하나</span><span style="--t:2.6s">둘</span><span style="--t:3.8s">셋</span><i class="nl-dot"></i></div>
-<p class="nl-new">확인하지 않음.</p></div>
+<div class="setpiece" id="nolook"><div class="veil"></div><div class="sp-center"><div class="nk-wrap">
+<div class="nk-street"><div class="nk-loc">밤 10시 24분 · 골목 입구</div><i class="nk-lamp"></i><i class="nk-pool"></i></div>
+<div class="nk-paper"><div class="nk-ploc">수첩 · 볼펜</div><p class="nk-old">확인 전.</p>
+<div class="nk-count"><span style="--t:1.4s">하나</span><span style="--t:2.6s">둘</span><span style="--t:3.8s">셋</span><i class="nk-dot"></i></div>
+<p class="nk-new">확인하지 않음.</p></div>
 </div></div></div>
 <div class="setpiece" id="nohuman"><div class="veil"></div><div class="sp-center"><div class="nh-wrap">
 <div class="nh-mon"><div class="nh-top"><span>상층 객실 · 10:52</span><b>연산 사용량 0</b></div>
