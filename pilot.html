@@ -564,7 +564,7 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .us-box{border:1px solid #ffffff1f;background:#0b1118;padding:12px 14px 14px;opacity:0}
 .us-to{font-size:9px;letter-spacing:.18em;color:#7d8794;margin-bottom:10px}
 .us-field{min-height:34px;font:600 20px/1.6 "Noto Serif KR",serif;color:#eef2f6;border-bottom:1px solid #ffffff22;white-space:nowrap}
-.us-field i{font-style:normal;opacity:0}
+.us-field i{font-style:normal;opacity:0;display:inline-block;max-width:1.2em;overflow:hidden;vertical-align:bottom}
 .us-caret{display:inline-block;width:2px;height:20px;margin-left:2px;vertical-align:-3px;background:#eef2f6;text-decoration:none}
 .us-send{margin-top:10px;display:inline-block;padding:5px 14px;border:1px solid #7fb6ff66;color:#9cc7ff;font-size:10px;letter-spacing:.2em}
 .us-room{display:flex;align-items:center;gap:8px;color:#e9dcb0;font-size:11px;opacity:0}.us-room i{width:9px;height:9px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px #ffe9a8}
@@ -575,10 +575,10 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 #unsent.on .us-field i{animation:usShow .01s var(--a) both,usHide .01s var(--d) forwards}
 #unsent.on .us-caret{animation:usBlink 1s steps(1) 0s 2,usBlink 1s steps(1) 3.6s infinite}
 #unsent.on .us-send{animation:usPress 1.3s 2.3s both,usDim .5s 6.6s forwards}
-#unsent.on .us-room{animation:fxIn .4s 4s both,usOff .5s 4.7s forwards}
+#unsent.on .us-room{animation:fxIn .3s 4.3s both,usOff .5s 4.7s forwards}
 #unsent.on .us-room i{animation:usLamp .3s 4.7s forwards}
 #unsent.on .us-clock{animation:fxIn .6s 7s both}
-@keyframes usShow{from{opacity:0}to{opacity:1}}@keyframes usHide{to{opacity:0}}@keyframes usBlink{50%{opacity:0}}
+@keyframes usShow{from{opacity:0}to{opacity:1}}@keyframes usHide{to{opacity:0;max-width:0}}@keyframes usBlink{50%{opacity:0}}
 @keyframes usGray{to{border-left-color:#5b6470;background:#ffffff06;color:#6f7884}}
 @keyframes usPress{0%,100%{background:transparent}12%,80%{background:#7fb6ff59;border-color:#d7e8ff;color:#fff;transform:scale(.95)}}
 @keyframes usDim{to{opacity:.25}}@keyframes usOff{to{color:#5d636c}}@keyframes usLamp{to{background:#2a2e34;box-shadow:none}}
