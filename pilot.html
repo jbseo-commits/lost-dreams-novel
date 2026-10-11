@@ -558,7 +558,7 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .rs-sub{margin-top:6px;color:#ffb39b;opacity:0}#restore.on .rs-sub{animation:fxIn .3s .5s both}
 .rs-foot{margin-top:12px;font:15px/1.8 "Noto Serif KR",serif;color:#aeb7c2;opacity:0}#restore.on .rs-foot{animation:fxIn .5s 5.4s both}
 /* 7-3 의결권 없음: 쓰고 보내지 않고 지운 한 줄 */
-.us-wrap{width:min(400px,100%);display:grid;gap:18px;text-align:left;font:10px/1.7 ui-monospace,monospace}
+.us-wrap{width:min(400px,100%);display:grid;gap:16px;text-align:left;font:10px/1.7 ui-monospace,monospace}
 .us-flag{display:flex;justify-content:space-between;gap:10px;padding:7px 10px;border-left:3px solid #f2c94c;background:#f2c94c14;color:#f2d98a;opacity:0}
 .us-done{font-weight:600;color:#8a93a0;opacity:0}
 .us-box{border:1px solid #ffffff1f;background:#0b1118;padding:12px 14px 14px;opacity:0}
@@ -567,18 +567,21 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .us-field i{font-style:normal;opacity:0}
 .us-caret{display:inline-block;width:2px;height:20px;margin-left:2px;vertical-align:-3px;background:#eef2f6;text-decoration:none}
 .us-send{margin-top:10px;display:inline-block;padding:5px 14px;border:1px solid #7fb6ff66;color:#9cc7ff;font-size:10px;letter-spacing:.2em}
+.us-room{display:flex;align-items:center;gap:8px;color:#e9dcb0;font-size:11px;opacity:0}.us-room i{width:9px;height:9px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px #ffe9a8}
 .us-clock{font-size:12px;color:#aeb7c2;opacity:0}.us-clock span{color:#7d8794}.us-clock b{color:#fff;font-size:15px}
 #unsent.on .us-flag{animation:fxIn .4s .1s both,usGray .6s 3.4s forwards}
 #unsent.on .us-done{animation:fxIn .3s 3.6s both}
 #unsent.on .us-box{animation:usShow .4s .6s both}
 #unsent.on .us-field i{animation:usShow .01s var(--a) both,usHide .01s var(--d) forwards}
-#unsent.on .us-caret{animation:usBlink 1s steps(1) infinite}
-#unsent.on .us-send{animation:usPress 1.6s 2.6s both,usDim .5s 6.3s forwards}
-#unsent.on .us-clock{animation:fxIn .6s 6.8s both}
+#unsent.on .us-caret{animation:usBlink 1s steps(1) 0s 2,usBlink 1s steps(1) 3.6s infinite}
+#unsent.on .us-send{animation:usPress 1.3s 2.3s both,usDim .5s 6.6s forwards}
+#unsent.on .us-room{animation:fxIn .4s 4s both,usOff .5s 4.7s forwards}
+#unsent.on .us-room i{animation:usLamp .3s 4.7s forwards}
+#unsent.on .us-clock{animation:fxIn .6s 7s both}
 @keyframes usShow{from{opacity:0}to{opacity:1}}@keyframes usHide{to{opacity:0}}@keyframes usBlink{50%{opacity:0}}
 @keyframes usGray{to{border-left-color:#5b6470;background:#ffffff06;color:#6f7884}}
-@keyframes usPress{0%,100%{background:transparent}40%,70%{background:#7fb6ff22;transform:scale(.97)}}
-@keyframes usDim{to{opacity:.25}}
+@keyframes usPress{0%,100%{background:transparent}12%,80%{background:#7fb6ff59;border-color:#d7e8ff;color:#fff;transform:scale(.95)}}
+@keyframes usDim{to{opacity:.25}}@keyframes usOff{to{color:#5d636c}}@keyframes usLamp{to{background:#2a2e34;box-shadow:none}}
 /* 12-1 확인 전: 지우는 줄(위)과 긋는 줄(아래) */
 .cp-wrap{width:min(420px,100%);display:grid;gap:22px;text-align:left}
 .cp-screen{font:10px/1.8 ui-monospace,monospace;color:#8fb3d6;border:1px solid #8fb3d633;background:#07111c;padding:12px 14px}
@@ -1804,7 +1807,8 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="sc-q s" data-t="3.8">응답은 서비스 개선에 활용될 수 있습니다.</div></div></div></div>
 <div class="setpiece" id="unsent"><div class="veil"></div><div class="sp-center"><div class="us-wrap">
 <div class="us-flag"><span>외부 발송 · 19:52 · 해당 안 폐기 상태</span><b class="us-done">검토 완료</b></div>
-<div class="us-box"><div class="us-to">수신 · 회의 주재자</div><div class="us-field"><i style="--a:1.00s;--d:5.96s">발</i><i style="--a:1.14s;--d:5.79s">신</i><i style="--a:1.28s;--d:5.62s">&nbsp;</i><i style="--a:1.42s;--d:5.45s">확</i><i style="--a:1.56s;--d:5.28s">인</i><i style="--a:1.70s;--d:5.11s">&nbsp;</i><i style="--a:1.84s;--d:4.94s">요</i><i style="--a:1.98s;--d:4.77s">망</i><i style="--a:2.12s;--d:4.60s">.</i><u class="us-caret"></u></div><div class="us-send">전송</div></div>
+<div class="us-box"><div class="us-to">수신 · 회의 주재자</div><div class="us-field"><i style="--a:1.00s;--d:6.20s">발</i><i style="--a:1.14s;--d:6.05s">신</i><i style="--a:1.28s;--d:5.90s">&nbsp;</i><i style="--a:1.42s;--d:5.75s">확</i><i style="--a:1.56s;--d:5.60s">인</i><i style="--a:1.70s;--d:5.45s">&nbsp;</i><i style="--a:1.84s;--d:5.30s">요</i><i style="--a:1.98s;--d:5.15s">망</i><i style="--a:2.12s;--d:5.00s">.</i><u class="us-caret"></u></div><div class="us-send">전송</div></div>
+<div class="us-room"><i></i>상층 객실 · 조명 꺼짐 · 수면 메뉴 선택 없음.</div>
 <div class="us-clock"><span>11:58</span> · 낮 12시 20분까지 <b>열두 시간 이십이 분</b></div>
 </div></div></div>
 <div class="setpiece" id="checkpend"><div class="veil"></div><div class="sp-center"><div class="cp-wrap">
@@ -1850,7 +1854,7 @@ const D={
 6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:"그 사실까지 마음에 들지 않았다.",sp:'rejoin147',at:.72,on:"결과는 같았다",w:1600,ms:7800},
 7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:"그 생각이 무서웠다.",sp:'records147',at:.2,on:"너무 평범했다.",w:900,ms:7800,more:[{sp:'verdict',on:"“돈도, 의료도, 가족 눈치도 없어. 그래도 재호 씨가 다시 광고를 켜면?”",w:900,ms:6800}]},
 8:{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'12:20',hook:'서인은 물을 마셨다. 차가웠다.',sp:'thirdplan',at:.9,on:'서인은 물을 마셨다. 차가웠다.',w:1600,ms:8800},
-'7-3':{a:'#9cc7ff',b:'#f2c94c',token:'019.7',sync:68,ghost:'UNSENT',hook:"그는 보내지 않은 그 한 줄을 지웠다.",sp:'unsent',at:.8,on:'그는 보내지 않은 그 한 줄을 지웠다.',w:1400,ms:8600},
+'7-3':{a:'#9cc7ff',b:'#f2c94c',token:'019.7',sync:68,ghost:'UNSENT',hook:"그는 보내지 않은 그 한 줄을 지웠다.",sp:'unsent',at:.8,on:'그는 보내지 않은 그 한 줄을 지웠다.',w:1400,ms:9800},
 '8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'12:20',hook:'실행할 수 없는 쪽으로.',sp:'deadline',at:.88,on:'실행할 수 없는 쪽으로.',w:900,ms:9600},
 '8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:'누가 내일 아이를 데려올지, 어느 표에도 없는 칸이 남았다.',sp:'scatter',at:.75,on:'현장대표가 통화를 끝냈다.',w:900,ms:8200},
 9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:"금속 조각을 쥔 서인의 손을 한 번 보고는 먼저 돌아섰다.",sp:'overseen',at:.3,on:"가능성이 너무 많이 보였다.",w:900,ms:8600},
