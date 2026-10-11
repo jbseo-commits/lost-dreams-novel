@@ -566,20 +566,20 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .nh-line{fill:none;stroke:#f2c94c;stroke-width:2.5;stroke-dasharray:420;stroke-dashoffset:420;vector-effect:non-scaling-stroke}
 .nh-warn{margin-top:4px;color:#ff8c9b;font-weight:600;opacity:0}
 .nh-form{grid-area:1/1;align-self:center;border:1px solid #ffffff22;background:#0a0e14;padding:12px 14px;opacity:0}
-.nh-title{font-size:9px;letter-spacing:.18em;color:#7d8794;margin-bottom:8px}
+.nh-title{font-size:10px;letter-spacing:.18em;color:#a3acb8;margin-bottom:8px}
 .nh-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid #ffffff10;color:#e6ebf1;font:600 13px/1.4 "Noto Serif KR",serif;opacity:0}
 .nh-row i{width:12px;height:12px;border:1.5px solid #9aa3ae;flex:none}
 .nh-ghost{border-bottom:0}.nh-ghost i{border-style:dashed;border-color:#ffffff55}
-.nh-last{margin-top:14px;font:600 16px/1.6 "Noto Serif KR",serif;color:#fff;opacity:0}
+.nh-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;gap:10px}.nh-sched{color:#c9d1db;font-size:11px;opacity:0}.nh-save{padding:5px 16px;border:1px solid #9aa3ae66;color:#c9d1db;font-size:11px;letter-spacing:.2em;opacity:0}
 #nohuman.on .nh-mon{animation:usShow .4s .1s both,nhCut .45s 3.5s cubic-bezier(.7,0,.9,.4) forwards}
 #nohuman.on .nh-line{animation:nhDraw 2.4s .5s cubic-bezier(.5,0,.9,.6) forwards}
 #nohuman.on .nh-warn{animation:fxIn .3s 2.8s both}
 #nohuman.on .nh-form{animation:usShow .4s 4s both}
 #nohuman.on .nh-row{animation:fxIn .35s var(--t) both}
 #nohuman.on .nh-ghost{animation:nhGhost 1.6s 5.8s both}
-#nohuman.on .nh-last{animation:fxIn .6s 7.5s both}
+#nohuman.on .nh-sched{animation:fxIn .4s 7.5s both}#nohuman.on .nh-save{animation:usShow .3s 8.1s both,nhSave 1s 8.7s forwards}
 @keyframes nhDraw{to{stroke-dashoffset:0}}@keyframes nhCut{to{opacity:0;transform:scaleY(.02)}}
-@keyframes nhGhost{0%{opacity:0}35%,60%{opacity:.8}100%{opacity:0}}
+@keyframes nhSave{30%{background:#c9d1db33;transform:scale(.94)}100%{background:#c9d1db;color:#0a0e14;border-color:#c9d1db;transform:none}}@keyframes nhGhost{0%{opacity:0}35%,60%{opacity:.8}100%{opacity:0}}
 /* 7-3 의결권 없음: 쓰고 보내지 않고 지운 한 줄 */
 .us-wrap{width:min(400px,100%);display:grid;gap:16px;text-align:left;font:10px/1.7 ui-monospace,monospace}
 .us-flag{display:flex;justify-content:space-between;gap:10px;padding:7px 10px;border-left:3px solid #f2c94c;background:#f2c94c14;color:#f2d98a;opacity:0}
@@ -1832,12 +1832,12 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="nh-mon"><div class="nh-top"><span>상층 객실 · 10:52</span><b>연산 사용량 0</b></div>
 <svg class="nh-svg" viewBox="0 0 300 120" preserveAspectRatio="none"><line class="nh-th" x1="0" y1="22" x2="300" y2="22"/><polyline class="nh-line" points="0,108 60,104 110,98 150,86 175,66 200,44 225,28 250,16 280,8 300,4"/></svg>
 <div class="nh-warn">경고: 인지 부하 임계 초과</div></div>
-<div class="nh-form"><div class="nh-title">특별 인지 평가 · 결과 항목</div>
+<div class="nh-form"><div class="nh-title">특별 인지 평가 · 초안</div>
 <div class="nh-row" style="--t:4.4s"><i></i>외부 출력 전달 의심</div>
 <div class="nh-row" style="--t:4.8s"><i></i>판정 보류</div>
 <div class="nh-row" style="--t:5.2s"><i></i>측정 상한 초과</div>
 <div class="nh-row nh-ghost"><i></i></div>
-<div class="nh-last">양식 어디에도 '사람'이라는 칸은 없었다.</div></div>
+<div class="nh-foot"><span class="nh-sched">발송 예약 · 복귀 후 · 오후</span><b class="nh-save">저장</b></div></div>
 </div></div></div>
 <div class="setpiece" id="unsent"><div class="veil"></div><div class="sp-center"><div class="us-wrap">
 <div class="us-flag"><span>외부 발송 · 19:52 · 해당 안 폐기 상태</span><b class="us-done">검토 완료</b></div>
@@ -1905,7 +1905,7 @@ const D={
 20:{a:'#caffea',b:'#8cbcff',token:'∞',sync:18,ghost:'LEVEL 6',hook:"닫히기 전에, 서인은 손으로 문을 한 번 잡아 보았다.",sp:'graybutton',at:.78,on:"못 누르겠는데요.",w:900,ms:7800,more:[{sp:'netbundle',on:"주거 지원 자격 재검증.",w:700,ms:6400}]},
 21:{a:'#b8ffe8',b:'#ffd59b',token:'∞',sync:17,ghost:'RISK MOVED',hook:"위치만 바뀌었다.",sp:'nightload',at:.5,on:"그제야 서인은 첫 번째 기록을 열었다.",w:900,ms:7800,more:[{sp:'restore',on:"예상 지연: 정상 범위.",w:700,ms:6800}]},
 22:{a:'#c8ffe2',b:'#ffd9a0',token:'∞',sync:16,ghost:'4TH SAFETY',hook:"처음으로 문 앞에 서 있었다.",sp:'fourcheck',at:.69,on:"보상 문제가 아닙니다. 아이 문제입니다.",w:700,ms:7600},
-23:{a:'#b8ffe8',b:'#ffcf9a',token:'∞',sync:15,ghost:'71 → 43',hook:"처음으로 그의 말에도 사용 한도가 필요해졌다.",sp:'recount43',at:.67,on:"구분이 안 됐던 거죠.",w:1600,ms:10400},
+23:{a:'#b8ffe8',b:'#ffcf9a',token:'∞',sync:15,ghost:'71 → 43',hook:"처음으로 그의 말에도 사용 한도가 필요해졌다.",sp:'recount43',at:.67,on:"구분이 안 됐던 거죠.",w:1600,ms:11200},
 24:{a:'#ffd2a0',b:'#a8dfff',token:'∞',sync:14,ghost:'BORROWED NAME',hook:"그의 이름만 있어도 판단을 빌린 척할 수 있었다.",sp:'namecount',at:.8,on:"예측보다 덜 떨어졌다.",w:900,ms:7400},
 25:{a:'#baffda',b:'#ffcf9e',token:'∞',sync:13,ghost:'SAME CHOICE',hook:"같은 방향으로만 움직이지 않았다.",sp:'samethree',at:.58,on:"비참여 및 참여 사유는 수집하지 않습니다",w:1600,ms:9000,more:[{sp:'wantedit',on:"나는 하고 싶었는데.",w:1400,ms:8400}]},
 26:{a:'#ffd9a8',b:'#9fb8ff',token:'∞',sync:12,ghost:'R-17',hook:"서인은 어머니가 모르는 숫자 하나를 혼자 들고 있었다.",sp:'row400',at:.50,on:"신원은 안 보게 해 놨으니까",w:1400,ms:9000},
