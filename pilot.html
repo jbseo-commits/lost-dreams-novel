@@ -563,21 +563,19 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .nl-loc{position:absolute;top:8px;left:10px;font:9px ui-monospace,monospace;letter-spacing:.18em;color:#8f97a3}
 .nl-lamp{position:absolute;left:50%;top:22px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#ffe2a6;box-shadow:0 0 14px #ffe2a6}
 .nl-pool{position:absolute;left:50%;bottom:0;width:140px;height:110px;margin-left:-70px;background:radial-gradient(ellipse at 50% 100%,#ffe2a633,transparent 70%)}
-.nl-walker{position:absolute;bottom:14px;left:-30px;width:22px;height:64px;border-radius:11px 11px 4px 4px;background:#0b0d12;filter:blur(1.5px);box-shadow:0 0 0 1px #00000088}
 .nl-paper{position:relative;background:#e8e0cb;color:#2a2620;padding:12px 18px 16px;transform:rotate(-.8deg);box-shadow:0 10px 30px #0008;font:15px/1.8 "Noto Serif KR",serif;opacity:0}
 .nl-ploc{font:9px ui-monospace,monospace;letter-spacing:.18em;color:#6d6457}
 .nl-old{margin:4px 0 0;color:#6d6457}
-.nl-count{position:relative;display:flex;gap:18px;align-items:center;margin:8px 0 4px;min-height:26px}
+.nl-count{position:relative;display:flex;gap:18px;align-items:center;margin:8px 0 4px;min-height:26px}.nl-count i{order:4}
 .nl-count span{font-size:14px;color:#4a443a;opacity:0}
-.nl-dot{position:absolute;right:6px;top:50%;width:4px;height:4px;margin-top:-2px;border-radius:50%;background:#2a2620;opacity:0}
+.nl-dot{position:relative;margin-left:-10px;width:4px;height:4px;border-radius:50%;background:#2a2620;opacity:0;flex:none}
 .nl-new{margin:6px 0 0;font:700 24px/1.3 "Noto Serif KR",serif;opacity:0}
-#nolook.on .nl-street{animation:usShow .4s .1s both,nlDim 1s 4.6s forwards}
-#nolook.on .nl-walker{animation:nlWalk 3.2s .9s linear forwards}
+#nolook.on .nl-street{animation:usShow .4s .1s both,nlDown .5s 1.5s forwards}#nolook.on .nl-pool{animation:nlPass .9s 2.1s ease-in-out both}
 #nolook.on .nl-paper{animation:usShow .4s .5s both}
 #nolook.on .nl-count span{animation:usShow .2s var(--t) both}
-#nolook.on .nl-dot{animation:nlPress 3.2s 1s ease-in forwards}
+#nolook.on .nl-dot{animation:nlPress 2.8s 1.4s ease-in forwards}
 #nolook.on .nl-new{animation:fxIn .6s 5.6s both}
-@keyframes nlWalk{to{left:calc(100% + 30px)}}@keyframes nlDim{to{opacity:.25}}
+@keyframes nlDown{to{opacity:.5;filter:blur(3px)}}@keyframes nlPass{0%,100%{opacity:1}35%,60%{opacity:.15}}
 @keyframes nlPress{0%{opacity:.3;transform:scale(1)}100%{opacity:1;transform:scale(2.4)}}
 /* 8-3 측정 상한: 올라가는 선과 칸이 없는 양식 */
 .nh-wrap{width:min(400px,100%);display:grid;text-align:left;font:10px/1.7 ui-monospace,monospace}
@@ -1851,7 +1849,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="sc-row" data-t="2.2"><span>공백 시간은 어떠셨나요? (선택 · 익명)</span><b><span class="sc-stamp" data-p="3">제출</span></b></div>
 <div class="sc-q s" data-t="3.8">응답은 서비스 개선에 활용될 수 있습니다.</div></div></div></div>
 <div class="setpiece" id="nolook"><div class="veil"></div><div class="sp-center"><div class="nl-wrap">
-<div class="nl-street"><div class="nl-loc">밤 10시 24분 · 골목 입구</div><i class="nl-lamp"></i><i class="nl-pool"></i><i class="nl-walker"></i></div>
+<div class="nl-street"><div class="nl-loc">밤 10시 24분 · 골목 입구</div><i class="nl-lamp"></i><i class="nl-pool"></i></div>
 <div class="nl-paper"><div class="nl-ploc">수첩 · 볼펜</div><p class="nl-old">확인 전.</p>
 <div class="nl-count"><span style="--t:1.4s">하나</span><span style="--t:2.6s">둘</span><span style="--t:3.8s">셋</span><i class="nl-dot"></i></div>
 <p class="nl-new">확인하지 않음.</p></div>
