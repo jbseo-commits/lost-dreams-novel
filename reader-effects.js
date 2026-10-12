@@ -5,7 +5,7 @@ const ReadingEffects=(()=>{
  const write=(key,value)=>{try{localStorage.setItem(key,value)}catch{}};
  let enabled=!mq.matches&&read('lost-dreams-effects','on')!=='off',sound=false,ctx=null,fan=null,observer=null;
  const assets=new Map(),heard=new Set();
- const inlineIds=new Set(['ldx-meal','bakesign','redcell','wedlog','seventhpot','eggmath','walkmin','twopots','verdict','losingbid','netbundle','views38','ldx-crosswalk','ldx-unsettled','ldx-claymark']);
+ const inlineIds=new Set(['ldx-meal','bakesign','redcell','wedlog','seventhpot','eggmath','walkmin','twopots','verdict','losingbid','netbundle','views38','ldx-crosswalk','ldx-unsettled','ldx-cursorcell','ldx-claymark']);
  const svg=(body,box='0 0 260 150')=>'<svg viewBox="'+box+'" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5">'+body+'</svg>';
  const cup=()=>svg('<path d="M88 32 Q130 22 171 33 L159 116 Q130 129 100 113 Z"/><path d="M171 46 C203 38 203 85 166 87"/>');
  const bread=()=>svg('<path d="M55 107 Q47 57 91 40 Q125 17 162 47 Q195 66 183 108 Z"/><path d="M84 53 L101 77 M114 44 L132 70 M146 53 L163 79"/>');
@@ -27,6 +27,7 @@ const ReadingEffects=(()=>{
    case 'netbundle':return paths();
    case 'ldx-crosswalk':return svg('<path d="M55 50 L195 50 M55 70 L195 70 M55 90 L195 90 M55 110 L195 110" opacity=".25"/><path d="M96 30 Q100 58 96 130 M141 30 Q137 58 141 130" stroke-dasharray="3 18"/>');
    case 'ldx-unsettled':return '<div class="ldx-empty-cell"></div>';
+   case 'ldx-cursorcell':return '<div class="ldx-empty-cell ldx-cursorcell"><i></i></div>';
    case 'ldx-claymark':return svg('<path d="M90 56 Q98 42 109 53 L116 82 M120 51 Q128 40 137 52 L145 79" opacity=".5"/><path d="M97 54 Q104 49 109 57 M127 54 Q133 49 138 56" stroke-width="4" opacity=".8"/>');
    case 'losingbid':return '<div class="ldx-contenders"><div><b>아르카디아</b><span>가격 유지</span></div><div><b>세르젠</b><span>−3.1% · 배송 보증 +7.5%</span></div><div><b>모르바</b><span>철수</span></div></div>';
    default:return null;

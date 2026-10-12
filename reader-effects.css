@@ -27,6 +27,9 @@ body.ep8 .ldx-controls button{color:#26303b;border-color:#26303b55}body.ep8 .ldx
 .ldx-life.ldx-clay{color:#d6b291}.ldx-life.ldx-kitchen{color:#d0bda0}.ldx-life.ldx-paper{color:#c9cec6}
 .ldx-fold{width:92px;height:74px;border:1px solid #e2dac077;margin:10px auto;background:linear-gradient(141deg,#e2dac00c 49%,#e2dac044 50%,#e2dac005 51%);transform:rotate(-7deg)}
 .ldx-empty-cell{width:150px;height:42px;border:1px solid #d9cbb344;margin:auto}
+.ldx-cursorcell{position:relative}.ldx-cursorcell i{position:absolute;left:12px;top:11px;width:1.5px;height:20px;background:#d9cbb3;opacity:0}
+.ldx-life.seen .ldx-cursorcell i{animation:ldx-caret 1.1s steps(1,end) .6s 5}
+@keyframes ldx-caret{0%{opacity:.9}50%{opacity:0}}
 .ldx-meal svg .ldx-removed{opacity:.13}.ldx-sign{display:inline-block;padding:24px 30px;border:1px solid #d9cbb377;background:#d9cbb309;transform:rotate(-2deg);font:18px/2 "Noto Serif KR",serif;box-shadow:3px 4px 0 #d9cbb308}
 .ldx-sign del{display:block;opacity:.45;font-size:13px;text-decoration-thickness:1px}.ldx-sign b{font-weight:500}
 .ldx-window{width:116px;height:92px;margin:auto;border:1px solid #ffd3ab55;background:radial-gradient(ellipse at 50% 100%,#f2b68129,transparent 70%)}
