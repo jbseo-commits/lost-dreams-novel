@@ -7,8 +7,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 const HIDDEN_MANUSCRIPT = new Set([
   'ep002-1.md', // 태린/재현 사건: 12화 이후 재사용 후보
   'ep003-1.md', // 핵심 선택권 장면을 9-1에 흡수
-  'ep006-2.md', // ep007-2.md로 이동(394f6d3) — 원본 보존용
-  'ep007-2.md', // 6-2와 같은 원고의 중복본 — 2026-10-13 작가 지시로 숨김(파일 보존)
+  'ep006-2.md', // ep007-2.md로 이동(394f6d3) 후 2026-10-13 7-2를 정본으로 재집필 — 원본 보존용
   'ep011-1.md', // ep011.md 인터컷으로 흡수
 ]);
 

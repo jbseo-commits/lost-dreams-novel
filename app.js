@@ -20,7 +20,6 @@ const HIDDEN_MANUSCRIPT = new Set([
   'ep003-1.md',
   'ep006-1.md',
   'ep006-2.md',
-  'ep007-2.md',
   'ep011-1.md',
 ]);
 
