@@ -607,13 +607,14 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .ll-r{padding:7px 0;border-bottom:1px solid #ffffff10;color:#e6ebf1;font:600 13px/1.5 "Noto Serif KR",serif;opacity:0}
 .ll-r.add{color:#bfe6ee;font-weight:500;font-size:12px;border-bottom:0}
 .ll-foot{display:flex;justify-content:space-between;gap:10px;margin-top:8px}.ll-by{color:#8fd3e0;opacity:0}.ll-lock{color:#ff8c9b;opacity:0;white-space:nowrap}
+.ll-glow{position:absolute;inset:0;pointer-events:none;opacity:0;background:radial-gradient(ellipse 70% 45% at 50% 50%,#bfe9f04d 0,#8fd3e01c 38%,transparent 72%)}
 .ll-lamp{grid-area:1/1;align-self:center;justify-self:center;display:flex;gap:7px;opacity:0}.ll-lamp i{width:26px;height:5px;background:#8fd3e0}
 #lowlight.on .ll-rec{animation:usShow .4s .1s both,llOut .7s 5.2s forwards}
 #lowlight.on .ll-r{animation:fxIn .35s var(--t) both}
 #lowlight.on .ll-by{animation:fxIn .3s 2.6s both}#lowlight.on .ll-lock{animation:usShow .3s 3.4s both}
-#lowlight.on .ll-lamp{animation:usShow .8s 6.2s both}
+#lowlight.on .ll-lamp{animation:usShow .8s 6.2s both}#lowlight.on .ll-glow{animation:llGlow .8s 6.2s both,llDim 1.4s 8.2s forwards}
 #lowlight.on .ll-lamp i:nth-child(5){animation:llOff 1.2s 8.2s forwards}
-@keyframes llOff{to{opacity:.06}}@keyframes llOut{to{opacity:0}}
+@keyframes llOff{to{opacity:.06}}@keyframes llGlow{from{opacity:0}to{opacity:1}}@keyframes llDim{from{opacity:1}to{opacity:.38}}@keyframes llOut{to{opacity:0}}
 /* 7-3 의결권 없음: 쓰고 보내지 않고 지운 한 줄 */
 .us-wrap{width:min(400px,100%);display:grid;gap:16px;text-align:left;font:10px/1.7 ui-monospace,monospace}
 .us-flag{display:flex;justify-content:space-between;gap:10px;padding:7px 10px;border-left:3px solid #f2c94c;background:#f2c94c14;color:#f2d98a;opacity:0}
@@ -1879,7 +1880,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="nh-row nh-ghost"><i></i></div>
 <div class="nh-foot"><span class="nh-sched">발송 예약 · 복귀 후 · 오후</span><b class="nh-save">저장</b></div></div>
 </div></div></div>
-<div class="setpiece" id="lowlight"><div class="veil"></div><div class="sp-center"><div class="ll-wrap">
+<div class="setpiece" id="lowlight"><div class="veil"></div><div class="ll-glow"></div><div class="sp-center"><div class="ll-wrap">
 <div class="ll-rec"><div class="ll-h">응급 사고 기록</div>
 <div class="ll-r" style="--t:.5s">발생 원인: 과로 추정.</div>
 <div class="ll-r add" style="--t:1.6s">조사 종료 후 외부 연산 호출 없음. 인과관계 미확정.</div>
@@ -1925,7 +1926,7 @@ const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterH
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=70,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2','7-3'],8:['8-1','8-2','8-3','8-4'],9:['9-1'],11:['11-1'],12:['12-1'],13:['13-1','13-2'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-3'],8:['8-1','8-2','8-3','8-4'],9:['9-1'],11:['11-1'],12:['12-1'],13:['13-1','13-2'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:"이상하게 좋다.",sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
