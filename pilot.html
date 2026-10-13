@@ -2138,7 +2138,8 @@ return items.map((q,k)=>{if(q.raw)return q.raw;const extra=q.last?' last':'';
  if(/^〈[\s\S]*〉$/.test(q.x))return '<p class="reveal mono'+(keys.includes(q.x)?' key':'')+extra+'"><span class="mono-tag" aria-hidden="true"></span><span class="mono-sr">모노: </span>'+inline(q.x.slice(1,-1))+'</p>';
  const ms=state.ep===4?0:beatMs(q.x);if(ms)return '<p class="reveal beat'+extra+'" data-ms="'+ms+'" style="--ms:'+ms+'ms">'+inline(q.x)+'</p>';
  return '<p class="reveal'+(keys.includes(q.x)?' key':'')+extra+'">'+inline(q.x)+'</p>'}).join('')}
-async function load(n){const r=await fetch(new URL('manuscript/ep'+epFile(n)+'.md?v=8',document.baseURI).href,{cache:'no-store'});if(!r.ok)throw Error();return r.text()}
+// 모바일 망에서 응답이 멈추면 '불러오는 중'에 갇히지 않게 12초 제한 후 한 번 더 시도하고, 그래도 안 되면 '다시 연결'을 띄운다.
+async function load(n){const url=new URL('manuscript/ep'+epFile(n)+'.md?v=8',document.baseURI).href;let last;for(let i=0;i<2;i++){const c=new AbortController(),t=setTimeout(()=>c.abort(),12000);try{const r=await fetch(url,{cache:'no-store',signal:c.signal});if(!r.ok)throw Error('HTTP '+r.status);return await r.text()}catch(e){last=e.name==='AbortError'?Error('응답 지연'):e}finally{clearTimeout(t)}}throw last}
 async function openEp(n){
  ReadingEffects.restore();closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];state.armed=0;state.userScrolled=false;state.openedAt=performance.now();const d=D[n];state.ep=n;
  document.body.className=(n===8||n==='8-1'||n==='8-2')?'ep8':'reading';document.body.dataset.ep=n;ReadingEffects.apply();
