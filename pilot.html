@@ -1657,9 +1657,8 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="setpiece" id="thirdplan"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">상층 전략 회의 · 동부운송 인수 · 13명</div>
 <div class="sc-row" data-t=".1"><span>예측 경로</span><b class="sc-n" id="tpN" style="font-size:24px">1,840,221</b></div>
 <div class="tp-log sc-red" data-t="2.2">추가 연산 필요.</div>
-<div class="sc-row" data-t="2.9"><span>+3분</span><b class="sc-red">외부 접속 흔적 · 상대 미확인</b></div>
-<div class="sc-row" data-t="3.4"><span>최유석 협상 보류</span><b>세 번째 안 · 12:20까지 진행</b></div>
-<div class="sc-cols" data-t="4.3"><div class="sc-card" style="margin-top:10px"><small>맨 끝의 최유석</small>화면엔 B안이 남았는데<br>본인은 입을 닫음<br>엎어 둔 전화기</div><div class="sc-card" style="margin-top:10px"><small>옆자리 차민서</small>서인에게 자료를 넘겨줌<br>최유석은 보지 않음<br><span class="sc-gold" data-t="6.6">물 한 잔</span></div></div></div></div></div>
+<div class="sc-row" data-t="2.9"><span>+3분 · 업무 발송</span><b class="sc-red">전날 19:52 · 차민서 → 고객사</b></div>
+<div class="sc-cols" data-t="3.8"><div class="sc-card" style="margin-top:10px"><small>얻은 것</small>버린 안 · 트럭 예약<br>12:14 마지막 서명<br>운임 동결 1년</div><div class="sc-card" style="margin-top:10px"><small>잃는 것</small>동부 인수 포기<br>경쟁사가 비울 방<br><span class="sc-gold" data-t="5.8">선반 맨 아래 칸</span></div></div></div></div></div>
 <div class="setpiece" id="glasspick"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">중앙 전략실 면접 · 실제 상황</div>
 <div class="sc-row" data-t=".1"><span>경쟁사 선행 계약 체결 · 예상 손실 2.8%</span><b>대응 경로 <span id="gpN">4만</span></b></div>
 <div class="sc-row" data-t=".9"><span>서인의 모노</span><b class="sc-red">끔 · “시끄러워서요.”</b></div>
@@ -1924,9 +1923,9 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
-const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,epFile=k=>String(k)==='8-2-1'?'007-3':String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
+const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,EPMAP={'8-1':'007-3','8-2':'008-3','8-3':'008-4'},EPALIAS={'8-2-1':'8-1','8-4':'8-3'},epFile=k=>EPMAP[String(k)]||String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=70,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],8:['8-1','8-2','8-2-1','8-3','8-4'],9:['9-1'],11:['11-1'],12:['12-1'],13:['13-1','13-2'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={2:['2-1'],3:['3-1'],4:['4-1'],6:['6-1'],7:['7-2'],8:['8-1','8-2','8-3'],9:['9-1'],11:['11-1'],12:['12-1'],13:['13-1','13-2'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:"이상하게 좋다.",sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -1935,10 +1934,10 @@ const D={
 5:{a:'#b397ff',b:'#6fe7ff',token:'020.3',sync:73,ghost:'DOYUN',hook:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",sp:'ldx-meal',at:.99,on:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",w:400},
 6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:"그 사실까지 마음에 들지 않았다.",sp:'rejoin147',at:.72,on:"결과는 같았다",w:1600,ms:7800},
 7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:"그 생각이 무서웠다.",sp:'records147',at:.2,on:"너무 평범했다.",w:900,ms:7800,more:[{sp:'verdict',on:"“돈도, 의료도, 가족 눈치도 없어. 그래도 재호 씨가 다시 광고를 켜면?”",w:900,ms:6800}]},
-8:{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'12:20',hook:'서인은 물을 마셨다. 차가웠다.',sp:'thirdplan',at:.9,on:'서인은 물을 마셨다. 차가웠다.',w:1600,ms:8800},
-'8-2-1':{a:'#9cc7ff',b:'#f2c94c',token:'019.7',sync:68,ghost:'UNSENT',hook:"그는 보내지 않은 그 한 줄을 지웠다.",sp:'unsent',at:.8,on:'그는 보내지 않은 그 한 줄을 지웠다.',w:1400,ms:9800},
-'8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'12:20',hook:'서인은 괄호 안의 숫자를 오래 봤다.',sp:'deadline',at:.88,on:'서명란 세 칸이 한꺼번에 회색으로 꺼졌다.',w:900,ms:9600},
-'8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:'누가 내일 아이를 데려올지, 어느 표에도 없는 칸이 남았다.',sp:'scatter',at:.75,on:'현장대표가 통화를 끝냈다.',w:900,ms:8200},
+8:{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'12:20',hook:'서인은 하나도 고르지 못했다.',sp:'thirdplan',at:.7,on:'동부를 살 이유도 함께 사라졌다.',w:1600,ms:8800},
+'8-1':{a:'#9cc7ff',b:'#f2c94c',token:'019.7',sync:68,ghost:'UNSENT',hook:"그는 보내지 않은 그 한 줄을 지웠다.",sp:'unsent',at:.8,on:'그는 보내지 않은 그 한 줄을 지웠다.',w:1400,ms:9800},
+'h8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'12:20',hook:'서인은 괄호 안의 숫자를 오래 봤다.',sp:'deadline',at:.88,on:'서명란 세 칸이 한꺼번에 회색으로 꺼졌다.',w:900,ms:9600},
+'h8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:'누가 내일 아이를 데려올지, 어느 표에도 없는 칸이 남았다.',sp:'scatter',at:.75,on:'현장대표가 통화를 끝냈다.',w:900,ms:8200},
 9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:"금속 조각을 쥔 서인의 손을 한 번 보고는 먼저 돌아섰다.",sp:'overseen',at:.3,on:"가능성이 너무 많이 보였다.",w:900,ms:8600},
 10:{a:'#ff607c',b:'#a88cff',token:'∞',sync:39,ghost:'I CONSENT',hook:"자기 머릿속에 있는 모든 문이 한꺼번에 열렸다.",sp:'consent',at:.9,on:"서인은 승인했다.",w:1400},
 11:{a:'#d9e3ea',b:'#ff9a62',token:'013.9',sync:32,ghost:'0.04s',hook:"알림: 고위 전략직 전환 면담까지 9시간 8분.",sp:'reauth',at:.99,on:"본인이 맞습니까?",w:500},
@@ -2005,8 +2004,8 @@ const D={
 '3-1':{a:'#ffd6a0',b:'#9ec9b7',token:'025.2',sync:82,ghost:'ONE MORE LOOK',hook:'둘은 파 한 단씩 들고 집으로 걸었다.',sp:'ldx-unsettled',at:.92,on:'그걸 눌렀다.',w:300},
 '6-1':{a:'#ffe0a8',b:'#c9a27a',token:'∞',sync:61,ghost:'CLOSED SUN',hook:"현관문의 모서리 하나가 밤새 들려 있었다.",sp:'bakesign',at:.9,on:'‘매’ 자 하나가 보였다.',w:900,ms:6800},
 '7-2':{a:'#f0c58d',b:'#83b8ad',token:'025.9',sync:70,ghost:'NEXT MEAL',hook:'서인의 정산 칸은 그 소리 뒤에도 비어 있었다.',sp:'ldx-cursorcell',at:.9,on:'손가락을 내렸다. 칸은 비워 둔 채 화면을 껐다.',w:300},
-'8-3':{a:'#f2c94c',b:'#9aa3ae',token:'∞',sync:50,ghost:'NO BOX',hook:"양식 어디에도 '사람'이라는 칸은 없었다.",sp:'nohuman',at:.8,on:"양식 어디에도 '사람'이라는 칸은 없었다.",w:1400,ms:11200},
-'8-4':{a:'#8fd3e0',b:'#c9d1db',token:'∞',sync:46,ghost:'PATIENT',hook:'도윤은 조명을 한 칸 낮추고 입을 다물었다.',sp:'lowlight',at:.9,on:'도윤은 조명을 한 칸 낮추고 입을 다물었다.',w:1400,ms:10600},
+'8-2':{a:'#f2c94c',b:'#9aa3ae',token:'∞',sync:50,ghost:'NO BOX',hook:"양식 어디에도 '사람'이라는 칸은 없었다.",sp:'nohuman',at:.8,on:"양식 어디에도 '사람'이라는 칸은 없었다.",w:1400,ms:11200},
+'8-3':{a:'#8fd3e0',b:'#c9d1db',token:'∞',sync:46,ghost:'PATIENT',hook:'도윤은 조명을 한 칸 낮추고 입을 다물었다.',sp:'lowlight',at:.9,on:'도윤은 조명을 한 칸 낮추고 입을 다물었다.',w:1400,ms:10600},
 '9-1':{a:'#b6a7ff',b:'#e6b8a2',token:'∞',sync:43,ghost:'JUST TOMORROW',hook:'메시지를 보내고도 한 번 더 읽었다.',sp:'ldx-claymark',at:.8,on:'손톱 밑의 흙은 아직 남아 있었다.',w:300},
 '11-1':{a:'#ffc9a8',b:'#a9c7ff',token:'∞',sync:24,ghost:'RED CELL',hook:"“출장이 길었네.”",sp:'redcell',at:.8,on:'“출장이 길었네.”',w:1200,ms:6800},
 '13-2':{a:'#ffe2a6',b:'#8f97a3',token:'∞',sync:21,ghost:'ONE TWO THREE',hook:"그 셋 동안 지나간 얼굴이 누구였는지, 그는 끝까지 확인하지 않을 생각이었다.",sp:'nolook',at:.8,on:'그는 그 아래에 한 줄을 더 적었다.',w:1400,ms:8600},
@@ -2047,10 +2046,10 @@ const KEY={
 6:['“이번엔 알고 고르는 거잖아요.”'],
 7:['“왜 꼭 하나만 진짜여야 해요?”','“근데 가끔 네가 내 인생 채점하는 것 같아.”'],
 '7-2':['“그 정도는 틀려도 돼.”','“다음엔 내가 살게.”'],
-8:['“무서운 거랑 하기 싫은 건 다르잖아.”','“당신이 지금 기다리게 한 사람은 경쟁사가 아닙니다.”'],
-'8-2':['“그렇다고 기다리게 한 시간이 없어지는 건 아니잖아요.”'],
-'8-1':['“그럼 저한테 뭘 기다리라는 거죠?”','“네. 제 권고로요.”'],
-'8-4':['“제 이름을 남겼습니다.”','“하고는 있습니다. 잘하진 못해서요.”'],
+8:['“무서운 거랑 하기 싫은 건 다르잖아.”','“최 이사님은 아닙니다.”'],
+'h8-2':['“그렇다고 기다리게 한 시간이 없어지는 건 아니잖아요.”'],
+'h8-1':['“그럼 저한테 뭘 기다리라는 거죠?”','“네. 제 권고로요.”'],
+'8-3':['“제 이름을 남겼습니다.”','“하고는 있습니다. 잘하진 못해서요.”'],
 9:['“저 사람한테 광고꿈 끄라고 하면, 저 애가 오늘 밤 잠들 때 뭐가 달라질까요?”'],
 10:['“너 요즘 자꾸 세상에 버튼 하나만 있는 것처럼 말해.”'],
 11:['“네가 쥔 건지, 네 손이 쥔 건지.”'],
@@ -2142,7 +2141,7 @@ return items.map((q,k)=>{if(q.raw)return q.raw;const extra=q.last?' last':'';
 async function load(n){const url=new URL('manuscript/ep'+epFile(n)+'.md?v=8',document.baseURI).href;let last;for(let i=0;i<2;i++){const c=new AbortController(),t=setTimeout(()=>c.abort(),12000);try{const r=await fetch(url,{cache:'no-store',signal:c.signal});if(!r.ok)throw Error('HTTP '+r.status);return await r.text()}catch(e){last=e.name==='AbortError'?Error('응답 지연'):e}finally{clearTimeout(t)}}throw last}
 async function openEp(n){
  ReadingEffects.restore();closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];state.armed=0;state.userScrolled=false;state.openedAt=performance.now();const d=D[n];state.ep=n;
- document.body.className=(n===8||n==='8-1'||n==='8-2')?'ep8':'reading';document.body.dataset.ep=n;ReadingEffects.apply();
+ document.body.className=n===8?'ep8':'reading';document.body.dataset.ep=n;ReadingEffects.apply();
  document.documentElement.style.setProperty('--accent',d.a);document.documentElement.style.setProperty('--accent2',d.b);
  hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+epNo(n)+' / '+MAX;
  titleEl.textContent='기억을 불러오는 중';meta.textContent='CONNECTING MANUSCRIPT…';prose.innerHTML='<div class="scene-card"><div class="scene-kicker">NEURAL READER</div><div class="scene-main">제'+n+'화 연결 중</div><div class="scene-sub">잠시만 기다려 주세요.</div></div>';
@@ -2320,7 +2319,7 @@ const pick=$('pick'),pickMenu=$('pickMenu'),pickScrim=$('pickScrim'),pickList=$(
 $('pickTotal').textContent=MAX;
 pickList.innerHTML=ORDER.map(k=>'<li><button data-n="'+k+'"><i>EP '+epNo(k)+'</i><span>제'+k+'화</span></button></li>').join('');
 function setPickTitle(n,t){if(!t)return;pickTitles[n]=t;const b=pickList.querySelector('[data-n="'+n+'"] span');if(b)b.textContent=t;if(n===(state.ep||1))$('pickT').textContent=t}
-fetch('manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(m=>{(m.manuscript||[]).forEach(e=>{const m=e.path.match(/ep(\d+(?:-\d+)?)\.md$/);if(m)setPickTitle(m[1]==='007-3'?'8-2-1':epKey(m[1]),e.title.replace(/^제[\d-]+화\.\s*/,''))});ORDER.filter(i=>!pickTitles[i]).forEach(i=>load(i).then(md=>setPickTitle(i,md.split('\n')[0].replace(/^#\s*/,'').replace(/^제[\d-]+화\.\s*/,''))).catch(()=>{}))}).catch(()=>{ORDER.forEach(i=>load(i).then(md=>setPickTitle(i,md.split('\n')[0].replace(/^#\s*/,'').replace(/^제[\d-]+화\.\s*/,''))).catch(()=>{}))});
+fetch('manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(m=>{(m.manuscript||[]).forEach(e=>{const m=e.path.match(/ep(\d+(?:-\d+)?)\.md$/);if(m)setPickTitle(Object.keys(EPMAP).find(k=>EPMAP[k]===m[1])||epKey(m[1]),e.title.replace(/^제[\d-]+화\.\s*/,''))});ORDER.filter(i=>!pickTitles[i]).forEach(i=>load(i).then(md=>setPickTitle(i,md.split('\n')[0].replace(/^#\s*/,'').replace(/^제[\d-]+화\.\s*/,''))).catch(()=>{}))}).catch(()=>{ORDER.forEach(i=>load(i).then(md=>setPickTitle(i,md.split('\n')[0].replace(/^#\s*/,'').replace(/^제[\d-]+화\.\s*/,''))).catch(()=>{}))});
 function syncPick(){const n=state.ep||1;$('pickNo').textContent='EP '+epNo(n);$('pickT').textContent=pickTitles[n]||(n===state.ep&&titleEl.textContent)||'';pickList.querySelectorAll('button').forEach(b=>b.toggleAttribute('aria-current',b.dataset.n===String(state.ep)))}
 function setPick(open){pickMenu.classList.toggle('on',open);pickScrim.classList.toggle('on',open);pick.setAttribute('aria-expanded',open);if(open){syncPick();const c=pickList.querySelector('[aria-current]')||pickList.querySelector('button');c.scrollIntoView({block:'center'});c.focus({preventScroll:true})}}
 pick.onclick=()=>setPick(!pickMenu.classList.contains('on'));pickScrim.onclick=()=>setPick(false);
@@ -2328,7 +2327,7 @@ addEventListener('keydown',e=>{if(e.key==='Escape'&&pickMenu.classList.contains(
 pickList.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const n=epKey(b.dataset.n);setPick(false);if(n===state.ep){scrollTo(0,0);return}
  if(n===1&&!state.ep&&hero.style.display!=='none'){enterDream.click();return}openEp(n)});
 new MutationObserver(syncPick).observe(titleEl,{childList:true});
-function route(){const m=location.hash.match(/^#ep(\d+(?:-\d+)*)$/);if(m){const n=/-/.test(m[1])?(D[m[1]]?m[1]:MAX):Math.min(MAX,+m[1]);if(n===1){activateStaticEp1();hero.style.display='none';scrollTo(0,0)}else openEp(n)}}
+function route(){const m=location.hash.match(/^#ep(\d+(?:-\d+)*)$/);if(m){const k=EPALIAS[m[1]]||m[1],n=/-/.test(k)?(D[k]?k:MAX):Math.min(MAX,+m[1]);if(n===1){activateStaticEp1();hero.style.display='none';scrollTo(0,0)}else openEp(n)}}
 addEventListener('hashchange',route);
 ReadingEffects.init();
 if(location.hash==='#reader'){activateStaticEp1()}else route();
