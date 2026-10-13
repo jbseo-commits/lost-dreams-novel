@@ -12,6 +12,8 @@ const HIDDEN_MANUSCRIPT = new Set([
 ]);
 
 const episodeKey = filename => {
+  // 「의결권 없음」(ep007-3.md)은 8-2 뒤 회상 8-2-1화로 읽는다.
+  if (filename === 'ep007-3.md') return [8, 2.5, filename];
   const m = filename.match(/^ep(\d+)(?:-(\d+))?\.md$/);
   if (!m) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, filename];
   return [Number(m[1]), Number(m[2] || 0), filename];
