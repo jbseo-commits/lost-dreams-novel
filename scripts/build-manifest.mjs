@@ -14,7 +14,7 @@ const HIDDEN_MANUSCRIPT = new Set([
 ]);
 
 const episodeKey = filename => {
-  // 8화 범퍼 재번호(2026-10-13): 의결권 없음(ep007-3)=8-1, 측정 상한(ep008-3)=8-2, 환자 이름(ep008-4)=8-3.
+  // 8화 범퍼 재번호(2026-10-13): 2026-10-14 시간순 개고: ep008=8 전날 밤, ep007-3=8-1 의결권 없음(회의), ep008-3=8-2 측정 상한, ep008-4=8-3 환자 이름.
   if (filename === 'ep007-3.md') return [8, 1, filename];
   if (filename === 'ep008-3.md') return [8, 2, filename];
   if (filename === 'ep008-4.md') return [8, 3, filename];

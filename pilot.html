@@ -1657,8 +1657,8 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="setpiece" id="thirdplan"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">상층 전략 회의 · 동부운송 인수 · 13명</div>
 <div class="sc-row" data-t=".1"><span>예측 경로</span><b class="sc-n" id="tpN" style="font-size:24px">1,840,221</b></div>
 <div class="tp-log sc-red" data-t="2.2">추가 연산 필요.</div>
-<div class="sc-row" data-t="2.9"><span>+3분 · 업무 발송</span><b class="sc-red">전날 19:52 · 차민서 → 고객사</b></div>
-<div class="sc-cols" data-t="3.8"><div class="sc-card" style="margin-top:10px"><small>얻은 것</small>버린 안 · 트럭 예약<br>12:14 마지막 서명<br>운임 동결 1년</div><div class="sc-card" style="margin-top:10px"><small>잃는 것</small>동부 인수 포기<br>경쟁사가 비울 방<br><span class="sc-gold" data-t="5.8">선반 맨 아래 칸</span></div></div></div></div></div>
+<div class="sc-row" data-t="2.9"><span>+7초 · 표 없는 사람</span><b class="sc-red">차민서 · 전날 19:52 → 경쟁사</b></div>
+<div class="sc-cols" data-t="3.8"><div class="sc-card" style="margin-top:10px"><small>얻은 것</small>유출자 확인<br>최 이사 혐의 해소<br>7초</div><div class="sc-card" style="margin-top:10px"><small>잃는 것</small>원안 전면 무효<br>돌봄실 폐쇄 확정<br><span class="sc-gold" data-t="5.8">발언 권한 제한</span></div></div></div></div></div>
 <div class="setpiece" id="glasspick"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">중앙 전략실 면접 · 실제 상황</div>
 <div class="sc-row" data-t=".1"><span>경쟁사 선행 계약 체결 · 예상 손실 2.8%</span><b>대응 경로 <span id="gpN">4만</span></b></div>
 <div class="sc-row" data-t=".9"><span>서인의 모노</span><b class="sc-red">끔 · “시끄러워서요.”</b></div>
@@ -1888,7 +1888,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 </div></div></div>
 <div class="setpiece" id="unsent"><div class="veil"></div><div class="sp-center"><div class="us-wrap">
 <div class="us-flag"><span>외부 발송 · 19:52 · 해당 안 폐기 상태</span><b class="us-done">검토 완료</b></div>
-<div class="us-box"><div class="us-to">수신 · 회의 주재자</div><div class="us-field"><i style="--a:1.00s;--d:6.20s">발</i><i style="--a:1.14s;--d:6.05s">신</i><i style="--a:1.28s;--d:5.90s">&nbsp;</i><i style="--a:1.42s;--d:5.75s">확</i><i style="--a:1.56s;--d:5.60s">인</i><i style="--a:1.70s;--d:5.45s">&nbsp;</i><i style="--a:1.84s;--d:5.30s">요</i><i style="--a:1.98s;--d:5.15s">망</i><i style="--a:2.12s;--d:5.00s">.</i><u class="us-caret"></u></div><div class="us-send">전송</div></div>
+<div class="us-box"><div class="us-to">수신 · 회의 의장</div><div class="us-field"><i style="--a:1.00s;--d:6.20s">발</i><i style="--a:1.14s;--d:6.05s">신</i><i style="--a:1.28s;--d:5.90s">&nbsp;</i><i style="--a:1.42s;--d:5.75s">확</i><i style="--a:1.56s;--d:5.60s">인</i><i style="--a:1.70s;--d:5.45s">&nbsp;</i><i style="--a:1.84s;--d:5.30s">요</i><i style="--a:1.98s;--d:5.15s">망</i><i style="--a:2.12s;--d:5.00s">.</i><u class="us-caret"></u></div><div class="us-send">전송</div></div>
 <div class="us-room"><i></i>상층 객실 · 조명 꺼짐 · 수면 메뉴 선택 없음.</div>
 <div class="us-clock"><span>11:58</span> · 낮 12시 20분까지 <b>열두 시간 이십이 분</b></div>
 </div></div></div>
@@ -1934,8 +1934,9 @@ const D={
 5:{a:'#b397ff',b:'#6fe7ff',token:'020.3',sync:73,ghost:'DOYUN',hook:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",sp:'ldx-meal',at:.99,on:"마치 언젠가 다시 올 사람의 자리를 정리하듯이.",w:400},
 6:{a:'#8ff0bc',b:'#ffd56b',token:'018.1',sync:67,ghost:'240 → 147',hook:"그 사실까지 마음에 들지 않았다.",sp:'rejoin147',at:.72,on:"결과는 같았다",w:1600,ms:7800},
 7:{a:'#ff9c86',b:'#967cff',token:'016.8',sync:61,ghost:'WHO DECIDES?',hook:"그 생각이 무서웠다.",sp:'records147',at:.2,on:"너무 평범했다.",w:900,ms:7800,more:[{sp:'verdict',on:"“돈도, 의료도, 가족 눈치도 없어. 그래도 재호 씨가 다시 광고를 켜면?”",w:900,ms:6800}]},
-8:{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'12:20',hook:'서인은 하나도 고르지 못했다.',sp:'thirdplan',at:.7,on:'동부를 살 이유도 함께 사라졌다.',w:1600,ms:8800},
-'8-1':{a:'#9cc7ff',b:'#f2c94c',token:'019.7',sync:68,ghost:'UNSENT',hook:"그는 보내지 않은 그 한 줄을 지웠다.",sp:'unsent',at:.8,on:'그는 보내지 않은 그 한 줄을 지웠다.',w:1400,ms:9800},
+8:{a:'#9cc7ff',b:'#f2c94c',token:'∞',sync:68,ghost:'12:20',hook:'그는 보내지 않은 그 한 줄을 지웠다.',sp:'unsent',at:.8,on:'그는 보내지 않은 그 한 줄을 지웠다.',w:1400,ms:9800},
+'8-1':{a:'#7ddcff',b:'#ffffff',token:'∞',sync:54,ghost:'00:00:07',hook:'이제 그 시각을 기다리는 사람은 이 방에 아무도 없었다.',sp:'thirdplan',at:.7,on:'화면 위 돌봄실 사진 위로 붉은 도장이 찍혔다.',w:1600,ms:8800},
+
 'h8-1':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'12:20',hook:'서인은 괄호 안의 숫자를 오래 봤다.',sp:'deadline',at:.88,on:'서명란 세 칸이 한꺼번에 회색으로 꺼졌다.',w:900,ms:9600},
 'h8-2':{a:'#665c48',b:'#92846a',token:'∞',sync:54,ghost:'',hook:'누가 내일 아이를 데려올지, 어느 표에도 없는 칸이 남았다.',sp:'scatter',at:.75,on:'현장대표가 통화를 끝냈다.',w:900,ms:8200},
 9:{a:'#94a6ff',b:'#ff8c9b',token:'∞',sync:47,ghost:'HUMAN WEAPON',hook:"금속 조각을 쥔 서인의 손을 한 번 보고는 먼저 돌아섰다.",sp:'overseen',at:.3,on:"가능성이 너무 많이 보였다.",w:900,ms:8600},
@@ -2046,10 +2047,12 @@ const KEY={
 6:['“이번엔 알고 고르는 거잖아요.”'],
 7:['“왜 꼭 하나만 진짜여야 해요?”','“근데 가끔 네가 내 인생 채점하는 것 같아.”'],
 '7-2':['“그 정도는 틀려도 돼.”','“다음엔 내가 살게.”'],
-8:['“무서운 거랑 하기 싫은 건 다르잖아.”','“최 이사님은 아닙니다.”'],
+8:['“무서운 거랑 하기 싫은 건 다르잖아.”','“낮 12시 20분까지는, 이 방은 아무것도 모르는 겁니다.”'],
+'8-1':['“7초 드리죠. 알고리즘 말고, 표 없는 사람 눈에는 누가 보입니까?”','“경쟁사는 돌봄실을 남기겠다고 했어요. 문서로요.”'],
+'8-2':['“그 칸에 체크하는 사람이 생깁니다.”','“기계 뒤에 기계가 있으면, 이 선은 안 올라갑니다.”'],
 'h8-2':['“그렇다고 기다리게 한 시간이 없어지는 건 아니잖아요.”'],
 'h8-1':['“그럼 저한테 뭘 기다리라는 거죠?”','“네. 제 권고로요.”'],
-'8-3':['“제 이름을 남겼습니다.”','“하고는 있습니다. 잘하진 못해서요.”'],
+'8-3':['“하고는 있습니다. 잘하진 못해서요.”','“가족은 아닙니다.”'],
 9:['“저 사람한테 광고꿈 끄라고 하면, 저 애가 오늘 밤 잠들 때 뭐가 달라질까요?”'],
 10:['“너 요즘 자꾸 세상에 버튼 하나만 있는 것처럼 말해.”'],
 11:['“네가 쥔 건지, 네 손이 쥔 건지.”'],
