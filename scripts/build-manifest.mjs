@@ -11,13 +11,13 @@ const HIDDEN_MANUSCRIPT = new Set([
   'ep011-1.md', // ep011.md 인터컷으로 흡수
   'ep008-1.md', // 2026-10-13 작가 결정(8화 원본 속도 복원)으로 숨김, 원고 보존
   'ep008-2.md', // 위와 같음
-  'ep008-3.md', // 2026-10-14 측정 상한을 8-1(ep007-3)에 합본, 원고 보존
 ]);
 
 const episodeKey = filename => {
-  // 8화 범퍼 재번호(2026-10-13): 의결권 없음(ep007-3)=8-1. 2026-10-14 측정 상한을 8-1에 합본, 환자 이름(ep008-4)=8-2.
+  // 8화 범퍼 재번호(2026-10-13): 2026-10-14 시간순 개고: ep008=8 전날 밤, ep007-3=8-1 의결권 없음(회의), ep008-3=8-2 측정 상한, ep008-4=8-3 환자 이름.
   if (filename === 'ep007-3.md') return [8, 1, filename];
-  if (filename === 'ep008-4.md') return [8, 2, filename];
+  if (filename === 'ep008-3.md') return [8, 2, filename];
+  if (filename === 'ep008-4.md') return [8, 3, filename];
   const m = filename.match(/^ep(\d+)(?:-(\d+))?\.md$/);
   if (!m) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, filename];
   return [Number(m[1]), Number(m[2] || 0), filename];
