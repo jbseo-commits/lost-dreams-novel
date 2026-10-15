@@ -1,0 +1,50 @@
+[
+  {
+    "agent": "/root/reader1_fast",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "model": "gpt-6.1-sol",
+    "effort": "ultra",
+    "source": "turn_context",
+    "file": "rollout-2026-10-15T21-28-15-[공개용 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader2_character",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "model": "gpt-6.1-sol",
+    "effort": "ultra",
+    "source": "turn_context",
+    "file": "rollout-2026-10-15T21-28-34-[공개용 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader3_sf",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "model": "gpt-6.1-sol",
+    "effort": "ultra",
+    "source": "turn_context",
+    "file": "rollout-2026-10-15T21-28-53-[공개용 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader4_relationship",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "model": "gpt-6.1-sol",
+    "effort": "ultra",
+    "source": "turn_context",
+    "file": "rollout-2026-10-15T21-58-25-[공개용 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader5_tension",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "model": "gpt-6.1-sol",
+    "effort": "ultra",
+    "source": "turn_context",
+    "file": "rollout-2026-10-15T21-58-45-[공개용 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader6_general",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "model": "gpt-6.1-sol",
+    "effort": "ultra",
+    "source": "turn_context",
+    "file": "rollout-2026-10-15T21-59-05-[공개용 사본에서 세션ID 제외].jsonl"
+  }
+]

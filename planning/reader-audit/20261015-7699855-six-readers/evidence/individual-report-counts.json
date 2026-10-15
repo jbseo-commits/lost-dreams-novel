@@ -1,0 +1,114 @@
+[
+  {
+    "reader": 1,
+    "total": {
+      "A": 67,
+      "B": 57,
+      "C": 1
+    },
+    "pre": {
+      "A": 4,
+      "B": 4,
+      "C": 0
+    },
+    "post": {
+      "A": 63,
+      "B": 53,
+      "C": 0
+    },
+    "tableRows": 125,
+    "mismatches": []
+  },
+  {
+    "reader": 2,
+    "total": {
+      "A": 72,
+      "B": 52,
+      "C": 1
+    },
+    "pre": {
+      "A": 44,
+      "B": 15,
+      "C": 0
+    },
+    "post": {
+      "A": 28,
+      "B": 37,
+      "C": 0
+    },
+    "tableRows": 125,
+    "mismatches": []
+  },
+  {
+    "reader": 3,
+    "total": {
+      "A": 59,
+      "B": 65,
+      "C": 1
+    },
+    "pre": {
+      "A": 26,
+      "B": 14,
+      "C": 0
+    },
+    "post": {
+      "A": 33,
+      "B": 51,
+      "C": 0
+    },
+    "tableRows": 125,
+    "mismatches": []
+  },
+  {
+    "reader": 4,
+    "total": {
+      "A": 98,
+      "B": 27,
+      "C": 0
+    },
+    "pre": null,
+    "post": null,
+    "tableRows": 125,
+    "mismatches": []
+  },
+  {
+    "reader": 5,
+    "total": {
+      "A": 78,
+      "B": 46,
+      "C": 1
+    },
+    "pre": {
+      "A": 40,
+      "B": 23,
+      "C": 0
+    },
+    "post": {
+      "A": 38,
+      "B": 23,
+      "C": 0
+    },
+    "tableRows": 125,
+    "mismatches": []
+  },
+  {
+    "reader": 6,
+    "total": {
+      "A": 48,
+      "B": 64,
+      "C": 13
+    },
+    "pre": {
+      "A": 5,
+      "B": 3,
+      "C": 0
+    },
+    "post": {
+      "A": 43,
+      "B": 61,
+      "C": 12
+    },
+    "tableRows": 125,
+    "mismatches": []
+  }
+]

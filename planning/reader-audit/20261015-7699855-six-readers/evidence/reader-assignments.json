@@ -1,0 +1,38 @@
+[
+  {
+    "timestamp": "2026-10-15T12:28:15.781Z",
+    "task_name": "reader1_fast",
+    "fork_turns": "none",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:28:34.816Z",
+    "task_name": "reader2_character",
+    "fork_turns": "none",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:28:53.879Z",
+    "task_name": "reader3_sf",
+    "fork_turns": "none",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:58:25.396Z",
+    "task_name": "reader4_relationship",
+    "fork_turns": "none",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:58:45.844Z",
+    "task_name": "reader5_tension",
+    "fork_turns": "none",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:59:05.964Z",
+    "task_name": "reader6_general",
+    "fork_turns": "none",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  }
+]
