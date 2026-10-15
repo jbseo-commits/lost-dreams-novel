@@ -1,0 +1,194 @@
+[
+  {
+    "agent": "/root/reader1_fast",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "parent": "[공개용 사본에서 세션ID 제외]",
+    "agentPath": "/root/reader1_fast",
+    "source": {
+      "subagent": {
+        "thread_spawn": {
+          "parent_thread_id": "[공개용 사본에서 세션ID 제외]",
+          "depth": 1,
+          "agent_path": "/root/reader1_fast",
+          "agent_nickname": "Pauli",
+          "agent_role": null
+        }
+      }
+    },
+    "contextRecords": [
+      {
+        "timestamp": "2026-10-15T12:28:18.002Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      },
+      {
+        "timestamp": "2026-10-15T12:44:36.296Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      }
+    ],
+    "originalLog": "[로컬 컴퓨터 경로 공개 제외] 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader2_character",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "parent": "[공개용 사본에서 세션ID 제외]",
+    "agentPath": "/root/reader2_character",
+    "source": {
+      "subagent": {
+        "thread_spawn": {
+          "parent_thread_id": "[공개용 사본에서 세션ID 제외]",
+          "depth": 1,
+          "agent_path": "/root/reader2_character",
+          "agent_nickname": "Russell",
+          "agent_role": null
+        }
+      }
+    },
+    "contextRecords": [
+      {
+        "timestamp": "2026-10-15T12:28:37.380Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      },
+      {
+        "timestamp": "2026-10-15T12:45:26.363Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      }
+    ],
+    "originalLog": "[로컬 컴퓨터 경로 공개 제외] 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader3_sf",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "parent": "[공개용 사본에서 세션ID 제외]",
+    "agentPath": "/root/reader3_sf",
+    "source": {
+      "subagent": {
+        "thread_spawn": {
+          "parent_thread_id": "[공개용 사본에서 세션ID 제외]",
+          "depth": 1,
+          "agent_path": "/root/reader3_sf",
+          "agent_nickname": "Gauss",
+          "agent_role": null
+        }
+      }
+    },
+    "contextRecords": [
+      {
+        "timestamp": "2026-10-15T12:28:56.084Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      },
+      {
+        "timestamp": "2026-10-15T12:45:43.850Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      }
+    ],
+    "originalLog": "[로컬 컴퓨터 경로 공개 제외] 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader4_relationship",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "parent": "[공개용 사본에서 세션ID 제외]",
+    "agentPath": "/root/reader4_relationship",
+    "source": {
+      "subagent": {
+        "thread_spawn": {
+          "parent_thread_id": "[공개용 사본에서 세션ID 제외]",
+          "depth": 1,
+          "agent_path": "/root/reader4_relationship",
+          "agent_nickname": "Boole",
+          "agent_role": null
+        }
+      }
+    },
+    "contextRecords": [
+      {
+        "timestamp": "2026-10-15T12:58:27.669Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      },
+      {
+        "timestamp": "2026-10-15T13:17:20.866Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      }
+    ],
+    "originalLog": "[로컬 컴퓨터 경로 공개 제외] 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader5_tension",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "parent": "[공개용 사본에서 세션ID 제외]",
+    "agentPath": "/root/reader5_tension",
+    "source": {
+      "subagent": {
+        "thread_spawn": {
+          "parent_thread_id": "[공개용 사본에서 세션ID 제외]",
+          "depth": 1,
+          "agent_path": "/root/reader5_tension",
+          "agent_nickname": "Jason",
+          "agent_role": null
+        }
+      }
+    },
+    "contextRecords": [
+      {
+        "timestamp": "2026-10-15T12:58:48.097Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      },
+      {
+        "timestamp": "2026-10-15T13:13:59.173Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      }
+    ],
+    "originalLog": "[로컬 컴퓨터 경로 공개 제외] 사본에서 세션ID 제외].jsonl"
+  },
+  {
+    "agent": "/root/reader6_general",
+    "sessionId": "[공개용 사본에서 세션ID 제외]",
+    "parent": "[공개용 사본에서 세션ID 제외]",
+    "agentPath": "/root/reader6_general",
+    "source": {
+      "subagent": {
+        "thread_spawn": {
+          "parent_thread_id": "[공개용 사본에서 세션ID 제외]",
+          "depth": 1,
+          "agent_path": "/root/reader6_general",
+          "agent_nickname": "Mendel",
+          "agent_role": null
+        }
+      }
+    },
+    "contextRecords": [
+      {
+        "timestamp": "2026-10-15T12:59:08.407Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      },
+      {
+        "timestamp": "2026-10-15T13:17:14.815Z",
+        "type": "turn_context",
+        "model": "gpt-6.1-sol",
+        "effort": "ultra"
+      }
+    ],
+    "originalLog": "[로컬 컴퓨터 경로 공개 제외] 사본에서 세션ID 제외].jsonl"
+  }
+]

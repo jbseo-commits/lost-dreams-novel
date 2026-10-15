@@ -1,0 +1,8 @@
+[
+  {
+    "reader": 1,
+    "original": "최초 C 이전 완독 8개는 A 5/B 3이며, 이후 116개는 업무 A 62/B 54다.",
+    "corrected": "최초 C 이전 완독 8개는 A 4/B 4이며, 이후 116개는 업무 A 63/B 53이다.",
+    "basis": "state.completed 및 보고서125행 판단표; 원본 보고서는 reader-workspaces에 보존"
+  }
+]

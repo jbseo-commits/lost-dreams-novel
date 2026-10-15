@@ -1,0 +1,72 @@
+[
+  {
+    "path": "reports/ep005-007-revision-plan.md",
+    "bytes": 6960,
+    "sha256": "77f0dc7ee375a0f24a9886cfcc842c81c0bf2bc6f262f5698f0b9ccfc81107ce"
+  },
+  {
+    "path": "reports/episode-matrix.csv",
+    "bytes": 20895,
+    "sha256": "21fd70a1ca0a8357de89d1841a46b5637666fd02c2c8a7d06fa61ae780cd4b26"
+  },
+  {
+    "path": "reports/episode-matrix.md",
+    "bytes": 6382,
+    "sha256": "3ea66ca473bb9f198613d2dbbb1020e9adb8860c128c8ee14cc09d2c99da0cc0"
+  },
+  {
+    "path": "reports/main-episode-survival.csv",
+    "bytes": 904,
+    "sha256": "0f890f3cc644d02780d8ad70aba46dea5b1dc1389f4182fbbf6e6fa1148ad3cf"
+  },
+  {
+    "path": "reports/main-report.md",
+    "bytes": 21092,
+    "sha256": "21c1227838c58abb2f880a25a1245fb1eecaf779e80654c1df189ded964aed1f"
+  },
+  {
+    "path": "reports/quote-corrections.json",
+    "bytes": 2627,
+    "sha256": "8da332612f56c9ce102fbbaf1008b3f76136df90dc90c1b861ba4214bb487809"
+  },
+  {
+    "path": "reports/reader1.md",
+    "bytes": 21648,
+    "sha256": "a93deec98d84815786800d48775776aff48ae9f301a8b8c88ea0c66347fc6bbc"
+  },
+  {
+    "path": "reports/reader2.md",
+    "bytes": 21368,
+    "sha256": "f50db75cec3ca8026e61968b6a6d8326ac0207b9763a037eefcb10e0996f5787"
+  },
+  {
+    "path": "reports/reader3.md",
+    "bytes": 20065,
+    "sha256": "1807776cf0c950e57cb2447bb4644360ef5d0d271b49e64e4f92e15c70f45503"
+  },
+  {
+    "path": "reports/reader4.md",
+    "bytes": 20801,
+    "sha256": "b2fb974a4b0ee6a607a445d8b3972c89d35f4294629b719953f0b52d9e1b0b54"
+  },
+  {
+    "path": "reports/reader5.md",
+    "bytes": 19049,
+    "sha256": "d4ec3e1a2cfee43d447779deee1817e09a9b75f8fcbe3436e8b460db79e71ef2"
+  },
+  {
+    "path": "reports/reader6.md",
+    "bytes": 19711,
+    "sha256": "6e3c48774b000316888a0d774b7ee00156143762332329ce005095b940cae892"
+  },
+  {
+    "path": "reports/report-count-corrections.json",
+    "bytes": 349,
+    "sha256": "53c95969d29665b20e9dde107f8863e9c59575a319e5f04f77c6b99471b56c2f"
+  },
+  {
+    "path": "reports/synthesis-data.json",
+    "bytes": 519104,
+    "sha256": "c2252f58c210527e9ae3c5e08c9416b5b6d58a7788672553dd001db51fcc3dfa"
+  }
+]
