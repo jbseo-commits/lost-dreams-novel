@@ -1,0 +1,2219 @@
+{
+  "repository": "jbseo-commits/lost-dreams-novel",
+  "parentSha": "7768d963813e5bad223261a10e0e9ca803a34b29",
+  "branch": "codex/ep005-007-retention-20261016",
+  "repositoryPrefix": "planning/reader-audit/20261016-7768d96-ep005-007-revision",
+  "canonicalManuscript": [
+    {
+      "path": "manuscript/ep005.md",
+      "beforeChars": 5492,
+      "afterChars": 5065,
+      "beforeLines": 853,
+      "afterLines": 759,
+      "sha": "b8495c833def19bcedb9dfb2069d3224ef57b987"
+    },
+    {
+      "path": "manuscript/ep006.md",
+      "beforeChars": 5330,
+      "afterChars": 4489,
+      "beforeLines": 901,
+      "afterLines": 725,
+      "sha": "4e91d217fac65d3423961fb5868d247f9de63bae"
+    },
+    {
+      "path": "manuscript/ep007.md",
+      "beforeChars": 4292,
+      "afterChars": 3053,
+      "beforeLines": 753,
+      "afterLines": 545,
+      "sha": "4937223e3f1535e53717bfc1b4507733eea72f65"
+    }
+  ],
+  "notes": "자기 파일은 순환을 피하려고 entries에서 제외. 원본해시와 공개용변환은 각 entry에 보관.",
+  "entries": [
+    {
+      "path": "baseline/manuscript/ep001.md",
+      "bytes": 12560,
+      "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "originalSha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep002.md",
+      "bytes": 12392,
+      "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "originalSha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep003.md",
+      "bytes": 8893,
+      "sha": "24cb6626a9c39ab1803d8d54edea1f5ae8d1ce43",
+      "originalSha": "24cb6626a9c39ab1803d8d54edea1f5ae8d1ce43",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep004-1.md",
+      "bytes": 9484,
+      "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "originalSha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep004.md",
+      "bytes": 15078,
+      "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "originalSha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep005.md",
+      "bytes": 17516,
+      "sha": "65e9399303a9c644d56d8a505bf44605d4712b4c",
+      "originalSha": "65e9399303a9c644d56d8a505bf44605d4712b4c",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep006-1.md",
+      "bytes": 4238,
+      "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "originalSha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep006.md",
+      "bytes": 16683,
+      "sha": "10cb630df1abf8ccaaed635a07b263aef49f3cb9",
+      "originalSha": "10cb630df1abf8ccaaed635a07b263aef49f3cb9",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep007-2.md",
+      "bytes": 11245,
+      "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "originalSha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep007-3.md",
+      "bytes": 8242,
+      "sha": "a237778a2277bd0f9874d23de6bf8c30c302c992",
+      "originalSha": "a237778a2277bd0f9874d23de6bf8c30c302c992",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep007.md",
+      "bytes": 13580,
+      "sha": "4f196084fa52b869457ca75d19e46e6c14947f43",
+      "originalSha": "4f196084fa52b869457ca75d19e46e6c14947f43",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep008-3.md",
+      "bytes": 8448,
+      "sha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "originalSha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep008-4.md",
+      "bytes": 5677,
+      "sha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "originalSha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep008.md",
+      "bytes": 8490,
+      "sha": "096a0e40be9619081134558fa7589bb99647394c",
+      "originalSha": "096a0e40be9619081134558fa7589bb99647394c",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep009-1.md",
+      "bytes": 7570,
+      "sha": "b7dd2a1c7d8416d66105cb54890fb7e8f8869f92",
+      "originalSha": "b7dd2a1c7d8416d66105cb54890fb7e8f8869f92",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep009.md",
+      "bytes": 11006,
+      "sha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "originalSha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep010.md",
+      "bytes": 14632,
+      "sha": "a44600ef658df815edce155d8df23df6d67c377d",
+      "originalSha": "a44600ef658df815edce155d8df23df6d67c377d",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep011.md",
+      "bytes": 10899,
+      "sha": "83929db005c2ab559c0d9cf3f083a266c2393744",
+      "originalSha": "83929db005c2ab559c0d9cf3f083a266c2393744",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep012-1.md",
+      "bytes": 11506,
+      "sha": "e003ea2b9400e41d57d0620d5f63b2f5ce8cc27f",
+      "originalSha": "e003ea2b9400e41d57d0620d5f63b2f5ce8cc27f",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep012.md",
+      "bytes": 11640,
+      "sha": "77f8f9d019ca01d927dcb576141f0f594f2d470d",
+      "originalSha": "77f8f9d019ca01d927dcb576141f0f594f2d470d",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep013-1.md",
+      "bytes": 5117,
+      "sha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "originalSha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep013-2.md",
+      "bytes": 11513,
+      "sha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "originalSha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep013.md",
+      "bytes": 10232,
+      "sha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "originalSha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep014.md",
+      "bytes": 13049,
+      "sha": "e4ed235a819d1e55c63b72ca3aac9e4fa7ba5cc4",
+      "originalSha": "e4ed235a819d1e55c63b72ca3aac9e4fa7ba5cc4",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep015-1.md",
+      "bytes": 3522,
+      "sha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "originalSha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep015.md",
+      "bytes": 11722,
+      "sha": "262e7d2511a262c4b38a71fc3fb2cd38d62113f3",
+      "originalSha": "262e7d2511a262c4b38a71fc3fb2cd38d62113f3",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep016.md",
+      "bytes": 11623,
+      "sha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "originalSha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep017.md",
+      "bytes": 12794,
+      "sha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "originalSha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep018.md",
+      "bytes": 10623,
+      "sha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "originalSha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep019.md",
+      "bytes": 13274,
+      "sha": "9408e89430a3aa5803fbead797b268f23112eb80",
+      "originalSha": "9408e89430a3aa5803fbead797b268f23112eb80",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep020-1.md",
+      "bytes": 3511,
+      "sha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "originalSha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep020.md",
+      "bytes": 13539,
+      "sha": "20b7424aa7f598b6f0665c6d38069574b19c87e9",
+      "originalSha": "20b7424aa7f598b6f0665c6d38069574b19c87e9",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep021-1.md",
+      "bytes": 7787,
+      "sha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "originalSha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep021.md",
+      "bytes": 10615,
+      "sha": "8d8113aac14e7ed8700148bada3033baacb1f597",
+      "originalSha": "8d8113aac14e7ed8700148bada3033baacb1f597",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep022-1.md",
+      "bytes": 8544,
+      "sha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "originalSha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep022.md",
+      "bytes": 11911,
+      "sha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "originalSha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep023.md",
+      "bytes": 11017,
+      "sha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "originalSha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep024-1.md",
+      "bytes": 12180,
+      "sha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "originalSha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep024.md",
+      "bytes": 11427,
+      "sha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "originalSha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep025-1.md",
+      "bytes": 11178,
+      "sha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "originalSha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep025.md",
+      "bytes": 11171,
+      "sha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "originalSha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep026.md",
+      "bytes": 13475,
+      "sha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "originalSha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep027.md",
+      "bytes": 11881,
+      "sha": "0117af584cf9b61397a3198fdad20ac85dec3797",
+      "originalSha": "0117af584cf9b61397a3198fdad20ac85dec3797",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep028.md",
+      "bytes": 11488,
+      "sha": "079d291ef3b8c842491edeb80fad6a0a16c1903b",
+      "originalSha": "079d291ef3b8c842491edeb80fad6a0a16c1903b",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep029.md",
+      "bytes": 11794,
+      "sha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "originalSha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep030-1.md",
+      "bytes": 8209,
+      "sha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "originalSha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep030-2.md",
+      "bytes": 9705,
+      "sha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "originalSha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "transformed": false
+    },
+    {
+      "path": "baseline/manuscript/ep030.md",
+      "bytes": 12022,
+      "sha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "originalSha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "transformed": false
+    },
+    {
+      "path": "checks/changes.diff",
+      "bytes": 20390,
+      "sha": "5d9afbdf19ccb24ba66afdf01822f98cafaac002",
+      "originalSha": "803a569e76a0ed83f55f124c07821526b38177cb",
+      "transformed": true
+    },
+    {
+      "path": "checks/changes.html",
+      "bytes": 532352,
+      "sha": "bbe2590a4808ded3b5b909823d822e666d8dd4d6",
+      "originalSha": "bbe2590a4808ded3b5b909823d822e666d8dd4d6",
+      "transformed": false
+    },
+    {
+      "path": "checks/reader-checks.json",
+      "bytes": 15896,
+      "sha": "7ae13f974d29f4bd33d4751af24669baac0c0275",
+      "originalSha": "fdaccd9a7a9215f001dc69070203c1e053a16daa",
+      "transformed": true
+    },
+    {
+      "path": "checks/recheck-summary.json",
+      "bytes": 8103,
+      "sha": "449ade48d1958af171b65feb28dd4bb1a1eebe93",
+      "originalSha": "449ade48d1958af171b65feb28dd4bb1a1eebe93",
+      "transformed": false
+    },
+    {
+      "path": "checks/revision-scope.json",
+      "bytes": 1100,
+      "sha": "2ab7dbca8613ca615b193461d74d7db218af1a72",
+      "originalSha": "2ab7dbca8613ca615b193461d74d7db218af1a72",
+      "transformed": false
+    },
+    {
+      "path": "checks/summary.txt",
+      "bytes": 4854,
+      "sha": "a75100870fc77c302d849c91875c8562ef2a949f",
+      "originalSha": "a75100870fc77c302d849c91875c8562ef2a949f",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep001.md",
+      "bytes": 12560,
+      "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "originalSha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep002.md",
+      "bytes": 12392,
+      "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "originalSha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep003.md",
+      "bytes": 11180,
+      "sha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "originalSha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep004-1.md",
+      "bytes": 9484,
+      "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "originalSha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep004.md",
+      "bytes": 15078,
+      "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "originalSha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep005.md",
+      "bytes": 17516,
+      "sha": "65e9399303a9c644d56d8a505bf44605d4712b4c",
+      "originalSha": "65e9399303a9c644d56d8a505bf44605d4712b4c",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep006-1.md",
+      "bytes": 4238,
+      "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "originalSha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep006.md",
+      "bytes": 16683,
+      "sha": "10cb630df1abf8ccaaed635a07b263aef49f3cb9",
+      "originalSha": "10cb630df1abf8ccaaed635a07b263aef49f3cb9",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep007-2.md",
+      "bytes": 11245,
+      "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "originalSha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep007-3.md",
+      "bytes": 8326,
+      "sha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "originalSha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep007.md",
+      "bytes": 13580,
+      "sha": "4f196084fa52b869457ca75d19e46e6c14947f43",
+      "originalSha": "4f196084fa52b869457ca75d19e46e6c14947f43",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep008-3.md",
+      "bytes": 8448,
+      "sha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "originalSha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep008-4.md",
+      "bytes": 5677,
+      "sha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "originalSha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep008.md",
+      "bytes": 8523,
+      "sha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "originalSha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep009-1.md",
+      "bytes": 11305,
+      "sha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "originalSha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep009.md",
+      "bytes": 11006,
+      "sha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "originalSha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep010.md",
+      "bytes": 14535,
+      "sha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "originalSha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep011.md",
+      "bytes": 10882,
+      "sha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "originalSha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep012-1.md",
+      "bytes": 12124,
+      "sha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "originalSha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep012.md",
+      "bytes": 11903,
+      "sha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "originalSha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep013-1.md",
+      "bytes": 5117,
+      "sha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "originalSha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep013-2.md",
+      "bytes": 11513,
+      "sha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "originalSha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep013.md",
+      "bytes": 10232,
+      "sha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "originalSha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep014.md",
+      "bytes": 13066,
+      "sha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "originalSha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep015-1.md",
+      "bytes": 3522,
+      "sha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "originalSha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep015.md",
+      "bytes": 11753,
+      "sha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "originalSha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep016-1.md",
+      "bytes": 11465,
+      "sha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "originalSha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep016.md",
+      "bytes": 11623,
+      "sha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "originalSha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep017.md",
+      "bytes": 12794,
+      "sha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "originalSha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep018.md",
+      "bytes": 10623,
+      "sha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "originalSha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep019-1.md",
+      "bytes": 11537,
+      "sha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "originalSha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep019-2.md",
+      "bytes": 11249,
+      "sha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "originalSha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep019.md",
+      "bytes": 13947,
+      "sha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "originalSha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep020-1.md",
+      "bytes": 3511,
+      "sha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "originalSha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep020.md",
+      "bytes": 11546,
+      "sha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "originalSha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep021-1.md",
+      "bytes": 7787,
+      "sha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "originalSha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep021.md",
+      "bytes": 11052,
+      "sha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "originalSha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep022-1.md",
+      "bytes": 8544,
+      "sha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "originalSha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep022.md",
+      "bytes": 11911,
+      "sha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "originalSha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep023.md",
+      "bytes": 11017,
+      "sha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "originalSha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep024-1.md",
+      "bytes": 12180,
+      "sha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "originalSha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep024.md",
+      "bytes": 11427,
+      "sha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "originalSha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep025-1.md",
+      "bytes": 11178,
+      "sha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "originalSha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep025.md",
+      "bytes": 11171,
+      "sha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "originalSha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep026.md",
+      "bytes": 13475,
+      "sha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "originalSha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep027.md",
+      "bytes": 11868,
+      "sha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "originalSha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep028.md",
+      "bytes": 11401,
+      "sha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "originalSha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep029.md",
+      "bytes": 11794,
+      "sha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "originalSha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep030-1.md",
+      "bytes": 8209,
+      "sha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "originalSha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep030-2.md",
+      "bytes": 9705,
+      "sha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "originalSha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "transformed": false
+    },
+    {
+      "path": "latest/manuscript/ep030.md",
+      "bytes": 12022,
+      "sha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "originalSha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "transformed": false
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 23783,
+      "sha": "09e0c7c197a249e6c5f8cb2c15f9c82509066ab7",
+      "originalSha": "09e0c7c197a249e6c5f8cb2c15f9c82509066ab7",
+      "transformed": false
+    },
+    {
+      "path": "publication-corrections.json",
+      "bytes": 549,
+      "sha": "496b560c598367b460f1b06d48357d2854873a6e",
+      "originalSha": null,
+      "transformed": false
+    },
+    {
+      "path": "publication-note.txt",
+      "bytes": 1967,
+      "sha": "d52bc5263fda475b5323abbfe1c1a8070af339db",
+      "originalSha": null,
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep001.md",
+      "bytes": 12560,
+      "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "originalSha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep002.md",
+      "bytes": 12392,
+      "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "originalSha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep003.md",
+      "bytes": 11180,
+      "sha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "originalSha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep004-1.md",
+      "bytes": 9484,
+      "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "originalSha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep004.md",
+      "bytes": 15078,
+      "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "originalSha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep005.md",
+      "bytes": 16167,
+      "sha": "b8495c833def19bcedb9dfb2069d3224ef57b987",
+      "originalSha": "b8495c833def19bcedb9dfb2069d3224ef57b987",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep006-1.md",
+      "bytes": 4238,
+      "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "originalSha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep006.md",
+      "bytes": 14437,
+      "sha": "27aa58ad50dd77ead0dba2009f696ee0f17e0cd0",
+      "originalSha": "27aa58ad50dd77ead0dba2009f696ee0f17e0cd0",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep007-2.md",
+      "bytes": 11245,
+      "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "originalSha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep007-3.md",
+      "bytes": 8326,
+      "sha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "originalSha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep007.md",
+      "bytes": 10721,
+      "sha": "d13cb1c996a910c9a57995041fdf930b2bfbd717",
+      "originalSha": "d13cb1c996a910c9a57995041fdf930b2bfbd717",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep008-3.md",
+      "bytes": 8448,
+      "sha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "originalSha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep008-4.md",
+      "bytes": 5677,
+      "sha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "originalSha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep008.md",
+      "bytes": 8523,
+      "sha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "originalSha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep009-1.md",
+      "bytes": 11305,
+      "sha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "originalSha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep009.md",
+      "bytes": 11006,
+      "sha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "originalSha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep010.md",
+      "bytes": 14535,
+      "sha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "originalSha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep011.md",
+      "bytes": 10882,
+      "sha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "originalSha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep012-1.md",
+      "bytes": 12124,
+      "sha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "originalSha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep012.md",
+      "bytes": 11903,
+      "sha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "originalSha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep013-1.md",
+      "bytes": 5117,
+      "sha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "originalSha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep013-2.md",
+      "bytes": 11513,
+      "sha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "originalSha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep013.md",
+      "bytes": 10232,
+      "sha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "originalSha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep014.md",
+      "bytes": 13066,
+      "sha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "originalSha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep015-1.md",
+      "bytes": 3522,
+      "sha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "originalSha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep015.md",
+      "bytes": 11753,
+      "sha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "originalSha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep016-1.md",
+      "bytes": 11465,
+      "sha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "originalSha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep016.md",
+      "bytes": 11623,
+      "sha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "originalSha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep017.md",
+      "bytes": 12794,
+      "sha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "originalSha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep018.md",
+      "bytes": 10623,
+      "sha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "originalSha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep019-1.md",
+      "bytes": 11537,
+      "sha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "originalSha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep019-2.md",
+      "bytes": 11249,
+      "sha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "originalSha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep019.md",
+      "bytes": 13947,
+      "sha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "originalSha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep020-1.md",
+      "bytes": 3511,
+      "sha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "originalSha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep020.md",
+      "bytes": 11546,
+      "sha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "originalSha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep021-1.md",
+      "bytes": 7787,
+      "sha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "originalSha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep021.md",
+      "bytes": 11052,
+      "sha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "originalSha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep022-1.md",
+      "bytes": 8544,
+      "sha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "originalSha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep022.md",
+      "bytes": 11911,
+      "sha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "originalSha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep023.md",
+      "bytes": 11017,
+      "sha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "originalSha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep024-1.md",
+      "bytes": 12180,
+      "sha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "originalSha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep024.md",
+      "bytes": 11427,
+      "sha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "originalSha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep025-1.md",
+      "bytes": 11178,
+      "sha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "originalSha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep025.md",
+      "bytes": 11171,
+      "sha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "originalSha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep026.md",
+      "bytes": 13475,
+      "sha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "originalSha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep027.md",
+      "bytes": 11868,
+      "sha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "originalSha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep028.md",
+      "bytes": 11401,
+      "sha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "originalSha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep029.md",
+      "bytes": 11794,
+      "sha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "originalSha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep030-1.md",
+      "bytes": 8209,
+      "sha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "originalSha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep030-2.md",
+      "bytes": 9705,
+      "sha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "originalSha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v1/manuscript/ep030.md",
+      "bytes": 12022,
+      "sha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "originalSha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep001.md",
+      "bytes": 12560,
+      "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "originalSha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep002.md",
+      "bytes": 12392,
+      "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "originalSha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep003.md",
+      "bytes": 11180,
+      "sha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "originalSha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep004-1.md",
+      "bytes": 9484,
+      "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "originalSha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep004.md",
+      "bytes": 15078,
+      "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "originalSha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep005.md",
+      "bytes": 16167,
+      "sha": "b8495c833def19bcedb9dfb2069d3224ef57b987",
+      "originalSha": "b8495c833def19bcedb9dfb2069d3224ef57b987",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep006-1.md",
+      "bytes": 4238,
+      "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "originalSha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep006.md",
+      "bytes": 14446,
+      "sha": "7f99e879e33270bae8b242980c99ad59a233b05d",
+      "originalSha": "7f99e879e33270bae8b242980c99ad59a233b05d",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep007-2.md",
+      "bytes": 11245,
+      "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "originalSha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep007-3.md",
+      "bytes": 8326,
+      "sha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "originalSha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep007.md",
+      "bytes": 9627,
+      "sha": "4937223e3f1535e53717bfc1b4507733eea72f65",
+      "originalSha": "4937223e3f1535e53717bfc1b4507733eea72f65",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep008-3.md",
+      "bytes": 8448,
+      "sha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "originalSha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep008-4.md",
+      "bytes": 5677,
+      "sha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "originalSha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep008.md",
+      "bytes": 8523,
+      "sha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "originalSha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep009-1.md",
+      "bytes": 11305,
+      "sha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "originalSha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep009.md",
+      "bytes": 11006,
+      "sha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "originalSha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep010.md",
+      "bytes": 14535,
+      "sha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "originalSha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep011.md",
+      "bytes": 10882,
+      "sha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "originalSha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep012-1.md",
+      "bytes": 12124,
+      "sha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "originalSha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep012.md",
+      "bytes": 11903,
+      "sha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "originalSha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep013-1.md",
+      "bytes": 5117,
+      "sha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "originalSha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep013-2.md",
+      "bytes": 11513,
+      "sha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "originalSha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep013.md",
+      "bytes": 10232,
+      "sha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "originalSha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep014.md",
+      "bytes": 13066,
+      "sha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "originalSha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep015-1.md",
+      "bytes": 3522,
+      "sha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "originalSha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep015.md",
+      "bytes": 11753,
+      "sha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "originalSha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep016-1.md",
+      "bytes": 11465,
+      "sha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "originalSha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep016.md",
+      "bytes": 11623,
+      "sha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "originalSha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep017.md",
+      "bytes": 12794,
+      "sha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "originalSha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep018.md",
+      "bytes": 10623,
+      "sha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "originalSha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep019-1.md",
+      "bytes": 11537,
+      "sha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "originalSha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep019-2.md",
+      "bytes": 11249,
+      "sha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "originalSha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep019.md",
+      "bytes": 13947,
+      "sha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "originalSha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep020-1.md",
+      "bytes": 3511,
+      "sha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "originalSha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep020.md",
+      "bytes": 11546,
+      "sha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "originalSha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep021-1.md",
+      "bytes": 7787,
+      "sha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "originalSha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep021.md",
+      "bytes": 11052,
+      "sha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "originalSha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep022-1.md",
+      "bytes": 8544,
+      "sha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "originalSha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep022.md",
+      "bytes": 11911,
+      "sha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "originalSha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep023.md",
+      "bytes": 11017,
+      "sha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "originalSha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep024-1.md",
+      "bytes": 12180,
+      "sha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "originalSha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep024.md",
+      "bytes": 11427,
+      "sha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "originalSha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep025-1.md",
+      "bytes": 11178,
+      "sha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "originalSha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep025.md",
+      "bytes": 11171,
+      "sha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "originalSha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep026.md",
+      "bytes": 13475,
+      "sha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "originalSha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep027.md",
+      "bytes": 11868,
+      "sha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "originalSha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep028.md",
+      "bytes": 11401,
+      "sha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "originalSha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep029.md",
+      "bytes": 11794,
+      "sha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "originalSha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep030-1.md",
+      "bytes": 8209,
+      "sha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "originalSha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep030-2.md",
+      "bytes": 9705,
+      "sha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "originalSha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v2/manuscript/ep030.md",
+      "bytes": 12022,
+      "sha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "originalSha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep001.md",
+      "bytes": 12560,
+      "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "originalSha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep002.md",
+      "bytes": 12392,
+      "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "originalSha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep003.md",
+      "bytes": 11180,
+      "sha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "originalSha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep004-1.md",
+      "bytes": 9484,
+      "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "originalSha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep004.md",
+      "bytes": 15078,
+      "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "originalSha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep005.md",
+      "bytes": 16167,
+      "sha": "b8495c833def19bcedb9dfb2069d3224ef57b987",
+      "originalSha": "b8495c833def19bcedb9dfb2069d3224ef57b987",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep006-1.md",
+      "bytes": 4238,
+      "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "originalSha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep006.md",
+      "bytes": 14059,
+      "sha": "4e91d217fac65d3423961fb5868d247f9de63bae",
+      "originalSha": "4e91d217fac65d3423961fb5868d247f9de63bae",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep007-2.md",
+      "bytes": 11245,
+      "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "originalSha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep007-3.md",
+      "bytes": 8326,
+      "sha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "originalSha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep007.md",
+      "bytes": 9627,
+      "sha": "4937223e3f1535e53717bfc1b4507733eea72f65",
+      "originalSha": "4937223e3f1535e53717bfc1b4507733eea72f65",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep008-3.md",
+      "bytes": 8448,
+      "sha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "originalSha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep008-4.md",
+      "bytes": 5677,
+      "sha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "originalSha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep008.md",
+      "bytes": 8523,
+      "sha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "originalSha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep009-1.md",
+      "bytes": 11305,
+      "sha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "originalSha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep009.md",
+      "bytes": 11006,
+      "sha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "originalSha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep010.md",
+      "bytes": 14535,
+      "sha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "originalSha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep011.md",
+      "bytes": 10882,
+      "sha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "originalSha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep012-1.md",
+      "bytes": 12124,
+      "sha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "originalSha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep012.md",
+      "bytes": 11903,
+      "sha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "originalSha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep013-1.md",
+      "bytes": 5117,
+      "sha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "originalSha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep013-2.md",
+      "bytes": 11513,
+      "sha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "originalSha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep013.md",
+      "bytes": 10232,
+      "sha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "originalSha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep014.md",
+      "bytes": 13066,
+      "sha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "originalSha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep015-1.md",
+      "bytes": 3522,
+      "sha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "originalSha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep015.md",
+      "bytes": 11753,
+      "sha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "originalSha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep016-1.md",
+      "bytes": 11465,
+      "sha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "originalSha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep016.md",
+      "bytes": 11623,
+      "sha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "originalSha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep017.md",
+      "bytes": 12794,
+      "sha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "originalSha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep018.md",
+      "bytes": 10623,
+      "sha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "originalSha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep019-1.md",
+      "bytes": 11537,
+      "sha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "originalSha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep019-2.md",
+      "bytes": 11249,
+      "sha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "originalSha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep019.md",
+      "bytes": 13947,
+      "sha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "originalSha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep020-1.md",
+      "bytes": 3511,
+      "sha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "originalSha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep020.md",
+      "bytes": 11546,
+      "sha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "originalSha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep021-1.md",
+      "bytes": 7787,
+      "sha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "originalSha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep021.md",
+      "bytes": 11052,
+      "sha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "originalSha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep022-1.md",
+      "bytes": 8544,
+      "sha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "originalSha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep022.md",
+      "bytes": 11911,
+      "sha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "originalSha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep023.md",
+      "bytes": 11017,
+      "sha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "originalSha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep024-1.md",
+      "bytes": 12180,
+      "sha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "originalSha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep024.md",
+      "bytes": 11427,
+      "sha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "originalSha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep025-1.md",
+      "bytes": 11178,
+      "sha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "originalSha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep025.md",
+      "bytes": 11171,
+      "sha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "originalSha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep026.md",
+      "bytes": 13475,
+      "sha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "originalSha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep027.md",
+      "bytes": 11868,
+      "sha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "originalSha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep028.md",
+      "bytes": 11401,
+      "sha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "originalSha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep029.md",
+      "bytes": 11794,
+      "sha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "originalSha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep030-1.md",
+      "bytes": 8209,
+      "sha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "originalSha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep030-2.md",
+      "bytes": 9705,
+      "sha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "originalSha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "transformed": false
+    },
+    {
+      "path": "read-test-v3/manuscript/ep030.md",
+      "bytes": 12022,
+      "sha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "originalSha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep001.md",
+      "bytes": 12560,
+      "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "originalSha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep002.md",
+      "bytes": 12392,
+      "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "originalSha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep003.md",
+      "bytes": 11180,
+      "sha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "originalSha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep004-1.md",
+      "bytes": 9484,
+      "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "originalSha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep004.md",
+      "bytes": 15078,
+      "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "originalSha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep005.md",
+      "bytes": 16167,
+      "sha": "b8495c833def19bcedb9dfb2069d3224ef57b987",
+      "originalSha": "b8495c833def19bcedb9dfb2069d3224ef57b987",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep006-1.md",
+      "bytes": 4238,
+      "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "originalSha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep006.md",
+      "bytes": 14059,
+      "sha": "4e91d217fac65d3423961fb5868d247f9de63bae",
+      "originalSha": "4e91d217fac65d3423961fb5868d247f9de63bae",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep007-2.md",
+      "bytes": 11245,
+      "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "originalSha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep007-3.md",
+      "bytes": 8326,
+      "sha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "originalSha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep007.md",
+      "bytes": 9627,
+      "sha": "4937223e3f1535e53717bfc1b4507733eea72f65",
+      "originalSha": "4937223e3f1535e53717bfc1b4507733eea72f65",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep008-3.md",
+      "bytes": 8448,
+      "sha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "originalSha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep008-4.md",
+      "bytes": 5677,
+      "sha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "originalSha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep008.md",
+      "bytes": 8523,
+      "sha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "originalSha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep009-1.md",
+      "bytes": 11305,
+      "sha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "originalSha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep009.md",
+      "bytes": 11006,
+      "sha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "originalSha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep010.md",
+      "bytes": 14535,
+      "sha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "originalSha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep011.md",
+      "bytes": 10882,
+      "sha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "originalSha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep012-1.md",
+      "bytes": 12124,
+      "sha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "originalSha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep012.md",
+      "bytes": 11903,
+      "sha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "originalSha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep013-1.md",
+      "bytes": 5117,
+      "sha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "originalSha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep013-2.md",
+      "bytes": 11513,
+      "sha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "originalSha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep013.md",
+      "bytes": 10232,
+      "sha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "originalSha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep014.md",
+      "bytes": 13066,
+      "sha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "originalSha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep015-1.md",
+      "bytes": 3522,
+      "sha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "originalSha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep015.md",
+      "bytes": 11753,
+      "sha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "originalSha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep016-1.md",
+      "bytes": 11465,
+      "sha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "originalSha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep016.md",
+      "bytes": 11623,
+      "sha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "originalSha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep017.md",
+      "bytes": 12794,
+      "sha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "originalSha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep018.md",
+      "bytes": 10623,
+      "sha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "originalSha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep019-1.md",
+      "bytes": 11537,
+      "sha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "originalSha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep019-2.md",
+      "bytes": 11249,
+      "sha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "originalSha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep019.md",
+      "bytes": 13947,
+      "sha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "originalSha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep020-1.md",
+      "bytes": 3511,
+      "sha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "originalSha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep020.md",
+      "bytes": 11546,
+      "sha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "originalSha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep021-1.md",
+      "bytes": 7787,
+      "sha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "originalSha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep021.md",
+      "bytes": 11052,
+      "sha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "originalSha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep022-1.md",
+      "bytes": 8544,
+      "sha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "originalSha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep022.md",
+      "bytes": 11911,
+      "sha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "originalSha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep023.md",
+      "bytes": 11017,
+      "sha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "originalSha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep024-1.md",
+      "bytes": 12180,
+      "sha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "originalSha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep024.md",
+      "bytes": 11427,
+      "sha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "originalSha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep025-1.md",
+      "bytes": 11178,
+      "sha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "originalSha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep025.md",
+      "bytes": 11171,
+      "sha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "originalSha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep026.md",
+      "bytes": 13475,
+      "sha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "originalSha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep027.md",
+      "bytes": 11868,
+      "sha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "originalSha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep028.md",
+      "bytes": 11401,
+      "sha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "originalSha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep029.md",
+      "bytes": 11794,
+      "sha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "originalSha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep030-1.md",
+      "bytes": 8209,
+      "sha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "originalSha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep030-2.md",
+      "bytes": 9705,
+      "sha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "originalSha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "transformed": false
+    },
+    {
+      "path": "revision/manuscript/ep030.md",
+      "bytes": 12022,
+      "sha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "originalSha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "transformed": false
+    }
+  ]
+}

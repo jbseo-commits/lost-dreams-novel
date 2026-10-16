@@ -1,0 +1,341 @@
+{
+  "repository": "jbseo-commits/lost-dreams-novel",
+  "baseline": "7699855f8c31519ceaa9da0120b19430579f7548",
+  "latest": "7768d963813e5bad223261a10e0e9ca803a34b29",
+  "finalRemoteHead": "7768d963813e5bad223261a10e0e9ca803a34b29",
+  "sourceFilesVerified": 51,
+  "modified": [
+    "manuscript/ep003.md",
+    "manuscript/ep008.md",
+    "manuscript/ep007-3.md",
+    "manuscript/ep009-1.md",
+    "manuscript/ep010.md",
+    "manuscript/ep011.md",
+    "manuscript/ep012.md",
+    "manuscript/ep012-1.md",
+    "manuscript/ep014.md",
+    "manuscript/ep015.md",
+    "manuscript/ep019.md",
+    "manuscript/ep020.md",
+    "manuscript/ep021.md",
+    "manuscript/ep027.md",
+    "manuscript/ep028.md"
+  ],
+  "added": [
+    "manuscript/ep016-1.md",
+    "manuscript/ep019-1.md",
+    "manuscript/ep019-2.md"
+  ],
+  "unchangedCount": 33,
+  "readCoverage": [
+    {
+      "path": "manuscript/ep001.md",
+      "lines": 534,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep002.md",
+      "lines": 587,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep003.md",
+      "lines": 559,
+      "role": "recheck_ep001_010_edges",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep004.md",
+      "lines": 771,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep004-1.md",
+      "lines": 287,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep005.md",
+      "lines": 853,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep006.md",
+      "lines": 901,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep006-1.md",
+      "lines": 209,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep007.md",
+      "lines": 753,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep007-2.md",
+      "lines": 413,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep008.md",
+      "lines": 199,
+      "role": "recheck_ep001_010_edges",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep007-3.md",
+      "lines": 185,
+      "role": "recheck_ep001_010_edges",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep008-3.md",
+      "lines": 247,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep008-4.md",
+      "lines": 185,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep009.md",
+      "lines": 614,
+      "role": "recheck_ep001_010_edges",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep009-1.md",
+      "lines": 599,
+      "role": "recheck_ep001_010_edges",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep010.md",
+      "lines": 727,
+      "role": "recheck_ep001_010_edges",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep011.md",
+      "lines": 525,
+      "role": "recheck_ep011_020",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep012.md",
+      "lines": 565,
+      "role": "recheck_ep011_020",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep012-1.md",
+      "lines": 371,
+      "role": "recheck_ep011_020",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep013.md",
+      "lines": 601,
+      "role": "recheck_ep011_020",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep013-1.md",
+      "lines": 253,
+      "role": "recheck_ep011_020",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep013-2.md",
+      "lines": 275,
+      "role": "recheck_ep011_020",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep014.md",
+      "lines": 765,
+      "role": "recheck_ep011_020",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep015.md",
+      "lines": 647,
+      "role": "recheck_ep011_020",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep015-1.md",
+      "lines": 179,
+      "role": "recheck_ep011_020",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep016.md",
+      "lines": 617,
+      "role": "recheck_ep011_020",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep016-1.md",
+      "lines": 427,
+      "role": "recheck_ep011_020",
+      "status": "added"
+    },
+    {
+      "path": "manuscript/ep017.md",
+      "lines": 639,
+      "role": "recheck_ep011_020",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep018.md",
+      "lines": 519,
+      "role": "recheck_ep011_020",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep019.md",
+      "lines": 705,
+      "role": "recheck_ep011_020",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep019-1.md",
+      "lines": 363,
+      "role": "recheck_ep011_020",
+      "status": "added"
+    },
+    {
+      "path": "manuscript/ep019-2.md",
+      "lines": 381,
+      "role": "recheck_ep011_020",
+      "status": "added"
+    },
+    {
+      "path": "manuscript/ep020.md",
+      "lines": 587,
+      "role": "recheck_ep011_020",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep020-1.md",
+      "lines": 191,
+      "role": "recheck_ep011_020",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep021.md",
+      "lines": 585,
+      "role": "recheck_ep021_030",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep021-1.md",
+      "lines": 285,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep022.md",
+      "lines": 617,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep022-1.md",
+      "lines": 269,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep023.md",
+      "lines": 553,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep024.md",
+      "lines": 581,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep024-1.md",
+      "lines": 405,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep025.md",
+      "lines": 579,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep025-1.md",
+      "lines": 587,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep026.md",
+      "lines": 647,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep027.md",
+      "lines": 523,
+      "role": "recheck_ep021_030",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep028.md",
+      "lines": 507,
+      "role": "recheck_ep021_030",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep029.md",
+      "lines": 525,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep030.md",
+      "lines": 519,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep030-1.md",
+      "lines": 241,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep030-2.md",
+      "lines": 463,
+      "role": "recheck_ep021_030",
+      "status": "unchanged"
+    }
+  ],
+  "kind": "편집 재확인. 기존 6명 105화 검수의 재실행이 아님.",
+  "protected": "ep006-1 전체 및 라면·식은빵·지우항의·미라의자기꿈질문·송출탑충동",
+  "remaining": "15화 기술명 추측 반복,17~18화 정보부족 재확인,23~25화 신청·상한 재논쟁은 이번 수정 범위 밖이며 원문 그대로"
+}

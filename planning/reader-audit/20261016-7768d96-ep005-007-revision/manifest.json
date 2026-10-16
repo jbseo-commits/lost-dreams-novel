@@ -1,0 +1,772 @@
+{
+  "baseline": "7699855f8c31519ceaa9da0120b19430579f7548",
+  "latest": "7768d963813e5bad223261a10e0e9ca803a34b29",
+  "branch": "main",
+  "files": [
+    {
+      "path": "manuscript/ep001.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "size": 12560,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "order": 1,
+      "logicalEpisode": [
+        1,
+        0
+      ],
+      "oldSha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep002.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "size": 12392,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "order": 2,
+      "logicalEpisode": [
+        2,
+        0
+      ],
+      "oldSha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep003.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "size": 11180,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf",
+      "order": 3,
+      "logicalEpisode": [
+        3,
+        0
+      ],
+      "oldSha": "24cb6626a9c39ab1803d8d54edea1f5ae8d1ce43",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep004.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "size": 15078,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "order": 4,
+      "logicalEpisode": [
+        4,
+        0
+      ],
+      "oldSha": "c8c5fb539205c2668dc30cbebf489cfa91e52841",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep004-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "size": 9484,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "order": 5,
+      "logicalEpisode": [
+        4,
+        1
+      ],
+      "oldSha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep005.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65e9399303a9c644d56d8a505bf44605d4712b4c",
+      "size": 17516,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/65e9399303a9c644d56d8a505bf44605d4712b4c",
+      "order": 6,
+      "logicalEpisode": [
+        5,
+        0
+      ],
+      "oldSha": "65e9399303a9c644d56d8a505bf44605d4712b4c",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep006.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10cb630df1abf8ccaaed635a07b263aef49f3cb9",
+      "size": 16683,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/10cb630df1abf8ccaaed635a07b263aef49f3cb9",
+      "order": 7,
+      "logicalEpisode": [
+        6,
+        0
+      ],
+      "oldSha": "10cb630df1abf8ccaaed635a07b263aef49f3cb9",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep006-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "size": 4238,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "order": 8,
+      "logicalEpisode": [
+        6,
+        1
+      ],
+      "oldSha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep007.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f196084fa52b869457ca75d19e46e6c14947f43",
+      "size": 13580,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/4f196084fa52b869457ca75d19e46e6c14947f43",
+      "order": 9,
+      "logicalEpisode": [
+        7,
+        0
+      ],
+      "oldSha": "4f196084fa52b869457ca75d19e46e6c14947f43",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep007-2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "size": 11245,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "order": 10,
+      "logicalEpisode": [
+        7,
+        2
+      ],
+      "oldSha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep008.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "size": 8523,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/95f5bbfe99fcb1fbdcbe501f06c4d359e389c746",
+      "order": 11,
+      "logicalEpisode": [
+        8,
+        0
+      ],
+      "oldSha": "096a0e40be9619081134558fa7589bb99647394c",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep007-3.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "size": 8326,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/3fb59b53468262d49f08604ac4df3fda7fd4f3fb",
+      "order": 12,
+      "logicalEpisode": [
+        8,
+        1
+      ],
+      "oldSha": "a237778a2277bd0f9874d23de6bf8c30c302c992",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep008-3.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "size": 8448,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "order": 13,
+      "logicalEpisode": [
+        8,
+        2
+      ],
+      "oldSha": "dacd1d483528b7cad7f135fd00c05659dee4b9d7",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep008-4.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "size": 5677,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "order": 14,
+      "logicalEpisode": [
+        8,
+        3
+      ],
+      "oldSha": "62e814d77c4cd8c9f0a5521b6019f05482fe9d92",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep009.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "size": 11006,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/ce1649f47e9c98f10b264163292538630e6ee57a",
+      "order": 15,
+      "logicalEpisode": [
+        9,
+        0
+      ],
+      "oldSha": "ce1649f47e9c98f10b264163292538630e6ee57a",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep009-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c283341ecf9c64793669944de24a9f13fce4c656",
+      "size": 11305,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/c283341ecf9c64793669944de24a9f13fce4c656",
+      "order": 16,
+      "logicalEpisode": [
+        9,
+        1
+      ],
+      "oldSha": "b7dd2a1c7d8416d66105cb54890fb7e8f8869f92",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep010.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "size": 14535,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/5d1ad9c5dc0d6c68787fc7909b9f91d695836438",
+      "order": 17,
+      "logicalEpisode": [
+        10,
+        0
+      ],
+      "oldSha": "a44600ef658df815edce155d8df23df6d67c377d",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep011.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "size": 10882,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/f40b22704169fc0e3ffa9bcd5d01be0dd5abdb69",
+      "order": 18,
+      "logicalEpisode": [
+        11,
+        0
+      ],
+      "oldSha": "83929db005c2ab559c0d9cf3f083a266c2393744",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep012.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "size": 11903,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/832137c8406e05a38d1f8ac35ad3c2d2b3379ea0",
+      "order": 19,
+      "logicalEpisode": [
+        12,
+        0
+      ],
+      "oldSha": "77f8f9d019ca01d927dcb576141f0f594f2d470d",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep012-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "size": 12124,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/2548b45187f74f2383ca0f25753cf4b6ec9c8415",
+      "order": 20,
+      "logicalEpisode": [
+        12,
+        1
+      ],
+      "oldSha": "e003ea2b9400e41d57d0620d5f63b2f5ce8cc27f",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep013.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "size": 10232,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "order": 21,
+      "logicalEpisode": [
+        13,
+        0
+      ],
+      "oldSha": "80676a45521c5a5bc5aa00caebd7cd3f2ef5c30e",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep013-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "size": 5117,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/ba6c66debdbe0aaaa348a14807658d496751b735",
+      "order": 22,
+      "logicalEpisode": [
+        13,
+        1
+      ],
+      "oldSha": "ba6c66debdbe0aaaa348a14807658d496751b735",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep013-2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "size": 11513,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "order": 23,
+      "logicalEpisode": [
+        13,
+        2
+      ],
+      "oldSha": "ed6270fd7e75bd3a5c51851ae317ac33148f1177",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep014.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "size": 13066,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/aa77c4f46faa72408fe5bd9e2284442183e725b5",
+      "order": 24,
+      "logicalEpisode": [
+        14,
+        0
+      ],
+      "oldSha": "e4ed235a819d1e55c63b72ca3aac9e4fa7ba5cc4",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep015.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47144012e586c10ac06f6e8600608b3d38480162",
+      "size": 11753,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/47144012e586c10ac06f6e8600608b3d38480162",
+      "order": 25,
+      "logicalEpisode": [
+        15,
+        0
+      ],
+      "oldSha": "262e7d2511a262c4b38a71fc3fb2cd38d62113f3",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep015-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "size": 3522,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "order": 26,
+      "logicalEpisode": [
+        15,
+        1
+      ],
+      "oldSha": "5cc6fc3157b71eb36e93f624c1d2ae1d9c166fe8",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep016.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "size": 11623,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "order": 27,
+      "logicalEpisode": [
+        16,
+        0
+      ],
+      "oldSha": "a06bd5b172b6f524e596aa35b4a13e757e06c37a",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep016-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bd698c171a588618279f7eb3dc0466fb040436a",
+      "size": 11465,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/6bd698c171a588618279f7eb3dc0466fb040436a",
+      "order": 28,
+      "logicalEpisode": [
+        16,
+        1
+      ],
+      "oldSha": null,
+      "status": "added"
+    },
+    {
+      "path": "manuscript/ep017.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "size": 12794,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/79830af50a015b94ae4ed33b918210746db0d59f",
+      "order": 29,
+      "logicalEpisode": [
+        17,
+        0
+      ],
+      "oldSha": "79830af50a015b94ae4ed33b918210746db0d59f",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep018.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "size": 10623,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "order": 30,
+      "logicalEpisode": [
+        18,
+        0
+      ],
+      "oldSha": "f6bd84e5659d0634bb2d74393252829238b6ac85",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep019.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "size": 13947,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/037c120a636f42f51e9ac0184ccae6376f7d0298",
+      "order": 31,
+      "logicalEpisode": [
+        19,
+        0
+      ],
+      "oldSha": "9408e89430a3aa5803fbead797b268f23112eb80",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep019-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "size": 11537,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/114cb9b0b0d6af4062203729b4a607f7e09d7c29",
+      "order": 32,
+      "logicalEpisode": [
+        19,
+        1
+      ],
+      "oldSha": null,
+      "status": "added"
+    },
+    {
+      "path": "manuscript/ep019-2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "size": 11249,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/b85311e7c56942b7f5ccb6383421b5f4a5b16314",
+      "order": 33,
+      "logicalEpisode": [
+        19,
+        2
+      ],
+      "oldSha": null,
+      "status": "added"
+    },
+    {
+      "path": "manuscript/ep020.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "size": 11546,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/c2ac1337e79a73a8b9ff4cc29ccbbe0b73573665",
+      "order": 34,
+      "logicalEpisode": [
+        20,
+        0
+      ],
+      "oldSha": "20b7424aa7f598b6f0665c6d38069574b19c87e9",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep020-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "size": 3511,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "order": 35,
+      "logicalEpisode": [
+        20,
+        1
+      ],
+      "oldSha": "4295ea77cb0b0974a98fb3bf02c248b93b8264b1",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep021.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "size": 11052,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/f2db8529c70cd80285a83f833822cf6229e3fd70",
+      "order": 36,
+      "logicalEpisode": [
+        21,
+        0
+      ],
+      "oldSha": "8d8113aac14e7ed8700148bada3033baacb1f597",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep021-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "size": 7787,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "order": 37,
+      "logicalEpisode": [
+        21,
+        1
+      ],
+      "oldSha": "b56406a650ad9b3f7b869a40158f7b3b807a4592",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep022.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "size": 11911,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "order": 38,
+      "logicalEpisode": [
+        22,
+        0
+      ],
+      "oldSha": "610cf921bec6c2026b54b7dd34175b914ed1e2a2",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep022-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "size": 8544,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/43f06600315140bbcac002991c7f17aa30519c8d",
+      "order": 39,
+      "logicalEpisode": [
+        22,
+        1
+      ],
+      "oldSha": "43f06600315140bbcac002991c7f17aa30519c8d",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep023.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "size": 11017,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "order": 40,
+      "logicalEpisode": [
+        23,
+        0
+      ],
+      "oldSha": "aeeaefce7794800a453cf168eae8e2802b0fd749",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep024.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "size": 11427,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/2c106193f288968b9be7903349d8610a8ee5873c",
+      "order": 41,
+      "logicalEpisode": [
+        24,
+        0
+      ],
+      "oldSha": "2c106193f288968b9be7903349d8610a8ee5873c",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep024-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "size": 12180,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/50284dd101e6a0f63c61439fd559b2137844403a",
+      "order": 42,
+      "logicalEpisode": [
+        24,
+        1
+      ],
+      "oldSha": "50284dd101e6a0f63c61439fd559b2137844403a",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep025.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "size": 11171,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/838a27a510a66d087c9605b662678ca650d3c348",
+      "order": 43,
+      "logicalEpisode": [
+        25,
+        0
+      ],
+      "oldSha": "838a27a510a66d087c9605b662678ca650d3c348",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep025-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "size": 11178,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "order": 44,
+      "logicalEpisode": [
+        25,
+        1
+      ],
+      "oldSha": "4f8b93b3b70d2ef9ed445720c7bf0d7150d68d0b",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep026.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "size": 13475,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "order": 45,
+      "logicalEpisode": [
+        26,
+        0
+      ],
+      "oldSha": "cad1e4b5afc21eadd8e18caa1ab32d309c6b42a8",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep027.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f2109ab5b263242430395bf10bb2a7940253a29",
+      "size": 11868,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/7f2109ab5b263242430395bf10bb2a7940253a29",
+      "order": 46,
+      "logicalEpisode": [
+        27,
+        0
+      ],
+      "oldSha": "0117af584cf9b61397a3198fdad20ac85dec3797",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep028.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "size": 11401,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/d27a2ae1afb8506d1360812785e51354492b9fd6",
+      "order": 47,
+      "logicalEpisode": [
+        28,
+        0
+      ],
+      "oldSha": "079d291ef3b8c842491edeb80fad6a0a16c1903b",
+      "status": "modified"
+    },
+    {
+      "path": "manuscript/ep029.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "size": 11794,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "order": 48,
+      "logicalEpisode": [
+        29,
+        0
+      ],
+      "oldSha": "6a5fb6fe7b67dfc593d7f7cd1dc49cf519fd7ad9",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep030.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "size": 12022,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "order": 49,
+      "logicalEpisode": [
+        30,
+        0
+      ],
+      "oldSha": "6fab583d81d527a07c4543d2e317a9dbe8f08ca2",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep030-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "size": 8209,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "order": 50,
+      "logicalEpisode": [
+        30,
+        1
+      ],
+      "oldSha": "3b6739a1d14a81f7e945da50f25c254e7a210db7",
+      "status": "unchanged"
+    },
+    {
+      "path": "manuscript/ep030-2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "size": 9705,
+      "url": "https://api.github.com/repos/jbseo-commits/lost-dreams-novel/git/blobs/ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "order": 51,
+      "logicalEpisode": [
+        30,
+        2
+      ],
+      "oldSha": "ea9d4f99ad22b2a3be0330749abc5b1cd6003b05",
+      "status": "unchanged"
+    }
+  ]
+}

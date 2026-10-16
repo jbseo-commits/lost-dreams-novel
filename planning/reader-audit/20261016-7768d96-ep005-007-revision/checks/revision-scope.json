@@ -1,0 +1,36 @@
+{
+  "base": "7768d963813e5bad223261a10e0e9ca803a34b29",
+  "revision": 3,
+  "changed": [
+    {
+      "path": "manuscript/ep005.md",
+      "beforeChars": 5492,
+      "afterChars": 5065,
+      "beforeLines": 853,
+      "afterLines": 759,
+      "sha": "b8495c833def19bcedb9dfb2069d3224ef57b987"
+    },
+    {
+      "path": "manuscript/ep006.md",
+      "beforeChars": 5330,
+      "afterChars": 4489,
+      "beforeLines": 901,
+      "afterLines": 725,
+      "sha": "4e91d217fac65d3423961fb5868d247f9de63bae"
+    },
+    {
+      "path": "manuscript/ep007.md",
+      "beforeChars": 4292,
+      "afterChars": 3053,
+      "beforeLines": 753,
+      "afterLines": 545,
+      "sha": "4937223e3f1535e53717bfc1b4507733eea72f65"
+    }
+  ],
+  "unchangedFiles": 48,
+  "bumperEp006_1Unchanged": true,
+  "independentReview": "3차6화변경 접합문제없음. 미수용은지원재권유·주먹·위험경고에남음.",
+  "finalFullFreshReread": true,
+  "reason": "최종3차를새일반독자에게전독확인,6~7B/7-2A. 이전초안C는보존.",
+  "finalRereadRole": "일반웹소설독자1명/1~7-2/미독없음"
+}

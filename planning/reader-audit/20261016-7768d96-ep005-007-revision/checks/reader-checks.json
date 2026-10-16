@@ -1,0 +1,592 @@
+{
+  "kind": "새로운 독립 에이전트 5개의 보충 독서 기록. 기존 6명 105화 검수와 별개.",
+  "filesInOrder": [
+    "ep001.md",
+    "ep002.md",
+    "ep003.md",
+    "ep004.md",
+    "ep004-1.md",
+    "ep005.md",
+    "ep006.md",
+    "ep006-1.md",
+    "ep007.md",
+    "ep007-2.md"
+  ],
+  "rounds": [
+    {
+      "version": 1,
+      "sourceFolder": "read-test-v1",
+      "readers": [
+        {
+          "id": "reread_fast_to007",
+          "role": "빠른 전개",
+          "choices": [
+            "A",
+            "A",
+            "B",
+            "A",
+            "A",
+            "A",
+            "B",
+            "B",
+            "A",
+            "B"
+          ],
+          "firstC": null,
+          "reason": "도윤과 실험은 궁금했고 6화 반복 문답에서는 쉬고 싶었다. 7화 송출탑 충동은 다음 클릭을 만들었지만 7-2에서 자료와 고백이 미뤄져 B.",
+          "workReading": false,
+          "records": [
+            {
+              "file": "ep001.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep002.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep003.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep004.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep004-1.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep005.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep006.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep006-1.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep007.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep007-2.md",
+              "judgment": "B",
+              "workReading": false
+            }
+          ],
+          "unread": []
+        },
+        {
+          "id": "reread_general_to007",
+          "role": "일반 웹소설",
+          "choices": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B",
+            "B",
+            "C",
+            "C"
+          ],
+          "firstC": {
+            "file": "ep007.md",
+            "line": 517,
+            "quote": "그럼 찾으면 꼭 해야겠네요.",
+            "workFromLine": 518
+          },
+          "reason": "미라·지우·도윤·간담회 뒤 또 반박받는 흐름에서 이탈. 7-2 누수와 생활 농담은 재유입 가능성이 있지만 최초 C 유지.",
+          "workReadingAfterFirstC": true,
+          "records": [
+            {
+              "file": "ep001.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep002.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep003.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep004.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep004-1.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep005.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep006.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep006-1.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep007.md",
+              "judgment": "C",
+              "workReading": false
+            },
+            {
+              "file": "ep007-2.md",
+              "judgment": "C",
+              "workReading": true
+            }
+          ],
+          "unread": []
+        }
+      ],
+      "sourceFiles": [
+        {
+          "file": "ep001.md",
+          "lines": 534,
+          "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325"
+        },
+        {
+          "file": "ep002.md",
+          "lines": 587,
+          "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8"
+        },
+        {
+          "file": "ep003.md",
+          "lines": 559,
+          "sha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf"
+        },
+        {
+          "file": "ep004.md",
+          "lines": 771,
+          "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841"
+        },
+        {
+          "file": "ep004-1.md",
+          "lines": 287,
+          "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31"
+        },
+        {
+          "file": "ep005.md",
+          "lines": 759,
+          "sha": "b8495c833def19bcedb9dfb2069d3224ef57b987"
+        },
+        {
+          "file": "ep006.md",
+          "lines": 743,
+          "sha": "27aa58ad50dd77ead0dba2009f696ee0f17e0cd0"
+        },
+        {
+          "file": "ep006-1.md",
+          "lines": 209,
+          "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c"
+        },
+        {
+          "file": "ep007.md",
+          "lines": 601,
+          "sha": "d13cb1c996a910c9a57995041fdf930b2bfbd717"
+        },
+        {
+          "file": "ep007-2.md",
+          "lines": 413,
+          "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f"
+        }
+      ]
+    },
+    {
+      "version": 2,
+      "sourceFolder": "read-test-v2",
+      "readers": [
+        {
+          "id": "final_fast_to007",
+          "role": "빠른 전개",
+          "choices": [
+            "A",
+            "A",
+            "B",
+            "A",
+            "A",
+            "A",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "firstC": null,
+          "reason": "회의·신고서·라면은 재미있다. 6~7 재가입 문답의 반복과 7-2에서 송출탑 생각·자료가 미뤄지는 끝은 쉬고 싶다.",
+          "workReading": false,
+          "records": [
+            {
+              "file": "ep001.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep002.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep003.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep004.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep004-1.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep005.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep006.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep006-1.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep007.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep007-2.md",
+              "judgment": "B",
+              "workReading": false
+            }
+          ],
+          "unread": []
+        },
+        {
+          "id": "final_general_to007",
+          "role": "일반 웹소설",
+          "choices": [
+            "A",
+            "A",
+            "B",
+            "A",
+            "A",
+            "B",
+            "C",
+            "B",
+            "C",
+            "B"
+          ],
+          "firstC": {
+            "file": "ep006.md",
+            "line": 573,
+            "quote": "그게 꿈이었잖아요. 그럼 해야 하는 거 아니에요?",
+            "workFromLine": 574
+          },
+          "reason": "3화의 직업화 질문을 재호와 다시 오래 하는 느낌에서 이탈. 이후 딸과 빵·누수 농담은 재미있어도 자발적 재유입 없음.",
+          "workReadingAfterFirstC": true,
+          "records": [
+            {
+              "file": "ep001.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep002.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep003.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep004.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep004-1.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep005.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep006.md",
+              "judgment": "C",
+              "workReading": false
+            },
+            {
+              "file": "ep006-1.md",
+              "judgment": "B",
+              "workReading": true
+            },
+            {
+              "file": "ep007.md",
+              "judgment": "C",
+              "workReading": true
+            },
+            {
+              "file": "ep007-2.md",
+              "judgment": "B",
+              "workReading": true
+            }
+          ],
+          "unread": []
+        }
+      ],
+      "sourceFiles": [
+        {
+          "file": "ep001.md",
+          "lines": 534,
+          "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325"
+        },
+        {
+          "file": "ep002.md",
+          "lines": 587,
+          "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8"
+        },
+        {
+          "file": "ep003.md",
+          "lines": 559,
+          "sha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf"
+        },
+        {
+          "file": "ep004.md",
+          "lines": 771,
+          "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841"
+        },
+        {
+          "file": "ep004-1.md",
+          "lines": 287,
+          "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31"
+        },
+        {
+          "file": "ep005.md",
+          "lines": 759,
+          "sha": "b8495c833def19bcedb9dfb2069d3224ef57b987"
+        },
+        {
+          "file": "ep006.md",
+          "lines": 743,
+          "sha": "7f99e879e33270bae8b242980c99ad59a233b05d"
+        },
+        {
+          "file": "ep006-1.md",
+          "lines": 209,
+          "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c"
+        },
+        {
+          "file": "ep007.md",
+          "lines": 545,
+          "sha": "4937223e3f1535e53717bfc1b4507733eea72f65"
+        },
+        {
+          "file": "ep007-2.md",
+          "lines": 413,
+          "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f"
+        }
+      ]
+    },
+    {
+      "version": 3,
+      "sourceFolder": "read-test-v3",
+      "readers": [
+        {
+          "id": "revision3_general_to007",
+          "role": "일반 웹소설",
+          "choices": [
+            "A",
+            "A",
+            "B",
+            "A",
+            "A",
+            "A",
+            "B",
+            "B",
+            "B",
+            "A"
+          ],
+          "firstC": null,
+          "workReading": false,
+          "reason": "6~7에서 같은 답답함에 오래 머무는 피로는 남음. 7-2의 오판을 함께 고치고 생활 농담을 나누는 관계에서 다시 다음 클릭 욕구가 생김.",
+          "evidence": [
+            {
+              "file": "ep006.md",
+              "line": 501,
+              "quote": "그런데 왜 돌아가요?",
+              "reaction": "돌아가는 사람을 계속 납득 못 하는 반복이 피로하다."
+            },
+            {
+              "file": "ep007.md",
+              "line": 331,
+              "quote": "더 할 수도 있었잖아.",
+              "reaction": "같은 답답함에 오래 머문다."
+            },
+            {
+              "file": "ep007-2.md",
+              "line": 183,
+              "quote": "다음",
+              "reaction": "틀려도 함께 고치는 둘의 관계가 좋다."
+            },
+            {
+              "file": "ep007-2.md",
+              "line": 293,
+              "quote": "컵라면 먹어요",
+              "reaction": "농담 때문에 다음 만남도 읽고 싶다."
+            }
+          ],
+          "records": [
+            {
+              "file": "ep001.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep002.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep003.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep004.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep004-1.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep005.md",
+              "judgment": "A",
+              "workReading": false
+            },
+            {
+              "file": "ep006.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep006-1.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep007.md",
+              "judgment": "B",
+              "workReading": false
+            },
+            {
+              "file": "ep007-2.md",
+              "judgment": "A",
+              "workReading": false
+            }
+          ],
+          "unread": []
+        }
+      ],
+      "sourceFiles": [
+        {
+          "file": "ep001.md",
+          "lines": 534,
+          "sha": "a1bed3e83d28c5070a3c80f0635d25adc75a8325"
+        },
+        {
+          "file": "ep002.md",
+          "lines": 587,
+          "sha": "dcbe060fe6b87c6ce65e6c0275ee09806b5956d8"
+        },
+        {
+          "file": "ep003.md",
+          "lines": 559,
+          "sha": "f4ba4a58f632b10b31c6c6e36b473f628cf0bcaf"
+        },
+        {
+          "file": "ep004.md",
+          "lines": 771,
+          "sha": "c8c5fb539205c2668dc30cbebf489cfa91e52841"
+        },
+        {
+          "file": "ep004-1.md",
+          "lines": 287,
+          "sha": "1af1d9b7fb86ff2a1079a337543ba3caa5928b31"
+        },
+        {
+          "file": "ep005.md",
+          "lines": 759,
+          "sha": "b8495c833def19bcedb9dfb2069d3224ef57b987"
+        },
+        {
+          "file": "ep006.md",
+          "lines": 725,
+          "sha": "4e91d217fac65d3423961fb5868d247f9de63bae"
+        },
+        {
+          "file": "ep006-1.md",
+          "lines": 209,
+          "sha": "b53e3497cb2fa1ea50c3fb1c8fb6f563be2aca1c"
+        },
+        {
+          "file": "ep007.md",
+          "lines": 545,
+          "sha": "4937223e3f1535e53717bfc1b4507733eea72f65"
+        },
+        {
+          "file": "ep007-2.md",
+          "lines": 413,
+          "sha": "e0dc376ae92e8a543cf5ae66399c5fd5fa2d535f"
+        }
+      ]
+    }
+  ],
+  "finalRevision": 3,
+  "finalFreshReread": true,
+  "note": "각 판본과 최초C를그대로보존. 서로다른독자의차이를개선효과나실제이탈률로환산하지않음.",
+  "modelInfo": "각호출요청 gpt-6.1-sol/high. 실사용모델메타데이터별도미확인.",
+  "finalRereadRole": "일반 웹소설 독자 1명"
+}

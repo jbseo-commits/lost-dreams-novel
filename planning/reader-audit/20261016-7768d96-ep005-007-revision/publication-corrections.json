@@ -1,0 +1,13 @@
+[
+  {
+    "file": "checks/reader-checks.json",
+    "field": "kind",
+    "from": "새로운 독립 에이전트 4개의 보충 독서 기록. 기존 6명 105화 검수와 별개.",
+    "to": "새로운 독립 에이전트 5개의 보충 독서 기록. 기존 6명 105화 검수와 별개.",
+    "reason": "실제 독립 호출은 판본1 2명+판본2 2명+판본3 1명=5명. 최상위 설명의 잔존 오타 정정.",
+    "judgmentsChanged": false,
+    "sourceVersionsChanged": false,
+    "firstCChanged": false,
+    "originalPreserved": true
+  }
+]
