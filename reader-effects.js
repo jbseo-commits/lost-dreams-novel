@@ -15,6 +15,7 @@ const ReadingEffects=(()=>{
  const paths=()=>svg('<path d="M128 90 L45 26 M128 90 L219 31 M128 90 L60 130 M128 90 L215 130"/><circle cx="128" cy="90" r="7"/><circle cx="45" cy="26" r="5"/><circle cx="219" cy="31" r="5"/><circle cx="60" cy="130" r="5"/><circle cx="215" cy="130" r="5"/>');
  const walk=()=>svg('<path d="M126 115 L126 31 M126 115 L37 86 M126 115 L220 87 M126 115 L172 145" opacity=".5"/><rect x="115" y="106" width="22" height="18"/><path d="M114 106 L126 95 L138 106"/><circle cx="126" cy="25" r="5"/><circle cx="32" cy="85" r="5"/><circle cx="225" cy="85" r="5"/><text x="126" y="12" fill="currentColor" stroke="none" text-anchor="middle" font-size="12">병원 · 8분</text><text x="10" y="68" fill="currentColor" stroke="none" font-size="12">시장 · 3분</text><text x="177" y="68" fill="currentColor" stroke="none" font-size="12">약국 · 1분</text><text x="181" y="147" fill="currentColor" stroke="none" font-size="12">위층 · 미경 씨</text>','0 0 285 175');
  function life(id){
+  const revised=window.ReaderScenes?.inline(id);if(revised!=null)return revised;
   switch(id){
    case 'ldx-meal':return '<div class="ldx-meal">'+rings()+'</div>';
    case 'bakesign':return '<div class="ldx-sign"><del>매일 엽니다</del><b>일요일은 쉽니다</b></div>';

@@ -1363,7 +1363,8 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 .invitation-recipient{display:block;border-top:1px solid #eee9dc30;padding-top:16px;font:14px/1.8 system-ui,"Noto Sans KR",sans-serif;color:#eee9dc}
 @media(max-width:600px){body.ep8 .sys.invitation{margin:32px 0;padding:26px 22px}}
 </style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B2%88%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B2%88%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"><link rel="stylesheet" href="reader-scenes.css">
+</head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><button class="pick" id="pick" aria-haspopup="true" aria-expanded="false" aria-controls="pickMenu"><b id="pickNo">EP 01</b><span class="pk-t" id="pickT">오늘 밤의 행복은 12토큰입니다</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ldx-controls"><button type="button" id="fxToggle" aria-pressed="true"><b id="fxState">연출 켜짐</b></button><button type="button" id="soundToggle" aria-pressed="false">생활음 꺼짐</button><span class="ldx-position" aria-label="읽은 위치"><b id="sync">0%</b></span><span hidden><b id="link">ONLINE</b><b id="token"></b></span></div></header><div class="progress"></div>
 <nav class="nav"><small>MEMORY INDEX</small><div id="nav"></div></nav><div class="pick-scrim" id="pickScrim"></div><nav class="pick-menu" id="pickMenu" aria-label="화 선택"><small>MEMORY INDEX · 전체 <span id="pickTotal"></span>화</small><ol id="pickList"></ol></nav>
@@ -1920,6 +1921,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <p class="eh2v-line" data-t="2.7">깨어났을 때 기분만 남음</p>
 </div></div></div>
 <script src="reader-effects.js"></script>
+<script src="reader-scenes.js"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
@@ -2333,6 +2335,7 @@ pickList.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
 new MutationObserver(syncPick).observe(titleEl,{childList:true});
 function route(){const m=location.hash.match(/^#ep(\d+(?:-\d+)*)$/);if(m){const k=EPALIAS[m[1]]||m[1],n=/-/.test(k)?(D[k]?k:MAX):Math.min(MAX,+m[1]);if(n===1){activateStaticEp1();hero.style.display='none';scrollTo(0,0)}else openEp(n)}}
 addEventListener('hashchange',route);
+ReaderScenes.install(D,RUN);
 ReadingEffects.init();
 if(location.hash==='#reader'){activateStaticEp1()}else route();
 // 표지 아래 미리 깔린 1화는 옛 원고 사본이라 모노 표기·문장이 현재 원고와 다르다. 표지에서 스크롤로 내려와 읽어도 같은 원고·같은 모노 표기가 보이게 현재 원고로 바꿔 둔다.
