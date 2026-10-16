@@ -1922,13 +1922,14 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 </div></div></div>
 <script src="reader-effects.js"></script>
 <script src="reader-scenes.js"></script>
+<script src="reader-bumper-scenes.js"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,EPMAP={'4-2':'003-1','8-1':'007-3','8-2':'008-3','8-3':'008-4'},EPALIAS={'3-1':'4-2','8-2-1':'8-1','8-4':'8-3'},epFile=k=>EPMAP[String(k)]||String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=70,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={2:['2-1'],4:['4-1','4-2'],6:['6-1'],7:['7-2'],8:['8-1','8-2','8-3'],9:['9-1'],11:['11-1'],12:['12-1'],13:['13-1','13-2'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={2:['2-1'],4:['4-1','4-2'],6:['6-1'],7:['7-2'],8:['8-1','8-2','8-3'],9:['9-1'],11:['11-1'],12:['12-1'],13:['13-1','13-2'],15:['15-1'],16:['16-1'],19:['19-1','19-2'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:"이상하게 좋다.",sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -2302,6 +2303,7 @@ function runReauth(e){const f=runReauth,el=$('reauth'),bar=$('raYouBar'),val=$('
 function rejectConsent(){closeSp()}
 function acceptConsent(){consentCardEl.classList.add('danger');consentCardEl.querySelector('h3').textContent='서인은 승인했다.';consentCardEl.querySelector('p').textContent='동의가 완료되었습니다.';const button=consentCardEl.querySelector('.accept');button.textContent='승인 완료';button.disabled=true;state.timers.push(setTimeout(()=>closeSp(),3200))}
 function toastMsg(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2200)}
+ReaderBumperScenes.install(D,RUN);
 ORDER.forEach(i=>{let b=document.createElement('button');b.className='ep';b.textContent=epNo(i)+' · MEMORY';b.onclick=()=>openEp(i);navEl.appendChild(b)})
 addEventListener('scroll',()=>{if(state.ep&&performance.now()-(state.openedAt||0)>900&&scrollY>40)state.userScrolled=true;const h=document.documentElement,p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);document.documentElement.style.setProperty('--p',Math.min(100,p*100));const d=D[state.ep];if(d){sync.textContent=Math.round(Math.min(1,p)*100)+'%';epAtmosphere(p);checkAnchor(p)}},{passive:true});
 nextBtn.onclick=()=>openEp(2); // 표지 입장 없이 스크롤로 1화 끝에 와도 다음 화로 넘어가게
