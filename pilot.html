@@ -1363,7 +1363,8 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 .invitation-recipient{display:block;border-top:1px solid #eee9dc30;padding-top:16px;font:14px/1.8 system-ui,"Noto Sans KR",sans-serif;color:#eee9dc}
 @media(max-width:600px){body.ep8 .sys.invitation{margin:32px 0;padding:26px 22px}}
 </style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B2%88%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B2%88%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"><link rel="stylesheet" href="reader-scenes.css">
+</head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><button class="pick" id="pick" aria-haspopup="true" aria-expanded="false" aria-controls="pickMenu"><b id="pickNo">EP 01</b><span class="pk-t" id="pickT">오늘 밤의 행복은 12토큰입니다</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ldx-controls"><button type="button" id="fxToggle" aria-pressed="true"><b id="fxState">연출 켜짐</b></button><button type="button" id="soundToggle" aria-pressed="false">생활음 꺼짐</button><span class="ldx-position" aria-label="읽은 위치"><b id="sync">0%</b></span><span hidden><b id="link">ONLINE</b><b id="token"></b></span></div></header><div class="progress"></div>
 <nav class="nav"><small>MEMORY INDEX</small><div id="nav"></div></nav><div class="pick-scrim" id="pickScrim"></div><nav class="pick-menu" id="pickMenu" aria-label="화 선택"><small>MEMORY INDEX · 전체 <span id="pickTotal"></span>화</small><ol id="pickList"></ol></nav>
@@ -1920,12 +1921,14 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <p class="eh2v-line" data-t="2.7">깨어났을 때 기분만 남음</p>
 </div></div></div>
 <script src="reader-effects.js"></script>
+<script src="reader-scenes.js"></script>
+<script src="reader-private-scenes.js"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,EPMAP={'4-2':'003-1','8-1':'007-3','8-2':'008-3','8-3':'008-4'},EPALIAS={'3-1':'4-2','8-2-1':'8-1','8-4':'8-3'},epFile=k=>EPMAP[String(k)]||String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
-const MAX=70,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
+const MAX=new URLSearchParams(location.search).get('review')==='draft'?105:70,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
 const BUMP={2:['2-1'],4:['4-1','4-2'],6:['6-1'],7:['7-2'],8:['8-1','8-2','8-3'],9:['9-1'],11:['11-1'],12:['12-1'],13:['13-1','13-2'],15:['15-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
@@ -2300,6 +2303,7 @@ function runReauth(e){const f=runReauth,el=$('reauth'),bar=$('raYouBar'),val=$('
 function rejectConsent(){closeSp()}
 function acceptConsent(){consentCardEl.classList.add('danger');consentCardEl.querySelector('h3').textContent='서인은 승인했다.';consentCardEl.querySelector('p').textContent='동의가 완료되었습니다.';const button=consentCardEl.querySelector('.accept');button.textContent='승인 완료';button.disabled=true;state.timers.push(setTimeout(()=>closeSp(),3200))}
 function toastMsg(t){toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),2200)}
+if(new URLSearchParams(location.search).get('review')==='pr84'){ReaderPrivateScenes.install(D,RUN,ORDER)}
 ORDER.forEach(i=>{let b=document.createElement('button');b.className='ep';b.textContent=epNo(i)+' · MEMORY';b.onclick=()=>openEp(i);navEl.appendChild(b)})
 addEventListener('scroll',()=>{if(state.ep&&performance.now()-(state.openedAt||0)>900&&scrollY>40)state.userScrolled=true;const h=document.documentElement,p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);document.documentElement.style.setProperty('--p',Math.min(100,p*100));const d=D[state.ep];if(d){sync.textContent=Math.round(Math.min(1,p)*100)+'%';epAtmosphere(p);checkAnchor(p)}},{passive:true});
 nextBtn.onclick=()=>openEp(2); // 표지 입장 없이 스크롤로 1화 끝에 와도 다음 화로 넘어가게
@@ -2320,7 +2324,7 @@ enterDream.addEventListener('click',e=>{
 });
 // 화 선택: 제목은 manifest.json에서, 없으면 원고 첫 줄에서 가져온다
 const pick=$('pick'),pickMenu=$('pickMenu'),pickScrim=$('pickScrim'),pickList=$('pickList'),pickTitles={};
-$('pickTotal').textContent=MAX;
+$('pickTotal').textContent=new URLSearchParams(location.search).has('review')?ORDER.length:MAX;
 pickList.innerHTML=ORDER.map(k=>'<li><button data-n="'+k+'"><i>EP '+epNo(k)+'</i><span>제'+k+'화</span></button></li>').join('');
 function setPickTitle(n,t){if(!t)return;pickTitles[n]=t;const b=pickList.querySelector('[data-n="'+n+'"] span');if(b)b.textContent=t;if(n===(state.ep||1))$('pickT').textContent=t}
 fetch('manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(m=>{(m.manuscript||[]).forEach(e=>{const m=e.path.match(/ep(\d+(?:-\d+)?)\.md$/);if(m)setPickTitle(Object.keys(EPMAP).find(k=>EPMAP[k]===m[1])||epKey(m[1]),e.title.replace(/^제[\d-]+화\.\s*/,''))});ORDER.filter(i=>!pickTitles[i]).forEach(i=>load(i).then(md=>setPickTitle(i,md.split('\n')[0].replace(/^#\s*/,'').replace(/^제[\d-]+화\.\s*/,''))).catch(()=>{}))}).catch(()=>{ORDER.forEach(i=>load(i).then(md=>setPickTitle(i,md.split('\n')[0].replace(/^#\s*/,'').replace(/^제[\d-]+화\.\s*/,''))).catch(()=>{}))});
@@ -2333,6 +2337,8 @@ pickList.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
 new MutationObserver(syncPick).observe(titleEl,{childList:true});
 function route(){const m=location.hash.match(/^#ep(\d+(?:-\d+)*)$/);if(m){const k=EPALIAS[m[1]]||m[1],n=/-/.test(k)?(D[k]?k:MAX):Math.min(MAX,+m[1]);if(n===1){activateStaticEp1();hero.style.display='none';scrollTo(0,0)}else openEp(n)}}
 addEventListener('hashchange',route);
+ReaderScenes.install(D,RUN);
+if(new URLSearchParams(location.search).has('review')){$('pickT').textContent='未公開作業本'.replace('未公開作業本','미공개 작업본')}
 ReadingEffects.init();
 if(location.hash==='#reader'){activateStaticEp1()}else route();
 // 표지 아래 미리 깔린 1화는 옛 원고 사본이라 모노 표기·문장이 현재 원고와 다르다. 표지에서 스크롤로 내려와 읽어도 같은 원고·같은 모노 표기가 보이게 현재 원고로 바꿔 둔다.
