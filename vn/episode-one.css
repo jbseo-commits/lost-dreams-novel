@@ -2,7 +2,7 @@
 .stage.episode-one{overflow:clip}
 .episode-one .portrait-wrap,.episode-one .cast-rail,.episode-one .motif-stage,.episode-one .direction-card{display:none!important;pointer-events:none!important}
 .episode-one .scene-layer{transition:opacity 1.1s ease,transform 7s ease}
-.episode-one .stage-image[data-episode-night="true"] .scene-layer{filter:brightness(.62) saturate(.68) hue-rotate(12deg)}
+.episode-one .stage-image[data-episode-night="true"] .scene-layer{filter:saturate(.85)}
 .episode-one .stage-vignette{z-index:4;background:linear-gradient(180deg,rgba(0,5,10,.2),transparent 36%,rgba(0,5,10,.35) 70%,rgba(0,5,10,.78)),radial-gradient(ellipse at 50% 35%,transparent 30%,rgba(0,4,8,.25))}
 .episode-one .place-ribbon{z-index:7;font-family:Batang,바탕,serif;font-size:12px;letter-spacing:.06em}
 .episode-one .story-box{background:linear-gradient(110deg,rgba(5,16,23,.94),rgba(7,18,25,.87));border:1px solid rgba(185,206,194,.24);box-shadow:0 10px 45px rgba(0,0,0,.26)}
@@ -45,6 +45,14 @@
 .demo-mode-note{color:#a9bdb3;line-height:1.9;font-size:13px}.demo-start-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.demo-start-actions button{min-height:48px;padding:13px 20px;border:1px solid rgba(185,206,194,.35);background:#19332f;color:#e5e5d4;border-radius:3px}.demo-start-actions button:disabled{opacity:.5;cursor:wait}.demo-start-actions button+button{background:transparent}
 .episode-one .neural-stage{z-index:5}.episode-one .hud{z-index:8}.episode-one .nav-tools{z-index:8}.episode-one .story-box{z-index:7}
 .episode-one .end-screen{z-index:12}
+.episode-one .reading-page .story-text{line-height:1.65}
+.optional-observation{width:100%;font-size:12px;color:#b5c6b9}
+.optional-observation summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:9px;list-style:none;color:#b5c6b9}
+.optional-observation summary::before{content:'＋';color:#d9bd8e}
+.optional-observation[open] summary::before{content:'−'}
+.optional-observation summary::-webkit-details-marker{display:none}
+.optional-observation summary:focus-visible{outline:2px solid #d9bd8e;outline-offset:2px}
+.optional-observation .choice-button{margin:9px 8px 0 0}
 .episode-one[data-ep1-actors="present"] .neural-stage .neural-scene-system{top:36%;bottom:25%;justify-content:center}
 .episode-one[data-ep1-actors="present"] .neural-stage .neural-scene-system .neural-card{width:min(560px,50vw)}
 .episode-one[data-ep1-document-phase="amber"] .neural-stage{--neural-accent:#e2ba72}
@@ -61,10 +69,11 @@
  .ep1-actor[data-pose="reclining"]{width:94vw;height:52vh;left:37%;bottom:28vh}
  .ep1-stage[data-shot="close"] .ep1-actor[data-pose="reclining"]{left:52%;bottom:28vh}
  .ep1-cg img{object-position:51% 40%;animation-duration:12s}.ep1-stage[data-shot="detail"] .ep1-cg img{object-position:50% 42%;object-fit:cover}
- .ep1-stage[data-cg="clay"] .ep1-cg,.ep1-stage[data-cg="night"] .ep1-cg{background-size:cover;background-position:center}
- .ep1-stage[data-cg="clay"] .ep1-cg::before,.ep1-stage[data-cg="night"] .ep1-cg::before{content:"";position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.35);transform:scale(1.1)}
+ .ep1-stage[data-cg="clay"] .ep1-cg,.ep1-stage[data-cg="night"] .ep1-cg,.ep1-stage[data-cg="table"] .ep1-cg{background-size:cover;background-position:center}
+ .ep1-stage[data-cg="clay"] .ep1-cg::before,.ep1-stage[data-cg="night"] .ep1-cg::before,.ep1-stage[data-cg="table"] .ep1-cg::before{content:"";position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.35);transform:scale(1.1)}
  .ep1-stage[data-cg="clay"] .ep1-cg img{position:absolute;top:7vh;height:63vh;object-position:36% 42%}
  .ep1-stage[data-cg="night"] .ep1-cg img{position:absolute;top:5vh;height:63vh;object-fit:contain;object-position:center}
+ .ep1-stage[data-cg="table"] .ep1-cg img{position:absolute;top:7vh;height:57vh;object-fit:contain;object-position:center}
  .ep1-document{top:40%;width:calc(100% - 42px);padding:17px 18px}.ep1-document dl{font-size:11px;gap:10px}.ep1-document dd{font-size:15px}.ep1-wall{left:5%;top:17%;width:37%;height:17%;border-width:3px}
  .ep1-blackout .story-box{bottom:22vh!important}.ep1-blackout .story-text{font-size:var(--font-size)}
  .episode-one .place-ribbon{font-size:10px}

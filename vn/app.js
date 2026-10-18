@@ -13,6 +13,7 @@ import { EP1_ASSETS } from './ep1-assets.js';
 import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js';
 import { EpisodeOneStage } from './episode-one-stage.js';
 import { createEpisodeOneAudio } from './episode-one-audio.js';
+import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js';
 
 const story = normalizeStory(window.STORY);
 const $ = (id) => document.getElementById(id);
@@ -36,6 +37,7 @@ const neuralStage = new NeuralStage($('neuralStage'));
 const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS);
 const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS);
 let currentEpisodeCue = null;
+let currentReadingPage = null;
 let currentPerception = null, lastCommunicationGroup = '';
 let sceneFront = 0, sceneBackground = '', lastEffectKey = '', currentVisualKey = 'unset';
 
@@ -46,6 +48,7 @@ $('storyTitle').textContent = story.title;
 
 function chapterAt(id = progress.chapterId) { return story.chapters.find((chapter) => chapter.id === id); }
 function beatAt(pos = progress) { return chapterAt(pos.chapterId)?.beats[pos.beatIndex] ?? null; }
+function needsChoice() { return Boolean(beatAt()?.choice && !isEpisodeOneObservation(chapterAt(), progress.beatIndex)); }
 function saveStore() {
   const saved = Boolean(browserStorage) && writeStore(browserStorage, store, STORAGE_KEY);
   if (!saved && !storageWarningShown) { toast('브라우저에 저장하지 못했습니다. 저장과 백업에서 파일로 보관해 주세요.'); storageWarningShown = true; }
@@ -69,7 +72,7 @@ function pauseReading() {
 }
 function scheduleReading() {
   clearTimeout(autoTimer);
-  if (typing || gameScreen.hidden || modal.open || document.hidden || $('stage').classList.contains('ui-hidden') || document.querySelector('.end-screen') || beatAt()?.choice) return;
+  if (typing || gameScreen.hidden || modal.open || document.hidden || $('stage').classList.contains('ui-hidden') || document.querySelector('.end-screen') || needsChoice() || choiceArea.querySelector('details[open]')) return;
   if (store.settings.skip) autoTimer = setTimeout(advance, 240);
   else if (store.settings.auto) {
     const textTime = Math.min(16000, Array.from(fullText).length * 42);
@@ -81,7 +84,7 @@ function toggleReading(mode) {
   if (gameScreen.hidden || modal.open || document.querySelector('.end-screen')) return;
   if ($('stage').classList.contains('ui-hidden')) { setUiHidden(false); return; }
   const enabling = !store.settings[mode]; pauseReading();
-  if (enabling && beatAt()?.choice) { toast('선택 장면에서는 직접 읽어 주세요.'); return; }
+  if (enabling && needsChoice()) { toast('선택 장면에서는 직접 읽어 주세요.'); return; }
   store.settings[mode] = enabling; syncReadingTools(); saveStore();
   if (mode === 'skip' && enabling && typing) { storyText.textContent = fullText; finishTyping(); }
   else scheduleReading();
@@ -289,21 +292,34 @@ function recordBacklog(chapter, beat, index) {
   if (backlog.length > MAX_BACKLOG) backlog = backlog.slice(-MAX_BACKLOG);
 }
 
+function recordBacklogPage(chapter, entries) {
+  const tail = backlog.slice(-entries.length);
+  // Closing a modal redraws the same reading page. Treat its entire suffix as
+  // one visit, just as recordBacklog does for a single original beat.
+  if (tail.length === entries.length && tail.every((entry, index) => entry.key === `${chapter.id}:${entries[index].index}`)) return;
+  for (const entry of entries) recordBacklog(chapter, entry, entry.index);
+}
+
 function renderBeat({ revisit = false } = {}) {
   clearTimers();
   if (revisit) pauseReading();
   $('readingAnnouncement').textContent = ''; $('storyBox').scrollTop = 0; storyText.scrollTop = 0;
   const chapter = chapterAt(), beat = beatAt();
   if (!chapter || !beat) { renderChapterEnd(); return; }
+  currentReadingPage = episodeOneReadingPage(chapter, progress.beatIndex);
   currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex);
+  if (currentEpisodeCue && currentReadingPage?.entries.length > 1) currentEpisodeCue.focus = currentReadingPage.focus;
+  $('storyBox').classList.toggle('reading-page', Boolean(currentReadingPage?.entries.length > 1));
   $('chapterLabel').textContent = chapter.label;
   $('chapterTitle').textContent = chapter.title;
   const total = chapter.beats.length;
-  $('progressText').textContent = `${Math.min(progress.beatIndex + 1, total)} / ${total}`;
-  $('progressBar').style.width = `${total ? ((progress.beatIndex + 1) / total) * 100 : 0}%`;
+  const pageEnd = currentReadingPage?.end ?? progress.beatIndex;
+  $('progressText').textContent = `${progress.beatIndex === pageEnd ? progress.beatIndex + 1 : `${progress.beatIndex + 1}–${pageEnd + 1}`} / ${total}`;
+  $('progressBar').style.width = `${total ? ((pageEnd + 1) / total) * 100 : 0}%`;
   stageImage.className = 'stage-image';
   const scene = currentEpisodeCue?.background || beat.scene || 'room';
-  const background = story.assets?.[scene];
+  const homeScene = currentEpisodeCue && ['room', 'kitchen'].includes(scene);
+  const background = homeScene ? EP1_ASSETS[currentEpisodeCue.index >= 196 ? 'homeNight' : 'homeMorning'] : story.assets?.[scene];
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
@@ -325,22 +341,25 @@ function renderBeat({ revisit = false } = {}) {
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
   directionCard.hidden = Boolean(currentEpisodeCue) || Boolean(currentPerception) || !beat.direction?.visual;
-  speakerNode.textContent = beat.speaker || '';
+  speakerNode.textContent = currentReadingPage?.speaker ?? beat.speaker ?? '';
   speakerNode.hidden = primary || !speakerNode.textContent;
   storyText.className = `story-text${beat.kind === 'system' ? ' system' : ''}${beat.direction?.emphasis ? ' authored-emphasis' : ''}`;
   choiceArea.replaceChildren();
   const chosenIndex = progress.choices?.[`${chapter.id}:${progress.beatIndex}`];
   if (beat.choice) renderChoices(beat, chapter, chosenIndex);
-  fullText = beat.text;
+  fullText = currentReadingPage?.text ?? beat.text;
   choiceArea.hidden = Boolean(beat.choice && fullText);
   typing = Boolean(fullText);
   storyText.textContent = '';
-  $('advanceIndicator').classList.toggle('hidden', typing || Boolean(beat.choice && chosenIndex === undefined));
-  recordBacklog(chapter, beat, progress.beatIndex);
-  const seenBefore = isSeen(store.seen, chapter.id, progress.beatIndex);
-  if (beat.choice) pauseReading();
+  $('advanceIndicator').classList.toggle('hidden', typing || Boolean(needsChoice() && chosenIndex === undefined));
+  const pageEntries = currentReadingPage?.entries ?? [{ ...beat, index: progress.beatIndex }];
+  const seenBefore = pageEntries.every(entry => isSeen(store.seen, chapter.id, entry.index));
+  if (needsChoice()) pauseReading();
   else if (store.settings.skip && !seenBefore) { pauseReading(); toast('읽지 않은 곳에 도착해 멈췄습니다.'); }
-  store.seen = addSeen(store.seen, chapter.id, progress.beatIndex); saveStore();
+  if (!currentReadingPage) {
+    recordBacklog(chapter, beat, progress.beatIndex);
+    store.seen = addSeen(store.seen, chapter.id, progress.beatIndex); saveStore();
+  }
   const skipping = store.settings.skip && seenBefore;
   const instant = store.settings.instant || skipping || revisit || Boolean(currentPerception && currentPerception.source.kind !== 'neural');
   if (currentPerception) {
@@ -377,15 +396,29 @@ function finishTyping() {
   typing = false; clearTimeout(typeTimer);
   $('readingAnnouncement').textContent = $('stage').classList.contains('ui-hidden') ? '' : fullText;
   const beat = beatAt(), chapter = chapterAt();
+  if (currentReadingPage) recordBacklogPage(chapter, currentReadingPage.entries);
+  for (const entry of currentReadingPage?.entries ?? []) {
+    store.seen = addSeen(store.seen, chapter.id, entry.index);
+  }
+  if (currentReadingPage) saveStore();
   choiceArea.hidden = false;
   const selected = beat?.choice && progress.choices?.[`${chapter.id}:${progress.beatIndex}`] !== undefined;
-  $('advanceIndicator').classList.toggle('hidden', Boolean(beat?.choice && !selected));
+  $('advanceIndicator').classList.toggle('hidden', Boolean(needsChoice() && !selected));
   scheduleReading();
 }
 
 function renderChoices(beat, chapter, chosenIndex) {
+  let container = choiceArea;
+  if (isEpisodeOneObservation(chapter, progress.beatIndex)) {
+    const details = document.createElement('details'); details.className = 'optional-observation';
+    const summary = document.createElement('summary'); summary.textContent = '정산·수면 조건 다시 보기';
+    details.append(summary); choiceArea.append(details); container = details;
+    details.addEventListener('click', event => event.stopPropagation());
+    details.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') event.stopPropagation(); });
+    details.addEventListener('toggle', () => { if (details.open) pauseReading(); else scheduleReading(); });
+  }
   const prompt = document.createElement('p'); prompt.className = 'choice-note'; prompt.textContent = beat.choice.prompt;
-  choiceArea.append(prompt);
+  container.append(prompt);
   beat.choice.options.forEach((option, index) => {
     const button = document.createElement('button'); button.className = 'choice-button';
     button.textContent = option.label; button.type = 'button'; button.classList.toggle('selected', chosenIndex === index);
@@ -394,8 +427,8 @@ function renderChoices(beat, chapter, chosenIndex) {
       event.stopPropagation(); clearTimeout(autoTimer); feedback();
       progress = selectChoice(progress, chapter.id, progress.beatIndex, index);
       if (option.note) {
-        choiceArea.querySelector('.choice-feedback')?.remove();
-        const note = document.createElement('p'); note.className = 'choice-note choice-feedback'; note.textContent = option.note; choiceArea.append(note);
+        container.querySelector('.choice-feedback')?.remove();
+        const note = document.createElement('p'); note.className = 'choice-note choice-feedback'; note.textContent = option.note; container.append(note);
       }
       choiceArea.querySelectorAll('.choice-button').forEach((item, i) => {
         item.classList.toggle('selected', i === index); item.setAttribute('aria-pressed', i === index ? 'true' : 'false');
@@ -403,11 +436,11 @@ function renderChoices(beat, chapter, chosenIndex) {
       finishTyping();
       if (!transientBacklog) { store.autosave = makeSave(progress, chapter, beat); saveStore(); }
     });
-    choiceArea.append(button);
+    container.append(button);
   });
   if (chosenIndex !== undefined) {
     const noteText = beat.choice.options[chosenIndex]?.note;
-    if (noteText) { const note = document.createElement('p'); note.className = 'choice-note choice-feedback'; note.textContent = noteText; choiceArea.append(note); }
+    if (noteText) { const note = document.createElement('p'); note.className = 'choice-note choice-feedback'; note.textContent = noteText; container.append(note); }
   }
 }
 
@@ -417,9 +450,9 @@ function advance() {
   clearTimeout(autoTimer);
   if (typing) { storyText.textContent = fullText; finishTyping(); return; }
   const currentBeat = beatAt(), currentChapter = chapterAt();
-  if (currentBeat?.choice && progress.choices?.[`${currentChapter.id}:${progress.beatIndex}`] === undefined) { toast('먼저 답을 골라 주세요.'); return; }
+  if (needsChoice() && progress.choices?.[`${currentChapter.id}:${progress.beatIndex}`] === undefined) { toast('먼저 답을 골라 주세요.'); return; }
   feedback();
-  const next = nextProgress(progress, story);
+  const next = nextProgress({ ...progress, beatIndex: currentReadingPage?.end ?? progress.beatIndex }, story);
   if (next.finished) { progress = { ...progress, finished: true }; if (!transientBacklog) saveCurrent(); renderChapterEnd(true); return; }
   if (next.chapterId !== progress.chapterId) {
     pendingChapter = next.chapterId;
@@ -439,7 +472,8 @@ function goPrevious() {
   if (gameScreen.hidden || modal.open || document.querySelector('.end-screen')) return;
   if ($('stage').classList.contains('ui-hidden')) { setUiHidden(false); return; }
   pauseReading();
-  const previous = previousProgress(progress, story);
+  const pageIndex = episodeOnePreviousPage(chapterAt(), progress.beatIndex);
+  const previous = pageIndex === null ? previousProgress(progress, story) : { ...progress, beatIndex: pageIndex, finished: false };
   if (previous.chapterId !== progress.chapterId || previous.beatIndex !== progress.beatIndex) {
     progress = previous; if (!transientBacklog) saveCurrent(); renderBeat({ revisit: true });
   }
