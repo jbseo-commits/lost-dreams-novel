@@ -9,6 +9,10 @@ import { presentationForBeat } from './neural-cues.js';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js';
+import { EP1_ASSETS } from './ep1-assets.js';
+import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js';
+import { EpisodeOneStage } from './episode-one-stage.js';
+import { createEpisodeOneAudio } from './episode-one-audio.js';
 
 const story = normalizeStory(window.STORY);
 const $ = (id) => document.getElementById(id);
@@ -29,6 +33,9 @@ let backlogRestore = null, transientBacklog = false, autoTimer = 0, previousPlac
 let pendingChapter = null;
 const audio = createAudioDirector(() => store.settings);
 const neuralStage = new NeuralStage($('neuralStage'));
+const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS);
+const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS);
+let currentEpisodeCue = null;
 let currentPerception = null, lastCommunicationGroup = '';
 let sceneFront = 0, sceneBackground = '', lastEffectKey = '', currentVisualKey = 'unset';
 
@@ -151,10 +158,11 @@ function renderChart(chart, compact = false) {
 function renderDirection(beat, { quiet = false } = {}) {
   const direction = beat.direction;
   stageImage.dataset.mood = direction?.mood ?? 'quiet';
+  stageImage.dataset.episodeNight=String(Boolean(currentEpisodeCue&&currentEpisodeCue.index>=196));
   stageImage.dataset.camera = direction?.camera ?? 'wide';
   stageImage.dataset.effect = direction?.effect ?? '';
   stageImage.classList.toggle('reduced-motion', store.settings.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  const place = direction?.place || '';
+  const place = currentEpisodeCue?.place || direction?.place || '';
   if (place && place !== previousPlace) {
     placeRibbon.textContent = place; placeRibbon.hidden = false; placeRibbon.classList.remove('arrive');
     requestAnimationFrame(() => placeRibbon.classList.add('arrive'));
@@ -218,9 +226,17 @@ function renderDirection(beat, { quiet = false } = {}) {
   const effectKey = `${progress.chapterId}:${progress.beatIndex}:${direction?.effect ?? ''}`;
   const playEffect = !quiet && direction?.effect && effectKey !== lastEffectKey && !(currentPerception && ['notification','pulse'].includes(direction.effect));
   lastEffectKey = effectKey;
-  if (direction?.music && !gameScreen.hidden && !modal.open) audio.resume(direction.music);
-  else audio.stop();
-  if (playEffect) audio.effect(direction.effect);
+  if (currentEpisodeCue) {
+    audio.stop(); stageImage.dataset.effect = ''; stageImage.classList.remove('effect-active'); $('stage').classList.remove('cg-active');
+    episodeStage.render(currentEpisodeCue, { instant: quiet, reducedMotion: store.settings.reducedMotion });
+    if (!gameScreen.hidden && !modal.open) episodeAudio.render(currentEpisodeCue, { quiet });
+    else episodeAudio.stop();
+  } else {
+    episodeStage.clear(); episodeAudio.stop();
+    if (direction?.music && !gameScreen.hidden && !modal.open) audio.resume(direction.music);
+    else audio.stop();
+    if (playEffect) audio.effect(direction.effect);
+  }
   syncSoundButton();
 }
 
@@ -245,7 +261,7 @@ function play(chapterId = story.chapters[0]?.id, beatIndex = 0, reset = false, s
   if (store.autosave && (reset || chapterId !== store.autosave.progress.chapterId || beatIndex !== store.autosave.progress.beatIndex)) {
     store.metadata.returnPoint = structuredClone(store.autosave);
   }
-  if (reset) backlog = [];
+  if (reset) { backlog = []; episodeAudio.reset(); }
   progress = reset ? clampProgress({ ...freshProgress(story, chapterId), beatIndex }, story) : clampProgress(savedProgress ?? { chapterId, beatIndex }, story);
   if (!reset) {
     backlog = []; const visited = new Set(store.seen), chapterIndex = story.chapters.findIndex((item) => item.id === progress.chapterId);
@@ -263,6 +279,7 @@ function play(chapterId = story.chapters[0]?.id, beatIndex = 0, reset = false, s
   titleScreen.hidden = true; gameScreen.hidden = false; pendingChapter = null;
   lastCommunicationGroup = '';
   renderBeat({ revisit: !reset });
+  if (chapterId === '1' && store.settings.sound) episodeAudio.unlock().then(ok=>{if(ok&&currentEpisodeCue&&!gameScreen.hidden&&!modal.open)episodeAudio.render(currentEpisodeCue,{quiet:true});});
 }
 
 function recordBacklog(chapter, beat, index) {
@@ -278,13 +295,14 @@ function renderBeat({ revisit = false } = {}) {
   $('readingAnnouncement').textContent = ''; $('storyBox').scrollTop = 0; storyText.scrollTop = 0;
   const chapter = chapterAt(), beat = beatAt();
   if (!chapter || !beat) { renderChapterEnd(); return; }
+  currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex);
   $('chapterLabel').textContent = chapter.label;
   $('chapterTitle').textContent = chapter.title;
   const total = chapter.beats.length;
   $('progressText').textContent = `${Math.min(progress.beatIndex + 1, total)} / ${total}`;
   $('progressBar').style.width = `${total ? ((progress.beatIndex + 1) / total) * 100 : 0}%`;
   stageImage.className = 'stage-image';
-  const scene = beat.scene || 'room';
+  const scene = currentEpisodeCue?.background || beat.scene || 'room';
   const background = story.assets?.[scene];
   if (background) {
     stageImage.classList.remove('no-background');
@@ -306,7 +324,7 @@ function renderBeat({ revisit = false } = {}) {
   renderDirection(beat, { quiet: revisit });
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
-  directionCard.hidden = Boolean(currentPerception) || !beat.direction?.visual;
+  directionCard.hidden = Boolean(currentEpisodeCue) || Boolean(currentPerception) || !beat.direction?.visual;
   speakerNode.textContent = beat.speaker || '';
   speakerNode.hidden = primary || !speakerNode.textContent;
   storyText.className = `story-text${beat.kind === 'system' ? ' system' : ''}${beat.direction?.emphasis ? ' authored-emphasis' : ''}`;
@@ -332,11 +350,12 @@ function renderBeat({ revisit = false } = {}) {
       reducedMotion: store.settings.reducedMotion,
     });
     audio.setCommunicationFocus(currentPerception.source.priority === 'interrupt' ? 'interrupt' : currentPerception.source.kind);
-    if (!continuing) audio.cue(currentPerception.source.kind, { priority: currentPerception.source.priority, instant: revisit || skipping });
+    if (!continuing && !currentEpisodeCue) audio.cue(currentPerception.source.kind, { priority: currentPerception.source.priority, instant: revisit || skipping });
     lastCommunicationGroup = currentPerception.groupId;
   } else {
     neuralStage.clear(); audio.setCommunicationFocus(null); lastCommunicationGroup = '';
   }
+  if (currentEpisodeCue?.blackout) neuralStage.clear();
   if (instant || !fullText) { storyText.textContent = fullText; typing = false; finishTyping(); }
   else {
     const prefersReducedMotion = store.settings.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -428,12 +447,13 @@ function goPrevious() {
 
 function renderChapterEnd(final = false) {
   clearTimers(); pauseReading();
+  episodeAudio.stop();
   neuralStage.clear(); audio.setCommunicationFocus(null); lastCommunicationGroup = '';
   document.querySelector('.end-screen')?.remove();
   const ending = document.createElement('div'); ending.className = 'end-screen';
   const card = document.createElement('section'); card.className = 'end-card';
   const eyebrow = document.createElement('p'); eyebrow.className = 'eyebrow'; eyebrow.textContent = final ? 'END OF STORY' : 'CHAPTER COMPLETE';
-  const title = document.createElement('h2'); title.textContent = final ? '마지막 페이지' : '잠시 숨을 고르고';
+  const title = document.createElement('h2'); title.textContent = progress.chapterId === '1' ? '자신과 단둘이' : final ? '마지막 페이지' : '잠시 숨을 고르고';
   const message = document.createElement('p'); message.textContent = final ? '이야기의 끝에 도착했습니다. 함께 읽어 주셔서 고맙습니다.' : '이 장의 이야기를 마쳤습니다.';
   const actions = document.createElement('div'); actions.className = 'end-actions';
   const nextButton = document.createElement('button'); nextButton.textContent = final ? '목차로' : '다음 장';
@@ -449,7 +469,7 @@ function renderChapterEnd(final = false) {
 
 function showModal(content, mode) {
   if (!modal.open) restoreFocus = document.activeElement;
-  clearTimers(); pauseReading(); audio.stop(); neuralStage.clear(); modalMode = mode; modalContent.replaceChildren(content); if (!modal.open) modal.showModal();
+  clearTimers(); pauseReading(); audio.stop(); episodeAudio.stop(); neuralStage.clear(); modalMode = mode; modalContent.replaceChildren(content); if (!modal.open) modal.showModal();
   $('modalClose').focus();
 }
 function modalHeading(title, lead) {
@@ -564,6 +584,7 @@ function openChapters() {
 }
 
 function chapterMoments(chapter) {
+  if (episodeOneDirection(chapter, 0)) return EPISODE_ONE_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true}));
   const seenVisuals = new Set(), seenSignals = new Set(); let previousPlace = '';
   return chapter.beats.flatMap((beat, beatIndex) => {
     const direction = beat.direction, place = direction?.place || '';
@@ -589,7 +610,7 @@ function openChapterScenes(chapter) {
     const card = document.createElement('div'); card.className = 'chapter-card';
     const copy = document.createElement('div'); copy.className = 'chapter-copy';
     const title = document.createElement('strong'); title.textContent = `${String(index + 1).padStart(2, '0')} · ${moment.place || moment.signal?.title || '시각 기록'}`;
-    const detail = document.createElement('span'); detail.textContent = moment.signal ? `${moment.signal.sender ? `${moment.signal.sender} · ` : ''}이 장면에서 시작` : `이 장면에서 시작 · ${moment.visualType ? '정보 패널 포함' : '장소 전환'}`;
+    const detail = document.createElement('span'); detail.textContent = moment.authored ? '1화 체험판 · 이 장면에서 시작' : moment.signal ? `${moment.signal.sender ? `${moment.signal.sender} · ` : ''}이 장면에서 시작` : `이 장면에서 시작 · ${moment.visualType ? '정보 패널 포함' : '장소 전환'}`;
     const button = document.createElement('button'); button.className = 'small-button'; button.type = 'button'; button.textContent = '이곳에서 읽기';
     button.addEventListener('click', () => { closeModal(); play(chapter.id, moment.beatIndex, true); });
     copy.append(title, detail); card.append(copy, button); list.append(card);
@@ -614,16 +635,16 @@ function openSettings() {
   });
   [
     ['instant', '문장 바로 표시', '한 글자씩 기다리지 않고 문장 전체를 표시합니다. 진행은 직접 누릅니다.'],
-    ['sound', '공간음과 장면 효과', '장면에 맞춘 잔잔한 공간음과 일부 서사 효과음을 재생합니다. 기본값은 꺼짐입니다.'],
+    ['sound', '음악과 장면 효과', '1화의 자체 작곡 음악과 생활 소리, 장면 효과음을 재생합니다. 언제든 끌 수 있습니다.'],
   ].forEach(([key, labelText, description]) => {
     const row = document.createElement('div'); row.className = 'setting-row'; const label = document.createElement('label'); label.textContent = labelText;
     const out = document.createElement('output'); out.textContent = description; label.append(out); const input = document.createElement('input'); input.type = 'checkbox'; input.checked = store.settings[key]; input.setAttribute('aria-label', labelText);
-    input.addEventListener('change', () => { store.settings[key] = input.checked; saveStore(); if (key === 'sound') { syncSoundButton(); if (!input.checked) audio.stop(); } }); row.append(label, input); root.append(row);
+    input.addEventListener('change', () => { store.settings[key] = input.checked; saveStore(); if (key === 'sound') { syncSoundButton(); if (!input.checked) { audio.stop(); episodeAudio.stop(); } else episodeAudio.unlock(); } }); row.append(label, input); root.append(row);
   });
   const volumeRow = document.createElement('div'); volumeRow.className = 'setting-row'; const volumeLabel = document.createElement('label'); volumeLabel.textContent = '공간음 음량';
   const volumeOutput = document.createElement('output'); volumeOutput.textContent = `${store.settings.volume}%`; volumeLabel.append(volumeOutput);
   const volumeInput = document.createElement('input'); volumeInput.type = 'range'; volumeInput.min = 0; volumeInput.max = 70; volumeInput.value = store.settings.volume; volumeInput.setAttribute('aria-label', '공간음 음량');
-  volumeInput.addEventListener('input', () => { store.settings.volume = Number(volumeInput.value); volumeOutput.textContent = `${volumeInput.value}%`; saveStore(); audio.setVolume(); }); volumeRow.append(volumeLabel, volumeInput); root.append(volumeRow);
+  volumeInput.addEventListener('input', () => { store.settings.volume = Number(volumeInput.value); volumeOutput.textContent = `${volumeInput.value}%`; saveStore(); audio.setVolume(); episodeAudio.setVolume(); }); volumeRow.append(volumeLabel, volumeInput); root.append(volumeRow);
   const motionRow = document.createElement('div'); motionRow.className = 'setting-row'; const motionLabel = document.createElement('label'); motionLabel.textContent = '움직임 줄이기'; const motionOut = document.createElement('output'); motionOut.textContent = '카메라 이동과 화면 효과를 줄입니다.'; motionLabel.append(motionOut);
   const motionInput = document.createElement('input'); motionInput.type = 'checkbox'; motionInput.checked = store.settings.reducedMotion; motionInput.setAttribute('aria-label', '움직임 줄이기');
   motionInput.addEventListener('change', () => { store.settings.reducedMotion = motionInput.checked; saveStore(); if (beatAt()) { renderDirection(beatAt(), { quiet: true }); neuralStage.clear(); } }); motionRow.append(motionLabel, motionInput); root.append(motionRow);
@@ -675,6 +696,22 @@ function closeModal() {
   if (restoreFocus?.isConnected && !restoreFocus.closest('[hidden]')) restoreFocus.focus({ preventScroll: true });
 }
 
+function openEpisodeOneDemo() {
+  const root = document.createElement('div'); root.append(modalHeading('1화 · 빌린 꿈', '표정과 시선, 생활의 소리와 마지막 침묵까지.'));
+  const note = document.createElement('p'); note.className = 'demo-mode-note';
+  note.textContent = '1화 전체를 감상합니다. 클릭·Enter·Space로 진행하고, A로 자동 읽기, L로 지난 대사를 볼 수 있습니다. 언제든 저장하거나 글자 크기와 소리를 바꿀 수 있습니다. 감상 시간은 읽는 속도에 따라 달라집니다.';
+  const actions = document.createElement('div'); actions.className = 'demo-start-actions';
+  const begin = (sound) => {
+    store.settings.sound = sound; saveStore();
+    const unlocked = sound ? episodeAudio.unlock() : Promise.resolve(false);
+    modal.close(); modalMode = ''; modalContent.replaceChildren(); play('1', 0, true); syncSoundButton();
+    unlocked.then(ok => { if(ok) { episodeAudio.prime(); if(currentEpisodeCue&&!gameScreen.hidden&&!modal.open) episodeAudio.render(currentEpisodeCue,{quiet:true}); } });
+  };
+  actions.append(actionButton('소리 켜고 시작', () => begin(true)), actionButton('조용히 시작', () => begin(false)));
+  root.append(note, actions); showModal(root, 'demo');
+  Object.entries(EP1_ASSETS).filter(([,path])=>path.endsWith('.webp')).forEach(([,path])=>{const image=new Image();image.src=path;});
+}
+$('demoButton').addEventListener('click', openEpisodeOneDemo);
 $('startButton').addEventListener('click', () => play(story.chapters[0]?.id, 0, true));
 $('continueButton').addEventListener('click', () => store.autosave ? play(store.autosave.progress.chapterId, store.autosave.progress.beatIndex, false, store.autosave.progress) : play(story.chapters[0]?.id, 0, true));
 $('chaptersButton').addEventListener('click', openChapters);
@@ -686,7 +723,9 @@ $('saveButton').addEventListener('click', openSaves);
 $('gameSettingsButton').addEventListener('click', openSettings);
 $('soundToggle').addEventListener('click', () => {
   store.settings.sound = !store.settings.sound; saveStore(); syncSoundButton();
-  if (!store.settings.sound) audio.stop(); else { const dir = beatAt()?.direction; if (dir?.music) audio.resume(dir.music); }
+  if (!store.settings.sound) { audio.stop(); episodeAudio.stop(); }
+  else if (currentEpisodeCue) episodeAudio.unlock().then(ok=>{if(ok&&!gameScreen.hidden&&!modal.open)episodeAudio.render(currentEpisodeCue,{quiet:true});});
+  else { const dir = beatAt()?.direction; if (dir?.music) audio.resume(dir.music); }
 });
 function setUiHidden(hidden) {
   if (hidden) { pauseReading(); clearTimers(); if (typing) { storyText.textContent = fullText; finishTyping(); } }
@@ -698,7 +737,7 @@ function setUiHidden(hidden) {
 }
 $('hideUiButton').addEventListener('click',()=>{setUiHidden(!$('stage').classList.contains('ui-hidden'));if(!$('uiReveal').hidden)$('uiReveal').focus();});
 $('uiReveal').addEventListener('click',()=>{setUiHidden(false);$('hideUiButton').focus();});
-$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
+$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); episodeStage.clear(); currentEpisodeCue=null; neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
 $('modalClose').addEventListener('click', closeModal);
 modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
 modal.addEventListener('cancel', (event) => { event.preventDefault(); closeModal(); });
@@ -729,7 +768,7 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowLeft') { event.preventDefault(); goPrevious(); }
 });
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) { pauseReading(); clearTimers(); audio.stop(); }
+  if (document.hidden) { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); }
   else if (!gameScreen.hidden && !modal.open && !document.querySelector('.end-screen')) renderBeat({ revisit: true });
 });
 
