@@ -12,13 +12,13 @@ window.ReaderScenes=(()=>{
   return null;
  }
  function install(D,RUN){
-  D[20].more[0].on='주거 감면: 자격 재검증.';
   // 19: 두 경로에서 실제로 영향받는 가구 수의 면적 차이. 수치는 복제 검증의 값.
   const small=windows(2400,60,18,40,3.2,1.8);
   root('node31b',frame('같은 크기의 창 · 서로 다른 선택',`${text(18,20,'B · 2,400가구','warm')}<g class="lights" fill="#eac79a" stroke="none">${small}</g>${text(18,269,'모두 4.2초 중단','muted')}<g data-t="2">${text(226,312,'A · 36가구','cold')}${windows(36,6,241,326,3.2,1.8)}${line('M232 320 h44 v43 h-44 Z','coldline')}${text(18,320,'과부하 가능성 +3.8%','small')}${text(18,342,'발생하면 최대 18분','small')}</g>${text(18,382,'선택은 A로 바뀌었다.','muted','data-t="4.8"')}`,'<strong>작은 쪽도 빈 창이 아니다.</strong>'));
   RUN.node31b=()=>{};D[19].ms=9000;
-  const slips=Array.from({length:8},(_,i)=>{const col=i%2,row=Math.floor(i/2);return `<g style="--slip:${i}"><rect x="${17+col*159}" y="${42+row*67}" width="145" height="52" rx="1" fill="#182128"/>${text(25+col*159,61+row*67,'오늘만 중단.','small')}${text(25+col*159,78+row*67,'가족 행사. 내일 재개.','small muted')}</g>`}).join('');
-  root('familyday',frame('같은 문구 / 각각의 요청',`<g data-t=".2">${slips}</g>${line('M169 32 V315','empty','data-t="3"')}${line('M10 105 H330 M10 172 H330 M10 239 H330','empty','data-t="3.5"')}${text(17,350,'학교 · 물류센터 휴무','cold','data-t="1.8"')}${text(17,374,'지역 전력망 점검','muted','data-t="2.4"')}`,'같은 문장을 썼다는 이유로 한 덩어리에 묶지 않았다.'));RUN.familyday=()=>{};D[19].more[0].ms=8200;
+  // 20: 기존 보호와 신규 심사 대기를 분리한 뒤, 확인한 범위에만 서명한다.
+  root('graybutton',frame('보호 범위 열람 확인',`<g data-t=".2">${text(18,28,'72시간','large cold')}${line('M18 49 H322','faint')}<rect x="18" y="74" width="143" height="187" fill="#14232a"/>${text(30,103,'기존 승인·계약','small')}${text(30,133,'보호 유지','cold')}${line('M32 153 H145 M32 169 H129 M32 185 H143','faint')}</g><g data-t="1.8"><rect x="179" y="74" width="143" height="187" class="empty"/>${text(191,103,'신규 요청','small')}${text(191,133,'별도 심사','warm')}${line('M193 153 H306 M193 169 H290','faint')}${text(191,234,'대기','warm')}</g><g data-t="3.4">${line('M170 66 V273','empty')}${text(18,299,'보호 범위 열람 확인','small muted')}${line('M18 346 H322','faint')}</g>${line('M34 329 q14-20 27-1 l19-15 q8 27 27 5 l18 8','trace','pathLength="1" data-t="4.5" stroke="#b5ccd4"')}`,'그 서명이 끝나도 신규 요청의 대기 표시는 그대로였다.'));
+  RUN.graybutton=()=>{};
   // 27: 거래 뒤 남은 영수증과, 다시 팔리는 같은 이야기의 다른 재질.
   root('onenight',frame('같은 이야기의 두 가격',`<g class="swing"><path d="M18 34 H147 V235 l-9-5-9 5-9-5-9 5-9-5-9 5-9-5-9 5-9-5-9 5-9-5-9 5 Z" class="thermal"/>${text(34,64,'설문 보상','ink')}${text(33,117,'+3.0','large ink')}${line('M32 140 H131 M32 151 H112 M32 162 H129','faint')}${text(33,205,'어머니','ink small')}</g><g data-t="2.6"><rect x="160" y="109" width="164" height="229" rx="4" fill="#15222b" stroke="#45616b"/>${text(173,137,'성장 환경 증언','cold')}${text(173,165,'의료 상황 판단 일화','small muted')}${text(173,232,'4,200','large warm')}${line('M173 254 H307','faint')}${text(173,283,'구매 문의 11','small')}${text(173,304,'추가 증언 요청 5','small')}</g><g data-t="4.3">${line('M50 255 Q90 290 143 266','mp-clay-arc')}${text(22,308,'침착하게,','small muted')}${text(22,329,'손도 안 떨고.','small muted')}${line('M18 312 L125 284','warmline')}</g>${text(17,377,'직접 면담 1 · 발신 비공개','small','data-t="6"')}`,'손이 떨리던 기억과 시장에 나온 증언.'));D[27].ms=9000;
   // 32: 접힌 종이의 서로 다른 줄은 지워진 답이 아니라 반복 연습한 원고 그대로다.
