@@ -101,4 +101,7 @@
  .episode-one.episode-two[data-communication="system"] .neural-stage .neural-scene-system{top:16%;bottom:28%}
  .episode-one.episode-two[data-communication="system"] .neural-stage .neural-scene-system .neural-card{width:100%;max-height:100%}
  .ep1-stage[data-shot="close"] .ep1-actor[data-side="center"]{left:50%;width:90vw}
+ .ep1-stage[data-cg="dreamBeach"] .ep1-cg{background-size:cover;background-position:38% center}
+ .ep1-stage[data-cg="dreamBeach"] .ep1-cg::before{content:'';position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.35);transform:scale(1.1)}
+ .ep1-stage[data-cg="dreamBeach"] .ep1-cg img{position:absolute;top:6vh;height:64vh;object-fit:contain;object-position:center}
 }

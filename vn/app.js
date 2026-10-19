@@ -5,7 +5,7 @@ import {
 } from './state.js';
 import { createAudioDirector } from './audio.js';
 import { createMotifSVG, directedCast, sceneClass } from './direction.js';
-import { presentationForBeat } from './neural-cues.js';
+import { presentationForBeat } from './neural-cues.js?v=ep12-20261019-r3';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js';

@@ -83,8 +83,10 @@ export function episodeTwoDirection(chapter,index) {
   if(index>=218&&index<=222){out.music=null;out.ambience=null;out.holdMotion=true;}
   if(index>=223&&index<232){out.cg='night';out.actors=[];out.music=null;}
   if(index>=232&&index<266){
-    out.background='dream';out.backgroundAsset=null;out.place='광고꿈 · 소중한 사람과 떠나는 휴양지';out.cg='sea';out.dream=true;out.timeOfDay='dream';out.shot='wide';out.ambience='coast';out.music='musicSea';
-    out.actors=index>=233?[actor('jiwoo','jiwooDream','right','left','inviting','광고 속 지우')]:[];
+    out.background='dream';out.backgroundAsset=null;out.place='광고꿈 · 소중한 사람과 떠나는 휴양지';out.cg='dreamBeach';out.dream=true;out.timeOfDay='dream';out.shot='wide';out.ambience='coast';out.music='musicSea';
+    // The latest remote CG already contains Jiwoo. Do not paint a second
+    // portrait over her, or cover that work with the earlier generic sea CG.
+    out.actors=[];
     if(index>=240){out.music='musicChoice';out.holdMotion=true;out.shot='unease';}
     if(index>=257){out.music=null;out.ambience=null;out.shot='trapped';out.hardCut=index===257;}
   }

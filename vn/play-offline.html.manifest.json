@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 51986263,
-  "sha256": "803e8ce6e5016adfc6609f5f823ee5530e3fddbd6eed4dd1b1285c555b86e537",
+  "offlineBytes": 51427475,
+  "sha256": "9d9a11eae3193021d3c6d7a735ce887a902e88c2a2f2e47e0d5b1f0ce2407ea4",
   "storyChapters": 128,
   "storyAssetKeys": 36,
   "ep1AssetKeys": [
@@ -21,8 +21,8 @@
     "jiwooGuarded",
     "jiwooUnsteady",
     "jiwooClay",
-    "jiwooDream",
     "jiwooRelaxed",
+    "dreamBeach",
     "street",
     "nightRoom",
     "heartbeat",
@@ -58,10 +58,11 @@
     "release"
   ],
   "uniqueEmbeddedAssets": 86,
-  "embeddedOriginalBytes": 33518371,
+  "embeddedOriginalBytes": 33293919,
   "mimeTypes": [
     "image/webp",
     "video/mp4",
+    "image/avif",
     "audio/mpeg"
   ],
   "assets": [
@@ -423,17 +424,17 @@
       "variable": "__vnAsset50"
     },
     {
-      "source": "assets/ep12/jiwoo-dream.webp",
-      "mime": "image/webp",
-      "bytes": 232666,
-      "sha256": "ef1e0f9f5ec246e6edadabfda24819f37fd27366221425364e1c4e6281ff73d3",
-      "variable": "__vnAsset51"
-    },
-    {
       "source": "assets/ep12/jiwoo-relaxed.webp",
       "mime": "image/webp",
       "bytes": 187258,
       "sha256": "ced14b49b6e2b72fe38ffecfbb66d8cc4d80a1eef5872d8aaaf683ccddc3f608",
+      "variable": "__vnAsset51"
+    },
+    {
+      "source": "assets/ep2/jiwoo-dream-beach.avif",
+      "mime": "image/avif",
+      "bytes": 8214,
+      "sha256": "9c364e4ff681a6467c1d79f99ff7baa93a5be1bb7ff3974062f281078511a212",
       "variable": "__vnAsset52"
     },
     {
@@ -742,8 +743,8 @@
       "exports": [
         "presentationForBeat"
       ],
-      "sourceSha256": "ae2638e80329ef4387a2f63964cb350cc786cc238d466446c524123840236412",
-      "compiledSourceSha256": "c167a6de4b210e34f55785d06656a08fb64731078ae9178b03b5837362e66726"
+      "sourceSha256": "cbc040f5c3d6c6f3512e7e15f31601207709fd21011911f74148247e8087dbec",
+      "compiledSourceSha256": "976bf4ef2da22b14b8c5129cc68ea39dfa1c0c59c8ec40a196946a31af1a75a7"
     },
     "neural-stage.js": {
       "exports": [
@@ -774,8 +775,8 @@
       "exports": [
         "EP1_ASSETS"
       ],
-      "sourceSha256": "bc393db70ab1232dd078debd02086c891548ee45b846ec1cdd3c839f85289749",
-      "compiledSourceSha256": "d1294cfd62454d7a6a6d91ce123452708ce66920ad30252a6e04f216b8ba497d"
+      "sourceSha256": "c167a36aae7a519b2e0fd06489b4e939b7d8b8a2084c3e9e37f726e5f93a5092",
+      "compiledSourceSha256": "578cc718b3f66296c4036f84cfd7a7da2c6ba37a8e14bd65f6a02f04a884afb2"
     },
     "episode-one.js": {
       "exports": [
@@ -805,7 +806,7 @@
         "episodeOnePreviousPage",
         "isEpisodeOneObservation"
       ],
-      "sourceSha256": "6024c3f156d7a06fd994d77ceb1c00eda04eed74b1c9a722b74d5d24f3d730b9",
+      "sourceSha256": "a97fcd16b13e69a8bc1b03f915cd64d7c3fa9e8fda40e67b59d6ae500e83dedb",
       "compiledSourceSha256": "b492032c0dfa74095d3b5b8fd26bc4951ca072036ec5d5bab3b0e08d769842aa"
     },
     "episode-one-teaser.js": {
@@ -822,21 +823,21 @@
         "episodeTwoSpeaker",
         "episodeTwoDirection"
       ],
-      "sourceSha256": "319fb0c1f912a20441bcc14f1a79f14670685571bf86b83cd771ec85af7aee86",
-      "compiledSourceSha256": "bf59f248500b405943aeef62008b50dd5a82974a0b6f857bc40b39ade2a4f261"
+      "sourceSha256": "6cb504e6297ac13d7ddad8c5aede0ec7794a27a1912ca66aa32c46ba38339c92",
+      "compiledSourceSha256": "31108ec7769041e317601e37994e79fe970f2ce4251f3453c1376b7d238787cf"
     },
     "episode-two-reading.js": {
       "exports": [
         "episodeTwoReadingPage",
         "episodeTwoPreviousPage"
       ],
-      "sourceSha256": "06806a50dfb4ef691acf64e920eb4f7eeebc9fcc8953880aafa9842385718faf",
+      "sourceSha256": "bffb9dc0bb7dd7cb76e6bd43bc17f6c5cce403e0a24f41e63bd1327b0221cf98",
       "compiledSourceSha256": "a0aac87670954d555ba20bc744464b0caa1cffe8e2f78440fac91e22e4243674"
     },
     "app.js": {
       "exports": [],
-      "sourceSha256": "38ed9650dbfe2e1d75b1b8da86edd9cac69f3e8bcd975d5d8bb7c95f87c9179f",
-      "compiledSourceSha256": "4815c734fb61739879534dec53b0469e15f8d3542c250374f5b7caa7ede8e71c"
+      "sourceSha256": "a14145b7e77500d9ff82f442a401ea62dc7688176ab99f8968ae74c953fa1f78",
+      "compiledSourceSha256": "f779baa449bb56beda121e4ca0d49339d31fc78d28050426bf844e165b5ee784"
     }
   },
   "inlineScriptsParsed": 2,

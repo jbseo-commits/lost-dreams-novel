@@ -47,9 +47,14 @@ test('reality, medical conversation and dream keep the appropriate people and cl
   assert.equal(at(150).actors[0].asset,'fatherDown');
   assert.equal(at(195).timeOfDay,'day');assert.equal(at(195).backgroundAsset,null);
   assert.equal(at(205).actors.find(a=>a.id==='jiwoo').asset,'jiwooRelaxed');
-  assert.equal(at(239).actors[0].asset,'jiwooDream');assert.equal(at(239).focus,'광고 속 지우');
+  assert.equal(at(239).cg,'dreamBeach');assert.deepEqual(at(239).actors,[]);assert.equal(at(239).focus,'광고 속 지우');
   assert.ok(at(266).place.includes('3시 17분'));assert.ok(at(280).place.includes('3시 24분'));
   assert.equal(episodeTwoSpeaker(second,92),'지우 아버지');
+});
+test('the newer remote beach CG stays visible for the entire dream without a duplicate actor',()=>{
+  assert.equal(EP1_ASSETS.dreamBeach,'assets/ep2/jiwoo-dream-beach.avif');
+  for(let index=232;index<=265;index++){assert.equal(at(index).cg,'dreamBeach');assert.deepEqual(at(index).actors,[]);}
+  assert.notEqual(at(266).cg,'dreamBeach');
 });
 test('the family ledger is lossless and the interrupted dream has an authored hard silence',()=>{
   const panel=presentationForBeat(second,second.beats[97],97);

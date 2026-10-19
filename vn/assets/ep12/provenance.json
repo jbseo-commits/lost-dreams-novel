@@ -18,7 +18,8 @@
         254
       ],
       "reference": "jiwoo-woman-body-tease.webp",
-      "promptSpec": "여성 지우 동일 인물·회색 작업 셔츠 유지. 왼쪽 아버지를 보며 서서 팔짱, 긴장한 입과 눈썹."
+      "promptSpec": "여성 지우 동일 인물·회색 작업 셔츠 유지. 왼쪽 아버지를 보며 서서 팔짱, 긴장한 입과 눈썹.",
+      "status": "active"
     },
     {
       "file": "jiwoo-dream.webp",
@@ -32,7 +33,8 @@
         254
       ],
       "reference": "jiwoo-woman-body-tease.webp",
-      "promptSpec": "같은 여성 지우. 서서 왼쪽 상대에게 손을 내밀며 현실보다 매끄러운 평온한 미소, 바닷가 햇빛."
+      "promptSpec": "같은 여성 지우. 서서 왼쪽 상대에게 손을 내밀며 현실보다 매끄러운 평온한 미소, 바닷가 햇빛.",
+      "status": "reserve-not-used-in-current-runtime"
     },
     {
       "file": "mother-care.webp",
@@ -46,7 +48,8 @@
         254
       ],
       "reference": "mother-warm.webp",
-      "promptSpec": "기존 어머니 얼굴·회색 카디건 유지. 젓가락 없이 무릎에 손을 모으고 아들 왼쪽으로 시선을 피하는 검진비 대화."
+      "promptSpec": "기존 어머니 얼굴·회색 카디건 유지. 젓가락 없이 무릎에 손을 모으고 아들 왼쪽으로 시선을 피하는 검진비 대화.",
+      "status": "active"
     },
     {
       "file": "seoin-home.webp",
@@ -60,7 +63,8 @@
         254
       ],
       "reference": "seoin-waking.webp",
-      "promptSpec": "기존 남성 서인, 회색 홈웨어. 아침에 앉아 물컵을 쥐고 오른쪽 어머니를 걱정스럽게 본다."
+      "promptSpec": "기존 남성 서인, 회색 홈웨어. 아침에 앉아 물컵을 쥐고 오른쪽 어머니를 걱정스럽게 본다.",
+      "status": "active"
     },
     {
       "file": "father-appeal.webp",
@@ -74,7 +78,8 @@
         254
       ],
       "reference": null,
-      "promptSpec": "마른 중년 한국인 아버지, 회청색 셔츠, 팔목 안쪽 투약 포트. 앉아 오른쪽 방문객에게 태블릿을 내밀며 부탁한다."
+      "promptSpec": "마른 중년 한국인 아버지, 회청색 셔츠, 팔목 안쪽 투약 포트. 앉아 오른쪽 방문객에게 태블릿을 내밀며 부탁한다.",
+      "status": "active"
     },
     {
       "file": "father-down.webp",
@@ -88,7 +93,8 @@
         254
       ],
       "reference": "father-appeal",
-      "promptSpec": "같은 아버지 얼굴·복장·투약 포트 유지. 태블릿을 무릎에 내리고 고개와 시선을 숙인 침묵."
+      "promptSpec": "같은 아버지 얼굴·복장·투약 포트 유지. 태블릿을 무릎에 내리고 고개와 시선을 숙인 침묵.",
+      "status": "active"
     },
     {
       "file": "seoin-standing.webp",
@@ -102,7 +108,8 @@
         254
       ],
       "reference": "seoin-question.webp",
-      "promptSpec": "기존 남성 서인, 같은 정장. 실제로 서서 한 손을 주머니에, 다른 손은 내리고 오른쪽 상대를 듣는 자세."
+      "promptSpec": "기존 남성 서인, 같은 정장. 실제로 서서 한 손을 주머니에, 다른 손은 내리고 오른쪽 상대를 듣는 자세.",
+      "status": "active"
     },
     {
       "file": "seoin-startled.webp",
@@ -116,7 +123,8 @@
         254
       ],
       "reference": "seoin-waking.webp",
-      "promptSpec": "기존 남성 서인 홈웨어. 새벽에 몸을 일으켜 가슴에 손을 대고 숨을 몰아쉬는 놀람, 관자놀이의 땀."
+      "promptSpec": "기존 남성 서인 홈웨어. 새벽에 몸을 일으켜 가슴에 손을 대고 숨을 몰아쉬는 놀람, 관자놀이의 땀.",
+      "status": "active"
     },
     {
       "file": "jiwoo-clay.webp",
@@ -130,7 +138,8 @@
         254
       ],
       "reference": "jiwoo-woman-body-tease.webp",
-      "promptSpec": "같은 여성 지우. 서서 손바닥의 아주 작고 찌그러진 회갈색 점토를 내려다본다. 최종 편집: 하트·꽃무늬를 지우고 낮고 울퉁불퉁한 실패한 점토로 변경."
+      "promptSpec": "같은 여성 지우. 서서 손바닥의 아주 작고 찌그러진 회갈색 점토를 내려다본다. 최종 편집: 하트·꽃무늬를 지우고 낮고 울퉁불퉁한 실패한 점토로 변경.",
+      "status": "active"
     },
     {
       "file": "jiwoo-unsteady.webp",
@@ -144,7 +153,8 @@
         254
       ],
       "reference": "jiwoo-woman-body-wounded.webp",
-      "promptSpec": "같은 여성 지우. 서서 양팔을 내리고 한 손으로 반대쪽 손목을 잡는다. 고개·시선 하강, 미소 없는 흔들림."
+      "promptSpec": "같은 여성 지우. 서서 양팔을 내리고 한 손으로 반대쪽 손목을 잡는다. 고개·시선 하강, 미소 없는 흔들림.",
+      "status": "active"
     },
     {
       "file": "jiwoo-relaxed.webp",
@@ -158,7 +168,8 @@
         254
       ],
       "reference": "jiwoo-woman-body-tease.webp",
-      "promptSpec": "같은 여성 지우. 실제 서 있는 자세, 양손을 주머니에 걸치고 왼쪽 상대를 보며 긴장이 풀린 비뚤어진 작은 미소."
+      "promptSpec": "같은 여성 지우. 실제 서 있는 자세, 양손을 주머니에 걸치고 왼쪽 상대를 보며 긴장이 풀린 비뚤어진 작은 미소.",
+      "status": "active"
     },
     {
       "file": "seoin-reclining-home.webp",
@@ -172,7 +183,8 @@
         254
       ],
       "reference": "seoin-waking.webp",
-      "promptSpec": "같은 남성 서인 얼굴과 회색 홈웨어. 밤에 상체를 기대 누워 오른쪽 천장을 보는 자세, 한 손은 쇄골 근처 다른 손은 복부. 투명 배경, 정장·단추 셔츠 금지."
+      "promptSpec": "같은 남성 서인 얼굴과 회색 홈웨어. 밤에 상체를 기대 누워 오른쪽 천장을 보는 자세, 한 손은 쇄골 근처 다른 손은 복부. 투명 배경, 정장·단추 셔츠 금지.",
+      "status": "active"
     },
     {
       "file": "cg-table-home.webp",
@@ -182,7 +194,8 @@
       "height": 941,
       "mode": "RGB",
       "reference": "cg-table-small-home.webp",
-      "promptSpec": "기존 CG 편집. 서인의 복장만 회색 긴팔 홈웨어로 맞춘다. 인물 얼굴·자세·손·상대·좁은 집·식사·침구·카메라·빛·구도 유지. 기존 원본은 보존하고 새 변형 파일로 저장."
+      "promptSpec": "기존 CG 편집. 서인의 복장만 회색 긴팔 홈웨어로 맞춘다. 인물 얼굴·자세·손·상대·좁은 집·식사·침구·카메라·빛·구도 유지. 기존 원본은 보존하고 새 변형 파일로 저장.",
+      "status": "active"
     },
     {
       "file": "cg-night-home.webp",
@@ -192,7 +205,8 @@
       "height": 941,
       "mode": "RGB",
       "reference": "cg-night-small-home.webp",
-      "promptSpec": "기존 CG 편집. 서인의 복장만 회색 긴팔 홈웨어로 맞춘다. 인물 얼굴·자세·손·상대·좁은 집·식사·침구·카메라·빛·구도 유지. 기존 원본은 보존하고 새 변형 파일로 저장."
+      "promptSpec": "기존 CG 편집. 서인의 복장만 회색 긴팔 홈웨어로 맞춘다. 인물 얼굴·자세·손·상대·좁은 집·식사·침구·카메라·빛·구도 유지. 기존 원본은 보존하고 새 변형 파일로 저장.",
+      "status": "active"
     },
     {
       "file": "seoin-relief.webp",
@@ -206,7 +220,16 @@
         254
       ],
       "reference": "seoin-waking.webp",
-      "promptSpec": "같은 남성 서인 회색 홈웨어. 새벽 잠에서 깬 뒤 땀을 닦고 어깨의 힘을 푼 작은 무의식적 미소. 시선은 오른쪽 아래, 광고의 활짝 웃음 금지. 머리·손·허벅지 포함 투명 배경."
+      "promptSpec": "같은 남성 서인 회색 홈웨어. 새벽 잠에서 깬 뒤 땀을 닦고 어깨의 힘을 푼 작은 무의식적 미소. 시선은 오른쪽 아래, 광고의 활짝 웃음 금지. 머리·손·허벅지 포함 투명 배경.",
+      "status": "active"
     }
-  ]
+  ],
+  "integratedRemote": "a3fa28b",
+  "activePortraits": 12,
+  "activeWardrobeCgVariants": 2,
+  "preservedRemoteCg": {
+    "file": "../ep2/jiwoo-dream-beach.avif",
+    "source": "origin/main a3fa28b",
+    "operation": "Original bytes preserved. It already contains Jiwoo; no additional character sprite is drawn over it."
+  }
 }
