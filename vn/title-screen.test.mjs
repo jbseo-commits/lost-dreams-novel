@@ -38,3 +38,28 @@ test('gallery assets exist and title stays available to screen readers',()=>{
     assert.ok(fs.existsSync(path.join(root,'assets',name)),name);
   }
 });
+
+test('cinematic title integrates all options in the scene',()=>{
+  const html=read('index.html'),css=read('title-screen.css'),app=read('app.js');
+  assert.match(html,/id="titleAtmosphere"/);
+  assert.match(html,/class="title-logo-plate"/);
+  assert.match(html,/id="startButton"[\\s\\S]*?id="continueButton"/);
+  assert.match(app,/import \{ createTitleAtmosphere \}/);
+  assert.match(app,/createTitleAtmosphere\(\{screen:titleScreen,canvas:/);
+  assert.match(css,/\.title-screen \.title-art/);
+  assert.match(css,/position:absolute;inset:-3\.5%/);
+  assert.match(css,/animation:mist-drift/);
+  assert.match(css,/max-aspect-ratio:3\\/4/);
+  assert.match(css,/\.title-logo-plate \{/);
+  assert.doesNotMatch(css,/\.title-screen \.title-content\s*\{[^}]*backdrop-filter:blur\(/);
+});
+test('animated layers cannot capture input and reduced-motion is respected',()=>{
+  const js=read('title-atmosphere.js'),css=read('title-screen.css');
+  for(const layer of ['.title-art','.title-aurora','.title-mist','.title-reflection','.title-atmosphere'])
+    assert.match(css,new RegExp(layer.replace('.','\\.')+'[^{}]*\\{[^}]*pointer-events:none'));
+  assert.match(js,/prefers-reduced-motion: reduce/);
+  assert.match(js,/!screen\.hidden/);
+  assert.match(js,/cancelAnimationFrame/);
+  assert.match(js,/pointerType==='touch'/);
+  assert.match(css,/prefers-reduced-motion:reduce/);
+});
