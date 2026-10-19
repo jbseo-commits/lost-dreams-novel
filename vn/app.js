@@ -308,6 +308,7 @@ function renderBeat({ revisit = false } = {}) {
   $('readingAnnouncement').textContent = ''; $('storyBox').scrollTop = 0; storyText.scrollTop = 0;
   const chapter = chapterAt(), beat = beatAt();
   if (!chapter || !beat) { renderChapterEnd(); return; }
+  $('stage').dataset.chapterId = chapter.id;
   currentReadingPage = episodeOneReadingPage(chapter, progress.beatIndex);
   currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex);
   if (currentEpisodeCue && currentReadingPage?.entries.length > 1) currentEpisodeCue.focus = currentReadingPage.focus;
@@ -321,7 +322,13 @@ function renderBeat({ revisit = false } = {}) {
   stageImage.className = 'stage-image';
   const scene = currentEpisodeCue?.background || beat.scene || 'room';
   const homeScene = currentEpisodeCue && ['room', 'kitchen'].includes(scene);
-  const background = homeScene ? EP1_ASSETS[currentEpisodeCue.index >= 196 ? 'homeNight' : 'homeMorning'] : story.assets?.[scene];
+  // The advertising dream begins at the beach and ends when Seoin leaves it.
+  // Resolve by manuscript text rather than hard-coded beat numbers so saves stay stable.
+  const dreamStart = chapter.id === '2' ? chapter.beats.findIndex(item => item.text?.includes('바다가 펼쳐졌다')) : -1;
+  const dreamEnd = dreamStart >= 0 ? chapter.beats.findIndex((item, index) => index > dreamStart && item.text?.includes('서인은 버튼을 눌렀다')) : -1;
+  const inJiwooDream = dreamStart >= 0 && progress.beatIndex >= dreamStart && (dreamEnd < 0 || progress.beatIndex <= dreamEnd);
+  $('stage').classList.toggle('ep2-jiwoo-dream', inJiwooDream);
+  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (homeScene ? EP1_ASSETS[currentEpisodeCue.index >= 196 ? 'homeNight' : 'homeMorning'] : story.assets?.[scene]);
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
