@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 35300566,
-  "sha256": "25e68a1de8b893c3ffde0e188021ab6f63b49698fc23ea9000fdb91fa05135e3",
+  "offlineBytes": 35004851,
+  "sha256": "39afd84ab63c10a6a5d7ae8155c4df18acd8164d6339096f9fb4b16b36dea88c",
   "storyChapters": 128,
   "storyAssetKeys": 36,
   "ep1AssetKeys": [
@@ -39,7 +39,7 @@
     "release"
   ],
   "uniqueEmbeddedAssets": 67,
-  "embeddedOriginalBytes": 21026172,
+  "embeddedOriginalBytes": 20804326,
   "mimeTypes": [
     "image/webp",
     "audio/mpeg"
@@ -361,24 +361,24 @@
       "variable": "__vnAsset44"
     },
     {
-      "source": "assets/ep1/jiwoo-tease.webp",
+      "source": "assets/ep1/jiwoo-woman-tease.webp",
       "mime": "image/webp",
-      "bytes": 301918,
-      "sha256": "dcb4bc47ef5e8a0d303abf6ecac7a334adb82bcc1be832b770dd21f01f748248",
+      "bytes": 244772,
+      "sha256": "68eb3842da7b4bb217235b66381e8c8a6791c83040cd7cdc4e7da9cbb012126a",
       "variable": "__vnAsset45"
     },
     {
-      "source": "assets/ep1/jiwoo-firm.webp",
+      "source": "assets/ep1/jiwoo-woman-firm.webp",
       "mime": "image/webp",
-      "bytes": 299358,
-      "sha256": "cfbb1c803e6c739a19eff599166363b45a30db5c9e667c0273aebe9f0e92878e",
+      "bytes": 242278,
+      "sha256": "18139ea2a7676b867ec6db216b3c125c7ecf0fd8caaeaefbde92733ac65a3510",
       "variable": "__vnAsset46"
     },
     {
-      "source": "assets/ep1/jiwoo-wounded.webp",
+      "source": "assets/ep1/jiwoo-woman-wounded.webp",
       "mime": "image/webp",
-      "bytes": 287940,
-      "sha256": "065f800c8d0ca68d309027edd7e416b3bcc817439da6e176f8abf77ac196d9c8",
+      "bytes": 215668,
+      "sha256": "94d9efd3d0be6217c51a0d495742e4e1006303a67eb8ab4ac8c701c1fc77e789",
       "variable": "__vnAsset47"
     },
     {
@@ -396,10 +396,10 @@
       "variable": "__vnAsset49"
     },
     {
-      "source": "assets/ep1/cg-clay.webp",
+      "source": "assets/ep1/cg-clay-woman.webp",
       "mime": "image/webp",
-      "bytes": 189152,
-      "sha256": "357fa56d9cb6b4a3de6402a7fc073a939f52362759971fd6effa6bff805c8f84",
+      "bytes": 153804,
+      "sha256": "97a3664e4805280e821d3c7253e5baea2df50a422097233655a98f75056a0c08",
       "variable": "__vnAsset50"
     },
     {
@@ -617,7 +617,7 @@
       "exports": [
         "EP1_ASSETS"
       ],
-      "sourceSha256": "8c0c9e05f955bd2b807bd185c8d0f63d4f472a3012bc834226fae3468d3acf88",
+      "sourceSha256": "c8847cf4d426592eea616242c260aab7e8efc400937e52bbc6144692b0a88255",
       "compiledSourceSha256": "28fbf3fb8de8ab8a26882b07c8d7065b013d3f53d054651cf7d7e21684c01b15"
     },
     "episode-one.js": {
@@ -653,8 +653,8 @@
     },
     "app.js": {
       "exports": [],
-      "sourceSha256": "dc37dde2100c4f1bfb9414a15d18f143d2249dd890a452e6f0349b5f3a431760",
-      "compiledSourceSha256": "cf0b7639c1e33843300d5c977013b116e3310a62e68cb99955abcb7c9b24febb"
+      "sourceSha256": "e8b9580b3d527193851a696c1e24e79387865911f041ea4cea7af87d10711324",
+      "compiledSourceSha256": "ff6df11674f491c628266b4487b78ced3beb0ed1f6c876bbc6a503394440bb64"
     }
   },
   "inlineScriptsParsed": 2,

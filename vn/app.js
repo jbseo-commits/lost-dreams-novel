@@ -171,7 +171,7 @@ function renderDirection(beat, { quiet = false } = {}) {
     requestAnimationFrame(() => placeRibbon.classList.add('arrive'));
   } else if (!place) placeRibbon.hidden = true;
   previousPlace = place;
-  const cast = direction?.cast ?? [];
+  const cast = currentEpisodeCue ? [] : direction?.cast ?? [];
   castRail.replaceChildren();
   cast.forEach((person) => {
     const chip = document.createElement('span'); chip.className = `cast-chip ${person.side}${person.remote ? ' remote' : ''}${person.id === direction?.focus ? ' focused' : ''}`;
@@ -180,7 +180,7 @@ function renderDirection(beat, { quiet = false } = {}) {
     castRail.append(chip);
   });
   castRail.hidden = !cast.length;
-  const portraits = directedCast(direction, story.assets, beat.portrait);
+  const portraits = currentEpisodeCue ? [] : directedCast(direction, story.assets, beat.portrait);
   const setPortrait = (wrap, image, person) => {
     if (!person) { wrap.classList.remove('visible'); return; }
     if (image.getAttribute('src') !== story.assets[person.id]) image.src = story.assets[person.id];
@@ -189,7 +189,7 @@ function renderDirection(beat, { quiet = false } = {}) {
   };
   setPortrait(portraitWrap, portraitImage, portraits[0]);
   setPortrait(secondaryPortraitWrap, secondaryPortraitImage, portraits[1]);
-  const visual = direction?.visual;
+  const visual = currentEpisodeCue ? null : direction?.visual;
   const cgFrame=Boolean(visual&&['object','dream'].includes(visual.type)&&story.assets?.[visual.image]);
   $('stage').classList.toggle('cg-active',cgFrame);
   motifStage.classList.toggle('cg-frame',cgFrame);

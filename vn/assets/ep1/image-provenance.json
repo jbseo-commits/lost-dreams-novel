@@ -159,5 +159,11 @@
       ],
       "transparent": true
     }
-  ]
+  ],
+  "jiwooCorrection": {
+    "date": "2026-10-19",
+    "canon": "Jiwoo is a woman, confirmed by the author",
+    "currentRecord": "vn/assets/ep1/jiwoo-woman-provenance.json",
+    "historicalWarning": "Earlier male Jiwoo prompts below are retained as historical submitted records. Their gender and character images are incorrect and must not be used as current identity references."
+  }
 }
