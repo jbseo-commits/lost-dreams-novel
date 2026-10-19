@@ -43,13 +43,13 @@ test('cinematic title integrates all options in the scene',()=>{
   const html=read('index.html'),css=read('title-screen.css'),app=read('app.js');
   assert.match(html,/id="titleAtmosphere"/);
   assert.match(html,/class="title-logo-plate"/);
-  assert.match(html,/id="startButton"[\\s\\S]*?id="continueButton"/);
+  assert.ok(html.includes('id="startButton"') && html.indexOf('id="startButton"') < html.indexOf('id="continueButton"'));
   assert.match(app,/import \{ createTitleAtmosphere \}/);
   assert.match(app,/createTitleAtmosphere\(\{screen:titleScreen,canvas:/);
   assert.match(css,/\.title-screen \.title-art/);
   assert.match(css,/position:absolute;inset:-3\.5%/);
   assert.match(css,/animation:mist-drift/);
-  assert.match(css,/max-aspect-ratio:3\\/4/);
+  assert.ok(css.includes('max-aspect-ratio:3/4'));
   assert.match(css,/\.title-logo-plate \{/);
   assert.doesNotMatch(css,/\.title-screen \.title-content\s*\{[^}]*backdrop-filter:blur\(/);
 });
