@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 47552474,
-  "sha256": "806d6b7a214f8db1a40e632bb3a0f4ec9437efa7bbc681698736b544171034b2",
+  "offlineBytes": 47515086,
+  "sha256": "64b54207830b344cc5d85cd78516fd87299070639839f5f7246199e8830d9271",
   "storyChapters": 128,
   "storyAssetKeys": 36,
   "ep1AssetKeys": [
@@ -40,7 +40,7 @@
     "release"
   ],
   "uniqueEmbeddedAssets": 68,
-  "embeddedOriginalBytes": 30211244,
+  "embeddedOriginalBytes": 30183204,
   "mimeTypes": [
     "image/webp",
     "video/mp4",
@@ -370,24 +370,24 @@
       "variable": "__vnAsset45"
     },
     {
-      "source": "assets/ep1/jiwoo-woman-tease.webp",
+      "source": "assets/ep1/jiwoo-woman-body-tease.webp",
       "mime": "image/webp",
-      "bytes": 244772,
-      "sha256": "68eb3842da7b4bb217235b66381e8c8a6791c83040cd7cdc4e7da9cbb012126a",
+      "bytes": 197682,
+      "sha256": "96df1a0430af476c0a4609b68610ae2eaf127da34201104bcaad35abc2ca7bb1",
       "variable": "__vnAsset46"
     },
     {
-      "source": "assets/ep1/jiwoo-woman-firm.webp",
+      "source": "assets/ep1/jiwoo-woman-body-firm.webp",
       "mime": "image/webp",
-      "bytes": 242278,
-      "sha256": "18139ea2a7676b867ec6db216b3c125c7ecf0fd8caaeaefbde92733ac65a3510",
+      "bytes": 226036,
+      "sha256": "fc92733365e4567151746b01863c7b32ac91ee0b0531ae94cf2d0dca79cd57f7",
       "variable": "__vnAsset47"
     },
     {
-      "source": "assets/ep1/jiwoo-woman-wounded.webp",
+      "source": "assets/ep1/jiwoo-woman-body-wounded.webp",
       "mime": "image/webp",
-      "bytes": 215668,
-      "sha256": "94d9efd3d0be6217c51a0d495742e4e1006303a67eb8ab4ac8c701c1fc77e789",
+      "bytes": 211488,
+      "sha256": "cfc670645e186b048957c7829e132b97297c184e221f249095b485f5ad5371cf",
       "variable": "__vnAsset48"
     },
     {
@@ -405,10 +405,10 @@
       "variable": "__vnAsset50"
     },
     {
-      "source": "assets/ep1/cg-clay-woman.webp",
+      "source": "assets/ep1/cg-clay-woman-body.webp",
       "mime": "image/webp",
-      "bytes": 153804,
-      "sha256": "97a3664e4805280e821d3c7253e5baea2df50a422097233655a98f75056a0c08",
+      "bytes": 193276,
+      "sha256": "bee22cb703150603e955796b4957af9a1cb8f2dd5e46a32477dc038946794163",
       "variable": "__vnAsset51"
     },
     {
@@ -628,7 +628,7 @@
       "exports": [
         "EP1_ASSETS"
       ],
-      "sourceSha256": "236e499b9f32f5cb3ffe09615e64fdede3a31dd81c5976ecf95e2aa23bcea7ef",
+      "sourceSha256": "e81403f4f1e946cb9d1d18f9278f27329829332a7ad4f30ab7175eb3668dae90",
       "compiledSourceSha256": "c973772f30a63b0194e848b3e931a7a674663702192d7c8c717f7820239f36e6"
     },
     "episode-one.js": {
