@@ -8,6 +8,7 @@ const MIME = Object.freeze({
   '.webp':'image/webp', '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg',
   '.gif':'image/gif', '.svg':'image/svg+xml', '.mp3':'audio/mpeg', '.ogg':'audio/ogg',
   '.wav':'audio/wav', '.m4a':'audio/mp4', '.woff2':'font/woff2', '.woff':'font/woff',
+  '.mp4':'video/mp4',
 });
 const REQUIRED_CSS = ['styles.css','neural-stage.css','perception.css','comfort.css','episode-one.css'];
 const REQUIRED_MODULES = [

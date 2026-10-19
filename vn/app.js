@@ -14,11 +14,13 @@ import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js';
 import { EpisodeOneStage } from './episode-one-stage.js';
 import { createEpisodeOneAudio } from './episode-one-audio.js';
 import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js';
+import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 
 const story = normalizeStory(window.STORY);
 const $ = (id) => document.getElementById(id);
 const titleScreen = $('titleScreen'), gameScreen = $('gameScreen');
 const modal = $('modal'), modalContent = $('modalContent');
+const episodeTeaser = createEpisodeOneTeaser({ dialog: $('episodeTeaser'), video: $('teaserVideo'), skip: $('teaserSkip'), pause: $('teaserPause'), status: $('teaserStatus') });
 const stageImage = $('stageImage'), portraitWrap = $('portraitWrap'), portraitImage = $('portraitImage');
 const secondaryPortraitWrap = $('secondaryPortraitWrap'), secondaryPortraitImage = $('secondaryPortraitImage');
 const sceneLayers = [$('sceneLayerA'), $('sceneLayerB')];
@@ -733,13 +735,16 @@ function closeModal() {
 function openEpisodeOneDemo() {
   const root = document.createElement('div'); root.append(modalHeading('1화 · 빌린 꿈', '표정과 시선, 생활의 소리와 마지막 침묵까지.'));
   const note = document.createElement('p'); note.className = 'demo-mode-note';
-  note.textContent = '1화 전체를 감상합니다. 클릭·Enter·Space로 진행하고, A로 자동 읽기, L로 지난 대사를 볼 수 있습니다. 언제든 저장하거나 글자 크기와 소리를 바꿀 수 있습니다. 감상 시간은 읽는 속도에 따라 달라집니다.';
+  note.textContent = '약 55초의 티저 영상 뒤에 1화가 시작됩니다. 영상은 언제든 건너뛸 수 있습니다. 본편은 클릭·Enter·Space로 진행하고, A로 자동 읽기, L로 지난 대사를 볼 수 있습니다. 언제든 저장하거나 글자 크기와 소리를 바꿀 수 있습니다.';
   const actions = document.createElement('div'); actions.className = 'demo-start-actions';
   const begin = (sound) => {
     store.settings.sound = sound; saveStore();
     const unlocked = sound ? episodeAudio.unlock() : Promise.resolve(false);
-    modal.close(); modalMode = ''; modalContent.replaceChildren(); play('1', 0, true); syncSoundButton();
-    unlocked.then(ok => { if(ok) { episodeAudio.prime(); if(currentEpisodeCue&&!gameScreen.hidden&&!modal.open) episodeAudio.render(currentEpisodeCue,{quiet:true}); } });
+    modal.close(); modalMode = ''; modalContent.replaceChildren();
+    episodeTeaser.start({ src: EP1_ASSETS.teaserVideo, sound, volume: store.settings.volume, onFinish: () => {
+      play('1', 0, true); syncSoundButton(); $('storyBox').focus({ preventScroll: true });
+      unlocked.then(ok => { if(ok) { episodeAudio.prime(); if(currentEpisodeCue&&!gameScreen.hidden&&!modal.open) episodeAudio.render(currentEpisodeCue,{quiet:true}); } });
+    } });
   };
   actions.append(actionButton('소리 켜고 시작', () => begin(true)), actionButton('조용히 시작', () => begin(false)));
   root.append(note, actions); showModal(root, 'demo');
@@ -790,7 +795,7 @@ $('fullscreenButton').hidden = !document.fullscreenEnabled;
 $('fullscreenButton').addEventListener('click', toggleFullscreen);
 document.addEventListener('fullscreenchange', () => { $('fullscreenButton').textContent = document.fullscreenElement ? '창으로' : '전체 화면'; $('fullscreenButton').setAttribute('aria-pressed', String(Boolean(document.fullscreenElement))); });
 document.addEventListener('keydown', (event) => {
-  if (modal.open) return;
+  if (modal.open || episodeTeaser.open) return;
   if (event.key === 'Escape') { event.preventDefault(); pauseReading(); if ($('stage').classList.contains('ui-hidden')) setUiHidden(false); return; }
   if (event.ctrlKey || event.metaKey || event.altKey || event.repeat) return;
   if (event.target instanceof Element && event.target.closest('input,select,textarea,[contenteditable="true"]')) return;

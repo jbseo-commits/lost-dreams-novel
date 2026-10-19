@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="perception.css">
   <link rel="stylesheet" href="comfort.css">
   <link rel="stylesheet" href="episode-one.css">
+  <link rel="stylesheet" href="episode-one-teaser.css">
   <script src="story-data.js"></script>
   <script type="module" src="app.js"></script>
 </head>
@@ -85,5 +86,13 @@
     </section>
   </main>
   <dialog id="modal" class="modal"><div class="modal-panel"><button class="modal-close" id="modalClose" aria-label="닫기">×</button><div id="modalContent"></div></div></dialog>
+  <dialog id="episodeTeaser" class="episode-teaser" aria-label="꿈을 잃은 세계 티저 영상">
+    <video id="teaserVideo" playsinline preload="none" aria-label="꿈을 잃은 세계 티저 V14"></video>
+    <div class="teaser-controls">
+      <p id="teaserStatus" role="status">티저 · 약 55초</p>
+      <button id="teaserPause" type="button">일시 정지</button>
+      <button id="teaserSkip" type="button" title="Esc로도 건너뛸 수 있습니다">영상 건너뛰기</button>
+    </div>
+  </dialog>
 </body>
 </html>
