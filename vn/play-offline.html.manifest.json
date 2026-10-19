@@ -1,11 +1,14 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 35300566,
-  "sha256": "25e68a1de8b893c3ffde0e188021ab6f63b49698fc23ea9000fdb91fa05135e3",
+  "offlineBytes": 37681896,
+  "sha256": "d47604957453eb7049b92641e06197b2c554a7eac4af9de31430d198b8b33cc6",
   "storyChapters": 128,
   "storyAssetKeys": 36,
   "ep1AssetKeys": [
+    "yoonsera",
+    "eunkyung",
+    "haerin",
     "homeMorning",
     "homeNight",
     "seoinWaking",
@@ -36,10 +39,24 @@
     "red",
     "bedding",
     "coast",
-    "release"
+    "release",
+    "fatherCalm",
+    "fatherUrgent",
+    "fatherBowed",
+    "officeEmptyDesk",
+    "jiwooHome",
+    "cgFatherTablet",
+    "cgClayStreet",
+    "cgDreamResort",
+    "livingroom",
+    "tabletSlide",
+    "tabletOff",
+    "streetWalk",
+    "musicSereneDream",
+    "adCutoff"
   ],
-  "uniqueEmbeddedAssets": 67,
-  "embeddedOriginalBytes": 21026172,
+  "uniqueEmbeddedAssets": 84,
+  "embeddedOriginalBytes": 22764725,
   "mimeTypes": [
     "image/webp",
     "audio/mpeg"
@@ -298,221 +315,340 @@
       "variable": "__vnAsset35"
     },
     {
+      "source": "assets/yoonsera.webp",
+      "mime": "image/webp",
+      "bytes": 51400,
+      "sha256": "2a69d2a1b0efd42bad6ed91564a98565572acd6385f72893dc02af8d25a67dd9",
+      "variable": "__vnAsset36"
+    },
+    {
+      "source": "assets/eunkyung.webp",
+      "mime": "image/webp",
+      "bytes": 55436,
+      "sha256": "be831d27c7919aaaa10d9331510bec6905f4a9df112082cb21bc549c34ffca9a",
+      "variable": "__vnAsset37"
+    },
+    {
+      "source": "assets/haerin.webp",
+      "mime": "image/webp",
+      "bytes": 50370,
+      "sha256": "8743673835c49cbcbcbd4873496a768c03b93667d51aad246d7bd07da1813f55",
+      "variable": "__vnAsset38"
+    },
+    {
       "source": "assets/ep1/home-morning.webp",
       "mime": "image/webp",
       "bytes": 221198,
       "sha256": "359b68e8ef256dee8cd70ac49c16bfbb6a89b0470228d21cef3e1f2f60e18095",
-      "variable": "__vnAsset36"
+      "variable": "__vnAsset39"
     },
     {
       "source": "assets/ep1/home-night.webp",
       "mime": "image/webp",
       "bytes": 122948,
       "sha256": "2e1b518b9b738fc6ec3ab237dd268d125c34a059b2ddacb2008eaf80f35ec144",
-      "variable": "__vnAsset37"
+      "variable": "__vnAsset40"
     },
     {
       "source": "assets/ep1/seoin-waking.webp",
       "mime": "image/webp",
       "bytes": 254868,
       "sha256": "f1708b2a5c566588880ec7a205f7b9ee6c1edaae23f2e47b416638297a571de3",
-      "variable": "__vnAsset38"
+      "variable": "__vnAsset41"
     },
     {
       "source": "assets/ep1/seoin-question.webp",
       "mime": "image/webp",
       "bytes": 245390,
       "sha256": "02416edb4c85853651d2176cc61f3b3494e97560b411f5071cf7c5b99071d06f",
-      "variable": "__vnAsset39"
+      "variable": "__vnAsset42"
     },
     {
       "source": "assets/ep1/seoin-worry.webp",
       "mime": "image/webp",
       "bytes": 236952,
       "sha256": "35c0246de4670dde4b1aca9fdba2032e85cb9ec1da7709a8afd9e2d96791c87f",
-      "variable": "__vnAsset40"
+      "variable": "__vnAsset43"
     },
     {
       "source": "assets/ep1/seoin-night.webp",
       "mime": "image/webp",
       "bytes": 278502,
       "sha256": "d337f48d3df6e2d3eeb31c708cffbfffbf8018458d236974fe439c95661226ea",
-      "variable": "__vnAsset41"
+      "variable": "__vnAsset44"
     },
     {
       "source": "assets/ep1/seoin-angry.webp",
       "mime": "image/webp",
       "bytes": 250494,
       "sha256": "6b21f721d29eeea5bbe83cf16f4f59d0898626774c1fb457a585815a1aec0785",
-      "variable": "__vnAsset42"
+      "variable": "__vnAsset45"
     },
     {
       "source": "assets/ep1/mother-warm.webp",
       "mime": "image/webp",
       "bytes": 296680,
       "sha256": "041059383688ec388ece497d487f9480882c21355ef4b1be04693fff5442eba5",
-      "variable": "__vnAsset43"
+      "variable": "__vnAsset46"
     },
     {
       "source": "assets/ep1/mother-searching.webp",
       "mime": "image/webp",
       "bytes": 258310,
       "sha256": "589ffffeb40f58c5ea028148eea01ee9c286ae6d7347c277a447f52d29938487",
-      "variable": "__vnAsset44"
+      "variable": "__vnAsset47"
     },
     {
       "source": "assets/ep1/jiwoo-tease.webp",
       "mime": "image/webp",
       "bytes": 301918,
       "sha256": "dcb4bc47ef5e8a0d303abf6ecac7a334adb82bcc1be832b770dd21f01f748248",
-      "variable": "__vnAsset45"
+      "variable": "__vnAsset48"
     },
     {
       "source": "assets/ep1/jiwoo-firm.webp",
       "mime": "image/webp",
       "bytes": 299358,
       "sha256": "cfbb1c803e6c739a19eff599166363b45a30db5c9e667c0273aebe9f0e92878e",
-      "variable": "__vnAsset46"
+      "variable": "__vnAsset49"
     },
     {
       "source": "assets/ep1/jiwoo-wounded.webp",
       "mime": "image/webp",
       "bytes": 287940,
       "sha256": "065f800c8d0ca68d309027edd7e416b3bcc817439da6e176f8abf77ac196d9c8",
-      "variable": "__vnAsset47"
+      "variable": "__vnAsset50"
     },
     {
       "source": "assets/ep1/cg-sea.webp",
       "mime": "image/webp",
       "bytes": 339472,
       "sha256": "b038c976d5390cc3ac45bfba8a9671fbde6da5b913155a02e2dd5fb7f31e02f4",
-      "variable": "__vnAsset48"
+      "variable": "__vnAsset51"
     },
     {
       "source": "assets/ep1/cg-table-small-home.webp",
       "mime": "image/webp",
       "bytes": 210568,
       "sha256": "f00236b6d65aea74dbf133a808717fe1188be9ea41c440909133768fb5c09054",
-      "variable": "__vnAsset49"
+      "variable": "__vnAsset52"
     },
     {
       "source": "assets/ep1/cg-clay.webp",
       "mime": "image/webp",
       "bytes": 189152,
       "sha256": "357fa56d9cb6b4a3de6402a7fc073a939f52362759971fd6effa6bff805c8f84",
-      "variable": "__vnAsset50"
+      "variable": "__vnAsset53"
     },
     {
       "source": "assets/ep1/cg-night-small-home.webp",
       "mime": "image/webp",
       "bytes": 117944,
       "sha256": "dce6b2bab75924e4d808519a59de8f6a6680d06218a4251f375b1f45268ce9cd",
-      "variable": "__vnAsset51"
+      "variable": "__vnAsset54"
     },
     {
       "source": "assets/ep1/borrowed-sea.mp3",
       "mime": "audio/mpeg",
       "bytes": 1977644,
       "sha256": "d17b19a6a5bc70ab9a62bcef677dfdff58b2da54563fb9f8a70ef2657eb14adb",
-      "variable": "__vnAsset52"
+      "variable": "__vnAsset55"
     },
     {
       "source": "assets/ep1/small-table.mp3",
       "mime": "audio/mpeg",
       "bytes": 2001164,
       "sha256": "e8d3ea1343e7dd1405fdbe73815e6002dc590c3baeed5accc4ce4d25c079c231",
-      "variable": "__vnAsset53"
+      "variable": "__vnAsset56"
     },
     {
       "source": "assets/ep1/unanswered.mp3",
       "mime": "audio/mpeg",
       "bytes": 2241164,
       "sha256": "bc256962ca8c9e0e7cc83ac8d427dc493e1b3759da54c1b46c313b9491990715",
-      "variable": "__vnAsset54"
+      "variable": "__vnAsset57"
     },
     {
       "source": "assets/ep1/room-morning.mp3",
       "mime": "audio/mpeg",
       "bytes": 192812,
       "sha256": "20c3864d9ab8be933d401c7285a7545514e1cad39384bf90487a07a81b7604ba",
-      "variable": "__vnAsset55"
+      "variable": "__vnAsset58"
     },
     {
       "source": "assets/ep1/pan-sizzle.mp3",
       "mime": "audio/mpeg",
       "bytes": 112940,
       "sha256": "27b74053e3451efcf939755ef75fff34eb46dc771ffba2037f073175371dd4a8",
-      "variable": "__vnAsset56"
+      "variable": "__vnAsset59"
     },
     {
       "source": "assets/ep1/ceramic-chopsticks.mp3",
       "mime": "audio/mpeg",
       "bytes": 42668,
       "sha256": "62eaaa1576d916fd5ff40270659ad0beeee4d0cc889ebdda8b8b25735c0841fe",
-      "variable": "__vnAsset57"
+      "variable": "__vnAsset60"
     },
     {
       "source": "assets/ep1/train-car.mp3",
       "mime": "audio/mpeg",
       "bytes": 192812,
       "sha256": "3fec1a8022908d3748bd4f1a377d013f07d1c1924081463cbd8d7f7915e1b177",
-      "variable": "__vnAsset58"
+      "variable": "__vnAsset61"
     },
     {
       "source": "assets/ep1/office-air.mp3",
       "mime": "audio/mpeg",
       "bytes": 192812,
       "sha256": "9548261e4633a16e71643b8cdb1a343fd32c696c2e1bf35e3fb33fe3015c327f",
-      "variable": "__vnAsset59"
+      "variable": "__vnAsset62"
     },
     {
       "source": "assets/ep1/clay-box.mp3",
       "mime": "audio/mpeg",
       "bytes": 58412,
       "sha256": "e0831838d42e891fd13c9822f178092ee2c3c4435eaaf80dacfb682ee842fff0",
-      "variable": "__vnAsset60"
+      "variable": "__vnAsset63"
     },
     {
       "source": "assets/ep1/approval-soft.mp3",
       "mime": "audio/mpeg",
       "bytes": 16940,
       "sha256": "58c45a6de2b49168f74e9418ac24c503da67c697037ed61c327ad6f863bcf326",
-      "variable": "__vnAsset61"
+      "variable": "__vnAsset64"
     },
     {
       "source": "assets/ep1/warning-amber.mp3",
       "mime": "audio/mpeg",
       "bytes": 29612,
       "sha256": "a94e0443263d61ddfd0844eb421b5cce549046a3d44b20b1c299d91905e426c8",
-      "variable": "__vnAsset62"
+      "variable": "__vnAsset65"
     },
     {
       "source": "assets/ep1/warning-red.mp3",
       "mime": "audio/mpeg",
       "bytes": 41132,
       "sha256": "dce6fabe57f2fc98229a0af463745e87006a2e959ebebc8a5706660b60dd32c6",
-      "variable": "__vnAsset63"
+      "variable": "__vnAsset66"
     },
     {
       "source": "assets/ep1/bedding-swipe.mp3",
       "mime": "audio/mpeg",
       "bytes": 33068,
       "sha256": "3d8b593e193d68fc4c4b905b8715e617fc18f190309eee32f24bf52e9c6318e1",
-      "variable": "__vnAsset64"
+      "variable": "__vnAsset67"
     },
     {
       "source": "assets/ep1/coast-residue.mp3",
       "mime": "audio/mpeg",
       "bytes": 144812,
       "sha256": "39f24fc8f586fd127480d45b02b6afc582f7a2600cc7551452f7d87052fafcba",
-      "variable": "__vnAsset65"
+      "variable": "__vnAsset68"
     },
     {
       "source": "assets/ep1/neural-release.mp3",
       "mime": "audio/mpeg",
       "bytes": 23468,
       "sha256": "bba852b40ff9152170932b2b023d6d2659cd47f64c6b1b4b934ef8a10ce66906",
-      "variable": "__vnAsset66"
+      "variable": "__vnAsset69"
+    },
+    {
+      "source": "assets/ep2/father-calm.webp",
+      "mime": "image/webp",
+      "bytes": 106712,
+      "sha256": "8262b4cc89c041ca099df635db659e78a0f03c0b8f8305bdd55072e5ed9cbf76",
+      "variable": "__vnAsset70"
+    },
+    {
+      "source": "assets/ep2/father-urgent.webp",
+      "mime": "image/webp",
+      "bytes": 107194,
+      "sha256": "7a92cd4a08fcf405ddfbadc8f6e3feaa4b3f276ad547a5e4a27fb7b28a7056bd",
+      "variable": "__vnAsset71"
+    },
+    {
+      "source": "assets/ep2/father-bowed.webp",
+      "mime": "image/webp",
+      "bytes": 107526,
+      "sha256": "222b95a79d84853af93cf153e7770987c92148efd08b191de082328435583857",
+      "variable": "__vnAsset72"
+    },
+    {
+      "source": "assets/ep2/office-empty-desk.webp",
+      "mime": "image/webp",
+      "bytes": 120848,
+      "sha256": "d9451611740d99583bcfb5ebacbdcd36a7569cd1c28926f5fa5b3ebf6cd6c200",
+      "variable": "__vnAsset73"
+    },
+    {
+      "source": "assets/ep2/jiwoo-home.webp",
+      "mime": "image/webp",
+      "bytes": 104384,
+      "sha256": "6ceb6622c2f5f5fc3d855597ff02895b99fa15cb62f89ae3d5dd063e3958b879",
+      "variable": "__vnAsset74"
+    },
+    {
+      "source": "assets/ep2/cg-father-tablet.webp",
+      "mime": "image/webp",
+      "bytes": 148190,
+      "sha256": "309a3473f47ad4b3513a29f0d1f0d4862408a2d78571e3b02b921e20b256de39",
+      "variable": "__vnAsset75"
+    },
+    {
+      "source": "assets/ep2/cg-clay-street.webp",
+      "mime": "image/webp",
+      "bytes": 136110,
+      "sha256": "2e843e50c97322e16d51bf3fd445dba04ffd4f4c3ada4b43933fe606e5a9771a",
+      "variable": "__vnAsset76"
+    },
+    {
+      "source": "assets/ep2/cg-dream-resort.webp",
+      "mime": "image/webp",
+      "bytes": 237594,
+      "sha256": "eb5eee8d47e083ad65b963ca79842ceb6c75c53e540e4923dacb235ef5feab1a",
+      "variable": "__vnAsset77"
+    },
+    {
+      "source": "assets/ep2/livingroom-air.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 144867,
+      "sha256": "5c630066a2e168885866118cd4144f966f827660bb09e9f66250e074dc435252",
+      "variable": "__vnAsset78"
+    },
+    {
+      "source": "assets/ep2/tablet-slide.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 10076,
+      "sha256": "c0cc69f0fdd815a5402c997e7d643b6264fd28f40a49569ab50f492b8beedce4",
+      "variable": "__vnAsset79"
+    },
+    {
+      "source": "assets/ep2/tablet-off.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 8195,
+      "sha256": "b6a1f0859129c71db7d4c2d184a6ad96a598c146eb504630ded95fd0a1af0ccb",
+      "variable": "__vnAsset80"
+    },
+    {
+      "source": "assets/ep2/street-walk.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 144867,
+      "sha256": "14db1862c038f218f0bc23535ae011723238ae34a075a6651102fe0451f37382",
+      "variable": "__vnAsset81"
+    },
+    {
+      "source": "assets/ep2/serene-dream.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 192828,
+      "sha256": "bc194454404ff36f6b0916ec1a916a7f4c44341a5d4334d325760714f4c3f714",
+      "variable": "__vnAsset82"
+    },
+    {
+      "source": "assets/ep2/ad-cutoff.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 11956,
+      "sha256": "976f45e88fda2bfc6010a15964659df5952493761cc56ab1f3f161fe708d0dbb",
+      "variable": "__vnAsset83"
     }
   ],
   "cssFiles": [
@@ -534,7 +670,10 @@
     "episode-one.js",
     "episode-one-stage.js",
     "episode-one-audio.js",
+    "episode-two.js",
     "episode-one-reading.js",
+    "episode-two-reading.js",
+    "sequence-19-22.js",
     "app.js"
   ],
   "modules": {
@@ -561,8 +700,8 @@
         "isSeen",
         "addSeen"
       ],
-      "sourceSha256": "81025ab3b6e39a89a4d520fb34f4a39ec995b8bcd932ab6750718d007774fde4",
-      "compiledSourceSha256": "41d21744ebc53277b6345eb198a602a35b4dce5a0589f15d683ec4751631d6f2"
+      "sourceSha256": "c7c4046df6d3fe8cab4935ddb88b2620028d3ee3158227a074a29f9ba1218828",
+      "compiledSourceSha256": "30ba9d5047ad9d8f00af36e55a4384dc2c01304a2f3883ab45b846f900636d69"
     },
     "direction.js": {
       "exports": [
@@ -585,8 +724,8 @@
       "exports": [
         "presentationForBeat"
       ],
-      "sourceSha256": "3a9417a24db178b2c36e8303b92fd5e0b237ebe6e4f6046bdd88dfdef431e88e",
-      "compiledSourceSha256": "3331f4d6cd131ee171c259999bbb7e55e2048b2172f1b4b98828f571b4f703df"
+      "sourceSha256": "b35ef53590728f45ebe389448e1073c4a8220d6bc412fb5ede8fd1ecbc8db5fc",
+      "compiledSourceSha256": "ab5a932d01499531d9fd892ce66c96df1f9f760468810bcab0000b5628661020"
     },
     "neural-stage.js": {
       "exports": [
@@ -617,8 +756,8 @@
       "exports": [
         "EP1_ASSETS"
       ],
-      "sourceSha256": "8c0c9e05f955bd2b807bd185c8d0f63d4f472a3012bc834226fae3468d3acf88",
-      "compiledSourceSha256": "28fbf3fb8de8ab8a26882b07c8d7065b013d3f53d054651cf7d7e21684c01b15"
+      "sourceSha256": "7deb30aafce9a2329f90994a8144b87596e2c9d69dc07c9042d406736589dc04",
+      "compiledSourceSha256": "00604e75f633661332dcbecb59be3efe15665e1aebf971d3a01b1edcf106c977"
     },
     "episode-one.js": {
       "exports": [
@@ -632,15 +771,24 @@
       "exports": [
         "EpisodeOneStage"
       ],
-      "sourceSha256": "745793a05ed1e8c92937cb51883827657a00502d0fae84118d8321cf4230319c",
-      "compiledSourceSha256": "0e070020c971a9c9efd722467aaefb7c1ea10912fa3048f18cefffc52c1bdf1a"
+      "sourceSha256": "0951b27db18853e9ede28f43c004b6e0dfc39a47e720702b14167c1bff203e38",
+      "compiledSourceSha256": "1a806e7cfb2cd69f1a857b537cebdaf89c6ceb1eb54c5e5d99c25e5a544c9ea6"
     },
     "episode-one-audio.js": {
       "exports": [
         "createEpisodeOneAudio"
       ],
-      "sourceSha256": "2333dcf4d239eec5b7847abcfd04f535f825aaef8b4e513e4818c45d23e70d35",
-      "compiledSourceSha256": "e3e98f81b065f847740f80d5a3baa3b35b4e0488434888df7b673129bd32c6e9"
+      "sourceSha256": "aa558efb5e3209030ece3aacdfc9acf6d6abbf7ee9214e379cebf1323444607a",
+      "compiledSourceSha256": "9123b61fe04e6595ff879412ba65866f45244016708317b9439e504adfeea783"
+    },
+    "episode-two.js": {
+      "exports": [
+        "episodeTwoSpeaker",
+        "EPISODE_TWO_SCENES",
+        "episodeTwoDirection"
+      ],
+      "sourceSha256": "e973857abb31d2b1ee72ca4506a5c187496f8557092eea15132ce8895daf4a4f",
+      "compiledSourceSha256": "d66cba6596c6580b2a0337caa980db2b9bd3e1e52084600f213e076e7f3bca6d"
     },
     "episode-one-reading.js": {
       "exports": [
@@ -651,10 +799,36 @@
       "sourceSha256": "92fbe0e976b54d759ef6afcdae4d74bc5d9024d78195c64b270a4ac998f5adda",
       "compiledSourceSha256": "90cfe384a20545e3c7fea3db39a42111fc50d4cde6dbc8db71ccd704613f5626"
     },
+    "episode-two-reading.js": {
+      "exports": [
+        "episodeTwoReadingPage",
+        "episodeTwoPreviousPage",
+        "episodeTwoSpeaker"
+      ],
+      "sourceSha256": "f69b7743f45a9ed12708b6918dc1b55f03c37d9d7e504d66d427c2d87d30fd61",
+      "compiledSourceSha256": "8beebf9b3951d12118aa831bf935adb53b4c6a0b5e5949bf1811a63e14d2e846"
+    },
+    "sequence-19-22.js": {
+      "exports": [
+        "SEQUENCE_19_22_CHAPTERS",
+        "SEQUENCE_19_22_ASSETS",
+        "SEQUENCE_19_22_CHAPTER_INFO",
+        "SEQUENCE_19_22_SCENES",
+        "isSequence1922Chapter",
+        "sequenceSpeaker",
+        "sequenceBeatDirection",
+        "sequenceReadingPage",
+        "sequencePreviousPage",
+        "nextSequence1922Progress",
+        "previousSequence1922Progress"
+      ],
+      "sourceSha256": "d685b3a44fb41988e84874fa5b2158fca4e8043854b148aec72065f6bb833141",
+      "compiledSourceSha256": "1a726a896323d59c6503f7666ae4947d13a58d14b26fed49f1d34f3fb6987c27"
+    },
     "app.js": {
       "exports": [],
-      "sourceSha256": "dc37dde2100c4f1bfb9414a15d18f143d2249dd890a452e6f0349b5f3a431760",
-      "compiledSourceSha256": "cf0b7639c1e33843300d5c977013b116e3310a62e68cb99955abcb7c9b24febb"
+      "sourceSha256": "1b9b9eacdf880eb200ea492c4c0ea44d39856db78641a285415d359fc562047c",
+      "compiledSourceSha256": "f4e3ebcf9a73d141cff267e86b1d1c03b68bbaa106e2836437beec6964b76162"
     }
   },
   "inlineScriptsParsed": 2,
