@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 47515086,
-  "sha256": "64b54207830b344cc5d85cd78516fd87299070639839f5f7246199e8830d9271",
+  "offlineBytes": 47515889,
+  "sha256": "285b7b6cf1f29857ccf4515f0288482157635cbb3a6573e2e359755f1d7557a3",
   "storyChapters": 128,
   "storyAssetKeys": 36,
   "ep1AssetKeys": [
@@ -671,8 +671,8 @@
     },
     "app.js": {
       "exports": [],
-      "sourceSha256": "af054a9c406f30cb8484ec5d873ce14d5a3dcc6eea358f5d88f9ddb35145d375",
-      "compiledSourceSha256": "d247bb2d29f3e588e98eba7f7717ac6be61cbb8c23bdc92bf8499492c05a5261"
+      "sourceSha256": "93ea975cad7be0b254adc7a9029799862090ca270e8d4b3e70a126f2ebfa4a91",
+      "compiledSourceSha256": "02431e1c8c422bda9f33b13deb23d5cac9ffded47171829ecd6789ab5ef2daf8"
     }
   },
   "inlineScriptsParsed": 2,

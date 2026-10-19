@@ -308,6 +308,7 @@ function renderBeat({ revisit = false } = {}) {
   $('readingAnnouncement').textContent = ''; $('storyBox').scrollTop = 0; storyText.scrollTop = 0;
   const chapter = chapterAt(), beat = beatAt();
   if (!chapter || !beat) { renderChapterEnd(); return; }
+  $('stage').dataset.chapterId = chapter.id;
   currentReadingPage = episodeOneReadingPage(chapter, progress.beatIndex);
   currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex);
   if (currentEpisodeCue && currentReadingPage?.entries.length > 1) currentEpisodeCue.focus = currentReadingPage.focus;
