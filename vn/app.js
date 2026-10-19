@@ -328,7 +328,7 @@ function renderBeat({ revisit = false } = {}) {
   const dreamEnd = dreamStart >= 0 ? chapter.beats.findIndex((item, index) => index > dreamStart && item.text?.includes('서인은 버튼을 눌렀다')) : -1;
   const inJiwooDream = dreamStart >= 0 && progress.beatIndex >= dreamStart && (dreamEnd < 0 || progress.beatIndex <= dreamEnd);
   $('stage').classList.toggle('ep2-jiwoo-dream', inJiwooDream);
-  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.svg' : (homeScene ? EP1_ASSETS[currentEpisodeCue.index >= 196 ? 'homeNight' : 'homeMorning'] : story.assets?.[scene]);
+  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (homeScene ? EP1_ASSETS[currentEpisodeCue.index >= 196 ? 'homeNight' : 'homeMorning'] : story.assets?.[scene]);
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
