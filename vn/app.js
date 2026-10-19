@@ -15,6 +15,7 @@ import { EpisodeOneStage } from './episode-one-stage.js?v=ep12-20261019-r3';
 import { createEpisodeOneAudio } from './episode-one-audio.js?v=ep12-20261019-r3';
 import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep12-20261019-r3';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
+import { createTitleAtmosphere } from './title-atmosphere.js';
 import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r3';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r3';
 
@@ -22,6 +23,7 @@ const story = normalizeStory(window.STORY);
 document.documentElement.dataset.vnBuild='ep12-20261019-r3';
 const $ = (id) => document.getElementById(id);
 const titleScreen = $('titleScreen'), gameScreen = $('gameScreen');
+createTitleAtmosphere({screen:titleScreen,canvas:$('titleAtmosphere')});
 const modal = $('modal'), modalContent = $('modalContent');
 const episodeTeaser = createEpisodeOneTeaser({ dialog: $('episodeTeaser'), video: $('teaserVideo'), skip: $('teaserSkip'), pause: $('teaserPause'), status: $('teaserStatus') });
 const stageImage = $('stageImage'), portraitWrap = $('portraitWrap'), portraitImage = $('portraitImage');
