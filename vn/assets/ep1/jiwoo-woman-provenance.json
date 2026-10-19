@@ -53,5 +53,7 @@
       "runtime": "vn/assets/ep1/cg-clay-woman.webp",
       "transparent": false
     }
-  ]
+  ],
+  "supersededBy": "jiwoo-body-provenance.json",
+  "revisionNote": "이 문서는 첫 얼굴·성별 정정의 과거 제출 기록이다. 작가가 몸 전체가 여전히 남성처럼 보인다고 재지적해 전신 비례를 재작화했으며 현재 runtime은 jiwoo-body-provenance.json을 따른다."
 }
