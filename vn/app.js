@@ -9,14 +9,17 @@ import { presentationForBeat } from './neural-cues.js';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js';
-import { EP1_ASSETS } from './ep1-assets.js';
-import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js';
-import { EpisodeOneStage } from './episode-one-stage.js';
-import { createEpisodeOneAudio } from './episode-one-audio.js';
-import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js';
+import { EP1_ASSETS } from './ep1-assets.js?v=ep12-20261019-r2';
+import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=ep12-20261019-r2';
+import { EpisodeOneStage } from './episode-one-stage.js?v=ep12-20261019-r2';
+import { createEpisodeOneAudio } from './episode-one-audio.js?v=ep12-20261019-r2';
+import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep12-20261019-r2';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
+import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r2';
+import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r2';
 
 const story = normalizeStory(window.STORY);
+document.documentElement.dataset.vnBuild='ep12-20261019-r2';
 const $ = (id) => document.getElementById(id);
 const titleScreen = $('titleScreen'), gameScreen = $('gameScreen');
 const modal = $('modal'), modalContent = $('modalContent');
@@ -37,7 +40,12 @@ let pendingChapter = null;
 const audio = createAudioDirector(() => store.settings);
 const neuralStage = new NeuralStage($('neuralStage'));
 const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS);
-const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS);
+const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {onStatus:(status,tracks={})=>{
+  $('soundToggle').dataset.audioStatus=status;
+  $('soundToggle').dataset.music=tracks.music||'';
+  $('soundToggle').dataset.ambience=tracks.ambience||'';
+  $('soundToggle').setAttribute('aria-description',({playing:'음악 또는 장면 소리가 재생 중입니다.',silent:'이 장면은 조용히 재생합니다.',ready:'소리를 재생할 준비가 되었습니다.',blocked:'소리를 다시 눌러 재생해 주세요.',unavailable:'이 브라우저는 장면 음향을 지원하지 않습니다.'})[status]||'');
+}});
 let currentEpisodeCue = null;
 let currentReadingPage = null;
 let currentPerception = null, lastCommunicationGroup = '';
@@ -163,7 +171,7 @@ function renderChart(chart, compact = false) {
 function renderDirection(beat, { quiet = false } = {}) {
   const direction = beat.direction;
   stageImage.dataset.mood = direction?.mood ?? 'quiet';
-  stageImage.dataset.episodeNight=String(Boolean(currentEpisodeCue&&currentEpisodeCue.index>=196));
+  stageImage.dataset.episodeNight=String(currentEpisodeCue?.timeOfDay==='night');
   stageImage.dataset.camera = direction?.camera ?? 'wide';
   stageImage.dataset.effect = direction?.effect ?? '';
   stageImage.classList.toggle('reduced-motion', store.settings.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -284,7 +292,7 @@ function play(chapterId = story.chapters[0]?.id, beatIndex = 0, reset = false, s
   titleScreen.hidden = true; gameScreen.hidden = false; pendingChapter = null;
   lastCommunicationGroup = '';
   renderBeat({ revisit: !reset });
-  if (chapterId === '1' && store.settings.sound) episodeAudio.unlock().then(ok=>{if(ok&&currentEpisodeCue&&!gameScreen.hidden&&!modal.open)episodeAudio.render(currentEpisodeCue,{quiet:true});});
+  if (currentEpisodeCue && store.settings.sound) episodeAudio.unlock().then(ok=>{if(ok&&currentEpisodeCue&&!gameScreen.hidden&&!modal.open)episodeAudio.render(currentEpisodeCue,{quiet:true});});
 }
 
 function recordBacklog(chapter, beat, index) {
@@ -309,8 +317,8 @@ function renderBeat({ revisit = false } = {}) {
   const chapter = chapterAt(), beat = beatAt();
   if (!chapter || !beat) { renderChapterEnd(); return; }
   $('stage').dataset.chapterId = chapter.id;
-  currentReadingPage = episodeOneReadingPage(chapter, progress.beatIndex);
-  currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex);
+  currentReadingPage = episodeOneReadingPage(chapter, progress.beatIndex) || episodeTwoReadingPage(chapter, progress.beatIndex);
+  currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex) || episodeTwoDirection(chapter, progress.beatIndex);
   if (currentEpisodeCue && currentReadingPage?.entries.length > 1) currentEpisodeCue.focus = currentReadingPage.focus;
   $('storyBox').classList.toggle('reading-page', Boolean(currentReadingPage?.entries.length > 1));
   $('chapterLabel').textContent = chapter.label;
@@ -321,8 +329,7 @@ function renderBeat({ revisit = false } = {}) {
   $('progressBar').style.width = `${total ? ((pageEnd + 1) / total) * 100 : 0}%`;
   stageImage.className = 'stage-image';
   const scene = currentEpisodeCue?.background || beat.scene || 'room';
-  const homeScene = currentEpisodeCue && ['room', 'kitchen'].includes(scene);
-  const background = homeScene ? EP1_ASSETS[currentEpisodeCue.index >= 196 ? 'homeNight' : 'homeMorning'] : story.assets?.[scene];
+  const background = currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene];
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
@@ -344,7 +351,7 @@ function renderBeat({ revisit = false } = {}) {
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
   directionCard.hidden = Boolean(currentEpisodeCue) || Boolean(currentPerception) || !beat.direction?.visual;
-  speakerNode.textContent = currentReadingPage?.speaker ?? beat.speaker ?? '';
+  speakerNode.textContent = currentReadingPage?.speaker ?? episodeTwoSpeaker(chapter,progress.beatIndex) ?? beat.speaker ?? '';
   speakerNode.hidden = primary || !speakerNode.textContent;
   storyText.className = `story-text${beat.kind === 'system' ? ' system' : ''}${beat.direction?.emphasis ? ' authored-emphasis' : ''}`;
   choiceArea.replaceChildren();
@@ -475,7 +482,7 @@ function goPrevious() {
   if (gameScreen.hidden || modal.open || document.querySelector('.end-screen')) return;
   if ($('stage').classList.contains('ui-hidden')) { setUiHidden(false); return; }
   pauseReading();
-  const pageIndex = episodeOnePreviousPage(chapterAt(), progress.beatIndex);
+  const pageIndex = episodeOnePreviousPage(chapterAt(), progress.beatIndex) ?? episodeTwoPreviousPage(chapterAt(), progress.beatIndex);
   const previous = pageIndex === null ? previousProgress(progress, story) : { ...progress, beatIndex: pageIndex, finished: false };
   if (previous.chapterId !== progress.chapterId || previous.beatIndex !== progress.beatIndex) {
     progress = previous; if (!transientBacklog) saveCurrent(); renderBeat({ revisit: true });
@@ -622,6 +629,7 @@ function openChapters() {
 
 function chapterMoments(chapter) {
   if (episodeOneDirection(chapter, 0)) return EPISODE_ONE_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true}));
+  if (episodeTwoDirection(chapter, 0)) return EPISODE_TWO_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true}));
   const seenVisuals = new Set(), seenSignals = new Set(); let previousPlace = '';
   return chapter.beats.flatMap((beat, beatIndex) => {
     const direction = beat.direction, place = direction?.place || '';
@@ -647,7 +655,7 @@ function openChapterScenes(chapter) {
     const card = document.createElement('div'); card.className = 'chapter-card';
     const copy = document.createElement('div'); copy.className = 'chapter-copy';
     const title = document.createElement('strong'); title.textContent = `${String(index + 1).padStart(2, '0')} · ${moment.place || moment.signal?.title || '시각 기록'}`;
-    const detail = document.createElement('span'); detail.textContent = moment.authored ? '1화 체험판 · 이 장면에서 시작' : moment.signal ? `${moment.signal.sender ? `${moment.signal.sender} · ` : ''}이 장면에서 시작` : `이 장면에서 시작 · ${moment.visualType ? '정보 패널 포함' : '장소 전환'}`;
+    const detail = document.createElement('span'); detail.textContent = moment.authored ? `${chapter.label} 연출판 · 이 장면에서 시작` : moment.signal ? `${moment.signal.sender ? `${moment.signal.sender} · ` : ''}이 장면에서 시작` : `이 장면에서 시작 · ${moment.visualType ? '정보 패널 포함' : '장소 전환'}`;
     const button = document.createElement('button'); button.className = 'small-button'; button.type = 'button'; button.textContent = '이곳에서 읽기';
     button.addEventListener('click', () => { closeModal(); play(chapter.id, moment.beatIndex, true); });
     copy.append(title, detail); card.append(copy, button); list.append(card);
@@ -672,7 +680,7 @@ function openSettings() {
   });
   [
     ['instant', '문장 바로 표시', '한 글자씩 기다리지 않고 문장 전체를 표시합니다. 진행은 직접 누릅니다.'],
-    ['sound', '음악과 장면 효과', '1화의 자체 작곡 음악과 생활 소리, 장면 효과음을 재생합니다. 언제든 끌 수 있습니다.'],
+    ['sound', '음악과 장면 효과', '자체 작곡 음악과 생활 소리, 장면 효과음을 재생합니다. 언제든 끌 수 있습니다.'],
   ].forEach(([key, labelText, description]) => {
     const row = document.createElement('div'); row.className = 'setting-row'; const label = document.createElement('label'); label.textContent = labelText;
     const out = document.createElement('output'); out.textContent = description; label.append(out); const input = document.createElement('input'); input.type = 'checkbox'; input.checked = store.settings[key]; input.setAttribute('aria-label', labelText);

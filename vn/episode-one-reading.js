@@ -1,4 +1,4 @@
-import { episodeOneDirection } from './episode-one.js';
+import { episodeOneDirection } from './episode-one.js?v=ep12-20261019-r2';
 import { presentationForBeat } from './neural-cues.js';
 
 // These are reading pages, not new story beats. Source indices remain the
