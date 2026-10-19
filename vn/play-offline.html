@@ -844,6 +844,27 @@ input.chapter-search,
   }
   .stage:has(> .nav-tools) .story-box:not(.primary-perception) .story-text { line-height: 1.6; }
 }
+/* The long household labels need their own line at phone reading sizes. */
+@media (max-width: 640px) {
+  .stage[data-chapter-id="2"] .neural-ledger-field {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+    padding-block: 12px;
+  }
+  .stage[data-chapter-id="2"] .neural-ledger-label {
+    white-space: normal;
+    word-break: keep-all;
+  }
+  .stage[data-chapter-id="2"] .neural-ledger-value { text-align: left; }
+  .stage[data-chapter-id="20-1"] .direction-card {
+    left: 16px;
+    right: 16px;
+    width: auto;
+    padding: 14px 16px;
+  }
+  .stage[data-chapter-id="20-1"] .direction-card .visual-title { font-size: 16px; line-height: 1.5; }
+  .stage[data-chapter-id="20-1"] .direction-card .visual-body { font-size: 14px; line-height: 1.7; }
+}
 @media (prefers-reduced-motion: reduce) {
   .nav-tools,
   .nav-tools button { transition: none !important; }
@@ -8777,6 +8798,7 @@ function renderBeat({ revisit = false } = {}) {
   $('readingAnnouncement').textContent = ''; $('storyBox').scrollTop = 0; storyText.scrollTop = 0;
   const chapter = chapterAt(), beat = beatAt();
   if (!chapter || !beat) { renderChapterEnd(); return; }
+  $('stage').dataset.chapterId = chapter.id;
   currentReadingPage = episodeOneReadingPage(chapter, progress.beatIndex);
   currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex);
   if (currentEpisodeCue && currentReadingPage?.entries.length > 1) currentEpisodeCue.focus = currentReadingPage.focus;
