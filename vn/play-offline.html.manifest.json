@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 47515086,
-  "sha256": "64b54207830b344cc5d85cd78516fd87299070639839f5f7246199e8830d9271",
+  "offlineBytes": 47515349,
+  "sha256": "e4a5e83c3a0d33d4cc65a311e8f617e2d1cdd34dcb81c100d604dce376ec10ed",
   "storyChapters": 128,
   "storyAssetKeys": 36,
   "ep1AssetKeys": [
