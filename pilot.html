@@ -539,7 +539,7 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 #channel.on .ch-folder .ch-row:nth-of-type(1){animation:fxIn .3s 2.6s both}#channel.on .ch-folder .ch-row:nth-of-type(2){animation:fxIn .3s 2.8s both}#channel.on .ch-stamp{animation:fxIn .3s 3.5s both}
 #channel.on .ch-cap{animation:fxIn .1s 5.1s both}#channel.on .ch-cap div:nth-child(1){animation:fxIn .4s 5.1s both}#channel.on .ch-cap div:nth-child(2){animation:fxIn .4s 5.8s both}
 @keyframes chFill{to{transform:scaleX(1)}}
-/* EP21 nightload: 시범 지원으로 옮겨 간 예비량, 의료 예약 487 → 31 → 7건 */
+/* EP21: 이용자가 고른 계약과 안내 정산액의 불일치 */
 #nightload .veil,#restore .veil{background:radial-gradient(circle at 50% 30%,#0b1416,#030507 72%)}
 .nl-wrap{width:min(440px,100%);font:10px/1.7 ui-monospace,monospace;color:#97a2ad;text-align:left}
 .nl-top{display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px}.nl-top b{font:800 clamp(26px,8vw,38px)/1 ui-monospace,monospace;color:#e9f1f4}
@@ -1529,8 +1529,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="setpiece" id="overseen"><div class="veil"></div><div class="sp-center"><div class="ov-wrap"><div class="sp-label">RECOVERY · DAY 03 · 도윤</div><div class="ov-fig"></div><div id="ovGhosts"></div></div></div><div class="ov-glare"></div><div class="ov-lid t"></div><div class="ov-lid b"></div><div class="ov-say"><div>“보여요.”</div><div>“뭐가.”</div><div>“너무 많이.”</div></div></div>
 <div class="setpiece" id="leakclock"><div class="veil"></div><div class="sp-center"><div class="lk-wrap"><div class="sp-label" style="text-align:center">SECURITY · EXTERNAL EXPOSURE</div><div class="lk-top"><div>외부 자동 수집까지<b id="lkT">12:31</b></div><div class="lk-st" id="lkSt">노출 진행 중</div></div><svg class="lk-svg" viewBox="0 0 320 110"><path class="ln" pathLength="100" d="M8 100 H32 V92 H56 V84 H80 V76 H104 V68 H128 V60 H152 V52 H176 V44 H200 V36 H224 V28 H248 V20 H262"/><g class="ev"><line x1="62" y1="6" x2="62" y2="106"/><text x="65" y="14">질문</text></g><g class="ev e2"><line x1="110" y1="6" x2="110" y2="106"/><text x="113" y="14">격리</text></g><g class="ev e3"><line x1="146" y1="6" x2="146" y2="106"/><text x="149" y="14">계정 차단</text></g><g class="stop"><line x1="262" y1="6" x2="262" y2="106"/><text x="226" y="104">미러 중단</text></g></svg><div class="lk-even">사람이 질문을 받든, 계정이 끊기든 — 같은 간격.</div><div class="lk-hyp">인간 행위 가설을 제외합니까? → 네 · 비인간 전송 경로 재분석</div><div class="lk-people"><span>열람자 01</span><span>02</span><span>03</span><span>박선호</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span><span>11</span></div><div class="lk-rows"><div>감사 서버<em>시각 불일치</em></div><div>백업<em>시각 불일치</em></div><div>복구 노드<em>시각 불일치</em></div><div id="lkHit">규정 준수 미러<em>업데이트 = 노출 시작</em></div><div>외부 감사 대기열<em>시각 불일치</em></div></div><div class="lk-msg m1" id="lkM1">분류 규칙 충돌 확인 · 외부 감사 미러 자동 복제 중</div><div class="lk-msg m2">계약 가격 상한 일부 수집 확인 · 경쟁사 크롤러 2건<br>예상 협상 비용 <b>+6.3%</b></div></div></div></div>
 <div class="setpiece" id="channel"><div class="veil"></div><div class="sp-center"><div class="ch-wrap"><div class="sp-label" style="text-align:center">FORENSIC · PERSONAL CHANNEL · 박선호</div><div class="ch-scan"><i></i></div><div class="ch-row ch-zero"><span>회사 자료</span><b>0건</b></div><div class="ch-folder"><small>PRIVATE · MEDICAL</small><strong>배우자 의료 기록</strong><div class="ch-row"><span>희귀질환</span><b>세 번째 치료</b></div><div class="ch-row"><span>개인 의료 AI 비교 후보</span><b>4</b></div><div class="ch-n"><span>+ 회사 전략 연산</span><b id="chN">4</b><span class="ch-stamp">무단 사용</span></div></div><div class="ch-cap"><div>박선호는 숨기고 있었다.</div><div>그게 무엇인지 틀렸다.</div></div></div></div></div>
-<div class="setpiece" id="nightload"><div class="veil"></div><div class="sp-center"><div class="nl-wrap"><div class="sp-label" style="text-align:center">NIGHT PILOT · EAST NODE 27</div><div class="nl-top"><b id="nlClock">22:30</b><span>패키지 강도 상한 14% 완화</span></div><div class="nl-map" id="nlMap"></div><div class="nl-cap" id="nlCap"></div><div class="nl-q" id="nlQ"><span>희귀질환 다중 검증 대기</span><div class="bar"><i id="nlBar"></i></div><b id="nlQv">—</b></div><div class="nl-cases" id="nlCases"><div class="nl-head"><span>비긴급 고복잡도 의료 검증</span><b id="nlN">—</b></div><div class="nl-crit" id="nlCrit"></div><div class="nl-box" id="nlBox"></div></div><div class="nl-rec" id="nlRec"><small>CASE 1 / 7 · 치료 예약 08:00</small><strong>보호자 문해린</strong>완료 예정 06:00 · 치료 08:00</div></div></div></div>
-<div class="setpiece" id="restore"><div class="veil"></div><div class="sp-center"><div class="nl-wrap"><div class="sp-label" style="text-align:center">PILOT ADJUSTED · 14% → 8%</div><div class="rs-sub">동부 27번 6,214가구 · 서인·윤세라 공동 승인</div><canvas class="rs-cv" id="rsCv" width="640" height="300"></canvas><div class="nl-top"><b id="rsClock">01:40</b><span>희귀질환 검증 대기</span></div><div class="nl-q red" id="rsQ"><span>예상 지연</span><div class="bar"><i id="rsBar" style="width:74%"></i></div><b id="rsQv">조정 적용</b></div><div class="rs-foot" id="rsFoot">예약 전 완료 예상 · 검증은 진행 중</div></div></div></div>
+<div class="setpiece" id="nightload"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">동부 27번 · 신청한 집만 변경</div><div class="sc-card" data-t=".2"><small>이용자가 본 안내</small><strong>신청 접수</strong></div><div class="sc-card" data-t="1.4"><small>일괄 실행 뒤 정산</small><strong class="sc-red">차액 회수</strong></div><div class="sc-row" data-t="3"><span>오늘 밤</span><b>계약 변경 실행</b></div><div class="sc-row" data-t="4"><span>잘못 안내된 차액</span><b class="sc-gold">회수 유예 · 미확정</b></div><div class="sc-q s" data-t="5.2">“끝난 데까지만 닫죠.”</div></div></div></div>
 <div class="setpiece" id="twowants"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">가족 연계 계정 · 지우</div>
 <div class="sc-card" data-t=".2"><small>NOTICE</small>수면 광고 수익 재개 예정. · 퇴사 처리: 취소</div>
 <div class="sc-row" data-t="1"><span>아빠 치료 등급</span><b class="sc-red">하향 · 가족 토큰 안정성 점수 하락</b></div>
@@ -1676,29 +1675,19 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="fb-grid"><i data-t="3.7" data-k="6.3">수면 보충</i><i data-t="3.85" data-k="6.4">직무 교육</i><i data-t="4" data-k="6.5">가족 돌봄</i><i data-t="4.15" data-k="6.6">건강 관리</i><i data-t="4.3" data-k="6.7">개인 취미</i><i data-t="4.45" data-k="6.8">감정 회복 콘텐츠</i></div></div>
 <div class="sc-q s" data-t="5.2"><small>서인</small>“네 칸을 비워 놓고 거기에 또 답을 넣으면.” “안 비운 거잖아요.”</div>
 <div class="fb-white" data-t="7.3">공백 시간: 추천 없음.</div></div></div></div>
-<div class="setpiece" id="recount43"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">제4 의료 검증 예비층 · 자발적 공유 시범</div>
-<div class="sc-row" data-t=".1"><span id="rcL">설명회 직후 참여율</span><b class="sc-n" id="rcN">58%</b></div>
-<div class="rc-bar"><i id="rcB"></i></div>
-<div class="rc-why" data-t="1"><small>참여 사유 · 익명</small><p data-t="1.1">세 번이면 충분하다고 생각해서.</p><p data-t="1.4">서인 님도 모른다고 했으니까 오히려 믿음이 가서.</p><p class="sc-gold" data-t="1.8">서인 님이 말했으니까.</p></div>
-<div class="sc-card" data-t="2.6"><small>오후 4시 · 인지안전실 신고 · 반응 7</small>“다들 했는데 왜 안 해요?” “아이 검사 일정이 있습니다.” <b class="sc-red">“서인도 위험하다고 안 했잖아요.”</b></div>
-<div class="sc-q s" data-t="3.6"><small>서인</small>“저 사람까지 밀어서 만든 숫자면요.”</div>
-<div data-t="4.3"><span class="sc-tag">조직별 참여율 표시 제거</span><span class="sc-tag">개인 참여 상태 완전 비공개</span><span class="sc-tag">24시간 무기록 철회</span><span class="sc-tag">설명회 참석과 신청 기록 분리</span></div>
-<div class="sc-row" data-t="5"><span>기존 신청</span><b class="sc-red">전부 취소 · 다시 고르게</b></div>
-<div class="sc-q s" data-t="8.3"><small>강연우</small>“28퍼센트가 사라졌네요.”</div>
-<div class="sc-q" data-t="9"><small>백윤하</small>“다 진짜였어요.” “구분이 안 됐던 거죠.”</div></div></div></div>
-
-<div class="setpiece" id="samethree"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">자발적 야간 인지 공급 풀 · +3.0 TOKEN · 같은 조건</div>
+<div class="setpiece" id="recount43"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">직원의 의료 AI 이용권 · 재동의</div><div class="sc-row" data-t=".1"><span id="rcL">설명회 직후 참여율</span><b class="sc-n" id="rcN">58%</b></div><div class="rc-bar"><i id="rcB"></i></div><div class="sc-card" data-t="1.8"><small>여섯 명 팀 · 조직 평균 83%</small>“이것까지 보여 줘야 안 해도 되는 건 아니죠?”</div><div class="sc-row" data-t="3.2"><span>조직 평균 · 독려 알림</span><b class="sc-red">표시 중지</b></div><div class="sc-row" data-t="4.3"><span>기존 신청</span><b>실행하지 않음 · 다시 선택</b></div><div class="sc-q" data-t="7.5">“다음 주 참여한다고 적지는 말아 주세요.”</div></div></div></div>
+<div class="setpiece" id="samethree"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">광고꿈 야간 추가 계약 모집 · +3.0 TOKEN · 같은 조건</div>
 <div class="st-reg" data-t=".1"><span>동부 27번</span><i><b id="stA"></b></i><em id="stAn">0%</em></div>
 <div class="st-reg" data-t=".2"><span>남부 14번</span><i><b id="stB"></b></i><em id="stBn">0%</em></div>
 <div class="st-reg" data-t=".3"><span>중앙 6번</span><i><b id="stC"></b></i><em id="stCn">0%</em></div>
 <div class="st-reg" data-t=".4"><span>서북 3번</span><i><b id="stD"></b></i><em id="stDn">0%</em></div>
-<div class="sc-row" data-t="2"><span>동부+남부 · 인구 31%</span><b class="sc-gold">추가 공급의 68%</b></div>
-<div class="sc-row" data-t="2.4"><span>추가 인지 공급 지역 편중도</span><b>높음 · <span class="sc-red">경고 아님</span></b></div>
+<div class="sc-row" data-t="2"><span>동부+남부 · 인구 31%</span><b class="sc-gold">추가 신청의 68%</b></div>
+<div class="sc-row" data-t="2.4"><span>추가 계약 지역 편중도</span><b>높음 · <span class="sc-red">경고 아님</span></b></div>
 <div class="sc-card" data-t="3.2"><small>오후 4시 11분 · 어머니 · 프라이팬 소리</small>“안 해도 되지. 그래서 한 건데.”<br>“이번 주말에 진짜 달걀 좀 사려고.”</div>
 <div class="sc-q s" data-t="4.6"><small>서인 → 운영국</small>지역별 신청 사유 요청</div>
 <div class="sc-card" data-t="5.6" style="border-color:#ffd38a66"><small>운영국 회신</small><b class="sc-gold">비참여 및 참여 사유는 수집하지 않습니다.</b></div>
 <div class="sc-q s" data-t="6.8">자기가 요구했던 규칙이었다.</div></div></div></div>
-<div class="setpiece" id="wantedit"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">지역 편중 경고선 · 인구 비중 대비 추가 공급 1.6배</div>
+<div class="setpiece" id="wantedit"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">지역 편중 경고선 · 인구 비중 대비 추가 신청 1.6배</div>
 <div class="sc-row" data-t=".1"><span>동부 27번</span><b class="sc-red">신규 승인 일시 중지 · 대기 2,931명</b></div>
 <div class="sc-row" data-t=".4"><span>남부 14번 · 40분 뒤</span><b class="sc-red">중지</b></div>
 <div class="sc-row" data-t=".7"><span>편중도</span><b class="sc-mint">조금 낮아짐</b></div>
@@ -1833,7 +1822,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="sc-row" data-t=".1"><span>대파 1단</span><b><span data-k="1.1">입구 2.1</span> → 안쪽 1.9 <span class="sc-gold" data-t="1.4">· 걸어서 0.2</span></b></div>
 <div class="sc-row" data-t=".5"><span>합성 달걀 12구</span><b>0.65 · 담음</b></div>
 <div class="sc-row" data-t=".9"><span data-d="2.4">자연란 12구</span><b><span data-d="2.4">2.80</span> <span class="sc-stamp" data-p="2.2">주말에</span></b></div>
-<div class="sc-card" data-t="3"><small>오후 4시 8분 · 자발적 야간 인지 공급 풀</small><strong>참여 보상 +3.0 TOKEN</strong></div>
+<div class="sc-card" data-t="3"><small>오후 4시 8분 · 광고꿈 야간 추가 계약 모집</small><strong>참여 보상 +3.0 TOKEN</strong></div>
 <div class="sc-row" data-t="3.8"><span>3.0 − 2.80</span><b class="sc-n sc-gold" data-p="4.3">0.2</b></div>
 <div class="sc-q s" data-t="5">대파 한 단, 안쪽까지 걸어가서 번 만큼이었다.</div>
 <div style="margin-top:8px;text-align:center" data-t="5.9"><span class="sc-stamp" style="border-color:#9ff0c6;color:#9ff0c6">신청 완료</span></div></div></div></div>
@@ -1897,15 +1886,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <p class="cp-h1">MC-7302.</p><p class="cp-h2">뒷문 카메라 · 찍혔을 수 있음.</p><p class="cp-h3">수신: 최고위 전략실.</p>
 <i class="cp-rule"></i><p class="cp-last">확인 전.</p></div>
 </div></div></div>
-<div class="setpiece" id="namecount"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">세르젠 자발적 공유 · 공공망 연동</div>
-<div class="nc-search" data-t=".1">서인 ⌕</div>
-<div class="nc-name" data-t=".6" data-k="3.4">SEO-IN CONSENT STANDARD</div>
-<div style="margin-top:2px" data-t="3.6"><span class="sc-stamp">명칭 사용 중단</span></div>
-<div class="sc-row" style="margin-top:8px"><span>참여율</span><b class="sc-n" id="ncP">0%</b></div>
-<div class="sc-row" data-t="1.6"><span>오늘 밤 추가 저부하 가능 가구</span><b>18,420 <span class="sc-gold" data-t="2">· 참여 보상 +2.5 TOKEN</span></b></div>
-<div class="sc-row" data-t="2.6"><span>이름을 빼면 (임채원)</span><b class="sc-red">−21%p · 약 5천 가구</b></div>
-<div class="sc-dots" id="ncDots"></div>
-<div class="sc-q s" data-t="5.9">예측보다 덜 떨어졌다. 예정했던 세 번째 노드는 빠졌다.</div></div></div></div>
+<div class="setpiece" id="namecount"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">김수현 · 오늘 오후 2시까지 확인</div><div class="sc-card" data-t=".2"><small>선지급 보상</small><strong>2.5 TOKEN</strong></div><div class="sc-row" data-t="1.4"><span>철회 뒤 보상</span><b class="sc-red">반환 완료</b></div><div class="sc-row" data-t="2.6"><span>가족 검증 크레딧</span><b>반환 처리 중</b></div><div class="sc-q" data-t="3.8">“돈은 바로 가져가셨잖아요.”</div><div class="sc-card" data-t="5"><small>회사 대체 확인 도착</small><strong class="sc-mint">내일 상담 유지</strong></div><div class="sc-q s" data-t="6.4">“저 대신 안 하겠다고 정하지는 마시고요.”</div></div></div></div>
 <div class="setpiece" id="pathburn"><div class="veil"></div><div class="sp-center"><div class="pb-wrap"><div class="sp-label" style="text-align:center">CENTRAL STRATEGY NET · RECURSIVE BIDDING</div><div class="pb-top"><div class="pb-paths">PATHS<b id="pbPaths">1</b></div><div style="text-align:right">COMPUTE (TOKEN)<b id="pbTok">18,440,000</b></div></div><div class="pb-best">CURRENT BEST <b id="pbBest">—</b><span id="pbRate"></span></div><div class="pb-stage"><svg class="pb-svg" id="pbSvg" viewBox="0 0 320 200" preserveAspectRatio="none"></svg><div class="pb-chips" id="pbChips"></div></div><div class="pb-rec" id="pbRec"><small>ARKADIA AI · RECOMMENDED PATH</small>3차 입찰 −2.4% · 배송 보증 +6.0% · 예상 성공률 61.8%</div></div></div></div>
 <div class="setpiece" id="eh2-voice"><div class="veil"></div><div class="sp-center"><div class="eh2v-file">
 <div class="eh2v-label" data-t=".2">음성 메모 · 지우 · 역 앞</div>
@@ -1949,10 +1930,10 @@ const D={
 18:{a:'#9fe3ff',b:'#c0a4ff',token:'∞',sync:21,ghost:'v2.1',hook:"04-771에 참여한 네 곳 중 이름이 가려져 있던 한 곳이 이번에는 서인을 보고 있었다.",sp:'versionsheet',at:.3,on:"고장 난 날에도 버전 번호가 붙는군요.",w:1000,ms:7400,more:[{sp:'dark08',on:"두 칸 차이.",w:800,ms:6000}]},
 19:{a:'#b8ffe8',b:'#7dbdff',token:'∞',sync:19,ghost:'LEVEL 5',hook:"내일 오후 5시. 냉장동 3번 문으로 오세요.",sp:'node31b',at:.4,on:"검증 정답: A.",w:900,ms:9000},
 20:{a:'#caffea',b:'#8cbcff',token:'∞',sync:18,ghost:'LEVEL 6',hook:"그리고 건물 밖으로 나가는 대신 운영 회의실 층을 눌렀다.",sp:'graybutton',at:.78,on:"이번에는 서명했다.",w:900,ms:7800},
-21:{a:'#b8ffe8',b:'#ffd59b',token:'∞',sync:17,ghost:'RISK MOVED',hook:"서인은 잠긴 주석으로 돌아갔다.",sp:'nightload',at:.5,on:"그제야 서인은 첫 번째 기록을 열었다.",w:900,ms:7800,more:[{sp:'restore',on:"예상 지연: 정상 범위.",w:700,ms:6800}]},
-22:{a:'#c8ffe2',b:'#ffd9a0',token:'∞',sync:16,ghost:'4TH SAFETY',hook:"반대 의견도 함께 첨부했다.",sp:'fourcheck',at:.69,on:"보상 문제가 아닙니다. 아이 문제입니다.",w:700,ms:8400},
-23:{a:'#b8ffe8',b:'#ffcf9a',token:'∞',sync:15,ghost:'71 → 43',hook:"처음으로 그의 말에도 사용 한도가 필요해졌다.",sp:'recount43',at:.67,on:"구분이 안 됐던 거죠.",w:1600,ms:10400},
-24:{a:'#ffd2a0',b:'#a8dfff',token:'∞',sync:14,ghost:'BORROWED NAME',hook:"그의 이름만 있어도 판단을 빌린 척할 수 있었다.",sp:'namecount',at:.8,on:"예측보다 덜 떨어졌다.",w:900,ms:7400},
+21:{a:'#b8ffe8',b:'#ffd59b',token:'∞',sync:17,ghost:'UNSETTLED',hook:'서인은 문손잡이에서 손을 놓고 돌아왔다.',sp:'nightload',at:.5,on:'끝난 데까지만 닫죠.',w:700,ms:7000},
+22:{a:'#c8ffe2',b:'#ffd9a0',token:'∞',sync:16,ghost:'4TH SAFETY',hook:'5시 52분, 그녀의 단말에 새 회의 소집이 들어왔다.',sp:'fourcheck',at:.69,on:'보상 문제가 아닙니다. 아이 문제입니다.',w:700,ms:8400},
+23:{a:'#b8ffe8',b:'#ffcf9a',token:'∞',sync:15,ghost:'71 → 43',hook:'그가 확인을 눌렀다.',sp:'recount43',at:.67,on:'오늘은 제 말 좀 그만 틀죠.',w:700,ms:9200},
+24:{a:'#ffd2a0',b:'#a8dfff',token:'∞',sync:14,ghost:'BORROWED NAME',hook:'그는 단말을 닫지 못한 채 엘리베이터를 탔다.',sp:'namecount',at:.8,on:'돈은 바로 가져가셨잖아요.',w:700,ms:8000},
 25:{a:'#baffda',b:'#ffcf9e',token:'∞',sync:13,ghost:'SAME CHOICE',hook:"같은 방향으로만 움직이지 않았다.",sp:'samethree',at:.58,on:"비참여 및 참여 사유는 수집하지 않습니다",w:1600,ms:9000,more:[{sp:'wantedit',on:"나는 하고 싶었는데.",w:1400,ms:8400}]},
 26:{a:'#ffd9a8',b:'#9fb8ff',token:'∞',sync:12,ghost:'R-17',hook:"서인은 어머니가 모르는 숫자 하나를 혼자 들고 있었다.",sp:'row400',at:.50,on:"신원은 안 보게 해 놨으니까",w:1400,ms:9000},
 27:{a:'#ffe1b8',b:'#9fd0ff',token:'∞',sync:11,ghost:'4,200',hook:"서인은 그 값을 계산하지 않았다.",sp:'onenight',at:.80,on:"같은 이야기였다.",w:1400,ms:10400},
@@ -2063,10 +2044,10 @@ const KEY={
 19:['“제가 싫어하는 거랑 시스템이 틀린 건 다르니까.”','“그때면 이건 다 배송됐을 텐데요.”'],
 '19-1':['“감사에는 납품한 것만 가져가지 마시고요.”','취소 안내: 서인.'],
 20:['“이 조건으로는 요청 못 하겠습니다.”'],
-21:['“계산 말고 결과요.”','“일곱 줄인데.”'],
-22:['아직 말씀드릴 수 없습니다.','“지금 상태를 유지하겠습니다.”'],
-23:['“우리 집에는 네 번째 검증이 없습니다.”','“저 사람까지 밀어서 만든 숫자면요.”'],
-24:['“제가 눌렀는데요.”','“이름은 지금 빼고.”'],
+21:['“계산 말고 결과요.”','“끝난 데까지만 닫죠.”'],
+22:['“아직 말씀드릴 수 없습니다.”','“진행 중인 걸 끊지 않는 쪽을 요청하겠습니다.”'],
+23:['“우리 집에는 네 번째 검증이 없습니다.”','“오늘은 제 말 좀 그만 틀죠.”'],
+24:['“제가 눌렀는데요.”','“저 대신 안 하겠다고 정하지는 마시고요.”'],
 25:['“안 해도 되는데 내가 했다고.”','어머니는 자신이 고른 밤을 받지 못하고 있었다.'],
 26:['“아시면 푸셨을 테니까요.”','“그럼 그거 누르면 누가 좋아지는데요?”'],
 27:['“질문 하나 고르느라.”','“내 밤이기도 해.”'],
@@ -2181,7 +2162,7 @@ function checkAnchor(p){if(!ReadingEffects.enabled())return;const n=state.ep,d=D
  state.timers.push(setTimeout(()=>{if(state.ep!==n)return;if(d.sp)fire();(state.extra||[]).forEach(x=>{const go=()=>{if(state.ep!==n||state.fired.has(x.key))return;if(document.querySelector('.setpiece.on')||(d.sp&&!state.fired.has(n))){state.timers.push(setTimeout(go,900));return}state.fired.add(x.key);showSp(x.m.sp,x.m.ms)};state.timers.push(setTimeout(go,1200))})},700))}
 function epAtmosphere(p){document.body.classList.toggle("deep-read",p>.45);whisper.innerHTML="";whisper.classList.remove("on")}
 function fire(){const d=D[state.ep];if(!d||!d.sp||state.fired.has(state.ep))return;if(document.querySelector('.setpiece.on')){const n=state.ep;state.timers.push(setTimeout(()=>{if(state.ep===n)fire()},900));return}state.fired.add(state.ep);showSp(d.sp,d.ms)}
-const RUN={pathburn:()=>runPathburn(),overseen:()=>runOverseen(),leakclock:()=>runLeak(),channel:()=>runChannel(),nightload:()=>runNight(),restore:()=>runRestore(),records147:()=>runRecords(),rumorpatch:()=>runRumor(),node31b:()=>runNode(),familyday:()=>runFamily(),graybutton:()=>runGray(),namecount:()=>runName(),lastout:()=>runLastOut(),unlink41:()=>runUnlink(),samebox:()=>runSameBox(),tenticks2:()=>runTicks(),midnight100:()=>runMidnight(),views38:()=>runViews(),threesec:()=>runThreeSec(),erased2:()=>runErased(),ledger288:()=>runLedger(),row400:()=>runRow400(),samethree:()=>runSameThree(),recount43:()=>runRecount(),glasspick:()=>runGlass(),thirdplan:()=>runThird(),rejoin147:()=>runRejoin(),sevensec:()=>runSevenSec()};
+const RUN={pathburn:()=>runPathburn(),overseen:()=>runOverseen(),leakclock:()=>runLeak(),channel:()=>runChannel(),records147:()=>runRecords(),rumorpatch:()=>runRumor(),node31b:()=>runNode(),familyday:()=>runFamily(),graybutton:()=>runGray(),lastout:()=>runLastOut(),unlink41:()=>runUnlink(),samebox:()=>runSameBox(),tenticks2:()=>runTicks(),midnight100:()=>runMidnight(),views38:()=>runViews(),threesec:()=>runThreeSec(),erased2:()=>runErased(),ledger288:()=>runLedger(),row400:()=>runRow400(),samethree:()=>runSameThree(),recount43:()=>runRecount(),glasspick:()=>runGlass(),thirdplan:()=>runThird(),rejoin147:()=>runRejoin(),sevensec:()=>runSevenSec()};
 function showSp(id,dur){if(!ReadingEffects.enabled())return;if(ReadingEffects.present(id))return;const el=document.getElementById(id);if(!el)return;if(id==='consent'){consentCardEl.classList.remove('danger');consentCardEl.querySelector('h3').textContent='자발적 동의';consentCardEl.querySelector('p').textContent='본인은 모든 위험을 이해했으며 자발적으로 동의합니다.';const button=consentCardEl.querySelector('.accept');button.textContent='서인의 승인 보기';button.disabled=false}el.classList.remove('held');const hold=el.querySelector('.ldx-hold');if(hold){hold.disabled=false;hold.textContent='머물러 보기'};stage(el);if(RUN[id])RUN[id]();el.classList.add('on');if(!el.classList.contains('interactive')){if(!el.querySelector('.sp-ff')){const f=document.createElement('div');f.className='sp-ff';el.appendChild(f)}state.spCloseT=setTimeout(()=>closeSp(),dur||(state.ep===4?7600:state.ep===8?6200:5200));state.timers.push(state.spCloseT)}}
 // 팝업 배속: 떠 있는 팝업을 한 번 누르면 남은 연출을 빠르게 끝까지 돌리고, 한 번 더 누르면 닫는다
 function fastForward(el){if(el.classList.contains('fast')){closeSp();return}el.classList.add('fast');(el.getAnimations?el.getAnimations({subtree:true}):[]).forEach(a=>{try{a.playbackRate=8}catch(e){}});if(state.ff){const f=state.ff;state.ff=null;f()}clearTimeout(state.spCloseT);state.spCloseT=setTimeout(()=>closeSp(),1800);state.timers.push(state.spCloseT)}
@@ -2216,23 +2197,7 @@ function runLeak(){const T=$('lkT'),St=$('lkSt'),C=mkClock(),_=T.classList.remov
  C.at(4600,()=>$('lkHit').classList.add('hit'));C.at(5900,()=>{stop=true;T.textContent='04:06';T.classList.add('ok');St.textContent='미러 중단 · 차단 완료';St.className='lk-st ok';const m=$('lkM1');m.textContent='미러 중단 · 외부 노출 차단 완료';m.classList.add('ok')})}
 // 14화: 박선호의 개인 채널. 치료 후보 4개가 회사 연산을 붙이자 27개
 function runChannel(){const N=$('chN'),C=mkClock();N.textContent='4';for(let k=5;k<=27;k++)C.at(3500+(k-5)*48,()=>N.textContent=k)}
-// 21화: 공동 예비량 재배정 뒤 의료 예약을 확인한다. 실제 연산 원천은 공개하지 않는다.
-function runNight(){const C=mkClock(),M=$('nlMap'),B=$('nlBox'),Q=$('nlQ'),cl=$('nlClock');M.className='nl-map';M.innerHTML='';B.innerHTML='';Q.className='nl-q';$('nlBar').style.width='0';$('nlQv').textContent='—';$('nlCap').style.opacity=0;$('nlCases').classList.remove('on');$('nlRec').classList.remove('on');$('nlN').textContent='—';$('nlCrit').textContent='';cl.textContent='22:30';
- const n27=new Set([38,39,40,52,53,54,66,67,68]);for(let i=0;i<70;i++){const d=document.createElement('i');if(n27.has(i))d.className='n27';M.appendChild(d)}
- const cases=[];for(let i=0;i<487;i++){const d=document.createElement('i');B.appendChild(d);cases.push(d)}const idx=[...cases.keys()].sort(()=>Math.random()-.5),k31=new Set(idx.slice(0,31)),k7=new Set(idx.slice(0,7));
- const q=(c,v,w,cls)=>{cl.textContent=c;$('nlQv').textContent=v;$('nlBar').style.width=w;Q.className='nl-q '+(cls||'')};
- C.at(600,()=>{M.classList.add('cool');const c=$('nlCap');c.textContent='정산 최저선 유지 · 선택 콘텐츠 유지';c.style.opacity=1});
- C.at(1700,()=>q('00:31','+38분','16%'));C.at(2300,()=>q('00:46','+1시간 12분','42%'));C.at(2900,()=>q('01:01','+2시간 07분','72%','red'));
- C.at(3500,()=>{$('nlCases').classList.add('on');$('nlN').textContent='487';$('nlCrit').textContent='오늘 안에 끝나야 하는 것'});
- C.at(4300,()=>{$('nlN').textContent='31';$('nlCrit').textContent='검증이 늦으면 이미 잡힌 치료 일정이 밀리는 것';cases.forEach((d,i)=>{if(!k31.has(i))d.classList.add('off')})});
- C.at(5100,()=>{$('nlN').textContent='7';$('nlCrit').textContent='다른 방법으로 대체할 수 없는 것';cases.forEach((d,i)=>{if(!k7.has(i))d.classList.add('off');else d.classList.add('on7')})});
- C.at(5900,()=>$('nlRec').classList.add('on'))}
-// 21화: 완화 폭을 줄인 뒤, 지연 예상 정상화와 실제 완료를 나눠 표시한다.
-function runRestore(){const C=mkClock(),cv=$('rsCv'),x=cv.getContext('2d'),W=104,H=60,N=6214,sx=640/W,sy=300/H,ord=[...Array(N).keys()].sort(()=>Math.random()-.5),red=new Uint8Array(N);let shown=0;
- const draw=()=>{x.fillStyle='#060b0d';x.fillRect(0,0,640,300);for(let i=0;i<N;i++){x.fillStyle=red[i]?'#d6bb83':'#5fd8bd';x.globalAlpha=red[i]?.8:.62;x.fillRect((i%W)*sx+1,Math.floor(i/W)*sy+.8,sx-2,sy-1.6)}x.globalAlpha=1};draw();
- const Q=$('rsQ'),cl=$('rsClock'),q=(c,v,w,cls)=>{cl.textContent=c;$('rsQv').textContent=v;$('rsBar').style.width=w;Q.className='nl-q '+cls};q('01:40','조정 적용','74%','');$('rsFoot').textContent='예약 전 완료 예상 · 검증은 진행 중';
- const grow=()=>{if(state.ep!==21)return;const t=Math.min(1,Math.max(0,(C.now()-800)/1700)),k=Math.floor(N*t*6/14);while(shown<k)red[ord[shown++]]=1;draw();if(t<1)requestAnimationFrame(grow)};requestAnimationFrame(grow);
- C.at(2700,()=>q('02:44','정상 범위','4%','ok'));C.at(4600,()=>{q('아침','7건 완료','0%','ok');$('rsFoot').textContent='치료 예약 유지 · 실제 검증 완료 확인'})}
+// 21화는 계약 확인 두 단계만 연출한다. 의료 지연과의 인과를 만들지 않는다.
 // 장면 재현 팝업 공통: data-t 등 초 단위 표시를 애니메이션으로 바꾼다 (배속은 getAnimations로 함께 빨라짐)
 function stage(el){el.querySelectorAll('[data-t],[data-d],[data-k],[data-g],[data-o],[data-p]').forEach(x=>{const d=x.dataset,a=[];if(d.t)a.push('fxIn .4s '+d.t+'s both');if(d.p)a.push('fxPop .3s '+d.p+'s both');if(d.d)a.push('fxDim .5s '+d.d+'s forwards');if(d.k)a.push('fxStrike .3s '+d.k+'s forwards');if(d.g)a.push('fxGlow .4s '+d.g+'s forwards');if(d.o)a.push('fxOut .5s '+d.o+'s forwards');x.style.animation='none';void x.offsetWidth;x.style.animation=a.join(',')})}
 // 7화: 147명 기록을 밤마다 읽고, 062는 열일곱 번, 04:12에 118번
@@ -2260,8 +2225,7 @@ const ord=ds.map((d,i)=>i).sort(()=>Math.random()-.5).slice(0,147);let k=0;
 const step=()=>{const t=Math.min(1,Math.max(0,(C.now()-1800)/2600)),want=Math.round(147*t*t);while(k<want)ds[ord[k++]].classList.add('x');N.textContent=k;if(t<1&&state.ep===6)requestAnimationFrame(step)};requestAnimationFrame(step)}
 function runThird(){const C=mkClock(),N=$('tpN');N.classList.remove('sc-red');N.textContent='1,840,221';C.at(350,()=>N.textContent='8,117,009');C.at(700,()=>N.textContent='91,004,772');C.at(2200,()=>N.classList.add('sc-red'))}
 function runGlass(){const C=mkClock(),N=$('gpN'),c=$('gp3c');N.textContent='4만';c.textContent='서명 대기';$('gp3').classList.remove('on');C.at(350,()=>N.textContent='11만');C.at(700,()=>N.textContent='38만');C.at(2400,()=>$('gp3').classList.add('on'));C.at(5700,()=>c.textContent='공동 서명 없음');C.at(7000,()=>N.textContent='1')}
-function runRecount(){const C=mkClock(),N=$('rcN'),B=$('rcB'),L=$('rcL');const set=(v,l)=>{N.textContent=v+'%';B.style.width=v+'%';if(l)L.textContent=l};set(58,'설명회 직후 참여율');B.style.background='#9ff0c6';
-C.at(500,()=>set(64,'30분 뒤'));C.at(1000,()=>set(71,'한 시간 뒤'));C.at(5300,()=>{set(0,'재신청 시작');B.style.background='#9ab6ff'});C.at(6000,()=>set(19,'10분'));C.at(6600,()=>set(34,'30분'));C.at(7300,()=>set(43,'두 시간 뒤 · 거의 멈춤'))}
+function runRecount(){const C=mkClock(),N=$('rcN'),B=$('rcB'),L=$('rcL');const set=(v,l)=>{N.textContent=v+'%';B.style.width=v+'%';L.textContent=l};set(58,'설명회 직후 참여율');B.style.background='#9ff0c6';C.at(1200,()=>set(71,'한 시간 뒤'));C.at(4400,()=>{set(0,'기존 신청 실행 중지');B.style.background='#9ab6ff'});C.at(6300,()=>set(43,'재신청 두 시간 뒤'));}
 function runSameThree(){const C=mkClock(),v={A:82,B:57,C:21,D:11};Object.keys(v).forEach(k=>{$('st'+k).style.width='0';$('st'+k+'n').textContent='0%'});C.at(500,()=>Object.keys(v).forEach(k=>{$('st'+k).style.width=v[k]+'%';$('st'+k+'n').textContent=v[k]+'%'}))}
 function runRow400(){const C=mkClock(),G=$('rwDots');G.innerHTML='';$('rwN').textContent='400';$('rwE').textContent='0';const ds=[];for(let i=0;i<400;i++){const d=document.createElement('i');G.appendChild(d);ds.push(d)}
 C.at(1300,()=>{const d=document.createElement('i');d.className='x';G.prepend(d)});C.at(2000,()=>{ds[399].classList.add('h')});C.at(2700,()=>{ds[399].style.opacity='.45';$('rwN').textContent='399';$('rwE').textContent='1'})}
@@ -2285,9 +2249,6 @@ C.at(4400,()=>{ds.slice(3).forEach((d,i)=>{const a=Math.random()*6.283,rx=(W/2-1
 C.at(6400,()=>{L.textContent='등록 주소 변경 68건 · 사유: 명의자 거주지';N.textContent='내일부터 다시 71'})}
 function runUnlink(){const C=mkClock(),el=$('unlink41'),N=$('ulN');el.classList.remove('flip');N.textContent='71';C.at(1700,()=>N.textContent='70');C.at(3100,()=>N.textContent='69');C.at(6600,()=>el.classList.add('flip'))}
 function runLastOut(){const C=mkClock(),el=$('lastout');el.classList.remove('off');C.at(6600,()=>el.classList.add('off'))}
-// 24화: 이름을 쓴 동안 76→78%, 이름을 빼자 78→73→69→61%
-function runName(){const C=mkClock(),P=$('ncP'),G=$('ncDots');G.innerHTML='';const ds=[];for(let i=0;i<84;i++){const d=document.createElement('i');d.className='r';G.appendChild(d);ds.push(d)}const set=v=>{P.textContent=v+'%';const k=Math.round(84*v/78);ds.forEach((d,i)=>d.classList.toggle('off',i>=k))};
- C.at(900,()=>set(76));C.at(1500,()=>set(77));C.at(2000,()=>set(78));C.at(4100,()=>set(73));C.at(4600,()=>set(69));C.at(5200,()=>{set(61);P.classList.add('sc-gold')});P.classList.remove('sc-gold')}
 function closeSp(silent=false){state.ff=null;clearTimeout(state.spCloseT);document.querySelectorAll('.setpiece.on').forEach(e=>{e.classList.remove('on','corrupt','fast','held')});if(!silent&&state.ep)toastMsg('MEMORY RESUMED')}
 function runSeven(){let n=7;countEl.textContent=n;pathsEl.textContent='PREDICTIVE PATHS 1,204,118';state.ff=()=>{clearInterval(iv);countEl.textContent='결정';pathsEl.textContent='AI: 계산 중 · HUMAN: 회의를 끝내지 마세요.'};const iv=setInterval(()=>{n--;countEl.textContent=n;if(n>0)pathsEl.textContent='PREDICTIVE PATHS '+Math.floor(1204118*Math.pow(3.1,7-n)).toLocaleString();else{clearInterval(iv);countEl.textContent='결정';pathsEl.textContent='AI: 계산 중 · HUMAN: 회의를 끝내지 마세요.'}},900);state.timers.push(iv)}
 function runMatrix(){dotsEl.innerHTML='';state.ff=()=>{clearInterval(iv);[...dotsEl.children].slice(-147).forEach(d=>d.classList.add('return'));stayNEl.textContent='93';returnNEl.textContent='147'};for(let i=0;i<240;i++){let q=document.createElement('i');q.className='dot';dotsEl.appendChild(q)}let n=0;const all=[...dotsEl.children];const iv=setInterval(()=>{for(let k=0;k<7&&n<147;k++,n++)all[239-n].classList.add('return');returnNEl.textContent=n;if(n>=147){clearInterval(iv);stayNEl.textContent='93';returnNEl.textContent='147'}},55);state.timers.push(iv)}

@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 
 const MIME = Object.freeze({
-  '.webp':'image/webp', '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg',
+  '.avif':'image/avif', '.webp':'image/webp', '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg',
   '.gif':'image/gif', '.svg':'image/svg+xml', '.mp3':'audio/mpeg', '.ogg':'audio/ogg',
   '.wav':'audio/wav', '.m4a':'audio/mp4', '.woff2':'font/woff2', '.woff':'font/woff',
   '.mp4':'video/mp4',
@@ -145,6 +145,13 @@ export async function buildOffline(vnDirectory, outputHtml) {
     const filename=localFile(vn,moduleKey),dirname=path.dirname(filename);
     const sourceOriginal=moduleKey==='ep1-assets.js' ? ep1Source : await fs.readFile(filename,'utf8');
     let source=moduleKey==='ep1-assets.js' ? transformedEp1 : sourceOriginal;
+    // Runtime-only scene assets must also survive a downloaded single HTML.
+    // Resolve against this module, then use the same deduplicated asset registry.
+    const runtimeAssets=[...source.matchAll(/(['"])(\.\/assets\/[^'"\r\n]+\.(?:avif|webp|png|jpg|jpeg|gif|svg|mp4))\1/g)];
+    for (const match of runtimeAssets.reverse()) {
+      const variable=await assetVariable(match[2],dirname);
+      source=source.slice(0,match.index)+variable+source.slice(match.index+match[0].length);
+    }
     const dependencyBindings=[];
     const importPattern=/^[ \t]*import\s+(\{[\s\S]*?\}|\*\s+as\s+[A-Za-z_$][\w$]*)\s+from\s*(['"])([^'"\r\n]+)\2\s*;?[ \t]*(?:\r?\n|$)/gm;
     const matches=[...source.matchAll(importPattern)];

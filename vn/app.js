@@ -9,17 +9,17 @@ import { presentationForBeat } from './neural-cues.js';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js';
-import { EP1_ASSETS } from './ep1-assets.js?v=ep12-20261019-r2';
-import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=ep12-20261019-r2';
-import { EpisodeOneStage } from './episode-one-stage.js?v=ep12-20261019-r2';
-import { createEpisodeOneAudio } from './episode-one-audio.js?v=ep12-20261019-r2';
-import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep12-20261019-r2';
+import { EP1_ASSETS } from './ep1-assets.js?v=ep12-20261019-r3';
+import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=ep12-20261019-r3';
+import { EpisodeOneStage } from './episode-one-stage.js?v=ep12-20261019-r3';
+import { createEpisodeOneAudio } from './episode-one-audio.js?v=ep12-20261019-r3';
+import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep12-20261019-r3';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
-import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r2';
-import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r2';
+import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r3';
+import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r3';
 
 const story = normalizeStory(window.STORY);
-document.documentElement.dataset.vnBuild='ep12-20261019-r2';
+document.documentElement.dataset.vnBuild='ep12-20261019-r3';
 const $ = (id) => document.getElementById(id);
 const titleScreen = $('titleScreen'), gameScreen = $('gameScreen');
 const modal = $('modal'), modalContent = $('modalContent');
@@ -329,7 +329,13 @@ function renderBeat({ revisit = false } = {}) {
   $('progressBar').style.width = `${total ? ((pageEnd + 1) / total) * 100 : 0}%`;
   stageImage.className = 'stage-image';
   const scene = currentEpisodeCue?.background || beat.scene || 'room';
-  const background = currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene];
+  // The advertising dream begins at the beach and ends when Seoin leaves it.
+  // Resolve by manuscript text rather than hard-coded beat numbers so saves stay stable.
+  const dreamStart = chapter.id === '2' ? chapter.beats.findIndex(item => item.text?.includes('바다가 펼쳐졌다')) : -1;
+  const dreamEnd = dreamStart >= 0 ? chapter.beats.findIndex((item, index) => index > dreamStart && item.text?.includes('서인은 버튼을 눌렀다')) : -1;
+  const inJiwooDream = dreamStart >= 0 && progress.beatIndex >= dreamStart && (dreamEnd < 0 || progress.beatIndex <= dreamEnd);
+  $('stage').classList.toggle('ep2-jiwoo-dream', inJiwooDream);
+  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene]);
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
