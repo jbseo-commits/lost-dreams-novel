@@ -140,3 +140,21 @@ test('quiet resume preserves loop offset without effects or duplicate restart', 
   await r.audio.render({ index: 123, music: 'musicSea', ambience: 'coast', fx: 'amber' }, { quiet: true });
   assert.equal(starts().length, count);
 });
+
+test('an authored hard cut stops even fading sound while the following warning still plays',async t=>{
+  const r=audioRig(t);await r.audio.unlock();
+  await r.audio.render({chapterId:'2',index:232,music:'musicSea',ambience:'coast'});
+  r.contexts[0].currentTime=12;
+  await r.audio.render({chapterId:'2',index:240,music:'musicTable',ambience:'coast'});
+  const old=[...r.contexts[0].nodes];
+  await r.audio.render({chapterId:'2',index:257,music:null,ambience:null,hardCut:true});
+  assert(old.every(node=>node.stopCalls.at(-1)===0));
+  await r.audio.render({chapterId:'2',index:264,music:null,ambience:null,fx:'amber'});
+  assert.equal(r.events.filter(e=>e.type==='start'&&e.key==='amber').length,1);
+});
+
+test('identically numbered cues in different chapters do not suppress the second effect',async t=>{
+  const r=audioRig(t);await r.audio.unlock();
+  for(const chapterId of ['1','2'])await r.audio.render({chapterId,index:83,music:null,ambience:null,fx:'box'});
+  assert.equal(r.events.filter(e=>e.type==='start'&&e.key==='box').length,2);
+});

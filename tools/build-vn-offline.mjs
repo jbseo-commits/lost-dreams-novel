@@ -32,7 +32,9 @@ function localFile(root, relative, from = root) {
   if (typeof relative !== 'string' || !relative || /^(?:[a-z]+:|\/\/|[\\/])/i.test(relative)) {
     throw new Error(`Expected a VN-relative local path, received: ${String(relative)}`);
   }
-  return contained(root,path.resolve(from,relative),relative);
+  const pathOnly=relative.split(/[?#]/,1)[0];
+  if(!pathOnly)throw new Error(`Empty local asset path: ${relative}`);
+  return contained(root,path.resolve(from,pathOnly),relative);
 }
 function splitBindings(clause, moduleKey) {
   clause=clause.trim();
@@ -112,7 +114,7 @@ export async function buildOffline(vnDirectory, outputHtml) {
   const transformedEp1=`const EP1_ASSETS=Object.freeze({${ep1Entries.join(',')}});`;
 
   const cssFiles=[];
-  for (const match of html.matchAll(/<link\b[^>]*\brel=["']stylesheet["'][^>]*\bhref=["']([^"']+)["'][^>]*>/gi)) cssFiles.push(match[1]);
+  for (const match of html.matchAll(/<link\b[^>]*\brel=["']stylesheet["'][^>]*\bhref=["']([^"']+)["'][^>]*>/gi)) cssFiles.push(match[1].split(/[?#]/,1)[0]);
   for (const required of REQUIRED_CSS) if (!cssFiles.includes(required)) cssFiles.push(required);
   const cssParts=[];
   for (const name of [...new Set(cssFiles)]) {

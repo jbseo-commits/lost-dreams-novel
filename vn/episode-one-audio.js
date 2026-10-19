@@ -1,4 +1,4 @@
-export function createEpisodeOneAudio(getSettings,assets){
+export function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
   let context=null,master=null,version=0,current=null,gapTimer=0,lastEffect='';
   const buffers=new Map(),tracks=new Map(),effects=new Set(),voices=new Set(),positions=new Map();
   const allowed=()=>Boolean(getSettings()?.sound)&&!document.hidden;
@@ -16,18 +16,19 @@ export function createEpisodeOneAudio(getSettings,assets){
     voice.retired=true;
     try{voice.gain.gain.cancelScheduledValues(now);if(fade){voice.gain.gain.setTargetAtTime(0,now,fade/3);voice.source.stop(now+fade);}else voice.source.stop();}catch{}
   }
-  function stop(){version++;current=null;lastEffect='';clearTimeout(gapTimer);for(const v of [...voices])dispose(v);tracks.clear();effects.clear();if(master&&context){master.gain.cancelScheduledValues(context.currentTime);master.gain.setValueAtTime(0,context.currentTime);}}
+  function stop(){version++;current=null;lastEffect='';clearTimeout(gapTimer);for(const v of [...voices])dispose(v);tracks.clear();effects.clear();if(master&&context){master.gain.cancelScheduledValues(context.currentTime);master.gain.setValueAtTime(0,context.currentTime);}onStatus('silent');}
   function source(buffer,loop,volume,key){
     const node=context.createBufferSource(),gain=context.createGain(),offset=loop?(positions.get(key)||0)%buffer.duration:0;
     node.buffer=buffer;node.loop=loop;gain.gain.value=0;node.connect(gain);gain.connect(master);
     const voice={source:node,gain,key,offset,startedAt:context.currentTime,retired:false};voices.add(voice);
-    node.onended=()=>{voices.delete(voice);effects.delete(voice);try{node.disconnect();gain.disconnect();}catch{}};
+    node.onended=()=>{voices.delete(voice);effects.delete(voice);try{node.disconnect();gain.disconnect();}catch{}if(!tracks.size&&!effects.size)onStatus('silent');};
     node.start(0,offset);gain.gain.setTargetAtTime(volume,context.currentTime,.45);return voice;
   }
-  async function unlock(){const ctx=ensure();if(!ctx)return false;try{await ctx.resume();return ctx.state==='running';}catch{return false;}}
+  async function unlock(){const ctx=ensure();if(!ctx){onStatus('unavailable');return false;}try{await ctx.resume();onStatus(ctx.state==='running'?'ready':'blocked');return ctx.state==='running';}catch{onStatus('blocked');return false;}}
   async function render(cue,{quiet=false}={}){
     if(!cue||cue.silence||!allowed()){stop();return;}
     if(!context||context.state!=='running')return;
+    if(cue.hardCut&&!quiet)stop();
     const serial=++version,valid=()=>serial===version&&allowed();
     current=`${cue.music||''}:${cue.ambience||''}`;clearTimeout(gapTimer);
     master.gain.setTargetAtTime(level(),context.currentTime,.08);
@@ -37,15 +38,16 @@ export function createEpisodeOneAudio(getSettings,assets){
         if(key){const buffer=await load(key);if(!valid()||!buffer)return;const v=source(buffer,true,gain,key);tracks.set(bus,v);}
     }));
     if(cue.gap&&!quiet){master.gain.setTargetAtTime(0,context.currentTime,.015);clearTimeout(gapTimer);const serial=version;gapTimer=setTimeout(()=>{if(serial===version&&allowed())master.gain.setTargetAtTime(level(),context.currentTime,.06);},cue.gap*1000);}
-    const effectKey=`${cue.index}:${cue.fx||''}`;
+    const effectKey=`${cue.chapterId||'1'}:${cue.index}:${cue.fx||''}`;
     if(!quiet&&cue.fx&&effectKey!==lastEffect){
       lastEffect=effectKey;const buffer=await load(cue.fx);if(!valid()||!buffer)return;
       while(effects.size>=3){const old=effects.values().next().value;dispose(old);effects.delete(old);}
       const v=source(buffer,false,.8,cue.fx);effects.add(v);
     }
     await trackWork;
+    if(valid())onStatus(tracks.size||effects.size?'playing':'silent',{music:tracks.get('music')?.key||'',ambience:tracks.get('ambience')?.key||''});
   }
-  async function prime(){if(!ensure())return;await Promise.all(['musicSea','musicTable','musicChoice','room','pan','office','train','box','amber','red','approval','dishes','bedding','release','coast'].map(load));}
+  async function prime(){if(!ensure())return;await Promise.all(Object.keys(assets).filter(key=>/\.(mp3|ogg|wav)$/.test(assets[key])).map(load));}
   function setVolume(){if(master&&context)master.gain.setTargetAtTime(allowed()&&current?level():0,context.currentTime,.08);}
   function reset(){stop();positions.clear();}
   return{unlock,render,stop,reset,prime,setVolume};

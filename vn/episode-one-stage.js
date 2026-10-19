@@ -13,6 +13,10 @@ export class EpisodeOneStage {
     const stage=this.host.parentElement;
     if(!cue){this.clear();return;}
     this.host.hidden=false;stage.classList.add('episode-one');
+    stage.classList.toggle('episode-two',cue.chapterId==='2');
+    this.host.dataset.chapterId=cue.chapterId||'1';
+    this.host.dataset.holdMotion=String(Boolean(cue.holdMotion));
+    this.host.dataset.dream=String(Boolean(cue.dream));
     stage.dataset.ep1Actors=cue.actors.length?'present':'';
     stage.dataset.ep1DocumentPhase=cue.document?.phase||'';
     stage.classList.toggle('ep1-blackout',cue.blackout);stage.classList.toggle('ep1-intro',cue.intro);stage.classList.toggle('ep1-cg-active',Boolean(cue.cg));
@@ -29,13 +33,13 @@ export class EpisodeOneStage {
     for(const [id,slot]of this.actorState)if(!visible.has(id)){slot.remove();this.actorState.delete(id);}
     for(const person of cue.actors){
       let slot=this.actorState.get(person.id);
-      if(!slot){slot=document.createElement('div');slot.className='ep1-actor';slot.dataset.id=person.id;this.actorState.set(person.id,slot);this.actors.append(slot);}
+      if(!slot){slot=document.createElement('div');slot.className='ep1-actor';slot.dataset.id=person.id;const body=document.createElement('div');body.className='ep1-actor-body';slot.append(body);this.actorState.set(person.id,slot);this.actors.append(slot);}
       slot.dataset.side=person.side;slot.dataset.gaze=person.gaze;slot.dataset.pose=person.pose;
       slot.classList.toggle('speaking',cue.focus===person.name);slot.classList.toggle('listening',Boolean(cue.focus)&&cue.focus!==person.name);
       if(slot.dataset.asset!==person.asset){
         slot.querySelectorAll('.ep1-previous').forEach(n=>n.remove());
         const previous=slot.querySelector('img');if(previous){previous.classList.add('ep1-previous');previous.setAttribute('aria-hidden','true');}
-        const img=document.createElement('img');img.src=this.assets[person.asset];img.alt=person.name;img.className='ep1-current';slot.append(img);slot.dataset.asset=person.asset;
+        const img=document.createElement('img');img.src=this.assets[person.asset];img.alt=person.name;img.className='ep1-current';slot.querySelector('.ep1-actor-body').append(img);slot.dataset.asset=person.asset;
       }
     }
     this.panel.hidden=!cue.document;
@@ -52,9 +56,10 @@ export class EpisodeOneStage {
       }
       this.panel.dataset.phase=cue.document.phase;
     }
-    if(this.currentScene!==cue.sceneStart){this.host.classList.remove('ep1-scene-arrive');void this.host.offsetWidth;this.host.classList.add('ep1-scene-arrive');this.currentScene=cue.sceneStart;}
+    const sceneKey=`${cue.chapterId||'1'}:${cue.sceneStart}`;
+    if(this.currentScene!==sceneKey){this.host.classList.remove('ep1-scene-arrive');void this.host.offsetWidth;this.host.classList.add('ep1-scene-arrive');this.currentScene=sceneKey;}
   }
   clear(){
-    this.host.hidden=true;this.host.parentElement.classList.remove('episode-one','ep1-blackout','ep1-intro','ep1-cg-active');this.host.parentElement.dataset.ep1Actors='';this.host.parentElement.dataset.ep1DocumentPhase='';this.actorState.clear();this.actors.replaceChildren();this.currentScene=-1;
+    this.host.hidden=true;this.host.parentElement.classList.remove('episode-one','episode-two','ep1-blackout','ep1-intro','ep1-cg-active');this.host.parentElement.dataset.ep1Actors='';this.host.parentElement.dataset.ep1DocumentPhase='';this.actorState.clear();this.actors.replaceChildren();this.currentScene=-1;
   }
 }
