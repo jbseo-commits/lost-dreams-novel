@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1672 941" role="img" aria-label="협력 병원 6층의 조용한 대기실. 벽면 조명과 비어 있는 의자 하나만 있다. 사람·글자·의료 정보 표시는 없다.">
+<defs>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#454d4f"/><stop offset=".42" stop-color="#858984"/><stop offset=".83" stop-color="#535f62"/><stop offset="1" stop-color="#303d40"/></linearGradient>
+<linearGradient id="floor" x1=".2" y1="0" x2=".8" y2="1"><stop stop-color="#5b6666"/><stop offset=".28" stop-color="#445257"/><stop offset="1" stop-color="#202c32"/></linearGradient>
+<linearGradient id="ceiling" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#b7b5a2"/><stop offset=".5" stop-color="#717b79"/><stop offset="1" stop-color="#4f6060"/></linearGradient>
+<linearGradient id="door" x1="0" y1="0" x2="1" y2=".9"><stop stop-color="#5c686b"/><stop offset=".4" stop-color="#384b54"/><stop offset="1" stop-color="#1b313c"/></linearGradient>
+<linearGradient id="seat" x1="0" y1="0" x2="1" y2=".9"><stop stop-color="#616b69"/><stop offset=".45" stop-color="#303b3e"/><stop offset="1" stop-color="#111a22"/></linearGradient>
+<linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eceddc" stop-opacity=".9"/><stop offset="1" stop-color="#e0d5b7" stop-opacity="0"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#e9dfb6" stop-opacity=".29"/><stop offset=".55" stop-color="#d9d9c4" stop-opacity=".08"/><stop offset="1" stop-color="#bdc9c4" stop-opacity="0"/></radialGradient>
+<radialGradient id="vignette"><stop offset=".26" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#050d10" stop-opacity=".51"/></radialGradient>
+<filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".18" numOctaves="4" seed="8"/><feColorMatrix type="saturate" values="0"/></filter>
+<filter id="blur"><feGaussianBlur stdDeviation="21"/></filter>
+<pattern id="floorGrid" width="110" height="95" patternUnits="userSpaceOnUse"><path d="M110 0H0V95" fill="none" stroke="#d0d3c3" stroke-width="1" stroke-opacity=".085"/></pattern>
+</defs>
+<rect width="1672" height="941" fill="#182932"/>
+<path d="M0 0H1672L1488 139H226Z" fill="url(#ceiling)"/>
+<path d="M0 0L228 139V596L0 718Z" fill="#34484d"/>
+<path d="M1672 0L1484 139V596L1672 718Z" fill="#243942"/>
+<path d="M227 139H1485V597H227Z" fill="url(#wall)"/>
+<path d="M0 718L227 597H1485L1672 718V941H0Z" fill="url(#floor)"/>
+<path d="M0 718L227 597H1485L1672 718V941H0Z" fill="url(#floorGrid)" opacity=".7"/>
+<path d="M228 142V597M1485 142V597" fill="none" stroke="#d3d5c1" stroke-opacity=".24" stroke-width="4"/>
+<path d="M228 542H1485" stroke="#bfc3b4" stroke-opacity=".52" stroke-width="9"/>
+<path d="M228 550H1485" stroke="#273940" stroke-width="7"/>
+<path d="M252 195L568 195V532H252Z" fill="url(#door)" stroke="#acb4b0" stroke-opacity=".38" stroke-width="6"/>
+<path d="M255 200H564L548 521H255Z" fill="#f2f2dc" opacity=".04"/>
+<path d="M279 212H543V492H279Z" fill="#203843" opacity=".4"/>
+<path d="M513 348V408" stroke="#dbe2d0" stroke-opacity=".56" stroke-width="6"/>
+<path d="M1160 140V545" stroke="#a1b6b1" stroke-opacity=".17" stroke-width="3"/>
+<path d="M1395 140V545" stroke="#a1b6b1" stroke-opacity=".14" stroke-width="2"/>
+<path d="M764 28H1143L1116 57H792Z" fill="#eceedd" opacity=".79"/>
+<path d="M801 57H1110L1265 589H650Z" fill="url(#rim)" opacity=".21"/>
+<path d="M0 97L228 166M1672 97L1485 166" stroke="#d1d3c5" stroke-opacity=".17" stroke-width="5"/>
+<ellipse cx="1057" cy="564" rx="630" ry="272" fill="url(#glow)"/>
+<path d="M228 597H1485" stroke="#c7cfbe" stroke-opacity=".51" stroke-width="5"/>
+<path d="M0 719L228 597M1672 719L1485 597M0 865L548 597M1672 865L1220 597M828 941L828 597" fill="none" stroke="#b5c7c4" stroke-opacity=".12" stroke-width="3"/>
+<path d="M0 823H1672M0 915H1672" stroke="#dbe3d7" stroke-opacity=".08" stroke-width="2"/>
+<ellipse cx="955" cy="677" rx="176" ry="43" fill="#0a1117" opacity=".5" filter="url(#blur)"/>
+<g stroke-linejoin="round" stroke-linecap="round">
+<path d="M881 419L866 595M1025 419L1046 595" stroke="#152329" stroke-width="12"/>
+<path d="M883 420L869 595M1023 420L1043 595" stroke="#8b9995" stroke-opacity=".5" stroke-width="4"/>
+<path d="M898 335Q897 322 909 321H1003Q1016 323 1015 339L1018 465H890Z" fill="url(#seat)" stroke="#8e9a94" stroke-width="4"/>
+<path d="M901 352Q959 342 1012 354" fill="none" stroke="#b3c3b8" stroke-opacity=".24" stroke-width="3"/>
+<path d="M874 472Q950 459 1034 470L1023 496Q956 509 885 495Z" fill="url(#seat)" stroke="#73838a" stroke-width="4"/>
+<path d="M892 502L874 640M1019 502L1040 640" stroke="#233137" stroke-width="11"/>
+<path d="M895 503L877 640M1017 503L1038 640" stroke="#b4bfb2" stroke-opacity=".42" stroke-width="3"/>
+</g>
+<path d="M866 598H1046" stroke="#e1e7cb" opacity=".11" stroke-width="7"/>
+<path d="M0 610L1672 610" stroke="#ecefda" stroke-opacity=".05" stroke-width="2"/>
+<rect width="1672" height="941" fill="url(#vignette)"/>
+<rect width="1672" height="941" filter="url(#noise)" opacity=".056" style="mix-blend-mode:screen"/>
+</svg>
