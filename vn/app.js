@@ -20,6 +20,7 @@ import { evaluationRoomForBeat } from './evaluation-room.js';
 import { medicalConferenceForBeat } from './medical-conference.js';
 import { hospitalWaitingForBeat } from './hospital-waiting.js';
 import { MedicalSceneStage,medicalSceneForBeat } from './medical-scene.js';
+import { HumanOnlyStage,humanOnlyForBeat } from './human-only-scene.js';
 import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r3';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r3';
 
@@ -47,6 +48,7 @@ const audio = createAudioDirector(() => store.settings);
 const neuralStage = new NeuralStage($('neuralStage'));
 const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS);
 const medicalStage = new MedicalSceneStage($('medicalStoryStage'),story.assets);
+const humanOnlyStage = new HumanOnlyStage($('humanOnlyStage'));
 const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {onStatus:(status,tracks={})=>{
   $('soundToggle').dataset.audioStatus=status;
   $('soundToggle').dataset.music=tracks.music||'';
@@ -345,7 +347,8 @@ function renderBeat({ revisit = false } = {}) {
   const evaluationAsset = evaluationRoomForBeat(chapter, progress.beatIndex);
   const medicalConferenceAsset = medicalConferenceForBeat(chapter, progress.beatIndex);
   const hospitalWaitingAsset = hospitalWaitingForBeat(chapter, progress.beatIndex);
-  const background = evaluationAsset || medicalConferenceAsset || hospitalWaitingAsset || (inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene]));
+  const humanOnlyCue = humanOnlyForBeat(chapter, progress.beatIndex);
+  const background = evaluationAsset || medicalConferenceAsset || hospitalWaitingAsset || humanOnlyCue?.background || (inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene]));
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
@@ -365,6 +368,7 @@ function renderBeat({ revisit = false } = {}) {
   $('perceptionAdvance').hidden = !primary;
   renderDirection(beat, { quiet: revisit });
   medicalStage.render(medicalSceneForBeat(chapter,progress.beatIndex),{reducedMotion:store.settings.reducedMotion});
+  humanOnlyStage.render(humanOnlyCue,{reducedMotion:store.settings.reducedMotion});
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
   directionCard.hidden = Boolean(currentEpisodeCue) || Boolean(currentPerception) || !beat.direction?.visual;
