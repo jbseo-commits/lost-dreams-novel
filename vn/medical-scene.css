@@ -44,3 +44,5 @@
  .medical-story-stage[data-room="waiting"] .medical-stage-actor{height:50vh!important;bottom:21%!important}
 }
 @media(prefers-reduced-motion:reduce){.medical-story-stage *{animation:none!important;transition:none!important}}
+.stage.vn-medical-authored .portrait-wrap{opacity:0!important;pointer-events:none!important}
+.stage.vn-medical-authored .motif-stage{opacity:0;pointer-events:none!important}
