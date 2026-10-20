@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 65094331,
-  "sha256": "3b3238006d8fb5bd6ee88d3bdda62d2a68ed0f8c46fc2c50fe18bfc8f3f80f80",
+  "offlineBytes": 65097424,
+  "sha256": "86a19fb753d870bac5494ed647d85c52a1d43f7699764ad8e8043fd8d00bd525",
   "storyChapters": 128,
   "storyAssetKeys": 39,
   "ep1AssetKeys": [
@@ -1055,8 +1055,8 @@
       "exports": [
         "presentationForBeat"
       ],
-      "sourceSha256": "49c68863a2c37a9d67ef29e5a5182062ee667576439f11a6b58064aacb421732",
-      "compiledSourceSha256": "eae2369f34fab98ca89ce78127df9c5ed30662f2ac415e3109106febbcf6206b"
+      "sourceSha256": "76a9292bb9367ac9dfa964e359b2478d33a9874d2e14da9cd816f31325eb1252",
+      "compiledSourceSha256": "e315ed3c91ba8a68965bcdf567aed470893d45b9c63d64c37e35f096ae369680"
     },
     "neural-stage.js": {
       "exports": [
