@@ -52,12 +52,20 @@ async function main() {
  const source=await readFile(resolve(REPO_ROOT,'vn/story-data.js'),'utf8');
  const sandbox={window:{}};vm.runInNewContext(source,sandbox,{filename:'vn/story-data.js',timeout:20000});
  if(!Array.isArray(sandbox.window.STORY?.chapters))throw Error('STORY.chapters missing');
- const chapters=sandbox.window.STORY.chapters,sourceBreaks={};
+ const chapters=sandbox.window.STORY.chapters,sourceBreaks={},missingSources=[];
  for(const path of new Set(chapters.filter(c=>Number(String(c.id).split('-')[0])>=31).map(c=>c.sourcePath).filter(Boolean))){
-  const text=await readFile(resolve(REPO_ROOT,path),'utf8');
-  sourceBreaks[path]=manuscriptBreaks(text);
+  try {
+   const text=await readFile(resolve(REPO_ROOT,path),'utf8');
+   sourceBreaks[path]=manuscriptBreaks(text);
+  }catch(e){
+   if(e?.code!=='ENOENT')throw e;
+   missingSources.push(path);
+  }
  }
- process.stdout.write(JSON.stringify(auditNeutral(chapters,31,sourceBreaks),null,2)+'\n');
+ const report=auditNeutral(chapters,31,sourceBreaks);
+ report.missingSources=missingSources;
+ report.sourceVerification=missingSources.length===0?'COMPLETE':'PARTIAL_MISSING_MANUSCRIPT';
+ process.stdout.write(JSON.stringify(report,null,2)+'\n');
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  main().catch(e=>{console.error(e);process.exitCode=1;});
