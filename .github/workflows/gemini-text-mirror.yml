@@ -1,0 +1,76 @@
+name: gemini-text mirror
+
+# Gemini 앱 '코드 가져오기'용 텍스트 전용 브랜치(gemini-text)를 자동 갱신한다.
+# - main에 푸시되면 main을 chain/current에 병합 시도(충돌 시 병합 생략·경고 기록)
+# - chain/current의 .md 파일만 모아 gemini-text 브랜치를 새로 만든다(이력 없음, 강제 푸시)
+# 원고·설정 내용은 바꾸지 않는다.
+
+on:
+  push:
+    branches: [main, chain/current]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gemini-text-mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chain/current
+          fetch-depth: 0
+          lfs: false
+
+      - name: Merge main into chain/current
+        id: merge
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          if git merge-base --is-ancestor origin/main HEAD; then
+            echo "status=up-to-date" >> "$GITHUB_OUTPUT"
+          elif git merge --no-ff --no-edit -m "병합: main을 chain/current에 자동 반영" origin/main; then
+            git push origin HEAD:chain/current
+            echo "status=merged" >> "$GITHUB_OUTPUT"
+          else
+            git merge --abort
+            echo "status=conflict" >> "$GITHUB_OUTPUT"
+            echo "::warning::main → chain/current 자동 병합 충돌. 수동 병합 필요."
+          fi
+
+      - name: Build text-only tree
+        run: |
+          SRC_SHA=$(git rev-parse --short HEAD)
+          MAIN_SHA=$(git rev-parse --short origin/main)
+          OUT="$RUNNER_TEMP/gemini-text"
+          mkdir -p "$OUT"
+          git ls-files -z '*.md' | while IFS= read -r -d '' f; do
+            mkdir -p "$OUT/$(dirname "$f")"
+            cp "$f" "$OUT/$f"
+          done
+          LAST=$(ls manuscript | grep -E '^ep[0-9]{3}\.md$' | sort | tail -1)
+          {
+            echo "# GEMINI-TEXT 상태"
+            echo
+            echo "- 생성: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M KST')"
+            echo "- 원본 브랜치: chain/current \`$SRC_SHA\` (main \`$MAIN_SHA\`)"
+            echo "- main 자동 병합: ${{ steps.merge.outputs.status }}"
+            echo "- manuscript 마지막 본편 파일: \`$LAST\`"
+            echo "- 내용: 저장소의 .md 파일만. 이미지·웹 코드 제외. 읽기 전용 사본이며 여기에 커밋하지 않는다."
+          } > "$OUT/GEMINI-TEXT-STATUS.md"
+          cd "$OUT"
+          git init -q -b gemini-text
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "gemini-text: chain/current $SRC_SHA 텍스트 사본"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f origin gemini-text
+          du -sh .
+          git ls-files | wc -l

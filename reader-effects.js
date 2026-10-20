@@ -15,6 +15,7 @@ const ReadingEffects=(()=>{
  const paths=()=>svg('<path d="M128 90 L45 26 M128 90 L219 31 M128 90 L60 130 M128 90 L215 130"/><circle cx="128" cy="90" r="7"/><circle cx="45" cy="26" r="5"/><circle cx="219" cy="31" r="5"/><circle cx="60" cy="130" r="5"/><circle cx="215" cy="130" r="5"/>');
  const walk=()=>svg('<path d="M126 115 L126 31 M126 115 L37 86 M126 115 L220 87 M126 115 L172 145" opacity=".5"/><rect x="115" y="106" width="22" height="18"/><path d="M114 106 L126 95 L138 106"/><circle cx="126" cy="25" r="5"/><circle cx="32" cy="85" r="5"/><circle cx="225" cy="85" r="5"/><text x="126" y="12" fill="currentColor" stroke="none" text-anchor="middle" font-size="12">병원 · 8분</text><text x="10" y="68" fill="currentColor" stroke="none" font-size="12">시장 · 3분</text><text x="177" y="68" fill="currentColor" stroke="none" font-size="12">약국 · 1분</text><text x="181" y="147" fill="currentColor" stroke="none" font-size="12">위층 · 미경 씨</text>','0 0 285 175');
  function life(id){
+  const revised=window.ReaderScenes?.inline(id);if(revised!=null)return revised;
   switch(id){
    case 'ldx-meal':return '<div class="ldx-meal">'+rings()+'</div>';
    case 'bakesign':return '<div class="ldx-sign"><del>매일 엽니다</del><b>일요일은 쉽니다</b></div>';
@@ -24,11 +25,11 @@ const ReadingEffects=(()=>{
    case 'eggmath':return '<div class="ldx-market-bag"><div class="ldx-eggs">'+'<i></i>'.repeat(12)+'</div></div><span class="ldx-change">3.0 − 2.80 = 0.2</span>';
    case 'walkmin':return walk();
    case 'twopots':return pots();
-   case 'netbundle':return paths();
+   case 'netbundle':return svg('<path d="M160 45 L50 100 M160 45 L160 100 M160 45 L270 100 M160 45 L160 155" opacity=".5"/><rect x="115" y="18" width="90" height="27"/><text x="160" y="36" text-anchor="middle" fill="currentColor" stroke="none" font-size="12">야간망</text><g fill="currentColor" stroke="none" font-size="11" text-anchor="middle"><text x="50" y="117">광고 수익</text><text x="160" y="117">의료 보조</text><text x="270" y="117">주거 감면</text><text x="160" y="174">가족 TOKEN 정산</text></g>','0 0 320 195');
    case 'ldx-crosswalk':return svg('<path d="M55 50 L195 50 M55 70 L195 70 M55 90 L195 90 M55 110 L195 110" opacity=".25"/><path d="M96 30 Q100 58 96 130 M141 30 Q137 58 141 130" stroke-dasharray="3 18"/>');
-   case 'ldx-unsettled':return '<div class="ldx-empty-cell"></div>';
+   case 'ldx-unsettled':return '<div class="ldx-sign" style="text-align:left;max-width:270px;margin:auto"><span style="font-size:12px;opacity:.6">변경 사유</span><del style="font-size:13px">의료상 필요 · 비용 · 이동 거리 · 보호자 일정</del><b style="font-size:22px">✓ 기타</b></div>';
    case 'ldx-cursorcell':return '<div class="ldx-empty-cell ldx-cursorcell"><i></i></div>';
-   case 'ldx-claymark':return svg('<path d="M90 56 Q98 42 109 53 L116 82 M120 51 Q128 40 137 52 L145 79" opacity=".5"/><path d="M97 54 Q104 49 109 57 M127 54 Q133 49 138 56" stroke-width="4" opacity=".8"/>');
+   case 'ldx-claymark':return svg('<path d="M81 135 L81 54 C81 13 133 13 133 54 L133 135 M139 135 L139 65 C139 25 188 25 188 65 L188 135" stroke-width="2"/><path d="M91 63 L91 45 Q107 31 123 45 L123 63 Q107 73 91 63 Z M149 75 L149 56 Q164 42 179 56 L179 75 Q164 84 149 75 Z"/><path d="M93 63 Q108 72 122 63 M151 75 Q165 82 178 75" stroke="#bd8a5f" stroke-width="5"/><text x="130" y="158" fill="currentColor" stroke="none" text-anchor="middle" font-size="12">두 번 씻은 뒤 · 손톱 밑</text>','0 0 260 175');
    case 'losingbid':return '<div class="ldx-contenders"><div><b>아르카디아</b><span>가격 유지</span></div><div><b>세르젠</b><span>−3.1% · 배송 보증 +7.5%</span></div><div><b>모르바</b><span>철수</span></div></div>';
    default:return null;
   }

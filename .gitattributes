@@ -1,0 +1,3 @@
+# 기록 파일은 양쪽 항목을 모두 보존해 병합한다(main ↔ chain/current 자동 병합용)
+CHANGELOG.md merge=union
+loop/log.md merge=union

@@ -12,6 +12,8 @@ body.ep8 .ldx-controls button{color:#26303b;border-color:#26303b55}body.ep8 .ldx
 .ldx-off .reveal,.ldx-off .reveal.last{opacity:1!important;filter:none!important;transform:none!important;transition:none!important}
 .ldx-off *,.ldx-off *:before,.ldx-off *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 .ldx-off .setpiece,.ldx-off .ldx-life,.ldx-off .ldx-trace{display:none!important;pointer-events:none!important}
+.ldx-off .end .next.wait{opacity:1;pointer-events:auto}
+.ldx-off .end.sp-gap{margin-top:70px!important}
 .ldx-mono-silent .noise{opacity:0}.ldx-mono-silent .world{opacity:.35}
 .ldx-life{position:relative;isolation:isolate;margin:34px 0 48px;padding:22px 12px;pointer-events:none;text-align:center;border:0;background:none;color:#dfc5a6;overflow:hidden}
 .ldx-life:before{content:"";display:block;width:38px;height:1px;background:currentColor;opacity:.25;margin:0 auto 20px}
