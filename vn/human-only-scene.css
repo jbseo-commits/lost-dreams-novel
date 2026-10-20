@@ -35,3 +35,5 @@
  .human-only-stop{top:48%;left:64%;width:34px;height:34px}
 }
 @media(prefers-reduced-motion:reduce){.human-only-stage *{animation:none!important;transition:none!important}}
+.stage.ui-hidden .human-only-plaque{visibility:hidden!important;pointer-events:none!important}
+.stage.ui-hidden .human-only-chip,.stage.ui-hidden .human-only-stop{visibility:hidden!important}
