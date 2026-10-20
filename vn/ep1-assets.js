@@ -23,7 +23,7 @@ export const EP1_ASSETS = Object.freeze({
   stoppedFinger:'assets/cutscenes/stopped-finger.webp',
   changedChoice:'assets/cutscenes/changed-choice.webp',
   signedCost:'assets/cutscenes/signed-cost.webp',
-  heldCall:'assets/cutscenes/held-call.webp',
+  heldCall:'assets/cutscenes/held-call.webp?v=cutscenes-20261020-r6',
   turnedBadge:'assets/cutscenes/turned-badge.webp',
   releasedBreath:'assets/cutscenes/released-breath.webp',
   paleDistrict:'assets/cutscenes/pale-district.webp',

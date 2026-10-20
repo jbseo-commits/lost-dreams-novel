@@ -1,5 +1,5 @@
 {
-  "baseline": "00025cb",
+  "baseline": "be4fec8",
   "chapterCoverage": [
     "1",
     "2",
@@ -288,8 +288,8 @@
     },
     {
       "chapter": "19",
-      "start": 60,
-      "end": 60,
+      "start": 55,
+      "end": 55,
       "cg": "changedChoice",
       "anchor": "그는 36가구의 창을 닫지 않고 A를 눌렀다.",
       "alt": "처음 고른 표시를 지우고",
@@ -299,24 +299,24 @@
     },
     {
       "chapter": "20",
-      "start": 68,
-      "end": 68,
+      "start": 76,
+      "end": 76,
       "cg": "signedCost",
-      "anchor": "접수 등이 켜졌다. 강연우가 돌아온 주문표를 챙겼다. 윤세라는 바로 다음 사례로 넘기지 않고 변경된 보고에 서명했다.",
+      "anchor": "윤세라는 다음 사례로 넘기기 전에 바뀐 보고에 서명했다.",
       "alt": "자기 이름으로 남긴 비용",
-      "endAnchor": "접수 등이 켜졌다. 강연우가 돌아온 주문표를 챙겼다. 윤세라는 바로 다음 사례로 넘기지 않고 변경된 보고에 서명했다.",
-      "fingerprint": "2883a8ad",
+      "endAnchor": "윤세라는 다음 사례로 넘기기 전에 바뀐 보고에 서명했다.",
+      "fingerprint": "ef31c7a8",
       "mobilePosition": "58% 50%"
     },
     {
       "chapter": "21",
-      "start": 111,
-      "end": 112,
+      "start": 110,
+      "end": 111,
       "cg": "heldCall",
-      "anchor": "서인은 다음 기록으로 넘기던 손을 멈췄다.",
+      "anchor": "서인은 다음 기록으로 넘기던 화면을 문해린의 기록으로 되돌렸다. 문해린의 목소리가 작아졌다.",
       "alt": "넘기지 못한 다음 기록",
       "endAnchor": "“학교는 못 간다고 해야 하는지, 그것도 아직 모르는 거죠?”",
-      "fingerprint": "72099017",
+      "fingerprint": "faba2022",
       "mobilePosition": "50% 48%"
     },
     {
@@ -418,5 +418,6 @@
       "fingerprint": "2afa1d97",
       "mobilePosition": "50% 48%"
     }
-  ]
+  ],
+  "initialProductionBaseline": "00025cb"
 }

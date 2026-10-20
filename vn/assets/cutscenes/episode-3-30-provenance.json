@@ -715,8 +715,8 @@
     },
     {
       "chapter": "19",
-      "start": 60,
-      "end": 60,
+      "start": 55,
+      "end": 55,
       "cg": "changedChoice",
       "name": "changed-choice",
       "title": "처음 고른 표시를 지우고",
@@ -747,8 +747,8 @@
     },
     {
       "chapter": "20",
-      "start": 68,
-      "end": 68,
+      "start": 76,
+      "end": 76,
       "cg": "signedCost",
       "name": "signed-cost",
       "title": "자기 이름으로 남긴 비용",
@@ -779,20 +779,20 @@
     },
     {
       "chapter": "21",
-      "start": 111,
-      "end": 112,
+      "start": 110,
+      "end": 111,
       "cg": "heldCall",
       "name": "held-call",
       "title": "넘기지 못한 다음 기록",
       "refs": [
         "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
       ],
-      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Late-nightstrategyroom desk, close onmaleSeoinref1hand HALTED justbefore swipingnextrecord, activeVOICE callphone ondesk withblankwaveform andneutralconnectedlight, otherstackedrecords waitinbackground. Hisprofile tired intent upperedge, noglancespastcaller. Paperappointmentline withplain blankboxes, no readablewords. Telephoneaudiencenotvisible: no mother/childface or schoolclothes drawninroom, no imagined flashback. Theinterruptedworkgestureistheaction. Quietbluewithwarmdesklamp.",
-      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-d61d8a8a-4aad-4caa-80de-a8d5f2678b89.png",
+      "prompt": "Use case: precise event-CG revision for the SAME Korean sci-fi visual novel. EDIT this exact picture only. Preserve the original male Seoin's face, tousled dark hair, white office shirt, dark jacket, tired thoughtful expression, left cheek resting on fist, camera, warm lamp, night blue windows, desk, active voice-call phone at right, painterly anime rendering and anatomy. Replace ONLY the lifted paper page, clipboard and foreground paper record with a thin landscape digital record screen lying on the desk. His right hand is no longer lifting paper: natural index fingertip on the glass, returning/swiping back to the CURRENT caller's record after starting to move to the next one. The record screen shows restrained abstract rows and one subtly highlighted current record, no readable words, numbers, names, letters or logos. Other background paper stacks may stay as environmental clutter. The story action is listening and returning to a digital record during a phone call, NOT signing paper, NOT ending the call. Keep one person only, no child, no caller portrait, no extra hands, no holographic spectacle. Match reference identity, room and color exactly.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-dd26ea38-942d-4d42-9cba-f1a1be3235a4.png",
       "generation": {
-        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Late-nightstrategyroom desk, close onmaleSeoinref1hand HALTED justbefore swipingnextrecord, activeVOICE callphone ondesk withblankwaveform andneutralconnectedlight, otherstackedrecords waitinbackground. Hisprofile tired intent upperedge, noglancespastcaller. Paperappointmentline withplain blankboxes, no readablewords. Telephoneaudiencenotvisible: no mother/childface or schoolclothes drawninroom, no imagined flashback. Theinterruptedworkgestureistheaction. Quietbluewithwarmdesklamp.",
+        "prompt": "Use case: precise event-CG revision for the SAME Korean sci-fi visual novel. EDIT this exact picture only. Preserve the original male Seoin's face, tousled dark hair, white office shirt, dark jacket, tired thoughtful expression, left cheek resting on fist, camera, warm lamp, night blue windows, desk, active voice-call phone at right, painterly anime rendering and anatomy. Replace ONLY the lifted paper page, clipboard and foreground paper record with a thin landscape digital record screen lying on the desk. His right hand is no longer lifting paper: natural index fingertip on the glass, returning/swiping back to the CURRENT caller's record after starting to move to the next one. The record screen shows restrained abstract rows and one subtly highlighted current record, no readable words, numbers, names, letters or logos. Other background paper stacks may stay as environmental clutter. The story action is listening and returning to a digital record during a phone call, NOT signing paper, NOT ending the call. Keep one person only, no child, no caller portrait, no extra hands, no holographic spectacle. Match reference identity, room and color exactly.",
         "referenced_image_paths": [
-          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/held-call.webp"
         ],
         "transparent_background": false
       },
@@ -802,8 +802,22 @@
         1672,
         941
       ],
-      "bytes": 197090,
-      "sha256": "e7baa2f3b2fde78486592c8ff4369c5b79cc201018b16feb30a009d0ffc9ceb3"
+      "bytes": 178150,
+      "sha256": "b02cd8b39c9851111c10ed5db73e4250c80c43576228f000cc3c9eddbc559bf4",
+      "revisions": [
+        {
+          "reason": "최신 main be4fec8의 디지털 기록 복귀 동작에 맞춤",
+          "previousSource": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-d61d8a8a-4aad-4caa-80de-a8d5f2678b89.png",
+          "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-dd26ea38-942d-4d42-9cba-f1a1be3235a4.png",
+          "generation": {
+            "prompt": "Use case: precise event-CG revision for the SAME Korean sci-fi visual novel. EDIT this exact picture only. Preserve the original male Seoin's face, tousled dark hair, white office shirt, dark jacket, tired thoughtful expression, left cheek resting on fist, camera, warm lamp, night blue windows, desk, active voice-call phone at right, painterly anime rendering and anatomy. Replace ONLY the lifted paper page, clipboard and foreground paper record with a thin landscape digital record screen lying on the desk. His right hand is no longer lifting paper: natural index fingertip on the glass, returning/swiping back to the CURRENT caller's record after starting to move to the next one. The record screen shows restrained abstract rows and one subtly highlighted current record, no readable words, numbers, names, letters or logos. Other background paper stacks may stay as environmental clutter. The story action is listening and returning to a digital record during a phone call, NOT signing paper, NOT ending the call. Keep one person only, no child, no caller portrait, no extra hands, no holographic spectacle. Match reference identity, room and color exactly.",
+            "referenced_image_paths": [
+              "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/held-call.webp"
+            ],
+            "transparent_background": false
+          }
+        }
+      ]
     },
     {
       "chapter": "23",
@@ -910,5 +924,6 @@
       "bytes": 161126,
       "sha256": "b15d85418fee87f586836329a26a699b15f215b73fa6c6fe0dbf8440c84cb1ea"
     }
-  ]
+  ],
+  "finalSourceBaseline": "be4fec8"
 }
