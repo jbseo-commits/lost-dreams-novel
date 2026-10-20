@@ -5,7 +5,7 @@ import {
 } from './state.js';
 import { createAudioDirector } from './audio.js';
 import { createMotifSVG, directedCast, sceneClass } from './direction.js';
-import { presentationForBeat } from './neural-cues.js?v=ep12-20261019-r3';
+import { presentationForBeat } from './neural-cues.js?v=scene-mix-20261020';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js';
@@ -20,7 +20,7 @@ import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './ep
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r3';
 
 const story = normalizeStory(window.STORY);
-document.documentElement.dataset.vnBuild='ep12-20261019-r3';
+document.documentElement.dataset.vnBuild='scene-mix-20261020';
 const $ = (id) => document.getElementById(id);
 const titleScreen = $('titleScreen'), gameScreen = $('gameScreen');
 createTitleAtmosphere({screen:titleScreen,canvas:$('titleAtmosphere')});
@@ -834,3 +834,11 @@ if (!story.chapters.length) {
 }
 syncSoundButton();
 syncContinueInfo(); syncReadingTools();
+
+// Open a reviewed scene without changing the saved chapter selection menu.
+const reviewLink = new URLSearchParams(location.search);
+const reviewChapter = reviewLink.get('chapter');
+if (reviewChapter && chapterAt(reviewChapter)) {
+  const index = Number.parseInt(reviewLink.get('beat'), 10) || 0;
+  play(reviewChapter, Math.max(0, Math.min(chapterAt(reviewChapter).beats.length - 1, index)), true);
+}

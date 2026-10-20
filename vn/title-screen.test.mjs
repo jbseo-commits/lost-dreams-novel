@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-const root=path.dirname(new URL(import.meta.url).pathname);
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 test('title uses the original teaser S19 artwork locally',()=>{
   const css=read('title-screen.css');
