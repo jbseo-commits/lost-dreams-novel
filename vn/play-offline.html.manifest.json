@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 65094560,
-  "sha256": "66a12914b9b24356a2fbc4a71ff85edd64d0ee2226a40e8f9f4b755e6fac02bb",
+  "offlineBytes": 65091102,
+  "sha256": "9fe42ecd292ef5870758d75e0e69001a426e7b89c26bf1c244364a29d3aa0ba8",
   "storyChapters": 128,
   "storyAssetKeys": 39,
   "ep1AssetKeys": [
@@ -1031,8 +1031,8 @@
         "isSeen",
         "addSeen"
       ],
-      "sourceSha256": "a5b610ac783ad016c5ccfae3d994585a3ebac6d612465b279d6f889141ffd53f",
-      "compiledSourceSha256": "b2b6bf4adcf270f98444e6ffa6c988d280cedfd59c640f647834da5c3146b992"
+      "sourceSha256": "1b55a82ed8dcf97b2bf46e4ed1ec6593ae0ade617167ea6939dca2010ede3c20",
+      "compiledSourceSha256": "7ab2dcb52b8f8eec9749e9a9d75350af5825a0592c30661abeddb329aa6b1a21"
     },
     "direction.js": {
       "exports": [
@@ -1048,15 +1048,15 @@
       "exports": [
         "createAudioDirector"
       ],
-      "sourceSha256": "b2bce28c76e166fa848ce2270ac937f4646b21696d253b586616e4169cf13218",
-      "compiledSourceSha256": "06a2398f49c8dcc86edde2a2d759bfb699b52824aa5dd86a9656744f1f41d6dc"
+      "sourceSha256": "790fce7436ab98d69eee2fe319350a307f69c23ab2359393f84e7b10a027855b",
+      "compiledSourceSha256": "7f1bd2cf6345e480ef2cb841e0433384fb6cb673c74d5ae94b6a33b34c788a52"
     },
     "neural-cues.js": {
       "exports": [
         "presentationForBeat"
       ],
-      "sourceSha256": "f12975f2fbec8e8c5e8727011a044a85e4f9e92a0494abad9a0e78cccf010933",
-      "compiledSourceSha256": "59b956120ea21f7767461d1e848d3bd827d38a78c11a3b7b65da621fe8fc7145"
+      "sourceSha256": "b20db5afd8c2ba0484613499408b2c155e60aa9366cfc8b3723de631af5292fa",
+      "compiledSourceSha256": "8e0d4e32729090c76bf54f679803c66299245c71a51100ac22f3e48349485bd1"
     },
     "neural-stage.js": {
       "exports": [
@@ -1087,7 +1087,7 @@
       "exports": [
         "EP1_ASSETS"
       ],
-      "sourceSha256": "12dfe9960776f292b269d3a9af2ae704accb042f86a12fb025e3ae5414fdf000",
+      "sourceSha256": "d5fea68c466e16725715d8ab2eeeff991c9919c1429249272e363c7da0cb86cd",
       "compiledSourceSha256": "204bacd8ca2ab2a485cc6745557093f2c9745d3def82ac11ede1200a3a00c756"
     },
     "episode-cutscenes.js": {
@@ -1104,8 +1104,8 @@
         "EPISODE_ONE_SCENES",
         "episodeOneDirection"
       ],
-      "sourceSha256": "1fb52e21e63c9fa6fa32a8be20c449db227dc9c24310c422a2aa9eee0615acc0",
-      "compiledSourceSha256": "2e7f2e294fae0063e3e104866186a4dc0bb175cf374538b12c4426736ecec120"
+      "sourceSha256": "fda0ff6016c88b13e7b4c52742ab73ea5ee68d839e544050bceaee2af9270939",
+      "compiledSourceSha256": "bb25afa52a65676b8b78aac867bf16e46c05932754bf9b680241bb425014fc25"
     },
     "episode-one-stage.js": {
       "exports": [
@@ -1127,22 +1127,22 @@
         "episodeOnePreviousPage",
         "isEpisodeOneObservation"
       ],
-      "sourceSha256": "18fa34de96ac5c3d4a50c5131bf5f89a5b969c030338bdf014f7f18e775f31a8",
-      "compiledSourceSha256": "ed1733dbbfd25195df1f5d6248c5b780a7034fa059ec46238991eb6968ed6425"
+      "sourceSha256": "b08770629210a1badd9c1ef971ffd1339d65d887405892317da1e20898c31fbf",
+      "compiledSourceSha256": "401eb7a2c3f7b000d9d8e31699e4d2cbe10f2fcd4863e913557dcedfa6811b33"
     },
     "episode-one-teaser.js": {
       "exports": [
         "createEpisodeOneTeaser"
       ],
-      "sourceSha256": "78f72f01e898a7084fd6c770e4a29fbf5a33426ab09b9e15041cf524707cfb1c",
-      "compiledSourceSha256": "2f24d4664c2126f1ef93c69d39bd55866a64aa6607241ec329d4ab88e038e84c"
+      "sourceSha256": "825a5cb5ba26cb42a70004bf635c7e4a3d96a1d5aad8937d75d53cdc7e46f2a0",
+      "compiledSourceSha256": "a98b4c9833c2867a0f7d3ad591c1b7add72480d776e1359e30be8e14dd0904ff"
     },
     "title-atmosphere.js": {
       "exports": [
         "createTitleAtmosphere"
       ],
-      "sourceSha256": "e22689aa0f4c093c0896d5b7f27c2b1f7872ebaa01be4ac0903f9b7a67851caa",
-      "compiledSourceSha256": "8ca3a5b4c8a297fca4798ee30a2d07884d5c5ecb98222f6d5d85981de27bce82"
+      "sourceSha256": "9287b29b44f2a9c9ed0624dae1ed5b9bec2ba2b820419cdcb039e67297cfec68",
+      "compiledSourceSha256": "677df823ae30fe1653a559d8208fb8910cf6b5964070733056e37cf0314a6e0b"
     },
     "episode-two.js": {
       "exports": [
@@ -1151,21 +1151,21 @@
         "episodeTwoSpeaker",
         "episodeTwoDirection"
       ],
-      "sourceSha256": "e355f8f53b5e946543326589a3af01fd545a803503c9d579cd19ac808ce498c7",
-      "compiledSourceSha256": "b08806549e11ae1a1c2f03aaeb4e7deffa0438fb594fdb5354352db425542ffe"
+      "sourceSha256": "26316725b2a4a4d5c8d02cdf584ade851a2ab9adcdd5d3863aa0f3555331f241",
+      "compiledSourceSha256": "3e70b91fa00c614fc0a3c68daf0c49e2cf8b38fef0c4dc560a45c73225a5d7f6"
     },
     "episode-two-reading.js": {
       "exports": [
         "episodeTwoReadingPage",
         "episodeTwoPreviousPage"
       ],
-      "sourceSha256": "b3dc70fbd95f31e88c1e0e8bf479bb05091c6b8e77d503769c7963b757ad794b",
-      "compiledSourceSha256": "d5936cda8cbcd7c8e3728bcc4f0601ac929e07852adb1f4813e0bcf31c743dd1"
+      "sourceSha256": "c7bb6e5754e5ecd7bfab797758c215ed5e3d72a65ee768e96fb0b3e20fb73f4b",
+      "compiledSourceSha256": "5e5995af5fde742baa34878632f81d2dece2ed8c26c325ba76a5277de8657f2c"
     },
     "app.js": {
       "exports": [],
-      "sourceSha256": "692eba6a26c675d0c679ca611cce97754adf01d545a567a3a9a436e0bb8138b3",
-      "compiledSourceSha256": "3893f695e98d4f8ef9e9221d8c14341e127b51b31167be5107e4fc0738c7636a"
+      "sourceSha256": "0868d4fc08d1f2afa4263a563ffbeea8f2e3c95c36168b16ea04a2e62d6579fe",
+      "compiledSourceSha256": "8db6ec9a94af63dcb47bbcbb8f3f3d9af7bb489e0fb837edfcf87ba4218be53a"
     }
   },
   "inlineScriptsParsed": 3,

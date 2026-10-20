@@ -2824,7 +2824,7 @@ const AUTHORED = {
       "medical"
     ],
     [
-      156,
+      165,
       "권한: 중단 승인.",
       "permission"
     ]
