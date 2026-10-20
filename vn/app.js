@@ -17,7 +17,7 @@ import { createEpisodeOneAudio } from './episode-one-audio.js?v=teaser-art-20261
 import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=teaser-art-20261021-r1';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
-import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=teaser-art-20261021-r1';
+import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=20261021-a';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=teaser-art-20261021-r1';
 import { syncEpisodeTwoCopy } from './episode-two-copyfix.js?v=20261021-a';
 import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=teaser-art-20261021-r1';
