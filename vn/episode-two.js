@@ -43,10 +43,11 @@ voice('동료들',[73,74,76,77,78]); voice('광고 속 지우',[239]);
 export const EPISODE_TWO_SCENES = SCENES.map(([index,title]) => ({index,title}));
 export function isEpisodeTwo(chapter) {
   if(chapter?.id!=='2')return false;
-  if(!validated.has(chapter))validated.set(chapter,chapter.beats?.length===286&&sourceFingerprint(chapter)==='f4703a55'&&SCENES.every(([i,,text])=>chapter.beats[i]?.text===text));
+  if(!validated.has(chapter)){const patched=chapter.__ep2Revision==='20261021-A';validated.set(chapter,chapter.beats?.length===286&&SCENES.every(([i,,text])=>patched?(i===190?chapter.beats[i]?.text==='지우는 점토를 뒤집어 보았다.':chapter.beats[i]?.text.startsWith(text)):chapter.beats[i]?.text===text)&&(patched?chapter.beats[205]?.text.includes('그래야 그게 정말 내 선택이지.'):sourceFingerprint(chapter)==='f4703a55'));}
   return validated.get(chapter);
 }
 export function episodeTwoSpeaker(chapter,index) {
+  if(chapter?.__ep2Revision==='20261021-A'&&index>=151&&index<=205)return chapter.beats[index]?.speaker||'';
   return isEpisodeTwo(chapter) ? voices.get(index) || chapter.beats[index]?.speaker || '' : chapter?.beats?.[index]?.speaker || '';
 }
 const actor=(id,asset,side,gaze,pose,name)=>({id,asset,side,gaze,pose,name:name||{seoin:'서인',mother:'어머니',jiwoo:'지우',father:'지우 아버지'}[id]});
