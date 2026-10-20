@@ -16,7 +16,8 @@ function segmentOf(line, markers) {
  let value=0;for(const marker of markers){if(marker<line)value++;else break;}
  return value;
 }
-export function auditNeutral(chapters,minEpisode=31,sourceBreaks={}) {
+export function auditNeutral(chapters,minEpisode=31,sourceBreaks={},missingSources=[]) {
+ const missing=new Set(missingSources);
  const groups=[];let neutralBeats=0;
  for(const chapter of chapters) {
   if(Number(String(chapter.id).split('-')[0])<minEpisode)continue;
@@ -29,16 +30,17 @@ export function auditNeutral(chapters,minEpisode=31,sourceBreaks={}) {
    neutralBeats+=slice.length;
    const places=[...new Set(slice.map(b=>b.direction?.place).filter(Boolean))];
    const grounded=places.length===1&&slice.every(b=>b.direction?.place===places[0]);
+   const missingSource=missing.has(chapter.sourcePath);
    const textCorpus=slice.map(b=>b.text??'').join(' ');
    const locationEvidence=PLACE_TERMS.filter(word=>textCorpus.includes(word)).slice(0,9);
    const lineBefore=part<=0?1:markers[part-1]+1;
    const lineAfter=part<0?null:markers[part]??null;
    groups.push({chapter:chapter.id,source:chapter.sourcePath||'',
-    manuscriptSection:part,manuscriptSectionStarts:part>=0?lineBefore:null,
-    manuscriptSectionEnds:lineAfter,
+    manuscriptSection:missingSource?null:part,manuscriptSectionStarts:!missingSource&&part>=0?lineBefore:null,
+    manuscriptSectionEnds:missingSource?null:lineAfter,
     beatFrom:first,beatTo:last,sourceLineFrom:beats[first].sourceLine??null,
     sourceLineTo:beats[last].endLine??beats[last].sourceLine??null,
-    count:slice.length,status:grounded?'source-grounded':'needs-manuscript-review',
+    count:slice.length,status:missingSource?'source-missing':(grounded?'source-grounded':'needs-manuscript-review'),
     location:grounded?places[0]:null,locationEvidence,
     priorSceneContext:beats[first-1]?.scene??null,nextSceneContext:beats[i]?.scene??null,
     openingText:shorten(beats[first].text),closingText:shorten(beats[last].text)});
@@ -46,6 +48,8 @@ export function auditNeutral(chapters,minEpisode=31,sourceBreaks={}) {
  }
  return {schema:'vn-neutral-inventory/v2',minEpisode,neutralBeats,sceneGroups:groups.length,
   resolvedGroups:groups.filter(x=>x.status==='source-grounded').length,
+  missingGroups:groups.filter(x=>x.status==='source-missing').length,
+  reviewableGroups:groups.filter(x=>x.status!=='source-missing').length,
   unresolvedGroups:groups.filter(x=>x.status==='needs-manuscript-review').length,groups};
 }
 async function main() {
@@ -62,7 +66,7 @@ async function main() {
    missingSources.push(path);
   }
  }
- const report=auditNeutral(chapters,31,sourceBreaks);
+ const report=auditNeutral(chapters,31,sourceBreaks,missingSources);
  report.missingSources=missingSources;
  report.sourceVerification=missingSources.length===0?'COMPLETE':'PARTIAL_MISSING_MANUSCRIPT';
  process.stdout.write(JSON.stringify(report,null,2)+'\n');
