@@ -40,6 +40,7 @@
 .ep1-stage[data-dream="true"] .ep1-cg img{filter:saturate(1.2) brightness(1.09)}
 .ep1-stage[data-shot="unease"] .ep1-cg img,.ep1-stage[data-shot="trapped"] .ep1-cg img{filter:saturate(1.36) brightness(1.1);animation:none;transform:scale(1.07)}
 .ep1-stage[data-shot="trapped"]::after{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;box-shadow:inset 0 0 14vw 6vw #062026b3}
+.ep1-stage[data-cg="dreamBeach"] .ep1-cg img{filter:saturate(1.06) brightness(1.01)!important;animation:none!important;transform:none!important}
 .episode-two[data-communication="system"] .ep1-actors{opacity:.45}
 .episode-one.episode-two[data-communication="system"] .neural-stage .neural-scene-system{top:15%;bottom:27%}
 .episode-one.episode-two[data-communication="system"] .neural-stage .neural-scene-system .neural-card{width:min(620px,65vw);max-height:100%}
@@ -125,5 +126,5 @@
  .ep1-stage[data-shot="close"] .ep1-actor[data-side="center"]{left:50%;width:90vw}
  .ep1-stage[data-cg="dreamBeach"] .ep1-cg{background-size:cover;background-position:38% center}
  .ep1-stage[data-cg="dreamBeach"] .ep1-cg::before{content:'';position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.35);transform:scale(1.1)}
- .ep1-stage[data-cg="dreamBeach"] .ep1-cg img{position:absolute;top:6vh;height:64vh;object-fit:contain;object-position:center}
+ .ep1-stage[data-cg="dreamBeach"] .ep1-cg img{position:absolute;top:10vh;height:62vh;object-fit:cover;object-position:32% 40%}
 }

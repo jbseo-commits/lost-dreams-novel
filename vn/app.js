@@ -5,30 +5,31 @@ import {
 } from './state.js';
 import { createAudioDirector } from './audio.js';
 import { createMotifSVG, directedCast, sceneClass } from './direction.js';
-import { presentationForBeat } from './neural-cues.js?v=demo-only-20261021-r2';
+import { presentationForBeat } from './neural-cues.js?v=teaser-art-20261021-r1';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
-import { exportSaveData, importSaveData } from './save-portability.js?v=demo-only-20261021-r2';
-import { EP1_ASSETS } from './ep1-assets.js?v=demo-only-20261021-r2';
-import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=demo-only-20261021-r2';
-import { EpisodeOneStage } from './episode-one-stage.js?v=demo-only-20261021-r2';
-import { createEpisodeOneAudio } from './episode-one-audio.js?v=demo-only-20261021-r2';
-import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=demo-only-20261021-r2';
+import { exportSaveData, importSaveData } from './save-portability.js?v=teaser-art-20261021-r1';
+import { EP1_ASSETS } from './ep1-assets.js?v=teaser-art-20261021-r1';
+import { withTeaserCharacterAssets } from './teaser-art.js?v=teaser-art-20261021-r1';
+import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=teaser-art-20261021-r1';
+import { EpisodeOneStage } from './episode-one-stage.js?v=teaser-art-20261021-r1';
+import { createEpisodeOneAudio } from './episode-one-audio.js?v=teaser-art-20261021-r1';
+import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=teaser-art-20261021-r1';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
-import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=demo-only-20261021-r2';
-import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=demo-only-20261021-r2';
-import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=demo-only-20261021-r2';
+import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=teaser-art-20261021-r1';
+import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=teaser-art-20261021-r1';
+import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=teaser-art-20261021-r1';
 
-import {coreSceneDirection,isOptionalObservation,CORE_CUTS,CORE_MOMENTS,CORE_DEMO_STORAGE_SUFFIX} from './core-demo.js?v=demo-only-20261021-r2';
-import {RELEASE,publicDemoStory,canReadChapter,purchaseLink} from './release.js?v=demo-only-20261021-r2';
-import {coreReadingPage,corePreviousPage} from './core-reading.js?v=demo-only-20261021-r2';
+import {coreSceneDirection,isOptionalObservation,CORE_CUTS,CORE_MOMENTS,CORE_DEMO_STORAGE_SUFFIX} from './core-demo.js?v=teaser-art-20261021-r1';
+import {RELEASE,publicDemoStory,canReadChapter,purchaseLink} from './release.js?v=teaser-art-20261021-r1';
+import {coreReadingPage,corePreviousPage} from './core-reading.js?v=teaser-art-20261021-r1';
 const demoMode=true;
 if(demoMode)document.documentElement.dataset.coreDemo='true';
 const fullStory=normalizeStory(window.STORY);
-const story=publicDemoStory(fullStory);
+const story=withTeaserCharacterAssets(publicDemoStory(fullStory),EP1_ASSETS);
 const activeStorageKey=STORAGE_KEY+(demoMode?CORE_DEMO_STORAGE_SUFFIX:'');
-document.documentElement.dataset.vnBuild='demo-only-20261021-r2';
+document.documentElement.dataset.vnBuild='teaser-art-20261021-r1';
 const $ = (id) => document.getElementById(id);
 const titleScreen = $('titleScreen'), gameScreen = $('gameScreen');
 createTitleAtmosphere({screen:titleScreen,canvas:$('titleAtmosphere')});
@@ -378,7 +379,7 @@ function renderBeat({ revisit = false } = {}) {
   const dreamEnd = dreamStart >= 0 ? chapter.beats.findIndex((item, index) => index > dreamStart && item.text?.includes('서인은 버튼을 눌렀다')) : -1;
   const inJiwooDream = dreamStart >= 0 && progress.beatIndex >= dreamStart && (dreamEnd < 0 || progress.beatIndex <= dreamEnd);
   $('stage').classList.toggle('ep2-jiwoo-dream', inJiwooDream);
-  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (performanceCue()?.backgroundAsset ? EP1_ASSETS[performanceCue().backgroundAsset] : story.assets?.[scene]);
+  const background = inJiwooDream ? EP1_ASSETS.dreamBeach : (performanceCue()?.backgroundAsset ? EP1_ASSETS[performanceCue().backgroundAsset] : story.assets?.[scene]);
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {

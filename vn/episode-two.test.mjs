@@ -52,7 +52,7 @@ test('reality, medical conversation and dream keep the appropriate people and cl
   assert.equal(episodeTwoSpeaker(second,92),'지우 아버지');
 });
 test('the newer remote beach CG stays visible for the entire dream without a duplicate actor',()=>{
-  assert.equal(EP1_ASSETS.dreamBeach,'assets/ep2/jiwoo-dream-beach.avif');
+  assert.equal(EP1_ASSETS.dreamBeach,'assets/teaser-style/dream-beach.webp');
   for(let index=232;index<=265;index++){assert.equal(at(index).cg,'dreamBeach');assert.deepEqual(at(index).actors,[]);}
   assert.notEqual(at(266).cg,'dreamBeach');
 });

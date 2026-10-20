@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import { EP1_ASSETS } from './ep1-assets.js';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 test('title uses the original teaser S19 artwork locally',()=>{
@@ -35,7 +36,7 @@ test('gallery assets exist and title stays available to screen readers',()=>{
   const html=read('index.html'),css=read('title-screen.css');
   assert.match(html,/<h1 id="storyTitle" class="title-accessible-heading">/);
   assert.match(css,/clip-path:inset\(50%\)/);
-  for(const name of ['ep1/cg-sea.webp','ep12/cg-table-home.webp','ep1/cg-clay-woman-body.webp','ep12/cg-night-home.webp']){
+  for(const name of ['ep1/cg-sea.webp',EP1_ASSETS.table,EP1_ASSETS.clay,EP1_ASSETS.night].map(value=>value.replace(/^assets\//,''))){
     assert.ok(fs.existsSync(path.join(root,'assets',name)),name);
   }
 });

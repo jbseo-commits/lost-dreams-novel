@@ -7,6 +7,7 @@ import {buildOffline} from './build-vn-offline.mjs';
 import {normalizeStory} from '../vn/state.js';
 import {publicDemoStory,DEMO_CHAPTER_IDS} from '../vn/release.js';
 import {EP1_ASSETS} from '../vn/ep1-assets.js';
+import {withTeaserCharacterAssets} from '../vn/teaser-art.js';
 import {episodeOneDirection} from '../vn/episode-one.js';
 import {episodeTwoDirection} from '../vn/episode-two.js';
 import {coreSceneDirection} from '../vn/core-demo.js';
@@ -39,7 +40,7 @@ export async function buildPublicSite(sourceRoot,outputRoot,{copyRoot=true}={}){
  }
  const input=path.join(root,'vn'),vn=path.join(out,'vn');await fs.mkdir(vn);
  const box={window:{}};vm.runInNewContext(await fs.readFile(path.join(input,'story-data.js'),'utf8'),box);
- const original=JSON.parse(JSON.stringify(box.window.STORY)),raw=publicDemoStory(original),story=normalizeStory(raw);
+ const original=JSON.parse(JSON.stringify(box.window.STORY)),raw=withTeaserCharacterAssets(publicDemoStory(original),EP1_ASSETS),story=normalizeStory(raw);
  const ids=new Set(DEMO_CHAPTER_IDS),keys=new Set(['teaserVideo','sea']);
  const storyKeys=new Set(['city']);
  for(const c of story.chapters)for(let i=0;i<c.beats.length;i++){
@@ -49,7 +50,7 @@ export async function buildPublicSite(sourceRoot,outputRoot,{copyRoot=true}={}){
   if(cue){for(const k of ['backgroundAsset','cg','music','ambience','fx'])if(cue[k])keys.add(cue[k]);storyKeys.add(cue.background);for(const a of cue.actors||[])keys.add(a.asset);}
  }
  const episodeAssets=Object.fromEntries(Object.entries(EP1_ASSETS).filter(([key])=>keys.has(key)));
- const assets=Object.fromEntries(Object.entries(original.assets).filter(([key])=>storyKeys.has(key)));
+ const assets=Object.fromEntries(Object.entries(raw.assets).filter(([key])=>storyKeys.has(key)));
  const data={...raw,assets,credits:{author:original.credits?.author||'',scope:'무료 데모 · 1~11화와 사이 이야기 7편'}};
  await fs.writeFile(path.join(vn,'story-data.js'),'window.STORY = '+JSON.stringify(data)+';\n');
  const generated=new Map([['ep1-assets.js','export const EP1_ASSETS=Object.freeze('+JSON.stringify(episodeAssets)+');\n']]);

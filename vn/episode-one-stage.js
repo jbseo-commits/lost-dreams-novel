@@ -33,7 +33,7 @@ export class EpisodeOneStage {
     this.host.dataset.shot=cue.shot;
     this.host.dataset.cg=cue.cg||'';
     this.host.dataset.cutscene=cue.cutscene?.id||'';
-    this.inspectCue=cue.cutscene?cue:null;this.inspect.hidden=!this.inspectCue;
+    this.inspectCue=cue.cutscene?cue:cue.cg==='dreamBeach'?{...cue,cutscene:{alt:'얕은 파도에 앉아 있는 지우와 광고꿈 속 해변'}}:null;this.inspect.hidden=!this.inspectCue;
     this.host.style.setProperty('--cut-position',cue.cutscene?.position||'50% 48%');
     this.cg.dataset.phase=cue.cutscene?.phase||'';
     const impact=cue.cutscene?.impact??'';
