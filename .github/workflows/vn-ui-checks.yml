@@ -48,3 +48,10 @@ jobs:
           name: vn-art-branch-playable-preview
           path: ${{ runner.temp }}/play-offline.html
           retention-days: 7
+      - name: 33화 원화 시안 검수 자료 보존
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-ep33-art-preview
+          path: |
+            vn/assets/ep33/*.svg
+          retention-days: 7
