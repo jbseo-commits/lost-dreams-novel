@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-20",
+  "canon": "32화 오후 3:41 세르젠 협력 병원 6층 대기실. 중년 남자가 빈 의자에 앉지 않음. 3:48의 후속 장면에서도 같은 방이며 결국 앉음.",
+  "scope": "manuscript/ep032.md:258-358; same set across line 331 separator",
+  "mode": "hand-authored SVG prototype, 1672x941 viewBox. PNG master/WebP runtime asset, realistic PC/mobile rendering and G1~G9 review outstanding.",
+  "assets": [
+    {
+      "key": "hospital-waiting-afternoon",
+      "name": "vn/assets/ep32/bg-hospital-waiting-afternoon.svg",
+      "manuscript": "manuscript/ep032.md:258-358",
+      "references": [
+        "vn/assets/hospital.webp",
+        "vn/assets/ep31/bg-medical-conference-morning.svg"
+      ],
+      "prompt": "협력 병원 대기실 오후. 의자에 앉기를 거부하는 인물의 빈 자리만 인물 없는 배경에 둔다. 낡지 않았으나 차가운 의료 공간. 기존 상층 의료 회의실보다 좁고 실용적인 분위기. 의료 UI/글자, 허구 장비, 간판, 원고에 없는 인물 없음. 하단 32% 비운다.",
+      "gates": {
+        "G1": "PARTIAL: 비어 있는 의자로 심리적 압박 암시, 실제 남자 스프라이트 제작 전",
+        "G2": "PARTIAL: 원고에 의자가 등장, 6층 대기실·오후. 건축 세부는 정전 미확정",
+        "G3": "N/A: 배경",
+        "G4": "N/A: 배경",
+        "G5": "PENDING: 상층 회의실 병렬 확인",
+        "G6": "PENDING: 1280x720/1920x1080/390x844 캡처 필요",
+        "G7": "PENDING: 썸네일 크롭 미실시",
+        "G8": "PENDING: 렌더 결함 실제 확인 전",
+        "G9": "PARTIAL: 3:41~3:48 같은 SVG 사용하도록 코드 제한"
+      },
+      "retries": 0,
+      "notes": "상업 출시 승인되지 않은 SVG 시험 아트. 실제 스프라이트 없이 G1 PASS 처리 금지. 동의/검증 의료 정보 UI는 HTML 텍스트에서만 표시."
+    }
+  ]
+}
