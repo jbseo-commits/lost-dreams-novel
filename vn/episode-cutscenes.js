@@ -289,8 +289,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "22",
-    "start": 138,
-    "end": 138,
+    "start": 148,
+    "end": 148,
     "cg": "hospitalShoe",
     "anchor": "그가 신발을 가져다주자 아이는 뒤축을 구겨 신었다. 남자는 허리를 숙여 뒤축을 펴 줬다.",
     "alt": "57분 뒤 신발 뒤축",
