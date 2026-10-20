@@ -16,11 +16,12 @@ import { createEpisodeOneAudio } from './episode-one-audio.js?v=ep12-20261019-r3
 import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep12-20261019-r3';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
+import { backgroundForLocation } from './location-backgrounds.js';
 import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r3';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r3';
 
 const story = normalizeStory(window.STORY);
-document.documentElement.dataset.vnBuild='scene-mix-20261020';
+document.documentElement.dataset.vnBuild='scene-mix-neutral-bg-20261020';
 const $ = (id) => document.getElementById(id);
 const titleScreen = $('titleScreen'), gameScreen = $('gameScreen');
 createTitleAtmosphere({screen:titleScreen,canvas:$('titleAtmosphere')});
@@ -337,7 +338,7 @@ function renderBeat({ revisit = false } = {}) {
   const dreamEnd = dreamStart >= 0 ? chapter.beats.findIndex((item, index) => index > dreamStart && item.text?.includes('서인은 버튼을 눌렀다')) : -1;
   const inJiwooDream = dreamStart >= 0 && progress.beatIndex >= dreamStart && (dreamEnd < 0 || progress.beatIndex <= dreamEnd);
   $('stage').classList.toggle('ep2-jiwoo-dream', inJiwooDream);
-  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene]);
+  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : (backgroundForLocation(chapter, beat) || story.assets?.[scene]));
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
