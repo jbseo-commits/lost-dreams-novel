@@ -159,9 +159,9 @@
 .gallery-grid figure {margin:0;min-width:0;}
 .gallery-art {width:100%;aspect-ratio:16/9;background-color:#0b1b30;background-position:center;background-size:cover;}
 .gallery-sea {background-image:url("assets/ep1/cg-sea.webp");}
-.gallery-table {background-image:url("assets/ep12/cg-table-home.webp");}
-.gallery-clay {background-image:url("assets/ep1/cg-clay-woman-body.webp");}
-.gallery-night {background-image:url("assets/ep12/cg-night-home.webp");}
+.gallery-table {background-image:url("assets/teaser-style/table.webp");}
+.gallery-clay {background-image:url("assets/teaser-style/clay.webp");}
+.gallery-night {background-image:url("assets/teaser-style/night.webp");}
 .gallery-grid figcaption {margin:7px 0 0;font-size:12px;color:#b8cce7;}
 
 @media(max-height:590px) and (min-aspect-ratio:4/3) {

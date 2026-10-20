@@ -1,0 +1,1027 @@
+{
+  "baseline": "83a859d6270f2bdf479854c477c5845e60d9482e",
+  "tool": "built-in image_gen",
+  "exactModel": "not exposed",
+  "styleReference": {
+    "file": "references/teaser-seoin-v16-face.png",
+    "sha256": "7f73eddfc6e21708b7b04b480bc1b5fb39826bee56bf56f195a297d392536f57",
+    "video": "user-supplied lost_dreams_teaser_v16_soundmaster-2.mp4",
+    "frameSeconds": 3.5
+  },
+  "rules": [
+    "서인 남성, 티저 속 검은 곱슬머리·눈매·얼굴과 일치",
+    "지우 여성, 짧은 갈색 머리와 기존 성인 얼굴 유지",
+    "화풍은 또렷한 선과 면 명암, 인물마다 다른 나이·얼굴·복장·감정·동작 보존",
+    "장면별 사건·소품·인물 수 유지; 비식별 기억 인물의 얼굴을 확정하지 않음"
+  ],
+  "assets": [
+    {
+      "key": "seoinStanding",
+      "file": "seoin-standing.webp",
+      "original": "vn/assets/ep12/seoin-standing.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 254626,
+      "sha256": "7a9a3777024d2aa6d251978e527c7c3c49f6fe566e33dfc3e9a93f30bd8df488",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-db85b147-d836-4ea6-8e09-891486077b06.png",
+      "nativePngSha256": "ad91c1a66597c0e085925d84fdc5bf69e1f551f8377833147497ef7f1bed915d",
+      "sourceSha256": "6a01e1329edd124b33b166cbdacfba6f88d31189e1b00fd3182ed2c8f37e96ae",
+      "prompt": "Use case: precise-object-edit / identity-preserve. Input1 is the accepted new Seoin transparent sprite. Change ONLY his outer JACKET cut to the charcoal tailored single-breasted work blazer of input2: soft notch lapels, two-button front with subtle welt pockets, NO field-jacket flap chest pockets or zipper. Keep gray button shirt underneath. Input2 supplies JACKET GARMENT ONLY, NEVER its face, straight hair or old rendering. Preserve input1's exact new face, black CURLS, age, eye shape, expression, head angle, hands, body pose, trousers, proportions, canvas framing, ink/cel-paint style and lighting absolutely. No redesign or additional prop. Keep genuinely transparent alpha background; no painted background, floor, glow rectangle, text, second character. One isolated figure, native portrait1024x1536.",
+      "references": [
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved",
+      "previousGeneration": {
+        "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "prompt": "Use case: style-transfer. Create the canonical Seoin standing sprite for a Korean science-fiction visual novel. Use ONLY the attached teaser frame as the exact male identity and rendering reference. Seoin is a young adult man, with a tousled dense mass of short black CURLY ringlets, rounded expressive brown eyes with visible lower-lid detail, softly angular natural face, small natural nose, slightly parted mouth, slim build. Match this specific frame's hand-drawn anime feature anatomy, NOT a sharp-jawed romance-model face, NOT tiny narrow eyes, NOT stiff spiky hair. Recreate this same man awake standing 3/4 looking right, gray everyday button shirt and charcoal work jacket/trousers, one hand in pocket and other relaxed visible. Portrait from above hair down to mid-thigh, uncropped fingers. Flat clean ink outlines, cel-painted indigo shadows, restrained amber rim light. No backdrop whatsoever: genuinely transparent outside the silhouette, no brown glow, no rectangle. No HUD/text, scenery, card or multiple poses. The result must clearly be the teaser's curly-haired male protagonist in a new pose, not the prior game portrait.",
+        "references": [
+          "C:/Users/정현아/teaser-seoin-v16-face.png"
+        ],
+        "reason": "출근복의 블레이저 라펠과 주머니 형태를 기존 장면·다른 신규 표정과 일치"
+      }
+    },
+    {
+      "key": "jiwooTease",
+      "file": "jiwoo-tease.webp",
+      "original": "vn/assets/ep1/jiwoo-woman-body-tease.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 334182,
+      "sha256": "cb411135a000f78e601d9b614b0f8eabd1dc1e7c0e81930ae4e17c01176e38f3",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png",
+      "nativePngSha256": "6a86578f817d60c5e61ed8bee1a323d5229ca26ac7391f9074473befa031d842",
+      "sourceSha256": "96df1a0430af476c0a4609b68610ae2eaf127da34201104bcaad35abc2ca7bb1",
+      "prompt": "Use case: style-transfer. One production visual novel character sprite on real transparent background. Input1 is the EDIT TARGET and identity/pose/costume reference: Jiwoo, an adult Korean WOMAN with short brown side-parted bob, dark warm eyes, subtly amused face resting on one hand. Input2 is rendering STYLE ONLY, NOT this person's identity. Redraw input1 with the same crisp hand-drawn anime linework and cel-painted indigo shadows/soft amber edge light as input2 (our teaser's art direction). Keep the practical gray open overshirt, charcoal crewneck and jeans, seated natural adult female build and the exact hand-to-cheek pose. She is female, never use the old male Jiwoo. She has her own face and smooth brown hair, not Seoin's curly black hair. Keep composition, gaze direction, exact action, age and recognizable identity of input1. Natural anime adult anatomy, clear facial features and fingers, restrained painted texture, no airbrushed photo/3D look. Match style, do not make everyone share a face. Tall portrait, one figure only. Absolutely no scenery, rectangle, floor, glow background, text or watermark. Preserve genuine alpha transparency outside the silhouette.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/jiwoo-woman-body-tease.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "motherCare",
+      "file": "mother-care.webp",
+      "original": "vn/assets/ep12/mother-care.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 391184,
+      "sha256": "aa960bc1f331302f827895c7606c8887820fca0d3f4a9bbbbc029a6bc6c8f702",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-69a00566-1288-4ff1-8149-91e1c17dc876.png",
+      "nativePngSha256": "428664707d49db2dc223d563df5b4668dcb71fcec70b31be8cac855147dcc5ee",
+      "sourceSha256": "560a6fe898720abfd51dc7a8a8a6ad8181f0a16234c05a6b7ce0d38280d7f156",
+      "prompt": "Use case: style-transfer. One production visual novel character sprite on real transparent background. Input1 is the EDIT TARGET and identity/pose/costume reference: Seoin's middle-aged Korean mother, mature caring face with visible age lines, short salt-and-pepper bob. Input2 is rendering STYLE ONLY, NOT this person's identity. Redraw input1 with the same crisp hand-drawn anime linework and cel-painted indigo shadows/soft amber edge light as input2 (our teaser's art direction). Keep seated pose, both hands folded over lap, gaze left slightly down with concern, light blouse, gray cardigan, dark trousers, natural middle-aged body; do not rejuvenate her. Keep composition, gaze direction, exact action, age and recognizable identity of input1. Natural anime adult anatomy, clear facial features and fingers, restrained painted texture, no airbrushed photo/3D look. Match style, do not make everyone share a face. Tall portrait, one figure only. Absolutely no scenery, rectangle, floor, glow background, text or watermark. Preserve genuine alpha transparency outside the silhouette.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/mother-care.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "fatherAppeal",
+      "file": "father-appeal.webp",
+      "original": "vn/assets/ep12/father-appeal.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 342772,
+      "sha256": "67c31e4f4ab6af83f53abc4e15277896aeba985668af5d02d7239e83d4ea8f6c",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-6d074eda-50af-447c-bfdd-9c8f006b424c.png",
+      "nativePngSha256": "02e9fda2e50e4642593bbf2027c3ba7836d4a8b3b0f03e5aa486276fdec761d0",
+      "sourceSha256": "ace25316c7f7c51e0b1cae47d222f61c61aabecdd30a386ef49ac8a0f339fa08",
+      "prompt": "Use case: style-transfer. One production visual novel character sprite on real transparent background. Input1 is the EDIT TARGET and identity/pose/costume reference: Jiwoo's middle-aged Korean father with lined tired face, short graying dark hair, pale blue rolled-sleeve shirt. Input2 is rendering STYLE ONLY, NOT this person's identity. Redraw input1 with the same crisp hand-drawn anime linework and cel-painted indigo shadows/soft amber edge light as input2 (our teaser's art direction). Preserve earnest worried expression, seated leaning forward offering tablet in RIGHT hand, visible small medical port on inner LEFT wrist, left hand relaxed on knee, exact posture and prop placement. Mature weary father, not sinister. Keep composition, gaze direction, exact action, age and recognizable identity of input1. Natural anime adult anatomy, clear facial features and fingers, restrained painted texture, no airbrushed photo/3D look. Match style, do not make everyone share a face. Tall portrait, one figure only. Absolutely no scenery, rectangle, floor, glow background, text or watermark. Preserve genuine alpha transparency outside the silhouette.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/father-appeal.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "dreamBeach",
+      "file": "dream-beach.webp",
+      "original": "vn/assets/ep2/jiwoo-dream-beach.avif",
+      "kind": "event-cg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 2033126,
+      "sha256": "a86f06e206651e707e6a72c3402cf52d2ea8582114603c298a4c1e2c199be0eb",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-93da1a71-9df4-4bdb-b7b9-56043373befc.png",
+      "nativePngSha256": "44975360b9a332131c531ec73a695f2c93043c6f173418b335f33cd960275c1b",
+      "sourceSha256": "9c364e4ff681a6467c1d79f99ff7baa93a5be1bb7ff3974062f281078511a212",
+      "prompt": "Use case: style-transfer. EDIT ONLY the rendering finish of input1 beach CG; keep the exact scene, adult WOMAN Jiwoo identity/face, short brown bob, single seated pose with cheek on right hand, exact swimwear, palms, sunset, ocean, camera and composition. Input2 is her canonical drawn VN portrait and input3 is the accepted VN event CG rendering. Make input1 look painted by the same artist as2/3: confident dark hand-drawn contour lines, simplified cel-shadow planes on face/skin, restrained hand-painted light, small brush texture. REDUCE glossy airbrush highlights and oily photoreal wet-skin shine substantially; no shiny plastic/3D anatomy gradients. Her body should have the same matte cel-painted skin finish as her face in2. Leave bright ocean glints and luminous sunset as environmental light, without bleaching face details. Do not blur, soften, lower resolution, add grain obscuring detail, change anatomy/pose/costume, change her sex, add people/text/UI. Keep native high-resolution landscape1536x1024 or larger; no compression artifacts. Opaque full scene. This is a precise style unification edit, not a new scene.",
+      "references": [
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-aea4c38d-9ca3-4c7a-a901-a475d1a7743e.png",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-8c819943-b47c-4914-a02b-3e2e5d9cae16.png"
+      ],
+      "transparent": false,
+      "encoding": "lossless WebP",
+      "previousGeneration": {
+        "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-aea4c38d-9ca3-4c7a-a901-a475d1a7743e.png",
+        "prompt": "Use case: style-transfer. Production event CG for Korean SF visual novel, remake a badly compressed 576x384 advertising-dream beach CG as a sharp high-resolution landscape illustration with genuinely redrawn detail, not an enlarged blurry raster. Input1 EDIT TARGET for the exact scene/composition: adult WOMAN Jiwoo seated on wet tropical shore in shallow clear water, cheek resting on right hand, same swimwear, short chestnut bob, head inclined and calm oddly perfect smile, sunset to the right, palms to left, sparkling ocean, no other person. Input2 is her canonical face and the new hand-drawn cel-painted STYLE: preserve her recognizable adult female face, short side-part brown bob, natural proportions; NOT a man. Input3 establishes the original teaser's ink lines, confident drawn features, indigo/coral shadows and luminous atmospheric lighting. Render clear individual locks, facial contours, iris details, well-formed hands, clean water ripples and distinct palms/rocks, without muddy airbrush or JPEG smears. Keep the original pose/camera/story meaning and idyllic advertisement mood. No new romance action, extra person, UI, writing, logos, border, collage. Landscape 3:2 composition at the highest native resolution available (target 2304x1536 or larger); character grouped left-center and visible head through knees, horizon and sunset visible, lower quarter usable under dialogue. Opaque full scene. Do not imitate the target's low-res compression or blur.",
+        "references": [
+          "C:/Users/정현아/jiwoo-beach-art-reference.png",
+          "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png",
+          "C:/Users/정현아/teaser-seoin-v16-face.png"
+        ],
+        "reason": "독립 시각 검토에서 다른 CG보다 피부광과 반실사 표현이 강해 면 명암 화풍으로 재조정"
+      }
+    },
+    {
+      "key": "doyunCanonical",
+      "file": "doyun-canonical.webp",
+      "original": "vn/assets/doyun.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 219874,
+      "sha256": "05798c46250c0ceebbbbc49b7b506c5e8424e9df585b4e4ed41d1ab5e5f4dbc6",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-21389c83-283a-41a9-8a91-4da80bfa63e8.png",
+      "nativePngSha256": "65a721536fc4c20c61a55d2705c76a7544b9dee934cfef3a96c863f2bbd9c8a7",
+      "sourceSha256": "df23ccbc8f017fd4c6e75e20dd884d7f74a18d374e2af362fc34851c564a475e",
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite. Input1 EDIT TARGET: Doyun, adult Korean man, friendly worn face with faint stubble, messy straight black hair NOT Seoin curls, gray hoodie and dark jogger trousers, slippers, one hand in pocket and one holding single wrapped chopsticks, warm relaxed smile. Retain original full-body pose and easy companion feeling, not villain. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear cel-painted planes, restrained indigo shadow, soft warm rim light, painterly material grain. Transform input1 to this same teaser art direction. Keep the original person's sex/age/face, pose, gaze, costume and props, do not replace identity with the style-reference man. Natural adult anatomy and well-drawn hands. No photoreal airbrushing or glossy 3D. One figure only, same framing, no missing shoes if full body. Genuinely transparent background, no scenery, floor, rectangle, glow backdrop, text, watermark, contact sheet or multiple characters.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "coreHakyung",
+      "file": "core-hakyung.webp",
+      "original": "vn/assets/core/hakyung-clinical.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 313694,
+      "sha256": "67b0328ea4b34852bb398580bd8afd7923248227c0f0b19008b64e718ec8b9a6",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-8eddbfb6-6446-4973-8012-56ad97718fdb.png",
+      "nativePngSha256": "b177a15da2ed5720302c6b442e3f8b9e848e45275f2aba23ead71b2501856515",
+      "sourceSha256": "a2e471515d20a73b468835a0257e9879a68962248820f0e75da69a2d7da7eac4",
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite. Input1 EDIT TARGET: Hakyung, adult Korean WOMAN with tied-back dark hair and loose front strands, teal clinical work jacket over white tee, dark trousers, smartwatch, both hands holding tablet while looking down thoughtfully, professional neutral, not threatening. Retain original 3/4 mid-thigh framing and exact tablet/pose. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear cel-painted planes, restrained indigo shadow, soft warm rim light, painterly material grain. Transform input1 to this same teaser art direction. Keep the original person's sex/age/face, pose, gaze, costume and props, do not replace identity with the style-reference man. Natural adult anatomy and well-drawn hands. No photoreal airbrushing or glossy 3D. One figure only, same framing, no missing shoes if full body. Genuinely transparent background, no scenery, floor, rectangle, glow backdrop, text, watermark, contact sheet or multiple characters.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/core/hakyung-clinical.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "rehoCanonical",
+      "file": "reho-canonical.webp",
+      "original": "vn/assets/reho.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 203484,
+      "sha256": "d3d33303adb81d861342776f444b14365b9b864dc067e5567f1af60c51f188fc",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-aba12788-2c73-4029-a454-b7eb67ee9107.png",
+      "nativePngSha256": "cf4d910f7cfa17a8471840cee12bc05a663b059f76cdd22ac034b93ec1433bd8",
+      "sourceSha256": "db0a74445cdb88d6aef8e5fd7d6fd47495e8f87b4cedf70341fca7760bfc9558",
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite. Input1 EDIT TARGET: Reho, middle-aged Korean male technician with short black hair and slight gray, faint stubble, warm smile and forehead lines, navy work shirt over white tee, black cargo trousers and work shoes, one hand carrying crumpled brown paper lunch bag, other in pocket. Retain original whole-body pose, no Seoin curls. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear cel-painted planes, restrained indigo shadow, soft warm rim light, painterly material grain. Transform input1 to this same teaser art direction. Keep the original person's sex/age/face, pose, gaze, costume and props, do not replace identity with the style-reference man. Natural adult anatomy and well-drawn hands. No photoreal airbrushing or glossy 3D. One figure only, same framing, no missing shoes if full body. Genuinely transparent background, no scenery, floor, rectangle, glow backdrop, text, watermark, contact sheet or multiple characters.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/reho.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "miraCanonical",
+      "file": "mira-canonical.webp",
+      "original": "vn/assets/mira.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 257068,
+      "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-0409e81e-8a30-4b9f-a106-15c724ac1469.png",
+      "nativePngSha256": "715344ccac3ef66131dd9f4710844dc46c38666e3f524e3811abf61c62ee7032",
+      "sourceSha256": "1a2641a0c6e84e02a798e0989f2ba97704f2c3f913a69fd4bed655a99b5068b0",
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite. Input1 EDIT TARGET: Mira, adult Korean WOMAN, dark hair tied in practical ponytail, deep green work jacket with reflective strips, white crewneck, gray cargo trousers and boots, one hand holding metal drink can, other hand in pocket, watch and belt pouch. Retain her distinct face and original whole-body pose. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear cel-painted planes, restrained indigo shadow, soft warm rim light, painterly material grain. Transform input1 to this same teaser art direction. Keep the original person's sex/age/face, pose, gaze, costume and props, do not replace identity with the style-reference man. Natural adult anatomy and well-drawn hands. No photoreal airbrushing or glossy 3D. One figure only, same framing, no missing shoes if full body. Genuinely transparent background, no scenery, floor, rectangle, glow backdrop, text, watermark, contact sheet or multiple characters.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/mira.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "seoinWaking",
+      "file": "seoin-waking.webp",
+      "original": "vn/assets/ep1/seoin-waking.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 373114,
+      "sha256": "71dc88c2d498627d489938ce9a73b5ad7b6d85e966031a05b85f0693af6b78de",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-12ecdef8-b846-4ee3-b983-442369f6b623.png",
+      "nativePngSha256": "0a81cc188770fee24b568aa9d2684881dcc44be9574d46113645ba0e58f8ec9b",
+      "sourceSha256": "f1708b2a5c566588880ec7a205f7b9ee6c1edaae23f2e47b416638297a571de3",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET supplies ONLY pose, original costume and exact action. Input2 is the new CANONICAL IDENTITY and drawing style of this same character: use that exact face, hair, age, sex and clear ink/cel-painted rendering consistently. Input3 is original teaser style context. Redraw input1 as input2's person in the following scene state: Seoin half-awake seated, leaning forward, one hand braced beside him, other relaxed on knee; gray long-sleeve crewneck and dark drawstring home trousers, heavy eyelids, looking slightly right. No suit, no glass. For Seoin, retain input2's dense loose black curls and natural rounded expressive eyes, never input1's smooth straight idol hair or narrow romance face. For other people preserve their own distinct faces. Preserve the target pose and framing, original scene clothing even if different from canonical anchor's clothing. Indigo cel shadows, warm/cool edge light appropriate to state, subtle material texture, crisp linework; no photoreal skin/3D. Single isolated figure, transparent background, no added floor, glow backdrop, text, panels, second pose, scenery. Keep all hands/head inside image.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/seoin-waking.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "seoinHome",
+      "file": "seoin-home.webp",
+      "original": "vn/assets/ep12/seoin-home.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 397710,
+      "sha256": "b3d4aea11284b8163d7a6ee8dbd38b9140534719dc15685096ed507f6367647e",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-63595b98-61a6-429b-8f42-6bd97f698d69.png",
+      "nativePngSha256": "98ca0340b5414e9f16f4caf712085a286a6dec0653d2906956f1011627743311",
+      "sourceSha256": "0dfaab04fc447cfea24098b7eb77b5ec3baf32d65a1fecb4ec1ab531ca9442f5",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET supplies ONLY pose, original costume and exact action. Input2 is the new CANONICAL IDENTITY and drawing style of this same character: use that exact face, hair, age, sex and clear ink/cel-painted rendering consistently. Input3 is original teaser style context. Redraw input1 as input2's person in the following scene state: Seoin seated looking right, right hand holding a small clear water glass at chest height, other hand on thigh, gray long-sleeve crewneck and dark home trousers. Keep glass visible. For Seoin, retain input2's dense loose black curls and natural rounded expressive eyes, never input1's smooth straight idol hair or narrow romance face. For other people preserve their own distinct faces. Preserve the target pose and framing, original scene clothing even if different from canonical anchor's clothing. Indigo cel shadows, warm/cool edge light appropriate to state, subtle material texture, crisp linework; no photoreal skin/3D. Single isolated figure, transparent background, no added floor, glow backdrop, text, panels, second pose, scenery. Keep all hands/head inside image.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "seoinStartled",
+      "file": "seoin-startled.webp",
+      "original": "vn/assets/ep12/seoin-startled.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 425676,
+      "sha256": "92422dd4d3509d8a3cde7cc9a726d0f1055c7ee654ad02326bebca7996f85504",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-e6668fd3-df9c-4f85-ba3d-b29d0263398a.png",
+      "nativePngSha256": "334e65f2d22effc4a29323eb642935bf1a06c2debbff790199a4f67125c9368c",
+      "sourceSha256": "19ba728a280a5f11d8b79f72b070ee0217fe476092bad802e8858814a78c0b73",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET supplies ONLY pose, original costume and exact action. Input2 is the new CANONICAL IDENTITY and drawing style of this same character: use that exact face, hair, age, sex and clear ink/cel-painted rendering consistently. Input3 is original teaser style context. Redraw input1 as input2's person in the following scene state: Seoin jolted awake, seated leaning forward, right hand pressed to his chest, left hand braced on bed beside him, mouth parted, eyes wide and gaze right; gray crewneck, dark home trousers, blue night rim light. For Seoin, retain input2's dense loose black curls and natural rounded expressive eyes, never input1's smooth straight idol hair or narrow romance face. For other people preserve their own distinct faces. Preserve the target pose and framing, original scene clothing even if different from canonical anchor's clothing. Indigo cel shadows, warm/cool edge light appropriate to state, subtle material texture, crisp linework; no photoreal skin/3D. Single isolated figure, transparent background, no added floor, glow backdrop, text, panels, second pose, scenery. Keep all hands/head inside image.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-startled.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "seoinRecliningHome",
+      "file": "seoin-reclining-home.webp",
+      "original": "vn/assets/ep12/seoin-reclining-home.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 380934,
+      "sha256": "72d7c5a73a0edbd94358d61c78218f1cd1dc2664c613e4f834303da7b1fed5b8",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-b813c3f1-2c1c-41da-b1b7-37de31bd3d3b.png",
+      "nativePngSha256": "56d408d29ba8e3451eae043983eb526d3427b2a96d283898ea29f867a3270432",
+      "sourceSha256": "ba22839ce2ec70cdaa8bb7a66e70f718b51eab9743d4502585e997468ee9472f",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET supplies ONLY pose, original costume and exact action. Input2 is the new CANONICAL IDENTITY and drawing style of this same character: use that exact face, hair, age, sex and clear ink/cel-painted rendering consistently. Input3 is original teaser style context. Redraw input1 as input2's person in the following scene state: Seoin reclining backward looking up to right, one hand touching shirt collar and other over stomach, gray long-sleeve crewneck and dark drawstring trousers, worried tired expression. Keep reclining angle; no chair or bed painted. For Seoin, retain input2's dense loose black curls and natural rounded expressive eyes, never input1's smooth straight idol hair or narrow romance face. For other people preserve their own distinct faces. Preserve the target pose and framing, original scene clothing even if different from canonical anchor's clothing. Indigo cel shadows, warm/cool edge light appropriate to state, subtle material texture, crisp linework; no photoreal skin/3D. Single isolated figure, transparent background, no added floor, glow backdrop, text, panels, second pose, scenery. Keep all hands/head inside image.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-reclining-home.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "seoinRelief",
+      "file": "seoin-relief.webp",
+      "original": "vn/assets/ep12/seoin-relief.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 389604,
+      "sha256": "19313f64b418b57020a45fa3a8cb607a276f6c4f014d8483477be96db19cdd11",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-fb68bf5d-ce9f-4651-a9bb-b1d6465b91a2.png",
+      "nativePngSha256": "5f4cdddc391f9734915b6b7aea079931784b90d1f14e9c4254033145c4399c9d",
+      "sourceSha256": "60a83ac347ae490e48eb262ba6a8d49ecde69d794ad2f8973037b4a4b587a0f4",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET supplies ONLY pose, original costume and exact action. Input2 is the new CANONICAL IDENTITY and drawing style of this same character: use that exact face, hair, age, sex and clear ink/cel-painted rendering consistently. Input3 is original teaser style context. Redraw input1 as input2's person in the following scene state: Seoin seated leaning forward after nightmare, left hand rubbing forehead/temple, right hand hangs on thigh, gaze down, relieved but shaken; gray crewneck and dark drawstring home trousers, faint blue edge light. For Seoin, retain input2's dense loose black curls and natural rounded expressive eyes, never input1's smooth straight idol hair or narrow romance face. For other people preserve their own distinct faces. Preserve the target pose and framing, original scene clothing even if different from canonical anchor's clothing. Indigo cel shadows, warm/cool edge light appropriate to state, subtle material texture, crisp linework; no photoreal skin/3D. Single isolated figure, transparent background, no added floor, glow backdrop, text, panels, second pose, scenery. Keep all hands/head inside image.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-relief.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "seoinQuestion",
+      "file": "seoin-question.webp",
+      "original": "vn/assets/ep1/seoin-question.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 328688,
+      "sha256": "379656c85d8e08fbb43e31d3c2b24d3d3f618f05e87153e603c9637541cd36fb",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-636f1c32-21ac-4f67-85b8-57dc25cf5ee6.png",
+      "nativePngSha256": "ac97eedf06d896f126928b8b2e145f3632cbf5b2034175080f975b15fd0f86b7",
+      "sourceSha256": "02416edb4c85853651d2176cc61f3b3494e97560b411f5071cf7c5b99071d06f",
+      "prompt": "Use case: precise-object-edit / identity-preserve. Input1 is the accepted new Seoin transparent sprite. Change ONLY his outer JACKET cut to the charcoal tailored single-breasted work blazer of input2: soft notch lapels, two-button front with subtle welt pockets, NO field-jacket flap chest pockets or zipper. Keep gray button shirt underneath. Input2 supplies JACKET GARMENT ONLY, NEVER its face, straight hair or old rendering. Preserve input1's exact new face, black CURLS, age, eye shape, expression, head angle, hands, body pose, trousers, proportions, canvas framing, ink/cel-paint style and lighting absolutely. No redesign or additional prop. Keep genuinely transparent alpha background; no painted background, floor, glow rectangle, text, second character. One isolated figure, native portrait1024x1536.",
+      "references": [
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-9b8d4238-ba73-42d7-aaf5-79ff0f7a3ebe.png",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved",
+      "previousGeneration": {
+        "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-9b8d4238-ba73-42d7-aaf5-79ff0f7a3ebe.png",
+        "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET supplies ONLY pose, original costume and exact action. Input2 is the new CANONICAL IDENTITY and drawing style of this same character: use that exact face, hair, age, sex and clear ink/cel-painted rendering consistently. Input3 is original teaser style context. Redraw input1 as input2's person in the following scene state: Seoin seated turned right listening with skeptical questioning brows, hands resting overlapping near knees; charcoal work jacket, gray button shirt, dark trousers. Preserve seated pose, original workplace costume. For Seoin, retain input2's dense loose black curls and natural rounded expressive eyes, never input1's smooth straight idol hair or narrow romance face. For other people preserve their own distinct faces. Preserve the target pose and framing, original scene clothing even if different from canonical anchor's clothing. Indigo cel shadows, warm/cool edge light appropriate to state, subtle material texture, crisp linework; no photoreal skin/3D. Single isolated figure, transparent background, no added floor, glow backdrop, text, panels, second pose, scenery. Keep all hands/head inside image.",
+        "references": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/seoin-question.webp",
+          "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+          "C:/Users/정현아/teaser-seoin-v16-face.png"
+        ],
+        "reason": "출근복의 블레이저 라펠과 주머니 형태를 기존 장면·다른 신규 표정과 일치"
+      }
+    },
+    {
+      "key": "seoinWorry",
+      "file": "seoin-worry.webp",
+      "original": "vn/assets/ep1/seoin-worry.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 347684,
+      "sha256": "1e541c4580ffa552bf1d275bb2746059ad0cebe974a3715589c2fc7f0a158ad9",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-e0490338-4895-4552-8462-81bd5bc9ca12.png",
+      "nativePngSha256": "697a268d3ce2f27d4d911173112a2c349d1c8f498c443bf6ea043d18106ad187",
+      "sourceSha256": "35c0246de4670dde4b1aca9fdba2032e85cb9ec1da7709a8afd9e2d96791c87f",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET for pose, exact scene costume/action. Input2 new CANONICAL IDENTITY and style of SAME character; use exact new face, hair, age, sex and clear drawn features. Input3 original teaser context. Redraw target1 as anchor2's person in this state: Seoin seated with shoulders slightly hunched, one hand gripping other forearm, downcast eyes and troubled mouth; charcoal tailored work jacket over gray button shirt and dark trousers. Not a smile. Seoin must keep anchor2's loose dense black curls and rounded expressive eyes, not target1's straight romance-idol hair. Jiwoo is an adult WOMAN with short brown side-part bob; do not masculinize or give her Seoin's curls. Preserve target posture, framing, scene clothes, hand action and emotional difference from other sprites. Ink outlines, cel-painted indigo shadow planes, subtle painted material, soft edge light. Not photoreal, no 3D airbrush, no glam makeup. One person isolated on genuine alpha transparency. No floor, background glow, rectangle, scenery, extra pose, text. Uncropped head/hands.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/seoin-worry.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "seoinAngry",
+      "file": "seoin-angry.webp",
+      "original": "vn/assets/ep1/seoin-angry.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 349712,
+      "sha256": "fd307cef0edfd0995c1dd933c1752a94cd7c4c76d2963a49ad8b8798d52ed5d5",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-b8637a5c-5ac0-406c-9665-cde56851cb5e.png",
+      "nativePngSha256": "7545c5e81d8821bdec06bfbc5ce5b982344034af563711965387761938e8b207",
+      "sourceSha256": "6b21f721d29eeea5bbe83cf16f4f59d0898626774c1fb457a585815a1aec0785",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET for pose, exact scene costume/action. Input2 new CANONICAL IDENTITY and style of SAME character; use exact new face, hair, age, sex and clear drawn features. Input3 original teaser context. Redraw target1 as anchor2's person in this state: Seoin leaning forward seated, one hand open palm upward questioning, other on knee; tense brows and mouth slightly open mid-objection, gaze right; charcoal tailored jacket and gray button shirt. Keep natural frustration, not shouting rage. Seoin must keep anchor2's loose dense black curls and rounded expressive eyes, not target1's straight romance-idol hair. Jiwoo is an adult WOMAN with short brown side-part bob; do not masculinize or give her Seoin's curls. Preserve target posture, framing, scene clothes, hand action and emotional difference from other sprites. Ink outlines, cel-painted indigo shadow planes, subtle painted material, soft edge light. Not photoreal, no 3D airbrush, no glam makeup. One person isolated on genuine alpha transparency. No floor, background glow, rectangle, scenery, extra pose, text. Uncropped head/hands.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/seoin-angry.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "coreSeoinAfter",
+      "file": "core-seoin-after.webp",
+      "original": "vn/assets/core/seoin-after.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 360988,
+      "sha256": "d86ad21054a964d9d4af0d0f3edec6399b8134dfae91d52554e4e5da2643bc61",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-fdf7fa04-f0ee-42b2-aeda-1f6c57806b16.png",
+      "nativePngSha256": "d3272ad4c7a305bc73e93300f8980ff9cb37890d6cf1134642fb4bc3354eb816",
+      "sourceSha256": "0cf0c321406a1dc8c427b04cdad48ee21330d4e8e79a9f45bb660d55a675f8b6",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET for pose, exact scene costume/action. Input2 new CANONICAL IDENTITY and style of SAME character; use exact new face, hair, age, sex and clear drawn features. Input3 original teaser context. Redraw target1 as anchor2's person in this state: Seoin seated upright very still after procedure, both empty hands on knees, eyes attentive looking right but oddly impassive; gray long-sleeve crewneck, black home trousers; no cup, tube, bandage or added sci-fi device. Seoin must keep anchor2's loose dense black curls and rounded expressive eyes, not target1's straight romance-idol hair. Jiwoo is an adult WOMAN with short brown side-part bob; do not masculinize or give her Seoin's curls. Preserve target posture, framing, scene clothes, hand action and emotional difference from other sprites. Ink outlines, cel-painted indigo shadow planes, subtle painted material, soft edge light. Not photoreal, no 3D airbrush, no glam makeup. One person isolated on genuine alpha transparency. No floor, background glow, rectangle, scenery, extra pose, text. Uncropped head/hands.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/core/seoin-after.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "jiwooFirm",
+      "file": "jiwoo-firm.webp",
+      "original": "vn/assets/ep1/jiwoo-woman-body-firm.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 431586,
+      "sha256": "127343df1a45316b2529dd1af934a93ec2278bdbfee14f98d330cfe66e0d5090",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-b818eb7d-a4f0-44e4-938e-891053ed6282.png",
+      "nativePngSha256": "3b553d750ddead2321a180ce201145d51397f64b74e8835c3ed955ea2be57c82",
+      "sourceSha256": "fc92733365e4567151746b01863c7b32ac91ee0b0531ae94cf2d0dca79cd57f7",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET for pose, exact scene costume/action. Input2 new CANONICAL IDENTITY and style of SAME character; use exact new face, hair, age, sex and clear drawn features. Input3 original teaser context. Redraw target1 as anchor2's person in this state: Jiwoo, adult WOMAN, seated leaning forward with chin raised slightly, resolved half-smile and steady gaze left, hands near knees, practical gray overshirt over charcoal tee and black jeans. Preserve assertive subtle expression without hand at cheek. Seoin must keep anchor2's loose dense black curls and rounded expressive eyes, not target1's straight romance-idol hair. Jiwoo is an adult WOMAN with short brown side-part bob; do not masculinize or give her Seoin's curls. Preserve target posture, framing, scene clothes, hand action and emotional difference from other sprites. Ink outlines, cel-painted indigo shadow planes, subtle painted material, soft edge light. Not photoreal, no 3D airbrush, no glam makeup. One person isolated on genuine alpha transparency. No floor, background glow, rectangle, scenery, extra pose, text. Uncropped head/hands.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/jiwoo-woman-body-firm.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "jiwooWounded",
+      "file": "jiwoo-wounded.webp",
+      "original": "vn/assets/ep1/jiwoo-woman-body-wounded.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 396162,
+      "sha256": "51f703595b76789edffb75a3ccabc9ae8065f0b3382f5a85ad99f476bbb1075a",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-aaf29a1a-a837-4e3f-81f4-3a42c69da39a.png",
+      "nativePngSha256": "76d55f8abfa65d4bc7f3ecff5465e5969ea7475547b8029e83288280da4cb870",
+      "sourceSha256": "cfc670645e186b048957c7829e132b97297c184e221f249095b485f5ad5371cf",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET for pose, exact scene costume/action. Input2 new CANONICAL IDENTITY and style of SAME character; use exact new face, hair, age, sex and clear drawn features. Input3 original teaser context. Redraw target1 as anchor2's person in this state: Jiwoo adult WOMAN seated slightly withdrawn, hands clasped in lap, eyes sideways left and down, hurt restrained expression with no smile; same short brown bob and gray practical overshirt, charcoal tee, dark jeans. Seoin must keep anchor2's loose dense black curls and rounded expressive eyes, not target1's straight romance-idol hair. Jiwoo is an adult WOMAN with short brown side-part bob; do not masculinize or give her Seoin's curls. Preserve target posture, framing, scene clothes, hand action and emotional difference from other sprites. Ink outlines, cel-painted indigo shadow planes, subtle painted material, soft edge light. Not photoreal, no 3D airbrush, no glam makeup. One person isolated on genuine alpha transparency. No floor, background glow, rectangle, scenery, extra pose, text. Uncropped head/hands.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/jiwoo-woman-body-wounded.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "jiwooGuarded",
+      "file": "jiwoo-guarded.webp",
+      "original": "vn/assets/ep12/jiwoo-guarded.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 338794,
+      "sha256": "5e6d4f2a75b34f479fab3b263ae71646e3331e48e70f6342a329d8617703a614",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-98ecf9ce-78db-40dc-b803-ac6ab3ebc09e.png",
+      "nativePngSha256": "a0f0b441092af47e0ae3cc0a0d85157b3d71d5084163a9a76db3d1436dab7e49",
+      "sourceSha256": "1b4767b42129c42bbf262a3b42eb575355a71881b4b8f7fd6d848322ee64f44a",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET for pose, exact scene costume/action. Input2 new CANONICAL IDENTITY and style of SAME character; use exact new face, hair, age, sex and clear drawn features. Input3 original teaser context. Redraw target1 as anchor2's person in this state: Jiwoo adult WOMAN standing arms crossed tightly, face turned left, guarded frown and direct challenging gaze; short brown bob, gray open overshirt charcoal tee black jeans. No smile, no flirt. Seoin must keep anchor2's loose dense black curls and rounded expressive eyes, not target1's straight romance-idol hair. Jiwoo is an adult WOMAN with short brown side-part bob; do not masculinize or give her Seoin's curls. Preserve target posture, framing, scene clothes, hand action and emotional difference from other sprites. Ink outlines, cel-painted indigo shadow planes, subtle painted material, soft edge light. Not photoreal, no 3D airbrush, no glam makeup. One person isolated on genuine alpha transparency. No floor, background glow, rectangle, scenery, extra pose, text. Uncropped head/hands.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-guarded.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "jiwooUnsteady",
+      "file": "jiwoo-unsteady.webp",
+      "original": "vn/assets/ep12/jiwoo-unsteady.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 354230,
+      "sha256": "d1b9301ee1f0e054ddc9cc26e32a6161c4d6d164746ab331b958c3179d2a7449",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-e1c32c0f-eb80-471c-b322-86a944cdd250.png",
+      "nativePngSha256": "a667f7af69aba32def38f0ee4a597effedefffc3362f4e1480f3bcaeaa599e73",
+      "sourceSha256": "a919bda98e4581daa109c6a9dfad89b1717508119749f984ada4fa7d17360df0",
+      "prompt": "Use case: style-transfer. Production transparent visual-novel sprite. Input1 EDIT TARGET for pose, exact scene costume/action. Input2 new CANONICAL IDENTITY and style of SAME character; use exact new face, hair, age, sex and clear drawn features. Input3 original teaser context. Redraw target1 as anchor2's person in this state: Jiwoo adult WOMAN standing shoulders low, gaze cast down with shaken restrained sadness, hands held near lower abdomen one holding other wrist, same short brown bob gray overshirt charcoal tee black jeans. Not cheerful. Seoin must keep anchor2's loose dense black curls and rounded expressive eyes, not target1's straight romance-idol hair. Jiwoo is an adult WOMAN with short brown side-part bob; do not masculinize or give her Seoin's curls. Preserve target posture, framing, scene clothes, hand action and emotional difference from other sprites. Ink outlines, cel-painted indigo shadow planes, subtle painted material, soft edge light. Not photoreal, no 3D airbrush, no glam makeup. One person isolated on genuine alpha transparency. No floor, background glow, rectangle, scenery, extra pose, text. Uncropped head/hands.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-unsteady.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "jiwooClay",
+      "file": "jiwoo-clay.webp",
+      "original": "vn/assets/ep12/jiwoo-clay.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 354894,
+      "sha256": "8b532848d8ec10efd5d2db236bb6cafc4463c8fb07f4aeef7f4a9a459c9a4d42",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-fbcc2fd7-7777-4b93-86e1-04293eab1c31.png",
+      "nativePngSha256": "ee571b36568c8396e51717be8118d87016a029a28286f547145c4317b7aab664",
+      "sourceSha256": "25860a24d02a7781cea220721a07692ee1dbd22d5d744ba7127926700c363c72",
+      "prompt": "Use case: style-transfer. Production transparent visual novel sprite. Input1 EDIT TARGET supplies only original pose/costume/props. Input2 is new canonical identity and crisp teaser ink/cel-painted style for THIS same character. Redraw input1 with that exact face, hair, age and sex, in this state: Jiwoo adult WOMAN standing looking down at palm-sized irregular handmade clay cup in outstretched RIGHT palm, left fingers touching collar near chest; small uncertain fond smile; same gray overshirt charcoal tee black jeans. Retain wonky gray-brown miniature cup, not a rock/regular ceramic mug. Keep pose/gaze and emotion of target; match firm illustrated lines, indigo cel shadow and restrained amber rim, subtle material texture of canonical input2. No airbrushed skin, 3D or photographic look. Preserve hands anatomically, fingers and props clearly. Single figure on true alpha transparent background, no floor, rectangle, light-glow background, text, multiple poses or scenery. Do not change story-specific clothing or props to canonical anchor pose.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-clay.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "jiwooRelaxed",
+      "file": "jiwoo-relaxed.webp",
+      "original": "vn/assets/ep12/jiwoo-relaxed.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 357654,
+      "sha256": "7e999079a6ccf736214271e24013437dce07c68b61b055180a886fbd16ee5e1a",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-25344b65-dd8c-4bed-abae-e98a3b56f43c.png",
+      "nativePngSha256": "1b7b57b04f1c7f6ba098656973c9bb1ae8e5f7df38de669109df08cdcdf9a0d3",
+      "sourceSha256": "ced14b49b6e2b72fe38ffecfbb66d8cc4d80a1eef5872d8aaaf683ccddc3f608",
+      "prompt": "Use case: style-transfer. Production transparent visual novel sprite. Input1 EDIT TARGET supplies only original pose/costume/props. Input2 is new canonical identity and crisp teaser ink/cel-painted style for THIS same character. Redraw input1 with that exact face, hair, age and sex, in this state: Jiwoo adult WOMAN standing with hands in jeans pockets, shoulders relaxed, quiet warm smile looking left; short brown bob gray open overshirt charcoal tee black jeans. Keep pose/gaze and emotion of target; match firm illustrated lines, indigo cel shadow and restrained amber rim, subtle material texture of canonical input2. No airbrushed skin, 3D or photographic look. Preserve hands anatomically, fingers and props clearly. Single figure on true alpha transparent background, no floor, rectangle, light-glow background, text, multiple poses or scenery. Do not change story-specific clothing or props to canonical anchor pose.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-relaxed.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "motherWarm",
+      "file": "mother-warm.webp",
+      "original": "vn/assets/ep1/mother-warm.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 404052,
+      "sha256": "f83acc5c28e8b0999a3855a67f9b10d8b019b90eeae39cd93b9fd8868a371eb6",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-a7f0318c-cd99-4aa3-84d9-aa03e71e6e2f.png",
+      "nativePngSha256": "a8b64e60135d05f7ec0713055dc4ba5fbc6078226f929d2e374b9475ce25687b",
+      "sourceSha256": "041059383688ec388ece497d487f9480882c21355ef4b1be04693fff5442eba5",
+      "prompt": "Use case: style-transfer. Production transparent visual novel sprite. Input1 EDIT TARGET supplies only original pose/costume/props. Input2 is new canonical identity and crisp teaser ink/cel-painted style for THIS same character. Redraw input1 with that exact face, hair, age and sex, in this state: Seoin's middle-aged mother seated, smiling warmly speaking, chopsticks raised in right hand and other hand lightly gesturing, gray cardigan over light blouse and dark trousers. Preserve natural age lines/gray bob and warm attention, not young. Keep pose/gaze and emotion of target; match firm illustrated lines, indigo cel shadow and restrained amber rim, subtle material texture of canonical input2. No airbrushed skin, 3D or photographic look. Preserve hands anatomically, fingers and props clearly. Single figure on true alpha transparent background, no floor, rectangle, light-glow background, text, multiple poses or scenery. Do not change story-specific clothing or props to canonical anchor pose.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/mother-warm.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-69a00566-1288-4ff1-8149-91e1c17dc876.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "motherSearching",
+      "file": "mother-searching.webp",
+      "original": "vn/assets/ep1/mother-searching.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 384106,
+      "sha256": "c2c7d7bca3bbc671952c2e0ae4bbea7cff2ee0f5bdc879f72d3299404f249ba5",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-040f955f-4cf0-4206-a2a8-6fec877eafe2.png",
+      "nativePngSha256": "c5bc4ee1047ae0f47cd1ed1506da5934909748371cf17399f3b8b395f7a50381",
+      "sourceSha256": "589ffffeb40f58c5ea028148eea01ee9c286ae6d7347c277a447f52d29938487",
+      "prompt": "Use case: style-transfer. Production transparent visual novel sprite. Input1 EDIT TARGET supplies only original pose/costume/props. Input2 is new canonical identity and crisp teaser ink/cel-painted style for THIS same character. Redraw input1 with that exact face, hair, age and sex, in this state: Seoin's middle-aged mother seated, small tentative smile, brows gently searching while looking left, right hand holding chopsticks paused at chest and left hand on lap; gray cardigan/light blouse/dark trousers, preserve age lines and graying bob. Keep pose/gaze and emotion of target; match firm illustrated lines, indigo cel shadow and restrained amber rim, subtle material texture of canonical input2. No airbrushed skin, 3D or photographic look. Preserve hands anatomically, fingers and props clearly. Single figure on true alpha transparent background, no floor, rectangle, light-glow background, text, multiple poses or scenery. Do not change story-specific clothing or props to canonical anchor pose.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/mother-searching.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-69a00566-1288-4ff1-8149-91e1c17dc876.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "fatherDown",
+      "file": "father-down.webp",
+      "original": "vn/assets/ep12/father-down.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 371290,
+      "sha256": "8e16cea64ec1fae807caf8b5384214074251635f2df6249fb2f3ef83d6e35a32",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-7481fb5e-7e6f-4923-bf2a-14df72f356d7.png",
+      "nativePngSha256": "a9beb8eed023d9c7cc9e477b54625f8d73c645a3d3e1efc187585b409a3b9320",
+      "sourceSha256": "a8455cfac86244d55e00b57f84b634fe7169c034570b6f436f999f4abc64be02",
+      "prompt": "Use case: style-transfer. Production transparent visual novel sprite. Input1 EDIT TARGET supplies only original pose/costume/props. Input2 is new canonical identity and crisp teaser ink/cel-painted style for THIS same character. Redraw input1 with that exact face, hair, age and sex, in this state: Jiwoo's middle-aged father seated slumped, gaze down exhausted and silent, tablet lowered flat onto lap and held with right hand, left hand low by knee, medical port on inner LEFT wrist, pale blue rolled-sleeve shirt and dark trousers. Preserve wrinkles and gray hair, no smile. Keep pose/gaze and emotion of target; match firm illustrated lines, indigo cel shadow and restrained amber rim, subtle material texture of canonical input2. No airbrushed skin, 3D or photographic look. Preserve hands anatomically, fingers and props clearly. Single figure on true alpha transparent background, no floor, rectangle, light-glow background, text, multiple poses or scenery. Do not change story-specific clothing or props to canonical anchor pose.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/father-down.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-6d074eda-50af-447c-bfdd-9c8f006b424c.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "coreDoyunListen",
+      "file": "core-doyun-listen.webp",
+      "original": "vn/assets/core/doyun-listening.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 424588,
+      "sha256": "d221b494bd13e6ee322e49536d48cb7f13c48cbad9b1db2bea93eb353fc0894a",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-f765c1b2-9de0-4ece-a47a-fef2fda4a359.png",
+      "nativePngSha256": "656f28e547a1976831fd2059920b31fd38c5dc3bb99b45903328093f9e0dc233",
+      "sourceSha256": "d3bd8ec5b702b8c90d05907ed743d7d447ee3086ac0d6bf2fbfff15a93e38f8d",
+      "prompt": "Use case: style-transfer. Production transparent visual novel sprite. Input1 EDIT TARGET supplies only original pose/costume/props. Input2 is new canonical identity and crisp teaser ink/cel-painted style for THIS same character. Redraw input1 with that exact face, hair, age and sex, in this state: Doyun seated leaning forward, hands EMPTY loosely joined between knees, listening with worried attentive eyes looking left/down; gray hoodie over white tee, dark trousers; no chopsticks, bowl, can or new prop, no smirk. Keep pose/gaze and emotion of target; match firm illustrated lines, indigo cel shadow and restrained amber rim, subtle material texture of canonical input2. No airbrushed skin, 3D or photographic look. Preserve hands anatomically, fingers and props clearly. Single figure on true alpha transparent background, no floor, rectangle, light-glow background, text, multiple poses or scenery. Do not change story-specific clothing or props to canonical anchor pose.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/core/doyun-listening.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-21389c83-283a-41a9-8a91-4da80bfa63e8.png"
+      ],
+      "transparent": true,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "neuralAwakening",
+      "file": "neural-awakening.webp",
+      "original": "vn/assets/cutscenes/neural-awakening.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 345012,
+      "sha256": "c20d0039922b6e076a5c795ad44fb79776a8fc611987667ee4f77944c499563c",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-eb27d1d7-5e65-4bc9-acc4-1df203ea3809.png",
+      "nativePngSha256": "7148ebaabc23764f4d184267668a57280235d25650101e1a659053a24ea30c23",
+      "sourceSha256": "009e8d2c22b7128e525a89aa953499fcd4ce464e96960d163089ee34440cbf9c",
+      "prompt": "Use case: style-transfer. Finished visual-novel event CG, single high-detail landscape 16:9 image, no panels or writing. Input1 is the EXACT SCENE EDIT TARGET: preserve composition, action, camera, room layout, number of people, clothing, props, time and emotional meaning. Inputs2 onward provide the NEW CANONICAL CHARACTER faces and hand-drawn anime style; final input is original teaser context, not extra people to insert. Change the people and rendering to these new canonical faces and crisp ink/cel-painted indigo-shadow style, removing the previous airbrushed semi-realistic look. Specific scene invariants: Seoin male lying on pillow just awake, same gray crewneck, small neural connector at temple beside ear, quiet uncertain expression. Preserve pillow/head angle, bed and room; redraw face/hair as curly-haired canonical Seoin. Seoin male must have the teaser's natural expressive eyes, dense irregular black curls, young adult face; no old smooth spiky idol face. Jiwoo if present is adult WOMAN with short side-part brown bob. Mother if present has natural age lines and gray bob. Retain other people's distinct identities. Strong clear drawn contours, painted fabric/environment texture, localized edge light; match original scene's quiet natural illumination, no arbitrary neon. Preserve visible small story objects/hand contact exactly; no new HUD, captions, logos, text, extra limbs, objects, characters or romantic gestures. Opaque full scene at highest native landscape resolution. Keep critical faces/hands in upper central70% with lower quarter usable under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/neural-awakening.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "kitchenAd",
+      "file": "kitchen-ad.webp",
+      "original": "vn/assets/cutscenes/kitchen-ad.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 495876,
+      "sha256": "2db920ad6b9f61337c1190b960eb444c8de0dc38d6c00bdc78414172a65e7694",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-a8bb419e-21b8-49a6-a92c-9677c2a770fe.png",
+      "nativePngSha256": "a32e7a29b10489000489244691e15888d1e5193519708209ad7b4ed1cf0f666a",
+      "sourceSha256": "ff6fe0f62f758358238a0bdce1a6db16c880d41f3fcaa7e6b7b45fbf946ffcda",
+      "prompt": "Use case: style-transfer. Finished visual-novel event CG, single high-detail landscape 16:9 image, no panels or writing. Input1 is the EXACT SCENE EDIT TARGET: preserve composition, action, camera, room layout, number of people, clothing, props, time and emotional meaning. Inputs2 onward provide the NEW CANONICAL CHARACTER faces and hand-drawn anime style; final input is original teaser context, not extra people to insert. Change the people and rendering to these new canonical faces and crisp ink/cel-painted indigo-shadow style, removing the previous airbrushed semi-realistic look. Specific scene invariants: Curly-haired Seoin in gray crewneck seated at small kitchen table, back 3/4 view, staring at wall sea advertisement while middle-aged mother cooks in background. Same positions and no new people or TV text. Seoin male must have the teaser's natural expressive eyes, dense irregular black curls, young adult face; no old smooth spiky idol face. Jiwoo if present is adult WOMAN with short side-part brown bob. Mother if present has natural age lines and gray bob. Retain other people's distinct identities. Strong clear drawn contours, painted fabric/environment texture, localized edge light; match original scene's quiet natural illumination, no arbitrary neon. Preserve visible small story objects/hand contact exactly; no new HUD, captions, logos, text, extra limbs, objects, characters or romantic gestures. Opaque full scene at highest native landscape resolution. Keep critical faces/hands in upper central70% with lower quarter usable under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/kitchen-ad.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-69a00566-1288-4ff1-8149-91e1c17dc876.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "table",
+      "file": "table.webp",
+      "original": "vn/assets/ep12/cg-table-home.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 447186,
+      "sha256": "164f0e19b9f9d8630a5f1d43d1d64dc46e3c35b1cb8e57350dc783551eafacff",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-463a5be4-14d3-49f6-9111-41035c3a4007.png",
+      "nativePngSha256": "b7b55b189245ab84751559d7780e8c7a79ee229ca56f6a6b22fd9c19be6d7dff",
+      "sourceSha256": "8ec7b6e6a507ee900fddf36ed1d3709ec9d8546a9682f12f1a9141f6bc4ee617",
+      "prompt": "Use case: style-transfer. Finished visual-novel event CG, single high-detail landscape 16:9 image, no panels or writing. Input1 is the EXACT SCENE EDIT TARGET: preserve composition, action, camera, room layout, number of people, clothing, props, time and emotional meaning. Inputs2 onward provide the NEW CANONICAL CHARACTER faces and hand-drawn anime style; final input is original teaser context, not extra people to insert. Change the people and rendering to these new canonical faces and crisp ink/cel-painted indigo-shadow style, removing the previous airbrushed semi-realistic look. Specific scene invariants: Warm small kitchen table, mother gently serving food with chopsticks toward Seoin's bowl while he holds it, he wears gray home crewneck. Keep original composition, both hands/utensils/food/expressions, familial warmth, exact older mother/curly male Seoin identities. Seoin male must have the teaser's natural expressive eyes, dense irregular black curls, young adult face; no old smooth spiky idol face. Jiwoo if present is adult WOMAN with short side-part brown bob. Mother if present has natural age lines and gray bob. Retain other people's distinct identities. Strong clear drawn contours, painted fabric/environment texture, localized edge light; match original scene's quiet natural illumination, no arbitrary neon. Preserve visible small story objects/hand contact exactly; no new HUD, captions, logos, text, extra limbs, objects, characters or romantic gestures. Opaque full scene at highest native landscape resolution. Keep critical faces/hands in upper central70% with lower quarter usable under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/cg-table-home.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-69a00566-1288-4ff1-8149-91e1c17dc876.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "clay",
+      "file": "clay.webp",
+      "original": "vn/assets/ep1/cg-clay-woman-body.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 357812,
+      "sha256": "9e0d30db45d37f78044da4777b5c734e98f6e4ad70b5c6d7be12a15b72f51950",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-8c819943-b47c-4914-a02b-3e2e5d9cae16.png",
+      "nativePngSha256": "1df4e92f616cad646ff2a9716e3e072e90cd1f8cd1ca13ab7d82ef8e78079d46",
+      "sourceSha256": "bee22cb703150603e955796b4957af9a1cb8f2dd5e46a32477dc038946794163",
+      "prompt": "Use case: style-transfer. Finished visual-novel event CG, single high-detail landscape 16:9 image, no panels or writing. Input1 is the EXACT SCENE EDIT TARGET: preserve composition, action, camera, room layout, number of people, clothing, props, time and emotional meaning. Inputs2 onward provide the NEW CANONICAL CHARACTER faces and hand-drawn anime style; final input is original teaser context, not extra people to insert. Change the people and rendering to these new canonical faces and crisp ink/cel-painted indigo-shadow style, removing the previous airbrushed semi-realistic look. Specific scene invariants: Office at sunset, short brown bob female Jiwoo handing a cardboard box with imperfect handmade clay cup to male Seoin at right edge. Keep her practical gray overshirt and charcoal tee, him charcoal work jacket/gray shirt. Preserve box/cup positions and subdued mixed emotions, no romantic embrace. Seoin male must have the teaser's natural expressive eyes, dense irregular black curls, young adult face; no old smooth spiky idol face. Jiwoo if present is adult WOMAN with short side-part brown bob. Mother if present has natural age lines and gray bob. Retain other people's distinct identities. Strong clear drawn contours, painted fabric/environment texture, localized edge light; match original scene's quiet natural illumination, no arbitrary neon. Preserve visible small story objects/hand contact exactly; no new HUD, captions, logos, text, extra limbs, objects, characters or romantic gestures. Opaque full scene at highest native landscape resolution. Keep critical faces/hands in upper central70% with lower quarter usable under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/cg-clay-woman-body.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "night",
+      "file": "night.webp",
+      "original": "vn/assets/ep12/cg-night-home.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 272848,
+      "sha256": "6d5ab0804b6c573e974a9d1925b611a698f69310630a5fd765f8ff56637f2ac2",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-cc5ecdd4-0585-46dd-8574-101eefb7a192.png",
+      "nativePngSha256": "cadb204012bc913d31dfb4aecb5f4908a6c81ba099324bbc92f47ad878ec0498",
+      "sourceSha256": "bb92dbfb0cf0e2c6f0f95a32dc1c99698497b9c415fe039ef90bdc7d1267fd91",
+      "prompt": "Use case: style-transfer. Finished visual-novel event CG, single high-detail landscape 16:9 image, no panels or writing. Input1 is the EXACT SCENE EDIT TARGET: preserve composition, action, camera, room layout, number of people, clothing, props, time and emotional meaning. Inputs2 onward provide the NEW CANONICAL CHARACTER faces and hand-drawn anime style; final input is original teaser context, not extra people to insert. Change the people and rendering to these new canonical faces and crisp ink/cel-painted indigo-shadow style, removing the previous airbrushed semi-realistic look. Specific scene invariants: Curly-haired Seoin reclines on own bed at night in gray crewneck, one hand raised toward invisible neural controls, gaze up at fingertip. Preserve every body posture, room layout, bed, lighting and lowered-screen-free scene. No added HUD. Seoin male must have the teaser's natural expressive eyes, dense irregular black curls, young adult face; no old smooth spiky idol face. Jiwoo if present is adult WOMAN with short side-part brown bob. Mother if present has natural age lines and gray bob. Retain other people's distinct identities. Strong clear drawn contours, painted fabric/environment texture, localized edge light; match original scene's quiet natural illumination, no arbitrary neon. Preserve visible small story objects/hand contact exactly; no new HUD, captions, logos, text, extra limbs, objects, characters or romantic gestures. Opaque full scene at highest native landscape resolution. Keep critical faces/hands in upper central70% with lower quarter usable under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/cg-night-home.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "emptyDesk",
+      "file": "empty-desk.webp",
+      "original": "vn/assets/cutscenes/empty-desk.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 308476,
+      "sha256": "6d35566b68c6642cb62ab8f6da589e02de4438e5dd60a56263921e7ecc8bc017",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-ee280d0e-00c3-41ed-ae1a-78b3389df55d.png",
+      "nativePngSha256": "02ba1062b8ff2fb0eabc2595abfd5722e0c2e188632ad829959a86be5b1ae703",
+      "sourceSha256": "3530142d6bb71bd2767fc9e9474897776e0c1e4199288e8478d0889d983ca271",
+      "prompt": "Use case: style-transfer. One finished high-detail visual novel event CG landscape16:9. Input1 EXACT SCENE TARGET: preserve shot, pose, setting, clothing, props, participants and story action. Next reference(s) supply the NEW CANONICAL CHARACTER identities and hand-drawn teaser art direction; final reference is original teaser style context. Redraw target people with exact new identities and cel-painted ink linework rather than old smooth photoreal faces. Scene: Back 3/4 male Seoin in work jacket at left staring at empty desk ahead, plant and tumbler absent from that desk. Keep empty chair, clean cubicle and distant anonymous employees exactly. His back hair must be recognizable dense loose black curls. Male Seoin must use canonical dense loose black CURLS and rounded expressive eyes. Doyun, if present, retains his own straighter black hair, faint stubble and broader friendly face, not the same face as Seoin. Jiwoo, if present, is adult WOMAN short brown bob. Keep all scene lighting/time natural, indigo shadow planes, clear painted texture and tactile props, strong readable facial features/hands. No additional people, props, captions, logos, HUD, readable text, panels, romance or altered action. Opaque full scene, highest native landscape resolution, preserve composition with lower quarter clear enough under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/empty-desk.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "clayTurn",
+      "file": "clay-turn.webp",
+      "original": "vn/assets/cutscenes/clay-turn.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 350556,
+      "sha256": "8ccb7571e782a95b3933d92390e015064136321ed8eb334c2e6d4d50d082d25c",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-6a49acac-4d63-42e3-a638-1b91bcd0b410.png",
+      "nativePngSha256": "d0381a6614b25d783b39f62f3bf2fed07323b6cefade6fb8c8f64ef46601ad3d",
+      "sourceSha256": "ed0870d28032dda3d726db1e9efaa570cd1204eb26166477224b0c82bdd643e1",
+      "prompt": "Use case: style-transfer. One finished high-detail visual novel event CG landscape16:9. Input1 EXACT SCENE TARGET: preserve shot, pose, setting, clothing, props, participants and story action. Next reference(s) supply the NEW CANONICAL CHARACTER identities and hand-drawn teaser art direction; final reference is original teaser style context. Redraw target people with exact new identities and cel-painted ink linework rather than old smooth photoreal faces. Scene: Female Jiwoo turns tiny lopsided unglazed gray-brown handmade cup in RIGHT palm using LEFT index fingertip. Preserve close camera, cup size/shape and hand gesture. Short brown bob, gray open overshirt and charcoal tee, thoughtful downcast gaze; no new full face where source top crops forehead. Male Seoin must use canonical dense loose black CURLS and rounded expressive eyes. Doyun, if present, retains his own straighter black hair, faint stubble and broader friendly face, not the same face as Seoin. Jiwoo, if present, is adult WOMAN short brown bob. Keep all scene lighting/time natural, indigo shadow planes, clear painted texture and tactile props, strong readable facial features/hands. No additional people, props, captions, logos, HUD, readable text, panels, romance or altered action. Opaque full scene, highest native landscape resolution, preserve composition with lower quarter clear enough under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/clay-turn.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-291bae80-43b9-4b86-b748-46029bc72f68.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "nightWake",
+      "file": "night-wake.webp",
+      "original": "vn/assets/cutscenes/night-wake.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 354452,
+      "sha256": "ffe636cd775e36d9a4de416735071c84060344c1a95e03b5a290351a36cd4ca0",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-d2119f4d-cd95-4b27-afcf-b6805fd809e1.png",
+      "nativePngSha256": "9a25e120ede03227a3cca30a2786f7985d2f269a445c0e484abff6bc02aaa64d",
+      "sourceSha256": "7385bc0d600be8239eb2d90455f0de737f471d8bceac1cd481373c85745bf9db",
+      "prompt": "Use case: style-transfer. One finished high-detail visual novel event CG landscape16:9. Input1 EXACT SCENE TARGET: preserve shot, pose, setting, clothing, props, participants and story action. Next reference(s) supply the NEW CANONICAL CHARACTER identities and hand-drawn teaser art direction; final reference is original teaser style context. Redraw target people with exact new identities and cel-painted ink linework rather than old smooth photoreal faces. Scene: Curly-haired Seoin seated on bed after nightmare, gray home crewneck/dark drawstring trousers, one hand on chest and other wiping forehead, worried and sweaty. Preserve pose, room, blanket and blue predawn light. Male Seoin must use canonical dense loose black CURLS and rounded expressive eyes. Doyun, if present, retains his own straighter black hair, faint stubble and broader friendly face, not the same face as Seoin. Jiwoo, if present, is adult WOMAN short brown bob. Keep all scene lighting/time natural, indigo shadow planes, clear painted texture and tactile props, strong readable facial features/hands. No additional people, props, captions, logos, HUD, readable text, panels, romance or altered action. Opaque full scene, highest native landscape resolution, preserve composition with lower quarter clear enough under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/night-wake.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "doyunRamen",
+      "file": "doyun-ramen.webp",
+      "original": "vn/assets/cutscenes/doyun-ramen.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 427198,
+      "sha256": "913f35f401e9c66bb66308881568ee961d12527f215567fb1d21f252fc4a9379",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-40fe8db6-3916-4c9e-9f98-fba74402cd98.png",
+      "nativePngSha256": "bfdc3ff4f54c6fa182c8433e621e35537aab134466deb72ae552db444cd4d018",
+      "sourceSha256": "bab20c3ec9d47e1c619b5aa28f2a10dc63f3e2f808c0e798fa79516ff4ce7404",
+      "prompt": "Use case: style-transfer. One finished high-detail visual novel event CG landscape16:9. Input1 EXACT SCENE TARGET: preserve shot, pose, setting, clothing, props, participants and story action. Next reference(s) supply the NEW CANONICAL CHARACTER identities and hand-drawn teaser art direction; final reference is original teaser style context. Redraw target people with exact new identities and cel-painted ink linework rather than old smooth photoreal faces. Scene: Curly male Seoin stands left in charcoal work jacket, male Doyun seated right in gray hoodie offering a cup of ramen across messy repair workshop table. Keep composition and every hand/ramen/prop, Doyun friendly, faces are two different men. Male Seoin must use canonical dense loose black CURLS and rounded expressive eyes. Doyun, if present, retains his own straighter black hair, faint stubble and broader friendly face, not the same face as Seoin. Jiwoo, if present, is adult WOMAN short brown bob. Keep all scene lighting/time natural, indigo shadow planes, clear painted texture and tactile props, strong readable facial features/hands. No additional people, props, captions, logos, HUD, readable text, panels, romance or altered action. Opaque full scene, highest native landscape resolution, preserve composition with lower quarter clear enough under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/doyun-ramen.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-21389c83-283a-41a9-8a91-4da80bfa63e8.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "procedureFace",
+      "file": "procedure-face.webp",
+      "original": "vn/assets/cutscenes/procedure-face.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 412342,
+      "sha256": "9057c5f50d417bccc9f3b6b292516dc33d644b570af223c19dc3a546ab536fef",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-2c342d37-8a36-45fe-a1f0-ae8f6c54dcb8.png",
+      "nativePngSha256": "8f67ff026f8616ad37ae85ba0d82e11fb7ba561b4650233442e1c63d3998dae6",
+      "sourceSha256": "3abc4f48d276d269ccd2648d6804cebec45a7deba9d7798d2ff8ff64d5973441",
+      "prompt": "Use case: style-transfer. One finished high-detail visual novel event CG landscape16:9. Input1 EXACT SCENE TARGET: preserve shot, pose, setting, clothing, props, participants and story action. Next reference(s) supply the NEW CANONICAL CHARACTER identities and hand-drawn teaser art direction; final reference is original teaser style context. Redraw target people with exact new identities and cel-painted ink linework rather than old smooth photoreal faces. Scene: Curly-haired male Seoin lying in chair with head frame during neural procedure, male Doyun in gray hoodie leaning close from left watching him with concern. Preserve equipment/frame connector positions, medical clothing, all hands and camera. Not threatening, no added injuries. Male Seoin must use canonical dense loose black CURLS and rounded expressive eyes. Doyun, if present, retains his own straighter black hair, faint stubble and broader friendly face, not the same face as Seoin. Jiwoo, if present, is adult WOMAN short brown bob. Keep all scene lighting/time natural, indigo shadow planes, clear painted texture and tactile props, strong readable facial features/hands. No additional people, props, captions, logos, HUD, readable text, panels, romance or altered action. Opaque full scene, highest native landscape resolution, preserve composition with lower quarter clear enough under dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/procedure-face.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-21389c83-283a-41a9-8a91-4da80bfa63e8.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "coreCupBadge",
+      "file": "core-cup-badge.webp",
+      "original": "vn/assets/core/cup-and-badge.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 324018,
+      "sha256": "4c9baac0aa23eda148afdcb77662adb4ed24dcbf637837780246ee11405de40e",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-5c6fd7d0-0b77-44e5-bb79-9d6d8d55d943.png",
+      "nativePngSha256": "3f336d10188f749435c0f023f45bb074121360ed5be9a742b7615be9d2cb6d74",
+      "sourceSha256": "15ecba9cfdfc2fe5a64035ae2ec40cea3834b53ef4df319d06c91e39a49e4a76",
+      "prompt": "Use case: style-transfer. Production event CG for same Korean visual novel, one landscape16:9 high-detail image. Input1 EXACT SCENE EDIT TARGET; preserve composition, all original actions/props/participants, clothing, camera, setting and time of day. Following inputs are new canonical character faces and crisp hand-drawn ink/cel-painted style; final input is original teaser context, never an extra person to insert. Redraw scene using new identities while leaving story unchanged. Scene invariants: Curly male Seoin sits ALONE at small table looking at two objects: imperfect lopsided unglazed pottery cup and intact office ID badge side by side. His hand stopped short of touching cup. Preserve both objects exact shape/position, empty background doorway; no Jiwoo/person added. Gray button shirt/charcoal work jacket. Male Seoin must have the teaser's young adult face, natural expressive eyes, dense tousled short BLACK CURLS, not smooth idol spikes. Other faces keep their own age and identity. Crisp drawn contours and clear cel-painted indigo shadow planes, restrained painted highlights, tactile material grain, match original scene light rather than arbitrary neon. No glossy photoreal/3D skin, text, readable digits/logos/HUD, new people, new objects, extra fingers/limbs or reinterpretation of story. Keep important objects and hand contacts exact. Native highest-resolution opaque landscape, lower quarter readable beneath dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/core/cup-and-badge.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "coreShore",
+      "file": "core-shore.webp",
+      "original": "vn/assets/core/empty-shore.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1671,
+        941
+      ],
+      "bytes": 419326,
+      "sha256": "b11662f75430293fca37f6884f8d96b79ce771b6c033d652f4fd25b3a5321559",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-18fee4fd-ef59-4ad8-8a1b-fc87a8e3a77e.png",
+      "nativePngSha256": "e8b401813ee176b8b3c412e69f3165b7de6c51fc638139b62ebf98d655a1c93e",
+      "sourceSha256": "465cfe2ee5efd72f6b866513fb707d389b6d749a868101c832f4bccdaf2ec0b0",
+      "prompt": "Use case: style-transfer. Production event CG for same Korean visual novel, one landscape16:9 high-detail image. Input1 EXACT SCENE EDIT TARGET; preserve composition, all original actions/props/participants, clothing, camera, setting and time of day. Following inputs are new canonical character faces and crisp hand-drawn ink/cel-painted style; final input is original teaser context, never an extra person to insert. Redraw scene using new identities while leaving story unchanged. Scene invariants: Curly male Seoin seen from back 3/4 in gray crewneck waist-deep in bleak murky sea reaching toward distant shore with indistinct anonymous adults retreating. Keep group anonymous with no invented identifiable faces, no new rescue. Preserve water level, outstretched hand, gray light and ominous distance. Male Seoin must have the teaser's young adult face, natural expressive eyes, dense tousled short BLACK CURLS, not smooth idol spikes. Other faces keep their own age and identity. Crisp drawn contours and clear cel-painted indigo shadow planes, restrained painted highlights, tactile material grain, match original scene light rather than arbitrary neon. No glossy photoreal/3D skin, text, readable digits/logos/HUD, new people, new objects, extra fingers/limbs or reinterpretation of story. Keep important objects and hand contacts exact. Native highest-resolution opaque landscape, lower quarter readable beneath dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/core/empty-shore.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "coreOverload",
+      "file": "core-overload.webp",
+      "original": "vn/assets/core/overload-room.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 348758,
+      "sha256": "d5c5469b4bdcc49701b8d7a5da1faa13b72a2cb3ae49c5507de458467bbc3700",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-743502d4-04f8-43a9-8f0a-03a033d5d46f.png",
+      "nativePngSha256": "e8094b60af378c08c78516416dfa975eedf0ea5ca2c915c4a3379acc39de5cd5",
+      "sourceSha256": "4621d494e3b3f1b9fd863db7a8a5d9bf8f13aeb4ba4fbebc79f119becee8fb61",
+      "prompt": "Use case: style-transfer. Production event CG for same Korean visual novel, one landscape16:9 high-detail image. Input1 EXACT SCENE EDIT TARGET; preserve composition, all original actions/props/participants, clothing, camera, setting and time of day. Following inputs are new canonical character faces and crisp hand-drawn ink/cel-painted style; final input is original teaser context, never an extra person to insert. Redraw scene using new identities while leaving story unchanged. Scene invariants: Curly-haired Seoin collapsed on floor beside sofa, charcoal work jacket/gray button shirt, one hand on temple and other braced on carpet, faint red neural overload glow at temple. Preserve distressed emotion, grounded hands, pose and modest room. Male Seoin must have the teaser's young adult face, natural expressive eyes, dense tousled short BLACK CURLS, not smooth idol spikes. Other faces keep their own age and identity. Crisp drawn contours and clear cel-painted indigo shadow planes, restrained painted highlights, tactile material grain, match original scene light rather than arbitrary neon. No glossy photoreal/3D skin, text, readable digits/logos/HUD, new people, new objects, extra fingers/limbs or reinterpretation of story. Keep important objects and hand contacts exact. Native highest-resolution opaque landscape, lower quarter readable beneath dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/core/overload-room.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "coreMotherSleep",
+      "file": "core-mother-sleep.webp",
+      "original": "vn/assets/core/mother-sleep.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 508572,
+      "sha256": "c110fe531eed6dba8242e3a5d112745cc217603c5bf4be203fefdb09dbbd3714",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-4b401a56-fe7f-47c8-a892-5c0e405c8990.png",
+      "nativePngSha256": "c3311ba05b44792cb333baa0d24f989f18beb74d7eb41bfc82963396464595ef",
+      "sourceSha256": "2d1197dcd7ec0e6499c51acdaa76c0da41daca976f0e0510a50dc7cf64856789",
+      "prompt": "Use case: style-transfer. Production event CG for same Korean visual novel, one landscape16:9 high-detail image. Input1 EXACT SCENE EDIT TARGET; preserve composition, all original actions/props/participants, clothing, camera, setting and time of day. Following inputs are new canonical character faces and crisp hand-drawn ink/cel-painted style; final input is original teaser context, never an extra person to insert. Redraw scene using new identities while leaving story unchanged. Scene invariants: Middle-aged mother asleep on sofa under coarse warm blanket, gray cardigan/light blouse, eyes closed, small neural connection at temple. Only male Seoin's work-sleeve hand entering left close to blanket, no face of Seoin invented. Preserve blanket folds, exact hand positions, older mother face, quiet warm lighting. Male Seoin must have the teaser's young adult face, natural expressive eyes, dense tousled short BLACK CURLS, not smooth idol spikes. Other faces keep their own age and identity. Crisp drawn contours and clear cel-painted indigo shadow planes, restrained painted highlights, tactile material grain, match original scene light rather than arbitrary neon. No glossy photoreal/3D skin, text, readable digits/logos/HUD, new people, new objects, extra fingers/limbs or reinterpretation of story. Keep important objects and hand contacts exact. Native highest-resolution opaque landscape, lower quarter readable beneath dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/core/mother-sleep.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-69a00566-1288-4ff1-8149-91e1c17dc876.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    },
+    {
+      "key": "coreMotherDinner",
+      "file": "core-mother-dinner.webp",
+      "original": "vn/assets/core/mother-dinner.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 374472,
+      "sha256": "2e380e14d3098256311fb909f242aa8b473e2b5ed7330c07c0bef477122a58fe",
+      "source": "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-7c8f708d-4929-4258-aa1b-6f93b9aa7b3e.png",
+      "nativePngSha256": "98f7be6b6f20a2e238ad3738a176e7eb13d5de56ad1087dc4db547a4add53834",
+      "sourceSha256": "bc3e2d2ad9ccb83a01a7b24b18caff0fecc29d3f99c0768bd56080e9c9acbd9a",
+      "prompt": "Use case: style-transfer. Production event CG for same Korean visual novel, one landscape16:9 high-detail image. Input1 EXACT SCENE EDIT TARGET; preserve composition, all original actions/props/participants, clothing, camera, setting and time of day. Following inputs are new canonical character faces and crisp hand-drawn ink/cel-painted style; final input is original teaser context, never an extra person to insert. Redraw scene using new identities while leaving story unchanged. Scene invariants: Curly male Seoin sits at kitchen table in gray home crewneck inspecting a mug in hand while mother cooks in back. Same lived-in kitchen, bowls, window, positions and evening light. Keep mother middle-aged gray bob. Preserve quiet uneasy attention, not a new happy family embrace. Male Seoin must have the teaser's young adult face, natural expressive eyes, dense tousled short BLACK CURLS, not smooth idol spikes. Other faces keep their own age and identity. Crisp drawn contours and clear cel-painted indigo shadow planes, restrained painted highlights, tactile material grain, match original scene light rather than arbitrary neon. No glossy photoreal/3D skin, text, readable digits/logos/HUD, new people, new objects, extra fingers/limbs or reinterpretation of story. Keep important objects and hand contacts exact. Native highest-resolution opaque landscape, lower quarter readable beneath dialogue.",
+      "references": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/core/mother-dinner.webp",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-58532ec4-3eef-4058-a43f-40dc7a5a91cd.png",
+        "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-69a00566-1288-4ff1-8149-91e1c17dc876.png",
+        "C:/Users/정현아/teaser-seoin-v16-face.png"
+      ],
+      "transparent": false,
+      "encoding": "WebP quality 96; native dimensions and alpha preserved"
+    }
+  ]
+}

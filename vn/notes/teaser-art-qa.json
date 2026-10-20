@@ -1,0 +1,1134 @@
+{
+  "date": "2026-10-21",
+  "baseline": "83a859d6270f2bdf479854c477c5845e60d9482e",
+  "scope": "공개 1~11화 데모의 인물 원화·인물 포함 사건 그림, 장면별 표시와 조작 검증",
+  "changes": {
+    "characters": 8,
+    "sprites": 27,
+    "eventCg": 16,
+    "tool": "built-in image_gen",
+    "exactModel": "not exposed",
+    "beachBefore": {
+      "dimensions": [
+        576,
+        384
+      ],
+      "bytes": 8214,
+      "format": "AVIF"
+    },
+    "beachAfter": {
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 2033126,
+      "format": "lossless WebP"
+    },
+    "spriteEncoding": "native 1024x1536, WebP quality96 with actual alpha",
+    "styleAnchor": "사용자 첨부 v16 티저 3.5초 프레임, 검은 곱슬머리 서인",
+    "legacyOriginalArtPreserved": true,
+    "manuscriptAndSettingsModified": false
+  },
+  "tests": {
+    "local": {
+      "count": 105,
+      "passed": 105,
+      "failed": 0
+    },
+    "publicBuild": {
+      "chapters": 18,
+      "sourceBeats": 4242,
+      "media": 110,
+      "teaserArt": 43,
+      "offlineBytes": 78821990,
+      "offlineSha256": "3782737279ae09f3389c8fe4572e5cd46bd991b987f08f88800de035f438c47d"
+    }
+  },
+  "browser": {
+    "tool": "cua_repl",
+    "pcViewport": [
+      1440,
+      900
+    ],
+    "mobileViewport": [
+      400,
+      850
+    ],
+    "screenshots": "장면 바로 표시·움직임 줄이기 설정으로 전환 효과 뒤의 원화를 기록. 기본 전환도 별도 확인.",
+    "pcScenes": [
+      {
+        "key": "neuralAwakening",
+        "chapter": "1",
+        "beat": 8,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/neural-awakening.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "9 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "seoinWaking",
+        "chapter": "1",
+        "beat": 19,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-waking.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "20 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "seoinHome",
+        "chapter": "1",
+        "beat": 30,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-home.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "31 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "kitchenAd",
+        "chapter": "1",
+        "beat": 32,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/kitchen-ad.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "33–35 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "motherWarm",
+        "chapter": "1",
+        "beat": 39,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-home.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/mother-warm.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "40 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "motherSearching",
+        "chapter": "1",
+        "beat": 54,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-home.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/mother-searching.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "55–56 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "motherCare",
+        "chapter": "1",
+        "beat": 61,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-waking.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/mother-care.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "62–63 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "table",
+        "chapter": "1",
+        "beat": 68,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/table.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "69–70 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "seoinStanding",
+        "chapter": "1",
+        "beat": 74,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-standing.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "75–76 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "seoinQuestion",
+        "chapter": "1",
+        "beat": 86,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-question.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "87 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "jiwooTease",
+        "chapter": "1",
+        "beat": 101,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-question.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-tease.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "102–105 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "seoinWorry",
+        "chapter": "1",
+        "beat": 118,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-worry.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-tease.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "119–122 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "seoinAngry",
+        "chapter": "1",
+        "beat": 134,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-angry.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-tease.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "135–136 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "jiwooFirm",
+        "chapter": "1",
+        "beat": 136,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-angry.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-firm.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "137–138 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "jiwooWounded",
+        "chapter": "1",
+        "beat": 153,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-worry.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-wounded.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "154–155 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "jiwooRelaxed",
+        "chapter": "1",
+        "beat": 182,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-relaxed.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "183–185 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "clay",
+        "chapter": "1",
+        "beat": 185,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/clay.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "186–187 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "seoinRecliningHome",
+        "chapter": "1",
+        "beat": 196,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-reclining-home.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "197–198 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "night",
+        "chapter": "1",
+        "beat": 202,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/night.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "203–205 / 263",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "emptyDesk",
+        "chapter": "2",
+        "beat": 65,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/empty-desk.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "66–67 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "jiwooGuarded",
+        "chapter": "2",
+        "beat": 85,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-guarded.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "86–87 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "fatherAppeal",
+        "chapter": "2",
+        "beat": 90,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/father-appeal.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-guarded.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "91–92 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "jiwooUnsteady",
+        "chapter": "2",
+        "beat": 135,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/father-appeal.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-unsteady.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "136–137 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "fatherDown",
+        "chapter": "2",
+        "beat": 138,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/father-down.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-unsteady.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "139–140 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "jiwooClay",
+        "chapter": "2",
+        "beat": 173,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-standing.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-clay.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "174–175 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "clayTurn",
+        "chapter": "2",
+        "beat": 194,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/clay-turn.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "195 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "dreamBeach",
+        "chapter": "2",
+        "beat": 232,
+        "images": [
+          {
+            "height": 1024,
+            "src": "assets/teaser-style/dream-beach.webp",
+            "width": 1536
+          }
+        ],
+        "progress": "233 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "seoinStartled",
+        "chapter": "2",
+        "beat": 266,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-startled.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "267 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "nightWake",
+        "chapter": "2",
+        "beat": 272,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/night-wake.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "273–275 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "seoinRelief",
+        "chapter": "2",
+        "beat": 276,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-relief.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "277 / 286",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "coreCupBadge",
+        "chapter": "3",
+        "beat": 227,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/core-cup-badge.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "228 / 276",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "doyunRamen",
+        "chapter": "5",
+        "beat": 41,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/doyun-ramen.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "42–43 / 374",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "doyunCanonical",
+        "chapter": "5",
+        "beat": 48,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-question.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/doyun-canonical.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "49 / 374",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "coreDoyunListen",
+        "chapter": "5",
+        "beat": 125,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-question.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/core-doyun-listen.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "126 / 374",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "rehoCanonical",
+        "chapter": "6",
+        "beat": 136,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-standing.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/reho-canonical.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "137 / 357",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "miraCanonical",
+        "chapter": "7",
+        "beat": 48,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-standing.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/mira-canonical.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "49–51 / 267",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "coreShore",
+        "chapter": "7",
+        "beat": 251,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/core-shore.webp",
+            "width": 1671
+          }
+        ],
+        "progress": "252 / 267",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "coreOverload",
+        "chapter": "8-2",
+        "beat": 73,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/core-overload.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "74 / 116",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "coreMotherSleep",
+        "chapter": "10",
+        "beat": 258,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/core-mother-sleep.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "259–260 / 357",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "procedureFace",
+        "chapter": "10",
+        "beat": 346,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/procedure-face.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "347–349 / 357",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "coreHakyung",
+        "chapter": "11",
+        "beat": 85,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/core-hakyung.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "86–88 / 254",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "coreSeoinAfter",
+        "chapter": "11",
+        "beat": 189,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/core-seoin-after.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/mother-care.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "190–192 / 254",
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "key": "coreMotherDinner",
+        "chapter": "11",
+        "beat": 215,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/core-mother-dinner.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "216–218 / 254",
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    ],
+    "mobileScenes": [
+      {
+        "key": "table",
+        "chapter": "1",
+        "beat": 68,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/table.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "69–70 / 263",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "jiwooTease",
+        "chapter": "1",
+        "beat": 101,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-question.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-tease.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "102–105 / 263",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "fatherAppeal",
+        "chapter": "2",
+        "beat": 90,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/father-appeal.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-guarded.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "91–92 / 286",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "jiwooClay",
+        "chapter": "2",
+        "beat": 173,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-standing.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/jiwoo-clay.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "174–175 / 286",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "dreamBeach",
+        "chapter": "2",
+        "beat": 232,
+        "images": [
+          {
+            "height": 1024,
+            "src": "assets/teaser-style/dream-beach.webp",
+            "width": 1536
+          }
+        ],
+        "progress": "233 / 286",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "seoinStartled",
+        "chapter": "2",
+        "beat": 266,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-startled.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "267 / 286",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "doyunCanonical",
+        "chapter": "5",
+        "beat": 48,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-question.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/doyun-canonical.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "49 / 374",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "rehoCanonical",
+        "chapter": "6",
+        "beat": 136,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-standing.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/reho-canonical.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "137 / 357",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "miraCanonical",
+        "chapter": "7",
+        "beat": 48,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/seoin-standing.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/mira-canonical.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "49–51 / 267",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "procedureFace",
+        "chapter": "10",
+        "beat": 346,
+        "images": [
+          {
+            "height": 941,
+            "src": "assets/teaser-style/procedure-face.webp",
+            "width": 1672
+          }
+        ],
+        "progress": "347–349 / 357",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "coreHakyung",
+        "chapter": "11",
+        "beat": 85,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/core-hakyung.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "86–88 / 254",
+        "viewport": [
+          400,
+          850
+        ]
+      },
+      {
+        "key": "coreSeoinAfter",
+        "chapter": "11",
+        "beat": 189,
+        "images": [
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/core-seoin-after.webp",
+            "width": 1024
+          },
+          {
+            "height": 1536,
+            "src": "assets/teaser-style/mother-care.webp",
+            "width": 1024
+          }
+        ],
+        "progress": "190–192 / 254",
+        "viewport": [
+          400,
+          850
+        ]
+      }
+    ],
+    "controlsVerified": [
+      "휴대폰 전체 그림 열기·세부 확대·가로 스크롤·닫기",
+      "모달 닫은 뒤 키보드 다음 문장 진행",
+      "문장 바로 표시·움직임 줄이기 설정",
+      "단일 HTML 2화 240번 좌표에서 1536x1024 내장 WebP 표시 및 전체 그림 버튼",
+      "단일 HTML 전체 그림 모달 1536x1024 원본 표시·닫기",
+      "11화 마지막 문장 뒤 데모 종료 카드와 출시 안내 보기",
+      "실제 결제 주소가 없는 출시 준비 중 안내 유지"
+    ],
+    "screenshotsDirectory": "C:\\Users\\정현아\\vn-art-play-qa-20261021"
+  },
+  "reviews": [
+    "별도 reviewer가 티저 기준과 신규 서인·여성 지우·해변 및16CG를 시각 확인",
+    "별도 explorer가27sprite의 성별·나이·얼굴·동작 및 원본 alpha 확인",
+    "해변의 과한 피부광을 줄이고 서인 Standing/Question 재킷의 라펠을 맞춘 뒤 재확인"
+  ],
+  "deployment": "별도 GitHub commit/PR/Actions 기록에서 확인"
+}

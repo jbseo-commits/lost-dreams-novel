@@ -40,6 +40,9 @@ test('actual VN deployment and its single HTML contain only the demo text, cues 
  const built={window:{}};vm.runInNewContext(await fs.readFile(path.join(pub,'story-data.js'),'utf8'),built);
  assert.deepEqual(built.window.STORY.chapters.map(c=>String(c.id)).join('|'),DEMO_CHAPTER_IDS.join('|'));
  assert.equal(report.sourceBeats,4242);assert.equal(report.paymentAuthentication,false);
+ assert.equal(built.window.STORY.assets.jiwoo,'assets/teaser-style/jiwoo-relaxed.webp');
+ assert.ok(!report.media.includes('assets/jiwoo.webp'));
+ assert.equal(report.media.filter(m=>m.startsWith('assets/teaser-style/')).length,43);
  for(const c of built.window.STORY.chapters)assert.equal(JSON.stringify(c.beats),JSON.stringify(full.chapters.find(o=>o.id===c.id).beats));
  assert.ok(report.media.every(m=>!m.includes('court')&&!m.includes('settlement-hands')));
  assert.ok(!report.media.includes('assets/cutscenes/foodstall-contract.webp'));

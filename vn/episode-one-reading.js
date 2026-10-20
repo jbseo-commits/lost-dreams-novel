@@ -1,5 +1,5 @@
-import { episodeOneDirection } from './episode-one.js?v=demo-only-20261021-r2';
-import { presentationForBeat } from './neural-cues.js?v=demo-only-20261021-r2';
+import { episodeOneDirection } from './episode-one.js?v=teaser-art-20261021-r1';
+import { presentationForBeat } from './neural-cues.js?v=teaser-art-20261021-r1';
 
 // These are reading pages, not new story beats. Source indices remain the
 // coordinate system for saves, choices, scene direction and the backlog.
