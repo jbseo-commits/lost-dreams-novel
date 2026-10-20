@@ -16,6 +16,11 @@ import { createEpisodeOneAudio } from './episode-one-audio.js?v=cutscenes-202610
 import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=cutscenes-20261020-r6';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
+import { evaluationRoomForBeat } from './evaluation-room.js';
+import { medicalConferenceForBeat } from './medical-conference.js';
+import { hospitalWaitingForBeat } from './hospital-waiting.js';
+import { MedicalSceneStage, medicalSceneForBeat } from './medical-scene.js';
+import { HumanOnlyStage, humanOnlyForBeat } from './human-only-scene.js';
 import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=cutscenes-20261020-r6';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=cutscenes-20261020-r6';
 import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=cutscenes-20261020-r6';
@@ -43,6 +48,8 @@ let pendingChapter = null;
 const audio = createAudioDirector(() => store.settings);
 const neuralStage = new NeuralStage($('neuralStage'));
 const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS,{onInspect:openCutscene});
+const medicalStage = new MedicalSceneStage($('medicalStoryStage'),story.assets);
+const humanOnlyStage = new HumanOnlyStage($('humanOnlyStage'));
 const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {onStatus:(status,tracks={})=>{
   $('soundToggle').dataset.audioStatus=status;
   $('soundToggle').dataset.music=tracks.music||'';
@@ -360,7 +367,13 @@ function renderBeat({ revisit = false } = {}) {
   const dreamEnd = dreamStart >= 0 ? chapter.beats.findIndex((item, index) => index > dreamStart && item.text?.includes('서인은 버튼을 눌렀다')) : -1;
   const inJiwooDream = dreamStart >= 0 && progress.beatIndex >= dreamStart && (dreamEnd < 0 || progress.beatIndex <= dreamEnd);
   $('stage').classList.toggle('ep2-jiwoo-dream', inJiwooDream);
-  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene]);
+  const evaluationAsset = evaluationRoomForBeat(chapter,progress.beatIndex);
+  const medicalConferenceAsset = medicalConferenceForBeat(chapter,progress.beatIndex);
+  const hospitalWaitingAsset = hospitalWaitingForBeat(chapter,progress.beatIndex);
+  const humanOnlyCue = humanOnlyForBeat(chapter,progress.beatIndex);
+  const medicalCue = medicalSceneForBeat(chapter,progress.beatIndex);
+  $('stage').classList.toggle('vn-medical-authored',Boolean(medicalCue));
+  const background = evaluationAsset || medicalConferenceAsset || hospitalWaitingAsset || humanOnlyCue?.background || (inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene]));
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
@@ -379,6 +392,8 @@ function renderBeat({ revisit = false } = {}) {
   storyText.hidden = primary;
   $('perceptionAdvance').hidden = !primary;
   renderDirection(beat, { quiet: revisit });
+  medicalStage.render(medicalCue,{reducedMotion:store.settings.reducedMotion});
+  humanOnlyStage.render(humanOnlyCue,{reducedMotion:store.settings.reducedMotion});
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
   directionCard.hidden = Boolean(currentEpisodeCue||currentEventCutscene) || Boolean(currentPerception) || !beat.direction?.visual;
@@ -523,6 +538,7 @@ function goPrevious() {
 function renderChapterEnd(final = false) {
   clearTimers(); pauseReading();
   episodeAudio.stop();
+  medicalStage.clear(); humanOnlyStage.clear();
   neuralStage.clear(); audio.setCommunicationFocus(null); lastCommunicationGroup = '';
   document.querySelector('.end-screen')?.remove();
   const ending = document.createElement('div'); ending.className = 'end-screen';
@@ -818,7 +834,7 @@ function setUiHidden(hidden) {
 }
 $('hideUiButton').addEventListener('click',()=>{setUiHidden(!$('stage').classList.contains('ui-hidden'));if(!$('uiReveal').hidden)$('uiReveal').focus();});
 $('uiReveal').addEventListener('click',()=>{setUiHidden(false);$('hideUiButton').focus();});
-$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); episodeStage.clear(); currentEpisodeCue=null; currentEventCutscene=null; neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
+$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); episodeStage.clear(); medicalStage.clear(); humanOnlyStage.clear(); currentEpisodeCue=null; currentEventCutscene=null; neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
 $('modalClose').addEventListener('click', closeModal);
 modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
 modal.addEventListener('cancel', (event) => { event.preventDefault(); closeModal(); });

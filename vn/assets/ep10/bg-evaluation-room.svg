@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1672 941" width="1672" height="941" role="img" aria-label="상층 평가실. 넓고 차가운 공간 중앙에 의자 하나만 놓여 있다.">
+<defs>
+ <linearGradient id="rear" x2="0.1" y2="1"><stop stop-color="#344954"/><stop offset=".52" stop-color="#1d2c37"/><stop offset="1" stop-color="#0a1219"/></linearGradient>
+ <linearGradient id="floor" x2=".08" y2="1"><stop stop-color="#394c54"/><stop offset=".26" stop-color="#263640"/><stop offset="1" stop-color="#091118"/></linearGradient>
+ <linearGradient id="wall-left"><stop stop-color="#080f15"/><stop offset="1" stop-color="#2b3d46"/></linearGradient>
+ <linearGradient id="wall-right"><stop stop-color="#2c414b"/><stop offset="1" stop-color="#081017"/></linearGradient>
+ <linearGradient id="seat" x2="1" y2="1"><stop stop-color="#34414b"/><stop offset=".48" stop-color="#171e25"/><stop offset="1" stop-color="#060a0e"/></linearGradient>
+ <linearGradient id="toplight" x2="0" y2="1"><stop stop-color="#d5ecf6" stop-opacity="0.85"/><stop offset="1" stop-color="#99d2e6" stop-opacity="0"/></linearGradient>
+ <radialGradient id="haze"><stop stop-color="#d8f0f6" stop-opacity=".24"/><stop offset="1" stop-color="#d8f0f6" stop-opacity="0"/></radialGradient>
+ <radialGradient id="chairshade"><stop stop-color="#000" stop-opacity=".72"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="26"/></filter>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".42" numOctaves="3" seed="5" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+</defs>
+<rect width="1672" height="941" fill="#071017"/>
+<path d="M0 0H1672L1380 144H292Z" fill="#0a1118"/>
+<path d="M0 0L308 148V601L0 790Z" fill="url(#wall-left)"/>
+<path d="M1672 0L1364 148V601L1672 790Z" fill="url(#wall-right)"/>
+<path d="M308 148H1364V601H308Z" fill="url(#rear)"/>
+<path d="M0 790L308 601H1364L1672 790V941H0Z" fill="url(#floor)"/>
+<path d="M292 148H1380M307 601H1365" fill="none" stroke="#89a6b4" stroke-opacity=".25" stroke-width="3"/>
+<path d="M481 149V600M1190 149V600" stroke="#c7d5da" stroke-opacity=".09" stroke-width="3"/>
+<path d="M0 789L308 601M1672 789L1364 601M0 899L579 601M1672 899L1093 601M836 941V601" stroke="#a7bec9" stroke-opacity=".16" stroke-width="2"/>
+<path d="M0 682H1672M0 806H1672" stroke="#afc0c7" stroke-opacity=".12" stroke-width="2"/>
+<path d="M635 10H1037L991 74H681Z" fill="#cedde0" opacity=".79"/>
+<path d="M681 74H991L1065 601H607Z" fill="url(#toplight)" opacity=".44"/>
+<ellipse cx="836" cy="535" rx="390" ry="230" fill="url(#haze)" opacity=".7"/>
+<path d="M310 154L310 602M1362 154V602" stroke="#b4d1d9" stroke-opacity=".13" stroke-width="5"/>
+<ellipse cx="835" cy="609" rx="168" ry="27" fill="url(#chairshade)" filter="url(#blur)"/>
+<g stroke-linejoin="round" stroke-linecap="round">
+ <path d="M766 427L748 613M907 427L925 613" stroke="#05090d" stroke-width="13"/>
+ <path d="M768 425L751 614M905 425L923 614" stroke="#83919a" stroke-opacity=".69" stroke-width="4"/>
+ <path d="M785 285Q777 282 774 296L766 403Q766 413 777 415H895Q906 413 906 400L898 295Q897 282 888 285Z" fill="url(#seat)" stroke="#677a88" stroke-width="5"/>
+ <path d="M779 307Q837 298 895 307M776 382Q834 392 900 382" stroke="#afc5ce" stroke-opacity=".31" stroke-width="3" fill="none"/>
+ <path d="M761 409Q834 391 914 408L904 432Q836 446 769 432Z" fill="url(#seat)" stroke="#778993" stroke-width="4"/>
+ <path d="M776 440L764 612M895 440L909 612" stroke="#070c11" stroke-width="12"/>
+ <path d="M777 442L766 613M894 442L907 613" stroke="#93aab4" stroke-opacity=".46" stroke-width="3"/>
+</g>
+<path d="M718 634Q839 598 954 636" stroke="#c7e4ea" stroke-opacity=".08" stroke-width="15" fill="none" filter="url(#blur)"/>
+<rect width="1672" height="941" filter="url(#grain)" opacity=".043" style="mix-blend-mode:screen"/>
+<rect width="1672" height="941" fill="#02070b" opacity="0"/>
+</svg>
