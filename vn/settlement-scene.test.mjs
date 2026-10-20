@@ -16,6 +16,7 @@ test('34 first meeting does not leak settlement terms before they appear',()=>{
  assert(intro>=0&&terms>intro&&lastTerm>terms&&fourth>lastTerm);
  assert.equal(settlementBackgroundForBeat(chapter,intro),EXTERNAL_MEETING);
  assert.equal(settlementForBeat(chapter,intro).rows.length,0);
+ assert.equal(settlementForBeat(chapter,intro-1),null);
  assert.equal(settlementForBeat(chapter,terms).rows.length,0);
  assert.equal(settlementForBeat(chapter,lastTerm).rows.length,4);
  assert.equal(settlementForBeat(chapter,lastTerm).focus,-1);
@@ -32,6 +33,10 @@ test('34 refund is distinct and decline waits until woman refuses',()=>{
  assert.deepEqual(settlementForBeat(chapter,offer).rows,['환급 12 TOKEN']);
  assert.equal(settlementForBeat(chapter,refusal).phase,'declined');
  assert.equal(settlementForBeat(chapter,next),null);
+ const corridor=at('서인이 복도까지 따라갔다.');
+ assert(corridor>refusal);
+ assert.equal(settlementForBeat(chapter,corridor),null);
+ assert.equal(settlementForBeat(chapter,intro-1),null);
 });
 test('34 has no stage beyond source-bounded scenes, and no paywall override',()=>{
  assert.equal(settlementForBeat({...chapter,id:'33'},0),null);
