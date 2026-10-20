@@ -19,6 +19,7 @@ import { createTitleAtmosphere } from './title-atmosphere.js';
 import { evaluationRoomForBeat } from './evaluation-room.js';
 import { medicalConferenceForBeat } from './medical-conference.js';
 import { hospitalWaitingForBeat } from './hospital-waiting.js';
+import { MedicalSceneStage,medicalSceneForBeat } from './medical-scene.js';
 import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r3';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r3';
 
@@ -45,6 +46,7 @@ let pendingChapter = null;
 const audio = createAudioDirector(() => store.settings);
 const neuralStage = new NeuralStage($('neuralStage'));
 const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS);
+const medicalStage = new MedicalSceneStage($('medicalStoryStage'),story.assets);
 const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {onStatus:(status,tracks={})=>{
   $('soundToggle').dataset.audioStatus=status;
   $('soundToggle').dataset.music=tracks.music||'';
@@ -362,6 +364,7 @@ function renderBeat({ revisit = false } = {}) {
   storyText.hidden = primary;
   $('perceptionAdvance').hidden = !primary;
   renderDirection(beat, { quiet: revisit });
+  medicalStage.render(medicalSceneForBeat(chapter,progress.beatIndex),{reducedMotion:store.settings.reducedMotion});
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
   directionCard.hidden = Boolean(currentEpisodeCue) || Boolean(currentPerception) || !beat.direction?.visual;
@@ -506,6 +509,7 @@ function goPrevious() {
 function renderChapterEnd(final = false) {
   clearTimers(); pauseReading();
   episodeAudio.stop();
+  medicalStage.clear();
   neuralStage.clear(); audio.setCommunicationFocus(null); lastCommunicationGroup = '';
   document.querySelector('.end-screen')?.remove();
   const ending = document.createElement('div'); ending.className = 'end-screen';
