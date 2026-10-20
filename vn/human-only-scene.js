@@ -27,7 +27,7 @@ export function humanOnlyForBeat(chapter,index) {
  const rows=inFirst?revealed(beats,index,HIGHLIGHTS):revealed(beats,index,RESULTS);
  const chip=indexOf(beats,CHIP)>=0&&index>=indexOf(beats,CHIP)&&inFirst;
  const pause=indexOf(beats,'정확히 3초.');
- const threeSecond=inFirst&&pause>=0&&index>=pause;
+ const threeSecond=inFirst&&pause>=0&&index>=pause&&index<=pause+3;
  return {room:'waiting',background:HUMAN_ONLY_WAITING,rows,
    phase:inReturn?'return':'contest',chip,threeSecond};
 }
@@ -55,7 +55,7 @@ export class HumanOnlyStage {
   if(this.room!==cue.room){
    this.root.replaceChildren();this.room=cue.room;this.lastKey='';
    const plaque=make('div','human-only-plaque');
-   const kicker=make('span','human-only-kicker',cue.room==='exterior'?'EAST TRANSIT / TALENT HALL':'HUMAN ONLY / LIVE');
+   const kicker=make('span','human-only-kicker',cue.room==='exterior'?'동부 환승센터 인재홀':'현장 중계');
    const rows=make('div','human-only-rows');
    plaque.append(kicker,rows);
    const clock=make('div','human-only-stop');
