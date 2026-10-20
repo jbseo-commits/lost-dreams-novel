@@ -1,0 +1,929 @@
+{
+  "tool": "built-in image_gen",
+  "exactModel": "not exposed by tool",
+  "created": "2026-10-20",
+  "notes": [
+    "박선호 기준 원화는 제작 참조용이며 런타임 미사용",
+    "박선호15는 오른어깨에서 팔이 이어지는 새 구도로 제작",
+    "기존 원고·얼굴·장소·CG 보존"
+  ],
+  "assets": [
+    {
+      "chapter": "3",
+      "start": 56,
+      "end": 60,
+      "cg": "clayFailure",
+      "name": "clay-failure",
+      "title": "첫 컵이 주저앉는 순간",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-relaxed.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/workshop.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. Reference1 adult FEMALE Jiwoo, short brown bob, light gray rolled overshirt charcoal tee, add a plain well-worn neutral canvas pottery apron. Reference2 MALE Seoin dark tousled hair white shirt/dark trousers. Reference3 pottery workshop spatial mood. A close three-quarter view of Jiwoo urgently trying to support a tiny new wet clay cylinder on the wheel with both muddy hands: its side wall folds outward, top twists sideways and slumps while base sticks to spinning wheel. Seoin at side leans forward with concerned startled look. No teacher needed. The event is the material giving way under actual fingers, neither perfectly shaped pot nor old dried keepsake cup. Wheel, four hands total if Seoin hands visible, natural anatomy. Restrained dusty afternoon light, clay splatter and rough tools. Crop knees not action, Jiwoo clear female face. Show failure already beginning, no blood.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-7d183c55-e6ce-435e-ae9a-33da14a5076f.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. Reference1 adult FEMALE Jiwoo, short brown bob, light gray rolled overshirt charcoal tee, add a plain well-worn neutral canvas pottery apron. Reference2 MALE Seoin dark tousled hair white shirt/dark trousers. Reference3 pottery workshop spatial mood. A close three-quarter view of Jiwoo urgently trying to support a tiny new wet clay cylinder on the wheel with both muddy hands: its side wall folds outward, top twists sideways and slumps while base sticks to spinning wheel. Seoin at side leans forward with concerned startled look. No teacher needed. The event is the material giving way under actual fingers, neither perfectly shaped pot nor old dried keepsake cup. Wheel, four hands total if Seoin hands visible, natural anatomy. Restrained dusty afternoon light, clay splatter and rough tools. Crop knees not action, Jiwoo clear female face. Show failure already beginning, no blood.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-relaxed.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/workshop.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "clay-failure.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 342424,
+      "sha256": "db9957a2b5cc12339c87f85405f6e412c6eb5a0b541514aed635147209c83277"
+    },
+    {
+      "chapter": "5",
+      "start": 41,
+      "end": 46,
+      "cg": "doyunRamen",
+      "name": "doyun-ramen",
+      "title": "라면을 미는 혁명가",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/clinic.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. Ref1 Doyun MALE earlymiddleaged, tousled black hair light stubble easy wry smile gray hoodie white tee dark trousers and worn slides. Ref2 adult male Seoin white shirt/darkofficejacket cautious expression. Ref3 rundown closed sleep clinic basement. Doyun sits casually amid four old sleep capsules and dismantled neural equipment, slides a steaming paper cup of instant noodles across a workbench to Seoin who stays stiff near the doorway. Action of offered ordinary food at center, cables in background, warm steam contrasts cool machinery. Chopstick paper opened nearby, no gun or threatening pose, no new futuristic armor. Two people in same integrated room, faces must match exact refs. Doyun friendly yet unreadable, Seoin guarded. No visible branding or readable cup label.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-67939407-df6e-4eab-b1e8-226bf009e9b3.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. Ref1 Doyun MALE earlymiddleaged, tousled black hair light stubble easy wry smile gray hoodie white tee dark trousers and worn slides. Ref2 adult male Seoin white shirt/darkofficejacket cautious expression. Ref3 rundown closed sleep clinic basement. Doyun sits casually amid four old sleep capsules and dismantled neural equipment, slides a steaming paper cup of instant noodles across a workbench to Seoin who stays stiff near the doorway. Action of offered ordinary food at center, cables in background, warm steam contrasts cool machinery. Chopstick paper opened nearby, no gun or threatening pose, no new futuristic armor. Two people in same integrated room, faces must match exact refs. Doyun friendly yet unreadable, Seoin guarded. No visible branding or readable cup label.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/clinic.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "doyun-ramen.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 302654,
+      "sha256": "bab20c3ec9d47e1c619b5aa28f2a10dc63f3e2f808c0e798fa79516ff4ce7404"
+    },
+    {
+      "chapter": "10",
+      "start": 346,
+      "end": 353,
+      "cg": "procedureFace",
+      "name": "procedure-face",
+      "title": "빛이 좁아지기 전의 얼굴",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/clinic.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. Reference1 male Seoin exact youthfulface and dark hair, white ordinary shirt, jacket removed; ref2 exact adult male Doyun older/stubble gray hoodie. Near-subjective view from just above Seoin reclined in a medical chair in closed modestclinic treatmentroom, a padded metal device settling around his HEAD and small wrist stabilizers at armrests (no cuts/gore/needles, not an operating bed). Doyun leans into the narrowing field of vision beside the chair, his face calm and quietly weighted, the last familiar thing visible. Foreground soft device edges frame topcorners, Doyun face uppermiddle, Seoin partly in profilecenterbelow with tense open eyes, his right hand faintlyvisible closed around a tiny scratched bent metal scrap. Cold clinical light gathersatcenter, restrained warmface. No floating portals literal doors, no brainvisible, no miraculous magic, no forced captive framing; character has chosen treatment.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-6a295d0e-c59c-41b6-b5ad-7e049cbbba5f.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. Reference1 male Seoin exact youthfulface and dark hair, white ordinary shirt, jacket removed; ref2 exact adult male Doyun older/stubble gray hoodie. Near-subjective view from just above Seoin reclined in a medical chair in closed modestclinic treatmentroom, a padded metal device settling around his HEAD and small wrist stabilizers at armrests (no cuts/gore/needles, not an operating bed). Doyun leans into the narrowing field of vision beside the chair, his face calm and quietly weighted, the last familiar thing visible. Foreground soft device edges frame topcorners, Doyun face uppermiddle, Seoin partly in profilecenterbelow with tense open eyes, his right hand faintlyvisible closed around a tiny scratched bent metal scrap. Cold clinical light gathersatcenter, restrained warmface. No floating portals literal doors, no brainvisible, no miraculous magic, no forced captive framing; character has chosen treatment.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/clinic.webp"
+        ],
+        "transparent_background": false
+      },
+      "revision": {
+        "prompt": "Edit only the metal prop continuity in this finished CG. Preserve both exact faces, gaze, poses, clothes, framing, head rig, background and lighting. Remove the sharp jagged blade-like metal fragment from Doyun's foreground hand. Leave his hand relaxed and empty on the edge of the chair. Seoin is already holding his small dull bent rectangular scrap OUT OF FRAME; do not add a new visible hand or tool. There must be NO knife, no blade, no weapon, no sharp point, no new objects. The scene is a chosen neural procedure with a familiar friend, not an attack. All pixels besides that tiny removed metal prop should remain compositionally unchanged.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-72d49509-73a8-4d89-8fed-ef7422e86abb.png"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "procedure-face.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 289100,
+      "sha256": "3abc4f48d276d269ccd2648d6804cebec45a7deba9d7798d2ff8ff64d5973441"
+    },
+    {
+      "chapter": "22",
+      "start": 138,
+      "end": 138,
+      "cg": "hospitalShoe",
+      "name": "hospital-shoe",
+      "title": "57분 뒤 신발 뒤축",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/hospital.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yoonha.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. A quiet hospitalcorridor after a long delayed test result. Mainfocus close at childheight: an ordinary adult father's unadorned hands bend down and straighten the crushed heel of his sleepy young DAUGHTER's sneaker while she sits on bench in wrinkled coat rubbing an eye. Frame father's head from behind/partly cropped to avoid inventing recurringidentity; child'sface sleepy generic partlyhidden by hand, no schoollogo. Her foot onfloor, heel gently pulled into shape by father, believable anatomy; no injuries. Seoin ref2 and adult woman BaekYoonha ref3 in dark business suit wait respectfully far in soft background at side, small not mainportraits. Ref1 hospital spatial palette. Exhausted ordinary kindness, cool overhead lights quiet hallway, closed examdoor behind. No triumphant cure, no doctor or emergency equipment, no display text or clocks.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-41a45b35-5d16-4cb0-9203-ab788552b5c1.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. A quiet hospitalcorridor after a long delayed test result. Mainfocus close at childheight: an ordinary adult father's unadorned hands bend down and straighten the crushed heel of his sleepy young DAUGHTER's sneaker while she sits on bench in wrinkled coat rubbing an eye. Frame father's head from behind/partly cropped to avoid inventing recurringidentity; child'sface sleepy generic partlyhidden by hand, no schoollogo. Her foot onfloor, heel gently pulled into shape by father, believable anatomy; no injuries. Seoin ref2 and adult woman BaekYoonha ref3 in dark business suit wait respectfully far in soft background at side, small not mainportraits. Ref1 hospital spatial palette. Exhausted ordinary kindness, cool overhead lights quiet hallway, closed examdoor behind. No triumphant cure, no doctor or emergency equipment, no display text or clocks.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/hospital.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yoonha.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "hospital-shoe.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 253342,
+      "sha256": "b5cd169fe17723dd44c7ecd365951854f8e49a5a22d36c4d67cfea4552c9b46f"
+    },
+    {
+      "chapter": "28",
+      "start": 183,
+      "end": 185,
+      "cg": "pepperThreshold",
+      "name": "pepper-threshold",
+      "title": "집을 막아 둔 고추 모종",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/mother.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-morning.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. Doorway view into Seoin's very narrow worn studiohome, identityref1 middleaged mother short saltbrown hair taupe cardigan white blouse, ref2adultmale Seoin white shirt dark workjacket arriving from outside. Mother holds frontdoor open, quietly looks at son and says nothing about a LINE OF SMALL PEPPER SEEDLING POTS moved frombalcony to flooracross ENTRYTHRESHOLD as improvised barrier. The pots obstruct approach; son has paused beyond them, not kickedthem. Mainfocus fragilegreen seedlings, terracotta/plastic small pots allsameordinarykind across centralfloor, the two people's hesitant hands and lowered gazes. Cramped fridge/foldingpartition room behind matchesref3. No intruder, threatening shadow, surveillance face, brokenlock, gun or blood. Earlyevening lamplight, vulnerablehome protected by everydayobjects. Keep facesconsistent, maleofficeclothescorrect, mothernotyouthful.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-f03c1b9a-5873-4a97-b564-cfeaf90b718f.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. Doorway view into Seoin's very narrow worn studiohome, identityref1 middleaged mother short saltbrown hair taupe cardigan white blouse, ref2adultmale Seoin white shirt dark workjacket arriving from outside. Mother holds frontdoor open, quietly looks at son and says nothing about a LINE OF SMALL PEPPER SEEDLING POTS moved frombalcony to flooracross ENTRYTHRESHOLD as improvised barrier. The pots obstruct approach; son has paused beyond them, not kickedthem. Mainfocus fragilegreen seedlings, terracotta/plastic small pots allsameordinarykind across centralfloor, the two people's hesitant hands and lowered gazes. Cramped fridge/foldingpartition room behind matchesref3. No intruder, threatening shadow, surveillance face, brokenlock, gun or blood. Earlyevening lamplight, vulnerablehome protected by everydayobjects. Keep facesconsistent, maleofficeclothescorrect, mothernotyouthful.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/mother.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-morning.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "pepper-threshold.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 229706,
+      "sha256": "76b66fadfa11e98c3af4d5163b360a1b4036830ba709fa2c3d57d0cfc71507b7"
+    },
+    {
+      "chapter": "29",
+      "start": 200,
+      "end": 202,
+      "cg": "handsCenter",
+      "name": "hands-center",
+      "title": "잠깐 가운데를 찾은 흙",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-relaxed.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/workshop.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. In potteryworkshopref3, adultFEMALE Jiwoo exactface/shortbrown bob/ref1grayrolledovershirtcharcoaltee and plaincanvasapron stands just behindside of male Seoin ref2white shirt sleevesrolled and plaincanvasapron. Intimate but practical TEACHING action: Jiwoo's two claystainedhands steady Seoin's wrists from behindside as his two hands center a leaning fresh wetclaycup on wheel. Fourhands total clearlybelongingto twopeople, not a romantic embrace. Mainfocus interlocked guidance of wrists and the small wetcup brieflyupright in wheelcenter, their faces uppermiddle left/right showingcarefulconcentration. Unpolishedcupnotperfect, nohandle, not the dry childhoodkeepsake. Afternoonwarmlight, dustyworkbenchtools. No blush/hearts/kissing/declaredromance, no flashbackchild. PreservefemaleJiwoo and maleSeoin identities. Fullintegrated event not pairedstandingportraits.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-1ac314ca-4f66-4c24-86b6-6bd14dc07c3c.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 premium cinematic painterly anime event CG for Korean sci-fi VN, polished lived-in lighting and tactile materials, same coherent rendering and character identity as references. Not a sprite, no collage, no split panels, no concept sheet. Key action centrally grouped in middle60% and upper two-thirds for mobile contain framing, bottomquarter visually quiet for dialogue. NO legible text, letters, numbers, logos, captions, watermark, invented UI. In potteryworkshopref3, adultFEMALE Jiwoo exactface/shortbrown bob/ref1grayrolledovershirtcharcoaltee and plaincanvasapron stands just behindside of male Seoin ref2white shirt sleevesrolled and plaincanvasapron. Intimate but practical TEACHING action: Jiwoo's two claystainedhands steady Seoin's wrists from behindside as his two hands center a leaning fresh wetclaycup on wheel. Fourhands total clearlybelongingto twopeople, not a romantic embrace. Mainfocus interlocked guidance of wrists and the small wetcup brieflyupright in wheelcenter, their faces uppermiddle left/right showingcarefulconcentration. Unpolishedcupnotperfect, nohandle, not the dry childhoodkeepsake. Afternoonwarmlight, dustyworkbenchtools. No blush/hearts/kissing/declaredromance, no flashbackchild. PreservefemaleJiwoo and maleSeoin identities. Fullintegrated event not pairedstandingportraits.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-relaxed.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/workshop.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "hands-center.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 349218,
+      "sha256": "b3211771f4c602e5bf50fef8aef155da402d4b9cd8eaabb46c0ec80da5437708"
+    },
+    {
+      "chapter": "9",
+      "start": 265,
+      "end": 278,
+      "cg": "metalGift",
+      "name": "metal-gift",
+      "title": "기능 없는 금속 조각",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cgmetal.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Close hands event in modest darkclinic night: grayhoodie Doyun ref1 places a small DULL BENT RECTANGULAR metal strip (same exact scratched nonsharp cheap offcut asref3) in Seoin's open palm white shirt/darkjacketref2. Upperhalf includes their subdued faces, Doyun serious protectiveness no smile, Seoin uncertain amused. Focus transferofobjectbetweentwohands. Not a knife, circuit device, magic item, valuablejewel or weapon. Keep ordinary worn surroundings understated.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-1ba84673-98ec-4d87-b65f-120e81d929cc.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Close hands event in modest darkclinic night: grayhoodie Doyun ref1 places a small DULL BENT RECTANGULAR metal strip (same exact scratched nonsharp cheap offcut asref3) in Seoin's open palm white shirt/darkjacketref2. Upperhalf includes their subdued faces, Doyun serious protectiveness no smile, Seoin uncertain amused. Focus transferofobjectbetweentwohands. Not a knife, circuit device, magic item, valuablejewel or weapon. Keep ordinary worn surroundings understated.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cgmetal.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "metal-gift.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 252308,
+      "sha256": "5bf0d1073e9e193515f6d6f401a4724c3b9b43cf76bfa720e26b389d32fc67c6"
+    },
+    {
+      "chapter": "11",
+      "start": 69,
+      "end": 72,
+      "cg": "metalGrip",
+      "name": "metal-grip",
+      "title": "아파서 쥔 것인지",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cgmetal.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Extreme closeup male Seoin's RIGHT hand involuntarily gripping a DULL small scratched bent rectangularmetalstrip sameasref2, forearm in plain white shirt sleeve restinginmedicalchair stabilizer, NOT a bound prisoner. The knuckles tense, nails natural; cold neuralclinicalglow and fuzzy procedural monitor inbackground. Handambiguous pain/reflex, not confident thumbs-up or voluntary success. No blood/needles, no happy consentcheckmark, no fingerscroppedoff. Darkchairleather/softrestraintedge groundscene.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-506aa726-484b-46c8-99e8-aa2b88a5c60c.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Extreme closeup male Seoin's RIGHT hand involuntarily gripping a DULL small scratched bent rectangularmetalstrip sameasref2, forearm in plain white shirt sleeve restinginmedicalchair stabilizer, NOT a bound prisoner. The knuckles tense, nails natural; cold neuralclinicalglow and fuzzy procedural monitor inbackground. Handambiguous pain/reflex, not confident thumbs-up or voluntary success. No blood/needles, no happy consentcheckmark, no fingerscroppedoff. Darkchairleather/softrestraintedge groundscene.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cgmetal.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "metal-grip.webp",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "bytes": 159050,
+      "sha256": "64772227a54027683a9b9af477e93ce01f9f55a9d69ef57b6eaa4c9707cd2a0b"
+    },
+    {
+      "chapter": "14",
+      "start": 97,
+      "end": 106,
+      "cg": "wrongIsolation",
+      "name": "wrong-isolation",
+      "title": "끊었는데 멈추지 않는 유출",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/park-seonho.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yeonwoo.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Corporate security interview room: 42-year-old ParkSeonho ref1 sits center with left hand covering his RIGHT wrist interface now BLACK/OFF; male Seoin ref2 and female KangYeonwoo ref3 realize mistake as their gazes switch from his isolatedwrist to a distant wall screen still sending a sparse trail of small anonymous document tiles outward. Mainvisual tangible cutoff wrist vs continuingdataflow, no text/counters. Park embarrassedandhurt notvillainous. All threefacesconsistent. No medicalrecords aboutwife, no handcuffs, physicalpolice or violence.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-4855593b-2a84-420f-96ed-6a4a40961252.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Corporate security interview room: 42-year-old ParkSeonho ref1 sits center with left hand covering his RIGHT wrist interface now BLACK/OFF; male Seoin ref2 and female KangYeonwoo ref3 realize mistake as their gazes switch from his isolatedwrist to a distant wall screen still sending a sparse trail of small anonymous document tiles outward. Mainvisual tangible cutoff wrist vs continuingdataflow, no text/counters. Park embarrassedandhurt notvillainous. All threefacesconsistent. No medicalrecords aboutwife, no handcuffs, physicalpolice or violence.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/park-seonho.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yeonwoo.webp"
+        ],
+        "transparent_background": false
+      },
+      "revision": {
+        "prompt": "Correct ONLY Park Seonho's hand/wrist continuity in this illustration. Preserve all exact faces, clothes, people, positions, room, screen, lighting. Park is the middle-aged man in taupe cardigan at center. His LEFT hand must cover his RIGHT wrist. The right forearm comes from the shoulder on VIEWER'S LEFT side of his torso, ending near center-left of table. His left hand crosses over from viewer-right to cover that RIGHT wrist. Move the black/OFF wrist interface onto that RIGHT wrist (viewer-left side), hide most of it under covering left hand. Remove the interface from his LEFT wrist (viewer-right side). This should look like an ordinary guarded officeworker, not restraints. Seoin and Yeonwoo must stay unchanged. No added limbs or text.",
+        "referenced_image_paths": [
+          "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-5c5c68bd-cb49-4493-9202-339bc9ad2fd4.png"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "wrong-isolation.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 192150,
+      "sha256": "dbc3a77df706391df564bd60b5924c5a5b5af0e6f2218816dd717d55a7699d92"
+    },
+    {
+      "chapter": "15",
+      "start": 157,
+      "end": 167,
+      "cg": "oneAppointment",
+      "name": "one-appointment",
+      "title": "닫지 않은 진료 일정",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/park-seonho.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Same exact42-year-old ParkSeonhoface/cardiganandpaleshirtref1 in quiet corporate windowlounge across table fromSeoinref2. He voluntarily turns his RIGHT wrist glass interface toward Seoin; simple single muted appointment rectangle glows but NO legible text. Other hand holds/putsdown ceramiccup. Seoin apologeticeyesfixedonofferedwrist, Park tired reserved neithergratefulnorhostile. Close twohands/cup/wrist center, facesupperthird. Daylight beyondwindow. No absentwife, no clinicalbed or successcurevisual.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-38ee10f8-fb97-4ffb-a4c9-fe55adc8365b.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Same exact42-year-old ParkSeonhoface/cardiganandpaleshirtref1 in quiet corporate windowlounge across table fromSeoinref2. He voluntarily turns his RIGHT wrist glass interface toward Seoin; simple single muted appointment rectangle glows but NO legible text. Other hand holds/putsdown ceramiccup. Seoin apologeticeyesfixedonofferedwrist, Park tired reserved neithergratefulnorhostile. Close twohands/cup/wrist center, facesupperthird. Daylight beyondwindow. No absentwife, no clinicalbed or successcurevisual.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/park-seonho.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "revision": {
+        "prompt": "Use case illustration-story. Brand NEW shot of office windowlounge, landscape16:9 premium painterly anime event illustration, exact supportingcharacter ParkSeonho ref1 (42-year-old man shorttidyblackhair slightrecedinghairline broadface, paleblue shirt taupegraycardigan) and exact youngmaleSeoin ref2 white shirt/darkjacket. CAMERA IS BEHIND PARK'S RIGHT SHOULDER, looking past that shoulder toward Seoin across smalltable. Park's RIGHT shoulder is nearcamera at foreground RIGHT EDGE; from this same visible shoulder show uninterrupted cardigan sleeve to elbow to RIGHT FOREARM reaching FORWARD toward Seoin, ending in RIGHT HAND at center. A modest flatglassy wrist interface is on THIS RIGHT wrist. The back of right hand faces up and his right thumb points toward LEFT side of that right hand in this over-shoulder perspective. Park's left hand stays separate far left lightly resting ontable. A plainceramiccup stands ontable, nobodyholdsit. Seoin leans forward with a careful apologetic gaze down toward the offered RIGHT wrist. Park's head is mostly seen fromback/right profile, retainexacthair/head. Mainaction shoulder-to-wrist line and Seoin'sobservingeyes allinsidecentral65% so phonecontainview showsanatomy. Screen carriesONE mutedblankappointmenttile, NO readableword/digit and no medicalcurecheckmark. Quietdaylight, tactileclothesglasswood. No thirdperson, no magicalobjects, no mirrorimageofotherCG, no phone, no leftwristdevice. LowerquarterquietforVNdialogue. Render the RIGHT-arm connection with anatomicalclarity.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/park-seonho.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "one-appointment.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 204704,
+      "sha256": "f5b5bd150ebcfa66d77c3cff557bfd662be5ec4957347c3020b96ef88530849f"
+    },
+    {
+      "chapter": "26",
+      "start": 226,
+      "end": 230,
+      "cg": "unequalKitchen",
+      "name": "unequal-kitchen",
+      "title": "같은 주방에 도착한 대가",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/mother.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-morning.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Narrow familiarhomekitchenref3. Motherref1 taupecardiganwhiteblouse haspressedlips, maleSeoinref2grayhometop lowershiseyes after admittedfavor. Thirdperson neighbor JeongMigyeong shown ONLY shoulder/torso/hands atedgeframe, noface or identityborrowed: her tense fingers shift a grocerybag containing LONG GREEN ONIONS fromonehandtoother, handlescreased. Mainfocus grocerybag between mother's stillhand and Seoin's tensehand, uncomfortablesilence, modestfridge visible. No visualcrowd/daughter/dentalinjury/newportrait. Everyday morninglight, no invented wealthcontrasts.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-69b86b1b-d9bc-4602-a79d-70b552b12e63.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Narrow familiarhomekitchenref3. Motherref1 taupecardiganwhiteblouse haspressedlips, maleSeoinref2grayhometop lowershiseyes after admittedfavor. Thirdperson neighbor JeongMigyeong shown ONLY shoulder/torso/hands atedgeframe, noface or identityborrowed: her tense fingers shift a grocerybag containing LONG GREEN ONIONS fromonehandtoother, handlescreased. Mainfocus grocerybag between mother's stillhand and Seoin's tensehand, uncomfortablesilence, modestfridge visible. No visualcrowd/daughter/dentalinjury/newportrait. Everyday morninglight, no invented wealthcontrasts.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/mother.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-morning.webp"
+        ],
+        "transparent_background": false
+      },
+      "revision": {
+        "prompt": "Edit this CG's ACTION only, keep exact faces, body identities, narrow kitchen, clothes, light and camera unchanged. The grocery bag belongs ONLY to the anonymous neighbor at the right foreground. Remove the large center bag and any green onions from mother and Seoin's hands; redraw mother's two hands relaxed clasped low in front of her, and Seoin's hands lowered tensely empty. The neighbor at viewer-right holds THE ONLY plastic shoppingbag with long green onion tops clearly visible, shifting its handles from one hand to the other. Keep this neighbor's face OUT OF FRAME. This is a tense conversation about an unfair delay, NOT giving/buying vegetables. All greenonions/bag at right foreground belong to neighbor; no exchange between main characters, no duplicatebag.",
+        "referenced_image_paths": [
+          "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-a06e412d-ddf7-408d-ae25-164f6c15668e.png"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "unequal-kitchen.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 238460,
+      "sha256": "986a97784e1dbb27240a5757dfd5f8e95b54585540562cf898fe6f340493702e"
+    },
+    {
+      "chapter": "27",
+      "start": 112,
+      "end": 112,
+      "cg": "memorySale",
+      "name": "memory-sale",
+      "title": "시장에서 팔린 한 줄",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/mother.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/streetday.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Everyday market stall. Middleagedmother exactref1taupecardiganwhiteblouse carries TWO EGG TRAYS inshoppingbag, talksproudly to anonymous surveyworker whose faceis croppedout. Close table/handview: worker's pen/stylus records her words on simpletablet; mother's openhandandeggtrays nexttoit. Little transaction gesture acrosshands, no moneylabels visible. Mother doesnotknow ominousfuture, workerordinarynotevil. NO Seoin physicallypresent (he hearsremote), no childhoodflashback, nosnowhospital, ORBISname/buyer/secretidentity. Softstreetdaylight, bustleblurred.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-92d8081f-f301-4b99-bc9f-d57177d67548.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Everyday market stall. Middleagedmother exactref1taupecardiganwhiteblouse carries TWO EGG TRAYS inshoppingbag, talksproudly to anonymous surveyworker whose faceis croppedout. Close table/handview: worker's pen/stylus records her words on simpletablet; mother's openhandandeggtrays nexttoit. Little transaction gesture acrosshands, no moneylabels visible. Mother doesnotknow ominousfuture, workerordinarynotevil. NO Seoin physicallypresent (he hearsremote), no childhoodflashback, nosnowhospital, ORBISname/buyer/secretidentity. Softstreetdaylight, bustleblurred.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/mother.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/streetday.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "memory-sale.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 259930,
+      "sha256": "4536465e69edaf8241257c3f660faaf88640576e3ff4e1a10a9c06b28bacb5ea"
+    },
+    {
+      "chapter": "30",
+      "start": 115,
+      "end": 119,
+      "cg": "settlementHands",
+      "name": "settlement-hands",
+      "title": "미지급분을 돌려주는 손",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/hakyung.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Ledgerroom inclosedclinic. Adultfemale Hakyungref1 darktealworkjacket shortdarkhair, takes Doyunref2grayhoodieman's phone and types with focused practicalface; Seoinref3whiteofficeshirt watchesquietlyatbackedge. Mainaction phonepassingbetweentheirtwohands and her rapidindex entry, paperledgerstack inbackground. Two small neutral transactionrows onphone withno readabletext/numbers, no cashpayment, no finance successcelebration, no injury/wristsewing. Charactersnotfamiliallylinked. Warmdesk light, dustyworkingroom.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-63b0fbc3-df90-47b0-813e-d112d814e666.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Ledgerroom inclosedclinic. Adultfemale Hakyungref1 darktealworkjacket shortdarkhair, takes Doyunref2grayhoodieman's phone and types with focused practicalface; Seoinref3whiteofficeshirt watchesquietlyatbackedge. Mainaction phonepassingbetweentheirtwohands and her rapidindex entry, paperledgerstack inbackground. Two small neutral transactionrows onphone withno readabletext/numbers, no cashpayment, no finance successcelebration, no injury/wristsewing. Charactersnotfamiliallylinked. Warmdesk light, dustyworkingroom.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/hakyung.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "settlement-hands.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 259070,
+      "sha256": "caba700de8a1fe8eb56751aa16c954f39d9e2941b8cfc3466dfe5180179f872f"
+    },
+    {
+      "chapter": "4",
+      "start": 202,
+      "end": 209,
+      "cg": "sevenSeconds",
+      "name": "seven-seconds",
+      "title": "시계로 향한 손",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/meeting.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Tense ordinarybusinessnegotiation, close tableview centered on opposing representative's hand movingfrom waterglass toward a plain analog wristwatch (50s male gray suit, faceoffscreen). YoungmaleSeoinref1 sits opposite calmlyholdingup a slight openpalm askingwait, hisface uppermiddle watchful. Teamcolleagues blurredbehind, ref2meetingroomenvironment. Decision abouttochange, no victorygrin. Timefelt by watch/water, no digital countdowndigits, no hourglass, no psychicbeam.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-1dfe3424-a303-4fe2-ae3e-5cbfd47ed1d9.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Tense ordinarybusinessnegotiation, close tableview centered on opposing representative's hand movingfrom waterglass toward a plain analog wristwatch (50s male gray suit, faceoffscreen). YoungmaleSeoinref1 sits opposite calmlyholdingup a slight openpalm askingwait, hisface uppermiddle watchful. Teamcolleagues blurredbehind, ref2meetingroomenvironment. Decision abouttochange, no victorygrin. Timefelt by watch/water, no digital countdowndigits, no hourglass, no psychicbeam.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/meeting.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "seven-seconds.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 191046,
+      "sha256": "d7c3a74ec0f2db972eb58bd5d2b9c24a1e22421ded7657088c3f329f080cf654"
+    },
+    {
+      "chapter": "6",
+      "start": 281,
+      "end": 287,
+      "cg": "breadChoice",
+      "name": "bread-choice",
+      "title": "접힌 빵 봉투",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/reho.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. In a modest experimentalinterviewroom, KimJaeho exactref1navyworkshirtwhiteTee weatheredkindface folds a BROWN PAPER BREAD BAG carefully ontable while explaininghischoice, Seoinref2white shirt/darkjacket stillandlistening opposite. One partly eaten ordinaryhomemadebread onpaper atcenter, warmcrust/creasedbag prominent. KimJaeho slightsteadysmile, neithertragedy nor fool. No bakeryownershipsign, no promisedfunds, no daughterinroom, no crowd. Breadaftertasting notrefundscreen. Neutraldaylight.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-0625d82e-cc66-40f9-9016-8f2c9c82239c.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. In a modest experimentalinterviewroom, KimJaeho exactref1navyworkshirtwhiteTee weatheredkindface folds a BROWN PAPER BREAD BAG carefully ontable while explaininghischoice, Seoinref2white shirt/darkjacket stillandlistening opposite. One partly eaten ordinaryhomemadebread onpaper atcenter, warmcrust/creasedbag prominent. KimJaeho slightsteadysmile, neithertragedy nor fool. No bakeryownershipsign, no promisedfunds, no daughterinroom, no crowd. Breadaftertasting notrefundscreen. Neutraldaylight.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/reho.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "bread-choice.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 221714,
+      "sha256": "db3113ac4d1922fbc7e21f642349bdc7251d584422b4f3314929180bfde9dab1"
+    },
+    {
+      "chapter": "7",
+      "start": 79,
+      "end": 83,
+      "cg": "sandShoe",
+      "name": "sand-shoe",
+      "title": "운동화 안의 모래",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/mira.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/park.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Playgroundat6pmsunset, six-year-old BOY Minwoo sitsnear low slide tipping sandinto hisown sneaker with small plastic scoop, mainaction centrallyclear. His mother Mira exactref1darkponytail greenworkjacketwhiteTee sits onbench nearby watching with amusedtiredexpression, a small cannedcoffee nearherhand, no otheradult needed. Ref2ordinarypark setting. Child naturallyclothed simpleTshirt/shorts, no identifyinglogo, no injury. Everydaycareworkconsequence ratherthan cosmicdreamprojection. Hands andsandlegible, not portraitpose.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-5bc9090f-c38d-423b-968c-db1079cabbd9.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Playgroundat6pmsunset, six-year-old BOY Minwoo sitsnear low slide tipping sandinto hisown sneaker with small plastic scoop, mainaction centrallyclear. His mother Mira exactref1darkponytail greenworkjacketwhiteTee sits onbench nearby watching with amusedtiredexpression, a small cannedcoffee nearherhand, no otheradult needed. Ref2ordinarypark setting. Child naturallyclothed simpleTshirt/shorts, no identifyinglogo, no injury. Everydaycareworkconsequence ratherthan cosmicdreamprojection. Hands andsandlegible, not portraitpose.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/mira.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/park.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "sand-shoe.webp",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "bytes": 436944,
+      "sha256": "d509b8ac9c0ee0a9948693c47d0104b80a5b8024ed6c1c8c6e83a3587e046be3"
+    },
+    {
+      "chapter": "8",
+      "start": 23,
+      "end": 28,
+      "cg": "unpricedSleep",
+      "name": "unpriced-sleep",
+      "title": "가격이 없는 수면",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/corporate.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Rich quiet Arcadia upperfloorguestroom atnight: maleSeoinref1 white shirt sits onedge ofbed, handscrolls toBOTTOM of a translucent in-head sleepmenu field abovebed. Three discreet blankneutral rows, emptybottomwhere incomerow wouldbe, NOcoin/token/saleicon/price or advertisement. Giantcalmwindowdistantcityandimmaculatebed contrast his modest background. Profileeyesstruckbyabsence, lastscrollstopped. This is visualpresentationofneuralinterface, no glasses/helmet/robot. No luxurynewperson, no paidprice.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-8c065f44-caec-4ac6-9887-b84991d6e4bd.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Rich quiet Arcadia upperfloorguestroom atnight: maleSeoinref1 white shirt sits onedge ofbed, handscrolls toBOTTOM of a translucent in-head sleepmenu field abovebed. Three discreet blankneutral rows, emptybottomwhere incomerow wouldbe, NOcoin/token/saleicon/price or advertisement. Giantcalmwindowdistantcityandimmaculatebed contrast his modest background. Profileeyesstruckbyabsence, lastscrollstopped. This is visualpresentationofneuralinterface, no glasses/helmet/robot. No luxurynewperson, no paidprice.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/corporate.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "unpriced-sleep.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 254070,
+      "sha256": "80a1202c789887bf77fee3911b6052f1e110b6a78f6cd390d6eb41acae81967e"
+    },
+    {
+      "chapter": "12",
+      "start": 268,
+      "end": 272,
+      "cg": "decisionDoor",
+      "name": "decision-door",
+      "title": "문 너머의 결정들",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yeonwoo.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/corporate.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Frombehind twoexactrefcharacters Seoin male darkofficejacket and KangYeonwoo adultfemale darkturtleneckblueblazer, a previouslyunnoticed paneldoor in corporateinterviewroom opens onto a wider operationalstrategyroom. Dozens of translucentdecisionpanes floatedatvarieddepth, tiny abstract layouts of company/hospital/housing inpanes (no legibletext orfaces). Mainfocus realopenphysicaldoor andSeoin hesitant handatpocket, Yeonwoo beginssteppingthrough. Not magicportal, no cosmicgalaxy, no discoveryofantagonists. Coolarchitecturallight.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-c1951367-c238-43b9-a8a7-fc7c7a0d5a5f.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Frombehind twoexactrefcharacters Seoin male darkofficejacket and KangYeonwoo adultfemale darkturtleneckblueblazer, a previouslyunnoticed paneldoor in corporateinterviewroom opens onto a wider operationalstrategyroom. Dozens of translucentdecisionpanes floatedatvarieddepth, tiny abstract layouts of company/hospital/housing inpanes (no legibletext orfaces). Mainfocus realopenphysicaldoor andSeoin hesitant handatpocket, Yeonwoo beginssteppingthrough. Not magicportal, no cosmicgalaxy, no discoveryofantagonists. Coolarchitecturallight.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yeonwoo.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/corporate.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "decision-door.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 353196,
+      "sha256": "67e8b5227db6e2911b4dc53cbbe29512ce811156ceaf52ddbc4a63323fafa36d"
+    },
+    {
+      "chapter": "13",
+      "start": 212,
+      "end": 214,
+      "cg": "emptyFour",
+      "name": "empty-four",
+      "title": "비어 있는 네 칸",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. CloseviewofSeoin male whiteofficeshirt hand holding aphone with an IMAGE of weeklyworkcalendar. PreciselyFOUR contiguous emptycells in oneverticalafternooncolumn centeredandvisiblyclear; othercells subtlyfilledgray, NO text orhourdigits. A blurredbusy strategicworkdisplay behindformscontrast toblankphonecells. Smallcorner of Seoinsoftsmile/profile inupperedge, no Jiwoo physicallypresent. Do notfillthesefourcellswithillustratedplans, just space left open. Quietofficeafternoon tactileglass.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-43c75264-ff2a-4b2b-955c-8e1e4626cdc4.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. CloseviewofSeoin male whiteofficeshirt hand holding aphone with an IMAGE of weeklyworkcalendar. PreciselyFOUR contiguous emptycells in oneverticalafternooncolumn centeredandvisiblyclear; othercells subtlyfilledgray, NO text orhourdigits. A blurredbusy strategicworkdisplay behindformscontrast toblankphonecells. Smallcorner of Seoinsoftsmile/profile inupperedge, no Jiwoo physicallypresent. Do notfillthesefourcellswithillustratedplans, just space left open. Quietofficeafternoon tactileglass.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "empty-four.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 227730,
+      "sha256": "8905d76d82c20183a0134a3a5f7f88fe8d9175727582ca94baadae0734befec4"
+    },
+    {
+      "chapter": "16",
+      "start": 236,
+      "end": 237,
+      "cg": "reserveTruck",
+      "name": "reserve-truck",
+      "title": "남겨 둔 한 대",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Closeover-shoulder viewofmaleSeoin ref1 atstrategyworkstation. He reopensnightbackup cold-chainvehicleallocation table: one clearly SINGLE remaining white refrigerated truck token isolatedinreserve lane, with a sparse route map around. Coldblueneuraldisplay foreground, Seoinhand pausesatthereservetruck ratherthanmarginbars. Off-to-side small pausedvideoofanonymoussuitmen handshaking (no identifiablefaces), notlive depot. No crash/physicaltruckarrival, no corporatebrand, no numericalsuccessprobability or inventeddelivery. Show humanattentiontoremainingbuffer.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-72819207-f43b-42a1-a258-c5f900a5c789.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Closeover-shoulder viewofmaleSeoin ref1 atstrategyworkstation. He reopensnightbackup cold-chainvehicleallocation table: one clearly SINGLE remaining white refrigerated truck token isolatedinreserve lane, with a sparse route map around. Coldblueneuraldisplay foreground, Seoinhand pausesatthereservetruck ratherthanmarginbars. Off-to-side small pausedvideoofanonymoussuitmen handshaking (no identifiablefaces), notlive depot. No crash/physicaltruckarrival, no corporatebrand, no numericalsuccessprobability or inventeddelivery. Show humanattentiontoremainingbuffer.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "reserve-truck.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 245206,
+      "sha256": "e0a6ed9fa54c42455506c9728b63507dd731d2b112ce68449636d913187357f2"
+    },
+    {
+      "chapter": "17",
+      "start": 309,
+      "end": 311,
+      "cg": "twoApprovals",
+      "name": "two-approvals",
+      "title": "아직 닫힌 열람",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-night.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. InSeoin'snarrowhomeatnight, close sideview ofmaleSeoin exactref1grayhometop hisfingertip withdrawnfroma freshlysent neural accessrequest. Two small blank approvalplaceholders remain unlit in sparsefloatingfield, a CLOSED folderoutline dimbelow. Sparse honestheldwaiting, nosecretdatarevealed. Hisfaceprofile and waitinghand sitcenter, crampedbed/partitionroomref2behind. No openvault orliteralphysicaldoor, no approvalgrantedcheckmarks, no secondperson, no dataofDoyunpast, no visibleletters.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-1f617a02-3bb2-4d92-b40d-5b41fe1504cd.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. InSeoin'snarrowhomeatnight, close sideview ofmaleSeoin exactref1grayhometop hisfingertip withdrawnfroma freshlysent neural accessrequest. Two small blank approvalplaceholders remain unlit in sparsefloatingfield, a CLOSED folderoutline dimbelow. Sparse honestheldwaiting, nosecretdatarevealed. Hisfaceprofile and waitinghand sitcenter, crampedbed/partitionroomref2behind. No openvault orliteralphysicaldoor, no approvalgrantedcheckmarks, no secondperson, no dataofDoyunpast, no visibleletters.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-night.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "two-approvals.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 186280,
+      "sha256": "c6fa59a408746a8c5d5935b801ca73d4571ce548ae99eb79f6c304fed3e14e05"
+    },
+    {
+      "chapter": "18",
+      "start": 163,
+      "end": 164,
+      "cg": "stoppedFinger",
+      "name": "stopped-finger",
+      "title": "같은 간격 앞에서",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Extremecloseview maleSeoin ref1 workshirt cuff fingertip stops justabove a tiny interruptiongap on supplychainnetworktimeline. Onlyabstractplainnodes/lines andone gap, no text/digits. Reflectedmaleeyepartlyinupperedge, handstillratherthantapping. Strategicworkroomcoollight, tactiledepth ofneuralfield. No dream-ad label, no sleepers/participants or brainicon, no futureidentityconnectingnode. Thehumanrecognizesfamiliarpausebutartdoesnotexplainit.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-51c286c4-3496-406e-8282-889c916ed704.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Extremecloseview maleSeoin ref1 workshirt cuff fingertip stops justabove a tiny interruptiongap on supplychainnetworktimeline. Onlyabstractplainnodes/lines andone gap, no text/digits. Reflectedmaleeyepartlyinupperedge, handstillratherthantapping. Strategicworkroomcoollight, tactiledepth ofneuralfield. No dream-ad label, no sleepers/participants or brainicon, no futureidentityconnectingnode. Thehumanrecognizesfamiliarpausebutartdoesnotexplainit.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "stopped-finger.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 193812,
+      "sha256": "0353afcde139c41a93faef7a194265c2bba25f2e34fcff98c58d97ff102f0749"
+    },
+    {
+      "chapter": "19",
+      "start": 55,
+      "end": 55,
+      "cg": "changedChoice",
+      "name": "changed-choice",
+      "title": "처음 고른 표시를 지우고",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yoonsera.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yeonwoo.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Corporate simulationroom: Seoin exactref1leansforward, hand changes selection from onebroad branch to a small clusterofplainHOUSEHOLD nodes on glassreplica console; bothclusters NEUTRAL GREEN currentlyconnected, no blackout/injury. Ref2YoonSeraadultfemale gray suit neatlytieddarkhair and ref3Yeonwoofemaleblueblazer watch restrained atedges. Highlight his pausedotherhandkeeping smallhouseholdwindowOPEN, visible actofchangingmindnotfakephysicalcityshutdown. No text/ABletters/numbers, no disconnectedrealhomes. Show replicationcontrolboundariesplainframe.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-11a612bf-f164-4155-98af-9e940073f924.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Corporate simulationroom: Seoin exactref1leansforward, hand changes selection from onebroad branch to a small clusterofplainHOUSEHOLD nodes on glassreplica console; bothclusters NEUTRAL GREEN currentlyconnected, no blackout/injury. Ref2YoonSeraadultfemale gray suit neatlytieddarkhair and ref3Yeonwoofemaleblueblazer watch restrained atedges. Highlight his pausedotherhandkeeping smallhouseholdwindowOPEN, visible actofchangingmindnotfakephysicalcityshutdown. No text/ABletters/numbers, no disconnectedrealhomes. Show replicationcontrolboundariesplainframe.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yoonsera.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yeonwoo.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "changed-choice.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 312608,
+      "sha256": "4db1f0a6362b196bb1f5e82bf55a9db2b3407b6c113ea8667684bc18b38fb590"
+    },
+    {
+      "chapter": "20",
+      "start": 76,
+      "end": 76,
+      "cg": "signedCost",
+      "name": "signed-cost",
+      "title": "자기 이름으로 남긴 비용",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yoonsera.webp",
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yeonwoo.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Table-levelcutscene: three returned ORDER SHEETS and a lossconfirmation report incenter, digitalpen inYoonSera'shand(ref2gray suitdarkbun) signingupdatedreportwhile maleSeoinref1 slides hisown short guidanceattachment underreportedge; Yeonwooref3gathersotherpapersinbackground. No legiblewritingornumbers, no moneytransferred/successstamp. Tangiblepapercreases andsubmittedaccountability, restrainedtiredhands. Glassstrategicroomcoollight, notcourthouse/lawenforcement. Focus on separateattachment ratherthan genericstandingmeeting.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-39d24989-7bc7-4fa2-a04b-2273d8368535.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Table-levelcutscene: three returned ORDER SHEETS and a lossconfirmation report incenter, digitalpen inYoonSera'shand(ref2gray suitdarkbun) signingupdatedreportwhile maleSeoinref1 slides hisown short guidanceattachment underreportedge; Yeonwooref3gathersotherpapersinbackground. No legiblewritingornumbers, no moneytransferred/successstamp. Tangiblepapercreases andsubmittedaccountability, restrainedtiredhands. Glassstrategicroomcoollight, notcourthouse/lawenforcement. Focus on separateattachment ratherthan genericstandingmeeting.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yoonsera.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/yeonwoo.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "signed-cost.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 242788,
+      "sha256": "8a5946f4d52e4a68127433238b55a80258dc177e7539294a7597ef798956af2f"
+    },
+    {
+      "chapter": "21",
+      "start": 110,
+      "end": 111,
+      "cg": "heldCall",
+      "name": "held-call",
+      "title": "넘기지 못한 다음 기록",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: precise event-CG revision for the SAME Korean sci-fi visual novel. EDIT this exact picture only. Preserve the original male Seoin's face, tousled dark hair, white office shirt, dark jacket, tired thoughtful expression, left cheek resting on fist, camera, warm lamp, night blue windows, desk, active voice-call phone at right, painterly anime rendering and anatomy. Replace ONLY the lifted paper page, clipboard and foreground paper record with a thin landscape digital record screen lying on the desk. His right hand is no longer lifting paper: natural index fingertip on the glass, returning/swiping back to the CURRENT caller's record after starting to move to the next one. The record screen shows restrained abstract rows and one subtly highlighted current record, no readable words, numbers, names, letters or logos. Other background paper stacks may stay as environmental clutter. The story action is listening and returning to a digital record during a phone call, NOT signing paper, NOT ending the call. Keep one person only, no child, no caller portrait, no extra hands, no holographic spectacle. Match reference identity, room and color exactly.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-dd26ea38-942d-4d42-9cba-f1a1be3235a4.png",
+      "generation": {
+        "prompt": "Use case: precise event-CG revision for the SAME Korean sci-fi visual novel. EDIT this exact picture only. Preserve the original male Seoin's face, tousled dark hair, white office shirt, dark jacket, tired thoughtful expression, left cheek resting on fist, camera, warm lamp, night blue windows, desk, active voice-call phone at right, painterly anime rendering and anatomy. Replace ONLY the lifted paper page, clipboard and foreground paper record with a thin landscape digital record screen lying on the desk. His right hand is no longer lifting paper: natural index fingertip on the glass, returning/swiping back to the CURRENT caller's record after starting to move to the next one. The record screen shows restrained abstract rows and one subtly highlighted current record, no readable words, numbers, names, letters or logos. Other background paper stacks may stay as environmental clutter. The story action is listening and returning to a digital record during a phone call, NOT signing paper, NOT ending the call. Keep one person only, no child, no caller portrait, no extra hands, no holographic spectacle. Match reference identity, room and color exactly.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/held-call.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "held-call.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 178150,
+      "sha256": "b02cd8b39c9851111c10ed5db73e4250c80c43576228f000cc3c9eddbc559bf4",
+      "revisions": [
+        {
+          "reason": "최신 main be4fec8의 디지털 기록 복귀 동작에 맞춤",
+          "previousSource": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-d61d8a8a-4aad-4caa-80de-a8d5f2678b89.png",
+          "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-dd26ea38-942d-4d42-9cba-f1a1be3235a4.png",
+          "generation": {
+            "prompt": "Use case: precise event-CG revision for the SAME Korean sci-fi visual novel. EDIT this exact picture only. Preserve the original male Seoin's face, tousled dark hair, white office shirt, dark jacket, tired thoughtful expression, left cheek resting on fist, camera, warm lamp, night blue windows, desk, active voice-call phone at right, painterly anime rendering and anatomy. Replace ONLY the lifted paper page, clipboard and foreground paper record with a thin landscape digital record screen lying on the desk. His right hand is no longer lifting paper: natural index fingertip on the glass, returning/swiping back to the CURRENT caller's record after starting to move to the next one. The record screen shows restrained abstract rows and one subtly highlighted current record, no readable words, numbers, names, letters or logos. Other background paper stacks may stay as environmental clutter. The story action is listening and returning to a digital record during a phone call, NOT signing paper, NOT ending the call. Keep one person only, no child, no caller portrait, no extra hands, no holographic spectacle. Match reference identity, room and color exactly.",
+            "referenced_image_paths": [
+              "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/cutscenes/held-call.webp"
+            ],
+            "transparent_background": false
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "23",
+      "start": 81,
+      "end": 86,
+      "cg": "turnedBadge",
+      "name": "turned-badge",
+      "title": "뒤집은 이름표",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Officecorridor outside aroom: anonymous employee shownONLY chest-to-hands, face/head OUT OF FRAME and genderambiguous inplainneutralofficeclothes, turns a lanyardNAMEBADGE to its EMPTYBACK and foldsit towardpocket. Seoinref1 inbackgroundstops atthreshold insteadofentering, shoulderssmallandoutoffocus. Inside room colleagues are onlyunidentifiableblur shapes behindfrostedglass. Mainfocus handsconcealingidentity, no readablebadge, secretname, accusationorvillainstance. Coolgraydaylight, sympatheticnervousgesture.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-e13684ef-4471-4d73-99ad-fe60f02aa07a.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Officecorridor outside aroom: anonymous employee shownONLY chest-to-hands, face/head OUT OF FRAME and genderambiguous inplainneutralofficeclothes, turns a lanyardNAMEBADGE to its EMPTYBACK and foldsit towardpocket. Seoinref1 inbackgroundstops atthreshold insteadofentering, shoulderssmallandoutoffocus. Inside room colleagues are onlyunidentifiableblur shapes behindfrostedglass. Mainfocus handsconcealingidentity, no readablebadge, secretname, accusationorvillainstance. Coolgraydaylight, sympatheticnervousgesture.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "turned-badge.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 119306,
+      "sha256": "6ae6eb078fdd7daea8d91c740d8264d40ba54a8c780f87ec9dd6021cee20b08e"
+    },
+    {
+      "chapter": "24",
+      "start": 91,
+      "end": 92,
+      "cg": "releasedBreath",
+      "name": "released-breath",
+      "title": "통화 너머의 한숨",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Quietauditinterviewdesk: close speakerphone withactiveVOICEwaveform, maleSeoinref1 offscreen exceptshirtcuff/hand which relaxesbesidephone as delayedappointmentcallfinallyreassures. Inphoneglassreflection a simpleappointmenttile shiftsfromdim tosoftneutralwhite, no text/numbers, no explicitcheckmarkcure. No caller face (KimSuhyun absent), no childinroom, no therapyroom or fakephysicalphoneinteractionbycaller. Pausedpen and unresolvedpaperstacktangible, littlewarmth inotherwise coolinterior. Artconveysheardreliefwithoutinventingperson.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-b9182b0e-e6ad-4241-9f1b-205aaaaf4635.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Quietauditinterviewdesk: close speakerphone withactiveVOICEwaveform, maleSeoinref1 offscreen exceptshirtcuff/hand which relaxesbesidephone as delayedappointmentcallfinallyreassures. Inphoneglassreflection a simpleappointmenttile shiftsfromdim tosoftneutralwhite, no text/numbers, no explicitcheckmarkcure. No caller face (KimSuhyun absent), no childinroom, no therapyroom or fakephysicalphoneinteractionbycaller. Pausedpen and unresolvedpaperstacktangible, littlewarmth inotherwise coolinterior. Artconveysheardreliefwithoutinventingperson.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "released-breath.webp",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "bytes": 172342,
+      "sha256": "98ded9aa77e0536c7e0642bd7d77de48de64658b1523740a875ef33ae57e22b7"
+    },
+    {
+      "chapter": "25",
+      "start": 269,
+      "end": 273,
+      "cg": "paleDistrict",
+      "name": "pale-district",
+      "title": "옅어진 지도 안의 밤",
+      "refs": [
+        "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+      ],
+      "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Latecitycommute orquietofficeambiguousdarkbackground: maleSeoinref1hand holdsa phonewhose primarydisplayis a citydistrictmap withONE region becomingpaler whileotherneighborblocks holdsteady. Adjacent small arrivingmessagebubble staysblank/no words. Hiseye reflectedacrossphoneglass ashisthumbstops; this is mother's pendingnight affectedbyhisdecision, notsuccessfulrecovery. No motherphysicallypresent, no destroyedhomes/blackout/cureor coins. Closeobjectevent, coldmapwhite andwarmhandtone, no legiblenumbers.",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-84c6d0d5-ac22-4da2-901b-48e48f9e6a6f.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 fully integrated cinematic event illustration, refined tactile painterly anime consistent with reference art, no split panels or standing sprite layout. Exact same adult character faces/hair/body/clothes as named reference. Put actual action in middle60% and upper two-thirds, calm lowerquarter for VN text. No legible words/digits/icons/brand/watermark. Depict ONLY described present scene, no future revelation or imagined causal flashback. Latecitycommute orquietofficeambiguousdarkbackground: maleSeoinref1hand holdsa phonewhose primarydisplayis a citydistrictmap withONE region becomingpaler whileotherneighborblocks holdsteady. Adjacent small arrivingmessagebubble staysblank/no words. Hiseye reflectedacrossphoneglass ashisthumbstops; this is mother's pendingnight affectedbyhisdecision, notsuccessfulrecovery. No motherphysicallypresent, no destroyedhomes/blackout/cureor coins. Closeobjectevent, coldmapwhite andwarmhandtone, no legiblenumbers.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "status": "used-event-cg",
+      "file": "pale-district.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 199620,
+      "sha256": "62e08ece011cafff175aa0fdbc3012a9a1a18c82e81ca84c82acafb1c45e6653"
+    },
+    {
+      "name": "park-seonho",
+      "cg": "parkSeonho",
+      "title": "박선호 기준 원화",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-af82ee9a-4708-4fa9-8153-28173193b058.png",
+      "generation": {
+        "prompt": "Use case: stylized-concept. Produce ONE fullbody transparent-background CHARACTER REFERENCE sprite in the same polished painterly anime style as reference image. The reference image is STYLE ONLY, do not copy its youthful face. New supporting character Park Seonho, a 42-year-old Korean office worker, distinctly middleaged: broad slightly tired face, short neatly combed black hair with modest receding hairline, thick straight eyebrows, slight eye creases, medium ordinary build, no fashionable model face. Unadorned pale blue office shirt under a plain taupe-gray cardigan and charcoal trousers, simple leatheroffice shoes, no necktie or conspicuousaccessory. He sits on ordinary nearlyinvisible stool, left hand covers the INSIDE of RIGHT wrist, guarded embarrassed face looks toward a door offscreen. Subtle flat neutral-glass wrist interface mostlyhidden by hand, no text or icons. Natural fullbodyandhands visible, no backgroundobjects besidesstool, actual alpha transparency, no floorpanel/no white/blackbackdrop. This will be canonical production reference for same man in later apology CG; no other characters, no labels, no watermark.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": true
+      },
+      "status": "character-reference",
+      "file": "park-seonho.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 161126,
+      "sha256": "b15d85418fee87f586836329a26a699b15f215b73fa6c6fe0dbf8440c84cb1ea"
+    }
+  ],
+  "finalSourceBaseline": "be4fec8"
+}

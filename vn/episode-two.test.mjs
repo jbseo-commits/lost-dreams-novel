@@ -42,7 +42,7 @@ test('scene entries, signals, effects and important admissions remain separate s
 test('reality, medical conversation and dream keep the appropriate people and clock',()=>{
   assert.equal(at(30).actors.find(a=>a.id==='seoin').asset,'seoinHome');
   assert.equal(at(99).focus,'지우 아버지');assert.equal(at(101).focus,'지우');
-  assert.ok(at(97).actors.some(a=>a.id==='father'));
+  assert.equal(at(97).cg,'medicalTablet');assert.deepEqual(at(97).actors,[]);
   assert.equal(at(140).actors.find(a=>a.id==='jiwoo').asset,'jiwooUnsteady');
   assert.equal(at(150).actors[0].asset,'fatherDown');
   assert.equal(at(195).timeOfDay,'day');assert.equal(at(195).backgroundAsset,null);
