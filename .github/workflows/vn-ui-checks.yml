@@ -28,7 +28,7 @@ jobs:
           node --input-type=module -e '
           import fs from "node:fs";
           const d=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+"/vn-neutral-inventory.json","utf8"));
-          console.log("NEUTRAL_AUDIT_SUMMARY "+JSON.stringify({neutralBeats:d.neutralBeats,sceneGroups:d.sceneGroups,resolvedGroups:d.resolvedGroups,unresolvedGroups:d.unresolvedGroups}));
+          console.log("NEUTRAL_AUDIT_SUMMARY "+JSON.stringify({neutralBeats:d.neutralBeats,sceneGroups:d.sceneGroups,resolvedGroups:d.resolvedGroups,unresolvedGroups:d.unresolvedGroups,reviewableGroups:d.reviewableGroups,missingGroups:d.missingGroups,missingSources:d.missingSources}));
           const chapters={};for(const g of d.groups){(chapters[g.chapter]??=[]).push(g);}
           const rows=Object.entries(chapters).map(([chapter,groups])=>({chapter,count:groups.reduce((s,g)=>s+g.count,0),segments:groups.length})).sort((a,b)=>b.count-a.count);
           console.log("NEUTRAL_AUDIT_TOP "+JSON.stringify(rows.slice(0,25)));
