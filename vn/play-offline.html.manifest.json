@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 65091102,
-  "sha256": "9fe42ecd292ef5870758d75e0e69001a426e7b89c26bf1c244364a29d3aa0ba8",
+  "offlineBytes": 65094331,
+  "sha256": "3b3238006d8fb5bd6ee88d3bdda62d2a68ed0f8c46fc2c50fe18bfc8f3f80f80",
   "storyChapters": 128,
   "storyAssetKeys": 39,
   "ep1AssetKeys": [
@@ -1055,8 +1055,8 @@
       "exports": [
         "presentationForBeat"
       ],
-      "sourceSha256": "b20db5afd8c2ba0484613499408b2c155e60aa9366cfc8b3723de631af5292fa",
-      "compiledSourceSha256": "8e0d4e32729090c76bf54f679803c66299245c71a51100ac22f3e48349485bd1"
+      "sourceSha256": "49c68863a2c37a9d67ef29e5a5182062ee667576439f11a6b58064aacb421732",
+      "compiledSourceSha256": "eae2369f34fab98ca89ce78127df9c5ed30662f2ac415e3109106febbcf6206b"
     },
     "neural-stage.js": {
       "exports": [
@@ -1096,8 +1096,8 @@
         "withEpisodeCutscene",
         "eventCutsceneDirection"
       ],
-      "sourceSha256": "6f3fb16a8e8f5d67023eb1a22c4d2a3aefaf028c820308d344a72a7966d7a55f",
-      "compiledSourceSha256": "bfd7aa6c3bd83eef6f427762f3fb58a0c340e06e7bfd919358b5ff97dc82ad3e"
+      "sourceSha256": "b566496f16fa01dd87b43827387e81bb9f7ec44e4d73eec6021f69b5f9f89327",
+      "compiledSourceSha256": "eea5d2e3485f59a7058e53a4b4f60464902b9b563ebcfcb82cfae12dfe5a7f00"
     },
     "episode-one.js": {
       "exports": [

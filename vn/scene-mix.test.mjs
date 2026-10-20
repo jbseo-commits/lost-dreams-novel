@@ -50,6 +50,6 @@ test('mixed narration and channel direction retain the secret boundary and real 
  assert(atText('19-1','환불 확인 대기'));
  assert(atText('19-2','추가 작업비: 28 TOKEN'));
  assert(atText('21','정확한 원인은 아직 확인하지 못했습니다'));
- assert(atText('22','다음 날 새벽 1시 12분'));
- assert(atText('22','처음 밤에도 두 분은 같은 답'));
+ assert(atText('22','새벽 1시 12분. 네 번째 검증이'));
+ assert(atText('22','그 밤에도 두 분은 같은 답'));
 });
