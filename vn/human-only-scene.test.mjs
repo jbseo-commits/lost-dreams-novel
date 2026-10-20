@@ -30,6 +30,7 @@ test('33 inside hall score and chip appear in authored order, no preemptive 3-se
  assert.equal(humanOnlyForBeat(chapter,chip).chip,true);
  assert.equal(humanOnlyForBeat(chapter,chip).threeSecond,false);
  assert.equal(humanOnlyForBeat(chapter,pause).threeSecond,true);
+ assert.equal(humanOnlyForBeat(chapter,pause+4).threeSecond,false);
 });
 test('33 return to hall waits until manuscript scores Da-eun, stops at cafe',()=>{
  const returned=at('대기실로 돌아오자 정미경이 다가왔다.');
