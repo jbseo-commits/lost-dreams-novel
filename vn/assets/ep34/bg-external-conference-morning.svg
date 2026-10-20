@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1672 941" role="img" aria-label="오전 열한 시 아르카디아 외부 회의실, 사람이 없는 긴 회의 테이블. 테이블 위에 물과 컵은 없다.">
+<defs><filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".29" numOctaves="3" seed="9"/><feColorMatrix type="saturate" values="0"/></filter><radialGradient id="vignette"><stop offset=".23" stop-color="#0a141b" stop-opacity="0"/><stop offset="1" stop-color="#09131b" stop-opacity=".56"/></radialGradient>
+<linearGradient id="wall" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#a9aca4"/><stop offset=".44" stop-color="#737e7c"/><stop offset="1" stop-color="#27373c"/></linearGradient>
+<linearGradient id="right" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2a4149"/><stop offset=".42" stop-color="#596b6b"/><stop offset="1" stop-color="#17272e"/></linearGradient>
+<linearGradient id="floor" x1="0" y1="0" x2=".22" y2="1"><stop stop-color="#738482"/><stop offset="1" stop-color="#14252e"/></linearGradient>
+<linearGradient id="table" x1="0" y1=".1" x2=".96" y2="1"><stop stop-color="#8b8b7e"/><stop offset=".23" stop-color="#585e5b"/><stop offset=".7" stop-color="#303f44"/><stop offset="1" stop-color="#192d34"/></linearGradient>
+<linearGradient id="window" x1=".08" y1="0" x2=".68" y2="1"><stop stop-color="#f4e5c7"/><stop offset=".46" stop-color="#bacbc6"/><stop offset="1" stop-color="#6d8b91"/></linearGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dce7d5" stop-opacity=".56"/><stop offset="1" stop-color="#e2f7e1" stop-opacity="0"/></linearGradient>
+<radialGradient id="light"><stop stop-color="#f6e4c3" stop-opacity=".32"/><stop offset="1" stop-color="#e9e9e5" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1672" height="941" fill="#182830"/>
+<path d="M0 0H1672L1391 113H247Z" fill="#25383e"/>
+<path d="M0 0L246 113V570L0 758Z" fill="#394d51"/>
+<path d="M1672 0L1390 113V570L1672 758Z" fill="url(#right)"/>
+<path d="M246 113H1390V572H246Z" fill="url(#wall)"/>
+<path d="M0 758L246 572H1390L1672 758V941H0Z" fill="url(#floor)"/>
+<path d="M282 130H631V512H282Z" fill="#cbd1c4" opacity=".86"/>
+<path d="M298 145H615V493H298Z" fill="url(#window)"/>
+<path d="M298 145L384 145L313 493H298Z" fill="#f1ebd6" opacity=".26"/>
+<path d="M454 145V493M298 323H615" stroke="#314d56" stroke-opacity=".48" stroke-width="8"/>
+<path d="M299 445L371 403L406 419L492 366L550 405L614 376V493H299Z" fill="#607d85" opacity=".4"/>
+<path d="M630 145V510M664 126V563M1381 126V566" stroke="#dbe2d7" opacity=".13" stroke-width="3"/>
+<path d="M792 139H1271V507H792Z" fill="#617171" opacity=".22"/>
+<path d="M826 165H1239V483H826Z" fill="#31464d" opacity=".48"/>
+<path d="M861 191H1207V448H861Z" fill="#526970" opacity=".19"/>
+<path d="M870 443H1200" stroke="#a2b4af" stroke-opacity=".13" stroke-width="6"/>
+<path d="M170 27H1514L1398 65H286Z" fill="#d3dbd1" opacity=".42"/>
+<path d="M477 65H1187L1313 563H351Z" fill="url(#beam)" opacity=".16"/>
+<ellipse cx="540" cy="412" rx="470" ry="350" fill="url(#light)"/>
+<path d="M246 572H1390" stroke="#b6c8c1" stroke-opacity=".42" stroke-width="4"/>
+<path d="M0 757L246 572M1672 757L1390 572M0 918L490 572M1672 918L1126 572" stroke="#e0e7df" stroke-opacity=".1" stroke-width="3"/>
+<path d="M0 816H1672" stroke="#d6e0d7" stroke-opacity=".11" stroke-width="2"/>
+<!-- remote empty chairs: absence of the negotiators, never a one-chair evaluation room -->
+<g stroke="#172a34" stroke-width="8" stroke-linejoin="round">
+ <path d="M805 464Q796 385 821 377L882 375Q903 380 894 462Z" fill="#26343b"/>
+ <path d="M1004 444Q1000 380 1025 376H1076Q1103 386 1091 449Z" fill="#293941"/>
+ <path d="M1175 462Q1177 385 1201 380H1257Q1283 392 1271 471Z" fill="#22323a"/>
+</g>
+<path d="M480 530L1120 496L1557 748H173Z" fill="url(#table)" stroke="#a1aaa1" stroke-opacity=".62" stroke-width="6"/>
+<path d="M480 530L1119 497L1155 518L469 555Z" fill="#dce1d2" opacity=".18"/>
+<path d="M175 750L1556 745V765L185 774Z" fill="#12252e" opacity=".85"/>
+<path d="M356 761L348 923M1373 761L1387 923" stroke="#172e36" stroke-width="23"/>
+<path d="M365 772L362 920M1378 776L1390 917" stroke="#90a49c" stroke-opacity=".22" stroke-width="4"/>
+<path d="M552 595L1245 591" stroke="#d8dad0" opacity=".1" stroke-width="4"/>
+<!-- No bottles, glasses, cups, screens with fabricated content, or water. -->
+<rect width="1672" height="941" fill="url(#vignette)"/>
+<rect width="1672" height="941" filter="url(#grain)" opacity=".038" style="mix-blend-mode:screen"/>
+</svg>
