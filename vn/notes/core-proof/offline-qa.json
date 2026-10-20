@@ -1,0 +1,12 @@
+[
+  {
+    "build": "core-demo-20261021-r2",
+    "chapter": "12화",
+    "url": "http://127.0.0.1:4184/vn/play-offline.html?chapter=12&beat=0"
+  },
+  {
+    "start": "핵심 데모 시작",
+    "title": "꿈을 잃은 세계 · 핵심 데모",
+    "url": "http://127.0.0.1:4184/vn/play-offline.html?demo=core11"
+  }
+]

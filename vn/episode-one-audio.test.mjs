@@ -19,7 +19,7 @@ function audioRig(t, delayedKeys = []) {
     const promise = new Promise(resolvePromise => { release = resolvePromise; });
     return [key, { promise, release }];
   }));
-  const contexts = [], events = [];
+  const contexts = [], events = [], gains=[];
 
   class FakeParam {
     constructor() { this.value = 0; }
@@ -37,7 +37,7 @@ function audioRig(t, delayedKeys = []) {
       contexts.push(this);
     }
     createGain() {
-      return { gain: new FakeParam(), connect() {}, disconnect() {} };
+      const node={ gain: new FakeParam(), connect() {}, disconnect() {} };gains.push(node);return node;
     }
     createBufferSource() {
       const context = this;
@@ -81,8 +81,16 @@ function audioRig(t, delayedKeys = []) {
       else delete globalThis[key];
     }
   });
-  return { audio, contexts, events, release: key => pending.get(key)?.release() };
+  return { audio, contexts, events, gains, release: key => pending.get(key)?.release() };
 }
+
+test('communication ducks the recorded score and stopping a timed silence never revives it', async t => {
+  const r=audioRig(t);await r.audio.unlock();await r.audio.render({index:1,music:'musicSea'});
+  assert.equal(r.gains[0].gain.value,.5);r.audio.setCommunicationFocus('neural');assert.equal(r.gains[0].gain.value,.31);
+  r.audio.setCommunicationFocus(null);assert.equal(r.gains[0].gain.value,.5);
+  await r.audio.render({index:2,music:'musicSea',gap:.8});assert.equal(r.gains[0].gain.value,0);r.audio.stop();
+  await new Promise(resolve=>setTimeout(resolve,850));assert.equal(r.gains[0].gain.value,0);
+});
 
 test('stop during delayed loading prevents stale music and effects', async t => {
   const r = audioRig(t, ['musicSea', 'box']);
@@ -93,6 +101,15 @@ test('stop during delayed loading prevents stale music and effects', async t => 
   r.release('box');
   await rendering;
   assert.equal(r.events.filter(event => event.type === 'start').length, 0);
+});
+
+test('focus and volume updates in the same render cycle cannot erase a timed silence',async t=>{
+  const r=audioRig(t);await r.audio.unlock();await r.audio.render({index:1,music:'musicSea'});
+  const rendering=r.audio.render({chapterId:'11',index:240,music:'musicSea',gap:.8});
+  r.audio.setCommunicationFocus(null);r.audio.setVolume();await rendering;
+  assert.equal(r.gains[0].gain.value,0);
+  r.audio.setCommunicationFocus('neural');assert.equal(r.gains[0].gain.value,0);
+  await new Promise(resolve=>setTimeout(resolve,850));assert.equal(r.gains[0].gain.value,.31);
 });
 
 test('same music fast navigation rejects a delayed previous effect', async t => {

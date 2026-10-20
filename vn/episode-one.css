@@ -1,6 +1,6 @@
 .ep1-stage{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden;isolation:isolate}
 .stage.episode-one{overflow:clip}
-.episode-one .portrait-wrap,.episode-one .cast-rail,.episode-one .motif-stage,.episode-one .direction-card{display:none!important;pointer-events:none!important}
+.episode-one .portrait-wrap,.episode-one .cast-rail,.episode-one .motif-stage,.episode-one:not(.core-scene) .direction-card{display:none!important;pointer-events:none!important}
 .episode-one .scene-layer{transition:opacity 1.1s ease,transform 7s ease}
 .episode-one .stage-image[data-episode-night="true"] .scene-layer{filter:saturate(.85)}
 .episode-one .stage-vignette{z-index:4;background:linear-gradient(180deg,rgba(0,5,10,.2),transparent 36%,rgba(0,5,10,.35) 70%,rgba(0,5,10,.78)),radial-gradient(ellipse at 50% 35%,transparent 30%,rgba(0,4,8,.25))}

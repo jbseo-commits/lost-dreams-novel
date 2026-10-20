@@ -1,0 +1,80 @@
+{
+  "method": "자체 음 합성과 새 선율 작곡. 외부 음원·샘플·유료 서비스 미사용",
+  "seed": 11102026,
+  "sampleRate": 22050,
+  "paidCreditsUsed": 0,
+  "assets": [
+    {
+      "file": "core-clay.wav",
+      "duration": 48,
+      "peak": 0.15283393034820295,
+      "rms": 0.025714118478716224,
+      "bytes": 2116844,
+      "sha256": "2c6fe984ded135e182c8ddbd64667f79cedd7488249e97facab4289f23209965"
+    },
+    {
+      "file": "core-pulse.wav",
+      "duration": 48,
+      "peak": 0.1342645401356772,
+      "rms": 0.02315837703510069,
+      "bytes": 2116844,
+      "sha256": "4c5a57bb96d4b92060db9c4bc07d1b6d841030ff39c07c765d95ef8b7aaf16e0"
+    },
+    {
+      "file": "core-threshold.wav",
+      "duration": 48,
+      "peak": 0.12971096213436023,
+      "rms": 0.02177224259971231,
+      "bytes": 2116844,
+      "sha256": "403bd42c0fed7cc2b8269c1497971c102fe9596b6076d61031e5f54c8ab60c43"
+    },
+    {
+      "file": "core-after.wav",
+      "duration": 48,
+      "peak": 0.10941608258515309,
+      "rms": 0.017794423785145723,
+      "bytes": 2116844,
+      "sha256": "cfb4d4d6665def3481f72e307f26b7b269bffc61e8d2a9017a9d45114ded8549"
+    },
+    {
+      "file": "core-wheel.wav",
+      "duration": 12,
+      "peak": 0.08851627234989626,
+      "rms": 0.022173582143775555,
+      "bytes": 529244,
+      "sha256": "b2b82a462e0d713c3b5c4f994e3929900977eca0fb7bb560d473e19514ba4a1f"
+    },
+    {
+      "file": "core-tide.wav",
+      "duration": 16,
+      "peak": 0.22867109873646294,
+      "rms": 0.03113726602093199,
+      "bytes": 705644,
+      "sha256": "1d43a2a8261d9a73b678dc98ac60287439d96f28b7c4269ba37360aeae9d00f9"
+    },
+    {
+      "file": "core-air.wav",
+      "duration": 12,
+      "peak": 0.05084822875385995,
+      "rms": 0.013148542077806908,
+      "bytes": 529244,
+      "sha256": "5ae3dec1ab8baa9142027817a8443d58a3ebe1ff7c667747daef294b9ea8bb69"
+    },
+    {
+      "file": "core-grip.wav",
+      "duration": 0.7,
+      "peak": 0.09456976658472784,
+      "rms": 0.012207874327005265,
+      "bytes": 30914,
+      "sha256": "48f9e313d2785ab6558df69997906b2080a01dfd2203983cd28ef665223d0e94"
+    },
+    {
+      "file": "core-clay-fall.wav",
+      "duration": 0.7,
+      "peak": 0.05549831273714766,
+      "rms": 0.009553549629632957,
+      "bytes": 30914,
+      "sha256": "3a625d142544020f171d953538269a2be063970caea28e64cbf0ec530f91b4f0"
+    }
+  ]
+}
