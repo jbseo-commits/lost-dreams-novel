@@ -42,10 +42,11 @@ test('actual VN deployment and its single HTML contain only the demo text, cues 
  assert.equal(report.sourceBeats,4242);assert.equal(report.paymentAuthentication,false);
  for(const c of built.window.STORY.chapters)assert.equal(JSON.stringify(c.beats),JSON.stringify(full.chapters.find(o=>o.id===c.id).beats));
  assert.ok(report.media.every(m=>!m.includes('court')&&!m.includes('settlement-hands')));
+ assert.ok(report.media.every(m=>!m.includes('assets/ep34/')),'34화 작업 에셋은 공개 데모에 포함되면 안 됩니다.');
  assert.ok(!report.media.includes('assets/cutscenes/foodstall-contract.webp'));
  await assert.rejects(fs.access(path.join(pub,'notes','core-demo-qa.json')));
  await assert.rejects(fs.access(path.join(pub,'notes','cutscene-play-qa.json')));
- for(const name of ['cutscenes.html','direction-30.html','neural-30.html']){
+ for(const name of ['cutscenes.html','direction-30.html','neural-30.html','ep034-internal-preview.html']){
   const text=await fs.readFile(path.join(pub,'notes',name),'utf8');assert.match(text,/공개 버전은 1~11화 무료 데모/);assert.doesNotMatch(text,/정산|하경|30화/);
  }
  const cueSource=await fs.readFile(path.join(pub,'neural-cues.js'),'utf8'),cueContext={};
