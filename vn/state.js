@@ -33,7 +33,7 @@ export function normalizeStory(story) {
   };
 }
 
-const castIds = new Set(['doyun', 'seoin', 'jiwoo', 'hakyung', 'reho', 'mira', 'mother', 'yeonwoo', 'yoonha']);
+const castIds = new Set(['doyun', 'seoin', 'jiwoo', 'hakyung', 'reho', 'mira', 'mother', 'yeonwoo', 'yoonha', 'yoonsera', 'eunkyung', 'haerin', 'dispatcher', 'foodstaff', 'kitchen-customer', 'canteen-staff', 'workbench-staff', 'committee-member', 'eunkyung-child', 'haerin-child', 'settlement', 'operations', 'subscriber', 'medical-operations', 'hospital-reservations', 'rescuee', 'young-man', 'child', 'elder', 'majeonghun']);
 const moods = new Set(['quiet', 'warm', 'tense', 'cold', 'dream', 'urgent']);
 const cameras = new Set(['wide', 'close', 'detail']);
 const visualTypes = new Set(['phone', 'metric', 'document', 'object', 'dream', 'relationship', 'comparison', 'ledger']);

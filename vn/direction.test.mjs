@@ -47,8 +47,12 @@ test('financial flow belongs to Doyun and never uses the full household amount t
  assert.deepEqual(after.direction.visual.chart.items.map(x=>x.value),['3,092.2','−2,800','292.2']);
 });
 test('interview, recovery and message staging do not leave the wrong person in the room',()=>{
- assert(!at('19',133).direction.cast.some(p=>p.id==='yeonwoo'));
- assert(at('19',535).direction.cast.some(p=>p.id==='yeonwoo'));
+ const interview=chapter('19').beats.find(b=>b.text==='“그 질문이 승급과 관련 있습니까?”');
+ assert(interview.direction.cast.some(p=>p.id==='yoonsera'));
+ assert(interview.direction.cast.some(p=>p.id==='yeonwoo'));
+ const corridor=chapter('19').beats.find(b=>b.text.startsWith('복도로 나온 서인은'));
+ assert(!corridor.direction.cast.some(p=>p.id==='yoonsera'));
+ assert(corridor.direction.cast.some(p=>p.id==='yeonwoo'));
  assert(at('6',361).direction.cast.some(p=>p.id==='doyun'));
  assert(!at('6',413).direction.cast.some(p=>p.id==='reho'));
  assert(!at('26',281).direction.cast.some(p=>p.id==='mother'));
