@@ -1,3 +1,4 @@
+- 2026-10-20 · Claude · Gemini 체인 집필 제106화 「우리 집」 원고·인계 노트를 chain/current에 반영(Gemini 자기검수 PASS, 독립 검수·연출 미실시). 215행 호칭만 "도윤 씨"로 수정.
 - 2026-10-20 · Claude · Gemini 체인 집필 지침 추가(docs/gemini-chain.md): gemini-text 가져오기 기준 전편 정독·설계 승인·한 화씩 집필/검수/인계.
 - 2026-10-20 · Claude · 작가 지시: `codex/ep101-105`에 최신 main 병합해 `chain/current` 생성, Gemini용 텍스트 사본 브랜치 자동 갱신 워크플로 추가(원고 내용 변경 없음).
 - 2026-10-20 · Claude · Gemini용 텍스트 사본 브랜치(gemini-text) 자동 갱신 워크플로 추가: main 푸시 시 chain/current에 병합 시도 후 .md 사본 갱신(원고 변경 없음).
