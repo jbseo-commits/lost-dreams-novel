@@ -31,7 +31,7 @@ test('interview, lunch call, rooftop and hospital keep the people in their actua
  assert(!atText('19','의심할 자격을 준 것').direction.cast.some(p=>p.id==='yoonsera'));
  assert.equal(atText('20','말리면 그만둘 거야').speaker,'도윤');
  assert.equal(atText('20','말리면 그만둘 거야').scene,'rooftop');
- assert(atText('20','내가 아침에 싫다고').direction.cast.find(p=>p.id==='jiwoo').remote);
+ assert(atText('20','오늘 밤 거니까').direction.cast.find(p=>p.id==='jiwoo').remote);
  assert.equal(atText('19-1','확인 중입니다.').speaker,'서인');
  assert.equal(atText('19-2','그럼 원래 하기로 한 일은').speaker,'식품 담당자');
  assert.equal(atText('20-1','병원 끝나고 학교 갈').speaker,'문해린');
