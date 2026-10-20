@@ -44,3 +44,13 @@ test('manuscript separators split a neutral chapter into scene-sized groups',asy
  assert.deepEqual(result.groups.map(g=>g.location),[null,null,null]);
  assert(result.groups[0].locationEvidence.includes('회의실'));
 });
+
+test('missing manuscript groups are blocked rather than presumed one confirmed scene',()=>{
+ const source='manuscript/ep071.md';
+ const group=auditNeutral([{id:'71',sourcePath:source,beats:[{scene:'neutral',sourceLine:3,text:'약국 앞'}]}],31,{},[source]);
+ assert.equal(group.missingGroups,1);
+ assert.equal(group.reviewableGroups,0);
+ assert.equal(group.groups[0].status,'source-missing');
+ assert.equal(group.groups[0].manuscriptSection,null);
+ assert.equal(group.groups[0].location,null);
+});
