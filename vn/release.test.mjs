@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import vm from 'node:vm';
+import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {buildPublicSite} from '../tools/build-vn-public.mjs';
 import {RELEASE,DEMO_CHAPTER_IDS,publicDemoStory,canReadChapter,purchaseLink} from './release.js';
@@ -53,6 +54,9 @@ test('actual VN deployment and its single HTML contain only the demo text, cues 
  for(const c of normalizeStory(built.window.STORY).chapters)for(let i=0;i<c.beats.length;i++)assert.equal(JSON.stringify(cueContext.cue(c,c.beats[i],i)),JSON.stringify(presentationForBeat(c,c.beats[i],i)),c.id+':'+i);
  const manifest=JSON.parse(await fs.readFile(path.join(pub,'play-offline.html.manifest.json'),'utf8'));
  assert.equal(manifest.storyChapters,18);assert.equal(manifest.externalScripts,false);assert.equal(manifest.externalStylesheets,false);
+ const offlineBytes=await fs.readFile(path.join(pub,'play-offline.html'));
+ assert.equal(offlineBytes.length,manifest.offlineBytes);assert.equal(createHash('sha256').update(offlineBytes).digest('hex'),manifest.sha256);
+ assert.equal(offlineBytes.includes(Buffer.from('\r\n')),false);
  const allText=[];async function walk(dir){for(const entry of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,entry.name);if(entry.isDirectory())await walk(p);else if(/\.(?:js|html|json|css)$/.test(p))allText.push((await fs.readFile(p,'utf8')).replace(/data:[\w/+.-]+;base64,[A-Za-z0-9+/=]+/g,''));}}await walk(pub);
  const text=allText.join('\n'),early=built.window.STORY.chapters.flatMap(c=>c.beats.map(b=>b.text)).join('\n');
  for(const c of full.chapters.filter(c=>!canReadChapter(c.id))){const probe=c.beats.map(b=>b.text).filter(s=>s.length>=35&&!early.includes(s)).sort((a,b)=>b.length-a.length)[0];if(probe){assert.ok(!text.includes(probe),'후속 본문 포함: '+c.id);assert.ok(!text.includes(JSON.stringify(probe).slice(1,-1)),'후속 JSON 본문 포함: '+c.id);}}

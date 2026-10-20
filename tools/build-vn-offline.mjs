@@ -205,6 +205,7 @@ export async function buildOffline(vnDirectory, outputHtml) {
   html=html.replace(/<\/head>/i,`<style>\n${cssParts.join('\n')}\n</style>\n<script>${jsSafe(storySource)}</script>\n</head>`);
   html=html.replace(/<\/body>/i,`<script>${jsSafe(appSource)}</script>\n</body>`);
   html=html.split('\n').map(line=>line.trim()===''?'':line).join('\n');
+  html=html.replaceAll('\r\n','\n');
   if (/<script\b[^>]*\bsrc\s*=/i.test(html) || /<link\b[^>]*\brel=["']stylesheet/i.test(html)) throw new Error('External script or stylesheet remains.');
   const inlineScripts=[...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)];
   for (const [index,match] of inlineScripts.entries()) new vm.Script(match[1],{filename:`offline:inline-${index+1}`});
