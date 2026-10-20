@@ -1,5 +1,5 @@
 export class EpisodeOneStage {
-  constructor(host,assets,{onInspect}={}){
+  constructor(host,assets,{onInspect,onEvidence}={}){
     this.host=host;this.assets=assets;this.currentCg='';this.currentScene=-1;this.actorState=new Map();
     this.cg=document.createElement('div');this.cg.className='ep1-cg';
     this.actors=document.createElement('div');this.actors.className='ep1-actors';
@@ -9,12 +9,19 @@ export class EpisodeOneStage {
     this.lids=document.createElement('div');this.lids.className='ep1-lids';this.lids.setAttribute('aria-hidden','true');
     this.inspect=document.createElement('button');this.inspect.type='button';this.inspect.className='ep12-art-button';this.inspect.textContent='전체 그림';this.inspect.hidden=true;
     this.inspect.addEventListener('click',event=>{event.stopPropagation();if(this.inspectCue&&onInspect)onInspect(this.inspectCue);});
-    this.host.append(this.cg,this.wall,this.actors,this.panel,this.lids,this.inspect);
+    this.board=document.createElement('section');this.board.className='core-board';this.board.hidden=true;
+    this.boardButton=document.createElement('button');this.boardButton.type='button';this.boardButton.textContent='관찰 기록 펼치기';
+    this.boardButton.addEventListener('click',event=>{event.stopPropagation();if(this.boardCue&&onEvidence)onEvidence(this.boardCue);});
+    this.host.append(this.cg,this.wall,this.actors,this.panel,this.lids,this.inspect,this.board);
   }
   render(cue,{instant=false,reducedMotion=false}={}){
     const stage=this.host.parentElement;
     if(!cue){this.clear();return;}
     this.host.hidden=false;stage.classList.add('episode-one');
+    stage.classList.toggle('core-scene',Boolean(cue.core));
+    this.host.dataset.pressure=cue.pressure||'';
+    this.board.hidden=!cue.board||Boolean(cue.cg);this.boardCue=cue.board?cue:null;
+    if(cue.board&&!cue.cg){const signature=JSON.stringify(cue.board);if(this.board.dataset.signature!==signature){this.board.replaceChildren();const title=document.createElement('h3');title.textContent=cue.board.title;this.board.append(title);for(const [label,value]of cue.board.rows){const row=document.createElement('p'),key=document.createElement('span'),body=document.createElement('strong');key.textContent=label;body.textContent=value;row.append(key,body);this.board.append(row);}if(cue.board.kind==='clues')this.board.append(this.boardButton);this.board.dataset.signature=signature;}this.board.dataset.kind=cue.board.kind;}
     stage.classList.toggle('episode-two',cue.chapterId==='2');
     this.host.dataset.chapterId=cue.chapterId||'1';
     this.host.dataset.holdMotion=String(Boolean(cue.holdMotion));
@@ -75,8 +82,9 @@ export class EpisodeOneStage {
     if(this.currentScene!==sceneKey){this.host.classList.remove('ep1-scene-arrive');void this.host.offsetWidth;this.host.classList.add('ep1-scene-arrive');this.currentScene=sceneKey;}
   }
   clear(){
-    this.host.hidden=true;this.host.parentElement.classList.remove('episode-one','episode-two','ep1-blackout','ep1-intro','ep1-cg-active');this.host.parentElement.dataset.ep1Actors='';this.host.parentElement.dataset.ep1DocumentPhase='';this.actorState.clear();this.actors.replaceChildren();this.currentScene=-1;
+    this.host.hidden=true;this.host.parentElement.classList.remove('episode-one','episode-two','core-scene','ep1-blackout','ep1-intro','ep1-cg-active');this.host.parentElement.dataset.ep1Actors='';this.host.parentElement.dataset.ep1DocumentPhase='';this.actorState.clear();this.actors.replaceChildren();this.currentScene=-1;
     this.cg.replaceChildren();this.cg.style.backgroundImage='';this.cg.classList.remove('ep12-cut-impact');this.cg.dataset.impact='';this.cg.dataset.phase='';this.currentCg='';
     this.host.dataset.cutscene='';this.host.dataset.cg='';this.host.dataset.shot='';this.host.dataset.dream='false';this.host.dataset.holdMotion='false';this.panel.hidden=true;this.wall.hidden=true;this.inspect.hidden=true;this.inspectCue=null;
+    this.board.hidden=true;this.boardCue=null;this.host.dataset.pressure='';
   }
 }

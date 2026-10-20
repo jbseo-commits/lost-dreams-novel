@@ -1,0 +1,146 @@
+[
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreCupBadge",
+    "chapter": "3화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/cup-and-badge.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "228 / 276",
+    "text": "식탁 위에는 찌그러진 컵과 회사 출입증이 나란히 놓여 있었다.",
+    "width": 400,
+    "target": "coreCupBadge"
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreShore",
+    "chapter": "7화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/empty-shore.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "252 / 267",
+    "text": "꿈속의 사람들은 다시 한 걸음 물러났다.",
+    "width": 400,
+    "target": "coreShore"
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreOverload",
+    "chapter": "8-2화 · 사이 이야기",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/overload-room.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "74 / 116",
+    "text": "서인이 카펫 위로 무너지자, 부르지 않은 붉은 비상 응답 창이 저절로 켜졌다.",
+    "width": 400,
+    "target": "coreOverload"
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreMotherSleep",
+    "chapter": "10화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/mother-sleep.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "259–260 / 357",
+    "text": "서인은 손을 뻗었다가 멈췄다.\n광고 연결 표시를 끄지 않았다.",
+    "width": 400,
+    "target": "coreMotherSleep"
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreCrayon",
+    "chapter": "11화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/crayon-room.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "77 / 254",
+    "text": "작은 손이 그 위에 선을 하나 더 그었다.",
+    "width": 400,
+    "target": "coreCrayon"
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreMotherDinner",
+    "chapter": "11화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/mother-dinner.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "216–218 / 254",
+    "text": "대신 냉장고 문 화면을 눌러 검진을 가장 가까운 날짜로 다시 잡았다.\n3초가 걸렸다.\n어머니는 냄비를 젓느라 보지 못했다.",
+    "width": 400,
+    "target": "coreMotherDinner"
+  }
+]

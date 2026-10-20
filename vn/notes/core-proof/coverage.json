@@ -1,0 +1,110 @@
+[
+  {
+    "chapter": "1",
+    "total": 263,
+    "observed": 263,
+    "missing": []
+  },
+  {
+    "chapter": "2",
+    "total": 286,
+    "observed": 286,
+    "missing": []
+  },
+  {
+    "chapter": "3",
+    "total": 276,
+    "observed": 276,
+    "missing": []
+  },
+  {
+    "chapter": "4",
+    "total": 380,
+    "observed": 380,
+    "missing": []
+  },
+  {
+    "chapter": "4-1",
+    "total": 140,
+    "observed": 140,
+    "missing": []
+  },
+  {
+    "chapter": "5",
+    "total": 374,
+    "observed": 374,
+    "missing": []
+  },
+  {
+    "chapter": "6",
+    "total": 357,
+    "observed": 357,
+    "missing": []
+  },
+  {
+    "chapter": "6-1",
+    "total": 99,
+    "observed": 99,
+    "missing": []
+  },
+  {
+    "chapter": "7",
+    "total": 267,
+    "observed": 267,
+    "missing": []
+  },
+  {
+    "chapter": "7-2",
+    "total": 202,
+    "observed": 202,
+    "missing": []
+  },
+  {
+    "chapter": "8",
+    "total": 97,
+    "observed": 97,
+    "missing": []
+  },
+  {
+    "chapter": "8-1",
+    "total": 91,
+    "observed": 91,
+    "missing": []
+  },
+  {
+    "chapter": "8-2",
+    "total": 116,
+    "observed": 116,
+    "missing": []
+  },
+  {
+    "chapter": "8-3",
+    "total": 88,
+    "observed": 88,
+    "missing": []
+  },
+  {
+    "chapter": "9",
+    "total": 300,
+    "observed": 300,
+    "missing": []
+  },
+  {
+    "chapter": "9-1",
+    "total": 295,
+    "observed": 295,
+    "missing": []
+  },
+  {
+    "chapter": "10",
+    "total": 357,
+    "observed": 357,
+    "missing": []
+  },
+  {
+    "chapter": "11",
+    "total": 254,
+    "observed": 254,
+    "missing": []
+  }
+]

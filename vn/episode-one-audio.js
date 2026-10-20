@@ -1,5 +1,5 @@
 export function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
-  let context=null,master=null,version=0,current=null,gapTimer=0,lastEffect='';
+  let context=null,master=null,version=0,current=null,gapTimer=0,gapActive=false,lastEffect='',focusGain=1;
   const buffers=new Map(),tracks=new Map(),effects=new Set(),voices=new Set(),positions=new Map();
   const allowed=()=>Boolean(getSettings()?.sound)&&!document.hidden;
   const level=()=>Math.min(1,Math.max(0,(Number(getSettings()?.volume)||0)/100));
@@ -16,7 +16,7 @@ export function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
     voice.retired=true;
     try{voice.gain.gain.cancelScheduledValues(now);if(fade){voice.gain.gain.setTargetAtTime(0,now,fade/3);voice.source.stop(now+fade);}else voice.source.stop();}catch{}
   }
-  function stop(){version++;current=null;lastEffect='';clearTimeout(gapTimer);for(const v of [...voices])dispose(v);tracks.clear();effects.clear();if(master&&context){master.gain.cancelScheduledValues(context.currentTime);master.gain.setValueAtTime(0,context.currentTime);}onStatus('silent');}
+  function stop(){version++;current=null;lastEffect='';clearTimeout(gapTimer);gapActive=false;for(const v of [...voices])dispose(v);tracks.clear();effects.clear();if(master&&context){master.gain.cancelScheduledValues(context.currentTime);master.gain.setValueAtTime(0,context.currentTime);}onStatus('silent');}
   function source(buffer,loop,volume,key){
     const node=context.createBufferSource(),gain=context.createGain(),offset=loop?(positions.get(key)||0)%buffer.duration:0;
     node.buffer=buffer;node.loop=loop;gain.gain.value=0;node.connect(gain);gain.connect(master);
@@ -30,14 +30,14 @@ export function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
     if(!context||context.state!=='running')return;
     if(cue.hardCut&&!quiet)stop();
     const serial=++version,valid=()=>serial===version&&allowed();
-    current=`${cue.music||''}:${cue.ambience||''}`;clearTimeout(gapTimer);
-    master.gain.setTargetAtTime(level(),context.currentTime,.08);
+    current=`${cue.music||''}:${cue.ambience||''}`;clearTimeout(gapTimer);gapActive=false;
+    master.gain.setTargetAtTime(level()*focusGain,context.currentTime,.08);
     const desired=[['music',cue.music,.46],['ambience',cue.ambience,.76]];
     const trackWork=Promise.all(desired.map(async([bus,key,gain])=>{
         const prior=tracks.get(bus);if(prior?.key===key)return;if(prior){dispose(prior,1.4);tracks.delete(bus);}
         if(key){const buffer=await load(key);if(!valid()||!buffer)return;const v=source(buffer,true,gain,key);tracks.set(bus,v);}
     }));
-    if(cue.gap&&!quiet){master.gain.setTargetAtTime(0,context.currentTime,.015);clearTimeout(gapTimer);const serial=version;gapTimer=setTimeout(()=>{if(serial===version&&allowed())master.gain.setTargetAtTime(level(),context.currentTime,.06);},cue.gap*1000);}
+    if(cue.gap&&!quiet){gapActive=true;master.gain.setTargetAtTime(0,context.currentTime,.015);clearTimeout(gapTimer);const serial=version;gapTimer=setTimeout(()=>{if(serial!==version)return;gapActive=false;if(allowed())master.gain.setTargetAtTime(level()*focusGain,context.currentTime,.06);},cue.gap*1000);}
     const effectKey=`${cue.chapterId||'1'}:${cue.index}:${cue.fx||''}`;
     if(!quiet&&cue.fx&&effectKey!==lastEffect){
       lastEffect=effectKey;const buffer=await load(cue.fx);if(!valid()||!buffer)return;
@@ -48,7 +48,8 @@ export function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
     if(valid())onStatus(tracks.size||effects.size?'playing':'silent',{music:tracks.get('music')?.key||'',ambience:tracks.get('ambience')?.key||''});
   }
   async function prime(){if(!ensure())return;await Promise.all(Object.keys(assets).filter(key=>/\.(mp3|ogg|wav)$/.test(assets[key])).map(load));}
-  function setVolume(){if(master&&context)master.gain.setTargetAtTime(allowed()&&current?level():0,context.currentTime,.08);}
+  function setVolume(){if(master&&context)master.gain.setTargetAtTime(allowed()&&current&&!gapActive?level()*focusGain:0,context.currentTime,gapActive?.015:.08);}
   function reset(){stop();positions.clear();}
-  return{unlock,render,stop,reset,prime,setVolume};
+  function setCommunicationFocus(kind){focusGain=kind==='interrupt' ? .35 : kind ? .62 : 1;setVolume();}
+  return{unlock,render,stop,reset,prime,setVolume,setCommunicationFocus};
 }

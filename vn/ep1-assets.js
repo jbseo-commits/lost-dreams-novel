@@ -1,4 +1,6 @@
+import {CORE_ASSETS} from './core-assets.js?v=core-demo-20261021-r2';
 export const EP1_ASSETS = Object.freeze({
+  ...CORE_ASSETS,
   clayFailure:'assets/cutscenes/clay-failure.webp',
   doyunRamen:'assets/cutscenes/doyun-ramen.webp',
   procedureFace:'assets/cutscenes/procedure-face.webp',

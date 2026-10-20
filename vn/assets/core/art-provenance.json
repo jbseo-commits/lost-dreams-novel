@@ -1,0 +1,263 @@
+{
+  "baseline": "da5040e",
+  "tool": "built-in image_gen",
+  "exactModel": "not exposed",
+  "assets": [
+    {
+      "name": "cup-and-badge",
+      "key": "coreCupBadge",
+      "kind": "event-cg",
+      "file": "cup-and-badge.webp",
+      "generation": {
+        "prompt": "Precise edit of this exact VN event painting: remove ONLY the woman and her water glass in the background completely. This source moment is Seoin ALONE in Jiwoo's living room while she is inside the bedroom. Replace her silhouette with the same natural empty doorway and room behind it. Keep MALE Seoin face, clothing, hand pose, table, imperfect cup, ID badge, camera, lighting and all other details unchanged. No added person, readable text, or new prop.",
+        "referenced_image_paths": [
+          "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-7dcacaa9-cf94-46e5-a89b-ebe75b02c505.png"
+        ],
+        "transparent_background": false
+      },
+      "initialGeneration": {
+        "prompt": "Use case: illustration-story. A finished premium painterly anime event CG for the SAME Korean sci-fi VN. One landscape 16:9 image, cinematic tactile materials, restrained lived-in light, exact established faces and outfits from references. No collage or split panels. No readable text, digits, logos, captions or watermark. Group essential action in central60% and upper70%; lower quarter calm for dialogue. Reference1 FEMALE Jiwoo, short brown bob, gray overshirt charcoal tee; ref2 MALE Seoin white shirt dark jacket. In Jiwoo's modest family living room, an imperfect freshly made gray-brown pottery cup and a plain office ID badge lie side by side on a small dining table in central foreground. Cup palm-sized but adult-made, one side lopsided, no glaze glamour. Seoin sits alone looking at the TWO objects with unresolved hurt, hand stopped short of touching them. Jiwoo in soft background returning from a bedroom carrying a water glass; no father visible. This is choosing both work and pottery, not destroying the badge. Their faces retain identity, no romantic embrace, no idealized luxury. Table and both objects clearly readable. Badge text illegible.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-relaxed.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-e3e64d61-7b12-4378-9fb3-23b9b4295e78.png",
+      "revisionReason": "혼자 남은 원문 시점에 맞춰 지우 제거",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 203648,
+      "sha256": "15ecba9cfdfc2fe5a64035ae2ec40cea3834b53ef4df319d06c91e39a49e4a76"
+    },
+    {
+      "name": "empty-shore",
+      "key": "coreShore",
+      "kind": "event-cg",
+      "file": "empty-shore.webp",
+      "generation": {
+        "prompt": "Use case: illustration-story. A finished premium painterly anime event CG for the SAME Korean sci-fi VN. One landscape 16:9 image, cinematic tactile materials, restrained lived-in light, exact established faces and outfits from references. No collage or split panels. No readable text, digits, logos, captions or watermark. Group essential action in central60% and upper70%; lower quarter calm for dialogue. A disturbing personal dream, not the clean advertising beach of reference2. MALE Seoin from ref1, same gray crewneck, waist deep in murky sea seen from behind three-quarter profile, reaching one hand toward a distant shabby sand shore strewn with a few debris pieces under oppressively low gray sky. A small group of indistinct adults on shore takes a step back, some with an unidentifiable child; their faces must not be invented recognizable portraits. No crowd enumeration. Seoin is isolated at center, hand extended with empty space between him and shore. No drowning body, no fantasymonster, no rescue success. Restrained bleak teal/gray, wave advancing, uneasy distance.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+          "C:/Users/정현아/core-beach-reference.png"
+        ],
+        "transparent_background": false
+      },
+      "initialGeneration": {
+        "prompt": "Use case: illustration-story. A finished premium painterly anime event CG for the SAME Korean sci-fi VN. One landscape 16:9 image, cinematic tactile materials, restrained lived-in light, exact established faces and outfits from references. No collage or split panels. No readable text, digits, logos, captions or watermark. Group essential action in central60% and upper70%; lower quarter calm for dialogue. A disturbing personal dream, not the clean advertising beach of reference2. MALE Seoin from ref1, same gray crewneck, waist deep in murky sea seen from behind three-quarter profile, reaching one hand toward a distant shabby sand shore strewn with a few debris pieces under oppressively low gray sky. A small group of indistinct adults on shore takes a step back, some with an unidentifiable child; their faces must not be invented recognizable portraits. No crowd enumeration. Seoin is isolated at center, hand extended with empty space between him and shore. No drowning body, no fantasymonster, no rescue success. Restrained bleak teal/gray, wave advancing, uneasy distance.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+          "C:/Users/정현아/core-beach-reference.png"
+        ],
+        "transparent_background": false
+      },
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-c2e00fa8-8c9b-4b73-ba9a-f6fad5c30521.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 263430,
+      "sha256": "465cfe2ee5efd72f6b866513fb707d389b6d749a868101c832f4bccdaf2ec0b0"
+    },
+    {
+      "name": "overload-room",
+      "key": "coreOverload",
+      "kind": "event-cg",
+      "file": "overload-room.webp",
+      "generation": {
+        "prompt": "Use case: illustration-story. A finished premium painterly anime event CG for the SAME Korean sci-fi VN. One landscape 16:9 image, cinematic tactile materials, restrained lived-in light, exact established faces and outfits from references. No collage or split panels. No readable text, digits, logos, captions or watermark. Group essential action in central60% and upper70%; lower quarter calm for dialogue. MALE Seoin same face/hair/white shirt/dark trousers as reference, jacket fallen open, collapsing onto the carpet beside the edge of a luxurious dark upper-floor hotel bed, one hand braced on carpet, other fingers near temple, genuinely overwhelmed and breathless. Lights switched off, only a faint thin red abstract emergency rectangle just beginning near his eyes, NO floating numerical mindmap and no physical robot; neural perception not a holographic wall. Windowless feel, expensive bed and carpet contrast humble canonical home. Camera low, trembling hand and face centered, no other people. A very tiny nosebleed trace allowed, no gore. His thought cannot stop even when the screens are off; image shows bodily loss of control, not a triumphant genius.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "initialGeneration": {
+        "prompt": "Use case: illustration-story. A finished premium painterly anime event CG for the SAME Korean sci-fi VN. One landscape 16:9 image, cinematic tactile materials, restrained lived-in light, exact established faces and outfits from references. No collage or split panels. No readable text, digits, logos, captions or watermark. Group essential action in central60% and upper70%; lower quarter calm for dialogue. MALE Seoin same face/hair/white shirt/dark trousers as reference, jacket fallen open, collapsing onto the carpet beside the edge of a luxurious dark upper-floor hotel bed, one hand braced on carpet, other fingers near temple, genuinely overwhelmed and breathless. Lights switched off, only a faint thin red abstract emergency rectangle just beginning near his eyes, NO floating numerical mindmap and no physical robot; neural perception not a holographic wall. Windowless feel, expensive bed and carpet contrast humble canonical home. Camera low, trembling hand and face centered, no other people. A very tiny nosebleed trace allowed, no gore. His thought cannot stop even when the screens are off; image shows bodily loss of control, not a triumphant genius.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-65d31372-6bc7-4e5c-b7a6-bbad2527056d.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 222496,
+      "sha256": "4621d494e3b3f1b9fd863db7a8a5d9bf8f13aeb4ba4fbebc79f119becee8fb61"
+    },
+    {
+      "name": "crayon-room",
+      "key": "coreCrayon",
+      "kind": "event-cg",
+      "file": "crayon-room.webp",
+      "generation": {
+        "prompt": "Use case: illustration-story. A finished premium painterly anime event CG for the SAME Korean sci-fi VN. One landscape 16:9 image, cinematic tactile materials, restrained lived-in light, exact established faces and outfits from references. No collage or split panels. No readable text, digits, logos, captions or watermark. Group essential action in central60% and upper70%; lower quarter calm for dialogue. Ambiguous fragment seen during a neural procedure: a small child's hand, ONLY hand and lower sleeve visible, adds one wax crayon line to a rough airplane on worn cream wallpaper. One wing of the airplane is conspicuously shorter than the other. Crayon oily irregular lines and worn wallpaper tactile. No identifiable child face, no adult portrait, no family photo, no written identity, no implication whose memory it is. Child hand is centrally placed against the asymmetric crude airplane, warm small pool of childhood room light fading into dark edges. Quiet unsettling intimacy, not a horror drawing. No futuristic device in this remembered fragment.",
+        "transparent_background": false
+      },
+      "initialGeneration": {
+        "prompt": "Use case: illustration-story. A finished premium painterly anime event CG for the SAME Korean sci-fi VN. One landscape 16:9 image, cinematic tactile materials, restrained lived-in light, exact established faces and outfits from references. No collage or split panels. No readable text, digits, logos, captions or watermark. Group essential action in central60% and upper70%; lower quarter calm for dialogue. Ambiguous fragment seen during a neural procedure: a small child's hand, ONLY hand and lower sleeve visible, adds one wax crayon line to a rough airplane on worn cream wallpaper. One wing of the airplane is conspicuously shorter than the other. Crayon oily irregular lines and worn wallpaper tactile. No identifiable child face, no adult portrait, no family photo, no written identity, no implication whose memory it is. Child hand is centrally placed against the asymmetric crude airplane, warm small pool of childhood room light fading into dark edges. Quiet unsettling intimacy, not a horror drawing. No futuristic device in this remembered fragment.",
+        "transparent_background": false
+      },
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-25d1cd2b-586a-4077-8703-2ec87db79942.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 280462,
+      "sha256": "ccb8339bc452dac790993225e7f56ad7b8ca0ad68df82ad956fac9cc5540b86e"
+    },
+    {
+      "name": "mother-dinner",
+      "key": "coreMotherDinner",
+      "kind": "event-cg",
+      "file": "mother-dinner.webp",
+      "generation": {
+        "prompt": "Use case: illustration-story. Recreate this event as ONE polished painterly anime 16:9 CG with EXACT identities and this canonical home's layout. Reference1 mother face/clothes. Reference2 MALE Seoin face gray crewneck (no glass). Reference3 canonical home architecture is strict: refrigerator at far LEFT, small dining table front LEFT, stove/counter LEFT behind table, window middle, curtain/bed RIGHT. There must be NO stove on the right of the window. A closer camera at the edge of the dining table: Seoin seated there on the LEFT reaches to the fridge appointment screen with a still, automatic index finger, calm neutral closed mouth. Mother in LEFT background at the original stove stirs her pot, eyes DOWN entirely at the pot, shoulder subtly lifted in a private dance rhythm, a small foot tapping visible. She DOES NOT look at her son or see him change the appointment. Preserve her gray-brown bob taupe cardigan white blouse. Warm kitchen light, restrained unease, no embrace. Quiet right-side empty home space, tactile small table. No readable text/digits anywhere; fridge screen only indistinct blue blocks. Put hand+fridge and mother close enough to see together. No smartphone held, no other person, no extra fingers. This event shows her living rhythm and his efficient unasked action.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/mother-care.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-morning.webp"
+        ],
+        "transparent_background": false
+      },
+      "initialGeneration": {
+        "prompt": "Use case: illustration-story. A finished premium painterly anime event CG for the SAME Korean sci-fi VN. One landscape 16:9 image, cinematic tactile materials, restrained lived-in light, exact established faces and outfits from references. No collage or split panels. No readable text, digits, logos, captions or watermark. Group essential action in central60% and upper70%; lower quarter calm for dialogue. Reference1 exact middle-aged mother salt-gray bob taupe cardigan white blouse; ref2 exact MALE Seoin gray home crewneck, no waterglass; ref3 same cramped kitchen room architecture fridge left stove left window back. Mother stands stirring a small pot with one hand, subtly swaying one shoulder and tapping a toe as if recalling a dance rhythm, private ordinary smile. Seoin seated at the dining table central opposite her, unnaturally still calm face, hand lightly touching the fridge's small digital appointment surface; screen has ONLY faint abstract blocks, no legible text or dates. Tension in contrast: mother's living rhythm versus son's rapid efficient stillness. Not a warm reconciliatory embrace, no newly implied husband/father. Her implant just subtle warm point by temple, no floatingAI mascot. Keep both faces and Seoin's still hand visible.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/mother-care.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-morning.webp"
+        ],
+        "transparent_background": false
+      },
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-8873a3f2-1a97-4c07-8c29-1ab2855b4ccd.png",
+      "revisionReason": "같은 집 구조·어머니가 보지 못한 행동으로 시선과 위치 수정",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 255732,
+      "sha256": "bc3e2d2ad9ccb83a01a7b24b18caff0fecc29d3f99c0768bd56080e9c9acbd9a"
+    },
+    {
+      "name": "doyun-listening",
+      "key": "coreDoyunListen",
+      "kind": "sprite",
+      "file": "doyun-listening.webp",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE transparent-background three-quarter body VN character sprite from head to below knees. Reference1 is exact MALE Doyun, around late30s, slightly older than male Seoin in reference2; use reference2 ONLY for same painterly anime line/rendering quality. Keep Doyun's tousled dark hair, slight stubble, gray hoodie over white tee, dark loose trousers. New listening pose: seated slightly forward, forearms loose over knees, empty relaxed hands, eyes turned to viewer's left, mouth closed, tired compassionate concern with a trace of difficult honesty, not villain smirk or heroic leader. No chopsticks, food, chair visible, badge, letters, background, glow or cast shadow. Real transparent alpha, clean complete hair and elbows, consistent proportions.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": true
+      },
+      "initialGeneration": {
+        "prompt": "Use case: illustration-story. ONE transparent-background three-quarter body VN character sprite from head to below knees. Reference1 is exact MALE Doyun, around late30s, slightly older than male Seoin in reference2; use reference2 ONLY for same painterly anime line/rendering quality. Keep Doyun's tousled dark hair, slight stubble, gray hoodie over white tee, dark loose trousers. New listening pose: seated slightly forward, forearms loose over knees, empty relaxed hands, eyes turned to viewer's left, mouth closed, tired compassionate concern with a trace of difficult honesty, not villain smirk or heroic leader. No chopsticks, food, chair visible, badge, letters, background, glow or cast shadow. Real transparent alpha, clean complete hair and elbows, consistent proportions.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/doyun.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": true
+      },
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-54823754-028b-44f3-b4d3-ee2f49004c06.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 311536,
+      "sha256": "d3bd8ec5b702b8c90d05907ed743d7d447ee3086ac0d6bf2fbfff15a93e38f8d",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "name": "hakyung-clinical",
+      "key": "coreHakyung",
+      "kind": "sprite",
+      "file": "hakyung-clinical.webp",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE transparent-background three-quarter body VN character sprite head to below knees. Reference1 is exact adult FEMALE Hakyung face, teal work jacket gray tee darkcargo trousers. Reference2 ONLY for same painterly anime rendering quality as this VN, not identity. Hakyung's dark hair gathered back into a small low tied ponytail as described in episode11, preserve her face and front loose strands. Sleeves rolled to elbows, faint old tape marks on inner wrist, NOT neural implant or wounds. New clinical pose standing angled left, looks DOWN at a plain dark record tablet held at waist with one hand, other hand loose near edge, lips pressed, restrained tired professional concern. No lab coat, no stethoscope, no legible text. Transparent alpha, no background or glow, complete hands natural anatomy.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/hakyung.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-relaxed.webp"
+        ],
+        "transparent_background": true
+      },
+      "initialGeneration": {
+        "prompt": "Use case: illustration-story. ONE transparent-background three-quarter body VN character sprite head to below knees. Reference1 is exact adult FEMALE Hakyung face, teal work jacket gray tee darkcargo trousers. Reference2 ONLY for same painterly anime rendering quality as this VN, not identity. Hakyung's dark hair gathered back into a small low tied ponytail as described in episode11, preserve her face and front loose strands. Sleeves rolled to elbows, faint old tape marks on inner wrist, NOT neural implant or wounds. New clinical pose standing angled left, looks DOWN at a plain dark record tablet held at waist with one hand, other hand loose near edge, lips pressed, restrained tired professional concern. No lab coat, no stethoscope, no legible text. Transparent alpha, no background or glow, complete hands natural anatomy.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/hakyung.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-relaxed.webp"
+        ],
+        "transparent_background": true
+      },
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-fa2eccd1-5fbd-41ea-b52a-4ec3b6972cf3.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 166866,
+      "sha256": "a2e471515d20a73b468835a0257e9879a68962248820f0e75da69a2d7da7eac4",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "name": "seoin-after",
+      "key": "coreSeoinAfter",
+      "kind": "sprite",
+      "file": "seoin-after.webp",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE transparent-background three-quarter body VN sprite head to below knees of exact SAME MALE Seoin from reference. Preserve face, tousled dark hair, gray crewneck home shirt and dark trousers, painterly anime style. Replace original water glass and expressive lean: seated upright unnaturally composed, BOTH EMPTY hands resting separately flat on knees, shoulders level, eyes straight ahead slightly to viewer's right, closed mouth neutral, calm efficient stillness, NO evil smile, NO superpower eyes, no glow. The change after a cognitive procedure is lost hesitation, not a new person or costume. Natural anatomy five fingers, no chair, background, shadows or text. Genuine transparent alpha.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp"
+        ],
+        "transparent_background": true
+      },
+      "initialGeneration": {
+        "prompt": "Use case: illustration-story. ONE transparent-background three-quarter body VN sprite head to below knees of exact SAME MALE Seoin from reference. Preserve face, tousled dark hair, gray crewneck home shirt and dark trousers, painterly anime style. Replace original water glass and expressive lean: seated upright unnaturally composed, BOTH EMPTY hands resting separately flat on knees, shoulders level, eyes straight ahead slightly to viewer's right, closed mouth neutral, calm efficient stillness, NO evil smile, NO superpower eyes, no glow. The change after a cognitive procedure is lost hesitation, not a new person or costume. Natural anatomy five fingers, no chair, background, shadows or text. Genuine transparent alpha.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp"
+        ],
+        "transparent_background": true
+      },
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-71073eff-df40-4816-9dd0-1dd0830f4677.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 293944,
+      "sha256": "0cf0c321406a1dc8c427b04cdad48ee21330d4e8e79a9f45bb660d55a675f8b6",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "name": "mother-sleep",
+      "key": "coreMotherSleep",
+      "kind": "event-cg",
+      "file": "mother-sleep.webp",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-8a7a2b1d-caeb-4187-b950-0cb2cf86e002.png",
+      "generation": {
+        "prompt": "Use case: illustration-story. ONE finished landscape16:9 painterly anime event CG for the SAME Korean VN. Reference1 exact middle-aged mother face, short salt-gray bob, taupe cardigan white blouse. Ref2 MALE Seoin identity/office white shirt dark jacket, use ONLY his hand/sleeve at image edge. Intimate close shot of mother asleep on an ordinary small sofa with a worn blanket, her SMALL relaxed hand resting palm-down on blanket in central foreground, her sleeping face/temple softly visible upperright. A tiny flush warm amber neural connector by temple shows ad-dream connected. Seoin's hand enters from left but STOPS in the empty space short of touching connector or her hand; he does not switch it off. Mother's private faint sleep smile. No eye contact, no awakening, no touch, no giant headset or cables or holographic screen, no hospital. Humble warm home night shadows, tactile old fabric. Central hand and distance to son's paused fingers is emotional focus; avoid adding other props/people. No readable words/digits/logo/watermark. Same faces/rendering and clothes, quiet no sentimental triumph.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/mother-care.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 316654,
+      "sha256": "2d1197dcd7ec0e6499c51acdaa76c0da41daca976f0e0510a50dc7cf64856789"
+    }
+  ]
+}

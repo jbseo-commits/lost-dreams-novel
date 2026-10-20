@@ -64,6 +64,7 @@ export async function buildOffline(vnDirectory, outputHtml) {
   if (path.extname(output).toLowerCase()!=='.html') throw new Error('Output must end in .html.');
   if (output===path.join(vn,'index.html')) throw new Error('Refusing to overwrite the source index.html.');
   let html=await fs.readFile(path.join(vn,'index.html'),'utf8');
+  html=html.replace('<html lang="ko">','<html lang="ko" data-offline="true">');
   const originalStory=await fs.readFile(path.join(vn,'story-data.js'),'utf8');
   const storyBox={window:{}};
   vm.runInNewContext(originalStory,storyBox,{filename:'story-data.js',timeout:15000});
@@ -103,7 +104,10 @@ export async function buildOffline(vnDirectory, outputHtml) {
   // source path with the same shared data-URL variables used above.
   const ep1Source=await fs.readFile(path.join(vn,'ep1-assets.js'),'utf8');
   const ep1Box={};
-  vm.runInNewContext(`${ep1Source.replace(/^\s*export\s+/gm,'')}\n;globalThis.__ep1=EP1_ASSETS;`,ep1Box,{filename:'ep1-assets.js',timeout:1000});
+  const coreAssetImport=/^[ \t]*import\s*\{\s*CORE_ASSETS\s*\}\s*from\s*['"]\.\/core-assets\.js(?:\?[^'"]*)?['"];?\s*$/m;
+  const coreAssetSource=coreAssetImport.test(ep1Source)?await fs.readFile(path.join(vn,'core-assets.js'),'utf8'):'';
+  const pureAssetSource=coreAssetSource+'\n'+ep1Source.replace(coreAssetImport,'');
+  vm.runInNewContext(`${pureAssetSource.replace(/^\s*export\s+/gm,'')}\n;globalThis.__ep1=EP1_ASSETS;`,ep1Box,{filename:'ep1-assets.js',timeout:1000});
   const ep1Assets=JSON.parse(JSON.stringify(ep1Box.__ep1));
   if (!ep1Assets || typeof ep1Assets!=='object' || !Object.keys(ep1Assets).length) throw new Error('EP1_ASSETS is empty.');
   const ep1Entries=[];
