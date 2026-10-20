@@ -42,3 +42,9 @@ jobs:
           retention-days: 7
       - name: 오프라인판도 완전히 생성되는지 검사
         run: node tools/build-vn-offline.mjs "$GITHUB_WORKSPACE/vn" "$RUNNER_TEMP/play-offline.html"
+      - name: 작업 브랜치용 오프라인 플레이 시안 보존
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-art-branch-playable-preview
+          path: ${{ runner.temp }}/play-offline.html
+          retention-days: 7
