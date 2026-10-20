@@ -4,6 +4,7 @@ import { readFile, stat } from 'node:fs/promises';
 import vm from 'node:vm';
 import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js';
+import { syncEpisodeTwoCopy } from './episode-two-copyfix.js';
 import { EP1_ASSETS } from './ep1-assets.js';
 import { presentationForBeat } from './neural-cues.js';
 const box={window:{}};
@@ -70,4 +71,20 @@ test('every new character and sound key resolves to a packaged file',async()=>{
     for(const key of ['backgroundAsset','cg','ambience','music','fx'])if(cue[key])used.add(cue[key]);
   }
   for(const key of used){assert.ok(EP1_ASSETS[key],key);assert.ok((await stat(new URL(EP1_ASSETS[key],import.meta.url))).size>0,key);}
+});
+
+test('approved episode two dialogue appears without shifting scene or saved beat positions',()=>{
+  const copy=structuredClone({chapters:[second]});
+  assert.equal(syncEpisodeTwoCopy(copy),true);
+  assert.equal(syncEpisodeTwoCopy(copy),false);
+  const chapter=copy.chapters[0];
+  assert.equal(chapter.beats.length,286);
+  assert.equal(chapter.beats[205].speaker,'지우');
+  assert.ok(chapter.beats[205].text.includes('그래야 그게 정말 내 선택이지.'));
+  assert.ok(chapter.beats[202].text.includes('아빠 말이 틀렸으면 좋겠어.'));
+  assert.ok(!chapter.beats.slice(151,206).some(b=>b.text.includes('혁명하려는 거 아니야')));
+  for(let i=0;i<286;i++)assert.ok(episodeTwoDirection(chapter,i),i);
+  assert.equal(episodeTwoReadingPage(chapter,205).entries[0].text,chapter.beats[205].text);
+  assert.equal(episodeTwoSpeaker(chapter,203),'서인');
+  assert.equal(episodeTwoSpeaker(chapter,205),'지우');
 });
