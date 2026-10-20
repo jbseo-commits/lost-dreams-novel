@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test state.test.js audio.test.mjs direction.test.mjs neural-ledger.test.mjs perception.test.mjs save-portability.test.mjs episode-one.test.mjs episode-one-audio.test.mjs episode-one-reading.test.mjs episode-one-teaser.test.mjs episode-two.test.mjs title-screen.test.mjs scene-mix.test.mjs"
+    "test": "node --test state.test.js audio.test.mjs direction.test.mjs neural-ledger.test.mjs perception.test.mjs save-portability.test.mjs episode-one.test.mjs episode-one-audio.test.mjs episode-one-reading.test.mjs episode-one-teaser.test.mjs episode-two.test.mjs title-screen.test.mjs scene-mix.test.mjs evaluation-room.test.mjs ../tools/vn-asset-audit.test.mjs medical-conference.test.mjs hospital-waiting.test.mjs story-art.test.mjs medical-scene.test.mjs"
   }
 }

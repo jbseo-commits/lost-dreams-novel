@@ -16,6 +16,10 @@ import { createEpisodeOneAudio } from './episode-one-audio.js?v=ep12-20261019-r3
 import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep12-20261019-r3';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
+import { evaluationRoomForBeat } from './evaluation-room.js';
+import { medicalConferenceForBeat } from './medical-conference.js';
+import { hospitalWaitingForBeat } from './hospital-waiting.js';
+import { MedicalSceneStage,medicalSceneForBeat } from './medical-scene.js';
 import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r3';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r3';
 
@@ -42,6 +46,7 @@ let pendingChapter = null;
 const audio = createAudioDirector(() => store.settings);
 const neuralStage = new NeuralStage($('neuralStage'));
 const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS);
+const medicalStage = new MedicalSceneStage($('medicalStoryStage'),story.assets);
 const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {onStatus:(status,tracks={})=>{
   $('soundToggle').dataset.audioStatus=status;
   $('soundToggle').dataset.music=tracks.music||'';
@@ -337,7 +342,10 @@ function renderBeat({ revisit = false } = {}) {
   const dreamEnd = dreamStart >= 0 ? chapter.beats.findIndex((item, index) => index > dreamStart && item.text?.includes('서인은 버튼을 눌렀다')) : -1;
   const inJiwooDream = dreamStart >= 0 && progress.beatIndex >= dreamStart && (dreamEnd < 0 || progress.beatIndex <= dreamEnd);
   $('stage').classList.toggle('ep2-jiwoo-dream', inJiwooDream);
-  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene]);
+  const evaluationAsset = evaluationRoomForBeat(chapter, progress.beatIndex);
+  const medicalConferenceAsset = medicalConferenceForBeat(chapter, progress.beatIndex);
+  const hospitalWaitingAsset = hospitalWaitingForBeat(chapter, progress.beatIndex);
+  const background = evaluationAsset || medicalConferenceAsset || hospitalWaitingAsset || (inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene]));
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
@@ -356,6 +364,7 @@ function renderBeat({ revisit = false } = {}) {
   storyText.hidden = primary;
   $('perceptionAdvance').hidden = !primary;
   renderDirection(beat, { quiet: revisit });
+  medicalStage.render(medicalSceneForBeat(chapter,progress.beatIndex),{reducedMotion:store.settings.reducedMotion});
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
   directionCard.hidden = Boolean(currentEpisodeCue) || Boolean(currentPerception) || !beat.direction?.visual;
@@ -500,6 +509,7 @@ function goPrevious() {
 function renderChapterEnd(final = false) {
   clearTimers(); pauseReading();
   episodeAudio.stop();
+  medicalStage.clear();
   neuralStage.clear(); audio.setCommunicationFocus(null); lastCommunicationGroup = '';
   document.querySelector('.end-screen')?.remove();
   const ending = document.createElement('div'); ending.className = 'end-screen';

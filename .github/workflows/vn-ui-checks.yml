@@ -21,5 +21,30 @@ jobs:
           node-version: 20
       - name: 비주얼노벨 기능과 타이틀 메뉴 검사
         run: npm test --prefix vn
+      - name: 빈 무대 실제 집계 및 큰 구간 확인
+        shell: bash
+        run: |
+          node tools/vn-asset-audit.mjs > "$RUNNER_TEMP/vn-neutral-inventory.json"
+          node --input-type=module -e '
+          import fs from "node:fs";
+          const d=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+"/vn-neutral-inventory.json","utf8"));
+          console.log("NEUTRAL_AUDIT_SUMMARY "+JSON.stringify({neutralBeats:d.neutralBeats,sceneGroups:d.sceneGroups,resolvedGroups:d.resolvedGroups,unresolvedGroups:d.unresolvedGroups,reviewableGroups:d.reviewableGroups,missingGroups:d.missingGroups,missingSources:d.missingSources}));
+          const chapters={};for(const g of d.groups){(chapters[g.chapter]??=[]).push(g);}
+          const rows=Object.entries(chapters).map(([chapter,groups])=>({chapter,count:groups.reduce((s,g)=>s+g.count,0),segments:groups.length})).sort((a,b)=>b.count-a.count);
+          console.log("NEUTRAL_AUDIT_TOP "+JSON.stringify(rows.slice(0,25)));
+          console.log("NEUTRAL_AUDIT_EXAMPLES "+JSON.stringify(d.groups.filter(g=>g.count>50).sort((a,b)=>b.count-a.count).slice(0,15).map(g=>({chapter:g.chapter,source:g.source,sourceLineFrom:g.sourceLineFrom,sourceLineTo:g.sourceLineTo,count:g.count,openingText:g.openingText,closingText:g.closingText}))));
+          '
+      - name: 빈 무대 감사 자료 보존
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-neutral-inventory
+          path: ${{ runner.temp }}/vn-neutral-inventory.json
+          retention-days: 7
       - name: 오프라인판도 완전히 생성되는지 검사
         run: node tools/build-vn-offline.mjs "$GITHUB_WORKSPACE/vn" "$RUNNER_TEMP/play-offline.html"
+      - name: 작업 브랜치용 오프라인 플레이 시안 보존
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-art-branch-playable-preview
+          path: ${{ runner.temp }}/play-offline.html
+          retention-days: 7
