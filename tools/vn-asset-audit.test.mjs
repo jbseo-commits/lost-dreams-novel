@@ -28,3 +28,19 @@ test('partial direction evidence never auto-classifies',()=>{
  assert.equal(result.groups[0].status,'needs-manuscript-review');
  assert.equal(result.groups[0].location,null);
 });
+
+test('manuscript separators split a neutral chapter into scene-sized groups',async()=>{
+ const {manuscriptBreaks}=await import('./vn-asset-audit.mjs');
+ const md=['# 제31화','회의실 문이 닫혔다.','***','도로 옆으로 나왔다.','***','집에 돌아왔다.'].join('\n');
+ const markers=manuscriptBreaks(md);
+ assert.deepEqual(markers,[3,5]);
+ const source='manuscript/ep031.md';
+ const result=auditNeutral([{id:'31',sourcePath:source,beats:[
+  {scene:'neutral',sourceLine:2,text:'회의실'},{scene:'neutral',sourceLine:4,text:'거리'},{scene:'neutral',sourceLine:6,text:'부엌'}
+ ]}],31,{[source]:markers});
+ assert.equal(result.neutralBeats,3);
+ assert.equal(result.sceneGroups,3);
+ assert.deepEqual(result.groups.map(g=>g.manuscriptSection),[0,1,2]);
+ assert.deepEqual(result.groups.map(g=>g.location),[null,null,null]);
+ assert(result.groups[0].locationEvidence.includes('회의실'));
+});
