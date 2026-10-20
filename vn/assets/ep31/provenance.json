@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-20",
+  "canon": "31화 금요일 오전 8시 17분 회의실 문을 닫자 벽 전체가 병원 화면으로 바뀜. 32화 월요일 오전 9시 12분 회의실 화면에 숫자 세 개 표시. 화면 글자는 HTML 레이어로 분리. 원고에 없는 인물·소품·로고 없음.",
+  "scope": "manuscript/ep031.md:3-114, manuscript/ep032.md:3-110",
+  "mode": "hand-authored SVG draft, 1672x941 viewBox. 원본 PNG/WebP 제작과 실기기 QA 미완료. 영구 원화 승인 전 시험용 배경.",
+  "assets": [
+    {
+      "key": "medical-conference-morning",
+      "name": "vn/assets/ep31/bg-medical-conference-morning.svg",
+      "manuscript": "manuscript/ep031.md:3-114; manuscript/ep032.md:3-110",
+      "references": [
+        "vn/assets/meeting.webp",
+        "vn/assets/ep1/home-morning.webp"
+      ],
+      "prompt": "상층 회의실의 압도적으로 큰 벽 전체 의료 디스플레이. 시스템 문구·이름·숫자 없음(HTML에서 띄움). 사람 없는 배경, 불필요한 가구·소품·간판 없음. 차가운 유리와 금속 및 깊은 여백. 오전 밝은 인공광. 하단 32% 주요 요소 금지. 두 회차 같은 세트.",
+      "gates": {
+        "G1": "PARTIAL: 큰 벽 디스플레이로 회의실은 암시되나 사건·압박의 독립 판독은 미검증",
+        "G2": "PARTIAL: 원고 명시 화면 벽, 아침 시간을 반영; 건축 세부는 미확정",
+        "G3": "N/A: 배경에 인물 없음",
+        "G4": "N/A: 배경",
+        "G5": "PENDING: 저층과 상층 나란히 비교 필요",
+        "G6": "PENDING: 1280x720, 1920x1080, 390x844 실제 캡처 필요",
+        "G7": "PENDING: 25% 축소 화면 판독 필요",
+        "G8": "PENDING: 실기기 SVG 렌더와 모바일 터치 검수 필요",
+        "G9": "PARTIAL: 31/32 동일 SVG 연결 검증, 실제 화면 재검 전"
+      },
+      "retries": 0,
+      "notes": "해당 SVG는 최종 WebP 에셋 승인 전 잠정 시안. 회의실 배경 이외의 장면을 임의로 교체하지 않도록 원고 줄 범위로 게이팅함. 인물·뉴럴피드 UI는 별도 HTML."
+    }
+  ]
+}

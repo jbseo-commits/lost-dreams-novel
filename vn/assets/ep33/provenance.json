@@ -1,0 +1,45 @@
+{
+  "created": "2026-10-20",
+  "source": "manuscript/ep033.md",
+  "status": "DRAFT_VECTOR_NOT_FINAL_ART",
+  "sceneSet": [
+    {
+      "file": "bg-human-only-exterior.svg",
+      "manuscript": "ep033.md:3-54",
+      "time": "Thursday 08:40",
+      "proof": "동부 환승센터 옆 인재홀 앞에는 줄이 이미 길게 늘어서 있었다.",
+      "description": "인재홀과 환승센터 인접 도시 배경, 줄의 군중을 얼굴 없는 실루엣으로 묘사. 원고에 존재하지 않는 브랜드·전형 세부는 추가하지 않음."
+    },
+    {
+      "file": "bg-human-only-waiting.svg",
+      "manuscript": "ep033.md:56-141,278-409",
+      "time": "contest daytime",
+      "proof": "대기실에는 이백 명쯤 앉아 있었다.",
+      "description": "여러 줄의 참가자, 큰 벽 중계 화면. 참가자 번호·점수·검은 칩·다은 결과는 HTML 렌더로 분리."
+    }
+  ],
+  "production": "Hand-authored scalable SVG draft, viewBox 1672x941; JPG/PNG master and painterly WebP art have not been approved. Previous image-generation attempt targeting chapter 33 emitted chapter 10 evaluation room; G2 fail, image excluded.",
+  "visualGates": {
+    "G1": "PARTIAL: 붐비는 행사장과 3초 패턴은 전달, 인물 감정 CG 미제작",
+    "G2": "PARTIAL: 명시 장소·인원 규모·시점 일치, 건물 내부 세부는 정전 미확정",
+    "G3": "N/A: 고유 인물 얼굴 없음, 미확인 인물 원화 무단 사용 회피",
+    "G4": "PENDING: 다은·정미경 캐릭터 CG/표정",
+    "G5": "PARTIAL: 기존 상층 의료 회의실과 실루엣·밀도로 구별, 실기기 비교 필요",
+    "G6": "PENDING: 1280x720 1920x1080 390x844 actual screenshot and touch",
+    "G7": "PENDING: 25% reduction",
+    "G8": "PENDING: pixel render inspection",
+    "G9": "PARTIAL: 두 무대 원고 구간과 정전 스코어 연결, 원화 세트 품질 미검증"
+  },
+  "code": [
+    "vn/human-only-scene.js",
+    "vn/human-only-scene.css",
+    "vn/human-only-scene.test.mjs"
+  ],
+  "canonProtections": [
+    "원고·설정·스토리 데이터 수정 없음",
+    "성적과 기기 공개 시점은 원고 anchor index 기준",
+    "HUMAN ONLY 현수막은 HTML 별도·이미지에 텍스트 굽지 않음",
+    "AI 연산·광고꿈 비밀 설정 노출 없음",
+    "main 수정/병합/배포 없음"
+  ]
+}

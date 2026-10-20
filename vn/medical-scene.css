@@ -1,0 +1,48 @@
+/* 31–32: original, source-timed stage composition; illustration sprites remain unmodified. */
+.medical-story-stage{position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none;isolation:isolate}
+.medical-story-stage[hidden]{display:none!important}
+.medical-stage-people{position:absolute;inset:0}
+.medical-stage-actor{position:absolute;bottom:21%;height:62%;width:37%;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;filter:drop-shadow(0 18px 42px #02070bbb);animation:medical-arrive .85s cubic-bezier(.12,.7,.3,1) both}
+.medical-stage-actor img{width:100%;height:100%;object-fit:cover;object-position:center top;mask-image:linear-gradient(180deg,#000 0%,#000 68%,transparent 100%)}
+.medical-stage-actor.seoin{left:-2%;animation-delay:.02s}
+.medical-stage-actor.yoonha{right:-2%;animation-delay:.13s}
+.medical-stage-display{position:absolute;left:50%;top:16%;transform:translateX(-50%);width:min(33vw,460px);max-width:90%;min-height:148px;padding:16px 18px 20px;display:flex;flex-direction:column;gap:11px;background:linear-gradient(138deg,rgba(9,23,34,.79),rgba(17,31,43,.58));border:1px solid rgba(170,218,233,.43);box-shadow:0 23px 70px #0109108a,0 0 40px #76c6d216;backdrop-filter:blur(8px);isolation:isolate}
+.medical-stage-aura{position:absolute;inset:0;background:linear-gradient(116deg,#e0f5e80f,transparent 35%,#65aec418);opacity:.7;z-index:-1}
+.medical-stage-display::before,.medical-stage-display::after{content:"";position:absolute;width:18px;height:18px;border-color:#b1d7d8;border-style:solid;opacity:.9}
+.medical-stage-display::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.medical-stage-display::after{right:-1px;bottom:-1px;border-width:0 2px 2px 0}
+.medical-stage-overline{font-size:10px;letter-spacing:.22em;color:#b8d8db;text-transform:uppercase;font-family:system-ui,sans-serif}
+.medical-story-stage[data-phase="empty"] .medical-stage-display{visibility:hidden;opacity:0}
+.medical-stage-rows{display:flex;flex-direction:column;gap:6px}
+.medical-stage-row{display:grid;grid-template-columns:25px minmax(0,1fr);align-items:center;gap:10px;padding:8px 9px;color:#dde8e5;background:linear-gradient(90deg,#96caca11,transparent);border-top:1px solid #b2dbe227;animation:medical-line-in .42s ease both}
+.medical-stage-index{color:#8bb2bc;font-size:10px;font-variant-numeric:tabular-nums;letter-spacing:.08em}
+.medical-stage-label{font-size:clamp(11px,1.15vw,15px);line-height:1.48;word-break:keep-all;overflow-wrap:anywhere;text-shadow:0 1px 3px #021018a6}
+.medical-story-stage[data-phase="running"] .medical-stage-row:last-child{color:#f6ddaa;border-color:#efc37e66;background:linear-gradient(90deg,#edb46f29,transparent);box-shadow:inset 2px 0 #e6b875}
+.medical-story-stage[data-phase="pending"][data-room="waiting"] .medical-stage-row{border-color:#ddbf8a6a;box-shadow:inset 2px 0 #e0bf81}
+.medical-story-stage[data-phase="complete"] .medical-stage-row:last-child{color:#d4ead8;border-color:#9bdbc16a;box-shadow:inset 2px 0 #90dab6}
+.medical-story-stage[data-room="waiting"] .medical-stage-display{top:18%;width:min(32vw,405px);border-color:#bdc7b777;background:linear-gradient(138deg,#28353ad9,#172833bc)}
+.medical-story-stage[data-room="waiting"] .medical-stage-overline{color:#d0d7c6}
+.medical-story-stage[data-room="waiting"] .medical-stage-actor{bottom:21%;height:62%}
+.medical-story-stage[data-room="waiting"] .medical-stage-actor.yoonha{opacity:.7;filter:brightness(.75) saturate(.83) drop-shadow(0 16px 32px #010407)}
+.stage.ui-hidden .medical-stage-display{visibility:hidden}
+.medical-story-stage.reduced-motion .medical-stage-actor,.medical-story-stage.reduced-motion .medical-stage-row{animation:none!important;transition:none!important}
+@keyframes medical-arrive{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes medical-line-in{from{opacity:.15;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:800px){.medical-stage-actor{width:46%;height:64%;bottom:24%}.medical-stage-actor.seoin{left:-9%}.medical-stage-actor.yoonha{right:-9%}.medical-stage-display{width:46vw;top:13%;padding:13px}}
+@media(max-width:640px){
+ .medical-story-stage{z-index:3}
+ .medical-stage-people{opacity:.94}
+ .medical-stage-actor{width:95vw!important;height:50vh!important;bottom:21%!important}
+ .medical-stage-actor.seoin{left:2%!important}
+ .medical-stage-actor.yoonha{display:none}
+ .medical-stage-display,.medical-story-stage[data-room="waiting"] .medical-stage-display{left:50%;top:11%;width:87vw;min-height:75px;padding:10px 13px 13px;gap:7px;background:linear-gradient(145deg,#0c1e2bdb,#172a35c7)}
+ .medical-stage-overline{font-size:9px;letter-spacing:.14em}
+ .medical-stage-rows{gap:3px}
+ .medical-stage-row{grid-template-columns:19px minmax(0,1fr);gap:8px;padding:4px 8px}
+ .medical-stage-label{font-size:11px;line-height:1.24}
+ .medical-stage-index{font-size:9px}
+ .medical-story-stage[data-room="waiting"] .medical-stage-actor{height:50vh!important;bottom:21%!important}
+}
+@media(prefers-reduced-motion:reduce){.medical-story-stage *{animation:none!important;transition:none!important}}
+.stage.vn-medical-authored .portrait-wrap{opacity:0!important;pointer-events:none!important}
+.stage.vn-medical-authored .motif-stage{opacity:0;pointer-events:none!important}
