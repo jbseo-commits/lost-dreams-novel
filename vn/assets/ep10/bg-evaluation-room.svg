@@ -27,13 +27,13 @@
 <path d="M310 154L310 602M1362 154V602" stroke="#b4d1d9" stroke-opacity=".13" stroke-width="5"/>
 <ellipse cx="835" cy="609" rx="168" ry="27" fill="url(#chairshade)" filter="url(#blur)"/>
 <g stroke-linejoin="round" stroke-linecap="round">
- <path d="M766 427L748 573M907 427L925 573" stroke="#05090d" stroke-width="13"/>
- <path d="M768 425L751 574M905 425L923 574" stroke="#83919a" stroke-opacity=".69" stroke-width="4"/>
+ <path d="M766 427L748 613M907 427L925 613" stroke="#05090d" stroke-width="13"/>
+ <path d="M768 425L751 614M905 425L923 614" stroke="#83919a" stroke-opacity=".69" stroke-width="4"/>
  <path d="M785 285Q777 282 774 296L766 403Q766 413 777 415H895Q906 413 906 400L898 295Q897 282 888 285Z" fill="url(#seat)" stroke="#677a88" stroke-width="5"/>
  <path d="M779 307Q837 298 895 307M776 382Q834 392 900 382" stroke="#afc5ce" stroke-opacity=".31" stroke-width="3" fill="none"/>
  <path d="M761 409Q834 391 914 408L904 432Q836 446 769 432Z" fill="url(#seat)" stroke="#778993" stroke-width="4"/>
- <path d="M776 440L764 571M895 440L909 571" stroke="#070c11" stroke-width="12"/>
- <path d="M777 442L766 572M894 442L907 572" stroke="#93aab4" stroke-opacity=".46" stroke-width="3"/>
+ <path d="M776 440L764 612M895 440L909 612" stroke="#070c11" stroke-width="12"/>
+ <path d="M777 442L766 613M894 442L907 613" stroke="#93aab4" stroke-opacity=".46" stroke-width="3"/>
 </g>
 <path d="M718 634Q839 598 954 636" stroke="#c7e4ea" stroke-opacity=".08" stroke-width="15" fill="none" filter="url(#blur)"/>
 <rect width="1672" height="941" filter="url(#grain)" opacity=".043" style="mix-blend-mode:screen"/>
