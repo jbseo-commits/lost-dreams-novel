@@ -35,7 +35,7 @@
 <path d="M228 597H1485" stroke="#c7cfbe" stroke-opacity=".51" stroke-width="5"/>
 <path d="M0 719L228 597M1672 719L1485 597M0 865L548 597M1672 865L1220 597M828 941L828 597" fill="none" stroke="#b5c7c4" stroke-opacity=".12" stroke-width="3"/>
 <path d="M0 823H1672M0 915H1672" stroke="#dbe3d7" stroke-opacity=".08" stroke-width="2"/>
-<ellipse cx="955" cy="677" rx="176" ry="43" fill="#0a1117" opacity=".5" filter="url(#blur)"/>
+<ellipse cx="955" cy="646" rx="176" ry="43" fill="#0a1117" opacity=".5" filter="url(#blur)"/>
 <g stroke-linejoin="round" stroke-linecap="round">
 <path d="M881 419L866 595M1025 419L1046 595" stroke="#152329" stroke-width="12"/>
 <path d="M883 420L869 595M1023 420L1043 595" stroke="#8b9995" stroke-opacity=".5" stroke-width="4"/>
