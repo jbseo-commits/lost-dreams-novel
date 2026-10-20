@@ -19,6 +19,7 @@ import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
 import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=teaser-art-20261021-r1';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=teaser-art-20261021-r1';
+import { syncEpisodeTwoCopy } from './episode-two-copyfix.js?v=20261021-a';
 import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=teaser-art-20261021-r1';
 
 import {coreSceneDirection,isOptionalObservation,CORE_CUTS,CORE_MOMENTS,CORE_DEMO_STORAGE_SUFFIX} from './core-demo.js?v=teaser-art-20261021-r1';
@@ -27,6 +28,7 @@ import {coreReadingPage,corePreviousPage} from './core-reading.js?v=teaser-art-2
 const demoMode=true;
 if(demoMode)document.documentElement.dataset.coreDemo='true';
 const fullStory=normalizeStory(window.STORY);
+syncEpisodeTwoCopy(fullStory);
 const story=withTeaserCharacterAssets(publicDemoStory(fullStory),EP1_ASSETS);
 const activeStorageKey=STORAGE_KEY+(demoMode?CORE_DEMO_STORAGE_SUFFIX:'');
 document.documentElement.dataset.vnBuild='teaser-art-20261021-r1';
