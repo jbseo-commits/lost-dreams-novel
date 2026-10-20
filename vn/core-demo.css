@@ -15,3 +15,10 @@ html[data-core-demo="true"] .title-version::after{content:' · CORE DEMO / 1—1
 .core-scene.ep1-cg-active .neural-stage[data-neural-kind="neural"][data-neural-primary="false"] .neural-header{margin:0;justify-content:flex-start}
 .core-scene.ep1-cg-active .neural-stage[data-neural-kind="neural"][data-neural-primary="false"] :is(.neural-field,.neural-title,.neural-body,.neural-senses,.neural-meta,.neural-status,.neural-expand){display:none;pointer-events:none}
 .core-scene:has(.core-board:not([hidden])) .direction-card{display:none!important;pointer-events:none}
+.end-screen.public-ending{background:linear-gradient(180deg,#071017b8,#07121ee6),url('assets/title-city.jpg') center/cover no-repeat}
+.release-ending{width:min(880px,88vw);max-height:90dvh;overflow:auto;background:radial-gradient(ellipse at 50% 0,#24404b55,transparent 60%),#0b171ff0;border-color:#b9b08a66;box-shadow:0 24px 120px #0008}
+.release-ending h2{white-space:pre-line;word-break:keep-all;overflow-wrap:anywhere;font:clamp(23px,3vw,38px)/1.6 Batang,'바탕',Georgia,serif;color:#e4dcc6}
+.release-ending>p{white-space:pre-line;line-height:2;color:#b9c8c4}.release-ending .end-actions{flex-wrap:wrap;gap:10px}
+.release-primary{min-height:46px;padding:12px 20px;border:1px solid #c4ad78!important;background:#c4ad78!important;color:#101a20!important;text-decoration:none;text-align:center}
+.release-info p{line-height:1.9}.release-info h3{line-height:1.8;color:#d7c9a6}.release-status{padding:18px;border-left:2px solid #9e936f;background:#16242b;color:#bdc9c3}.release-buy-link{display:inline-flex;align-items:center;margin:8px 12px 8px 0}.release-locked{border:1px solid #8d977d66;margin-top:24px;padding:20px;background:#132129}.release-locked h3{font-size:17px;color:#c6bea1}.release-locked p{font-size:14px;color:#afbcb7}
+@media(max-width:640px){.release-ending{padding:26px 20px;max-height:88dvh}.release-ending .end-actions{display:grid;grid-template-columns:1fr}.release-ending button{min-height:46px}.release-ending h2{font-size:24px}}
