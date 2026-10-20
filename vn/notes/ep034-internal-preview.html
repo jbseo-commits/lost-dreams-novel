@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><title>34화 · 내부 장면 검수</title>
+<link rel="stylesheet" href="../settlement-scene.css">
+<style>
+:root{color-scheme:dark;background:#0a1720;color:#e5e9de;font-family:"Malgun Gothic",system-ui,sans-serif}
+*{box-sizing:border-box}html,body{margin:0;min-height:100dvh}
+body{background:radial-gradient(ellipse at 50% 0,#1b343c,#08121a 70%);display:flex;justify-content:center}
+main{width:min(1360px,100%);padding:clamp(10px,2vw,28px)}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 14px;flex-wrap:wrap}
+h1{font-family:Georgia,"Malgun Gothic",serif;font-weight:400;letter-spacing:.05em;font-size:clamp(19px,2.3vw,30px);margin:0}
+.subtitle{color:#a8bab5;font-size:12px;line-height:1.6;margin-top:6px}
+.status{color:#d1b77b;font-size:11px;border:1px solid #bea96c6f;padding:6px 11px}
+.stage{position:relative;width:100%;aspect-ratio:1672/941;background:#243640;overflow:hidden;border:1px solid #9fafa64d;box-shadow:0 19px 55px #0008}
+.stage-image{position:absolute;inset:0;background-size:cover;background-position:center}
+.stage-image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 39%,#06121a82)}
+.stage.ui-hidden .settlement-story-stage{visibility:hidden}
+.dialogue{position:absolute;left:9%;right:9%;bottom:3%;height:clamp(106px,21%,190px);border:1px solid #b8c1ab60;background:linear-gradient(125deg,#0c1a23eb,#122732da);backdrop-filter:blur(9px);padding:clamp(12px,2vw,25px);z-index:4;box-shadow:0 12px 48px #050b18a8}
+.label{font:11px/1.4 system-ui,sans-serif;color:#ddb97b;letter-spacing:.12em}
+.text{font-size:clamp(12px,1.4vw,19px);line-height:1.7;white-space:pre-wrap;word-break:keep-all;margin:10px 0 0;color:#edf0e8}
+.toolbar{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:13px}
+.buttons{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+button{appearance:none;border:1px solid #9dbaac70;background:#18333b;color:#e5e9e0;border-radius:3px;padding:10px 14px;font:13px system-ui,sans-serif;cursor:pointer}
+button:hover,button:focus-visible{border-color:#e1c286;outline:none;color:#ffe8bf}
+button:disabled{opacity:.3;cursor:not-allowed}
+button.active{background:#6e5c3c;border-color:#e0bd7d}
+.progress{font:12px system-ui,sans-serif;color:#9bb1a8}
+.note{margin-top:15px;line-height:1.7;font-size:12px;color:#90a9a7}
+@media(max-width:640px){main{padding:8px}header{margin:9px 6px}.stage{aspect-ratio:390/680}.stage-image{background-position:center}.dialogue{left:3%;right:3%;height:27%;bottom:2%;padding:14px}.text{font-size:13px;line-height:1.55}.toolbar{padding:4px 5px}button{padding:9px 10px;font-size:11px}}
+</style><script src="../story-data.js"></script></head>
+<body><main>
+<header><div><h1>제34화 · 이름을 놓는 값</h1><div class="subtitle">외부 회의실 / 환급 창구 · 원고와 에셋을 함께 확인하는 내부 검수 페이지</div></div><span class="status">DRAFT ART · NOT PUBLIC RELEASE</span></header>
+<section class="stage" id="stage" aria-label="34화 개발용 장면 미리보기">
+<div class="stage-image" id="background"></div>
+<div class="settlement-story-stage" id="settlementPanel" hidden aria-hidden="true"></div>
+<div class="dialogue"><span id="speaker" class="label"></span><p id="sentence" class="text"></p></div>
+</section>
+<div class="toolbar"><div class="buttons">
+<button type="button" id="meeting">오전 11시 · 합의 면담</button><button type="button" id="refund">오후 2시 10분 · 환급 접수</button>
+<button type="button" id="previous">← 이전</button><button type="button" id="next">다음 →</button><button type="button" id="hide">정보 레이어 숨기기</button>
+</div><span class="progress" id="progress">검수 준비</span></div>
+<div class="note">좌우 방향키로 문장을 이동합니다. 정식판 공개나 구매 제한 해제를 의미하지 않으며 SVG는 최종 회화풍 원화가 아닙니다.</div>
+</main>
+<script type="module">
+import {SettlementSceneStage,settlementForBeat} from '../settlement-scene.js';
+const chapter=window.STORY?.chapters?.find(c=>String(c.id)==='34');
+const $=id=>document.getElementById(id);
+const stage=new SettlementSceneStage($('settlementPanel'));
+const beats=chapter?.beats??[];
+const meeting=beats.findIndex(b=>b.text?.includes('아르카디아 외부 회의실에 남자가 먼저 와 있었다.'));
+const refund=beats.findIndex(b=>b.text?.includes('휴머나이즈 랩의 환급 접수 창구는 작은 사무실 옆방이었다.'));
+let cursor=meeting>=0?meeting:0,layerHidden=false;
+function render(){
+ const beat=beats[cursor];
+ if(!beat){$('sentence').textContent='원고를 읽지 못했습니다.';return;}
+ const cue=settlementForBeat(chapter,cursor);
+ stage.render(cue,{reducedMotion:matchMedia('(prefers-reduced-motion:reduce)').matches});
+ $('background').style.backgroundImage=cue?'url("'+new URL('../'+cue.background.slice(2),location.href).href+'")':'none';
+ $('speaker').textContent=beat.speaker||'서술';
+ $('sentence').textContent=beat.text;
+ $('progress').textContent=(cursor+1)+' / '+beats.length+' · 원고 '+(beat.sourceLine??'?')+'행';
+ $('previous').disabled=cursor<=0;$('next').disabled=cursor>=beats.length-1;
+ $('stage').classList.toggle('ui-hidden',layerHidden);
+ $('hide').textContent=layerHidden?'정보 레이어 다시 표시':'정보 레이어 숨기기';
+ $('meeting').classList.toggle('active',cue?.room==='meeting');
+ $('refund').classList.toggle('active',cue?.room==='refund');
+}
+function goto(index){if(index<0||index>=beats.length)return;cursor=index;render()}
+$('meeting').onclick=()=>goto(meeting);$('refund').onclick=()=>goto(refund);
+$('previous').onclick=()=>goto(cursor-1);$('next').onclick=()=>goto(cursor+1);
+$('hide').onclick=()=>{layerHidden=!layerHidden;render()};
+document.addEventListener('keydown',event=>{
+ if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;
+ if(event.key==='ArrowRight'){event.preventDefault();goto(cursor+1)}
+ if(event.key==='ArrowLeft'){event.preventDefault();goto(cursor-1)}
+});
+if(!chapter||meeting<0||refund<0){
+ $('sentence').textContent='34화 원고 기준점이 현재 story-data와 맞지 않습니다.';
+ for(const id of ['meeting','refund','previous','next'])$(id).disabled=true;
+}else render();
+</script></body></html>
