@@ -1,5 +1,5 @@
-import {CORE_SOURCE_HASHES,CORE_CUTS,CORE_MOMENTS} from './core-demo-data.js?v=core-demo-20261021-r2';
-import {withEpisodeCutscene} from './episode-cutscenes.js?v=core-demo-20261021-r2';
+import {CORE_SOURCE_HASHES,CORE_CUTS,CORE_MOMENTS} from './core-demo-data.js?v=demo-only-20261021-r2';
+import {withEpisodeCutscene} from './episode-cutscenes.js?v=demo-only-20261021-r2';
 export {CORE_CUTS,CORE_MOMENTS};
 export const CORE_DEMO_EDITION='core11';
 export const CORE_DEMO_STORAGE_SUFFIX='_core11';
