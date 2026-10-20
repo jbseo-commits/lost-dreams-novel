@@ -1,5 +1,5 @@
 export class EpisodeOneStage {
-  constructor(host,assets){
+  constructor(host,assets,{onInspect}={}){
     this.host=host;this.assets=assets;this.currentCg='';this.currentScene=-1;this.actorState=new Map();
     this.cg=document.createElement('div');this.cg.className='ep1-cg';
     this.actors=document.createElement('div');this.actors.className='ep1-actors';
@@ -7,7 +7,9 @@ export class EpisodeOneStage {
     this.wall=document.createElement('div');this.wall.className='ep1-wall';this.wall.hidden=true;this.wall.setAttribute('aria-hidden','true');
     this.wall.style.backgroundImage=`url("${assets.sea}")`;
     this.lids=document.createElement('div');this.lids.className='ep1-lids';this.lids.setAttribute('aria-hidden','true');
-    this.host.append(this.cg,this.wall,this.actors,this.panel,this.lids);
+    this.inspect=document.createElement('button');this.inspect.type='button';this.inspect.className='ep12-art-button';this.inspect.textContent='전체 그림';this.inspect.hidden=true;
+    this.inspect.addEventListener('click',event=>{event.stopPropagation();if(this.inspectCue&&onInspect)onInspect(this.inspectCue);});
+    this.host.append(this.cg,this.wall,this.actors,this.panel,this.lids,this.inspect);
   }
   render(cue,{instant=false,reducedMotion=false}={}){
     const stage=this.host.parentElement;
@@ -23,10 +25,21 @@ export class EpisodeOneStage {
     this.host.classList.toggle('ep1-no-motion',instant||reducedMotion||matchMedia('(prefers-reduced-motion: reduce)').matches);
     this.host.dataset.shot=cue.shot;
     this.host.dataset.cg=cue.cg||'';
+    this.host.dataset.cutscene=cue.cutscene?.id||'';
+    this.inspectCue=cue.cutscene?cue:null;this.inspect.hidden=!this.inspectCue;
+    this.host.style.setProperty('--cut-position',cue.cutscene?.position||'50% 48%');
+    this.cg.dataset.phase=cue.cutscene?.phase||'';
+    const impact=cue.cutscene?.impact??'';
+    if(this.cg.dataset.impact!==String(impact)){
+      this.cg.classList.remove('ep12-cut-impact');
+      if(impact!==''){void this.cg.offsetWidth;this.cg.classList.add('ep12-cut-impact');}
+      this.cg.dataset.impact=String(impact);
+    }
     if(cue.cg!==this.currentCg){
       this.cg.replaceChildren();this.cg.style.backgroundImage=cue.cg?`url("${this.assets[cue.cg]}")`:'';if(cue.cg){const img=document.createElement('img');img.src=this.assets[cue.cg];img.alt='';this.cg.append(img);}
       this.currentCg=cue.cg;
     }
+    const cgImage=this.cg.querySelector('img');if(cgImage)cgImage.alt=cue.cutscene?.alt||'';
     this.cg.hidden=!cue.cg;this.wall.hidden=!cue.wallAd;
     this.lids.classList.toggle('closed',cue.intro||cue.blackout);
     const visible=new Set(cue.actors.map(p=>p.id));
@@ -44,10 +57,12 @@ export class EpisodeOneStage {
     }
     this.panel.hidden=!cue.document;
     if(cue.document){
-      const signature=JSON.stringify(cue.document);
+      const compact=Boolean(cue.cutscene);
+      this.panel.classList.toggle('ep12-document-compact',compact);
+      const signature=JSON.stringify([cue.document,compact]);
       if(this.panel.dataset.signature!==signature){
         this.panel.replaceChildren();const eyebrow=document.createElement('span');eyebrow.className='ep1-doc-label';eyebrow.textContent='퇴직 의사 확인서';this.panel.append(eyebrow);
-        if(cue.document.showRisks){
+        if(cue.document.showRisks&&!compact){
           const rows=[['향후 24개월 예상 소득 안정성','−31.2%'],['가족 연계 의료 플랜 비용','+14.8%'],['주거 신용등급 하락 가능성','22.1%']];
           const dl=document.createElement('dl');rows.forEach(([k,v])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=k;dd.textContent=v;dl.append(dt,dd);});this.panel.append(dl);
           const note=document.createElement('p');note.textContent='재고를 권장합니다.';this.panel.append(note);
@@ -61,5 +76,7 @@ export class EpisodeOneStage {
   }
   clear(){
     this.host.hidden=true;this.host.parentElement.classList.remove('episode-one','episode-two','ep1-blackout','ep1-intro','ep1-cg-active');this.host.parentElement.dataset.ep1Actors='';this.host.parentElement.dataset.ep1DocumentPhase='';this.actorState.clear();this.actors.replaceChildren();this.currentScene=-1;
+    this.cg.replaceChildren();this.cg.style.backgroundImage='';this.cg.classList.remove('ep12-cut-impact');this.cg.dataset.impact='';this.cg.dataset.phase='';this.currentCg='';
+    this.host.dataset.cutscene='';this.host.dataset.cg='';this.host.dataset.shot='';this.host.dataset.dream='false';this.host.dataset.holdMotion='false';this.panel.hidden=true;this.wall.hidden=true;this.inspect.hidden=true;this.inspectCue=null;
   }
 }

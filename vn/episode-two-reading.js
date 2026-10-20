@@ -1,8 +1,8 @@
-import { episodeTwoDirection, episodeTwoSpeaker, isEpisodeTwo } from './episode-two.js?v=ep12-20261019-r3';
-import { presentationForBeat } from './neural-cues.js?v=ep12-20261019-r3';
+import { episodeTwoDirection, episodeTwoSpeaker, isEpisodeTwo } from './episode-two.js?v=cutscenes-20261020-r5';
+import { presentationForBeat } from './neural-cues.js?v=cutscenes-20261020-r5';
 const RANGES=new Map([[0,2],[3,4],[16,19],[25,27],[37,38],[44,47],[50,51],[58,60],[62,64],[65,66],[67,69],[70,72],[79,81],[85,86],[90,91],[95,96],[119,121],[122,123],[130,131],[135,136],[138,139],[148,150],[151,152],[169,172],[173,174],[183,186],[206,206],[224,227],[228,229],[233,234],[235,237],[240,243],[250,252],[253,256],[257,259],[272,274],[275,277],[278,279],[281,282]]);
 const pages=new WeakMap();
-const state=cue=>JSON.stringify([cue.sceneStart,cue.actors,cue.cg,cue.shot,cue.music,cue.ambience,cue.backgroundAsset,cue.holdMotion]);
+const state=cue=>JSON.stringify([cue.sceneStart,cue.actors,cue.cg,cue.shot,cue.music,cue.ambience,cue.backgroundAsset,cue.holdMotion,cue.cutscene]);
 function pageMap(chapter){
   if(!isEpisodeTwo(chapter))return null;
   if(pages.has(chapter))return pages.get(chapter);

@@ -1,0 +1,153 @@
+{
+  "created": "2026-10-20",
+  "baseline": "00025cb",
+  "tool": "built-in image_gen",
+  "model": "tool did not expose an exact model name",
+  "purpose": "원문 행동과 사물, 신경 연결을 보여 주는 1~2화 사건 컷신",
+  "notes": [
+    "기존 원화와 해변 CG 파일을 보존",
+    "PNG를 WebP로 형식 변환, 그림 편집은 image_gen에서 수행",
+    "숫자·메시지·경고 단계는 원문 시점의 DOM UI로 표시"
+  ],
+  "assets": [
+    {
+      "name": "neural-awakening",
+      "file": "neural-awakening.webp",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-60ffe3aa-2d4a-4fa9-8f89-6e87c958efbd.png",
+      "spec": {
+        "prompt": "Use case: illustration-story. Create ONE finished full-bleed landscape 16:9 cinematic event CG for the Korean sci-fi visual novel. Use reference 1 only for adult male Seoin's face, tousled dark brown hair, plain gray crewneck home clothes and painterly refined anime rendering; use reference 2 for the narrow worn folding-partition studio room. A close, intimate side view of Seoin lying awake on his pillow just after opening his eyes, his temple and eye at center of frame, a tiny flush metallic neural connector just beside the temple softly warm amber, with the cracked stained ceiling seen out of focus behind. His expression slightly unsettled though rested. This is an everyday neural-interface society, no helmet, no dangling cable, no floating robot, no medical gore. Early pale dawn and subtle amber connector light. Visual focus on the tangible connection between his head and invisible AI, not a standing portrait. Composition: face, temple port and pillow centrally grouped in middle 60% so all remain readable in a portrait mobile contained frame. Leave quiet dark lower quarter for game dialogue. No text, numbers, screens, symbols, logos, or watermark. Preserve identity, gender male, clothing and humble room. The reference is guidance; create a new camera angle and integrated event illustration.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-morning.webp"
+        ],
+        "transparent_background": false
+      },
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 213274,
+      "sha256": "009e8d2c22b7128e525a89aa953499fcd4ce464e96960d163089ee34440cbf9c"
+    },
+    {
+      "name": "kitchen-ad",
+      "file": "kitchen-ad.webp",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-52d82df8-3887-4a31-81ab-338f99e07249.png",
+      "spec": {
+        "prompt": "Use case: illustration-story. ONE landscape 16:9 full event CG, painted cinematic anime matching the provided project art. Reference1 is identity and narrow kitchen geometry: adult male Seoin in gray crewneck, middle-aged mother in taupe cardigan white blouse, scarred refrigerator next to tiny folding table and partition bed. Reference2 is the exact blue sea dream advertisement to echo. New shot from behind Seoin's shoulder at the cramped breakfast kitchen: Seoin's head turns toward a wall-mounted panel showing ONLY the reference's turquoise ocean and sky, while his mother is in the far background cooking synthetic eggs at a pan, not serving at table yet. The ocean panel and Seoin's stopped gaze are the center of the story. Center the sea panel near50%x30%, the male profile near42%x45%, mother/pan to right middle distance, fridge left and cramped folding table below. No extra people; no giant luxury kitchen. Same sea color as the dream makes the visual connection clear. Dawn cool room, modest warm stove light, blue screen reflects subtly on his face. Key action framed centrally to work inside a portrait phone contain image. No text or numbers on panel, no captions, no logo, no watermark. Full background; not sprites or concept sheet.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/cg-table-home.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/cg-sea.webp"
+        ],
+        "transparent_background": false
+      },
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 329982,
+      "sha256": "ff6fe0f62f758358238a0bdce1a6db16c880d41f3fcaa7e6b7b45fbf946ffcda"
+    },
+    {
+      "name": "retirement-hand",
+      "file": "retirement-hand.webp",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-4a15363c-e9fc-4289-b034-36a80bfae92f.png",
+      "spec": {
+        "prompt": "Use case: illustration-story. ONE landscape 16:9 painted cinematic event closeup for Korean sci-fi visual novel, matching the two character references. Adult female Jiwoo's slender hand with plain gray rolled overshirt cuff, index fingertip just touching a glass approval control on a horizontal slim slate tablet on an ordinary office desk. Seoin adult male's white shirt cuff and his still hand visible at opposite edge, suggesting he watches. Camera overhead oblique extreme hand/tablet insert, NO faces, no standing portraits. Center the tablet and Jiwoo finger in middle55% of composition, hands legible and anatomically correct five fingers per hand. Tablet screen dark desaturated charcoal, a single faint neutral white rectangular approval touch outline, NO words, numbers, colored warning or success state: application will add accurate amber/red states later in sequence. Quiet office reflections, cold daylight, tense hesitant male hand opposed to decisive female index. Lower quarter dark clean space for game text. No decorative hearts, no phone held upright, no extra hands, no text/logo/watermark. Same painterly premium anime textures as references.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/jiwoo-woman-body-firm.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/seoin-worry.webp"
+        ],
+        "transparent_background": false
+      },
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 123940,
+      "sha256": "d4170259ed32556ef47b3c42defe29e84888c3a77d50203a8068f1394027f2b4"
+    },
+    {
+      "name": "empty-desk",
+      "file": "empty-desk.webp",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-7c514734-da3b-4bea-bda2-551073ab3e0b.png",
+      "spec": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 full cinematic event CG in refined painterly Korean anime style consistent with reference (adult male Seoin identity, dark slightly tousled hair, ordinary white shirt dark office jacket). A quiet office in daylight, shot over Seoin's shoulder, he is small at left foreground gazing at his colleague Jiwoo's completely cleared desk and pushed-in empty office chair in CENTER of composition. The conspicuously bare desk contains just the built-in dark workstation, NO plant, NO tumbler, NO photo, NO personal belongings, NO cardboard box; the cleared personal space is the event. Other occupied ordinary office desks out of focus in distance establish that only this seat is suddenly empty. No other distinct faces. Blue gray late morning, understated absence not haunted horror. Desk and chair center and uppermiddle enough to remain readable in mobile contained image. Lower quarter quiet and dark for dialogue. Avoid sci-fi fantasy city, no text/numbers/logo/watermark. Focus on missing person through space rather than portrait.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-standing.webp"
+        ],
+        "transparent_background": false
+      },
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 159162,
+      "sha256": "3530142d6bb71bd2767fc9e9474897776e0c1e4199288e8478d0889d983ca271"
+    },
+    {
+      "name": "medical-tablet",
+      "file": "medical-tablet.webp",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-aafbac39-3ec1-4bfb-9b6d-b6da67306390.png",
+      "spec": {
+        "prompt": "Use case: illustration-story. ONE16:9 landscape finished painted cinematic anime event CG. Reference1 is Jiwoo father's exact thin middle-aged Korean male identity, pale blue rolled sleeve shirt and small medical port at INNER wrist. Reference2 style and female Jiwoo gray shirt cuff if visible. In an ordinary modest living room, close table-level oblique shot of father's slim forearm sliding a thin slate tablet across low wooden table toward unseen guest Seoin. Inner wrist faces camera so the subtle clear circular regular-medication port is naturally visible, no needle/no tubes/no gore. Tablet in center of frame has dark glass with faint unreadable gray row shapes, no legible content and NO colored warning yet; exact numbers to be added in game later. His other hand rests tense on trouser knee just behind. Include edge of pale blue shirt torso, no large faces and no duplicated hands, integrated furniture background. This single action connects the illness to the financial calculation. Muted daylight cool white and worn warm wood, cinematic narrow depth of field. Center all wrist/port/tablet action inside middle60% for mobile contain framing, lowerquarter subdued. No medical bed, patientgown, hospital, IV, text/numbers/logo/watermark.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/father-appeal.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-guarded.webp"
+        ],
+        "transparent_background": false
+      },
+      "revision": {
+        "prompt": "Precise correction to this illustration, everything else stays exactly unchanged (camera, tablet, body, room, light, colors, clothing). The source novel specifies the medication port is on the INNER/palm side of the wrist. Currently it is on the back of the moving hand/wrist, incorrect. Remove that current circular patch from the extended arm. Turn the OTHER hand, the one resting on his knee, gently palm-up so its inner wrist is visible near the CENTER of the frame; place the same small clear circular medication port on that resting INNER wrist, just above the palm crease. Fingers naturally relaxed curved, exactly five per hand. Keep the extended hand sliding the tablet exactly as it is, now no patch on that hand. No new objects, no text. This is a tiny anatomical/continuity correction, not a new scene.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/.codex/generated_images/01a13f83-9499-73b1-b174-676d51363ed1/exec-cd94b98e-73ba-42ca-9342-3e01f3c387de.png"
+        ],
+        "transparent_background": false
+      },
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 150422,
+      "sha256": "3ccf434eef408719fb95509fa8009c2b5984b2035c5410ea7253b26edfd4470b"
+    },
+    {
+      "name": "clay-turn",
+      "file": "clay-turn.webp",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-fa8dadae-cf7d-432d-88f7-ed8ad207e78b.png",
+      "spec": {
+        "prompt": "Use case: illustration-story. ONE landscape16:9 painted premium anime cinematic event insert. Match female Jiwoo clothing and hand/clay object of reference1 exactly: gray rolled overshirt sleeves over charcoal tee, adult female slender hands, tiny thumb-sized graybrown uneven pinch-pot, irregular chipped-looking thick rim and shallow cup hollow, NO handle, NOT glazed, fits easily in palm and pocket. Outdoors on an ordinary street afternoon, chest-down closeup of Jiwoo gently turning the little misshapen cup on her open left palm with the tip of her right index finger, at a slight angle which reveals childlike fingermarks on clay. It is a quiet unsettling discovery, not a happy product showcase. Shallow depth of field bluegray urban pavement behind, restrained warm hand light, empty lowerquarter for dialogue. Both anatomically correct hands, cup, sleeveedges centered inside middle55%frame so mobile can display whole action. NO glowing magical object, NO hearts, no new flashback scene, no child, no text/logo/watermark. Full integrated scene not transparent sprite. Keep object exactlysmall as reference.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/jiwoo-clay.webp"
+        ],
+        "transparent_background": false
+      },
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 168430,
+      "sha256": "ed0870d28032dda3d726db1e9efaa570cd1204eb26166477224b0c82bdd643e1"
+    },
+    {
+      "name": "night-wake",
+      "file": "night-wake.webp",
+      "source": "C:\\Users\\정현아\\.codex\\generated_images\\01a13f83-9499-73b1-b174-676d51363ed1\\exec-ab33784b-1794-4bd6-aa06-427d2dba009f.png",
+      "spec": {
+        "prompt": "Use case: illustration-story. ONE finished landscape16:9 cinematic event CG in same painterly anime style. References1+2 identity of adult MALE Seoin, gray crewneck home top, short dark tousled hair, tired eyes; reference3 is his cramped foldingpartition home night environment, preserve humble lived-in room, NO luxury bedroom. Seoin sits on edge of narrow bed in the deep predawn, one hand pressed to chest, other lifting to wipe cold sweat at temple. He has just woken frightened from an advertisement dream; mouth parted, eyes no longer dreamy. Key story is abrupt physical return to the dark room, not a standing portrait. Moon-cool blue light, faint amber city throughcurtain, the wornpillow and compressedbedclothes visible, dimclockshape but NOdigits. Center face/hands/bed around50%x40%; important action wholly within central60%, lowerquarterquiet for game dialogue. Avoid phone, messages, secondperson, tropical scene, painted UI or text, logo/watermark. Keep allclothingon and pose adult ordinary, samefaceasreference. Fullbackground.",
+        "referenced_image_paths": [
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-home.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep12/seoin-startled.webp",
+          "C:/Users/정현아/lost-dreams-vn-publish-20261019/vn/assets/ep1/home-night.webp"
+        ],
+        "transparent_background": false
+      },
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 206458,
+      "sha256": "7385bc0d600be8239eb2d90455f0de737f471d8bceac1cd481373c85745bf9db"
+    }
+  ]
+}

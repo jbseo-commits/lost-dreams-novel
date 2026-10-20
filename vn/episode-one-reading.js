@@ -1,5 +1,5 @@
-import { episodeOneDirection } from './episode-one.js?v=ep12-20261019-r3';
-import { presentationForBeat } from './neural-cues.js?v=ep12-20261019-r3';
+import { episodeOneDirection } from './episode-one.js?v=cutscenes-20261020-r5';
+import { presentationForBeat } from './neural-cues.js?v=cutscenes-20261020-r5';
 
 // These are reading pages, not new story beats. Source indices remain the
 // coordinate system for saves, choices, scene direction and the backlog.
@@ -19,7 +19,7 @@ const requestedEnds = new Map(RANGES);
 const pages = new WeakMap();
 const visualState = cue => JSON.stringify([
   cue.sceneStart, cue.background, cue.cg, cue.shot, cue.actors, cue.document,
-  cue.wallAd, cue.ambience, cue.music, cue.closeFinance, cue.intro, cue.blackout,
+  cue.wallAd, cue.ambience, cue.music, cue.closeFinance, cue.intro, cue.blackout, cue.cutscene,
 ]);
 
 function pageMap(chapter) {

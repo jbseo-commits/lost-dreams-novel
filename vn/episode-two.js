@@ -1,3 +1,4 @@
+import { withEpisodeCutscene } from './episode-cutscenes.js?v=cutscenes-20261020-r5';
 // Presentation only. The source beats and all save coordinates stay unchanged.
 const SCENES = [
   [0,'광고 없는 아침','광고 없이 잔 첫날, 서인은 아무 꿈도 꾸지 않았다.'],
@@ -99,5 +100,5 @@ export function episodeTwoDirection(chapter,index) {
   if(index>=278){out.actors=[];out.shot='message';}
   const effects={20:'dishes',83:'message',95:'tablet',97:'amber',146:'tablet',173:'box',198:'box',222:'release',230:'approval',264:'amber',266:'release',269:'red',270:'release',280:'message',283:'message',285:'message'};
   out.fx=effects[index]||null;
-  return out;
+  return withEpisodeCutscene(out,chapter,index);
 }

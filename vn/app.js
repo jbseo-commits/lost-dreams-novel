@@ -9,18 +9,19 @@ import { presentationForBeat } from './neural-cues.js?v=scene-mix-20261020';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js';
-import { EP1_ASSETS } from './ep1-assets.js?v=ep12-20261019-r3';
-import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=ep12-20261019-r3';
-import { EpisodeOneStage } from './episode-one-stage.js?v=ep12-20261019-r3';
-import { createEpisodeOneAudio } from './episode-one-audio.js?v=ep12-20261019-r3';
-import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep12-20261019-r3';
+import { EP1_ASSETS } from './ep1-assets.js?v=cutscenes-20261020-r5';
+import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=cutscenes-20261020-r5';
+import { EpisodeOneStage } from './episode-one-stage.js?v=cutscenes-20261020-r5';
+import { createEpisodeOneAudio } from './episode-one-audio.js?v=cutscenes-20261020-r5';
+import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=cutscenes-20261020-r5';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
-import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r3';
-import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r3';
+import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=cutscenes-20261020-r5';
+import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=cutscenes-20261020-r5';
+import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=cutscenes-20261020-r5';
 
 const story = normalizeStory(window.STORY);
-document.documentElement.dataset.vnBuild='scene-mix-20261020';
+document.documentElement.dataset.vnBuild='cutscenes-20261020-r5';
 const $ = (id) => document.getElementById(id);
 const titleScreen = $('titleScreen'), gameScreen = $('gameScreen');
 createTitleAtmosphere({screen:titleScreen,canvas:$('titleAtmosphere')});
@@ -41,7 +42,7 @@ let backlogRestore = null, transientBacklog = false, autoTimer = 0, previousPlac
 let pendingChapter = null;
 const audio = createAudioDirector(() => store.settings);
 const neuralStage = new NeuralStage($('neuralStage'));
-const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS);
+const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS,{onInspect:openCutscene});
 const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {onStatus:(status,tracks={})=>{
   $('soundToggle').dataset.audioStatus=status;
   $('soundToggle').dataset.music=tracks.music||'';
@@ -49,6 +50,14 @@ const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {on
   $('soundToggle').setAttribute('aria-description',({playing:'음악 또는 장면 소리가 재생 중입니다.',silent:'이 장면은 조용히 재생합니다.',ready:'소리를 재생할 준비가 되었습니다.',blocked:'소리를 다시 눌러 재생해 주세요.',unavailable:'이 브라우저는 장면 음향을 지원하지 않습니다.'})[status]||'');
 }});
 let currentEpisodeCue = null;
+let currentEventCutscene = null;
+const preparedCutscenes=new Set();
+function prepareNearbyCutscenes(chapter,index){
+  for(const cut of EPISODE_CUTSCENES.filter(c=>c.chapter===chapter.id&&c.end>=index).slice(0,2)){
+    const path=EP1_ASSETS[cut.cg];if(!path||preparedCutscenes.has(path))continue;
+    preparedCutscenes.add(path);const image=new Image();image.src=path;
+  }
+}
 let currentReadingPage = null;
 let currentPerception = null, lastCommunicationGroup = '';
 let sceneFront = 0, sceneBackground = '', lastEffectKey = '', currentVisualKey = 'unset';
@@ -171,6 +180,7 @@ function renderChart(chart, compact = false) {
 }
 
 function renderDirection(beat, { quiet = false } = {}) {
+  const eventPicture=currentEpisodeCue||currentEventCutscene;
   const direction = beat.direction;
   stageImage.dataset.mood = direction?.mood ?? 'quiet';
   stageImage.dataset.episodeNight=String(currentEpisodeCue?.timeOfDay==='night');
@@ -183,7 +193,7 @@ function renderDirection(beat, { quiet = false } = {}) {
     requestAnimationFrame(() => placeRibbon.classList.add('arrive'));
   } else if (!place) placeRibbon.hidden = true;
   previousPlace = place;
-  const cast = currentEpisodeCue ? [] : direction?.cast ?? [];
+  const cast = eventPicture ? [] : direction?.cast ?? [];
   castRail.replaceChildren();
   cast.forEach((person) => {
     const chip = document.createElement('span'); chip.className = `cast-chip ${person.side}${person.remote ? ' remote' : ''}${person.id === direction?.focus ? ' focused' : ''}`;
@@ -192,7 +202,7 @@ function renderDirection(beat, { quiet = false } = {}) {
     castRail.append(chip);
   });
   castRail.hidden = !cast.length;
-  const portraits = currentEpisodeCue ? [] : directedCast(direction, story.assets, beat.portrait);
+  const portraits = eventPicture ? [] : directedCast(direction, story.assets, beat.portrait);
   const setPortrait = (wrap, image, person) => {
     if (!person) { wrap.classList.remove('visible'); return; }
     if (image.getAttribute('src') !== story.assets[person.id]) image.src = story.assets[person.id];
@@ -201,7 +211,7 @@ function renderDirection(beat, { quiet = false } = {}) {
   };
   setPortrait(portraitWrap, portraitImage, portraits[0]);
   setPortrait(secondaryPortraitWrap, secondaryPortraitImage, portraits[1]);
-  const visual = currentEpisodeCue ? null : direction?.visual;
+  const visual = eventPicture ? null : direction?.visual;
   const cgFrame=Boolean(visual&&['object','dream'].includes(visual.type)&&story.assets?.[visual.image]);
   $('stage').classList.toggle('cg-active',cgFrame);
   motifStage.classList.toggle('cg-frame',cgFrame);
@@ -247,7 +257,9 @@ function renderDirection(beat, { quiet = false } = {}) {
     if (!gameScreen.hidden && !modal.open) episodeAudio.render(currentEpisodeCue, { quiet });
     else episodeAudio.stop();
   } else {
-    episodeStage.clear(); episodeAudio.stop();
+    if(currentEventCutscene)episodeStage.render(currentEventCutscene,{instant:quiet,reducedMotion:store.settings.reducedMotion});
+    else episodeStage.clear();
+    episodeAudio.stop();
     if (direction?.music && !gameScreen.hidden && !modal.open) audio.resume(direction.music);
     else audio.stop();
     if (playEffect) audio.effect(direction.effect);
@@ -268,6 +280,15 @@ function openVisual(visual) {
   }
   if (visual.footer) { const footer = document.createElement('p'); footer.className = 'visual-footer'; footer.textContent = visual.footer; root.append(footer); }
   showModal(root, 'visual');
+}
+
+function openCutscene(cue){
+  const root=document.createElement('div');root.append(modalHeading('장면 그림',cue.cutscene.alt));
+  const frame=document.createElement('div');frame.className='cutscene-inspection';frame.tabIndex=0;frame.setAttribute('aria-label','장면 그림. 확대하면 좌우로 밀어 볼 수 있습니다.');
+  const img=document.createElement('img');img.src=EP1_ASSETS[cue.cg];img.alt=cue.cutscene.alt;frame.append(img);
+  const zoom=document.createElement('button');zoom.type='button';zoom.className='small-button';zoom.textContent='세부 확대';zoom.setAttribute('aria-pressed','false');
+  zoom.addEventListener('click',()=>{const active=frame.classList.toggle('detail');zoom.setAttribute('aria-pressed',String(active));zoom.textContent=active?'전체 맞춤':'세부 확대';});
+  root.append(zoom,frame);showModal(root,'cutscene');
 }
 
 function play(chapterId = story.chapters[0]?.id, beatIndex = 0, reset = false, savedProgress = null) {
@@ -321,6 +342,8 @@ function renderBeat({ revisit = false } = {}) {
   $('stage').dataset.chapterId = chapter.id;
   currentReadingPage = episodeOneReadingPage(chapter, progress.beatIndex) || episodeTwoReadingPage(chapter, progress.beatIndex);
   currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex) || episodeTwoDirection(chapter, progress.beatIndex);
+  currentEventCutscene=eventCutsceneDirection(chapter,progress.beatIndex);
+  prepareNearbyCutscenes(chapter,progress.beatIndex);
   if (currentEpisodeCue && currentReadingPage?.entries.length > 1) currentEpisodeCue.focus = currentReadingPage.focus;
   $('storyBox').classList.toggle('reading-page', Boolean(currentReadingPage?.entries.length > 1));
   $('chapterLabel').textContent = chapter.label;
@@ -358,7 +381,7 @@ function renderBeat({ revisit = false } = {}) {
   renderDirection(beat, { quiet: revisit });
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
-  directionCard.hidden = Boolean(currentEpisodeCue) || Boolean(currentPerception) || !beat.direction?.visual;
+  directionCard.hidden = Boolean(currentEpisodeCue||currentEventCutscene) || Boolean(currentPerception) || !beat.direction?.visual;
   speakerNode.textContent = currentReadingPage?.speaker ?? episodeTwoSpeaker(chapter,progress.beatIndex) ?? beat.speaker ?? '';
   speakerNode.hidden = primary || !speakerNode.textContent;
   storyText.className = `story-text${beat.kind === 'system' ? ' system' : ''}${beat.direction?.emphasis ? ' authored-emphasis' : ''}`;
@@ -636,10 +659,12 @@ function openChapters() {
 }
 
 function chapterMoments(chapter) {
-  if (episodeOneDirection(chapter, 0)) return EPISODE_ONE_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true}));
-  if (episodeTwoDirection(chapter, 0)) return EPISODE_TWO_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true}));
+  const inserts=EPISODE_CUTSCENES.filter(c=>c.chapter===chapter.id).map(c=>({beatIndex:c.start,place:`컷신 · ${c.alt}`,cutscene:true,authored:true}));
+  const merge=moments=>[...new Map([...moments,...inserts].map(m=>[m.beatIndex,m])).values()].sort((a,b)=>a.beatIndex-b.beatIndex);
+  if (episodeOneDirection(chapter, 0)) return merge(EPISODE_ONE_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true})));
+  if (episodeTwoDirection(chapter, 0)) return merge(EPISODE_TWO_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true})));
   const seenVisuals = new Set(), seenSignals = new Set(); let previousPlace = '';
-  return chapter.beats.flatMap((beat, beatIndex) => {
+  return merge(chapter.beats.flatMap((beat, beatIndex) => {
     const direction = beat.direction, place = direction?.place || '';
     const placeChanged = Boolean(place && place !== previousPlace);
     previousPlace = place;
@@ -651,7 +676,7 @@ function chapterMoments(chapter) {
     const signalNew = Boolean(signal && !seenSignals.has(signalKey));
     if (signal) seenSignals.add(signalKey);
     return placeChanged || visualNew || signalNew ? [{ beatIndex, place: placeChanged ? place : '', visualType: visualNew ? visual.type : '', signal: signalNew ? signal : null }] : [];
-  });
+  }));
 }
 
 function openChapterScenes(chapter) {
@@ -663,7 +688,7 @@ function openChapterScenes(chapter) {
     const card = document.createElement('div'); card.className = 'chapter-card';
     const copy = document.createElement('div'); copy.className = 'chapter-copy';
     const title = document.createElement('strong'); title.textContent = `${String(index + 1).padStart(2, '0')} · ${moment.place || moment.signal?.title || '시각 기록'}`;
-    const detail = document.createElement('span'); detail.textContent = moment.authored ? `${chapter.label} 연출판 · 이 장면에서 시작` : moment.signal ? `${moment.signal.sender ? `${moment.signal.sender} · ` : ''}이 장면에서 시작` : `이 장면에서 시작 · ${moment.visualType ? '정보 패널 포함' : '장소 전환'}`;
+    const detail = document.createElement('span'); detail.textContent = moment.cutscene ? '사건 컷신 · 이 장면에서 시작' : moment.authored ? `${chapter.label} 연출판 · 이 장면에서 시작` : moment.signal ? `${moment.signal.sender ? `${moment.signal.sender} · ` : ''}이 장면에서 시작` : `이 장면에서 시작 · ${moment.visualType ? '정보 패널 포함' : '장소 전환'}`;
     const button = document.createElement('button'); button.className = 'small-button'; button.type = 'button'; button.textContent = '이곳에서 읽기';
     button.addEventListener('click', () => { closeModal(); play(chapter.id, moment.beatIndex, true); });
     copy.append(title, detail); card.append(copy, button); list.append(card);
@@ -765,7 +790,7 @@ function openEpisodeOneDemo() {
   };
   actions.append(actionButton('소리 켜고 시작', () => begin(true)), actionButton('조용히 시작', () => begin(false)));
   root.append(note, actions); showModal(root, 'demo');
-  Object.entries(EP1_ASSETS).filter(([,path])=>path.endsWith('.webp')).forEach(([,path])=>{const image=new Image();image.src=path;});
+  Object.entries(EP1_ASSETS).filter(([,path])=>path.endsWith('.webp')&&!path.includes('/cutscenes/')).forEach(([,path])=>{const image=new Image();image.src=path;});
 }
 $('demoButton').addEventListener('click', openEpisodeOneDemo);
 $('startButton').addEventListener('click', () => play(story.chapters[0]?.id, 0, true));
@@ -793,7 +818,7 @@ function setUiHidden(hidden) {
 }
 $('hideUiButton').addEventListener('click',()=>{setUiHidden(!$('stage').classList.contains('ui-hidden'));if(!$('uiReveal').hidden)$('uiReveal').focus();});
 $('uiReveal').addEventListener('click',()=>{setUiHidden(false);$('hideUiButton').focus();});
-$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); episodeStage.clear(); currentEpisodeCue=null; neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
+$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); episodeStage.clear(); currentEpisodeCue=null; currentEventCutscene=null; neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
 $('modalClose').addEventListener('click', closeModal);
 modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
 modal.addEventListener('cancel', (event) => { event.preventDefault(); closeModal(); });

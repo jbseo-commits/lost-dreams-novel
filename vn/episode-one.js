@@ -1,3 +1,4 @@
+import { withEpisodeCutscene } from './episode-cutscenes.js?v=cutscenes-20261020-r5';
 const SCENES = [
   [0,'눈을 뜨기 전','서인은 매일 아침 자신이 얼마나 행복했는지 숫자로 확인했다.','room',null],
   [12,'빌린 바다','방금 전까지 바다에 있었다.','coast','musicSea'],
@@ -66,5 +67,5 @@ export function episodeOneDirection(chapter,index) {
   out.fx=effects[index]||null;
   if(index===26)out.gap=.3;
   if(index===98||index===215)out.gap=.8;
-  return out;
+  return withEpisodeCutscene(out,chapter,index);
 }
