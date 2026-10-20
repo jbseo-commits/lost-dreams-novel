@@ -26,14 +26,14 @@ export function settlementForBeat(chapter,index){
  if(String(chapter?.id)!=='34'||!Array.isArray(beats)||!Number.isInteger(index)||index<0||index>=beats.length)return null;
  const line=Number(beats[index]?.sourceLine);
  if(!Number.isInteger(line))return null;
- if(line>=50&&line<=280&&firstAt(beats,MEETING_ANCHOR)>=0){
+ if(line>=50&&line<=280&&reached(beats,index,MEETING_ANCHOR)){
   const contract=reached(beats,index,CONTRACT);
   const rows=contract?CONTRACT_TERMS.filter(term=>reached(beats,index,term)).map(clean):[];
   const focus=reached(beats,index,HIGHLIGHT)&&rows.length===4?3:-1;
   const consent=reached(beats,index,CONSENT);
   return {room:'meeting',background:EXTERNAL_MEETING,rows,focus,consent,phase:focus===3?'decision':rows.length?'contract':consent?'recording':'arrival'};
  }
- if(line>=283&&line<=358&&firstAt(beats,REFUND_ANCHOR)>=0){
+ if(line>=283&&line<=358&&reached(beats,index,REFUND_ANCHOR)&&!reached(beats,index,'서인이 복도까지 따라갔다.')){
   const rows=[];
   if(reached(beats,index,REFUND_ANNOUNCEMENT))rows.push('환급 12 TOKEN');
   if(reached(beats,index,REFUND_DECLINE))rows.push('환급 신청 보류');
