@@ -1,6 +1,6 @@
 {
   "scope": "공개 데모 1~11화 공통 음향 엔진",
-  "method": "FFmpeg decode to native-rate/native-channel float32; measured RMS across samples and peak across every channel with runtime gain at 100% master. Crossfade bound includes both loop fades plus three concurrent maximum-peak effects. Numerical check, not human listening.",
+  "method": "FFmpeg decode to native-rate/native-channel float32; measured RMS across samples and peak across every channel with runtime gain at 100% master. Recorded-engine-only peak bound includes rapid loop changes and three simultaneous effects; rounded source peaks receive +0.005dB rounding allowance. Numerical check, not human listening.",
   "masterSettingsChanged": false,
   "sourceAudioFilesChanged": false,
   "rows": [
@@ -354,11 +354,21 @@
     }
   ],
   "crossfadeAndThreeEffects": {
-    "crossfadeEnvelopeMax": 1.013378,
-    "peakBound": 0.677409,
-    "peakBoundDbfs": -3.38,
+    "scope": "Recorded engine only; includes multiple retiring loop voices during rapid track changes. Synthesized cues are separate.",
+    "riseTimeConstantSeconds": 0.45,
+    "retireTimeConstantSeconds": 0.4666666666666666,
+    "crossfadeEnvelopeBound": 1.037038,
+    "derivation": "For total loop envelope S, S′ <= 1/tauRise - S/tauRetire, so S <= tauRetire/tauRise.",
+    "maximumConcurrentRecordedEffects": 3,
+    "peakBound": 0.687071,
+    "peakBoundDbfs": -3.26,
     "clipping": false
   },
   "humanListeningVerified": false,
-  "browserPlaybackVerified": false
+  "browserPlaybackVerified": false,
+  "syntheticEffects": {
+    "gain": 0.5,
+    "peakBoundIncluded": false,
+    "verification": "Tone effects and filtered noise/communication cues route to the reduced effect bus; regression checked separately."
+  }
 }
