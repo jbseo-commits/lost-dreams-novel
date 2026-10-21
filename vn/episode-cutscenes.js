@@ -289,13 +289,13 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "22",
-    "start": 148,
-    "end": 148,
+    "start": 149,
+    "end": 149,
     "cg": "hospitalShoe",
-    "anchor": "그가 신발을 가져다주자 아이는 뒤축을 구겨 신었다. 남자는 허리를 숙여 뒤축을 펴 줬다.",
+    "anchor": "마정훈이 신발을 가져다주자 아이는 뒤축을 구겨 신었다. 그는 허리를 숙여 뒤축을 펴 줬다.",
     "alt": "57분 뒤 신발 뒤축",
-    "endAnchor": "그가 신발을 가져다주자 아이는 뒤축을 구겨 신었다. 남자는 허리를 숙여 뒤축을 펴 줬다.",
-    "fingerprint": "ae77d5d8",
+    "endAnchor": "마정훈이 신발을 가져다주자 아이는 뒤축을 구겨 신었다. 그는 허리를 숙여 뒤축을 펴 줬다.",
+    "fingerprint": "3bc5614b",
     "mobilePosition": "35% 52%"
   },
   {
