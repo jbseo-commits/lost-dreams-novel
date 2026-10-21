@@ -278,8 +278,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "21",
-    "start": 115,
-    "end": 116,
+    "start": 124,
+    "end": 125,
     "cg": "heldCall",
     "anchor": "서인은 다음 기록으로 넘기던 화면을 문해린의 기록으로 되돌렸다. 문해린의 목소리가 작아졌다.",
     "alt": "넘기지 못한 다음 기록",
