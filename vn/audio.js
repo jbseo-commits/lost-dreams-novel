@@ -4,7 +4,7 @@ const EFFECTS = new Set(['notification', 'pulse', 'impact', 'drip', 'paper', 'do
 const FLOOR = .0001;
 
 export function createAudioDirector(getSettings) {
-  let context = null, master = null, ambience = null, timer = 0, step = 0;
+  let context = null, master = null, ambience = null, effectBus = null, timer = 0, step = 0;
   let active = false, armed = false, currentMotif = '', focus = null, resumeVersion = 0;
   const voices = new Set(), transients = new Set();
   const settings = () => getSettings() ?? {};
@@ -19,7 +19,8 @@ export function createAudioDirector(getSettings) {
         context = new Context();
         master = context.createGain(); master.gain.value = 0; master.connect(context.destination);
         ambience = context.createGain(); ambience.gain.value = 1; ambience.connect(master);
-      } catch { context = null; master = null; ambience = null; }
+        effectBus = context.createGain(); effectBus.gain.value = .5; effectBus.connect(master);
+      } catch { context = null; master = null; ambience = null; effectBus = null; }
     }
     return context;
   }
@@ -66,7 +67,7 @@ export function createAudioDirector(getSettings) {
     param.exponentialRampToValueAtTime(FLOOR, now + duration);
   }
 
-  function tone(group, { frequency, end = frequency, duration = .24, delay = 0, peak = .05, attack = .025, wave = 'sine', filter = null, pan = 0, bus = master }) {
+  function tone(group, { frequency, end = frequency, duration = .24, delay = 0, peak = .05, attack = .025, wave = 'sine', filter = null, pan = 0, bus = effectBus }) {
     const now = context.currentTime + delay, source = context.createOscillator(), gain = context.createGain(), nodes = [gain];
     source.type = wave; source.frequency.setValueAtTime(frequency, now);
     if (end !== frequency) source.frequency.exponentialRampToValueAtTime(end, now + duration);
@@ -95,7 +96,7 @@ export function createAudioDirector(getSettings) {
     filter.frequency.setValueAtTime(frequency, now);
     if (end !== frequency) filter.frequency.exponentialRampToValueAtTime(end, now + duration);
     envelope(gain.gain, now, duration, peak, attack);
-    source.connect(filter); filter.connect(gain); gain.connect(master);
+    source.connect(filter); filter.connect(gain); gain.connect(effectBus);
     track(source, [filter, gain], group); source.start(now); source.stop(now + duration + .02);
   }
 

@@ -1,3 +1,8 @@
+// Recorded core scores are quieter than the 1–2화 tracks; compensate by cue
+// key without raising the user's master volume or the effects alongside them.
+const MUSIC_GAIN=.75, AMBIENCE_GAIN=.45, EFFECT_GAIN=.3;
+const CORE_MUSIC_GAIN=Object.freeze({coreClay:1.7,corePulse:1.9,coreThreshold:2,coreAfter:2.2});
+
 export function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
   let context=null,master=null,version=0,current=null,gapTimer=0,gapActive=false,lastEffect='',focusGain=1;
   const buffers=new Map(),tracks=new Map(),effects=new Set(),voices=new Set(),positions=new Map();
@@ -32,7 +37,7 @@ export function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
     const serial=++version,valid=()=>serial===version&&allowed();
     current=`${cue.music||''}:${cue.ambience||''}`;clearTimeout(gapTimer);gapActive=false;
     master.gain.setTargetAtTime(level()*focusGain,context.currentTime,.08);
-    const desired=[['music',cue.music,.46],['ambience',cue.ambience,.76]];
+    const desired=[['music',cue.music,CORE_MUSIC_GAIN[cue.music]??MUSIC_GAIN],['ambience',cue.ambience,AMBIENCE_GAIN]];
     const trackWork=Promise.all(desired.map(async([bus,key,gain])=>{
         const prior=tracks.get(bus);if(prior?.key===key)return;if(prior){dispose(prior,1.4);tracks.delete(bus);}
         if(key){const buffer=await load(key);if(!valid()||!buffer)return;const v=source(buffer,true,gain,key);tracks.set(bus,v);}
@@ -42,7 +47,7 @@ export function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
     if(!quiet&&cue.fx&&effectKey!==lastEffect){
       lastEffect=effectKey;const buffer=await load(cue.fx);if(!valid()||!buffer)return;
       while(effects.size>=3){const old=effects.values().next().value;dispose(old);effects.delete(old);}
-      const v=source(buffer,false,.8,cue.fx);effects.add(v);
+      const v=source(buffer,false,EFFECT_GAIN,cue.fx);effects.add(v);
     }
     await trackWork;
     if(valid())onStatus(tracks.size||effects.size?'playing':'silent',{music:tracks.get('music')?.key||'',ambience:tracks.get('ambience')?.key||''});
