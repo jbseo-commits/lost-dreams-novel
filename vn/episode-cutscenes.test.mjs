@@ -75,9 +75,16 @@ test('every selected drawing is distinct, packaged, and matches its recorded pro
     }
   }
   const teaser=JSON.parse(await readFile(new URL('./assets/teaser-style/provenance.json',import.meta.url),'utf8'));
+  const parents=JSON.parse(await readFile(new URL('./assets/parent-style/provenance.json',import.meta.url),'utf8'));
   for(const cut of EPISODE_CUTSCENES){
     const path=EP1_ASSETS[cut.cg];
-    if(path?.startsWith('assets/teaser-style/')){
+    if(path?.startsWith('assets/parent-style/')){
+      const asset=parents.assets.find(item=>item.key===cut.cg);
+      assert.ok(asset,cut.cg);assert.equal(path,asset.file);
+      const bytes=await readFile(new URL('./'+path,import.meta.url));
+      assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);
+      assert.equal(bytes.length,asset.bytes);
+    }else if(path?.startsWith('assets/teaser-style/')){
       const asset=teaser.assets.find(item=>item.key===cut.cg);
       assert.ok(asset,cut.cg);assert.equal(path,'assets/teaser-style/'+asset.file);
       const bytes=await readFile(new URL('./'+path,import.meta.url));

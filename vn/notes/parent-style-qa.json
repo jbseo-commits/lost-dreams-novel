@@ -1,0 +1,591 @@
+{
+  "date": "2026-10-21",
+  "styleAuthority": {
+    "video": "assets/ep1/teaser.mp4",
+    "videoSha256": "17947553bea809fc042f5637f4f59d63c0c475f58c4d588c6fed0ae696e800b7",
+    "frames": [
+      {
+        "frameSeconds": 3.5,
+        "file": "assets/parent-style/references/teaser-035.png",
+        "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+      },
+      {
+        "frameSeconds": 12,
+        "file": "assets/parent-style/references/teaser-120.png",
+        "sha256": "306648cf2a0c97e7c2208efd73bf2885452a5750922ad1bf2a691184ad835173"
+      },
+      {
+        "frameSeconds": 24,
+        "file": "assets/parent-style/references/teaser-240.png",
+        "sha256": "c83337078e3119e1ea8af77af700708aaad03ef1444a14a996fd43a10e8444cd"
+      }
+    ]
+  },
+  "scope": "공개1~11화 데모의 어머니·지우 아버지 표정5종과 등장 사건 그림5장",
+  "online": [
+    {
+      "key": "kitchenAd",
+      "chapter": "1",
+      "beat": 32,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/kitchenAd-400.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "motherWarm",
+      "chapter": "1",
+      "beat": 39,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherWarm-400.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "motherSearching",
+      "chapter": "1",
+      "beat": 54,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherSearching-400.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "motherCare",
+      "chapter": "1",
+      "beat": 61,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherCare-400.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "table",
+      "chapter": "1",
+      "beat": 68,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/table-400.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "fatherAppeal",
+      "chapter": "2",
+      "beat": 90,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherAppeal-400.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "medicalTablet",
+      "chapter": "2",
+      "beat": 95,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/medicalTablet-400.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "fatherDown",
+      "chapter": "2",
+      "beat": 138,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherDown-400.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "coreMotherSleep",
+      "chapter": "10",
+      "beat": 258,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherSleep-400.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "coreMotherDinner",
+      "chapter": "11",
+      "beat": 215,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherDinner-400.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "kitchenAd",
+      "chapter": "1",
+      "beat": 32,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/kitchenAd-1440.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "motherWarm",
+      "chapter": "1",
+      "beat": 39,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherWarm-1440.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "motherSearching",
+      "chapter": "1",
+      "beat": 54,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherSearching-1440.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "motherCare",
+      "chapter": "1",
+      "beat": 61,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherCare-1440.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "table",
+      "chapter": "1",
+      "beat": 68,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/table-1440.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "fatherAppeal",
+      "chapter": "2",
+      "beat": 90,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherAppeal-1440.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "medicalTablet",
+      "chapter": "2",
+      "beat": 95,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/medicalTablet-1440.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "fatherDown",
+      "chapter": "2",
+      "beat": 138,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherDown-1440.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "coreMotherSleep",
+      "chapter": "10",
+      "beat": 258,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherSleep-1440.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "coreMotherDinner",
+      "chapter": "11",
+      "beat": 215,
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherDinner-1440.png",
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    }
+  ],
+  "offline": [
+    {
+      "key": "motherCare",
+      "chapter": "1",
+      "beat": 61,
+      "transport": "localhost HTTP, only HTML allowed",
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherCare-offline-400.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "fatherAppeal",
+      "chapter": "2",
+      "beat": 90,
+      "transport": "localhost HTTP, only HTML allowed",
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherAppeal-offline-400.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "coreMotherSleep",
+      "chapter": "10",
+      "beat": 258,
+      "transport": "localhost HTTP, only HTML allowed",
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherSleep-offline-400.png",
+      "extraNetworkRequests": 0,
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 400,
+      "viewportHeight": 850
+    },
+    {
+      "key": "motherCare",
+      "chapter": "1",
+      "beat": 61,
+      "transport": "localhost HTTP, only HTML allowed",
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherCare-offline-1440.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "fatherAppeal",
+      "chapter": "2",
+      "beat": 90,
+      "transport": "localhost HTTP, only HTML allowed",
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherAppeal-offline-1440.png",
+      "naturalWidth": 1024,
+      "naturalHeight": 1536,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    },
+    {
+      "key": "coreMotherSleep",
+      "chapter": "10",
+      "beat": 258,
+      "transport": "localhost HTTP, only HTML allowed",
+      "matched": true,
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherSleep-offline-1440.png",
+      "extraNetworkRequests": 0,
+      "naturalWidth": 1672,
+      "naturalHeight": 941,
+      "viewportWidth": 1440,
+      "viewportHeight": 900
+    }
+  ],
+  "controls": [
+    {
+      "label": "motherCare-400",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "table-400",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "fatherAppeal-400",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "medicalTablet-400",
+      "fullArtAndZoom": true,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "coreMotherSleep-400",
+      "fullArtAndZoom": true,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "coreMotherDinner-400",
+      "fullArtAndZoom": true,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "motherCare-offline-400",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "fatherAppeal-offline-400",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "coreMotherSleep-offline-400",
+      "fullArtAndZoom": true,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "motherCare-1440",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "table-1440",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "fatherAppeal-1440",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "medicalTablet-1440",
+      "fullArtAndZoom": true,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "coreMotherSleep-1440",
+      "fullArtAndZoom": true,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "coreMotherDinner-1440",
+      "fullArtAndZoom": true,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "motherCare-offline-1440",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "fatherAppeal-offline-1440",
+      "fullArtAndZoom": false,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    },
+    {
+      "label": "coreMotherSleep-offline-1440",
+      "fullArtAndZoom": true,
+      "next": true,
+      "previous": true,
+      "volumePreserved": 27
+    }
+  ],
+  "limitations": [
+    "대표 좌표에서의 표시·조작 검사이며 전편 연속 독서 검사는 아님",
+    "화풍 평가는 티저 실영상 프레임과 원화의 육안 대조에 근거함",
+    "관리형 Chromium이 file:// 탐색을 차단하므로 단일 HTML을 localhost HTTP로 열고 문서 외 네트워크를 차단해 검사함. 실제 내려받은 로컬 파일 실행은 미확인."
+  ],
+  "offlineManifest": {
+    "storyChapters": 18,
+    "sha256": "998ee085d8960eefc7f113820e7026a11271a38f7e14a99773a76c6382eecdea",
+    "bytes": 78644652,
+    "parents": [
+      {
+        "key": "motherCare",
+        "sha256": "7df81a21dfceac9a138b02789eb4a1de2a4ca8e1f06c7b7ea22fc3a62ee3b1b9",
+        "matched": true
+      },
+      {
+        "key": "motherWarm",
+        "sha256": "38ba9943263ba724178bb205d002a5a63cc6a51f77bb07325da0d00afba3ff3f",
+        "matched": true
+      },
+      {
+        "key": "motherSearching",
+        "sha256": "9f307fa83583433fdee4db7ec078af9d48742e4e6e9acdfb4b5cb5b4e87ad1e2",
+        "matched": true
+      },
+      {
+        "key": "fatherAppeal",
+        "sha256": "15dedb556eb0e958e231e4c575c6ff3e1ecaf575b196c65421523fc9a53dc992",
+        "matched": true
+      },
+      {
+        "key": "fatherDown",
+        "sha256": "01f2d332073f5b3249daeb85bdeb44492ae0f88c2835692593b95994564db6d7",
+        "matched": true
+      },
+      {
+        "key": "kitchenAd",
+        "sha256": "d50e20c03c7ea9e8bd32b471290d2e1fcdf9d3319912ac884824b787eaf1dc0f",
+        "matched": true
+      },
+      {
+        "key": "table",
+        "sha256": "6f7d1e14f010d5f2ad775371d68427dacbc2b33ad907a47d14febe666b038fb2",
+        "matched": true
+      },
+      {
+        "key": "coreMotherSleep",
+        "sha256": "db3da162fc700802321b4fe04c272743ac84a4736f047c41eda9c30995db1c12",
+        "matched": true
+      },
+      {
+        "key": "coreMotherDinner",
+        "sha256": "34a2a841820342d787d80a82ea019e5bb6370d658e004de5e8da3e905e98ff56",
+        "matched": true
+      },
+      {
+        "key": "medicalTablet",
+        "sha256": "f3210ac9b13d951d45ca94f6ca89196e39cdd08d819ae031d4fa18597864f15c",
+        "matched": true
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "viewportWidth": 400,
+      "newParentTable": true,
+      "open": true,
+      "close": true,
+      "screenshot": "parent-style-proof/gallery-400.png"
+    },
+    {
+      "viewportWidth": 1440,
+      "newParentTable": true,
+      "open": true,
+      "close": true,
+      "screenshot": "parent-style-proof/gallery-1440.png"
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)"
+  ],
+  "browserDiagnostics": {
+    "applicationErrors": [],
+    "favicon404": {
+      "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+      "verifiedBy": [
+        {
+          "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:5891/favicon.ico",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      ],
+      "explanation": "브라우저 자동 favicon 요청의 404이며, 새 원화·모듈 요청 실패가 아님"
+    }
+  },
+  "automatedTests": {
+    "command": "npm test --prefix vn",
+    "filesPassed": 17,
+    "filesFailed": 0
+  },
+  "status": "PASS",
+  "sleepConnectorDetail": {
+    "viewportWidth": 400,
+    "zoom": true,
+    "horizontalScroll": {
+      "left": 780,
+      "width": 320,
+      "total": 1100
+    },
+    "screenshot": "parent-style-proof/coreMotherSleep-400-contact-detail.png"
+  }
+}

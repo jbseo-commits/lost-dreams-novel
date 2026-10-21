@@ -1,0 +1,290 @@
+{
+  "date": "2026-10-21",
+  "tool": "built-in image_gen",
+  "exactModel": "not exposed",
+  "scope": "공개1~11화 데모의 어머니·지우 아버지 표정5종과 등장 사건 그림5장",
+  "styleAuthority": {
+    "video": "assets/ep1/teaser.mp4",
+    "videoSha256": "17947553bea809fc042f5637f4f59d63c0c475f58c4d588c6fed0ae696e800b7",
+    "frames": [
+      {
+        "frameSeconds": 3.5,
+        "file": "assets/parent-style/references/teaser-035.png",
+        "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+      },
+      {
+        "frameSeconds": 12,
+        "file": "assets/parent-style/references/teaser-120.png",
+        "sha256": "306648cf2a0c97e7c2208efd73bf2885452a5750922ad1bf2a691184ad835173"
+      },
+      {
+        "frameSeconds": 24,
+        "file": "assets/parent-style/references/teaser-240.png",
+        "sha256": "c83337078e3119e1ea8af77af700708aaad03ef1444a14a996fd43a10e8444cd"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "key": "motherCare",
+      "file": "assets/parent-style/mother-care.webp",
+      "original": "assets/teaser-style/mother-care.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 439294,
+      "sha256": "7df81a21dfceac9a138b02789eb4a1de2a4ca8e1f06c7b7ea22fc3a62ee3b1b9",
+      "sourceSha256": "aa960bc1f331302f827895c7606c8887820fca0d3f4a9bbbbc029a6bc6c8f702",
+      "source": "/workspace/generated_images/exec-b4f18844-75bd-49ae-803f-1a03fd6687f9.png",
+      "nativePngSha256": "a93cc98617ad95f849d1e0b3eb3115df3a91364e68a2860e44e1e72a4b469e9e",
+      "prompt": "Corrective art direction: match the ACTUAL TEASER MOVIE, not a generic anime approximation. Images1–3 are exact frames from the shipped teaser at 3.5s,12s,24s. They are the only STYLE authority: the first supplies close face/linework, second the cinematic character rendering, third the depiction of older adults in the same film. Repaint ONLY the character of image4 into that exact animated-film style as if drawn by the same key animator. Keep image4's recognizable older face, age, hairstyle, clothing, seated pose, hands, body proportions and expression. MATCH the movie's variable ink line weight, natural expressive eye proportions, delicate face construction, selective mature wrinkle lines, softly layered painted shadow planes, detailed hair masses and subtle material/lighting texture. Preserve dimensional form and restrained atmospheric color: this is a cinematic hand-drawn sci-fi film character, NOT an oversimplified flat two-color poster/webtoon, NOT an airbrushed portrait, NOT a photographic or 3D-rendered human. Do not copy any UI, text, background, other people or scenery from the movie frames. One single parent character alone, original portrait framing at1024x1536. True transparent background; no dark glow/vignette behind the character. Preserve unmistakably middle-aged appearance; not an idol, not de-aged. All body and clothing must share the same film rendering, not face-only retouching.\nSUBJECT: Seoin's mother, gray-streaked short bob, mature gentle eyes, gray-violet cardigan/ivory blouse/dark lower garment, seated with hands together on lap, quietly caring expression toward viewer-left. Retain age in jaw/eyes/gray hair and modest ordinary mother appearance.",
+      "references": [
+        "/tmp/teaser-style-audit/3.5.png",
+        "/tmp/teaser-style-audit/12.png",
+        "/tmp/teaser-style-audit/24.png",
+        "/workspace/lost-dreams-novel/vn/assets/teaser-style/mother-care.webp"
+      ],
+      "transparent": true,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters."
+    },
+    {
+      "key": "motherWarm",
+      "file": "assets/parent-style/mother-warm.webp",
+      "original": "assets/teaser-style/mother-warm.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 404798,
+      "sha256": "38ba9943263ba724178bb205d002a5a63cc6a51f77bb07325da0d00afba3ff3f",
+      "sourceSha256": "f83acc5c28e8b0999a3855a67f9b10d8b019b90eeae39cd93b9fd8868a371eb6",
+      "source": "/workspace/generated_images/exec-55e1ba92-7d4d-42e5-b116-53e0cc8c82fc.png",
+      "nativePngSha256": "e896855d0d62efdc2ba2ae9fe681898186346f523c02aefdf94f147fa0399e9a",
+      "prompt": "The FIRST THREE references are actual frames from the shipped teaser movie, the sole STYLE authority. Precisely match that film's drawn variable-weight contours, natural eye/face proportions, layered shadow planes with restrained brush texture, cool shadows and warm grazing light, believable dimensional forms, mature facial construction. Match the middle-aged supporting characters in the third frame for age treatment. NOT a simplified flat poster/webtoon, NOT photographic/3D skin, no glossy airbrush or over-detailed pores. The FOURTH reference is the parent now corrected to that movie style: use its exact older face, gray/salt-pepper hairstyle, colors and film rendering. Keep the mature age and identity. Do not insert anyone or any HUD from the film reference frames. The FIFTH reference is the exact POSE/EXPRESSION edit target: recreate that same one portrait sprite, with its hands, clothes, seated posture, expression and framing, using the fourth character's corrected movie rendering. Full body/clothes and face must agree. Single older character,1024x1536 composition matching target, true transparent background without glow, vignette or painted backdrop. No writing.\nOlder mother smiling warmly with mouth slightly open, right hand raised with chopsticks and left hand open in conversation. Retain gray bob and mature eye/jaw lines; avoid skin gloss.",
+      "references": [
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-035.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-120.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-240.png",
+        "/workspace/generated_images/exec-b4f18844-75bd-49ae-803f-1a03fd6687f9.png",
+        "/workspace/lost-dreams-novel/vn/assets/teaser-style/mother-warm.webp"
+      ],
+      "transparent": true,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters."
+    },
+    {
+      "key": "motherSearching",
+      "file": "assets/parent-style/mother-searching.webp",
+      "original": "assets/teaser-style/mother-searching.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 369310,
+      "sha256": "9f307fa83583433fdee4db7ec078af9d48742e4e6e9acdfb4b5cb5b4e87ad1e2",
+      "sourceSha256": "c2c7d7bca3bbc671952c2e0ae4bbea7cff2ee0f5bdc879f72d3299404f249ba5",
+      "source": "/workspace/generated_images/exec-4c780acb-1918-4dd4-983c-e3238ef6af2c.png",
+      "nativePngSha256": "e75b1fc595217e0612636980035dc4cfff4e66a051a95ecc580357dfe74c373d",
+      "prompt": "The FIRST THREE references are actual frames from the shipped teaser movie, the sole STYLE authority. Precisely match that film's drawn variable-weight contours, natural eye/face proportions, layered shadow planes with restrained brush texture, cool shadows and warm grazing light, believable dimensional forms, mature facial construction. Match the middle-aged supporting characters in the third frame for age treatment. NOT a simplified flat poster/webtoon, NOT photographic/3D skin, no glossy airbrush or over-detailed pores. The FOURTH reference is the parent now corrected to that movie style: use its exact older face, gray/salt-pepper hairstyle, colors and film rendering. Keep the mature age and identity. Do not insert anyone or any HUD from the film reference frames. The FIFTH reference is the exact POSE/EXPRESSION edit target: recreate that same one portrait sprite, with its hands, clothes, seated posture, expression and framing, using the fourth character's corrected movie rendering. Full body/clothes and face must agree. Single older character,1024x1536 composition matching target, true transparent background without glow, vignette or painted backdrop. No writing.\nOlder mother's gently questioning/searching expression, right hand with chopsticks near chest and left hand on lap. Keep this distinct from the cheerful mouth-open smile, no de-aging.",
+      "references": [
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-035.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-120.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-240.png",
+        "/workspace/generated_images/exec-b4f18844-75bd-49ae-803f-1a03fd6687f9.png",
+        "/workspace/lost-dreams-novel/vn/assets/teaser-style/mother-searching.webp"
+      ],
+      "transparent": true,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters."
+    },
+    {
+      "key": "fatherAppeal",
+      "file": "assets/parent-style/father-appeal.webp",
+      "original": "assets/teaser-style/father-appeal.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 327522,
+      "sha256": "15dedb556eb0e958e231e4c575c6ff3e1ecaf575b196c65421523fc9a53dc992",
+      "sourceSha256": "67c31e4f4ab6af83f53abc4e15277896aeba985668af5d02d7239e83d4ea8f6c",
+      "source": "/workspace/generated_images/exec-4ce8be4b-62dc-47aa-a347-cb35b152d3bf.png",
+      "nativePngSha256": "d480a868aeb36d4ad25d5648829f00cf3e34d711b32ea225747de05e7b418d21",
+      "prompt": "Corrective art direction: match the ACTUAL TEASER MOVIE, not a generic anime approximation. Images1–3 are exact frames from the shipped teaser at 3.5s,12s,24s. They are the only STYLE authority: the first supplies close face/linework, second the cinematic character rendering, third the depiction of older adults in the same film. Repaint ONLY the character of image4 into that exact animated-film style as if drawn by the same key animator. Keep image4's recognizable older face, age, hairstyle, clothing, seated pose, hands, body proportions and expression. MATCH the movie's variable ink line weight, natural expressive eye proportions, delicate face construction, selective mature wrinkle lines, softly layered painted shadow planes, detailed hair masses and subtle material/lighting texture. Preserve dimensional form and restrained atmospheric color: this is a cinematic hand-drawn sci-fi film character, NOT an oversimplified flat two-color poster/webtoon, NOT an airbrushed portrait, NOT a photographic or 3D-rendered human. Do not copy any UI, text, background, other people or scenery from the movie frames. One single parent character alone, original portrait framing at1024x1536. True transparent background; no dark glow/vignette behind the character. Preserve unmistakably middle-aged appearance; not an idol, not de-aged. All body and clothing must share the same film rendering, not face-only retouching.\nSUBJECT: Jiwoo's father, mature thin worried face, short salt-and-pepper hair, rolled light blue shirt, dark trousers, seated leaning forward. Right hand offering thin tablet; left inner wrist has the original small round medical infusion-port dressing. Preserve sides and older thin hands, worried pleading upward gaze toward viewer-right. Make his face/arms/hands look drawn by the movie's animator of the middle-aged executives in image3.",
+      "references": [
+        "/tmp/teaser-style-audit/3.5.png",
+        "/tmp/teaser-style-audit/12.png",
+        "/tmp/teaser-style-audit/24.png",
+        "/workspace/lost-dreams-novel/vn/assets/teaser-style/father-appeal.webp"
+      ],
+      "transparent": true,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters."
+    },
+    {
+      "key": "fatherDown",
+      "file": "assets/parent-style/father-down.webp",
+      "original": "assets/teaser-style/father-down.webp",
+      "kind": "sprite",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 318678,
+      "sha256": "01f2d332073f5b3249daeb85bdeb44492ae0f88c2835692593b95994564db6d7",
+      "sourceSha256": "8e16cea64ec1fae807caf8b5384214074251635f2df6249fb2f3ef83d6e35a32",
+      "source": "/workspace/generated_images/exec-3d836629-db75-4dcd-9652-2cce49346d2b.png",
+      "nativePngSha256": "dc447b167360c1a9340613edc4f5b3eb7d885220bec49042a3467283b6b1fc9b",
+      "prompt": "The FIRST THREE references are actual frames from the shipped teaser movie, the sole STYLE authority. Precisely match that film's drawn variable-weight contours, natural eye/face proportions, layered shadow planes with restrained brush texture, cool shadows and warm grazing light, believable dimensional forms, mature facial construction. Match the middle-aged supporting characters in the third frame for age treatment. NOT a simplified flat poster/webtoon, NOT photographic/3D skin, no glossy airbrush or over-detailed pores. The FOURTH reference is the parent now corrected to that movie style: use its exact older face, gray/salt-pepper hairstyle, colors and film rendering. Keep the mature age and identity. Do not insert anyone or any HUD from the film reference frames. The FIFTH reference is the exact POSE/EXPRESSION edit target: recreate that same one portrait sprite, with its hands, clothes, seated posture, expression and framing, using the fourth character's corrected movie rendering. Full body/clothes and face must agree. Single older character,1024x1536 composition matching target, true transparent background without glow, vignette or painted backdrop. No writing.\nFather looks down worriedly at tablet resting on lap, right hand on tablet edge, left hand down. Preserve round infusion-port dressing on inside LEFT wrist (viewer-right) and mature thin hands.",
+      "references": [
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-035.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-120.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-240.png",
+        "/workspace/generated_images/exec-4ce8be4b-62dc-47aa-a347-cb35b152d3bf.png",
+        "/workspace/lost-dreams-novel/vn/assets/teaser-style/father-down.webp"
+      ],
+      "transparent": true,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters."
+    },
+    {
+      "key": "kitchenAd",
+      "file": "assets/parent-style/kitchen-ad.webp",
+      "original": "assets/teaser-style/kitchen-ad.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 471314,
+      "sha256": "d50e20c03c7ea9e8bd32b471290d2e1fcdf9d3319912ac884824b787eaf1dc0f",
+      "sourceSha256": "2db920ad6b9f61337c1190b960eb444c8de0dc38d6c00bdc78414172a65e7694",
+      "source": "/workspace/generated_images/exec-d5438cc0-6cbc-49e7-b02d-51310ad1d7ab.png",
+      "nativePngSha256": "f6b4a56234cace968d16f6575902253ce74af8a425e3cae9e8ac9dcf2e07c11a",
+      "prompt": "The FIRST THREE references are actual frames from the shipped teaser movie, the sole STYLE authority. Precisely match that film's drawn variable-weight contours, natural eye/face proportions, layered shadow planes with restrained brush texture, cool shadows and warm grazing light, believable dimensional forms, mature facial construction. Match the middle-aged supporting characters in the third frame for age treatment. NOT a simplified flat poster/webtoon, NOT photographic/3D skin, no glossy airbrush or over-detailed pores. The FOURTH reference is the parent now corrected to that movie style: use its exact older face, gray/salt-pepper hairstyle, colors and film rendering. Keep the mature age and identity. Do not insert anyone or any HUD from the film reference frames. The FIFTH reference is the exact scene to edit: preserve framing, camera, architecture, actor positions, number of people, light sources, objects, clothes, hand actions and time. Redraw the visible parent INCLUDING face,neck,arms,hands/clothing in that teaser-film style and corrected identity, removing the former smooth portrait rendering. Keep the existing Seoin drawing/face/curly black hair/expression and body action untouched if present, and keep the existing background painting/layout. Cinematic textured animated-film event CG, same landscape aspect ratio as target. No new people, no panels, no added writing or UI.\nMother cooks in background at right; Seoin in gray crewneck seen from back at left staring at wall beach advertisement. Same kitchen, gray-bob mother in gray-violet cardigan, no new people.",
+      "references": [
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-035.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-120.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-240.png",
+        "/workspace/generated_images/exec-b4f18844-75bd-49ae-803f-1a03fd6687f9.png",
+        "/workspace/lost-dreams-novel/vn/assets/teaser-style/kitchen-ad.webp"
+      ],
+      "transparent": false,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters."
+    },
+    {
+      "key": "table",
+      "file": "assets/parent-style/table.webp",
+      "original": "assets/teaser-style/table.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 406230,
+      "sha256": "6f7d1e14f010d5f2ad775371d68427dacbc2b33ad907a47d14febe666b038fb2",
+      "sourceSha256": "164f0e19b9f9d8630a5f1d43d1d64dc46e3c35b1cb8e57350dc783551eafacff",
+      "source": "/workspace/generated_images/exec-c6549f88-52e7-4669-98bb-838e444a2f28.png",
+      "nativePngSha256": "597c5364ba4aeeffc7d11630c0711732fb742c807d4733ca6cff30c53a31e1f9",
+      "prompt": "The FIRST THREE references are actual frames from the shipped teaser movie, the sole STYLE authority. Precisely match that film's drawn variable-weight contours, natural eye/face proportions, layered shadow planes with restrained brush texture, cool shadows and warm grazing light, believable dimensional forms, mature facial construction. Match the middle-aged supporting characters in the third frame for age treatment. NOT a simplified flat poster/webtoon, NOT photographic/3D skin, no glossy airbrush or over-detailed pores. The FOURTH reference is the parent now corrected to that movie style: use its exact older face, gray/salt-pepper hairstyle, colors and film rendering. Keep the mature age and identity. Do not insert anyone or any HUD from the film reference frames. The FIFTH reference is the exact scene to edit: preserve framing, camera, architecture, actor positions, number of people, light sources, objects, clothes, hand actions and time. Redraw the visible parent INCLUDING face,neck,arms,hands/clothing in that teaser-film style and corrected identity, removing the former smooth portrait rendering. Keep the existing Seoin drawing/face/curly black hair/expression and body action untouched if present, and keep the existing background painting/layout. Cinematic textured animated-film event CG, same landscape aspect ratio as target. No new people, no panels, no added writing or UI.\nMother on right uses chopsticks to serve a piece of omelet into the rice bowl Seoin holds on left. Exactly preserve bowls, chopsticks, food, hands, familial interaction. Mature mother face from fourth reference.",
+      "references": [
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-035.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-120.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-240.png",
+        "/workspace/generated_images/exec-b4f18844-75bd-49ae-803f-1a03fd6687f9.png",
+        "/workspace/lost-dreams-novel/vn/assets/teaser-style/table.webp"
+      ],
+      "transparent": false,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters."
+    },
+    {
+      "key": "coreMotherSleep",
+      "file": "assets/parent-style/core-mother-sleep.webp",
+      "original": "assets/teaser-style/core-mother-sleep.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 404070,
+      "sha256": "db3da162fc700802321b4fe04c272743ac84a4736f047c41eda9c30995db1c12",
+      "sourceSha256": "c110fe531eed6dba8242e3a5d112745cc217603c5bf4be203fefdb09dbbd3714",
+      "source": "/workspace/generated_images/exec-34de6d83-d04b-4735-acad-ce917a1de888.png",
+      "nativePngSha256": "7e6f915124406d3cc24af1ec50f34fb185071da1bfc460188c994a207ec80788",
+      "prompt": "Surgical continuity repair, not a new restyle. FIRST image is the finished movie-style scene to preserve exactly, including older mother's face, gray hair, eyes closed, skin rendering, shadow/light, blanket, the two hands, camera and room. SECOND image shows the exact small amber/orange neural connection originally present beside the mother's OUTER eyebrow at her visible temple (viewer-right side of face), just before the hairline. Restore ONLY this small warm amber oval contact and its very short fine contact wire at the SAME temple position and comparable size as the SECOND image. This is a tiny contact attached to skin, not a floating orb or tattoo. It must be clearly visible while she sleeps. Leave all of image1's style, age, face, composition and objects unchanged. Do not open eyes or insert Seoin's face. Keep the original landscape dimensions and framing.",
+      "references": [
+        "/workspace/generated_images/exec-aa37e56c-1895-4f94-a3ea-175ea280a85f.png",
+        "/workspace/lost-dreams-novel/vn/assets/teaser-style/core-mother-sleep.webp"
+      ],
+      "transparent": false,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters.",
+      "previousGeneration": {
+        "source": "/workspace/generated_images/exec-aa37e56c-1895-4f94-a3ea-175ea280a85f.png",
+        "nativePngSha256": "9c91ad0828b0e2b604ace7fbcae99c9c45d919d721e8a58ff48a90e1e2716e51",
+        "prompt": "The FIRST THREE references are actual frames from the shipped teaser movie, the sole STYLE authority. Precisely match that film's drawn variable-weight contours, natural eye/face proportions, layered shadow planes with restrained brush texture, cool shadows and warm grazing light, believable dimensional forms, mature facial construction. Match the middle-aged supporting characters in the third frame for age treatment. NOT a simplified flat poster/webtoon, NOT photographic/3D skin, no glossy airbrush or over-detailed pores. The FOURTH reference is the parent now corrected to that movie style: use its exact older face, gray/salt-pepper hairstyle, colors and film rendering. Keep the mature age and identity. Do not insert anyone or any HUD from the film reference frames. The FIFTH reference is the exact scene to edit: preserve framing, camera, architecture, actor positions, number of people, light sources, objects, clothes, hand actions and time. Redraw the visible parent INCLUDING face,neck,arms,hands/clothing in that teaser-film style and corrected identity, removing the former smooth portrait rendering. Keep the existing Seoin drawing/face/curly black hair/expression and body action untouched if present, and keep the existing background painting/layout. Cinematic textured animated-film event CG, same landscape aspect ratio as target. No new people, no panels, no added writing or UI.\nMother asleep on sofa, small temple connection, coarse blanket, only Seoin's suited sleeve/hand enters from left near blanket. No Seoin face, do not open mother's eyes or change hand/blanket positions.",
+        "references": [
+          "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-035.png",
+          "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-120.png",
+          "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-240.png",
+          "/workspace/generated_images/exec-b4f18844-75bd-49ae-803f-1a03fd6687f9.png",
+          "/workspace/lost-dreams-novel/vn/assets/teaser-style/core-mother-sleep.webp"
+        ]
+      },
+      "revisionReason": "재작화 중 누락된 기존 관자놀이 접속부만 복구"
+    },
+    {
+      "key": "coreMotherDinner",
+      "file": "assets/parent-style/core-mother-dinner.webp",
+      "original": "assets/teaser-style/core-mother-dinner.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 365264,
+      "sha256": "34a2a841820342d787d80a82ea019e5bb6370d658e004de5e8da3e905e98ff56",
+      "sourceSha256": "2e380e14d3098256311fb909f242aa8b473e2b5ed7330c07c0bef477122a58fe",
+      "source": "/workspace/generated_images/exec-7ba16cf6-6da9-4fed-ba56-61ae84f235c5.png",
+      "nativePngSha256": "e61054c82c707fa050b9d172ac9a716b6ecc4ae530d13609880f7c31406e76ae",
+      "prompt": "The FIRST THREE references are actual frames from the shipped teaser movie, the sole STYLE authority. Precisely match that film's drawn variable-weight contours, natural eye/face proportions, layered shadow planes with restrained brush texture, cool shadows and warm grazing light, believable dimensional forms, mature facial construction. Match the middle-aged supporting characters in the third frame for age treatment. NOT a simplified flat poster/webtoon, NOT photographic/3D skin, no glossy airbrush or over-detailed pores. The FOURTH reference is the parent now corrected to that movie style: use its exact older face, gray/salt-pepper hairstyle, colors and film rendering. Keep the mature age and identity. Do not insert anyone or any HUD from the film reference frames. The FIFTH reference is the exact scene to edit: preserve framing, camera, architecture, actor positions, number of people, light sources, objects, clothes, hand actions and time. Redraw the visible parent INCLUDING face,neck,arms,hands/clothing in that teaser-film style and corrected identity, removing the former smooth portrait rendering. Keep the existing Seoin drawing/face/curly black hair/expression and body action untouched if present, and keep the existing background painting/layout. Cinematic textured animated-film event CG, same landscape aspect ratio as target. No new people, no panels, no added writing or UI.\nExisting Seoin in gray crewneck at table pointing index finger at wall terminal to left, mother cooking behind on left. Exactly preserve pointer hand, terminal position, kitchen, crockery, lighting and Seoin. Match mother's film style without adding photographic detail.",
+      "references": [
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-035.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-120.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-240.png",
+        "/workspace/generated_images/exec-b4f18844-75bd-49ae-803f-1a03fd6687f9.png",
+        "/workspace/lost-dreams-novel/vn/assets/teaser-style/core-mother-dinner.webp"
+      ],
+      "transparent": false,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters."
+    },
+    {
+      "key": "medicalTablet",
+      "file": "assets/parent-style/medical-tablet.webp",
+      "original": "assets/cutscenes/medical-tablet.webp",
+      "kind": "event-cg",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 265016,
+      "sha256": "f3210ac9b13d951d45ca94f6ca89196e39cdd08d819ae031d4fa18597864f15c",
+      "sourceSha256": "3ccf434eef408719fb95509fa8009c2b5984b2035c5410ea7253b26edfd4470b",
+      "source": "/workspace/generated_images/exec-94ac2fe2-3c1c-47cf-bf3a-e579550f7496.png",
+      "nativePngSha256": "f54956b3a5a73c77648f898be3ee8db4df605d59090dd8d3e8a4d7fecdd37188",
+      "prompt": "The FIRST THREE references are actual frames from the shipped teaser movie, the sole STYLE authority. Precisely match that film's drawn variable-weight contours, natural eye/face proportions, layered shadow planes with restrained brush texture, cool shadows and warm grazing light, believable dimensional forms, mature facial construction. Match the middle-aged supporting characters in the third frame for age treatment. NOT a simplified flat poster/webtoon, NOT photographic/3D skin, no glossy airbrush or over-detailed pores. The FOURTH reference is the parent now corrected to that movie style: use its exact older face, gray/salt-pepper hairstyle, colors and film rendering. Keep the mature age and identity. Do not insert anyone or any HUD from the film reference frames. The FIFTH reference is the exact scene to edit: preserve framing, camera, architecture, actor positions, number of people, light sources, objects, clothes, hand actions and time. Redraw the visible parent INCLUDING face,neck,arms,hands/clothing in that teaser-film style and corrected identity, removing the former smooth portrait rendering. Keep the existing Seoin drawing/face/curly black hair/expression and body action untouched if present, and keep the existing background painting/layout. Cinematic textured animated-film event CG, same landscape aspect ratio as target. No new people, no panels, no added writing or UI.\nOnly father's torso, thin older forearms and hands are visible; NO faces/heads added. His RIGHT hand(viewer-left) pushes tablet on tabletop; LEFT palm(viewer-right) is open with round infusion dressing on inner wrist. Preserve exact sides, tablet and receiver's shoulder at right. Redraw skin/sleeves as hand-painted animated film forms matching the first3 movie frames rather than photographic skin.",
+      "references": [
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-035.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-120.png",
+        "/workspace/lost-dreams-novel/vn/assets/parent-style/references/teaser-240.png",
+        "/workspace/generated_images/exec-4ce8be4b-62dc-47aa-a347-cb35b152d3bf.png",
+        "/workspace/lost-dreams-novel/vn/assets/cutscenes/medical-tablet.webp"
+      ],
+      "transparent": false,
+      "encoding": "Native dimensions; WebP quality96/method6 with original alpha; no resize, retouching, or post-generation style filters."
+    }
+  ],
+  "legacyOriginalArtPreserved": true,
+  "manuscriptAndSaveCoordinatesModified": false,
+  "audioBalancePreserved": true
+}
