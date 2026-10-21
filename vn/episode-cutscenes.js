@@ -267,8 +267,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "20",
-    "start": 78,
-    "end": 78,
+    "start": 81,
+    "end": 81,
     "cg": "signedCost",
     "anchor": "윤세라는 다음 사례로 넘기기 전에 바뀐 보고에 서명했다.",
     "alt": "자기 이름으로 남긴 비용",
