@@ -278,8 +278,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "21",
-    "start": 110,
-    "end": 111,
+    "start": 115,
+    "end": 116,
     "cg": "heldCall",
     "anchor": "서인은 다음 기록으로 넘기던 화면을 문해린의 기록으로 되돌렸다. 문해린의 목소리가 작아졌다.",
     "alt": "넘기지 못한 다음 기록",
@@ -289,8 +289,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "22",
-    "start": 148,
-    "end": 148,
+    "start": 152,
+    "end": 152,
     "cg": "hospitalShoe",
     "anchor": "그가 신발을 가져다주자 아이는 뒤축을 구겨 신었다. 남자는 허리를 숙여 뒤축을 펴 줬다.",
     "alt": "57분 뒤 신발 뒤축",
