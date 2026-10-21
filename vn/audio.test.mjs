@@ -56,6 +56,19 @@ function setup(t, { sound = true, resume = null } = {}) {
   return { audio, contexts, settings, document };
 }
 
+test('synthesized cues and effects use the reduced bus while background tones keep their own bus', async t => {
+  const {audio,contexts}=setup(t);await audio.resume('city');
+  const ctx=contexts[0],gains=ctx.nodes.filter(n=>n.gain),[master,ambience,effects]=gains;
+  assert.equal(ambience.gain.value,1);assert(effects.gain.value>0&&effects.gain.value<=.5);
+  assert.equal(ambience.connections[0],master);assert.equal(effects.connections[0],master);
+  function routesTo(source,bus){let n=source;for(let i=0;i<8&&n;i++,n=n.connections?.[0])if(n===bus)return true;return false;}
+  assert(ctx.started.every(s=>routesTo(s,ambience)));
+  let count=ctx.started.length;audio.effect('paper');
+  assert(ctx.started.slice(count).every(s=>routesTo(s,effects)));
+  count=ctx.started.length;audio.cue('message');
+  assert(ctx.started.slice(count).every(s=>routesTo(s,effects)));
+});
+
 test('muted cues and effects never enable sound or create an audio context', async t => {
   const { audio, contexts, settings } = setup(t, { sound: false });
   for (const kind of ['assistant', 'message', 'neural', 'system', 'broadcast']) assert.equal(audio.cue(kind), false);

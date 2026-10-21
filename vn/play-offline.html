@@ -1834,7 +1834,7 @@ const EFFECTS = new Set(['notification', 'pulse', 'impact', 'drip', 'paper', 'do
 const FLOOR = .0001;
 
 function createAudioDirector(getSettings) {
-  let context = null, master = null, ambience = null, timer = 0, step = 0;
+  let context = null, master = null, ambience = null, effectBus = null, timer = 0, step = 0;
   let active = false, armed = false, currentMotif = '', focus = null, resumeVersion = 0;
   const voices = new Set(), transients = new Set();
   const settings = () => getSettings() ?? {};
@@ -1849,7 +1849,8 @@ function createAudioDirector(getSettings) {
         context = new Context();
         master = context.createGain(); master.gain.value = 0; master.connect(context.destination);
         ambience = context.createGain(); ambience.gain.value = 1; ambience.connect(master);
-      } catch { context = null; master = null; ambience = null; }
+        effectBus = context.createGain(); effectBus.gain.value = .5; effectBus.connect(master);
+      } catch { context = null; master = null; ambience = null; effectBus = null; }
     }
     return context;
   }
@@ -1896,7 +1897,7 @@ function createAudioDirector(getSettings) {
     param.exponentialRampToValueAtTime(FLOOR, now + duration);
   }
 
-  function tone(group, { frequency, end = frequency, duration = .24, delay = 0, peak = .05, attack = .025, wave = 'sine', filter = null, pan = 0, bus = master }) {
+  function tone(group, { frequency, end = frequency, duration = .24, delay = 0, peak = .05, attack = .025, wave = 'sine', filter = null, pan = 0, bus = effectBus }) {
     const now = context.currentTime + delay, source = context.createOscillator(), gain = context.createGain(), nodes = [gain];
     source.type = wave; source.frequency.setValueAtTime(frequency, now);
     if (end !== frequency) source.frequency.exponentialRampToValueAtTime(end, now + duration);
@@ -1925,7 +1926,7 @@ function createAudioDirector(getSettings) {
     filter.frequency.setValueAtTime(frequency, now);
     if (end !== frequency) filter.frequency.exponentialRampToValueAtTime(end, now + duration);
     envelope(gain.gain, now, duration, peak, attack);
-    source.connect(filter); filter.connect(gain); gain.connect(master);
+    source.connect(filter); filter.connect(gain); gain.connect(effectBus);
     track(source, [filter, gain], group); source.start(now); source.stop(now + duration + .02);
   }
 
@@ -4503,6 +4504,11 @@ return Object.freeze({"EpisodeOneStage":EpisodeOneStage});
 __vnModules["episode-one-audio.js"]=(()=>{
 'use strict';
 
+// Recorded core scores are quieter than the 1–2화 tracks; compensate by cue
+// key without raising the user's master volume or the effects alongside them.
+const MUSIC_GAIN=.75, AMBIENCE_GAIN=.45, EFFECT_GAIN=.3;
+const CORE_MUSIC_GAIN=Object.freeze({coreClay:1.7,corePulse:1.9,coreThreshold:2,coreAfter:2.2});
+
 function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
   let context=null,master=null,version=0,current=null,gapTimer=0,gapActive=false,lastEffect='',focusGain=1;
   const buffers=new Map(),tracks=new Map(),effects=new Set(),voices=new Set(),positions=new Map();
@@ -4537,7 +4543,7 @@ function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
     const serial=++version,valid=()=>serial===version&&allowed();
     current=`${cue.music||''}:${cue.ambience||''}`;clearTimeout(gapTimer);gapActive=false;
     master.gain.setTargetAtTime(level()*focusGain,context.currentTime,.08);
-    const desired=[['music',cue.music,.46],['ambience',cue.ambience,.76]];
+    const desired=[['music',cue.music,CORE_MUSIC_GAIN[cue.music]??MUSIC_GAIN],['ambience',cue.ambience,AMBIENCE_GAIN]];
     const trackWork=Promise.all(desired.map(async([bus,key,gain])=>{
         const prior=tracks.get(bus);if(prior?.key===key)return;if(prior){dispose(prior,1.4);tracks.delete(bus);}
         if(key){const buffer=await load(key);if(!valid()||!buffer)return;const v=source(buffer,true,gain,key);tracks.set(bus,v);}
@@ -4547,7 +4553,7 @@ function createEpisodeOneAudio(getSettings,assets,{onStatus=()=>{}}={}){
     if(!quiet&&cue.fx&&effectKey!==lastEffect){
       lastEffect=effectKey;const buffer=await load(cue.fx);if(!valid()||!buffer)return;
       while(effects.size>=3){const old=effects.values().next().value;dispose(old);effects.delete(old);}
-      const v=source(buffer,false,.8,cue.fx);effects.add(v);
+      const v=source(buffer,false,EFFECT_GAIN,cue.fx);effects.add(v);
     }
     await trackWork;
     if(valid())onStatus(tracks.size||effects.size?'playing':'silent',{music:tracks.get('music')?.key||'',ambience:tracks.get('ambience')?.key||''});
@@ -4877,10 +4883,11 @@ voice('동료들',[73,74,76,77,78]); voice('광고 속 지우',[239]);
 const EPISODE_TWO_SCENES = SCENES.map(([index,title]) => ({index,title}));
 function isEpisodeTwo(chapter) {
   if(chapter?.id!=='2')return false;
-  if(!validated.has(chapter))validated.set(chapter,chapter.beats?.length===286&&sourceFingerprint(chapter)==='f4703a55'&&SCENES.every(([i,,text])=>chapter.beats[i]?.text===text));
+  if(!validated.has(chapter)){const patched=chapter.__ep2Revision==='20261021-A';validated.set(chapter,chapter.beats?.length===286&&SCENES.every(([i,,text])=>patched?(i===190?chapter.beats[i]?.text==='지우는 점토를 뒤집어 보았다.':chapter.beats[i]?.text.startsWith(text)):chapter.beats[i]?.text===text)&&(patched?chapter.beats[205]?.text.includes('그래야 그게 정말 내 선택이지.'):sourceFingerprint(chapter)==='f4703a55'));}
   return validated.get(chapter);
 }
 function episodeTwoSpeaker(chapter,index) {
+  if(chapter?.__ep2Revision==='20261021-A'&&index>=151&&index<=205)return chapter.beats[index]?.speaker||'';
   return isEpisodeTwo(chapter) ? voices.get(index) || chapter.beats[index]?.speaker || '' : chapter?.beats?.[index]?.speaker || '';
 }
 const actor=(id,asset,side,gaze,pose,name)=>({id,asset,side,gaze,pose,name:name||{seoin:'서인',mother:'어머니',jiwoo:'지우',father:'지우 아버지'}[id]});
@@ -4977,6 +4984,305 @@ function episodeTwoPreviousPage(chapter,index){
 }
 
 return Object.freeze({"episodeTwoReadingPage":episodeTwoReadingPage,"episodeTwoPreviousPage":episodeTwoPreviousPage});
+})();
+
+/* module: episode-two-copyfix.js */
+__vnModules["episode-two-copyfix.js"]=(()=>{
+'use strict';
+
+// 2026-10-21 작가 승인 A안. 2화 151~205번 기존 저장 좌표를 유지하며 화면 대사를 원고와 동기화한다.
+// story-data.js 전체 재생성 전까지 정본 원고에 맞추는 최소 범위 보정. 원본 비트·나머지 장은 변경하지 않는다.
+const REVISED_BEATS = [
+  {
+    "text": "집을 나선 뒤 둘은 한동안 말없이 걸었다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "지우가 먼저 물었다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "“나 미친 것 같아?”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "서인은 바로 대답하지 못했다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "“조금.”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“솔직하네.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“너희 아버지 말도 맞잖아.”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“알아.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“동생은?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“알아.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“보험은?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“안다고.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "지우가 멈춰 섰다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "“나도 계산 다 해 봤어.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“그런데 왜 해?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“계산해도 안 나오는 게 있으니까.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“뭔데?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“그걸 모르겠으니까 이러는 거잖아.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "지우가 짜증스럽게 대꾸하더니 이내 웃었다.\n“우리 대화 계속 제자리네.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“네가 답을 모르겠다며.”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“그러니까. 나도 답 좀 알았으면 좋겠어.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "서인도 웃었다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "지우가 주머니에서 작은 것을 꺼냈다.\n어제 서인에게 줬던 찌그러진 점토였다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "“이거 다시 가져갔네?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“네 책상에서 몰래.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“도둑이냐?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“내 거잖아.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“줬으면 내 거지.”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“치사하게 나오네.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "지우가 웃으며 점토를 손바닥 위에 올렸다.\n“어제 엄마한테 물어봤어. 내가 이걸 왜 만들었냐고.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“뭐래?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“컵이래.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "서인이 점토를 봤다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "“저게?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“그러니까 초등학생 작품이지.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "지우가 웃었다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "“엄마가 그러더라. 어릴 때 내가 도자기 만드는 사람이 되겠다고 난리였대.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“기억나?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“전혀.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "지우는 점토를 뒤집어 보았다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "“그게 좀 무섭더라.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“뭐가.”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“내가 나중에 싫어져서 그만둔 거면 괜찮잖아.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "지우가 잠시 말을 골랐다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "“근데 싫어졌던 기억도 없으니까. 내가 왜 그만뒀는지도 모르겠고.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "서인은 아무 말 없이 지우를 바라봤다.",
+    "speaker": "",
+    "kind": "narration"
+  },
+  {
+    "text": "“한 달만 찾아볼 거야.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "지우가 점토를 주머니에 넣었다.\n“도자기가 진짜 내 꿈이었는지, 그냥 애들 장난이었는지. 그것도 아니면 아무것도 없는지.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“아무것도 없으면?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“그럼 다시 광고 켜지 뭐.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“그렇게 쉽게?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“쉽겠냐.”\n지우가 웃다가 금방 웃음을 거뒀다.\n“아빠 말이 틀렸으면 좋겠어. 그럼 나도 덜 미안할 텐데.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "서인은 아까 태블릿에 떠 있던 붉은 숫자들을 떠올렸다.\n“그래도 하겠다고?”",
+    "speaker": "서인",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“응.”\n지우가 주머니 속 점토를 손끝으로 만지작거렸다.",
+    "speaker": "지우",
+    "kind": "dialogue"
+  },
+  {
+    "text": "“서인아, 내가 뭘 포기하는지는 알아야 할 거 아니야.”\n잠시 후, 지우가 덧붙였다.\n“그래야 그게 정말 내 선택이지.”",
+    "speaker": "지우",
+    "kind": "dialogue"
+  }
+];
+function fingerprint(chapter){
+  let hash=2166136261;
+  for(const char of chapter.beats.map(beat=>beat.text).join('\u001f'))for(let i=0;i<char.length;i++)hash=Math.imul(hash^char.charCodeAt(i),16777619)>>>0;
+  return hash.toString(16);
+}
+function syncEpisodeTwoCopy(story){
+  const chapter=story?.chapters?.find(c=>c.id==='2');
+  if(!chapter || chapter.beats?.length!==286 || fingerprint(chapter)!=='f4703a55' || REVISED_BEATS.length!==55) return false;
+  for(let i=0;i<REVISED_BEATS.length;i++)chapter.beats[i+151]={...chapter.beats[i+151],...REVISED_BEATS[i]};
+  chapter.__ep2Revision='20261021-A';
+  return true;
+}
+
+return Object.freeze({"syncEpisodeTwoCopy":syncEpisodeTwoCopy});
 })();
 
 /* module: core-demo-data.js */
@@ -5763,6 +6069,7 @@ const { createEpisodeOneTeaser }=__vnModules["episode-one-teaser.js"];
 const { createTitleAtmosphere }=__vnModules["title-atmosphere.js"];
 const { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES }=__vnModules["episode-two.js"];
 const { episodeTwoReadingPage, episodeTwoPreviousPage }=__vnModules["episode-two-reading.js"];
+const { syncEpisodeTwoCopy }=__vnModules["episode-two-copyfix.js"];
 const { eventCutsceneDirection, EPISODE_CUTSCENES }=__vnModules["episode-cutscenes.js"];
 const { coreSceneDirection, isOptionalObservation, CORE_CUTS, CORE_MOMENTS, CORE_DEMO_STORAGE_SUFFIX }=__vnModules["core-demo.js"];
 const { RELEASE, publicDemoStory, canReadChapter, purchaseLink }=__vnModules["release.js"];
@@ -5771,6 +6078,7 @@ const { coreReadingPage, corePreviousPage }=__vnModules["core-reading.js"];
 const demoMode=true;
 if(demoMode)document.documentElement.dataset.coreDemo='true';
 const fullStory=normalizeStory(window.STORY);
+syncEpisodeTwoCopy(fullStory);
 const story=withTeaserCharacterAssets(publicDemoStory(fullStory),EP1_ASSETS);
 const activeStorageKey=STORAGE_KEY+(demoMode?CORE_DEMO_STORAGE_SUFFIX:'');
 document.documentElement.dataset.vnBuild='teaser-art-20261021-r1';

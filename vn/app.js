@@ -3,7 +3,7 @@ import {
   freshProgress, isSeen, makeSave, nextProgress,
   normalizeStory, previousProgress, readStore, selectChoice, writeStore,
 } from './state.js';
-import { createAudioDirector } from './audio.js';
+import { createAudioDirector } from './audio.js?v=audio-balance-20261021-r1';
 import { createMotifSVG, directedCast, sceneClass } from './direction.js';
 import { presentationForBeat } from './neural-cues.js?v=teaser-art-20261021-r1';
 import { NeuralStage } from './neural-stage.js';
@@ -13,7 +13,7 @@ import { EP1_ASSETS } from './ep1-assets.js?v=teaser-art-20261021-r1';
 import { withTeaserCharacterAssets } from './teaser-art.js?v=teaser-art-20261021-r1';
 import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=teaser-art-20261021-r1';
 import { EpisodeOneStage } from './episode-one-stage.js?v=teaser-art-20261021-r1';
-import { createEpisodeOneAudio } from './episode-one-audio.js?v=teaser-art-20261021-r1';
+import { createEpisodeOneAudio } from './episode-one-audio.js?v=audio-balance-20261021-r1';
 import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=teaser-art-20261021-r1';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
