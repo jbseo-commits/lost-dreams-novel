@@ -27,12 +27,24 @@ button:disabled{opacity:.3;cursor:not-allowed}
 button.active{background:#6e5c3c;border-color:#e0bd7d}
 .progress{font:12px system-ui,sans-serif;color:#9bb1a8}
 .note{margin-top:15px;line-height:1.7;font-size:12px;color:#90a9a7}
+.story-cast{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.story-cast[hidden]{display:none!important}
+.story-actor{position:absolute;bottom:22%;height:67%;width:30%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 12px 32px #02080d8c);mask-image:linear-gradient(180deg,#000 0%,#000 68%,transparent 100%);opacity:.83}
+.story-actor-seoin{left:-5%}
+.story-actor-yoonha{left:24%;opacity:.74}
+.story-cast[data-room="refund"] .story-actor-seoin{left:1%;height:59%;bottom:24%}
+.story-cast[data-room="refund"] .story-actor-yoonha{display:none}
+@media(max-width:640px){.story-actor-seoin{left:-31%;bottom:24%;height:51%;width:83%;opacity:.85}.story-actor-yoonha{display:none}.story-cast[data-room="refund"] .story-actor-seoin{left:-27%;height:50%}}
 @media(max-width:640px){main{padding:8px}header{margin:9px 6px}.stage{aspect-ratio:390/680}.stage-image{background-position:center}.dialogue{left:3%;right:3%;height:27%;bottom:2%;padding:14px}.text{font-size:13px;line-height:1.55}.toolbar{padding:4px 5px}button{padding:9px 10px;font-size:11px}}
 </style><script src="../story-data.js"></script></head>
 <body><main>
 <header><div><h1>제34화 · 이름을 놓는 값</h1><div class="subtitle">외부 회의실 / 환급 창구 · 원고와 에셋을 함께 확인하는 내부 검수 페이지</div></div><span class="status">DRAFT ART · NOT PUBLIC RELEASE</span></header>
 <section class="stage" id="stage" aria-label="34화 개발용 장면 미리보기">
 <div class="stage-image" id="background"></div>
+<div class="story-cast" id="cast" hidden aria-hidden="true">
+<img class="story-actor story-actor-seoin" src="../assets/seoin.webp" alt="">
+<img class="story-actor story-actor-yoonha" src="../assets/yoonha.webp" alt="">
+</div>
 <div class="settlement-story-stage" id="settlementPanel" hidden aria-hidden="true"></div>
 <div class="dialogue"><span id="speaker" class="label"></span><p id="sentence" class="text"></p></div>
 </section>
@@ -40,7 +52,7 @@ button.active{background:#6e5c3c;border-color:#e0bd7d}
 <button type="button" id="meeting">오전 11시 · 합의 면담</button><button type="button" id="refund">오후 2시 10분 · 환급 접수</button>
 <button type="button" id="previous">← 이전</button><button type="button" id="next">다음 →</button><button type="button" id="hide">정보 레이어 숨기기</button>
 </div><span class="progress" id="progress">검수 준비</span></div>
-<div class="note">좌우 방향키로 문장을 이동합니다. 정식판 공개나 구매 제한 해제를 의미하지 않으며 SVG는 최종 회화풍 원화가 아닙니다.</div>
+<div class="note">좌우 방향키로 문장을 이동합니다. 서인·백윤하는 기존 원화를 재사용했습니다. 오하준·환급 신청자의 얼굴은 아직 제작하지 않았습니다. 정식판 공개나 구매 제한 해제를 의미하지 않으며 SVG는 최종 회화풍 원화가 아닙니다.</div>
 </main>
 <script type="module">
 import {SettlementSceneStage,settlementForBeat} from '../settlement-scene.js';
@@ -56,6 +68,8 @@ function render(){
  if(!beat){$('sentence').textContent='원고를 읽지 못했습니다.';return;}
  const cue=settlementForBeat(chapter,cursor);
  stage.render(cue,{reducedMotion:matchMedia('(prefers-reduced-motion:reduce)').matches});
+ $('cast').hidden=!cue;
+ $('cast').dataset.room=cue?.room||'none';
  $('background').style.backgroundImage=cue?'url("'+new URL('../'+cue.background.slice(2),location.href).href+'")':'none';
  $('speaker').textContent=beat.speaker||'서술';
  $('sentence').textContent=beat.text;
