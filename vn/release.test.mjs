@@ -42,7 +42,13 @@ test('actual VN deployment and its single HTML contain only the demo text, cues 
  assert.equal(report.sourceBeats,4242);assert.equal(report.paymentAuthentication,false);
  assert.equal(built.window.STORY.assets.jiwoo,'assets/teaser-style/jiwoo-relaxed.webp');
  assert.ok(!report.media.includes('assets/jiwoo.webp'));
- assert.equal(report.media.filter(m=>m.startsWith('assets/teaser-style/')).length,43);
+ assert.equal(report.media.filter(m=>m.startsWith('assets/teaser-style/')).length,34);
+ const parents=JSON.parse(await fs.readFile(path.join(vn,'assets/parent-style/provenance.json'),'utf8'));
+ assert.equal(report.media.filter(m=>m.startsWith('assets/parent-style/')).length,10);
+ for(const asset of parents.assets){
+  assert.ok(report.media.includes(asset.file),asset.key);
+  assert.ok(!report.media.includes(asset.original),asset.key+' legacy art excluded');
+ }
  for(const c of built.window.STORY.chapters)assert.equal(JSON.stringify(c.beats),JSON.stringify(full.chapters.find(o=>o.id===c.id).beats));
  assert.ok(report.media.every(m=>!m.includes('court')&&!m.includes('settlement-hands')));
  assert.ok(!report.media.includes('assets/cutscenes/foodstall-contract.webp'));

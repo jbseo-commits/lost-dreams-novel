@@ -1,4 +1,5 @@
 import {CORE_ASSETS} from './core-assets.js?v=teaser-art-20261021-r1';
+import {PARENT_ASSETS} from './parent-art.js?v=mother-age-20261021-r1';
 export const EP1_ASSETS = Object.freeze({
   ...CORE_ASSETS,
   clayFailure:'assets/cutscenes/clay-failure.webp',
@@ -51,4 +52,5 @@ export const EP1_ASSETS = Object.freeze({
   musicSea:'assets/ep1/borrowed-sea.mp3', musicTable:'assets/ep1/small-table.mp3', musicChoice:'assets/ep1/unanswered.mp3',
   room:'assets/ep1/room-morning.mp3', pan:'assets/ep1/pan-sizzle.mp3', dishes:'assets/ep1/ceramic-chopsticks.mp3', train:'assets/ep1/train-car.mp3', office:'assets/ep1/office-air.mp3',
   box:'assets/ep1/clay-box.mp3', approval:'assets/ep1/approval-soft.mp3', amber:'assets/ep1/warning-amber.mp3', red:'assets/ep1/warning-red.mp3', bedding:'assets/ep1/bedding-swipe.mp3', coast:'assets/ep1/coast-residue.mp3', release:'assets/ep1/neural-release.mp3',
+  ...PARENT_ASSETS,
 });
