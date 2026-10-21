@@ -267,8 +267,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "20",
-    "start": 81,
-    "end": 81,
+    "start": 80,
+    "end": 80,
     "cg": "signedCost",
     "anchor": "윤세라는 다음 사례로 넘기기 전에 바뀐 보고에 서명했다.",
     "alt": "자기 이름으로 남긴 비용",
@@ -289,8 +289,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "22",
-    "start": 152,
-    "end": 152,
+    "start": 148,
+    "end": 148,
     "cg": "hospitalShoe",
     "anchor": "그가 신발을 가져다주자 아이는 뒤축을 구겨 신었다. 남자는 허리를 숙여 뒤축을 펴 줬다.",
     "alt": "57분 뒤 신발 뒤축",
