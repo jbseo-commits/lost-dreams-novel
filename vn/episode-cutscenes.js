@@ -256,13 +256,13 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "19",
-    "start": 55,
-    "end": 55,
+    "start": 57,
+    "end": 57,
     "cg": "changedChoice",
-    "anchor": "그는 36가구의 창을 닫지 않고 A를 눌렀다.",
+    "anchor": "그는 서른여섯 개의 불빛을 닫지 않은 채 A를 눌렀다.",
     "alt": "처음 고른 표시를 지우고",
-    "endAnchor": "그는 36가구의 창을 닫지 않고 A를 눌렀다.",
-    "fingerprint": "29025451",
+    "endAnchor": "그는 서른여섯 개의 불빛을 닫지 않은 채 A를 눌렀다.",
+    "fingerprint": "ea0219df",
     "mobilePosition": "50% 48%"
   },
   {
