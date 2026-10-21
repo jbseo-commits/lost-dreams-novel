@@ -2969,7 +2969,7 @@ const AUTHORED = {
       "medical"
     ],
     [
-      173,
+      174,
       "공공 의사결정 권한 추가 확대: 반대.",
       "medical"
     ]
