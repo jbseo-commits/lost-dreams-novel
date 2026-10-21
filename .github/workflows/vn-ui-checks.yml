@@ -25,3 +25,17 @@ jobs:
         run: npm test --prefix vn
       - name: 데모 전용 공개 산출물 생성 검사
         run: node tools/build-vn-public.mjs "$GITHUB_WORKSPACE" "$RUNNER_TEMP/lost-dreams-public"
+      - name: 34화 내부 원화 검수 자료 묶음
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-ep34-internal-review
+          path: |
+            vn/notes/ep034-internal-preview.html
+            vn/settlement-scene.js
+            vn/settlement-scene.css
+            vn/story-data.js
+            vn/assets/ep34/*.svg
+            vn/assets/seoin.webp
+            vn/assets/yoonha.webp
+          retention-days: 7
