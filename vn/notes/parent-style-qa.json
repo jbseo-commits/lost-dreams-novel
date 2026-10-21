@@ -22,246 +22,265 @@
     ]
   },
   "scope": "공개1~11화 데모의 어머니·지우 아버지 표정5종과 등장 사건 그림5장",
+  "ageRevision": {
+    "date": "2026-10-21",
+    "request": "어머니가 젊어 지우 아버지랑 비슷한 나잇대로",
+    "keys": [
+      "motherCare",
+      "motherWarm",
+      "motherSearching",
+      "kitchenAd",
+      "table",
+      "coreMotherSleep",
+      "coreMotherDinner"
+    ],
+    "benchmark": {
+      "key": "fatherAppeal",
+      "file": "assets/parent-style/father-appeal.webp",
+      "sha256": "15dedb556eb0e958e231e4c575c6ff3e1ecaf575b196c65421523fc9a53dc992"
+    },
+    "note": "작가 요청의 시각적 연령대 보정. 숫자 나이는 원화 프롬프트의 참고 표현이며 설정집에 확정한 나이가 아님."
+  },
   "online": [
     {
       "key": "kitchenAd",
       "chapter": "1",
       "beat": 32,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/kitchenAd-400.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/kitchenAd-400.png"
     },
     {
       "key": "motherWarm",
       "chapter": "1",
       "beat": 39,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/motherWarm-400.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherWarm-400.png"
     },
     {
       "key": "motherSearching",
       "chapter": "1",
       "beat": 54,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/motherSearching-400.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherSearching-400.png"
     },
     {
       "key": "motherCare",
       "chapter": "1",
       "beat": 61,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/motherCare-400.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherCare-400.png"
     },
     {
       "key": "table",
       "chapter": "1",
       "beat": 68,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/table-400.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/table-400.png"
     },
     {
       "key": "fatherAppeal",
       "chapter": "2",
       "beat": 90,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/fatherAppeal-400.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherAppeal-400.png"
     },
     {
       "key": "medicalTablet",
       "chapter": "2",
       "beat": 95,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/medicalTablet-400.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/medicalTablet-400.png"
     },
     {
       "key": "fatherDown",
       "chapter": "2",
       "beat": 138,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/fatherDown-400.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherDown-400.png"
     },
     {
       "key": "coreMotherSleep",
       "chapter": "10",
       "beat": 258,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/coreMotherSleep-400.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherSleep-400.png"
     },
     {
       "key": "coreMotherDinner",
       "chapter": "11",
       "beat": 215,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/coreMotherDinner-400.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherDinner-400.png"
     },
     {
       "key": "kitchenAd",
       "chapter": "1",
       "beat": 32,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/kitchenAd-1440.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/kitchenAd-1440.png"
     },
     {
       "key": "motherWarm",
       "chapter": "1",
       "beat": 39,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/motherWarm-1440.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherWarm-1440.png"
     },
     {
       "key": "motherSearching",
       "chapter": "1",
       "beat": 54,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/motherSearching-1440.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherSearching-1440.png"
     },
     {
       "key": "motherCare",
       "chapter": "1",
       "beat": 61,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/motherCare-1440.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherCare-1440.png"
     },
     {
       "key": "table",
       "chapter": "1",
       "beat": 68,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/table-1440.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/table-1440.png"
     },
     {
       "key": "fatherAppeal",
       "chapter": "2",
       "beat": 90,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/fatherAppeal-1440.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherAppeal-1440.png"
     },
     {
       "key": "medicalTablet",
       "chapter": "2",
       "beat": 95,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/medicalTablet-1440.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/medicalTablet-1440.png"
     },
     {
       "key": "fatherDown",
       "chapter": "2",
       "beat": 138,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/fatherDown-1440.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherDown-1440.png"
     },
     {
       "key": "coreMotherSleep",
       "chapter": "10",
       "beat": 258,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/coreMotherSleep-1440.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherSleep-1440.png"
     },
     {
       "key": "coreMotherDinner",
       "chapter": "11",
       "beat": 215,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/coreMotherDinner-1440.png",
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherDinner-1440.png"
     }
   ],
   "offline": [
@@ -269,81 +288,81 @@
       "key": "motherCare",
       "chapter": "1",
       "beat": 61,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "transport": "localhost HTTP, only HTML allowed",
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/motherCare-offline-400.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherCare-offline-400.png"
     },
     {
       "key": "fatherAppeal",
       "chapter": "2",
       "beat": 90,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "transport": "localhost HTTP, only HTML allowed",
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/fatherAppeal-offline-400.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherAppeal-offline-400.png"
     },
     {
       "key": "coreMotherSleep",
       "chapter": "10",
       "beat": 258,
+      "viewportWidth": 400,
+      "viewportHeight": 850,
       "transport": "localhost HTTP, only HTML allowed",
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/coreMotherSleep-offline-400.png",
-      "extraNetworkRequests": 0,
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 400,
-      "viewportHeight": 850
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherSleep-offline-400.png",
+      "extraNetworkRequests": 0
     },
     {
       "key": "motherCare",
       "chapter": "1",
       "beat": 61,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "transport": "localhost HTTP, only HTML allowed",
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/motherCare-offline-1440.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/motherCare-offline-1440.png"
     },
     {
       "key": "fatherAppeal",
       "chapter": "2",
       "beat": 90,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "transport": "localhost HTTP, only HTML allowed",
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/fatherAppeal-offline-1440.png",
       "naturalWidth": 1024,
       "naturalHeight": 1536,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/fatherAppeal-offline-1440.png"
     },
     {
       "key": "coreMotherSleep",
       "chapter": "10",
       "beat": 258,
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
       "transport": "localhost HTTP, only HTML allowed",
       "matched": true,
-      "horizontalOverflow": false,
-      "screenshot": "parent-style-proof/coreMotherSleep-offline-1440.png",
-      "extraNetworkRequests": 0,
       "naturalWidth": 1672,
       "naturalHeight": 941,
-      "viewportWidth": 1440,
-      "viewportHeight": 900
+      "horizontalOverflow": false,
+      "screenshot": "parent-style-proof/coreMotherSleep-offline-1440.png",
+      "extraNetworkRequests": 0
     }
   ],
   "controls": [
@@ -474,6 +493,16 @@
       "volumePreserved": 27
     }
   ],
+  "consoleDiagnostics": [
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+      "url": "http://127.0.0.1:5891/favicon.ico",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    }
+  ],
   "limitations": [
     "대표 좌표에서의 표시·조작 검사이며 전편 연속 독서 검사는 아님",
     "화풍 평가는 티저 실영상 프레임과 원화의 육안 대조에 근거함",
@@ -481,22 +510,22 @@
   ],
   "offlineManifest": {
     "storyChapters": 18,
-    "sha256": "998ee085d8960eefc7f113820e7026a11271a38f7e14a99773a76c6382eecdea",
-    "bytes": 78644652,
+    "sha256": "9b37af655be6bd4f08318aba4b897a2fa08341992c988097c5964d3f344c4c03",
+    "bytes": 78483604,
     "parents": [
       {
         "key": "motherCare",
-        "sha256": "7df81a21dfceac9a138b02789eb4a1de2a4ca8e1f06c7b7ea22fc3a62ee3b1b9",
+        "sha256": "73d61a963f5b725e8ce68a570ffc34f0ecfc56e282b18bdb6421e0e0c9c8d71b",
         "matched": true
       },
       {
         "key": "motherWarm",
-        "sha256": "38ba9943263ba724178bb205d002a5a63cc6a51f77bb07325da0d00afba3ff3f",
+        "sha256": "2276f3a487b91c37b7983a233c79ee34487211bd7a2747af0bd276264a7b4c16",
         "matched": true
       },
       {
         "key": "motherSearching",
-        "sha256": "9f307fa83583433fdee4db7ec078af9d48742e4e6e9acdfb4b5cb5b4e87ad1e2",
+        "sha256": "0624133b60fe8fd458e8249cd27927de280bfeceb7a79f170c8190dcaa3253b1",
         "matched": true
       },
       {
@@ -511,22 +540,22 @@
       },
       {
         "key": "kitchenAd",
-        "sha256": "d50e20c03c7ea9e8bd32b471290d2e1fcdf9d3319912ac884824b787eaf1dc0f",
+        "sha256": "dac6914028dc44ec8e621ed314e2cde6c15794c227d4bf832a017a3083a10b20",
         "matched": true
       },
       {
         "key": "table",
-        "sha256": "6f7d1e14f010d5f2ad775371d68427dacbc2b33ad907a47d14febe666b038fb2",
+        "sha256": "05de9fc372285f045383e9a513b5b6d4ae320641e77575b60a464c40d1a2e30c",
         "matched": true
       },
       {
         "key": "coreMotherSleep",
-        "sha256": "db3da162fc700802321b4fe04c272743ac84a4736f047c41eda9c30995db1c12",
+        "sha256": "216ebd0544aead01ae4558dafa3b4c275f36e43034c127762c35fb9a2c8a8231",
         "matched": true
       },
       {
         "key": "coreMotherDinner",
-        "sha256": "34a2a841820342d787d80a82ea019e5bb6370d658e004de5e8da3e905e98ff56",
+        "sha256": "285cce666c37982404545fac6a339345a3c36286eb4e859706f3a985af8b2aee",
         "matched": true
       },
       {
@@ -536,6 +565,7 @@
       }
     ]
   },
+  "status": "PASS",
   "gallery": [
     {
       "viewportWidth": 400,
@@ -577,7 +607,6 @@
     "filesPassed": 17,
     "filesFailed": 0
   },
-  "status": "PASS",
   "sleepConnectorDetail": {
     "viewportWidth": 400,
     "zoom": true,

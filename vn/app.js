@@ -9,7 +9,7 @@ import { presentationForBeat } from './neural-cues.js?v=teaser-art-20261021-r1';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js?v=teaser-art-20261021-r1';
-import { EP1_ASSETS } from './ep1-assets.js?v=parent-art-20261021-r1';
+import { EP1_ASSETS } from './ep1-assets.js?v=parent-art-20261021-r2';
 import { withTeaserCharacterAssets } from './teaser-art.js?v=teaser-art-20261021-r1';
 import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=teaser-art-20261021-r1';
 import { EpisodeOneStage } from './episode-one-stage.js?v=teaser-art-20261021-r1';

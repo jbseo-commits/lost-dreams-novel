@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 78644652,
-  "sha256": "998ee085d8960eefc7f113820e7026a11271a38f7e14a99773a76c6382eecdea",
+  "offlineBytes": 78483604,
+  "sha256": "9b37af655be6bd4f08318aba4b897a2fa08341992c988097c5964d3f344c4c03",
   "storyChapters": 18,
   "storyAssetKeys": 30,
   "ep1AssetKeys": [
@@ -94,7 +94,7 @@
     "release"
   ],
   "uniqueEmbeddedAssets": 110,
-  "embeddedOriginalBytes": 55293815,
+  "embeddedOriginalBytes": 55182105,
   "mimeTypes": [
     "image/webp",
     "audio/wav",
@@ -258,10 +258,10 @@
       "variable": "__vnAsset21"
     },
     {
-      "source": "assets/parent-style/mother-care.webp",
+      "source": "assets/parent-style/mother-care-mature.webp",
       "mime": "image/webp",
-      "bytes": 439294,
-      "sha256": "7df81a21dfceac9a138b02789eb4a1de2a4ca8e1f06c7b7ea22fc3a62ee3b1b9",
+      "bytes": 374968,
+      "sha256": "73d61a963f5b725e8ce68a570ffc34f0ecfc56e282b18bdb6421e0e0c9c8d71b",
       "variable": "__vnAsset22"
     },
     {
@@ -342,17 +342,17 @@
       "variable": "__vnAsset33"
     },
     {
-      "source": "assets/parent-style/core-mother-sleep.webp",
+      "source": "assets/parent-style/core-mother-sleep-mature.webp",
       "mime": "image/webp",
-      "bytes": 404070,
-      "sha256": "db3da162fc700802321b4fe04c272743ac84a4736f047c41eda9c30995db1c12",
+      "bytes": 423912,
+      "sha256": "216ebd0544aead01ae4558dafa3b4c275f36e43034c127762c35fb9a2c8a8231",
       "variable": "__vnAsset34"
     },
     {
-      "source": "assets/parent-style/core-mother-dinner.webp",
+      "source": "assets/parent-style/core-mother-dinner-mature.webp",
       "mime": "image/webp",
-      "bytes": 365264,
-      "sha256": "34a2a841820342d787d80a82ea019e5bb6370d658e004de5e8da3e905e98ff56",
+      "bytes": 368866,
+      "sha256": "285cce666c37982404545fac6a339345a3c36286eb4e859706f3a985af8b2aee",
       "variable": "__vnAsset35"
     },
     {
@@ -503,10 +503,10 @@
       "variable": "__vnAsset56"
     },
     {
-      "source": "assets/parent-style/kitchen-ad.webp",
+      "source": "assets/parent-style/kitchen-ad-mature.webp",
       "mime": "image/webp",
-      "bytes": 471314,
-      "sha256": "d50e20c03c7ea9e8bd32b471290d2e1fcdf9d3319912ac884824b787eaf1dc0f",
+      "bytes": 448428,
+      "sha256": "dac6914028dc44ec8e621ed314e2cde6c15794c227d4bf832a017a3083a10b20",
       "variable": "__vnAsset57"
     },
     {
@@ -699,17 +699,17 @@
       "variable": "__vnAsset84"
     },
     {
-      "source": "assets/parent-style/mother-warm.webp",
+      "source": "assets/parent-style/mother-warm-mature.webp",
       "mime": "image/webp",
-      "bytes": 404798,
-      "sha256": "38ba9943263ba724178bb205d002a5a63cc6a51f77bb07325da0d00afba3ff3f",
+      "bytes": 371708,
+      "sha256": "2276f3a487b91c37b7983a233c79ee34487211bd7a2747af0bd276264a7b4c16",
       "variable": "__vnAsset85"
     },
     {
-      "source": "assets/parent-style/mother-searching.webp",
+      "source": "assets/parent-style/mother-searching-mature.webp",
       "mime": "image/webp",
-      "bytes": 369310,
-      "sha256": "9f307fa83583433fdee4db7ec078af9d48742e4e6e9acdfb4b5cb5b4e87ad1e2",
+      "bytes": 363538,
+      "sha256": "0624133b60fe8fd458e8249cd27927de280bfeceb7a79f170c8190dcaa3253b1",
       "variable": "__vnAsset86"
     },
     {
@@ -741,10 +741,10 @@
       "variable": "__vnAsset90"
     },
     {
-      "source": "assets/parent-style/table.webp",
+      "source": "assets/parent-style/table-mature.webp",
       "mime": "image/webp",
-      "bytes": 406230,
-      "sha256": "6f7d1e14f010d5f2ad775371d68427dacbc2b33ad907a47d14febe666b038fb2",
+      "bytes": 397150,
+      "sha256": "05de9fc372285f045383e9a513b5b6d4ae320641e77575b60a464c40d1a2e30c",
       "variable": "__vnAsset91"
     },
     {
@@ -990,7 +990,7 @@
       "exports": [
         "EP1_ASSETS"
       ],
-      "sourceSha256": "c2a3fc3e70b0dc890b11a21461a4fc6a2ed0e1cb7ba50c5be3b72a9af5c61a45",
+      "sourceSha256": "1ac80dabe235c99bc56c0cf8127af48043e0ba7902969f39aab6b11ed38e2c09",
       "compiledSourceSha256": "eb26dfc5cf661bdc2cad189ad948a1856f39c6187949c266736d57282b635790"
     },
     "episode-cutscenes.js": {
@@ -1125,7 +1125,7 @@
     },
     "app.js": {
       "exports": [],
-      "sourceSha256": "0639c96d456d007bd430788ebf713f163ea7997f40f8cde4cbbac473ef3b31b5",
+      "sourceSha256": "63fc7645a21963f9ffd99b4d384d1ff88b0e141addcd2dfbe41329c5f82b65e2",
       "compiledSourceSha256": "eb768940bd4d7a59fdeeb95a1b83cddbc520f55d493ee6ff68993240789da2d9"
     }
   },
