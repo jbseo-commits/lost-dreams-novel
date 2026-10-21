@@ -32,8 +32,8 @@ test('interview, lunch call, rooftop and hospital keep the people in their actua
  assert.equal(atText('20','말리면 그만둘 거야').speaker,'도윤');
  assert.equal(atText('20','말리면 그만둘 거야').scene,'rooftop');
  assert(atText('20','오늘 밤 거니까').direction.cast.find(p=>p.id==='jiwoo').remote);
- assert.equal(atText('19-1','확인 중입니다.').speaker,'서인');
- assert.equal(atText('19-2','그럼 원래 하기로 한 일은').speaker,'식품 담당자');
+ assert.equal(atText('19-1','후보 도착 시각을 불러').speaker,'서인');
+ assert.equal(atText('19-2','아침값은 받아요').speaker,'공동주방 책임자');
  assert.equal(atText('20-1','병원 끝나고 학교 갈').speaker,'문해린');
  assert.equal(atText('20-1','지난번에도 세 개였어').speaker,'은경의 딸');
  assert.equal(atText('21-1','끝까지 갔어요').speaker,'최은경');
@@ -47,8 +47,8 @@ test('mixed narration and channel direction retain the secret boundary and real 
   assert(!restricted.test(JSON.stringify(b)),id+':'+i);
   const cue=presentationForBeat(c,b,i);if(cue)assert.equal(cue.body,b.text,id+' stale cue');
  }}
- assert(atText('19-1','환불 확인 대기'));
- assert(atText('19-2','추가 작업비: 28 TOKEN'));
+ assert(atText('19-1','출동 판단: 배차 담당'));
+ assert(atText('19-2','05:18 도착. 07:00 전원 출차.'));
  assert(atText('21','정확한 원인은 아직 확인하지 못했습니다'));
  assert(atText('22','새벽 1시 12분. 네 번째 검증이'));
  assert(atText('22','그 밤에도 두 분은 같은 답'));
