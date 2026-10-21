@@ -24,7 +24,7 @@ test('34 review reuses existing actors without inventing an Oh Hajun face',async
  assert.match(html,/assets\/yoonha\.webp/);
  assert.doesNotMatch(html,/assets\/(?:ohajun|hajun)\.(?:webp|png)/);
  assert.match(html,/story-cast/);
- assert.match(html,/data-room="refund"/);
+ assert.match(html,/dataset\.room=cue\?\.room/);
  for(const path of ['../assets/seoin.webp','../assets/yoonha.webp','../assets/ep34/bg-external-conference-morning.svg','../assets/ep34/bg-refund-office-afternoon.svg']) {
   await access(new URL(path,import.meta.url));
  }
