@@ -267,8 +267,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "20",
-    "start": 76,
-    "end": 76,
+    "start": 81,
+    "end": 81,
     "cg": "signedCost",
     "anchor": "윤세라는 다음 사례로 넘기기 전에 바뀐 보고에 서명했다.",
     "alt": "자기 이름으로 남긴 비용",
@@ -278,8 +278,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "21",
-    "start": 115,
-    "end": 116,
+    "start": 124,
+    "end": 125,
     "cg": "heldCall",
     "anchor": "서인은 다음 기록으로 넘기던 화면을 문해린의 기록으로 되돌렸다. 문해린의 목소리가 작아졌다.",
     "alt": "넘기지 못한 다음 기록",
