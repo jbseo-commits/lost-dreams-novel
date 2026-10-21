@@ -8,9 +8,9 @@ const box={window:{}};vm.runInNewContext(await fs.readFile(new URL('./story-data
 const raw=JSON.parse(JSON.stringify(box.window.STORY)),story=normalizeStory(raw);
 const chapter=id=>story.chapters.find(c=>c.id===id);
 const at=(id,line)=>chapter(id).beats.find(b=>b.sourceLine>=line);
-test('all 30 episodes and all 21 included side stories have restorable authored stages',()=>{
+test('all 30 episodes and all 20 included side stories have restorable authored stages',()=>{
  const directed=story.chapters.filter(c=>Number(c.id.split('-')[0])<=30);
- assert.equal(directed.length,51);assert.equal(directed.filter(c=>c.kind==='bumper').length,21);
+ assert.equal(directed.length,50);assert.equal(directed.filter(c=>c.kind==='bumper').length,20);
  for(const c of directed)for(const b of c.beats){assert(b.direction?.place,c.id);assert(story.assets[b.scene]||b.scene==='neutral',c.id);}
  assert(story.chapters.filter(c=>Number(c.id.split('-')[0])>30).every(c=>c.beats.every(b=>!b.direction)));
 });

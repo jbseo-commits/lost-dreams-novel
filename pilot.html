@@ -760,7 +760,18 @@ body.ep8 .key{color:#0b0d10;border-color:#0b0d10;background:linear-gradient(90de
 .pt-photo:before{content:"";position:absolute;left:34px;top:22px;width:40px;height:50px;border-radius:50%;background:#c9a98e}.pt-photo:after{content:"";position:absolute;left:46px;top:58px;width:16px;height:3px;border-radius:2px;background:#7a3f3f}
 .pt-strip{display:flex;gap:4px;justify-content:center;margin-top:10px}.pt-strip i{width:26px;height:30px;background:#2a3038;border:2px solid #e9e4da55}.pt-strip i.cat{border-color:#ffd38a;background:#4a4030}
 .pt-say{display:flex;flex-direction:column;gap:2px;margin-top:10px;font:14px/1.6 "Noto Serif KR",serif}.pt-say .me{color:#e8ecf2}.pt-say .hk{color:#9ab6ff;text-align:right}
-/* EP17 northport · sessionlist */
+/* EP17–18: the threshold and a cancelled introduction */
+#forcedexit .veil,#lostintroduction .veil{background:radial-gradient(circle at 50% 35%,#161a21,#030507 72%)}
+.ex-stage{position:relative;height:168px;overflow:hidden;border-bottom:2px solid #7d8997;margin:22px 0 28px}
+.ex-door{position:absolute;left:72%;top:8px;height:154px;border-left:5px solid #bec4cb;padding:12px;color:#bdc8d2;font-size:12px}
+.ex-chair{position:absolute;left:15%;top:55px;width:98px;padding:18px 3px;border:2px solid #b3c2cf;border-radius:12px 12px 3px 3px;color:#e1e6ec;text-align:center;font-size:13px;background:#151b23}
+.ex-chair i{position:absolute;bottom:-14px;width:13px;height:13px;border:2px solid #b3c2cf;border-radius:50%}.ex-chair i:first-child{left:10px}.ex-chair i:last-child{right:10px}
+.ex-foot{position:absolute;left:52%;bottom:4px;padding:5px;background:#342e28;color:#e0c6a1;font-size:11px;white-space:nowrap}
+#forcedexit.on .ex-chair{animation:exPush 3s ease-in-out .5s both}@keyframes exPush{0%{transform:translateX(0)}45%,62%{transform:translateX(58px)}100%{transform:translateX(78px)}}
+.ex-invite{position:relative;padding:20px 16px;margin:20px 0;border:1px solid #566878;border-radius:8px}.ex-invite small{display:block;margin-bottom:10px;color:#b5c0cc}.ex-invite strong{font-weight:500}.ex-cancel{display:block;margin-top:18px;color:#e4b7a5;letter-spacing:.3em}
+@media(prefers-reduced-motion:reduce){#forcedexit.on .ex-chair{animation:none;transform:translateX(78px)}}
+
+/* EP17 legacy session list styles */
 #northport .veil,#sessionlist .veil{background:radial-gradient(circle at 50% 35%,#13110c,#050505 72%)}
 .td-c{border:1px solid #ffffff22;padding:8px;background:#ffffff05;font-size:9px;line-height:1.6;min-height:150px}.td-c strong{display:block;font:600 12px/1.4 system-ui,sans-serif;color:#fff;margin-bottom:4px}
 .td-msg{margin-top:10px;border:1px solid #9ab6ff66;background:#0b1020;padding:9px 11px;color:#dfe6ff;font:13px/1.6 "Noto Serif KR",serif;transform-origin:50% 100%}
@@ -1567,15 +1578,12 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="rp-stage" id="rpStage"><div class="rp-core" data-t=".2"><b>서인</b>외부 호출 0<br>등록 서버 0<br><span class="sc-gold" data-t="3.6">“느려졌습니다.”</span><br><span class="sc-gold" data-t="4.1">“모릅니다.”</span></div></div>
 
 <div class="sc-q" data-t="5.6"><small>강연우</small>“소문 속 버전은 올라갔어요.”</div></div></div></div>
-<div class="setpiece" id="northport"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">네리움 공동 세션 · 항만 냉장 물류 · 손목 띠 38분</div>
-<div class="sc-row" data-t=".1"><span>네리움 AI 추천</span><b class="sc-gold">북항</b></div>
-<div class="sc-row" data-t=".7"><span>비용</span><b class="sc-mint">7.8% 절감</b></div>
-<div class="sc-row" data-t="1.2"><span>평균 운송 시간</span><b class="sc-mint">11분 단축</b></div>
-<div class="sc-row" data-t="1.7"><span>사고 확률 차이</span><b>통계적으로 유의하지 않음</b></div>
-<div class="sc-card" data-t="2.6"><small>예외 승인</small><strong>현장 책임자 수동 전환 가능 · 인터뷰: 없음</strong></div>
-<div class="sc-q s" data-t="3.8"><small>서인</small>“그럼 모르겠습니다.”</div>
-<div class="sc-q" data-t="4.8">“사고 나면 사람이 결정하잖아요. 그 사람을 안 봤으니까요.”</div>
-<div class="sc-row" data-t="6"><span>네리움</span><b class="sc-gold">AI 추천대로 진행 · 서인의 답은 회의록에 들어가지 않음</b></div></div></div></div>
+<div class="setpiece" id="forcedexit"><div class="veil"></div><div class="sp-center"><div class="sc">
+<div class="sp-label">상담실 문턱</div>
+<div class="ex-stage" aria-label="문턱에 걸린 발과 앞으로 밀리는 호송 의자"><div class="ex-door">열린 문</div><div class="ex-chair">호송 의자<i></i><i></i></div><div class="ex-foot" data-t="1.2">문턱에 걸린 발</div></div>
+<div class="sc-q s" data-t=".3"><small>강연우</small>“서인 씨, 발 내려요.”</div>
+<div class="sc-q" data-t="3.1">신발 밑창이 바닥을 긁었다.</div>
+</div></div></div>
 <div class="setpiece" id="sessionlist"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">연합 전략망 · 게스트 열람</div>
 <div class="sc-row" data-t=".1"><span>회사 12 · 진행 중 공동 세션 23</span><b>완료 기록 수백 개</b></div>
 <div class="sl-scroll"><div class="sl-list"><div>식량 · 공동 세션 02-118</div><div>식량 · 공동 세션 02-301</div><div>의료 · 공동 세션 03-044</div><div>의료 · 제목 비공개</div><div>주거 · 공동 세션 05-210</div><div>에너지 · 참여사만 공개</div><div>교육 · 공동 세션 07-019</div><div>교육 · 제목 비공개</div><div class="sc-gold">수면 · 공동 세션 04-771</div><div>수면 · 제목 비공개</div></div></div>
@@ -1583,16 +1591,12 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <div class="sc-row" data-t="3.2"><span>참여자 1</span><b>아르카디아 거래처</b></div><div class="sc-row" data-t="3.4"><span>참여자 2</span><b>아르카디아 거래처</b></div><div class="sc-row" data-t="3.6"><span>참여자 3</span><b>처음 보는 이름</b></div>
 <div class="sc-row" data-t="4"><span>참여자 4</span><b class="sl-hide" data-g="4.6">비공개 ███████</b></div>
 <div class="sc-q s" data-t="5.2">광고꿈이라는 단어는 없었다.</div></div></div></div>
-<div class="setpiece" id="versionsheet"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">같은 11일, 두 개의 문서</div>
-<div class="sc-card" data-t=".1"><small>보안팀 최신 보고서</small>
-<div class="sc-row" data-t=".4"><span>외부 모델 호출</span><b>확인되지 않음</b></div><div class="sc-row" data-t=".6"><span>등록 외 서버·보조망</span><b>확인되지 않음</b></div><div class="sc-row" data-t=".8"><span>신경 인터페이스 외부 제어</span><b>확인되지 않음</b></div><div class="sc-row" data-t="1"><span>추론 주체</span><b class="sc-mint">미확정</b></div></div>
-<div class="sc-card" data-t="1.6"><small>외부 비공식 평가표 · ARKADIA PRIVATE REASONER</small>
-<div class="vs-v" data-t="1.9"><b>v1.x</b>고속 비정형 추론</div>
-<div class="vs-v" data-t="2.2"><b>v2.0</b>재훈련 추정<em data-t="3.2">병실에서 사람 얼굴을<br>못 보던 날</em></div>
-<div class="vs-v" data-t="2.5"><b>v2.1</b>과신 억제 · 출력 거부 · 인간 맥락 재확인<em data-t="3.8">“모르겠어”라고<br>답한 날</em></div></div>
-<div class="vs-bar" data-t="4.4"><span>11일 · 아무것도 하지 못한 시간</span></div>
-<div class="sc-row" data-t="4.9"><span>보안팀에게는</span><b class="sc-mint">미확정</b></div><div class="sc-row" data-t="5.2"><span>시장에게는</span><b class="sc-gold">신제품</b></div>
-<div class="sc-q" data-t="5.8">“고장 난 날에도 버전 번호가 붙는군요.”</div></div></div></div>
+<div class="setpiece" id="lostintroduction"><div class="veil"></div><div class="sp-center"><div class="sc">
+<div class="sp-label">방문이 끝난 뒤</div>
+<div class="sc-card" data-t=".2"><small>거래 원본</small><strong>제공자 이름은 끝내 못 봤다.</strong></div>
+<div class="ex-invite" data-t="1.3"><small>다음 주 저녁</small><strong>강연우의 소개 자리</strong><span class="ex-cancel" data-t="2.5">취소</span></div>
+<div class="sc-q s" data-t="3.1"><small>강연우</small>“나는 둘이 나가야 끝나는 방문이었고요.”</div>
+</div></div></div>
 <div class="setpiece" id="dark08"><div class="veil"></div><div class="sp-center"><div class="sc"><div class="sp-label">04-771 · 야간 인지 콘텐츠 공급망</div>
 <div class="dk-map"><i style="animation-delay:0.20s"></i><i style="animation-delay:0.72s"></i><i style="animation-delay:1.24s"></i><i style="animation-delay:0.35s"></i><i style="animation-delay:0.87s"></i><i style="animation-delay:1.39s"></i><i style="animation-delay:0.51s"></i><i style="animation-delay:1.03s"></i><i style="animation-delay:1.54s"></i><i style="animation-delay:0.66s"></i><i style="animation-delay:1.18s"></i><i style="animation-delay:0.30s"></i><i style="animation-delay:0.82s"></i><i style="animation-delay:1.33s"></i><i style="animation-delay:0.45s"></i><i style="animation-delay:0.97s"></i><i style="animation-delay:1.49s"></i><i style="animation-delay:0.61s"></i><i style="animation-delay:1.12s"></i><i style="animation-delay:0.24s"></i><i style="animation-delay:0.76s"></i><i style="animation-delay:1.28s"></i><i style="animation-delay:0.40s"></i><i style="animation-delay:0.91s"></i><i style="animation-delay:1.43s"></i><i style="animation-delay:0.55s"></i><i style="animation-delay:1.07s"></i><i style="animation-delay:1.59s"></i><i style="animation-delay:0.70s"></i><i style="animation-delay:1.22s"></i><i style="animation-delay:0.34s"></i><i style="animation-delay:0.86s"></i><i style="animation-delay:1.38s"></i><i style="animation-delay:0.49s"></i><i style="animation-delay:1.01s"></i><i style="animation-delay:1.53s"></i><i style="animation-delay:0.65s"></i><i style="animation-delay:1.17s"></i><i style="animation-delay:0.28s"></i><i style="animation-delay:0.80s"></i><i style="animation-delay:1.32s"></i><i style="animation-delay:0.44s"></i><i style="animation-delay:0.96s"></i><i style="animation-delay:1.47s"></i><i style="animation-delay:0.59s"></i><i style="animation-delay:1.11s"></i><i style="animation-delay:0.23s"></i><i style="animation-delay:0.75s"></i><i style="animation-delay:1.26s"></i><i style="animation-delay:0.38s"></i><i style="animation-delay:0.90s"></i><i style="animation-delay:1.42s"></i><i style="animation-delay:0.54s"></i><i style="animation-delay:1.05s"></i><i style="animation-delay:1.57s"></i><i style="animation-delay:0.69s"></i><i style="animation-delay:1.21s"></i><i style="animation-delay:0.33s"></i><i style="animation-delay:0.84s"></i><i style="animation-delay:1.36s"></i><i style="animation-delay:0.48s"></i><i style="animation-delay:1.00s"></i><i style="animation-delay:1.52s"></i><i style="animation-delay:0.63s"></i></div>
 <div class="dk-big" data-t="1.8"><small>중단 허용 시간</small>00:00:00.8</div>
@@ -1904,7 +1908,7 @@ const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterH
 const navEl=$('nav'),countEl=$('count'),pathsEl=$('paths'),dotsEl=$('dots'),stayNEl=$('stayN'),returnNEl=$('returnN'),computeNEl=$('computeN'),feedEl=$('feed'),consentCardEl=$('consentCard'),entryTransition=$('entryTransition');
 const epKey=v=>/-/.test(v)?String(v).replace(/^0+/,''):+v,EPMAP={'4-2':'003-1','8-1':'007-3','8-2':'008-3','8-3':'008-4'},EPALIAS={'3-1':'4-2','8-2-1':'8-1','8-4':'8-3'},epFile=k=>EPMAP[String(k)]||String(k).replace(/^\d+/,m=>m.padStart(3,'0')),epNo=k=>String(k).replace(/^\d+/,m=>m.padStart(2,'0'));
 const MAX=70,state={ep:0,fired:new Set(),timers:[],observer:null,armed:0,anchorEl:null};
-const BUMP={2:['2-1'],4:['4-1','4-2'],6:['6-1'],7:['7-2'],8:['8-1','8-2','8-3'],9:['9-1'],11:['11-1'],12:['12-1'],13:['13-1','13-2'],15:['15-1'],16:['16-1'],19:['19-1','19-2'],20:['20-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
+const BUMP={2:['2-1'],4:['4-1','4-2'],6:['6-1'],7:['7-2'],8:['8-1','8-2','8-3'],9:['9-1'],11:['11-1'],12:['12-1'],13:['13-1','13-2'],15:['15-1'],16:['16-1'],19:['19-1'],20:['20-1'],21:['21-1'],22:['22-1'],24:['24-1'],25:['25-1'],30:['30-1','30-2'],49:['49-1'],50:['50-1']},ORDER=[];for(let i=1;i<=MAX;i++)ORDER.push(i,...(BUMP[i]||[])); // 범퍼화(N-1화)는 본편 N화 뒤에 끼운다
 const D={
 1:{a:'#72e8ff',b:'#557dff',token:'031.8',sync:97,ghost:'SELL YOUR DREAM',hook:"서인은 아주 오랜만에 자신과 단둘이 남았다.",sp:'dreamAd',at:.28,on:"아침에 자신이 느꼈던 그리움도 옵션이었을까",w:1600},
 2:{a:'#79e2c8',b:'#4c69a8',token:'029.4',sync:91,ghost:'NO SIGNAL',hook:"이상하게 좋다.",sp:'blackout',at:.24,on:"단순화하면 그렇습니다",w:1400,ms:6600,more:[{sp:'adwake',on:"서인은 버튼을 눌렀다.",w:700,ms:10200}]},
@@ -1926,11 +1930,11 @@ const D={
 14:{a:'#ff9e9a',b:'#9ab6ff',token:'∞',sync:18,ghost:'SECOND LOOK',hook:"네 번째도.",sp:'leakclock',at:.48,on:"예상 협상 비용 증가: 6.3%.",w:700,ms:8800,more:[{sp:'channel',on:"그게 무엇인지 틀렸다.",w:700,ms:7000}]},
 15:{a:'#7fe0ff',b:'#a8ffcb',token:'∞',sync:24,ghost:'SOURCE UNKNOWN',hook:"서인은 수정하지 않았다.",sp:'rumorpatch',at:.74,on:"소문 속 버전은 올라갔어요",w:1000,ms:7200,more:[{sp:'phototest',on:"네가 답을 만들지 않는지 보는 검사야.",w:900,ms:7800}]},
 16:{a:'#a8f0b7',b:'#ffd38a',token:'∞',sync:22,ghost:'LOSE TO WIN',hook:"서인은 열지 않았다.",sp:'losingbid',at:.56,on:"배송 보증: +7.5%",w:1200,more:[{sp:'pathburn',on:"경로는 계속 생겼다.",w:700,ms:7600}]},
-17:{a:'#8beaff',b:'#9d8cff',token:'∞',sync:20,ghost:'ACCESS',hook:"대신 승인자 두 명에게 서인의 이름이 전달됐다.",sp:'northport',at:.5,on:"서인의 답은 회의록에 들어가지 않았다.",w:1000,ms:8400,more:[{sp:'sessionlist',on:"참여자 4: 비공개.",w:900,ms:6600}]},
-18:{a:'#9fe3ff',b:'#c0a4ff',token:'∞',sync:21,ghost:'v2.1',hook:"04-771에 참여한 네 곳 중 이름이 가려져 있던 한 곳이 이번에는 서인을 보고 있었다.",sp:'versionsheet',at:.3,on:"고장 난 날에도 버전 번호가 붙는군요.",w:1000,ms:7400,more:[{sp:'dark08',on:"두 칸 차이.",w:800,ms:6000}]},
+17:{a:'#d5c4a6',b:'#b1c6dc',token:'∞',sync:20,ghost:'NO CONSENT',hook:'신발 밑창이 바닥을 긁었다.',sp:'forcedexit',at:.99,on:'신발 밑창이 바닥을 긁었다.',w:500,ms:5000},
+18:{a:'#9fe3ff',b:'#c0a4ff',token:'∞',sync:21,ghost:'WITHDRAWN',hook:'이름이 가려진 누군가가, 서인이 그 문서를 열었다는 것을 확인했다.',sp:'lostintroduction',at:.99,on:'일정이 목록에서 사라졌다.',w:500,ms:5000},
 19:{a:'#b8ffe8',b:'#7dbdff',token:'∞',sync:19,ghost:'LEVEL 5',hook:"확인 주체: 참여자 4.",sp:'node31b',at:.4,on:"검증 정답: A.",w:900,ms:9000},
 20:{a:'#caffea',b:'#8cbcff',token:'∞',sync:18,ghost:'LEVEL 6',hook:"차액 회수 예정.",sp:'graybutton',at:.78,on:"이번에는 서명했다.",w:900,ms:7800},
-21:{a:'#b8ffe8',b:'#ffd59b',token:'∞',sync:17,ghost:'UNSETTLED',hook:'확인자 칸에 그의 이름이 있었다.',sp:'nightload',at:.5,on:'끝난 데까지만 닫죠.',w:700,ms:7000},
+21:{a:'#b8ffe8',b:'#ffd59b',token:'∞',sync:17,ghost:'UNSETTLED',hook:'확인자 칸에 자기 이름이 그대로 있었다.',sp:'nightload',at:.5,on:'끝난 데까지만 닫죠.',w:700,ms:7000},
 22:{a:'#c8ffe2',b:'#ffd9a0',token:'∞',sync:16,ghost:'4TH SAFETY',hook:'발신 부서 칸에 전략본부가 찍혀 있었다.',sp:'fourcheck',at:.69,on:'보상 문제가 아닙니다. 아이 문제입니다.',w:700,ms:8400},
 23:{a:'#b8ffe8',b:'#ffcf9a',token:'∞',sync:15,ghost:'71 → 43',hook:'그가 확인을 눌렀다.',sp:'recount43',at:.67,on:'오늘은 제 말 좀 그만 틀죠.',w:700,ms:9200},
 24:{a:'#ffd2a0',b:'#a8dfff',token:'∞',sync:14,ghost:'BORROWED NAME',hook:'그는 단말을 닫지 못한 채 엘리베이터를 탔다.',sp:'namecount',at:.8,on:'돈은 바로 가져가셨잖아요.',w:700,ms:8000},
@@ -2040,8 +2044,9 @@ const KEY={
 14:['“사람이 숨기는 게 꼭 하나뿐일까요?”','“당신 쓰러질까 봐 걱정돼요.”'],
 15:['“모르는 걸 그냥 두는 거지.”','“이번에는 두 번 봐도 돼요.”'],
 16:['“회사가 원하는 거랑 저 사람이 원하는 게 같다는 보장이 없으니까.”','“누가 뭘 믿는지 보려고요.”'],
-17:['“처음으로 없는 걸 보여 달라는 사람이 아니라서요.”','“상층 회사들이 서로한테 뭘 숨기는지요.”'],
-19:['“제가 떠넘기기 싫은 거랑, 그게 틀린 답인 건 다르니까.”','“그때면 이건 다 배송됐을 텐데요.”'],
+17:['“그걸 제가 지켜 드려야 합니까?”','“서인 씨, 발 내려요.”'],
+18:['“내가 괜찮다고 할 거라고 먼저 정하지 마요.”','“지금은 같이 나가고 싶어요. 저쪽에서 뭘 더 준다고 해도 안 돌아갑니다.”'],
+19:['“제가 떠넘기기 싫은 거랑, 그게 틀린 답인 건 다르니까요.”','“그때면 이건 다 배송됐을 텐데요.”'],
 '19-1':['“확보는 됐는데, 확정은 안 됐네요.”','“지금이 그 사고네요.”'],
 20:['“그래도 이 칸에 제 이름이 들어가면 기록은 그렇게 남습니다. 이 조건으로는 요청 못 하겠습니다.”'],
 21:['“계산 말고 결과요. 나오면 그때 전화 주세요.”','“끝난 데까지만 닫죠.”'],

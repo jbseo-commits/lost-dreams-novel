@@ -16,7 +16,7 @@ const full=JSON.parse(JSON.stringify(box.window.STORY));
 
 test('every public entry uses the canonical demo and no query flag can select the full edition',async()=>{
  const app=await fs.readFile(path.join(vn,'app.js'),'utf8');
- assert.equal(publicDemoStory(full).chapters.length,18);assert.equal(full.chapters.length,128);
+ assert.equal(publicDemoStory(full).chapters.length,18);assert.equal(full.chapters.length,127);
  for(const id of DEMO_CHAPTER_IDS)assert.ok(canReadChapter(id));
  for(const id of ['12','11-1','30','105','999','../12','full'])assert.equal(canReadChapter(id),false);
  assert.match(app,/const demoMode=true;/);assert.match(app,/if\(!canReadChapter\(chapterId\)\)\{openRelease\(true\);return;/);

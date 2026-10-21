@@ -21,7 +21,7 @@ test('single-file demo and full-story navigation stay in the same downloaded fil
 });
 test('core demo ends after first actual cost in 11, keeping all seven canonical connecting stories',()=>{
  assert.deepEqual(demo.chapters.map(c=>c.id),['1','2','3','4','4-1','5','6','6-1','7','7-2','8','8-1','8-2','8-3','9','9-1','10','11']);
- assert.equal(demo.edition,'core11');assert.equal(full.chapters.length,128);
+ assert.equal(demo.edition,'core11');assert.equal(full.chapters.length,127);
  assert.ok(!demo.chapters.some(c=>['manuscript/ep008-1.md','manuscript/ep008-2.md'].includes(c.sourcePath)));
  for(const c of demo.chapters)assert.ok(coreChapter(c));
  const changed=structuredClone(at('4'));changed.beats[20].text+=' 개고';assert.equal(coreSceneDirection(changed,202),null);
