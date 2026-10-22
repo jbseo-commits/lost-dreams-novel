@@ -42,9 +42,14 @@ export class EpisodeOneStage {
       if(impact!==''){void this.cg.offsetWidth;this.cg.classList.add('ep12-cut-impact');}
       this.cg.dataset.impact=String(impact);
     }
-    if(cue.cg!==this.currentCg){
-      this.cg.replaceChildren();this.cg.style.backgroundImage=cue.cg?`url("${this.assets[cue.cg]}")`:'';if(cue.cg){const img=document.createElement('img');img.src=this.assets[cue.cg];img.alt='';this.cg.append(img);}
-      this.currentCg=cue.cg;
+    const composite=cue.cutscene?.composite==='dirty-jiwoo';
+    const cgKey=cue.cg?(composite?'clay-smile:':'')+cue.cg:'';
+    if(cgKey!==this.currentCg){
+      this.cg.replaceChildren();
+      const background=composite?this.assets.clayFailure:this.assets[cue.cg];
+      this.cg.style.backgroundImage=cue.cg?`url("${background}")`:'';
+      if(cue.cg){const img=document.createElement('img');img.src=this.assets[cue.cg];img.alt='';this.cg.append(img);}
+      this.currentCg=cgKey;
     }
     const cgImage=this.cg.querySelector('img');if(cgImage)cgImage.alt=cue.cutscene?.alt||'';
     this.cg.hidden=!cue.cg;this.wall.hidden=!cue.wallAd;
