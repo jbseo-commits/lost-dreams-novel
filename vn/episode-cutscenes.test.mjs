@@ -93,3 +93,22 @@ test('every selected drawing is distinct, packaged, and matches its recorded pro
     }else assert.ok(path?.startsWith('assets/cutscenes/'),cut.cg);
   }
 });
+
+test('the dirty smiling Jiwoo shot follows the clay failure, respects exact anchors and does not alter manuscript',()=>{
+  const c=chapter('3');
+  const start=c.beats.findIndex(b=>b.text==='광고꿈에서 본 지우보다 훨씬 엉망인 얼굴이었다.');
+  assert.ok(start>60);
+  assert.equal(c.beats[start+1].text,'머리는 땀에 붙었고, 볼에는 흙이 묻었고, 앞치마는 엉망이었다.');
+  assert.equal(c.beats[start+2].text,'그런데 지우는 계속 웃었다.');
+  assert.notEqual(at('3',start-1)?.cutscene?.id,'jiwooClaySmile');
+  for(let i=start;i<=start+2;i++){
+    const cue=at('3',i);
+    assert.equal(cue.cutscene.id,'jiwooClaySmile');
+    assert.equal(cue.cutscene.composite,'dirty-jiwoo');
+    assert.equal(cue.sceneStart,start);
+    assert.equal(cue.cg,'jiwooRelaxed');
+  }
+  assert.notEqual(at('3',start+3)?.cutscene?.id,'jiwooClaySmile');
+  const edited=structuredClone(c);edited.beats[start+1].text='다른 묘사';
+  assert.equal(withEpisodeCutscene(null,edited,start),null);
+});
