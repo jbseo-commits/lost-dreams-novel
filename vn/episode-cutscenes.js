@@ -401,6 +401,19 @@ function matchingSource(chapter,insert){
   return checks.get(insert);
 }
 export function withEpisodeCutscene(cue,chapter,index){
+  // The cup collapsing and the later clay-covered smile are different events.
+  // Resolve exact source anchors rather than hand-maintaining save indices.
+  if(chapter?.id==='3'){
+    const beats=chapter.beats||[];
+    const start=beats.findIndex(b=>b.text==='광고꿈에서 본 지우보다 훨씬 엉망인 얼굴이었다.');
+    const dirt=beats.findIndex(b=>b.text==='머리는 땀에 붙었고, 볼에는 흙이 묻었고, 앞치마는 엉망이었다.');
+    const end=beats.findIndex(b=>b.text==='그런데 지우는 계속 웃었다.');
+    if(start>=0&&dirt===start+1&&end===dirt+1&&index>=start&&index<=end){
+      return {...cue,cg:'jiwooRelaxed',actors:[],wallAd:false,shot:'insert',
+        cutscene:{id:'jiwooClaySmile',alt:'땀에 젖은 머리와 흙 묻은 볼, 엉망인 앞치마로 환하게 웃는 지우',
+          position:'64% 42%',composite:'dirty-jiwoo',start,phase:'',impact:null}};
+    }
+  }
   const insert=EPISODE_CUTSCENES.find(c=>c.chapter===chapter?.id&&index>=c.start&&index<=c.end);
   if(!insert||!matchingSource(chapter,insert))return cue;
   const phase=insert.cg==='retirementHand'?(index>=126?'red':index>=123?'amber':'plain'):'';
@@ -412,5 +425,5 @@ export function withEpisodeCutscene(cue,chapter,index){
 export function eventCutsceneDirection(chapter,index){
   if(!chapter||['1','2'].includes(chapter.id)||!Number.isInteger(index)||index<0||index>=chapter.beats?.length)return null;
   const cue=withEpisodeCutscene(null,chapter,index);
-  return cue?{...cue,chapterId:chapter.id,sceneStart:EPISODE_CUTSCENES.find(c=>c.cg===cue.cg&&c.chapter===chapter.id).start,focus:'',intro:false,blackout:false,holdMotion:true}:null;
+  return cue?{...cue,chapterId:chapter.id,sceneStart:cue.cutscene?.start??EPISODE_CUTSCENES.find(c=>c.cg===cue.cg&&c.chapter===chapter.id)?.start??index,focus:'',intro:false,blackout:false,holdMotion:true}:null;
 }
