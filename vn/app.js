@@ -303,6 +303,10 @@ function openVisual(visual) {
 function openCutscene(cue){
   const root=document.createElement('div');root.append(modalHeading('장면 그림',cue.cutscene.alt));
   const frame=document.createElement('div');frame.className='cutscene-inspection';frame.tabIndex=0;frame.setAttribute('aria-label','장면 그림. 확대하면 좌우로 밀어 볼 수 있습니다.');
+  if(cue.cutscene?.composite==='dirty-jiwoo'){
+    frame.classList.add('clay-smile-inspection');
+    frame.style.backgroundImage=`url("${EP1_ASSETS.clayFailure}")`;
+  }
   const img=document.createElement('img');img.src=EP1_ASSETS[cue.cg];img.alt=cue.cutscene.alt;frame.append(img);
   const zoom=document.createElement('button');zoom.type='button';zoom.className='small-button';zoom.textContent='세부 확대';zoom.setAttribute('aria-pressed','false');
   zoom.addEventListener('click',()=>{const active=frame.classList.toggle('detail');zoom.setAttribute('aria-pressed',String(active));zoom.textContent=active?'전체 맞춤':'세부 확대';});
