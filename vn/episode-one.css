@@ -129,54 +129,40 @@
  .ep1-stage[data-cg="dreamBeach"] .ep1-cg img{position:absolute;top:10vh;height:62vh;object-fit:cover;object-position:32% 40%}
 }
 
-/* Episode 3: a source-bound insert of Jiwoo smiling after the failed pottery
-   lesson. Existing canonical art is composited until the bespoke CG ships. */
-.ep1-stage[data-cutscene="jiwooClaySmile"] .ep1-cg,
-.clay-smile-inspection{
-  background-size:cover;background-position:center;
-}
-.ep1-stage[data-cutscene="jiwooClaySmile"] .ep1-cg::before{
-  content:'';position:absolute;inset:0;
-  background:inherit;filter:blur(14px) brightness(.62) saturate(.94);
-  transform:scale(1.06);
-}
+/* Episode 3 source-bound inserts. Real painted CGs, not CSS dirt composites. */
 .ep1-stage[data-cutscene="jiwooClaySmile"] .ep1-cg img{
-  z-index:1;width:92%;height:83vh;top:-2vh;left:21%;
-  object-fit:contain;object-position:center top;
-  filter:drop-shadow(-14px 18px 18px #060c1070) sepia(.10);
-  animation:ep12-insert-in .65s ease both;
+  object-position:55% 45%;
 }
-.ep1-stage[data-cutscene="jiwooClaySmile"] .ep1-cg::after,
-.clay-smile-inspection::after{
-  content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:
-    radial-gradient(ellipse 2.3% 1% at 70% 34%,#7b6348a8 30%,transparent 78%),
-    radial-gradient(ellipse 1.6% 1% at 73% 36%,#5d503fa3 20%,transparent 90%),
-    radial-gradient(ellipse 2.3% 1.1% at 65% 48%,#67584391 27%,transparent 88%),
-    radial-gradient(ellipse 1.5% 2.2% at 61% 54%,#8b796491 20%,transparent 85%);
-  mix-blend-mode:multiply;
+.ep1-stage[data-cutscene="clayUnderNails"] .ep1-cg img{
+  object-position:50% 55%;
+  animation:ep03-nails-focus .65s ease-out both;
 }
-.clay-smile-inspection{position:relative;background-color:#09131a;overflow:hidden}
-.clay-smile-inspection::before{
-  content:'';position:absolute;inset:0;background:inherit;
-  filter:blur(14px) brightness(.6);transform:scale(1.1);
+.ep1-stage[data-cutscene="convenienceToast"] .ep1-cg img{
+  animation:ep03-return-toast .6s ease-out both;
 }
-.clay-smile-inspection img{
-  position:relative;width:85%;height:auto;margin:auto 0 auto auto;
-  object-fit:contain;filter:drop-shadow(-12px 12px 16px #0008);
+@keyframes ep03-nails-focus{
+  from{opacity:.55;transform:scale(1.055) translateY(-7px)}
+  to{opacity:1;transform:scale(1) translateY(0)}
+}
+@keyframes ep03-return-toast{
+  from{opacity:.4;transform:scale(1.025)}
+  to{opacity:1;transform:scale(1)}
 }
 @media(max-width:640px){
   .ep1-stage[data-cutscene="jiwooClaySmile"] .ep1-cg img{
-    width:125%;height:67vh;left:-2%;top:4vh;object-fit:contain;
-    object-position:center top;
+    object-fit:cover;object-position:58% 42%;
   }
-  .ep1-stage[data-cutscene="jiwooClaySmile"] .ep1-cg::after{
-    background:
-      radial-gradient(ellipse 3.2% 1.6% at 68% 31%,#766047a8 30%,transparent 80%),
-      radial-gradient(ellipse 2% 1.4% at 72% 34%,#5b503fa3 20%,transparent 90%),
-      radial-gradient(ellipse 2.9% 1.8% at 63% 48%,#7560467c 20%,transparent 85%);
+  .ep1-stage[data-cutscene="convenienceGaze"] .ep1-cg img,
+  .ep1-stage[data-cutscene="convenienceToast"] .ep1-cg img{
+    top:12vh;height:56vh;object-fit:contain;object-position:center;
+  }
+  .ep1-stage[data-cutscene="clayUnderNails"] .ep1-cg img{
+    top:12vh;height:58vh;object-fit:cover;object-position:50% 55%;
   }
 }
 @media(prefers-reduced-motion:reduce){
-  .ep1-stage[data-cutscene="jiwooClaySmile"] .ep1-cg img{animation:none!important}
+  .ep1-stage[data-cutscene="clayUnderNails"] .ep1-cg img,
+  .ep1-stage[data-cutscene="convenienceToast"] .ep1-cg img{
+    animation:none!important;
+  }
 }
