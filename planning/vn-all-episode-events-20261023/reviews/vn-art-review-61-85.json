@@ -1,0 +1,2076 @@
+{
+  "status": "CHANGES",
+  "reviewer": "independent-art-reviewer",
+  "restoredAfterEnvironmentRestart": true,
+  "restorationNote": "Original /tmp artifacts were erased by environment restart. Verdicts, observed defects and correction instructions reconstructed from retained review context; source coordinates/prefix hashes restored from job files; original native PNG SHA256/dimensions recomputed. This is recovery of the completed review, not a claim of a fresh runtime test.",
+  "restoredAt": "2026-10-23T08:43:17.755806+00:00",
+  "scope": "61–85 native PNG +390px-contained preview review, full current-chapter prefix0..selected only; no source/art/runtime editing",
+  "summary": {
+    "reviewed": 25,
+    "PASS": 10,
+    "CHANGES": 15,
+    "passChapters": [
+      "61",
+      "63",
+      "64",
+      "65",
+      "68",
+      "70",
+      "76",
+      "77",
+      "80",
+      "85"
+    ],
+    "changeChapters": [
+      "62",
+      "66",
+      "67",
+      "69",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "78",
+      "79",
+      "81",
+      "82",
+      "83",
+      "84"
+    ]
+  },
+  "results": [
+    {
+      "chapterId": "61",
+      "selectedBeat": 75,
+      "path": "/workspace/generated_images/exec-7df2a122-d36d-43be-bec8-a88a32c0c299.png",
+      "sha256": "72e600914b3217aa98d484a0456836a11f057c9a6bbb45ef0b083e3b8c61decf",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "창턱의 캔 옆에 한 장을 놓는 손·서류철·지켜보는 서인이390px에서 구분된다.",
+      "source": {
+        "anchor": "오정택이 서류철에서 종이 한 장을 빼 창턱의 캔 옆에 놓았다.",
+        "fingerprint": "c695e1c",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "ede390d7e5f64f8801e54aa20d12ff80fa08511d2e7bc8a4484706d058937c78",
+        "readScope": [
+          0,
+          75
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "61",
+          "beatIndex": 0,
+          "text": "목요일 오후, 시청 별관 3층."
+        },
+        {
+          "chapterId": "61",
+          "beatIndex": 11,
+          "text": "앞쪽 긴 탁자에 위원 다섯이 앉아 있었다. 그 맞은편 진술인 탁자에 의자가 셋 놓였다. 서인은 가운데였다. 오른쪽에는 간호사가 앉았다. 사후 분석 기록 맨 끝에 한 줄로 남아 있던 사람이었다. 그날 새벽, 병동에서 배차실에 전화를 건 사람. 왼쪽 끝 자리의 남자는 쉰 중반쯤 돼 보였다. 회색 양복에 두꺼운 서류철 하나를 무릎에"
+        },
+        {
+          "chapterId": "61",
+          "beatIndex": 12,
+          "text": "얹고 있었다. 이름표에 기준계열 신탁 사무국 · 기록관리관 오정택이라고 적혀 있었다."
+        },
+        {
+          "chapterId": "61",
+          "beatIndex": 58,
+          "text": "복도 끝 자판기 앞에서 오정택이 캔커피 두 개 중 하나를 서인에게 건넸다. 서인은 받지 않았다. 오정택은 그 캔을 자판기 옆 창턱에 세워 두었다."
+        },
+        {
+          "chapterId": "61",
+          "beatIndex": 69,
+          "text": "오정택은 캔을 창턱에 내려놓았다."
+        },
+        {
+          "chapterId": "61",
+          "beatIndex": 75,
+          "text": "오정택이 서류철에서 종이 한 장을 빼 창턱의 캔 옆에 놓았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": []
+    },
+    {
+      "chapterId": "62",
+      "selectedBeat": 26,
+      "path": "/workspace/generated_images/exec-40a6aaea-0c08-429a-90cb-29dfe1708c89.png",
+      "sha256": "5c204b646d7022384001aa63ff72cf5189e94e5f272468e34bbe1fca8d020637",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "마흔 중반 현수가 서인의 젊은 곱슬머리 얼굴로 복제됐다.",
+      "source": {
+        "anchor": "현수는 휴대폰을 꺼내 화면을 몇 번 넘기더니 책상 위로 밀어 주었다. 신탁 본인 열람 화면이었다.",
+        "fingerprint": "635f58d9",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "770dca147ab989a40269f837dcc962424b75891a7c4aa8bb32f5138dd437e853",
+        "readScope": [
+          0,
+          26
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "62",
+          "beatIndex": 0,
+          "text": "신탁 경유 회신은 화요일 저녁에 왔다. 한 줄이었다."
+        },
+        {
+          "chapterId": "62",
+          "beatIndex": 9,
+          "text": "업라이트 피아노 앞판이 떼어져 벽에 기대 있었다. 남자 하나가 피아노 안쪽에 몸을 반쯤 넣고 있었다. 마흔 중반쯤이었다. 소매를 팔꿈치까지 걷었고, 왼손에 쇠막대 같은 것을 쥐고 있었다. 남자는 그것을 무릎에 톡 쳐서 귀 옆에 댔다. 낮고 가는 소리가 났다. 남자는 그 소리가 다 사라질 때까지 움직이지 않았다. 그러고 나서 건반"
+        },
+        {
+          "chapterId": "62",
+          "beatIndex": 13,
+          "text": "서인은 아이들 의자 하나에 앉았다. 무릎이 책상 밑에 걸렸다. 칠판 위에 계이름 표가 붙어 있었다. 누가 그렸는지 '도' 칸에만 웃는 얼굴이 하나 있었다. 남자는 같은 건반을 몇 번 누르고, 피아노 안쪽 핀에 공구를 끼워 아주 조금 돌렸다. 다시 쇠막대를 무릎에 쳤다. 다시 귀에 댔다."
+        },
+        {
+          "chapterId": "62",
+          "beatIndex": 20,
+          "text": "이현수는 손을 바지에 닦고 교탁 의자를 끌어와 앉았다. 둘 사이에 아이들 책상 하나가 있었다."
+        },
+        {
+          "chapterId": "62",
+          "beatIndex": 26,
+          "text": "현수는 휴대폰을 꺼내 화면을 몇 번 넘기더니 책상 위로 밀어 주었다. 신탁 본인 열람 화면이었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "현수의 서인 복제와 나이",
+          "minimumCorrection": "Keep the music room, exposed upright-piano mechanism, child desk and phone-slide action. Hyunsu is a recognizably middle-forties adult with his OWN face and straighter hair, mature eye/jaw proportions and sleeves rolled to the elbows. He is not the young curly-haired Seo-in across the desk. Do not duplicate Seo-in into Hyunsu. The parent has separately completed a hands/phone correction; keep this original failure as history."
+        }
+      ],
+      "laterCorrection": {
+        "metadata": "/workspace/vn-work-session/meta/ep62-event-corrected.json",
+        "parentReportsComplete": true,
+        "originalVerdictRetained": true,
+        "correctedImageIndependentlyReviewedHere": false
+      }
+    },
+    {
+      "chapterId": "63",
+      "selectedBeat": 34,
+      "path": "/workspace/generated_images/exec-eba43503-1bbd-4720-9825-72f9ab558556.png",
+      "sha256": "540754a6265a2ef99a0c7438ef71e58ace38eec6335fd0ae175b3e365b8e3a2d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "짧은 머리 스무 살 나래가 두 강둑과 비어 있는 가운데를 보여 준다. 완성된 다리는 없다.",
+      "source": {
+        "anchor": "나래가 공책을 가져와 서인 앞에 펼쳤다. 강 양쪽 둑만 그려져 있고 가운데가 비어 있었다.",
+        "fingerprint": "47d3b385",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "00cd95b1c2d219cf4a93cac27a539ede9d0160b2ef3c8ece0c2e9eaba8cc3403",
+        "readScope": [
+          0,
+          34
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "63",
+          "beatIndex": 17,
+          "text": "거실은 넓었다. 창밖으로 강이 보였다. 책장 한 칸에 크레파스로 그린 다리 그림들이 연도순으로 꽂혀 있었다. 맨 앞 그림의 다리는 무지개색이었다. 식탁에는 벌써 접시가 다섯 개 놓여 있었다. 현주의 남편이 수저를 놓다가 서인과 악수를 했다. 말이 적은 사람이었다."
+        },
+        {
+          "chapterId": "63",
+          "beatIndex": 18,
+          "text": "나래는 소파에 앉아 휴대폰을 보고 있었다. 스물. 머리를 짧게 잘랐고, 무릎에 두꺼운 제도용 공책이 펼쳐져 있었다. 건물 단면 같은 선들이 빽빽했다. 나래는 삼촌을 보고 손만 흔들었다."
+        },
+        {
+          "chapterId": "63",
+          "beatIndex": 31,
+          "text": "식사 내내 아무도 후계 얘기를 꺼내지 않았다. 나래가 학교 설계 과제 얘기를 했다. 다리 하나를 강 위에 놓는 과제인데 교수가 다리 말고 다른 걸 놓으라고 했다고 했다. 남편이 웃었다. 현수가 다른 거 뭐냐고 물었다. 나래는 아직 모르겠다고 했다. 말하는 동안 나래는 두 번, 식탁 맞은편의 삼촌을 봤다. 현수는 그때마다 국을 떴다."
+        },
+        {
+          "chapterId": "63",
+          "beatIndex": 34,
+          "text": "나래가 공책을 가져와 서인 앞에 펼쳤다. 강 양쪽 둑만 그려져 있고 가운데가 비어 있었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": []
+    },
+    {
+      "chapterId": "64",
+      "selectedBeat": 14,
+      "path": "/workspace/generated_images/exec-2bedc65c-1d24-4261-8a5e-ddf15a77eda2.png",
+      "sha256": "066451407de1e0766eb6b8419ffa394279283b9e5427b570835bfd953a224f16",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "펜·도장으로 서명확인이 읽히고, 원문10의 안경 재착용이 맞다.",
+      "source": {
+        "anchor": "오정택은 종이를 서인 쪽으로 돌렸다. 맨 아래 제안자 칸이 비어 있었다. 서인은 펜을 받아 이름을 썼다. 오정택은 종이를 돌려받아 직인을 찍었다.",
+        "fingerprint": "96997b1a",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "2bb313e595913fffcf7d349e971657ccc167a74131a3f431e246f7c3343bfab5",
+        "readScope": [
+          0,
+          14
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "64",
+          "beatIndex": 0,
+          "text": "월요일 아침, 시청 별관 4층 복도 끝 사무실."
+        },
+        {
+          "chapterId": "64",
+          "beatIndex": 1,
+          "text": "오정택의 책상에는 서류철이 세 줄로 쌓여 있었다. 맨 위에 지난 회의 안건지가 그대로 있었다. 해제 신청 후 90일 유예 · 보류. 그 옆에 빨간 펜으로 작게 재상정 안 함이라고 적혀 있었다. 서인은 휴대폰 화면을 책상 위에 올려놓았다. 토요일 아침 현수를 거쳐 온 캡처였다. 나래가 삼촌에게 보냈고, 삼촌이 아무 말 없이 서인에게"
+        },
+        {
+          "chapterId": "64",
+          "beatIndex": 6,
+          "text": "오정택은 안경을 벗고 화면을 오래 봤다. 손가락으로 칸을 한 번 눌러 보기까지 했다. 아무것도 펼쳐지지 않았다."
+        },
+        {
+          "chapterId": "64",
+          "beatIndex": 10,
+          "text": "오정택은 안경을 다시 썼다. 서류철 하나를 끌어와 빈 종이를 꺼냈다."
+        },
+        {
+          "chapterId": "64",
+          "beatIndex": 14,
+          "text": "오정택은 종이를 서인 쪽으로 돌렸다. 맨 아래 제안자 칸이 비어 있었다. 서인은 펜을 받아 이름을 썼다. 오정택은 종이를 돌려받아 직인을 찍었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": []
+    },
+    {
+      "chapterId": "65",
+      "selectedBeat": 44,
+      "path": "/workspace/generated_images/exec-1860a983-fdce-4abf-8a8c-a69d34609af6.png",
+      "sha256": "11c0ecf944293359c553c01e0d03f1c8e0769ba65f52d43aea992fc006d8848d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "켜진 태블릿 아래 줄·열린 문·고무 받침이 읽힌다.61·64와 재대조한 중년 얼굴·회색 관자놀이가 있어 나이 불일치로 확정할 근거는 부족하다.",
+      "source": {
+        "anchor": "오정택은 태블릿을 돌려받았다. 화면을 끄지 않고 기록 맨 아래 줄에 손가락을 대고 있었다.",
+        "fingerprint": "8f3c27f7",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "d9ce6cbc2e7d9224f65fa4c5cee2fba8f9bf241ffc9f84706be285c460c432db",
+        "readScope": [
+          0,
+          44
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "65",
+          "beatIndex": 0,
+          "text": "화요일 오전, 기준계열 정기 점검 센터."
+        },
+        {
+          "chapterId": "65",
+          "beatIndex": 2,
+          "text": "오정택이 로비에서 기다리고 있었다. 오늘은 서류철 대신 얇은 태블릿 하나를 들고 있었다. 결과표를 보내던 날 전화로 센터에 와 보라고 했던 사람이었다. 보여 드릴 게 있다고, 점검 날 와야 보인다고 했다."
+        },
+        {
+          "chapterId": "65",
+          "beatIndex": 4,
+          "text": "오정택은 서인을 위층 복도 끝으로 데려갔다. 복도 끝에 문이 하나 있었다. 문은 열려 있었다. 바닥의 고무 받침이 문을 벽 쪽으로 밀어 고정하고 있었다. 문 위에 작은 표지판이 붙어 있었다."
+        },
+        {
+          "chapterId": "65",
+          "beatIndex": 6,
+          "text": "안에는 책상 하나와 의자 둘, 정수기 하나가 있었다. 아무도 없었다."
+        },
+        {
+          "chapterId": "65",
+          "beatIndex": 11,
+          "text": "오정택은 태블릿을 서인에게 건넸다. 해제 상담실 기록이었다. 문을 지난 사람들의 줄 뒤에 해제와 재연결 결과가 이어 붙어 있었다. 이름은 가려져 있었다. 맨 위는 아주 오래전 날짜였다."
+        },
+        {
+          "chapterId": "65",
+          "beatIndex": 37,
+          "text": "서인은 열린 문을 지나 방문자 쪽 의자에 앉았다. 의자는 문을 향해 놓여 있었다. 책상 위에 볼펜 하나와 상담 기록지가 있었다. 기록지 맨 위 칸은 방문 사유였다. 비어 있었다. 안에서 보니 복도가 한눈에 들어왔다. 엘리베이터 앞, 점검실 문, 대기 의자. 사람들이 그 사이를 오갔다. 아무도 이쪽을 보지 않았다. 문은 열려"
+        },
+        {
+          "chapterId": "65",
+          "beatIndex": 38,
+          "text": "있었고, 복도는 밝았고, 안은 조용했다. 서인은 오래 앉아 있지 못하고 일어났다."
+        },
+        {
+          "chapterId": "65",
+          "beatIndex": 39,
+          "text": "서인은 상담실을 나와 고무 받침 옆에 섰다. 받침은 문을 붙잡고 있는 게 아니었다. 문이 닫히지 않게만 하고 있었다."
+        },
+        {
+          "chapterId": "65",
+          "beatIndex": 44,
+          "text": "오정택은 태블릿을 돌려받았다. 화면을 끄지 않고 기록 맨 아래 줄에 손가락을 대고 있었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [],
+      "adjudicationNote": "Initial provisional age/identity concern withdrawn after side-by-side61/64/65; do not request unnecessary redraw based only on darker hair/angle."
+    },
+    {
+      "chapterId": "66",
+      "selectedBeat": 63,
+      "path": "/workspace/generated_images/exec-6532e649-f06d-4b1f-9d08-e88a15823913.png",
+      "sha256": "60eb52021d5ab23979f34e2739b80ed10abfa638e66ecb133f567e82304c45ba",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "기존 성숙한 어머니가 젊은 갈색 올림머리 여성으로 바뀌었다.",
+      "source": {
+        "anchor": "어머니가 휴대폰을 식탁에 놓고 서인에게 밀었다.",
+        "fingerprint": "c790ad82",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "f870ca3063918bded433eb8749ecad1c9767616933d0b41719e8ebac6aeef5b4",
+        "readScope": [
+          0,
+          63
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "66",
+          "beatIndex": 62,
+          "text": "첫날 낮, 집 부엌이었다."
+        },
+        {
+          "chapterId": "66",
+          "beatIndex": 63,
+          "text": "어머니가 휴대폰을 식탁에 놓고 서인에게 밀었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "어머니 정체성",
+          "minimumCorrection": "Restore Seo-in mother from the mature mother reference: short grey-mixed hair, mature facial volume and eye/neck/hand age, the same adult generation as Jiwoo father. Not a young brown-haired woman with a bun. Preserve daytime kitchen and the phone being pushed along the table toward Seo-in. Reference face/hair/age ONLY; do not copy chopsticks, sprite pose or background. No phone labels or future choice."
+        }
+      ],
+      "identityComparisonReference": "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/mother-warm-mature.webp"
+    },
+    {
+      "chapterId": "67",
+      "selectedBeat": 151,
+      "path": "/workspace/generated_images/exec-31f21fb7-14e9-4df2-8ff0-4455b95551a9.png",
+      "sha256": "db0df918813059560fa66b670328e338229b1d2e12fc54b14cf4e911501c4fbc",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "작은 종이를 붙이는 동작은 맞지만 왼쪽 안내문에 가짜 한글·숫자가 선명하다.",
+      "source": {
+        "anchor": "밤 10시 반, 서인은 노인정 문에 종이를 하나 더 붙였다. 손글씨 종이와 구청 안내문 사이였다. 작은 종이였다. 서인은 모서리를 손바닥으로 한 번 눌렀다. 어머니가 하던 대로였다.",
+        "fingerprint": "6fd9823c",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "ef81611e02a02b956da155cdc4b029d6caf3863136f95eb7c2cec0e0653bd068",
+        "readScope": [
+          0,
+          151
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "67",
+          "beatIndex": 151,
+          "text": "밤 10시 반, 서인은 노인정 문에 종이를 하나 더 붙였다. 손글씨 종이와 구청 안내문 사이였다. 작은 종이였다. 서인은 모서리를 손바닥으로 한 번 눌렀다. 어머니가 하던 대로였다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "안내문 가짜 글자",
+          "minimumCorrection": "Preserve the night doorway, Seo-in pressing the new small blank sheet between the old handwritten sheet and the longer district notice. Erase ALL Korean-looking glyphs, digits and invented writing from the old left sheet. Use only faint short non-character strokes or neutral grey line blocks. No words/logos anywhere."
+        }
+      ]
+    },
+    {
+      "chapterId": "68",
+      "selectedBeat": 84,
+      "path": "/workspace/generated_images/exec-be6075b2-d586-4ce3-a0e8-9e03373c0cb9.png",
+      "sha256": "9fbf0fd2e1bcf941f8078e5a5174f1a1d47a52a97372b32f940daf806bbb662c",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "밤의 노인정에서 순덕이 보여 주는 휴대폰에 현재 공개된 하얀 모래와 파란 바다가 읽힌다.현재prefix에 재명시되지 않은 담요 미노출만으로 탈락시키지 않았다.",
+      "source": {
+        "anchor": "순덕 할머니가 휴대폰을 꺼내 화면을 보여 주었다. 오늘 밤 송출 예고였다. 하얀 모래, 파란 물, 발자국 하나 없는 바닷가.",
+        "fingerprint": "fe60d8ff",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "fbf2d5a7e470d452a215c20d9c74fc40a07c466edb1c8e6818ee044a30de77c9",
+        "readScope": [
+          0,
+          84
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "68",
+          "beatIndex": 77,
+          "text": "밤 8시 반, 노인정 판에 순덕 할머니가 앉아 있었다. 그런데 자꾸 시계를 봤다."
+        },
+        {
+          "chapterId": "68",
+          "beatIndex": 79,
+          "text": "“응. 9시 반에.”"
+        },
+        {
+          "chapterId": "68",
+          "beatIndex": 81,
+          "text": "“아니. 그건 안 해.”"
+        },
+        {
+          "chapterId": "68",
+          "beatIndex": 82,
+          "text": "순덕 할머니가 패를 내려놓았다."
+        },
+        {
+          "chapterId": "68",
+          "beatIndex": 83,
+          "text": "“광고 켰어. 바닷가 나오는 거.”"
+        },
+        {
+          "chapterId": "68",
+          "beatIndex": 84,
+          "text": "순덕 할머니가 휴대폰을 꺼내 화면을 보여 주었다. 오늘 밤 송출 예고였다. 하얀 모래, 파란 물, 발자국 하나 없는 바닷가."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": []
+    },
+    {
+      "chapterId": "69",
+      "selectedBeat": 113,
+      "path": "/workspace/generated_images/exec-13151306-5231-43c5-91dd-c92801dc07e0.png",
+      "sha256": "f3eac67ea2c0bf698efc1e4a878373dbbbec251de59d1222d9b92016a44a8f20",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "보고서의 빈 판정 칸은 보존했으나, 뒤편 화투가 하트 무늬 트럼프로 바뀌었다.",
+      "source": {
+        "anchor": "서인은 담요 옆에 앉아 보고서 초안을 열었다. 판정 칸 하나가 비어 있었다.",
+        "fingerprint": "957cc78d",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "309ac53c60b730e634c8b85b24b8d4e6997013ab017e13820c983ab7b15c50c1",
+        "readScope": [
+          0,
+          113
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "69",
+          "beatIndex": 104,
+          "text": "다음 날 오후, 안내문은 집집마다 우편함으로 들어갔다. 서인은 남은 몇 장을 들고 노인정에 갔다."
+        },
+        {
+          "chapterId": "69",
+          "beatIndex": 112,
+          "text": "김 영감은 그 말에 대꾸하지 않고 종이를 접어 셔츠 주머니에 넣었다."
+        },
+        {
+          "chapterId": "69",
+          "beatIndex": 113,
+          "text": "서인은 담요 옆에 앉아 보고서 초안을 열었다. 판정 칸 하나가 비어 있었다."
+        },
+        {
+          "chapterId": "39",
+          "sourcePath": "manuscript/ep039.md",
+          "sourceLine": 31,
+          "text": "방바닥에 군용 담요가 깔려 있었고, 세 사람이 그 둘레에 앉아 화투를 치고 있었다.",
+          "role": "earlier established physical continuity"
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "트럼프 대신 화투",
+          "minimumCorrection": "Preserve Seo-in studying the draft beside the blanket and keep the verdict field EMPTY. Replace Western poker cards, heart pips, ranks and patterned playing-card backs with small Korean hwatu tiles: plain red backs and sparse botanical pictorial fronts with NO letters/digits. Preserve the established blanket game area; do not make the blanket a bed/quilt between a separate poker table and the reader. Do not change the report medium based on later source or add a conclusion."
+        }
+      ]
+    },
+    {
+      "chapterId": "70",
+      "selectedBeat": 111,
+      "path": "/workspace/generated_images/exec-557d86d7-1f9e-4a41-9c2a-6b644099cd89.png",
+      "sha256": "7e0ca73955a3d4e0ee9ed96a84077b0295d9d83759e95101ff09e29e5850b159",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "저녁 판에서 윤 여사가 휴대폰을 내미는 동작이 읽힌다.가짜 화면 문구가 없다.",
+      "source": {
+        "anchor": "저녁 8시 반, 판이 두 번째 돌 때 윤 여사가 휴대폰을 서인 앞에 내밀었다.",
+        "fingerprint": "75535be6",
+        "sourceStatus": "main-source-present-normalized-match",
+        "internalDraft": false,
+        "held": false,
+        "prefixSha256": "afdcd6d5bf52f30284b9da92bd5fd0aee6e212587545f54d6c975984de1e2ec3",
+        "readScope": [
+          0,
+          111
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "70",
+          "beatIndex": 111,
+          "text": "저녁 8시 반, 판이 두 번째 돌 때 윤 여사가 휴대폰을 서인 앞에 내밀었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": []
+    },
+    {
+      "chapterId": "71",
+      "selectedBeat": 150,
+      "path": "/workspace/generated_images/exec-d35f1cc9-557d-4a28-8c85-af23452d71d7.png",
+      "sha256": "02c513ae2834ee522e34df76ca72b54baf912bfbf7f26e1458f50f0876d5523d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "김 영감이 불을 끈 뒤인데 문 안 천장등과 실내가 밝게 켜져 있다.",
+      "source": {
+        "anchor": "서인은 ‘미정’ 두 글자 위에 손가락을 올렸다가, 지우지 않고 문서를 닫았다. 노인정에 사람을 모아 스물네 시간 동안 모든 조건을 끄는 일은 아직 시작할 수 없었다.",
+        "fingerprint": "3f53546d",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "a81c0f4036d30092b21860fa5a321a18d2417c8eb1f6ea7a6e7e46f76864223b",
+        "readScope": [
+          0,
+          150
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "71",
+          "beatIndex": 117,
+          "text": "밤 9시 50분, 동부 27번 노인정 앞."
+        },
+        {
+          "chapterId": "71",
+          "beatIndex": 137,
+          "text": "김 영감은 안으로 들어가 불을 껐다."
+        },
+        {
+          "chapterId": "71",
+          "beatIndex": 138,
+          "text": "찰칵."
+        },
+        {
+          "chapterId": "71",
+          "beatIndex": 139,
+          "text": "문 종이의 마지막 줄이 어둠에 묻혔다."
+        },
+        {
+          "chapterId": "71",
+          "beatIndex": 141,
+          "text": "서인은 계단 아래 가로등 밑에 서서 휴대폰을 열었다. 오후 회의에서 온 메시지 두 개는 닫고, 메모장을 열었다."
+        },
+        {
+          "chapterId": "71",
+          "beatIndex": 150,
+          "text": "서인은 ‘미정’ 두 글자 위에 손가락을 올렸다가, 지우지 않고 문서를 닫았다. 노인정에 사람을 모아 스물네 시간 동안 모든 조건을 끄는 일은 아직 시작할 수 없었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "소등 뒤 실내등",
+          "minimumCorrection": "Preserve night entrance, streetlight on Seo-in and his phone/document-closing gesture. The senior center has ALREADY been switched OFF: extinguish the visible indoor ceiling lamp and darken the interior behind the door glass. Keep exterior streetlight/reflections for legibility. Do not relight the room."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "72",
+      "selectedBeat": 30,
+      "path": "/workspace/generated_images/exec-5e566e7f-0a2e-44a9-bab6-1f2e5e6bec04.png",
+      "sha256": "24c8d5d337d5fec47c39404c339529b6630161b1b4a701561379b6057040b7b4",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "떼어 엎어 놓은 두 서식이 보드에도 남고,탁상에서는 인쇄면이 위로 보인다.",
+      "source": {
+        "anchor": "서인은 가방에서 출력해 온 종이 한 장을 꺼내 엎어진 두 종이 사이에 놓았다.",
+        "fingerprint": "831c9af3",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "1cea1cd3fd091ea05fa4fc43c2834053d01b1355af6bd0dace2f7513277d0865",
+        "readScope": [
+          0,
+          30
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "72",
+          "beatIndex": 0,
+          "text": "금요일 저녁 7시, 클리닉 지하 2층 장부실의 화이트보드에는 종이 두 장이 자석으로 붙어 있었다."
+        },
+        {
+          "chapterId": "72",
+          "beatIndex": 1,
+          "text": "왼쪽은 TOKEN 계약 쪽 남자가 가져온 종이였다."
+        },
+        {
+          "chapterId": "72",
+          "beatIndex": 3,
+          "text": "오른쪽은 키 큰 여자가 붙인 종이였다."
+        },
+        {
+          "chapterId": "72",
+          "beatIndex": 5,
+          "text": "두 종이 모두 맨 아래 빈칸에 서인의 이름이 연필로 작게 적혀 있었다."
+        },
+        {
+          "chapterId": "72",
+          "beatIndex": 27,
+          "text": "하경은 화이트보드에 붙은 종이 두 장을 차례로 떼어 내 테이블 위에 엎어 놓았다."
+        },
+        {
+          "chapterId": "72",
+          "beatIndex": 29,
+          "text": "개수대 옆에 기대 컵라면 물을 붓고 있던 도윤은 아무 말도 하지 않았다."
+        },
+        {
+          "chapterId": "72",
+          "beatIndex": 30,
+          "text": "서인은 가방에서 출력해 온 종이 한 장을 꺼내 엎어진 두 종이 사이에 놓았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "뒤집은 서식 상태",
+          "minimumCorrection": "Keep Seo-in placing his NEW sheet BETWEEN TWO OLD sheets on the table. Remove the two original request forms from the whiteboard; retain graph and empty magnets. BOTH old outer sheets must be FACE DOWN with blank backs. Only the central new sheet may have abstract front layout. Three table sheets, no readable words/digits, no duplicate pinned original forms."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "73",
+      "selectedBeat": 48,
+      "path": "/workspace/generated_images/exec-c8684268-d1ed-4d0f-a5d0-3fa8e8669a50.png",
+      "sha256": "f5dca5d85ae2d59d19910543de27ca1c53b19fd03489b8af539a4733bff10043",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "현주의 전원버튼 동작은 맞으나 나래가63의 짧은 머리에서 긴 생머리의 다른 얼굴로 바뀌었다.",
+      "source": {
+        "anchor": "현주가 맨발로 거실을 가로질러 와 식탁 위 태블릿의 전원 버튼을 길게 눌렀다.",
+        "fingerprint": "4f07ecb2",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "91feaf4d5e5b230140bc2b3b27d5e0ceb8bbaf875453818eeaf049d453f44d61",
+        "readScope": [
+          0,
+          48
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "73",
+          "beatIndex": 18,
+          "text": "밤 10시 55분, 강이 내려다보이는 아파트 단지."
+        },
+        {
+          "chapterId": "73",
+          "beatIndex": 19,
+          "text": "지난달 이현수와 함께 저녁을 먹으러 왔던 이현주와 스무 살 딸 이나래의 집이었다."
+        },
+        {
+          "chapterId": "73",
+          "beatIndex": 23,
+          "text": "거실 긴 식탁에는 나래가 혼자 앉아 있었다. 식탁 위에는 두꺼운 제도용 공책이 펼쳐져 있었다. 지난달 봤을 때처럼 강 양쪽 둑만 연필 선으로 그려져 있었고, 그사이 가운데는 여전히 비어 있었다."
+        },
+        {
+          "chapterId": "73",
+          "beatIndex": 25,
+          "text": "나래가 연필을 내려놓았다. 제도용 공책 옆에 놓인 태블릿 화면이 켜져 있었다."
+        },
+        {
+          "chapterId": "73",
+          "beatIndex": 43,
+          "text": "그때 안방 문이 조용히 열렸다."
+        },
+        {
+          "chapterId": "73",
+          "beatIndex": 44,
+          "text": "열한 시에 이미 연결되었어야 할 이현주가 잠옷 바람으로 문간에 서 있었다. 냉장고 달력에 매일 적혀 있던 23:00이 지났는데도 관자놀이의 접속 패치는 아직 붙이지 않은 상태였다."
+        },
+        {
+          "chapterId": "73",
+          "beatIndex": 48,
+          "text": "현주가 맨발로 거실을 가로질러 와 식탁 위 태블릿의 전원 버튼을 길게 눌렀다."
+        },
+        {
+          "chapterId": "63",
+          "beatIndex": 18,
+          "text": "나래는 스물. 머리를 짧게 잘랐고 무릎에 두꺼운 제도용 공책이 펼쳐져 있었다.",
+          "role": "prior identity source; abbreviated quotation"
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "나래 짧은 머리 복원",
+          "minimumCorrection": "Match Narae to the episode63 twenty-year-old woman: same short dark bob and facial identity. Replace ONLY the seated daughter long straight hair/different face. Keep Hyunju in pajamas/cardigan holding the tablet power button, Seo-in watching, night river apartment, drafting notebook with the river gap still empty. Reference Narae identity ONLY, not old pose/time."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "74",
+      "selectedBeat": 34,
+      "path": "/workspace/generated_images/exec-b52606a7-b187-405e-af84-16e8751ad068.png",
+      "sha256": "c34ef3108e6fd2ad58aefed3205e5ed89db49e385610675fb1675c58926f1960",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "민석이 서인의 곱슬머리·얼굴로 복제됐다.기존54의 짧은 직모 인물과 다르다.",
+      "source": {
+        "anchor": "민석이 작업복 주머니에서 휴대폰을 꺼내 화면을 켰다.",
+        "fingerprint": "1eefe771",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "57a879e62030c3048711760af8714289536153da48bd8700a8b08a7795fd6eb2",
+        "readScope": [
+          0,
+          34
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "74",
+          "beatIndex": 0,
+          "text": "월요일 아침 8시 20분, 외곽 냉동 창고 마당에서는 지게차 후진 경고음이 경쾌하게 울렸다."
+        },
+        {
+          "chapterId": "74",
+          "beatIndex": 1,
+          "text": "권민석은 파란색 안전모를 쓰고 지게차 운전석에서 내려왔다. 토요일과 일요일 이틀 밤을 열한 시까지 깨어 있다가 일곱 시간씩 푹 잔 얼굴이었다. 눈 밑의 거무스름한 그늘이 절반쯤 옅어져 있었다."
+        },
+        {
+          "chapterId": "74",
+          "beatIndex": 5,
+          "text": "민석이 안전모를 벗어 옆구리에 끼고 창고 입구 쪽으로 걸어왔다. 거기 서 있던 서인을 보더니 환하게 웃었다."
+        },
+        {
+          "chapterId": "74",
+          "beatIndex": 21,
+          "text": "민석이 휴대폰 화면 아래쪽을 가리켰다."
+        },
+        {
+          "chapterId": "74",
+          "beatIndex": 26,
+          "text": "민석이 안전모를 두 손으로 고쳐 쥐었다."
+        },
+        {
+          "chapterId": "74",
+          "beatIndex": 34,
+          "text": "민석이 작업복 주머니에서 휴대폰을 꺼내 화면을 켰다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "민석 고유 얼굴",
+          "minimumCorrection": "Restore Kwon Minseok OWN adult face and short straighter hair from episode54, clearly distinct from curly-haired Seo-in. Reference face/hair ONLY, not bed, calculator, pose, screen or night lighting. Keep Monday MORNING cold-storage yard, source workwear, BLUE hardhat tucked under his arm and the action taking out/turning on his phone. Seo-in is the other curly-haired man. No screen digits or future decision."
+        }
+      ],
+      "identityComparisonReference": "/workspace/generated_images/exec-40b3fe1d-9039-4733-9f44-e662d100a036.png",
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "75",
+      "selectedBeat": 74,
+      "path": "/workspace/generated_images/exec-a8f51221-7a8b-4c3b-8230-44952deeb239.png",
+      "sha256": "5de70e493e064ba46ba4bbf6de8b2ff1d7dce9f3e37765a6c128f77df66d4870",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "다섯 대표의 차례 서명이 서인까지 포함한 여섯 명 동시 다중패드 서명으로 바뀌었다.",
+      "source": {
+        "anchor": "다섯 사람이 차례로 앞으로 나와 전자 서명 패드에 자기 이름을 적었다. 아까처럼 흔쾌한 서명이 아니었다. 자기 구역 예산을 직접 깎아 내고 올리는 무거운 서명이었다.",
+        "fingerprint": "91897a47",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "497a797d6f288b4773df7117c3c8382dae39158e7997e5d6c179ce71c35e7f52",
+        "readScope": [
+          0,
+          74
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "75",
+          "beatIndex": 6,
+          "text": "회의실 안에는 긴 디귿자 테이블이 놓여 있었다."
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 7,
+          "text": "왼쪽에는 아르카디아의 백윤하와 세르젠의 임채원이 앉아 있었고, 오른쪽에는 장부실의 다섯 갈래 대표들이 앉아 있었다. 정중앙의 위원장석 옆에는 윤세라와 오정택 기록관리관이 자리했다."
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 41,
+          "text": "서인은 오른쪽 테이블에 앉은 장부실 다섯 사람을 가리켰다."
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 43,
+          "text": "서인이 장부실 다섯 대표가 앉은 줄을 손으로 가리켰다."
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 44,
+          "text": "“생계 보전, 재검증 분리, 회복 기간, 추천 해제, 참조 분산. 이 다섯 줄을 가져온 다섯 분하고 제가 같이 보증란에 이름을 올리겠습니다.”"
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 49,
+          "text": "서인이 화면의 서명란을 여섯 칸으로 나누어 띄웠다."
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 66,
+          "text": "구석에 앉아 있던 하경이 먼저 입을 열었다."
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 69,
+          "text": "“서인 혼자 도장 찍게 두면, 다음 달에 기업 쪽에서 저 15퍼센트 도로 거둬갈 때 서인 혼자 뒤집어써야 하잖아. 내 줄 예산 깎고 내 이름 넣을게요.”"
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 70,
+          "text": "키 큰 여자가 상인회 여자와 젊은 남자를 돌아봤다."
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 72,
+          "text": "남은 4퍼센트를 두고 상인회 여자와 추천 해제 쪽 남자가 한참 동안 서로의 얼굴만 보았다. 상인회 여자가 한숨을 길게 내쉬며 장부 모서리를 접었다."
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 73,
+          "text": "“생활 보전에서 2퍼센트, 추천 해제 쪽에서 2퍼센트씩 줄이죠. 대신 다음 달 재산정 회의엔 우리도 다 들어갑니다.”"
+        },
+        {
+          "chapterId": "75",
+          "beatIndex": 74,
+          "text": "다섯 사람이 차례로 앞으로 나와 전자 서명 패드에 자기 이름을 적었다. 아까처럼 흔쾌한 서명이 아니었다. 자기 구역 예산을 직접 깎아 내고 올리는 무거운 서명이었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "차례 서명",
+          "minimumCorrection": "Replace the simultaneous six-person/many-pad lineup with ONE coherent moment in a sequential signing queue. ONE of FIVE representatives currently signs on ONE shared electronic signature pad. Seo-in watches and is NOT currently signing. Others wait partly off frame or softly in background, not all signing. Preserve the reluctant mood after budget sacrifice. No baked signatures/names/numbers/triumphant smiles."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "76",
+      "selectedBeat": 43,
+      "path": "/workspace/generated_images/exec-1011ee39-901d-490c-86fd-7c90eb48fee5.png",
+      "sha256": "5f360d4ee42b424fdf34591fcaf13039cbb4a8e1be94ed8bdfc27b93d72b0fa7",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "건어물 집 여자가 장부 모서리를 누르며 펜을 집는 두 손이 명확하다.작은 수기흔적에서 확실한 숫자/문구를 식별하지 못했으므로 추상표기로 판정했다.",
+      "source": {
+        "anchor": "건어물 집 여자는 덮이려던 장부 모서리를 손바닥으로 가만히 눌렀다. 맨 아래 7번 줄에 적힌 자기 가게 호수를 내려다보더니, 계산대 위의 볼펜을 직접 집어 들었다.",
+        "fingerprint": "ce3ec929",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "d8452a81536c2fcdb884b7c7bdce191d0bcf30d5b68941d7f665cd2a8ce5512e",
+        "readScope": [
+          0,
+          43
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "76",
+          "beatIndex": 0,
+          "text": "목요일 낮 12시 20분, 동부 27번 시장 입구의 반찬 가게 앞에는 플라스틱 소쿠리가 줄지어 놓여 있었다."
+        },
+        {
+          "chapterId": "76",
+          "beatIndex": 1,
+          "text": "상인회 여자는 가게 안쪽의 좁은 계산대 앞에 앉아 회색 장부를 펼쳐 놓고 있었다. 어제 시청 별관 회의실에 들고 왔던 바로 그 장부였다."
+        },
+        {
+          "chapterId": "76",
+          "beatIndex": 6,
+          "text": "여자는 계산대 옆의 둥근 플라스틱 의자를 발로 툭 밀어 주었다."
+        },
+        {
+          "chapterId": "76",
+          "beatIndex": 17,
+          "text": "여자가 볼펜을 계산대 위에 딱 소리 나게 내려놓았다."
+        },
+        {
+          "chapterId": "76",
+          "beatIndex": 19,
+          "text": "여자가 장부를 서인 쪽으로 반쯤 밀었다."
+        },
+        {
+          "chapterId": "76",
+          "beatIndex": 34,
+          "text": "그때 가게 유리문이 덜컥 열렸다."
+        },
+        {
+          "chapterId": "76",
+          "beatIndex": 35,
+          "text": "앞치마에 마른 멸치 가루가 묻은 여자가 빈 플라스틱 통 두 개를 들고 들어왔다. 7번 건어물 집 여자였다."
+        },
+        {
+          "chapterId": "76",
+          "beatIndex": 37,
+          "text": "상인회 여자가 반사적으로 장부를 덮으려 했다. 하지만 건어물 집 여자의 시선이 이미 계산대 위 회색 표에 닿아 있었다."
+        },
+        {
+          "chapterId": "76",
+          "beatIndex": 39,
+          "text": "건어물 집 여자가 통을 계산대 위에 올려놓으며 물었다."
+        },
+        {
+          "chapterId": "76",
+          "beatIndex": 43,
+          "text": "건어물 집 여자는 덮이려던 장부 모서리를 손바닥으로 가만히 눌렀다. 맨 아래 7번 줄에 적힌 자기 가게 호수를 내려다보더니, 계산대 위의 볼펜을 직접 집어 들었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "77",
+      "selectedBeat": 32,
+      "path": "/workspace/generated_images/exec-5e0a103c-bcd7-4009-8dfd-da9db40ae0f6.png",
+      "sha256": "274542ebf597bb30f44ddeb906bb63f60fb9d2f2777739e56337265067212a5c",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "돋보기로 기록을 읽고 펜을 내려놓는 행동이 읽힌다.참가자의 새 얼굴 자체는 불합격 이유가 아니다.",
+      "source": {
+        "anchor": "마흔 중반 여자도 자리에서 일어나 코르크판 앞으로 다가갔다. 돋보기를 꺼내 쓰고 '좌측 손 미세운동 저하' 줄을 읽더니, 들고 있던 볼펜을 탁자 위에 도로 내려놓았다.",
+        "fingerprint": "56a475c",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "b2d3ff04b6c17cf9dd4518396c0cb581285075e59f1c05ac94e37273d41db2da",
+        "readScope": [
+          0,
+          32
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "77",
+          "beatIndex": 0,
+          "text": "토요일 오후 2시, 클리닉 지하 2층 장부실 문 옆에는 하경이 매직으로 쓴 종이가 붙어 있었다."
+        },
+        {
+          "chapterId": "77",
+          "beatIndex": 3,
+          "text": "탁자 위에는 따뜻한 보리차 주전자와 종이컵 한 줄이 놓여 있었다."
+        },
+        {
+          "chapterId": "77",
+          "beatIndex": 4,
+          "text": "2시 10분이 되자 계단에서 발소리가 내려왔다. 서른쯤 된 남자와 마흔 중반쯤 된 여자가 차례로 들어왔다. 둘 다 동부 27번 게시판에 붙은 주간 정산 공고를 보고 온 사람들이었다."
+        },
+        {
+          "chapterId": "77",
+          "beatIndex": 13,
+          "text": "여자가 볼펜을 집어 들려는데, 함께 들어왔던 서른쯤 된 남자가 자리에서 일어나 벽 쪽의 코르크판으로 걸어갔다."
+        },
+        {
+          "chapterId": "77",
+          "beatIndex": 14,
+          "text": "코르크판에는 그동안의 기록 카드들이 압정으로 꽂혀 있었다."
+        },
+        {
+          "chapterId": "77",
+          "beatIndex": 15,
+          "text": "맨 왼쪽에는 할머니의 1호 · 본인 요청 재연결 카드가 있었고, 그 옆에는 한명진의 4호 · 해제 유지 카드와 겹쳐 꽂힌 지난달 소아병동 사고 카드가 있었다."
+        },
+        {
+          "chapterId": "77",
+          "beatIndex": 16,
+          "text": "서부 2의료원 소아병동 · 냉장 의약품 이송 판단 15분 지연 · 좌측 손 미세운동 저하 소견."
+        },
+        {
+          "chapterId": "77",
+          "beatIndex": 24,
+          "text": "구석에서 장부를 정리하던 하경이 펜을 멈췄고, 서인은 보리차 주전자 옆에서 두 사람을 봤다."
+        },
+        {
+          "chapterId": "77",
+          "beatIndex": 30,
+          "text": "남자가 안내문을 탁자 위에 내려놓았다."
+        },
+        {
+          "chapterId": "77",
+          "beatIndex": 32,
+          "text": "마흔 중반 여자도 자리에서 일어나 코르크판 앞으로 다가갔다. 돋보기를 꺼내 쓰고 '좌측 손 미세운동 저하' 줄을 읽더니, 들고 있던 볼펜을 탁자 위에 도로 내려놓았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "78",
+      "selectedBeat": 55,
+      "path": "/workspace/generated_images/exec-427e278d-6ded-4994-90f2-5cff5e456efd.png",
+      "sha256": "0fd269065ef00942325dd345d0bcdbd69c91e988d9fc50aeb3388a8245187264",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "차단기를 도면 옆으로 미는 행동은 맞으나 키 큰 여자가 지우 얼굴·단발·회색 셔츠로 복제됐다.",
+      "source": {
+        "anchor": "서인이 도면 위로 손을 뻗어 전류 차단기 부품을 옆으로 밀었다.",
+        "fingerprint": "2a915fe0",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "e7f8541586f16c56cce0a9fe248ae1daab46991e854cd694339112dd6aeecbe5",
+        "readScope": [
+          0,
+          55
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "78",
+          "beatIndex": 9,
+          "text": "일요일 저녁 7시, 클리닉 지하 2층 장부실에는 평소보다 많은 사람이 모여 있었다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 11,
+          "text": "철문 쪽 구석 의자에는 서버를 지우자던 남자가 팔짱을 끼고 앉아 있었다. 그 옆에는 반삭발 남자가 다리를 꼬고 앉아 있었다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 27,
+          "text": "서버를 지우자던 남자가 안주머니에서 접힌 도면 한 장을 꺼내 탁자 한가운데에 펼쳤다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 28,
+          "text": "시청 별관 지도가 아니었다. 동부 27번 시장 상가 2층과 그 뒤편 변전 설비의 배선도였다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 29,
+          "text": "도면 한가운데에 빨간 동그라미가 쳐져 있었다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 39,
+          "text": "남자가 도면 옆에 작은 전류 차단기 부품 두 개를 올려놓았다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 43,
+          "text": "장부실 안이 찬물을 끼얹은 듯 조용해졌다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 44,
+          "text": "상인회 여자가 인상을 찌푸렸다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 49,
+          "text": "서버를 지우자던 남자가 키 큰 여자를 바라봤다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 53,
+          "text": "키 큰 여자의 눈동자가 탁자 위 도면으로 내려갔다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 54,
+          "text": "어제 오후 내내 빈 신청서 앞에 앉아 있던 여자의 손가락이 무릎 위에서 작게 움찔했다. 여자는 곧장 반대하지 않았다."
+        },
+        {
+          "chapterId": "78",
+          "beatIndex": 55,
+          "text": "서인이 도면 위로 손을 뻗어 전류 차단기 부품을 옆으로 밀었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "키 큰 여자와 지우 구별",
+          "minimumCorrection": "Keep Seo-in pushing a breaker component SIDEWAYS on the schematic. Replace the woman beside him with a distinct tall-woman representative identity, NOT Jiwoo: do not copy Jiwoo brown bob, face and grey overshirt/black tee combination. New adult supporting-role design is allowed, consistent with the episode84 tall woman if useful. Preserve reserved attention, no named new character, blackout, sparks, executed switch-off, words/digits."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "79",
+      "selectedBeat": 14,
+      "path": "/workspace/generated_images/exec-b5a8428f-6a73-47a1-8d1c-a387a9288338.png",
+      "sha256": "bbc1aa4c08649603e9adffb1e0e34e9ce254a012e66c08d99643f3790a42341d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "휴대폰 인계는 읽히나 화투가 트럼프·코트카드 및 숫자/문자 모양으로 바뀌었다.",
+      "source": {
+        "anchor": "서인은 휴대폰 메모장에 오랫동안 저장만 해 두었던 문서를 열어 김 영감 앞에 내밀었다.",
+        "fingerprint": "d6111df0",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "1674081f3040da234fb01a9f244580561449696253b36557054824ba6521510e",
+        "readScope": [
+          0,
+          14
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "79",
+          "beatIndex": 0,
+          "text": "월요일 저녁 8시, 동부 27번 노인정 안에서는 화투패가 담요에 부딪히는 소리가 경쾌하게 났다."
+        },
+        {
+          "chapterId": "79",
+          "beatIndex": 3,
+          "text": "판이 한 번 끝나고 윤 여사가 패를 섞는 사이, 서인이 김 영감 옆자리에 무릎을 모으고 앉았다."
+        },
+        {
+          "chapterId": "79",
+          "beatIndex": 6,
+          "text": "김 영감이 패를 쥐던 손을 멈추고 서인을 돌아봤다."
+        },
+        {
+          "chapterId": "79",
+          "beatIndex": 9,
+          "text": "윤 여사가 돋보기를 내려 쓰며 웃었다."
+        },
+        {
+          "chapterId": "79",
+          "beatIndex": 12,
+          "text": "서인이 벽시계를 올려다봤다."
+        },
+        {
+          "chapterId": "79",
+          "beatIndex": 14,
+          "text": "서인은 휴대폰 메모장에 오랫동안 저장만 해 두었던 문서를 열어 김 영감 앞에 내밀었다."
+        },
+        {
+          "chapterId": "39",
+          "sourcePath": "manuscript/ep039.md",
+          "sourceLine": 31,
+          "text": "방바닥에 군용 담요가 깔려 있었고, 세 사람이 그 둘레에 앉아 화투를 치고 있었다.",
+          "role": "earlier established physical continuity"
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "화투 복원",
+          "minimumCorrection": "Preserve Seo-in showing phone document to Kim. Replace ALL Western court cards/hearts/pips/ranks/corner letters or digits with Korean hwatu: plain red backs and botanical fronts, no text/digits. The game is on the senior-center blanket, with Seo-in seated beside Kim, not a new poker table. Phone only abstract layout, no exact title/count or future participants."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "80",
+      "selectedBeat": 45,
+      "path": "/workspace/generated_images/exec-27638d44-fb61-488e-81c7-f19538f1cbd1.png",
+      "sha256": "7b2db0bf032976c5a53b44913d83ae238d05e65254edc845706c59a0c608becc",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "새벽 신발장 위 차폐 상자에서 여자 단말 한 대만 돌려주는 행동이 분명하다.",
+      "source": {
+        "anchor": "서인은 자리에서 일어나 신발장 위의 차폐 상자 뚜껑을 열었다. 여자의 단말 하나만 꺼내 건넸다.",
+        "fingerprint": "d2dbda2a",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "2c6040698d3c88d07f7936c5c0027444249b5107b66044fd52040b81c1a7faa5",
+        "readScope": [
+          0,
+          45
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "80",
+          "beatIndex": 30,
+          "text": "밤 열한 시, 서인이 노인정 형광등을 껐다."
+        },
+        {
+          "chapterId": "80",
+          "beatIndex": 31,
+          "text": "문 종이에 적힌 소등 시각이었다. 창문 너머 가로등 불빛만 방 안으로 희미하게 스며들었다."
+        },
+        {
+          "chapterId": "80",
+          "beatIndex": 34,
+          "text": "새벽 세 시 사십 분."
+        },
+        {
+          "chapterId": "80",
+          "beatIndex": 35,
+          "text": "어둠 속에서 부스럭거리는 소리가 나더니, 상인회 여자가 외투를 걸치고 조용히 일어났다."
+        },
+        {
+          "chapterId": "80",
+          "beatIndex": 39,
+          "text": "여자가 신발장 위의 차폐 상자를 열지도 않은 채 현관 문고리를 잡았다. 목소리는 잠겨 있었지만 또렷했다."
+        },
+        {
+          "chapterId": "80",
+          "beatIndex": 43,
+          "text": "여자가 문고리를 잡은 손에 힘을 주었다."
+        },
+        {
+          "chapterId": "80",
+          "beatIndex": 45,
+          "text": "서인은 자리에서 일어나 신발장 위의 차폐 상자 뚜껑을 열었다. 여자의 단말 하나만 꺼내 건넸다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "81",
+      "selectedBeat": 97,
+      "path": "/workspace/generated_images/exec-f5ad4f2f-506d-451f-a8b7-d577233facd8.png",
+      "sha256": "b9fd5db02eb15e61d2e34129debaf0150cbb1ccc605847d2b54298348c7d2859",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "두 번 밑줄 긋는 손은 읽히나 장부에320처럼 읽히는 숫자와 가짜 수기 문장이 들어갔다.",
+      "source": {
+        "anchor": "여자가 볼펜 끝으로 그 줄을 두 번 그었다가 멈췄다.",
+        "fingerprint": "718b0880",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "02de49e6307f7f4917d130a08c5b499c9cbd3d24631ae73a00f88ddbec83badd",
+        "readScope": [
+          0,
+          97
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "81",
+          "beatIndex": 62,
+          "text": "그날 저녁 일곱 시 반, 동부 27번 시장 뒤편 골목."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 64,
+          "text": "상인회 여자가 유리문을 드르륵 열고 들어갔다. 양손에는 반찬 가게와 칼국수집, 건어물 집에서 모은 업소용 행주와 앞치마 두 자루가 들려 있었다."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 67,
+          "text": "하지만 밤 열 시가 넘어 서인과 상인회 여자가 반찬 가게 문단속을 하고 있을 때, 세탁소 쪽 골목에서 둔탁한 금속 파열음이 울렸다."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 84,
+          "text": "가게 밖으로 나오자 반찬 가게 앞에는 저녁 장사를 마치고 남은 시금치 나물 한 소쿠리가 플라스틱 뚜껑에 덮여 있었다."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 85,
+          "text": "상인회 여자는 가게 불도 켜지 않은 채 어두운 계산대 앞 의자에 주저앉아 마대 자루를 바닥에 내려놓았다."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 89,
+          "text": "여자가 앞치마 자락으로 젖은 손등을 닦았다."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 93,
+          "text": "서인은 어두운 세탁소 유리창 너머로 다시 충전기가 꽂힌 붉은 패치 표시등을 바라보았다."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 94,
+          "text": "서인은 경고 창이 떠 있는 단말을 주머니에 넣고 반찬 가게 앞으로 돌아왔다."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 95,
+          "text": "가게 안쪽에서는 상인회 여자가 불도 켜지 않은 채 계산대 위에 엎드려 회색 장부의 숫자를 고쳐 적고 있었다."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 96,
+          "text": "5번 세탁소 · 보전금 반액 유지 · 월·수·금 야간 저강도 재개."
+        },
+        {
+          "chapterId": "81",
+          "beatIndex": 97,
+          "text": "여자가 볼펜 끝으로 그 줄을 두 번 그었다가 멈췄다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "장부 숫자 삭제",
+          "minimumCorrection": "Preserve dark shop, tired merchant, pen and TWO firm underline strokes on ONE ledger row. Remove every Arabic digit, fake Hangul/Latin letter and invented numeric string from ledger/headers/loose sheets. Keep ruled ledger grid and faint non-character grey strokes only. Double underline remains main action; no financial figures/new result/bright shop ceiling lamp."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "82",
+      "selectedBeat": 61,
+      "path": "/workspace/generated_images/exec-9dba3efc-9cf9-4345-abf4-348de3d8adf1.png",
+      "sha256": "1670752430542b5d14e880715d465ee49f2a30d7b44ee70f96089044575ea330",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "회색 작업복·목 수건·내려놓는 펜은 맞지만 붉은 직인 안 가짜 한자 문구가 선명하다.",
+      "source": {
+        "anchor": "쉰쯤 된 남자가 볼펜을 탁자 위에 도로 내려놓았다.",
+        "fingerprint": "1fb874eb",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "2d8e28b3a8775bd5da05fb294b7b87c010b1c165bfb84e1a434a934a845bb23b",
+        "readScope": [
+          0,
+          61
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "82",
+          "beatIndex": 0,
+          "text": "토요일 오후 두 시 정각, 클리닉 지하 2층 장부실 문이 다시 열렸다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 3,
+          "text": "어제 저녁 운영국 시스템에서 약관 위반 경고가 떴는데도, 키 큰 여자는 그 줄을 지우지 않고 그대로 내놓았다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 29,
+          "text": "오후 세 시가 조금 넘었을 때, 계단 위에서 무거운 안전화 발소리가 여러 겹으로 울렸다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 30,
+          "text": "문이 열리고 세 남자가 들어왔다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 31,
+          "text": "맨 앞은 소매에 마른 페인트가 묻은 07 풀 6번 작업복 남자였다. 그 뒤로 회색 방진 복을 입은 쉰쯤 된 남자와, 목에 수건을 두른 마흔쯤 된 남자가 따라 들어왔다. 둘 다 손등에 하얀 퍼티 가루가 묻어 있었다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 33,
+          "text": "6번 작업복 남자가 두 사람을 탁자 앞 의자에 앉혔다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 41,
+          "text": "남자가 종이컵의 보리차를 한 모금 마시고 컵을 내려놓았다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 49,
+          "text": "남자가 손등의 퍼티 가루를 털었다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 53,
+          "text": "장부실 구석에 놓인 공용 행정 단말에서 날카로운 경고음이 두 번 울렸다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 54,
+          "text": "화면이 켜지며 시청 별관 기준계열 신탁 사무국에서 발송한 공식 직인 문서가 큰 글씨로 떠올랐다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 55,
+          "text": "발신: 기준계열 신탁 사무국 기록관리관실."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 56,
+          "text": "제목: 분산 참조풀 임의 휴무 설정 반려 및 보조금 지급 보류 예고."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 57,
+          "text": "내용: 현재 신청된 ‘요일별 지정 휴무’는 표준안 부칙 제4조(연속 참조 일관성 유지)에 위배됨. 월요일 18:00까지 전 인원 주 7일 연속 대기로 전환하지 않을 경우, 동부 27번 참조 분산 시범 보조금 전액을 보류함."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 58,
+          "text": "열린 화면이 탁자 바로 옆에 있어, 볼펜을 쥐고 있던 쉰쯤 된 남자의 눈에도 그 붉은 직인이 그대로 들어왔다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 59,
+          "text": "장부실 안이 얼어붙었다."
+        },
+        {
+          "chapterId": "82",
+          "beatIndex": 61,
+          "text": "쉰쯤 된 남자가 볼펜을 탁자 위에 도로 내려놓았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "가짜 직인 문자",
+          "minimumCorrection": "Preserve the middle-fifties man in grey dusty workwear lowering his pen, other worker neck towel, clinic table/paper cups and warning monitor light. Replace baked Chinese/Korean-like seal characters with a plain abstract red circular stamp WITHOUT letters/numerals. Body neutral grey bars only. No official logo/count or actual judgment text."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "83",
+      "selectedBeat": 89,
+      "path": "/workspace/generated_images/exec-48719a4a-69d4-4d63-a313-29ed4b355488.png",
+      "sha256": "43f76bffb86af19cd3502f36a69073ca2bc7e4677c7ad3701e512680b487faea",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "하진 어머니의 관자놀이 아래 연한 접속흔적이 목의 짙고 큰 멍으로 옮겨져 새 부상처럼 보인다.",
+      "source": {
+        "anchor": "할머니가 식탁 위의 메모지를 끌어당겨 볼펜으로 자기 기준자 고유 번호 여섯 자리와 서명을 눌러 적어 서인에게 밀었다.",
+        "fingerprint": "40a1e38d",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "6c8d1b1af15146d3b3dc2776562dd58b6691732a717caa9100cec146c9e95f37",
+        "readScope": [
+          0,
+          89
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "83",
+          "beatIndex": 49,
+          "text": "일요일 저녁 일곱 시, 비공개 주거 구역 9층 아파트."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 54,
+          "text": "거실 탁자 위에는 하진이 정리하던 설계 도면 파일과, 다음 주 화요일로 다가온 ‘후계 후보 3차 보류 만기 안내서’가 나란히 놓여 있었다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 55,
+          "text": "부엌에서 귤 접시를 들고 나오던 하진의 어머니가 서인을 보고 걸음을 멈췄다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 56,
+          "text": "어머니의 왼쪽 관자놀이 아래에는 연한 원형 자국이 전보다 뚜렷하게 남아 있었다. 매일 밤 열한 시부터 새벽까지 패치를 붙이는 자리에 생긴 자국이었다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 57,
+          "text": "식탁에는 하진의 어머니와 선임 기준자인 할머니가 마주 앉아 귤을 까먹고 있었다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 60,
+          "text": "어머니가 귤껍질을 모아 접시 한쪽에 놓았다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 62,
+          "text": "어머니가 찻잔을 내려놓았다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 64,
+          "text": "하진이 옆에서 엄마의 팔을 살짝 잡았다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 69,
+          "text": "그때 옆에 앉아 있던 할머니가 귤 한 쪽을 입에 넣으며 입을 열었다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 78,
+          "text": "할머니가 탁자 위의 반려 통보서를 손가락으로 툭 쳤다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 83,
+          "text": "어머니는 여전히 불안한 눈빛으로 서류를 보았다."
+        },
+        {
+          "chapterId": "83",
+          "beatIndex": 89,
+          "text": "할머니가 식탁 위의 메모지를 끌어당겨 볼펜으로 자기 기준자 고유 번호 여섯 자리와 서명을 눌러 적어 서인에게 밀었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "목의 새 멍 삭제",
+          "minimumCorrection": "Keep grandmother finishing/sliding small note to Seo-in, peeled tangerines, teacup and worried Hajin mother behind. Remove the large dark NECK bruise. If visible, show ONLY a faint pale circular contact trace just below her LEFT TEMPLE near the side of her face, not neck/collarbone. Do not invent injury or substitute Seo-in mother. Note only faint non-character strokes, no legible six-digit identifier/signature."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "84",
+      "selectedBeat": 32,
+      "path": "/workspace/generated_images/exec-c056129b-579f-41fe-8b8e-2dbbaceccdaf.png",
+      "sha256": "5d20a927ba363980cdecc77c9aa7f14336dbe304993fde2a03f6b505fa393ec8",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "메모 인계는 맞으나 원문4에서 벗은 오정택 안경이 다시 얼굴에 있다.",
+      "source": {
+        "anchor": "서인은 주머니에서 어제 저녁 9층 할머니가 적어 준 여섯 자리 고유 번호 메모지를 꺼내 신청서 옆에 놓았다.",
+        "fingerprint": "6276c22",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "a58532572f4e5d7592f39bdfa819f069f3b005facd05b0397053c21b294b71d3",
+        "readScope": [
+          0,
+          32
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "84",
+          "beatIndex": 0,
+          "text": "월요일 오전 아홉 시 반, 기준계열 정기 점검 센터 1층 복도 끝."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 2,
+          "text": "문은 오늘도 반쯤 열려 있었고, 문 밑에는 오정택 기록관리관의 아버지가 놓았다던 낡은 검은 고무 받침이 끼워져 있었다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 3,
+          "text": "서인은 키 큰 여자와 함께 열린 문틈으로 들어갔다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 4,
+          "text": "안쪽 책상에서 서류를 정리하던 오정택이 두 사람을 보고 안경을 벗었다. 그의 책상 모니터 한구석에는 한 달 전 해제된 4호 한명진의 동의서 여백 사진이 작은 창으로 띄워져 있었다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 8,
+          "text": "오정택이 책상 앞 의자 두 개를 가리켰다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 10,
+          "text": "서인과 키 큰 여자가 나란히 앉았다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 11,
+          "text": "오정택은 모니터의 사진 창을 닫지 않은 채, 서류철 옆에 놓인 보온병에서 둥굴레차를 따라 두 사람 앞에 놓았다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 19,
+          "text": "키 큰 여자가 가방에서 토요일 오후에 받은 신청서 철과, 하경이 그려 준 요일별 휴무 분산표를 꺼내 오정택의 책상 위에 펼쳐 놓았다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 23,
+          "text": "오정택이 신청서 철의 빈 열두 번째 칸을 먼저 짚었다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 27,
+          "text": "오정택이 규정집을 펼쳐 보였다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 31,
+          "text": "오정택의 시선이 서인에게로 옮겨 갔다."
+        },
+        {
+          "chapterId": "84",
+          "beatIndex": 32,
+          "text": "서인은 주머니에서 어제 저녁 9층 할머니가 적어 준 여섯 자리 고유 번호 메모지를 꺼내 신청서 옆에 놓았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "벗은 안경",
+          "minimumCorrection": "Keep Seo-in placing small memo beside application folder and tall woman seated beside him. O Jeongtaek REMOVED glasses earlier in this conversation: remove them from his face; they may rest on the desk. Preserve mature identity, open counseling-room context, tea/thermos and understated monitor photo window. No baked six-digit memo/consent text."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    },
+    {
+      "chapterId": "85",
+      "selectedBeat": 46,
+      "path": "/workspace/generated_images/exec-0de14768-f699-425f-8659-04775a9e49ee.png",
+      "sha256": "bd5c7a1dab58fb3ec08e2d5cc2da6767538ccc47c663d36ee970c3007f6fbd0a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "하경의 굳은 얼굴·신청서 철 인계가 읽힌다.상대 청년은 서인 복제가 아니고 접속/서명완료를 선공개하지 않았다.",
+      "source": {
+        "anchor": "하경이 굳은 얼굴로 신청서 철을 펼쳐 내밀었다.",
+        "fingerprint": "7f69223e",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "3bc079f8a8ba8ef9fb690f413d19804c43bf252eb88d6699adead81474a28ee4",
+        "readScope": [
+          0,
+          46
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "chapterId": "85",
+          "beatIndex": 0,
+          "text": "수요일 저녁 일곱 시, 클리닉 지하 2층 장부실의 공기는 무겁게 가라앉아 있었다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 15,
+          "text": "그는 벽 한구석에 모서리 하나로 매달려 있던 자신들 쪽의 옛 구상안 종이와, 캐비닛에 넣어 두었던 외장 기록 장치 두 개를 꺼내 가방에 챙겨 넣었다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 27,
+          "text": "서버를 지우자던 남자와 반삭발 남자, 그리고 다른 한 사람이 가방을 메고 철문 쪽으로 걸어갔다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 28,
+          "text": "문간에 서 있던 네 번째 사람—스물여덟쯤 되어 보이는 마른 체격의 통신 하청 출신 청년—만 발걸음을 멈추고 서 있었다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 31,
+          "text": "마른 청년이 작업 가방 끈을 두 손으로 고쳐 쥐었다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 38,
+          "text": "마른 남자가 볼펜을 고쳐 쥐었다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 40,
+          "text": "마른 청년은 서버를 지우자던 남자의 시선을 피하지 않고 탁자 앞으로 걸어왔다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 41,
+          "text": "그는 몇 초 동안 청년의 뒷모습을 노려보다가, 아무 말 없이 철문을 거칠게 밀고 계단을 올라갔다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 42,
+          "text": "세 사람의 발소리가 위층으로 사라지고, 지하 장부실에는 길고 서늘한 정적이 남았다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 43,
+          "text": "처음으로 장부실의 한 갈래가 짐을 싸서 나간 밤이었다. 코르크판 오른쪽 아래에는 서버를 지우자던 남자가 떼어 간 종이 자리에 빈 압정 구멍 두 개만 덩그러니 남아 있었다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 44,
+          "text": "탁자 앞에 남은 마른 청년이 어색하게 목례를 하고 의자에 앉았다."
+        },
+        {
+          "chapterId": "85",
+          "beatIndex": 46,
+          "text": "하경이 굳은 얼굴로 신청서 철을 펼쳐 내밀었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewedBeforeRestart": true,
+        "contained390ViewedBeforeRestart": true,
+        "hashAndDimensionsRecomputedAfterRestart": true,
+        "appRuntimeReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified",
+        "style": "Consistent detailed teaser-painted style at reviewed scales",
+        "textDigits": "Specific text issue if listed; abstract non-character layout accepted"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. No canon/publication approval or source-PR merge."
+    }
+  ],
+  "limits": [
+    "Still-art review, not runtime/crop/audio or full-episode/masterpiece certification.",
+    "71–85 remain internal drafts.",
+    "Unknown supporting-role face alone did not fail.",
+    "No score assigned.",
+    "Original candidate verdicts retained; parent corrections require changed-part review."
+  ],
+  "correctionsArtifact": "/workspace/vn-work-session/vn-art-corrections-61-85.json"
+}

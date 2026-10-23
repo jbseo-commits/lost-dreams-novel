@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "recovery": {
+    "reconstructed": true,
+    "reason": "Execution environment /tmp reset during later review. Reconstructed from this reviewer conversation decisions, candidate IDs and source evidence; not byte-identical original JSON. Hashes/dimensions recalculated from preserved PNGs.",
+    "sourceDecisionPreserved": true
+  },
+  "scope": "Only listed candidates; historical rejected versions retained as historical decisions. Later correction PASS is in a separate report. Not a whole-story completion verdict.",
+  "method": {
+    "native": "All listed PNGs had been viewed at native size in the original review.",
+    "mobile": "All had390px-contained in-memory previews; not actual app QA.",
+    "writeScope": "Only /workspace/vn-work-session/reviews, checkout untouched."
+  },
+  "summary": {
+    "PASS": 4,
+    "CHANGES": 2
+  },
+  "records": [
+    {
+      "chapterId": "43",
+      "selectedBeat": 90,
+      "candidatePath": "/workspace/generated_images/exec-c3924f8c-a266-4c52-8b02-8c741ec26c3a.png",
+      "verdict": "CHANGES",
+      "reason": "폰 확대 동작은 좋으나 임의 검사수치/의사문자 열·추세 그래프를 굽는다. 캡처는 중립 추상선으로 교정.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "폰 확대 동작은 좋으나 임의 검사수치/의사문자 열·추세 그래프를 굽는다. 캡처는 중립 추상선으로 교정."
+      ],
+      "sha256": "2bf88c3f1cde8ca0ef1b562c77c8d48c0c963902c5db2a1fcf50806791abbfb2",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "44",
+      "selectedBeat": 92,
+      "candidatePath": "/workspace/generated_images/exec-a09ca593-3930-411c-9b39-99ad26766dd4.png",
+      "verdict": "CHANGES",
+      "reason": "단말을 서랍에서 꺼내는 행동자는 강연우인데 중심 인물에32병원 백윤하 얼굴/헤어를 복사. 연우 정본 또는 얼굴 크롭 손컷 필요.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "단말을 서랍에서 꺼내는 행동자는 강연우인데 중심 인물에32병원 백윤하 얼굴/헤어를 복사. 연우 정본 또는 얼굴 크롭 손컷 필요."
+      ],
+      "sha256": "d1331dcf1cb326ca77bdee62b4b74af7dccd210327b2d21558c8e03c4f690a44",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "47",
+      "selectedBeat": 46,
+      "candidatePath": "/workspace/generated_images/exec-2bb12a75-e8f0-40ba-aa78-7fdad33dbf84.png",
+      "verdict": "PASS",
+      "reason": "오후 노인정에서 윤여사가 명단 옆 펜을 놓고 매트로 간다. 배경 영사기 회색점퍼여성/전선남자와 구분.390px 동선·시선 정합.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "9a51443c4a5ba3cb8bb8547f1a111e22e1f85dad496fa325455a37e55ec7f1db",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "49",
+      "selectedBeat": 41,
+      "candidatePath": "/workspace/generated_images/exec-039c7f5e-9956-43c4-9d82-36ed9075949e.png",
+      "verdict": "PASS",
+      "reason": "밤 장부실 회색점퍼여성이 예약을 삭제하는 버튼 손동작이390px에서 명확. 서버wipe/설명회완료로 확장하지 않음. 삭제확인 버튼 순간은 사건의 의미를 충족하므로 blocking 아님.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "61f857aac4190423a2d3c56b61accb1e6925b94ed4c2bc538c47ccf590c8de73",
+      "nativeDimensions": [
+        1672,
+        940
+      ]
+    },
+    {
+      "chapterId": "50",
+      "selectedBeat": 147,
+      "candidatePath": "/workspace/generated_images/exec-c9ef9f99-b25a-4e2c-8faf-3e8f1870d760.png",
+      "verdict": "PASS",
+      "reason": "밤 옥상 물통 옆 앉은 서인 폰을 도윤이 양동이2개 내려놓다가 본다. canonical 도윤/손/수량/장소 정합. 실행되지 않은 초안 결과 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "b1f97e58cf12e00283668df18c05db7b6874990edaf12f9ddb153ad7e08a5c2a",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "51",
+      "selectedBeat": 105,
+      "candidatePath": "/workspace/generated_images/exec-05d5879d-302d-4da0-a421-dea1dda775be.png",
+      "verdict": "PASS",
+      "reason": "하진엄마가 젖은손을 앞치마에 닦고 펜으로 서명, 서인은 눈을 내림.48과 중년 인상/갈색묶은머리·역할 연속성 비교. 새 조연얼굴 제작 자체를 이유로 한 초기 CHANGES는 root 권한해석 조정 뒤 철회. 서인엄마 얼굴 복사 아님.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "238a2253052c84a6a7799acdcd465404cd206f64fcee4e29271017b84b1bfc27",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    }
+  ]
+}

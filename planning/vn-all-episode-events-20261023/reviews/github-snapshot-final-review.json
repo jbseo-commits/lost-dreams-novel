@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-23T09:09:14.613386+00:00",
+  "reviewer": "vn_slice_reviewer",
+  "verdict": "DRAFT_UPLOAD_PASS",
+  "scope": "GitHub DRAFT snapshot structure and publication boundary. This is not a full-episode art completion verdict or full-app play QA approval.",
+  "repository": "/workspace/lost-dreams-character-candidates",
+  "head": "9191b948150fe65ae2b9d0453bd2b5eaf96dde68",
+  "baseline": "388477363a59f09082dd2071bad10e38c76527d5",
+  "blockingFindings": [],
+  "checks": [
+    {
+      "name": "snapshot inventory",
+      "result": "PASS",
+      "evidence": "candidate-art-manifest: 92 latest drafts; image review PASS 56, CHANGES 31, corrected PENDING 5; runtimeConnected 7, unconnected candidates 85; appPlayQa PENDING for all 92. Manifest, README and gallery distinguish these states."
+    },
+    {
+      "name": "all latest WebP integrity",
+      "result": "PASS",
+      "evidence": "Independently read all 92 vn-relative asset paths. SHA-256 and decoded dimensions match candidate-art-manifest; all resizedOrCropped flags false; no errors. Native dimensions are 1672x941."
+    },
+    {
+      "name": "runtime integration scope",
+      "result": "PASS",
+      "evidence": "Seven ep32/35/36/37/38/39/40 frames are registered through the generated cut map and asset keys with exact source anchors and fingerprints. Original cut records are preserved. Remaining 85 candidate assets have no runtime import or cut entry."
+    },
+    {
+      "name": "public build isolation",
+      "result": "PASS",
+      "evidence": "build-vn-public.mjs excludes planning/vn-all-episode-events-20261023 during copyRoot. Independently rerun release.test.mjs passes with actual copyRoot:true and verifies the planning directory and generated-event-candidates directory are absent from public output. Public demo chapter whitelist and dependency copying preserve the existing 18-chapter boundary."
+    },
+    {
+      "name": "protected source and state paths",
+      "result": "PASS",
+      "evidence": "Full changed-path inventory contains no manuscript, settings, story-data, WEB reader content, audio assets/logic, or save-coordinate changes. Explicit git diff origin/main for manuscript, settings, manifest.json, vn/story-data.js, assets, reader-sequence19-22.js, root index.html/app.js/style.css, vn/state.js and audio modules is empty."
+    },
+    {
+      "name": "honest completion language",
+      "result": "PASS",
+      "evidence": "README, gallery, manifest and CHANGELOG explicitly identify draft art, held86-90 internal drafts, only seven connected frames, outstanding correction/integration/full-app play QA, and no merge/deploy/full-production completion. Source-publication status is separated from art status."
+    },
+    {
+      "name": "independent focused tests",
+      "result": "PASS",
+      "evidence": "node --test vn/episode-generated-cutscenes.test.mjs vn/release.test.mjs: 2 test files passed, 0 failed. This reviewer did not rerun the root-reported entire 19-file suite."
+    },
+    {
+      "name": "patch hygiene",
+      "result": "PASS",
+      "evidence": "git diff --check completed without errors; checkout clean at reviewed HEAD."
+    }
+  ],
+  "pendingLimits": [
+    "31 latest art images require CHANGES; the five newly corrected images remain PENDING and were not independently visually approved in this final snapshot review.",
+    "Full app play QA remains PENDING; native and 390px art reviews do not establish runtime play QA.",
+    "56 image PASS verdicts do not imply 56 runtime connections; only 7 are connected.",
+    "Reconstructed historical review JSON files explicitly disclose recovery from preserved conversation judgments and preserved PNG metadata, rather than byte-identical restoration.",
+    "Approval is for the requested DRAFT upload. This review does not authorize merge or deployment."
+  ],
+  "checkoutEditsByReviewer": false,
+  "reviewArtifactOnly": "/workspace/vn-work-session/reviews/github-snapshot-final-review.json"
+}

@@ -36,7 +36,9 @@ test('actual VN deployment and its single HTML contain only the demo text, cues 
  const tmpRoot=path.resolve(os.tmpdir()),out=await fs.mkdtemp(path.join(tmpRoot,'lost-dreams-public-test-'));
  assert.ok(path.resolve(out).startsWith(tmpRoot+path.sep));
  t.after(async()=>{const resolved=path.resolve(out);assert.ok(resolved.startsWith(tmpRoot+path.sep));await fs.rm(resolved,{recursive:true,force:true});});
- const report=await buildPublicSite(root,out,{copyRoot:false}),pub=path.join(out,'vn');
+ const report=await buildPublicSite(root,out,{copyRoot:true}),pub=path.join(out,'vn');
+ await assert.rejects(fs.access(path.join(out,'planning','vn-all-episode-events-20261023')));
+ await assert.rejects(fs.access(path.join(pub,'assets','generated-event-candidates')));
  const built={window:{}};vm.runInNewContext(await fs.readFile(path.join(pub,'story-data.js'),'utf8'),built);
  assert.deepEqual(built.window.STORY.chapters.map(c=>String(c.id)).join('|'),DEMO_CHAPTER_IDS.join('|'));
  assert.equal(report.sourceBeats,4242);assert.equal(report.paymentAuthentication,false);

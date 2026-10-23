@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "recovery": {
+    "reconstructed": true,
+    "reason": "Execution environment /tmp reset during later review. Reconstructed from this reviewer conversation decisions, candidate IDs and source evidence; not byte-identical original JSON. Hashes/dimensions recalculated from preserved PNGs.",
+    "sourceDecisionPreserved": true
+  },
+  "scope": "Only listed candidates; historical rejected versions retained as historical decisions. Later correction PASS is in a separate report. Not a whole-story completion verdict.",
+  "method": {
+    "native": "All listed PNGs had been viewed at native size in the original review.",
+    "mobile": "All had390px-contained in-memory previews; not actual app QA.",
+    "writeScope": "Only /workspace/vn-work-session/reviews, checkout untouched."
+  },
+  "summary": {
+    "PASS": 6,
+    "CHANGES": 0
+  },
+  "records": [
+    {
+      "chapterId": "31",
+      "selectedBeat": 115,
+      "candidatePath": "/workspace/generated_images/exec-6663ef73-2aa7-414c-80e6-7f2770283a3f.png",
+      "verdict": "PASS",
+      "reason": "폰 전경 확대, 다은의 틈없는 다문입/긴장 얼굴390px 식별. 정미경 현관/실외화/서인시선 정합. 미래UI 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "9b7d551ac5dae6043842d8531cd6fec60533ef60b0716e8b119d372ab3559e47",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "33",
+      "selectedBeat": 177,
+      "candidatePath": "/workspace/generated_images/exec-9358df66-c5bf-44c3-a3e7-53fbf2d55c5f.png",
+      "verdict": "PASS",
+      "reason": "서인의 눌러쓴 모자 교정, 다은 폰결과/연습지 반응 유지.31인물인상 연속성/390px 정합.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "d7ecccc88d50f24036e120cbcdfe4cdedc8bdbab37114ba9f40097edfde6a498",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "34",
+      "selectedBeat": 155,
+      "candidatePath": "/workspace/generated_images/exec-bcd8251b-82f8-4e09-89de-d282c9bd46db.png",
+      "verdict": "PASS",
+      "reason": "이름표가 가방에 달렸고 그곳을 만짐. 다른손 구겨진 종이번호표에 ID사진 없음.390px 두소품 구분.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "86e47153e92722b797b053fe21e986ffe4a6c2da8956748fbf8992a3226702bc",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "41",
+      "selectedBeat": 225,
+      "candidatePath": "/workspace/generated_images/exec-4b9d6d5e-1fad-4249-83a4-59af8405a2de.png",
+      "verdict": "PASS",
+      "reason": "밤 전략실 사진창을 진행창옆에 유지. 군용담요의 똑같은 붉은뒷면 화투7장, 노인정은 사진안.390px 수량/관계 읽힘, 임의진행값 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "d17a3240953104890e5b2c63f375cd8dfbb8345592f04e472f351666f088fa8d",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "43",
+      "selectedBeat": 90,
+      "candidatePath": "/workspace/generated_images/exec-5de9b721-f7c6-4cc7-9da0-f02f0acfb90d.png",
+      "verdict": "PASS",
+      "reason": "임의 검사값/의사문자/추세그래프 제거, 중립 추상블록. 폰확대손/집중시선390px 명확.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "b6a96ad9f4a816a68d4d6f434ac6d78123bb05a92ec5c1664e8c6f39cd59e570",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "44",
+      "selectedBeat": 92,
+      "candidatePath": "/workspace/generated_images/exec-47c6ec0b-13e9-4a00-9436-4d4391503ee2.png",
+      "verdict": "PASS",
+      "reason": "연우 얼굴크롭 손·서랍·얇은단말컷으로 백윤하복사 제거. 기존 연우 검은이너/푸른재킷·시계와 충돌없음.390px 동작 명확.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "4bafcd08c8510e0b28ede7f96b75dd49461311118e78f968729f939b14126700",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    }
+  ]
+}

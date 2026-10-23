@@ -5,6 +5,7 @@ import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {EP1_ASSETS} from './ep1-assets.js';
 import {EPISODE_CUTSCENES,withEpisodeCutscene,eventCutsceneDirection} from './episode-cutscenes.js';
+import {GENERATED_EPISODE_CUTSCENES} from './episode-generated-cutscenes.js';
 import {episodeOneDirection} from './episode-one.js';
 import {episodeTwoDirection} from './episode-two.js';
 import {episodeOneReadingPage} from './episode-one-reading.js';
@@ -13,9 +14,9 @@ const box={window:{}};vm.runInNewContext(await readFile(new URL('./story-data.js
 const chapter=id=>box.window.STORY.chapters.find(c=>c.id===id);
 const at=(id,i)=>id==='1'?episodeOneDirection(chapter(id),i):id==='2'?episodeTwoDirection(chapter(id),i):eventCutsceneDirection(chapter(id),i);
 
-test('56 event inserts cover the original 30 chapters plus the authorized 19–22 interludes and exact source actions',()=>{
-  assert.equal(EPISODE_CUTSCENES.length,56);
-  assert.deepEqual([...new Set(EPISODE_CUTSCENES.map(c=>c.chapter))],Array.from({length:30},(_,i)=>String(i+1)).concat(['19-1','20-1','21-1','22-1']));
+test('existing and accepted generated event inserts cover exact source actions',()=>{
+  assert.equal(EPISODE_CUTSCENES.length,56+GENERATED_EPISODE_CUTSCENES.length);
+  assert.deepEqual([...new Set(EPISODE_CUTSCENES.map(c=>c.chapter))],Array.from({length:30},(_,i)=>String(i+1)).concat(['19-1','20-1','21-1','22-1','32','35','36','37','38','39','40']));
   for(const cut of EPISODE_CUTSCENES){
     assert.equal(chapter(cut.chapter).beats[cut.start].text,cut.anchor);
     for(let i=cut.start;i<=cut.end;i++){
@@ -108,6 +109,7 @@ test('every selected drawing is distinct, packaged, and matches its recorded pro
   const teaser=JSON.parse(await readFile(new URL('./assets/teaser-style/provenance.json',import.meta.url),'utf8'));
   const parents=JSON.parse(await readFile(new URL('./assets/parent-style/provenance.json',import.meta.url),'utf8'));
   const sequence=JSON.parse(await readFile(new URL('../planning/ep019-022-sequence-20261023/provenance.json',import.meta.url),'utf8'));
+  const generated=JSON.parse(await readFile(new URL('../planning/vn-all-episode-events-20261023/production-provenance.json',import.meta.url),'utf8'));
   for(const cut of EPISODE_CUTSCENES){
     const path=EP1_ASSETS[cut.cg];
     if(path?.startsWith('assets/parent-style/')){
@@ -127,6 +129,11 @@ test('every selected drawing is distinct, packaged, and matches its recorded pro
       const asset=sequence.assets.find(item=>item.id===cut.cg&&item.format==='vn');assert.ok(asset,cut.cg);
       if(cut.cg==='ep19-b-preview') assert.equal(asset.encodedDimensions.join('x'),'1536x1024');
       else {assert.ok(!ids.has(asset.sha256),cut.cg);ids.add(asset.sha256);}
+      const bytes=await readFile(new URL('./'+path,import.meta.url));
+      assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);assert.equal(bytes.length,asset.bytes);
+      assert.equal(bytes.subarray(0,4).toString(),'RIFF');assert.equal(bytes.subarray(8,12).toString(),'WEBP');
+    }else if(path?.startsWith('assets/generated-events/')){
+      const asset=generated.assets.find(item=>item.id===cut.cg);assert.ok(asset,cut.cg);assert.equal(path,asset.encodedFile);
       const bytes=await readFile(new URL('./'+path,import.meta.url));
       assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);assert.equal(bytes.length,asset.bytes);
       assert.equal(bytes.subarray(0,4).toString(),'RIFF');assert.equal(bytes.subarray(8,12).toString(),'WEBP');

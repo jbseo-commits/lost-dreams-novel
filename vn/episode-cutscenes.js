@@ -1,6 +1,7 @@
+import { GENERATED_EPISODE_CUTSCENES } from './episode-generated-cutscenes.js?v=vn-all-events-20261023-r2';
 // Event inserts supplement the original text; they never add choices or change
 // its save coordinates. Exact source anchors prevent an insert drifting early.
-export const EPISODE_CUTSCENES = Object.freeze([
+const EXISTING_EPISODE_CUTSCENES = Object.freeze([
   {
     "chapter": "1",
     "start": 8,
@@ -548,6 +549,7 @@ export const EPISODE_CUTSCENES = Object.freeze([
   {"chapter":"21-1","start":82,"end":82,"cg":"ep21-1-landing","anchor":"은경은 발끝에 아직 닿아 있던 버팀대 끝을 디뎌 찼다. 둘이 한꺼번에 옥상 안쪽으로 굴렀다.","alt":"버팀대를 차고 노인과 함께 옆 건물 옥상 안쪽으로 구르는 은경","endAnchor":"은경은 발끝에 아직 닿아 있던 버팀대 끝을 디뎌 찼다. 둘이 한꺼번에 옥상 안쪽으로 굴렀다.","fingerprint":"7a3e6387","mobilePosition":"50% 50%"},
   {"chapter":"22-1","start":42,"end":42,"cg":"ep22-1-document","anchor":"“‘공공 의료 검증 지원 요청 시, 제4 검증층 예비 연산의 일시 전환은 인지안전실장 전결로 한다. 지연 한도 3시간. 사후 보고.’”","alt":"법무 이사가 의결 조항을 읽는 손과 종이에 모인 시선. 제안자 칸은 아직 드러나지 않는다.","endAnchor":"“‘공공 의료 검증 지원 요청 시, 제4 검증층 예비 연산의 일시 전환은 인지안전실장 전결로 한다. 지연 한도 3시간. 사후 보고.’”","fingerprint":"aee49191","mobilePosition":"50% 50%"}
 ].map(Object.freeze));
+export const EPISODE_CUTSCENES=Object.freeze([...EXISTING_EPISODE_CUTSCENES,...GENERATED_EPISODE_CUTSCENES]);
 
 const validatedCuts=new WeakMap();
 function matchingSource(chapter,insert){

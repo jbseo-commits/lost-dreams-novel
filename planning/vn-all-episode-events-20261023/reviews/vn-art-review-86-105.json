@@ -1,0 +1,1697 @@
+{
+  "status": "CHANGES",
+  "reviewer": "independent-art-reviewer",
+  "completedAt": "2026-10-23T09:00:20.969553+00:00",
+  "scope": "86–105 native original PNG and proportional390px-contained review; current VN prefix0..selected read completely for every chapter. Exact selected/FNV unchanged.",
+  "summary": {
+    "reviewed": 20,
+    "PASS": 11,
+    "CHANGES": 9,
+    "passChapters": [
+      "86",
+      "89",
+      "90",
+      "91",
+      "92",
+      "96",
+      "99",
+      "100",
+      "102",
+      "104",
+      "105"
+    ],
+    "changeChapters": [
+      "87",
+      "88",
+      "93",
+      "94",
+      "95",
+      "97",
+      "98",
+      "101",
+      "103"
+    ]
+  },
+  "results": [
+    {
+      "chapterId": "86",
+      "selectedBeat": 20,
+      "path": "/workspace/generated_images/exec-a896fcc9-3e14-4ac5-89d9-e56af6c0a927.png",
+      "sha256": "85955b5e9a1c8a9066b07369c777344b138e2d27ebaaf557b2cbea464d9fdcfc",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "클리닉 장부실에서 외투를 벗은 서인이 맞은편에 앉아 장부를 보는 행동이 명확하다.계산기·코트·한 페이지 두 비용 구획이 읽힌다.확실한 숫자/문구를 식별하지 못한 흐릿한 장부 흔적은 추상 표기로 허용했다.",
+      "source": {
+        "anchor": "서인은 맞은편 의자에 앉았다. 여자가 장부를 펼쳤다. 야간 대타 예비비와 약품 지원비가 같은 페이지에 있었다.",
+        "fingerprint": "6bbcf5e1",
+        "sourceStatus": "main-source-missing; held-source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": true,
+        "prefixSha256": "091c79df2d1d54736f7428ffda48e70675925ccde113895d09dfa2f473317cd1",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 20,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep86-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "목요일 새벽, 클리닉 지하 2층에서 키 큰 여자가 행정 단말 앞에 서 있었다. 그녀의 가방은 옆 의자에 놓여 있었다."
+        },
+        {
+          "beatIndex": 1,
+          "text": "서인은 외투를 벗어 빈 의자에 걸었다. 여자는 어젯밤 자정까지 채운 명단을 행정 단말 옆에 붙이고, 화면과 벽을 번갈아 보았다."
+        },
+        {
+          "beatIndex": 5,
+          "text": "벽시계가 여섯 시를 가리키자 여자가 자판에서 손을 뗐다. 아침 재동기화가 시작됐다."
+        },
+        {
+          "beatIndex": 6,
+          "text": "서인은 빨리 끝내자는 말을 하려다 말았다. 여자는 새벽 다섯 시 반에 와서 같은 창을 보고 있었다. 대신 개수대로 가 어제 남긴 만두 상자를 씻었다."
+        },
+        {
+          "beatIndex": 13,
+          "text": "여자가 화면을 가리켰다. 서인은 답장을 보내지 않고 씻은 상자를 뒤집어 놓았다. 사진 속 아이가 들고 있던 빵에는 한입 베어 문 자국이 있었다."
+        },
+        {
+          "beatIndex": 14,
+          "text": "재동기화가 끝났을 때 여자는 완료 기록을 내려받고서야 어깨를 내렸다."
+        },
+        {
+          "beatIndex": 18,
+          "text": "키 큰 여자는 기쁜 소식이 적힌 휴대폰을 한 번 보고, 계산기를 자기 앞으로 당겼다. 이번 달 운영 보조금에서 재동기화 비용을 뺀 잔액은 220 TOKEN이었다."
+        },
+        {
+          "beatIndex": 19,
+          "text": "“이제 이걸로 한 달을 버텨야 해요.”"
+        },
+        {
+          "beatIndex": 20,
+          "text": "서인은 맞은편 의자에 앉았다. 여자가 장부를 펼쳤다. 야간 대타 예비비와 약품 지원비가 같은 페이지에 있었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts.",
+      "adjudicationNote": "Native ledger crop additionally inspected in memory. Indistinct writing texture was not promoted to a claimed readable number; same standard as76."
+    },
+    {
+      "chapterId": "87",
+      "selectedBeat": 91,
+      "path": "/workspace/generated_images/exec-2e0d9ee8-9808-4460-9a77-23d687dc5baf.png",
+      "sha256": "ad4ac75edbfe535a0803972ffa489fe600e1e16eebbec06445def687e9ac68a4",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "메모와 두 사본을 함께 확인하는 행동은 맞지만 문해경의 머리색 비율이 반대다.원문14는 흰 머리가 주이고 검은 머리가 드문드문인데 원화는 검은 머리가 주이고 앞쪽 회색 한 줄이다.",
+      "source": {
+        "anchor": "서인은 엽서에서 손을 뗐다. 메모할 종이에 신청서와 등록 사본의 쪽수를 같이 적었다. 문해경은 그가 적은 두 쪽을 확인한 뒤에야 부엌으로 갔다.",
+        "fingerprint": "ef6cbb67",
+        "sourceStatus": "main-source-missing; held-source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": true,
+        "prefixSha256": "6f4e3b3f7eb81a73d7341f054ee756d92534bf1fd9dec17711d313b38f6338b2",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 91,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep87-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "문해경은 서인을 집 안으로 들이기 전에 현관에서 한 가지를 물었다."
+        },
+        {
+          "beatIndex": 4,
+          "text": "서인은 목요일 저녁에 받은 회신을 휴대폰에 띄웠다. 문해경이 보내 준 주소 아래에는 점심 뒤에 오세요. 보실 자료는 제가 꺼내 놓겠습니다.라고 적혀 있었다."
+        },
+        {
+          "beatIndex": 5,
+          "text": "금요일 점심을 먹지 않고 와서 배가 비어 있었다. 그는 현관에 선 채 공개 보고서 마지막 면담의 제목을 말했다."
+        },
+        {
+          "beatIndex": 9,
+          "text": "거실에는 등받이 없는 나무 의자 두 개와 탁자가 있었다. 의자 한쪽 모서리에 잘못 뚫었다가 메운 구멍이 남아 있었다. 서인은 앉기 전에 손가락으로 그 자리를 만졌다."
+        },
+        {
+          "beatIndex": 11,
+          "text": "문해경이 탁자 밑에서 얇은 서류함을 꺼냈다."
+        },
+        {
+          "beatIndex": 14,
+          "text": "문해경의 머리는 짧게 잘려 있었고, 흰 머리 사이에 검은 머리가 드문드문 남아 있었다."
+        },
+        {
+          "beatIndex": 15,
+          "text": "그녀가 탁자에 놓인 재생 기기를 켰다. 서인이 휴대폰을 옆에 놓자 화면을 한 번 내려다봤다."
+        },
+        {
+          "beatIndex": 72,
+          "text": "그녀가 서류함에서 엽서 한 장을 꺼냈다. 손바닥만 한 선반 사진 아래에 이번엔 벽에 거는 겁니다.라는 글이 있었다."
+        },
+        {
+          "beatIndex": 74,
+          "text": "서인은 엽서를 탁자에 둔 채, 상우의 복원 신청 옆으로 밀었다."
+        },
+        {
+          "beatIndex": 85,
+          "text": "서인은 그 밑에 손가락을 댔다. 문해경이 서류함을 닫으려 하자 종이 끝을 붙들었다."
+        },
+        {
+          "beatIndex": 89,
+          "text": "문해경은 서류함을 다시 열었다. 복원 신청을 먼저 꺼내려다가 서인의 손이 놓인 쪽을 봤다. 그가 누른 장 아래로 작업실 등록 사본을 함께 끼웠다."
+        },
+        {
+          "beatIndex": 90,
+          "text": "“그럼 이것까지. 엽서는 두고 가세요.”"
+        },
+        {
+          "beatIndex": 91,
+          "text": "서인은 엽서에서 손을 뗐다. 메모할 종이에 신청서와 등록 사본의 쪽수를 같이 적었다. 문해경은 그가 적은 두 쪽을 확인한 뒤에야 부엌으로 갔다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "문해경 머리색 비율",
+          "minimumCorrectionPrompt": "Preserve the room, repaired backless-chair context, Seo-in writing the two page references, the two source copies and the postcard left on the table. Correct ONLY Moon Haekyung hair to the source: a SHORT predominantly WHITE/grey head of hair with only a FEW scattered black strands, not mostly black hair with one grey streak. Keep her mature distinct face; do not substitute Seo-in mother or redesign the scene. No legible page numbers, writing or signatures."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "88",
+      "selectedBeat": 17,
+      "path": "/workspace/generated_images/exec-68663772-fad4-4475-a066-fe1f528cffbb.png",
+      "sha256": "8067c5ff8949f5b3355b24db020c27a12395329b0cb07da05db8297eb3e6456e",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "다은이 질문지를 꺼내 설명하는 행동과 아침 약국은 읽힌다.그러나 종이에 가짜 서양식 필기 문구가 선명하고 인쇄 서식 앞면처럼 보여 원문17의 뒷면 수기와 다르다.",
+      "source": {
+        "anchor": "다은은 가방에서 자기 종이를 꺼냈다. 같은 질문지 뒷면에 볼펜으로 여러 줄을 적어 왔다.",
+        "fingerprint": "812798d0",
+        "sourceStatus": "main-source-missing; held-source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": true,
+        "prefixSha256": "72092a6b88296c9c40c26efba1318488b7f5812e7da373bc771e7dc080e3b834",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 17,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep88-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 2,
+          "text": "토요일 아침, 다은은 서인에게 보낸 질문지 사진을 다시 보내지 않았다."
+        },
+        {
+          "beatIndex": 3,
+          "text": "“사진으로 보면 엄마가 왜 이걸 쓰려는지 몰라요. 그냥 와 주세요.”"
+        },
+        {
+          "beatIndex": 4,
+          "text": "서인은 문해경에게 받은 자료를 닫고 집을 나섰다. 정미경이 이사 간 세르젠 단지의 약국 앞에서 다은이 손을 흔들었다. 정미경은 유리문 안쪽 의자에 앉아 손목을 주무르고 있었다."
+        },
+        {
+          "beatIndex": 7,
+          "text": "다은이 그를 안으로 끌고 들어갔다."
+        },
+        {
+          "beatIndex": 8,
+          "text": "약국에는 공공 문진 보조 단말 옆에 새로 배치된 보조원이 있었다. 책상 위에 무료 접수 안내와 질문 양식이 겹쳐 놓여 있었다. 예전의 유료 대행 바코드는 보이지 않았다."
+        },
+        {
+          "beatIndex": 9,
+          "text": "정미경이 서인에게 일어나 인사하려다 그냥 앉았다."
+        },
+        {
+          "beatIndex": 11,
+          "text": "그녀가 검사 결과지를 내밀었다. 첫 판단은 당장의 응급 처치 없이 예정된 외래 진료를 받으라는 것이었다."
+        },
+        {
+          "beatIndex": 13,
+          "text": "문진 보조 단말이 만든 질문이 아래에 있었다."
+        },
+        {
+          "beatIndex": 17,
+          "text": "다은은 가방에서 자기 종이를 꺼냈다. 같은 질문지 뒷면에 볼펜으로 여러 줄을 적어 왔다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "질문지 뒷면/가짜 필기",
+          "minimumCorrectionPrompt": "Keep Daeun, Seo-in and her seated mother in the Saturday-morning pharmacy, showing the sheet just taken from her bag. Show the BACK of the same questionnaire: no printed front-side title/header/form layout showing through as front content. Remove every fake cursive/Latin/Korean character, digit and invented word. Suggest several handwritten lines ONLY as sparse non-character strokes of unequal lengths. Preserve paper grip and explanatory attention; no new medical result."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "89",
+      "selectedBeat": 8,
+      "path": "/workspace/generated_images/exec-3e8d2304-8158-43a0-9d85-90ded6c8449d.png",
+      "sha256": "cffe5b03aa3e7408ccdd870cafcd5ac496173da241fb969e6455c12d288116b5",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "메모를 들고 문서를 저장 목록에 넣는 서인,뒤에서 연결선을 빼는 직원,서류 수레가 분리되어 읽힌다.메모 아래 칸은 비어 있고 결과/문구를 굽지 않았다.",
+      "source": {
+        "anchor": "서인은 가져온 메모를 꺼냈다. 기간 연장 아래는 비어 있었다. 담당자가 옆 책상의 연결선을 뽑는 동안 서인은 문서들을 한꺼번에 저장 목록에 넣었다.",
+        "fingerprint": "b4d502cb",
+        "sourceStatus": "main-source-missing; held-source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": true,
+        "prefixSha256": "1fb6bdbc641726bb76cf82e85cda789562e7918a2aa9556df198e58eae225c1c",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 8,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep89-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "수요일, 서인이 시청 별관의 자료 열람실에 들어서자 직원이 빈 책상의 전원을 껐다. 서류 수레가 문에 바퀴 하나를 걸치고 있었다."
+        },
+        {
+          "beatIndex": 1,
+          "text": "지난 토요일 REASK-1의 인계 목록을 보내 준 담당자가 손짓했다."
+        },
+        {
+          "beatIndex": 2,
+          "text": "“오늘 기기를 옮겨요. 보실 자료부터 골라 주세요.”"
+        },
+        {
+          "beatIndex": 3,
+          "text": "서인은 오래된 비개입 사업 중 한 생활권의 7일 기록을 열었다."
+        },
+        {
+          "beatIndex": 5,
+          "text": "첫 첨부는 종료 평가였다. 서인은 시작 안내와 집행 문서를 함께 골랐다. 개인 AI 추천·광고꿈·야간 인지공급을 끄는 동안 생계와 기초 의료, 주거를 따로 보전했다는 조건이 붙었다."
+        },
+        {
+          "beatIndex": 6,
+          "text": "그다음 지출표에는 다른 구역의 야간 공급과 외부 예비 연산 비용이 있었다. 이의서 한 장이 그 밑에 붙었다."
+        },
+        {
+          "beatIndex": 8,
+          "text": "서인은 가져온 메모를 꺼냈다. 기간 연장 아래는 비어 있었다. 담당자가 옆 책상의 연결선을 뽑는 동안 서인은 문서들을 한꺼번에 저장 목록에 넣었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "90",
+      "selectedBeat": 47,
+      "path": "/workspace/generated_images/exec-32ffc2f5-cf12-44e0-ae0f-9f75f639d7e4.png",
+      "sha256": "3e1d7110760f7ca5923639e2d001ecbab1e9111d26200fb3eb1e464e99397352",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "서인이 크림빵을 둘로 나누고 도윤이 빈 봉지로 받아 종이를 지키는 협동이390px에서 명확하다.도윤은 기존 얼굴·짧은 머리로 서인과 구별된다.손가락에 묻은 크림의 세부보다 빵/봉지/종이의 인과가 보존되어 이 부분 추가 재작화는 요구하지 않는다.",
+      "source": {
+        "anchor": "서인은 봉지에서 빵을 꺼내 둘로 갈랐다. 크림이 손가락에 묻어 접수 종이로 떨어지려 했다. 도윤이 봉지의 빈 쪽을 펼쳐 받쳤다.",
+        "fingerprint": "3b663cd2",
+        "sourceStatus": "main-source-missing; held-source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": true,
+        "prefixSha256": "f2ca60ef22ecb5ff8bdc7d109c834366703019ebea1bb9318c5f499a3b5d8c0b",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 47,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep90-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "다음 날 목요일 저녁, 서인이 클리닉 지하 2층 장부실로 내려오자 키 큰 여자가 접수 종이를 들고 기다리고 있었다."
+        },
+        {
+          "beatIndex": 19,
+          "text": "서인이 말했다. 여자는 외투를 입던 손을 멈췄다."
+        },
+        {
+          "beatIndex": 21,
+          "text": "서인은 자기 이름 옆의 시간을 다시 읽었다. 여자는 그가 확인한 뒤에야 접수 종이를 놓고 나갔다."
+        },
+        {
+          "beatIndex": 33,
+          "text": "서인은 재생을 더 누르지 않고 금요일 접수 종이를 그 옆에 놓았다."
+        },
+        {
+          "beatIndex": 34,
+          "text": "도윤이 내려왔다. 문 옆에 서서 탁자를 한 번 보더니 벽에 기대어 둔 접이식 의자를 폈다. 들고 온 빵 봉지는 무릎에 올렸다."
+        },
+        {
+          "beatIndex": 35,
+          "text": "“저녁 안 먹었지.”"
+        },
+        {
+          "beatIndex": 36,
+          "text": "서인이 화면을 돌렸다."
+        },
+        {
+          "beatIndex": 42,
+          "text": "서인은 결과표 위로 사업 이름을 올렸다. 생계 분리, 문해경의 30일, REASK-1, 비개입 주간. 도윤은 화면을 넘기는 그의 손을 보았다."
+        },
+        {
+          "beatIndex": 44,
+          "text": "문해경의 공개 보고서 옆에는 서인이 따로 받은 면담 목록이 있었다. 개별 면담은 열지 않았다. 도윤이 목록 쪽을 가리켰다."
+        },
+        {
+          "beatIndex": 46,
+          "text": "“찾아갔어요. 오상우 씨 의자에 앉아 봤어요.”"
+        },
+        {
+          "beatIndex": 47,
+          "text": "서인은 봉지에서 빵을 꺼내 둘로 갈랐다. 크림이 손가락에 묻어 접수 종이로 떨어지려 했다. 도윤이 봉지의 빈 쪽을 펼쳐 받쳤다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts.",
+      "nonblockingNote": "Cream drip/finger contact differs in tiny detail; shared bread-and-bag action is clear. No redraw requested solely for that detail."
+    },
+    {
+      "chapterId": "91",
+      "selectedBeat": 100,
+      "path": "/workspace/generated_images/exec-1f77f8b0-40f4-4bfc-882b-b83742568596.png",
+      "sha256": "55f182267752c74c36f929b777349902234bf44b99b99c83646065602900b04f",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "펜을 내려놓은 서인 앞에서 우석이 종이를 가져가는 현재 행동이 읽힌다.집게는 따로 떨어져 있고 문서 칸은 비어 있으며 금액/이름을 원화에 굽지 않았다.",
+      "source": {
+        "anchor": "서인은 빈칸 앞에 얼마를 적었다가 펜을 놓았다. 우석이 그 종이를 가져갔다.",
+        "fingerprint": "b3f0f137",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "c89dfd81cc3a941b397760a890747f78924b92f1bfb9cf1117c1f3173744d873",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 100,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep91-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 1,
+          "text": "금요일 오후, 서인이 상담실에서 나오자 처음 보는 남자가 복도 벽에 안내문을 대고 있었다. 테이프 한쪽은 이미 붙었다."
+        },
+        {
+          "beatIndex": 21,
+          "text": "설명회는 저녁이었다. 아직 반밖에 붙지 않은 안내문을 떼어 들고 지하 2층 장부실로 내려갔다. 우석은 구겨진 귀퉁이를 탁자 모서리에 눌러 폈다."
+        },
+        {
+          "beatIndex": 28,
+          "text": "우석이 참가 의향서를 폈다. 이름과 연락처 아래에 참여하겠습니다가 있었다."
+        },
+        {
+          "beatIndex": 70,
+          "text": "우석은 자기 의향서를 뒤집었다. 뒷면은 비어 있었다."
+        },
+        {
+          "beatIndex": 92,
+          "text": "서인은 종료일을 찾던 손을 거뒀다. 우석이 집게로 묶어 둔 참가 의향서를 자기 앞으로 가져왔다."
+        },
+        {
+          "beatIndex": 97,
+          "text": "우석은 바로 대답하지 않았다. 안내문과 의향서를 나란히 놓더니 집게를 뺐다."
+        },
+        {
+          "beatIndex": 98,
+          "text": "“이대로는 못 받겠네요.”"
+        },
+        {
+          "beatIndex": 99,
+          "text": "서인은 참여하겠습니다에 줄을 그었다."
+        },
+        {
+          "beatIndex": 100,
+          "text": "서인은 빈칸 앞에 얼마를 적었다가 펜을 놓았다. 우석이 그 종이를 가져갔다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "92",
+      "selectedBeat": 2,
+      "path": "/workspace/generated_images/exec-f2ad26c8-2fcb-4644-9972-58e2934918af.png",
+      "sha256": "3b6deb6ff6d3610c816135fed76f1f8dbb381ca987d1c8770b7e020436c7b42a",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "status": "PASS",
+      "assessment": "상담실의 폐지 더미에서 한 장을 찾아 읽는 서인이 보인다.밤과 종이·의자 배치가 맞고 첫해 기록의 내용을 미래 결과로 바꾸거나 가짜 문구로 넣지 않았다.",
+      "source": {
+        "anchor": "서인이 그 종이를 집었다. 배당을 받으며 야간 연결을 쉬었던 사람들의 첫해 기록이었다.",
+        "fingerprint": "584c4987",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "17a2cccef2e520e8010b184ed0e08afc8e2d7c4f3d1eb59c283a0abb22970762",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 2,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep92-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "“그 장은 왜 빼요.”"
+        },
+        {
+          "beatIndex": 1,
+          "text": "금요일 밤, 설명회가 끝난 상담실에서 우석이 출력물을 다시 세고 있었다. 의자 밑에 떨어진 한 장을 주웠다가 폐지 더미에 놓았다."
+        },
+        {
+          "beatIndex": 2,
+          "text": "서인이 그 종이를 집었다. 배당을 받으며 야간 연결을 쉬었던 사람들의 첫해 기록이었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "93",
+      "selectedBeat": 16,
+      "path": "/workspace/generated_images/exec-76c662ae-514a-4ef5-9980-557a4334e7f8.png",
+      "sha256": "b4eba3b1840a7a96d42812be0e18532df0a21eca21eb8385e45b894fe51061e7",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "어머니가 펜 뚜껑을 닫는 행동은 읽힌다.딸은9에서 휴대폰을 주머니에 넣었는데16 원화에서 외투와 함께 다시 손에 들고 있다.벽에서 등을 뗀 반응도 여전히 기댄 포즈로 약해졌다.",
+      "source": {
+        "anchor": "서인이 고개를 끄덕이자 여자는 볼펜 뚜껑을 닫았다. 딸은 그 소리가 나고서야 문 옆의 벽에서 등을 뗐다.",
+        "fingerprint": "36165e94",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "bc62905b61e663bd04b8a83138bdc090cbc7fbc38365f6e08af518a7cbdd5344",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 16,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep93-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "“제가 받는 돈이면 제 이름을 쓰는 거 아니에요?”"
+        },
+        {
+          "beatIndex": 1,
+          "text": "토요일 아침, 클리닉 위층 상담실에서 여자가 볼펜을 내밀었다. 서인은 접수지 위의 이름을 가리켰다. 딸의 것이었다."
+        },
+        {
+          "beatIndex": 2,
+          "text": "딸은 의자에 앉지 않고 문 옆에 서 있었다. 한 손에는 휴대폰, 다른 손에는 접힌 외투가 들려 있었다."
+        },
+        {
+          "beatIndex": 6,
+          "text": "여자는 안다고 하면서도 볼펜을 거두지 않았다. 딸을 보지 않고 접수지의 마지막 장을 넘겼다."
+        },
+        {
+          "beatIndex": 9,
+          "text": "딸이 휴대폰을 주머니에 넣었다. 하지만 앉지는 않았다."
+        },
+        {
+          "beatIndex": 10,
+          "text": "“나 오늘은 들어 보기만 한다고 했잖아.”"
+        },
+        {
+          "beatIndex": 14,
+          "text": "서인은 접수지를 자기 앞으로 당겼다. 여자의 손이 종이 끝을 놓지 않았다."
+        },
+        {
+          "beatIndex": 15,
+          "text": "“저한테 들을 말이 있는 거죠. 얘 말고요.”"
+        },
+        {
+          "beatIndex": 16,
+          "text": "서인이 고개를 끄덕이자 여자는 볼펜 뚜껑을 닫았다. 딸은 그 소리가 나고서야 문 옆의 벽에서 등을 뗐다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "휴대폰을 넣은 뒤 다시 손에 듦",
+          "minimumCorrectionPrompt": "Keep the mother finishing capping her pen and Seo-in looking toward the daughter. The daughter put the PHONE IN HER POCKET at beat9: remove it from her visible hand. She still holds the folded coat. Move her shoulders slightly off the doorway wall to show that the cap-click has just allowed her to stop leaning, without seating her or making her leave. No new words, signature or consent."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "94",
+      "selectedBeat": 18,
+      "path": "/workspace/generated_images/exec-a2a664b9-db44-40c6-965d-dce54f187ccc.png",
+      "sha256": "08fd1a9fc37cace654abec379a3ea02864159ac5578a941078ca3c560f6f05a2",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "종이를 돌려주고 다음 장소를 확인하는 행동은 보이나 수령자/전화기 확인자가 우석이 아니라 기존 회색 후드의 도윤으로 그려졌다.우석은 앞쪽의 다른 남자로 남아 있다.",
+      "source": {
+        "anchor": "서인이 종이를 돌려줬다. 우석은 취소할 연락처 대신 약속 장소를 열었다.",
+        "fingerprint": "1d7fb257",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "30e3b67f5a2151d411a5303617c3a0e596b7e76b35f2d132c37945f807cf96af",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 18,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep94-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 1,
+          "text": "토요일 오후, 우석이 클리닉 탁자 위의 종이를 거두려 했다. 도윤은 아직 마지막 장을 읽고 있었다."
+        },
+        {
+          "beatIndex": 4,
+          "text": "우석의 새 제안에는 서비스 이름보다 사람들이 전에 고른 이유가 먼저 있었다. 조건이 달라진 경우 그 부분만 다시 보자는 것이었다. 지난밤 원문 목록을 받았던 사람들의 질문을 정리하다가 따로 만들었다."
+        },
+        {
+          "beatIndex": 7,
+          "text": "우석이 서인에게 모아 둔 종이를 밀었다. 시장의 몇 사람에게 질문을 보여 주기로 한 건 그날 저녁이었다."
+        },
+        {
+          "beatIndex": 9,
+          "text": "하경은 탁자 끝에서 병에 든 펜을 빼고 있었다. 누구도 우석의 종이를 받지 않았다. 도윤이 다음 파일을 찾으려고 화면을 넘겼다."
+        },
+        {
+          "beatIndex": 10,
+          "text": "서인은 맨 위에 있던 질문지를 집었다."
+        },
+        {
+          "beatIndex": 14,
+          "text": "서인은 그 줄을 접었다. 아래에는 이전에 켰던 이유와 지금 달라진 일이 비어 있었다."
+        },
+        {
+          "beatIndex": 16,
+          "text": "우석은 도윤을 봤다. 도윤은 아직 우석이 처음 내민 질문지를 보고 있었다. 서인이 접힌 첫 줄을 펴자 그가 자료를 옆으로 치웠다."
+        },
+        {
+          "beatIndex": 17,
+          "text": "“일단 가 봐요. 보여 주기로 했잖아요.”"
+        },
+        {
+          "beatIndex": 18,
+          "text": "서인이 종이를 돌려줬다. 우석은 취소할 연락처 대신 약속 장소를 열었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "우석/도윤 수령자 역전",
+          "minimumCorrectionPrompt": "Preserve Seo-in returning the sheet, but make WOOSЕOK the recipient and the man opening the agreed MEETING LOCATION on HIS phone. Doyun, whose identity is the short dark-haired lightly stubbled man, remains a different observer; he must NOT be the man simultaneously accepting Seo-in paper and checking the next location. Keep the source clinic table and afternoon, no shared identity, no phone labels or future meeting result. Distinguish Wooseok own face/hair/silhouette from canonical Doyun; reference clothes are not source wardrobe."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts.",
+      "identityComparisonReference": "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/doyun-canonical.webp"
+    },
+    {
+      "chapterId": "95",
+      "selectedBeat": 20,
+      "path": "/workspace/generated_images/exec-e7df8c51-3de5-4884-88a5-356697282725.png",
+      "sha256": "bbc2b88dce46cbdd26a81378841225582f6d7c17606214b02454a9e0816adfcd",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "우석이 일어나고 서인이 빈 의자를 밀어주는 구도는 읽힌다.그러나 통화하는 우석이 직전94 및 확정 원화 도윤의 검은 머리·회색 후드 인물 실루엣으로 이어져 두 인물이 섞여 보인다.새 조연 얼굴 자체가 아닌 기존 도윤 복제/혼동을 문제로 판단했다.",
+      "source": {
+        "anchor": "우석이 자기 휴대폰을 집어 들고 일어났다. 서인은 그를 붙들지 않고 빈 의자를 발로 밀어 줬다. 통화가 끝날 때까지 도윤도 자료를 넘기지 않았다.",
+        "fingerprint": "7b19b226",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "0f2abc36f2681b517751dea128ec16f6c0e90b68443e921be1b104e720ff3fdc",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 20,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep95-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "우석이 다음 약속을 잡으려는데 도윤의 휴대폰부터 탁자 가운데로 왔다."
+        },
+        {
+          "beatIndex": 1,
+          "text": "일요일 오전, 클리닉 지하 2층 장부실이었다. TOKEN 쪽 남자가 의자를 당겨 앉으며 화면을 가리켰다."
+        },
+        {
+          "beatIndex": 3,
+          "text": "우석은 자기 휴대폰의 통화 목록을 닫았다. 서인은 자기 의자 옆에 서 있던 우석에게 앉으라고 했다."
+        },
+        {
+          "beatIndex": 7,
+          "text": "우석이 문 쪽으로 몸을 돌렸다. 남자가 옛 자료를 더 확대했다."
+        },
+        {
+          "beatIndex": 9,
+          "text": "우석은 문고리에서 손을 뗐다. 상대가 보낸 연락을 다시 열었다. 가게가 잠깐 한가하다는 말이 있었다. 우석이 입을 열려는데 도윤이 앞의 질문과 뒤의 질문을 나란히 놓았다."
+        },
+        {
+          "beatIndex": 13,
+          "text": "도윤은 열린 자료를 읽고 있었다. 우석이 전화기를 든 채 그가 넘기는 화면을 봤다. 도윤은 마지막 쪽에 손을 멈췄다."
+        },
+        {
+          "beatIndex": 15,
+          "text": "우석은 자기 휴대폰에서 보관 사진을 열어 도윤의 화면 옆에 놓았다. 처음 켠 이유와 지금 달라진 일이 나란히 있었다. 수선집 이름과 주인 이름은 없었다."
+        },
+        {
+          "beatIndex": 17,
+          "text": "도윤이 앞의 질문으로 돌아갔다."
+        },
+        {
+          "beatIndex": 19,
+          "text": "“그럼 이거 보고 연락드리면 늦어요. 지금 시간이 된다고 하셨어요.”"
+        },
+        {
+          "beatIndex": 20,
+          "text": "우석이 자기 휴대폰을 집어 들고 일어났다. 서인은 그를 붙들지 않고 빈 의자를 발로 밀어 줬다. 통화가 끝날 때까지 도윤도 자료를 넘기지 않았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "우석이 회색 후드 도윤으로 보임",
+          "minimumCorrectionPrompt": "Keep the source Sunday-morning ledger room, standing WOOSЕOK contacting the person who is available NOW, seated Seo-in letting him go and moving an empty chair with his foot, and Doyun PAUSING his reading until the call ends. Give Wooseok his OWN recognizably distinct face/hair/silhouette, consistent with the other Wooseok cuts, instead of reusing the canonical short-haired, lightly stubbled, grey-hoodie Doyun actor. Doyun remains the OTHER seated reader. Do not solve actor confusion only by swapping names/captions; no screen words/digits or unsupported source fact."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts.",
+      "identityComparisonReference": "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/doyun-canonical.webp"
+    },
+    {
+      "chapterId": "96",
+      "selectedBeat": 11,
+      "path": "/workspace/generated_images/exec-b38fb9ad-c51a-4c70-bfd6-4995afa2eaab.png",
+      "sha256": "74810fa20cd9575f65f565b017eb546365aeb16e353be1a5a6e6d21a624a44e8",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "손님이 종이를 뒤집어 아무 결과 없는 뒷면을 보는 행동과 서인의 반응이 명확하다.미실행안의 결과를 새로 만들지 않고 빈 뒤면을 보존했다.",
+      "source": {
+        "anchor": "서인이 말했다. 손님이 종이를 뒤집었다. 뒷면에는 이어지는 결과가 없었다.",
+        "fingerprint": "693ce606",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "d26de1086826201b88012d394886cd5ebd1133bc10437f257b7c55dca36edc65",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 11,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep96-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 1,
+          "text": "일요일 낮, 클리닉 지하 2층 장부실에서 손님이 종이를 서인 쪽으로 밀었다. 금요일 밤 공개 원문을 요구했던 사람이었다. 배당을 거절한 기록은 아직 찾지 못했다. 대신 관련 목록에 있던 미실행 제안을 함께 읽고 있었다."
+        },
+        {
+          "beatIndex": 3,
+          "text": "광고꿈을 중단한 뒤 30일 동안 복귀를 받지 않는 안이었다. 생활을 보전하고, 끝나면 모든 선택을 다시 열어 둔다고 적혀 있었다."
+        },
+        {
+          "beatIndex": 7,
+          "text": "도윤이 옆에서 읽던 문서를 손님에게 돌렸다. 손님은 비용 보전 조항을 다시 확인했다. 그리고 문서 끝의 표시를 읽었다."
+        },
+        {
+          "beatIndex": 8,
+          "text": "NOT EXECUTED."
+        },
+        {
+          "beatIndex": 9,
+          "text": "“안 했어요?”"
+        },
+        {
+          "beatIndex": 10,
+          "text": "“모집 전에 멈춘 제안입니다. 지금 지원을 해 드리는 안도 아니고요.”"
+        },
+        {
+          "beatIndex": 11,
+          "text": "서인이 말했다. 손님이 종이를 뒤집었다. 뒷면에는 이어지는 결과가 없었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "97",
+      "selectedBeat": 23,
+      "path": "/workspace/generated_images/exec-7e481a15-1814-4d5b-9b9c-6be4a7a8e76e.png",
+      "sha256": "ca6ff7d858d72e4547ea22de5607aa17158ef4f368b6cbca0bd43bba05b9caff",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "연습지로 휴대폰을 덮는 물성은 맞다.하지만 서인이 여전히 펜을 들고 종이에 대고 있고 다은은 그 자리를 가리켜 공동 작성처럼 보인다.앵커의 핵심인 더 쓰기를 멈추고 펜을 내려놓는 반응이 읽히지 않는다.",
+      "source": {
+        "anchor": "다은은 연습지를 휴대폰 위에 엎어 덮었다. 서인이 더 적으려고 든 펜 끝이 종이 뒤에 닿았다. 그는 그 펜을 내려놓았다.",
+        "fingerprint": "8f6351cf",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "2547ad0383f2e1ace704be5f8c9e1fafe44d3e75705d839007ed2fd0e2f0f0b3",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 23,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep97-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 1,
+          "text": "월요일 오후, 세르젠 단지 약국 앞에서 다은이 휴대폰을 내밀었다. 서인은 유리문 안쪽을 봤다. 정미경이 접수 사본을 펴 놓고 보조원과 이야기하고 있었다."
+        },
+        {
+          "beatIndex": 6,
+          "text": "서인은 다은이 들고 있는 신발주머니를 봤다. 휴대폰에서는 친구의 연락이 연달아 왔다. 다은은 답하지 않고 문장만 위로 올렸다."
+        },
+        {
+          "beatIndex": 9,
+          "text": "약국 문이 열렸다. 다은이 몸을 돌렸지만 다른 손님이었다. 다시 화면을 보며 입술을 교정기 위로 오므렸다."
+        },
+        {
+          "beatIndex": 15,
+          "text": "다은이 휴대폰을 주머니에 넣었다. 신발주머니 손잡이를 손목까지 올리고 약국 안을 들여다봤다."
+        },
+        {
+          "beatIndex": 16,
+          "text": "다은이 다시 휴대폰을 내밀었다."
+        },
+        {
+          "beatIndex": 18,
+          "text": "서인은 문장을 읽고 빈 연습지에 짧게 적었다. 진료를 받는 동안 기다렸다가 일정을 정하겠다는 말이었다. 다은이 신발주머니에서 연필을 꺼내 그 줄 아래에 선을 그었다."
+        },
+        {
+          "beatIndex": 19,
+          "text": "“오늘 진료 받는 거 아닌데요.”"
+        },
+        {
+          "beatIndex": 20,
+          "text": "서인은 안쪽의 접수 사본을 봤다. 알고 있던 일이었다. 기다릴 끝을 먼저 정하려다 받지도 않을 진료를 문장에 넣었다."
+        },
+        {
+          "beatIndex": 21,
+          "text": "“그럼 확인 끝나면.”"
+        },
+        {
+          "beatIndex": 22,
+          "text": "“친구들은 지금 기다리고 있잖아요.”"
+        },
+        {
+          "beatIndex": 23,
+          "text": "다은은 연습지를 휴대폰 위에 엎어 덮었다. 서인이 더 적으려고 든 펜 끝이 종이 뒤에 닿았다. 그는 그 펜을 내려놓았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "덮기로 쓰기를 멈추는 핵심 반응",
+          "minimumCorrectionPrompt": "Keep Daeun holding the practice sheet FACE DOWN over the PHONE, shoe bag at her wrist, and the pharmacy entrance. Seo-in has now STOPPED adding a better sentence: put his pen DOWN on the nearby surface and withdraw/relax his writing hand. Do not show pen touching the paper while Daeun points at it as if collaborating on another draft. Her hand can hold the cover flat. Preserve hesitation/frustration rather than agreement, no text/digits or completed message."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "98",
+      "selectedBeat": 19,
+      "path": "/workspace/generated_images/exec-abb52d29-b5b9-47b0-ac1c-bd69b1468c8c.png",
+      "sha256": "1cc9da56a3d504fb1e2f5545d4e06201713936d54dc58b6c832cb546790f8e97",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "승인자4의 휴대폰 인계,의료/운송 두 원과 이어지는 선은 맞다.그러나8에서 의자 등에 걸어 둔 외투를 원화에서는 여자가 입고 있다.",
+      "source": {
+        "anchor": "여자의 외투에서 짧은 진동이 울렸다. 그녀가 휴대폰을 서인에게 건넸다.",
+        "fingerprint": "6920469",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "8e14da912baf89dcfa3a59f69440757bee10c103209602ec6df6d5e3c45be2be",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 19,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep98-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "“오늘은 이만큼만 보여 드릴 수 있습니다.”"
+        },
+        {
+          "beatIndex": 1,
+          "text": "월요일 저녁, 클리닉 위층 상담실에서 승인자 4가 휴대폰을 멈췄다. 지나간 날의 운용 기록이었다. 서인은 지금 무엇을 조작하는 자리가 아니라는 설명을 듣고도 화면 가까이 몸을 당겼다."
+        },
+        {
+          "beatIndex": 5,
+          "text": "여자는 넘기지 않고 기다렸다. 서인은 손을 뗐다."
+        },
+        {
+          "beatIndex": 7,
+          "text": "그녀가 말했다. 서인이 마지막 질문을 보낸 것은 어제였다. 만나자는 회신은 오늘 왔다. 하경에게 방을 비워 둘 수 있는지 확인한 뒤에야 서인은 위층으로 올라왔다."
+        },
+        {
+          "beatIndex": 8,
+          "text": "하경이 문을 닫기 전에 방을 다시 써야 하는 때를 알려 줬다. 여자는 그때까지만 있겠다고 했다. 외투는 의자 등에 걸었다. 노인정에 왔던 날처럼 손 닿는 곳이었다. 서인은 자기 휴대폰과 인쇄한 종이를 탁자 위에 놓았다. 과거의 미실행안과 자기 개인 메모를 따로 뽑아 왔지만 먼저 내밀지는 않았다."
+        },
+        {
+          "beatIndex": 12,
+          "text": "여자가 다음 기록을 열었다. 인간 참조를 새로 받지 못하는 항목이 있었다. 아직 처리할 수 있는 일들은 계속 넘어갔다."
+        },
+        {
+          "beatIndex": 13,
+          "text": "서인은 빈 구간이 끝나는 곳을 눌렀다."
+        },
+        {
+          "beatIndex": 16,
+          "text": "그가 말했다. 승인자 4는 그날 우선 처리를 검토했던 부분을 열어 줬다. 앞줄로 당겨진 요청 아래에서 다른 요청이 밀려났다."
+        },
+        {
+          "beatIndex": 17,
+          "text": "서인은 의료를 남기고 운송 쪽을 닫았다. 그런데 다음에 열었던 치료 판단이 아직 끝나지 않은 운송 판단을 기다리고 있었다. 그는 방금 닫은 쪽을 다시 폈다. 다음 처리를 위한 운송 요청이었다. 분류는 달랐지만 의료가 기다리는 항목이었다."
+        },
+        {
+          "beatIndex": 18,
+          "text": "그가 펜으로 두 항목을 따로 둘렀다. 원 밖으로 연결선이 나갔다. 의료라는 원 안에 써 넣은 것만으로 선이 끝나지는 않았다."
+        },
+        {
+          "beatIndex": 19,
+          "text": "여자의 외투에서 짧은 진동이 울렸다. 그녀가 휴대폰을 서인에게 건넸다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "벗은 외투를 입고 있음",
+          "minimumCorrectionPrompt": "Preserve Approver4 handing the phone to Seo-in, the two separately circled printed items with a connecting line continuing outside, and evening counseling room. She removed her OUTER COAT at beat8: take the coat OFF her body and hang it over the nearby chair back within reach. Keep her own adult identity/clothes underneath, not a new person. No live network shutdown, phone labels, medical outcome or baked prose."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "99",
+      "selectedBeat": 14,
+      "path": "/workspace/generated_images/exec-feff95f9-4b73-4155-8ead-834e0779deec.png",
+      "sha256": "776c014d4da865e0b4b578a19405f84d04a71895ec54ef77e4ab66ee1361f877",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "서인이 옛 문서를 먼저 접고 우석이 현재 초안으로 시선을 돌리는 두 행동이 읽힌다.종이에 확정 문구나 숫자,동의/실행 결과를 더하지 않았다.",
+      "source": {
+        "anchor": "서인이 말했다. 그는 옛 문서를 먼저 접었다. 우석은 서인의 글로 돌아와 첫 장부터 다시 읽었다.",
+        "fingerprint": "f90d1cdb",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "1484de5529dd3c7107cf8a06ebeafa9e589a34762c3eaba2ae24e5ad441a26f0",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 14,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep99-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "“저는 이걸 설명하러 못 가요.”"
+        },
+        {
+          "beatIndex": 1,
+          "text": "화요일 오후, 우석이 클리닉 지하 2층 장부실에서 휴대폰을 내려놓았다. 서인은 그 앞에 펼친 개인 초안을 당기지 않았다. 읽어 달라고 한 것은 서인이었다."
+        },
+        {
+          "beatIndex": 4,
+          "text": "서인은 마지막 장을 넘겼다."
+        },
+        {
+          "beatIndex": 5,
+          "text": "30일 후 전 서비스 자유 재선택."
+        },
+        {
+          "beatIndex": 8,
+          "text": "서인이 펼친 두 장 사이로 새로 붙인 안전 조건이 보였다. 전날 승인자 4를 만난 뒤 쓴 것이었다."
+        },
+        {
+          "beatIndex": 9,
+          "text": "공공 위험 발생 시 즉시 복구."
+        },
+        {
+          "beatIndex": 10,
+          "text": "우석이 두 줄을 번갈아 읽었다."
+        },
+        {
+          "beatIndex": 12,
+          "text": "서인은 도윤에게 받은 미실행안을 옆에 놓았다. 자기 글씨가 아닌 검토 의견이 붙어 있었다. 우석은 그 문서로 눈을 옮기지 않았다."
+        },
+        {
+          "beatIndex": 13,
+          "text": "“제가 읽어 달라고 한 건 이 안이에요.”"
+        },
+        {
+          "beatIndex": 14,
+          "text": "서인이 말했다. 그는 옛 문서를 먼저 접었다. 우석은 서인의 글로 돌아와 첫 장부터 다시 읽었다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "100",
+      "selectedBeat": 0,
+      "path": "/workspace/generated_images/exec-e467509b-3dd8-4ef9-a922-0876c150530c.png",
+      "sha256": "440970d2f1d12218dd4cc9e2a2aeb36790ef675cae7d523f4b17b43aeda77f54",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "status": "PASS",
+      "assessment": "탁자에 내려놓는 펜과 손을 근접해 보여 한 줄뿐인 허용 원문의 행동이 읽힌다.얼굴·정확한 장소·시간·반응을 새로 주장하지 않는다.수트 소매만으로 다른 인물이라고 확정할 수 없어 배우 오류로 탈락시키지 않았다.",
+      "source": {
+        "anchor": "도윤은 서인의 펜을 집었다가 탁자에 내려놓았다.",
+        "fingerprint": "d7f0ba8e",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "94cc3c8b7691234f4555fb6aeb04b799a4d24ab1160a87e15f81e414479ade95",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 0,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep100-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "도윤은 서인의 펜을 집었다가 탁자에 내려놓았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts.",
+      "nonblockingNote": "Allowed prefix has only beat0. No additional scene/time/person reaction inferred from later source. Cropped sleeve alone cannot establish wrong actor."
+    },
+    {
+      "chapterId": "101",
+      "selectedBeat": 13,
+      "path": "/workspace/generated_images/exec-12df5bd4-7c2a-416a-a051-0133beb238d5.png",
+      "sha256": "98c028e8141b3523cd387bcbb244a7bad4f4eb65fb1fdb40b9ae80f4cf8d278d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "세 연락의 답을 보여주는 폰은 읽히나 소유자/행동 주체가 반대다.13에서는 우석이 자기 휴대폰의 이름을 서인에게 보여주는데 원화는 서인이 폰을 들고 우석에게 보여 준다.",
+      "source": {
+        "anchor": "우석이 자기 휴대폰을 꺼냈다. 인지해방 쪽에서 일하는 이소현과 생활 상담을 다니는 최나경에게 오늘 글을 읽을 시간이 있는지 물었다. TOKEN 쪽 남자에게도 연락했다. 각자 답이 온 뒤 서인에게 이름을 보여 줬다.",
+        "fingerprint": "67cd7bd",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "19afefce10db2ad124e62c94126432e07bc8d507463d228711a7c2874506af86",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 13,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep101-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 1,
+          "text": "수요일 오후, 우석이 클리닉 지하 2층 장부실에서 서인의 휴대폰을 밀어 돌려줬다. 화면에는 수신자가 아직 없었다. 서인은 어젯밤 집에 가져갔던 두 장을 우석 앞에 폈다."
+        },
+        {
+          "beatIndex": 5,
+          "text": "우석은 자기가 고쳤던 지원 창구 항목을 지나 마지막 장을 읽었다. 중간에 돌아가고 싶다는 요청은 여전히 받지 않는다고 돼 있었다."
+        },
+        {
+          "beatIndex": 9,
+          "text": "서인은 참고목록을 보여 줬다. RESELECT WINDOW는 없었다. 자료 파일도 개인 초안 하나뿐이었다. 일요일에 왔던 사람과 나눈 통화 메모는 자기 가방에 남겨 뒀다."
+        },
+        {
+          "beatIndex": 10,
+          "text": "우석이 첫 장을 다시 봤다. 검토자 칸은 비어 있었다. 그 아래에는 서인이 받아 적은 도윤의 반대 의견이 있었다."
+        },
+        {
+          "beatIndex": 11,
+          "text": "“이것도 보낼 거죠?”"
+        },
+        {
+          "beatIndex": 12,
+          "text": "“네. 서명한 건 아니라고 쓰고요.”"
+        },
+        {
+          "beatIndex": 13,
+          "text": "우석이 자기 휴대폰을 꺼냈다. 인지해방 쪽에서 일하는 이소현과 생활 상담을 다니는 최나경에게 오늘 글을 읽을 시간이 있는지 물었다. TOKEN 쪽 남자에게도 연락했다. 각자 답이 온 뒤 서인에게 이름을 보여 줬다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "휴대폰을 보여 주는 주체 역전",
+          "minimumCorrectionPrompt": "Preserve the Wednesday-afternoon ledger room and three reply/contact entries as understated abstract UI. WOOSЕOK holds HIS OWN phone and shows the replies/names TOWARD SEO-IN. Seo-in is the viewer, not the presenter holding/pointing his own phone toward Wooseok. Use distinct actor identities and correct hand ownership. No readable names, invented portrait identity, digits or actual sending/approval result; generic neutral avatars/layout are sufficient."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "102",
+      "selectedBeat": 4,
+      "path": "/workspace/generated_images/exec-2f092d3b-5aaa-4fcb-bd6d-0c694f8de43b.png",
+      "sha256": "f05ff872b2d965e008ae18742ce5c2edcd986f792cb593d5100e4d5933df8343",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "계단에서 TOKEN 쪽 남자가 폰을 다시 서인 쪽으로 돌리고 서인이 확인하는 관계가 읽힌다.가짜 참석자 이름·안내문·수치를 굽지 않았고 새로운 전송 결과를 선공개하지 않았다.",
+      "source": {
+        "anchor": "남자는 휴대폰을 가져가려다가 화면을 서인 쪽으로 다시 돌렸다. 소현이 공유할 참석자 이름과 안내문을 올린 곳이었다. 서인이 허락한 네 사람에 오늘 글을 함께 읽겠다는 두 사람이 더 있었다. 서인은 이름과 안내문을 확인한 뒤 그 범위에는 보내도 좋다고 답했다.",
+        "fingerprint": "43ed921c",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "a8963f7587146d2cbf58588c9cfb9abb77f304d3d99507ae7f23496963b48d35",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 4,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep102-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "“저도 서인파에 넣어 줘요.”"
+        },
+        {
+          "beatIndex": 1,
+          "text": "목요일 낮, 우석이 그 말을 듣고 계단에서 웃었다. TOKEN 쪽 남자는 웃지 않는 서인을 보고 자기 휴대폰을 내밀었다. 어제 글을 받은 사람들끼리 오간 말이었다. 소현이 연 검토 대화방의 제목 옆에 누군가 농담을 붙여 놨다."
+        },
+        {
+          "beatIndex": 2,
+          "text": "“내 파가 어딨어요.”"
+        },
+        {
+          "beatIndex": 3,
+          "text": "“그러니까 웃자는 말이지.”"
+        },
+        {
+          "beatIndex": 4,
+          "text": "남자는 휴대폰을 가져가려다가 화면을 서인 쪽으로 다시 돌렸다. 소현이 공유할 참석자 이름과 안내문을 올린 곳이었다. 서인이 허락한 네 사람에 오늘 글을 함께 읽겠다는 두 사람이 더 있었다. 서인은 이름과 안내문을 확인한 뒤 그 범위에는 보내도 좋다고 답했다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "103",
+      "selectedBeat": 101,
+      "path": "/workspace/generated_images/exec-1aa2cf01-1708-462c-9fa0-b060d6d1606e.png",
+      "sha256": "ae12f7aad206eec145ca9a3f62143695e3c47d1ebdf43ef353aeedfe92e9e87f",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "CHANGES",
+      "assessment": "달걀 봉지와 찢어진 손잡이,서인이 상자를 가져와 받치는 행동은 읽힌다.그러나 앞서 달걀을 빼고 문 옆에 둔 재사용 빈 상자가 테이프로 봉인된 닫힌 배송 상자로 보여 달걀 봉지를 옮길 빈 용기라는 핵심이 약해졌다.",
+      "source": {
+        "anchor": "서인은 일어나 상자를 들고 왔다. 자기 문서 위에 놓지 않고 빈자리에 받쳤다. 윤 여사가 달걀 봉지를 옮기려다 손잡이 찢어진 장바구니를 다시 쳐다봤다.",
+        "fingerprint": "803ee8f",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "63ae7593d5be1994c2bdba3dc53a6cbe25930ff99bd689e473005f4bb6e2fda8",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 101,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep103-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "“그쪽 들지 마. 달걀 있어.”"
+        },
+        {
+          "beatIndex": 1,
+          "text": "금요일 오후, 시장 가게 앞에서 윤 여사가 장바구니를 서인에게서 도로 가져갔다. 손잡이 한쪽이 벌어져 있었다. 서인은 바닥을 받치려고 손을 뻗었다. 그녀는 그제야 손잡이를 놓았다."
+        },
+        {
+          "beatIndex": 4,
+          "text": "가게 주인이 납작하게 접힌 빈 상자를 내줬다. 서인은 장바구니를 바닥에 놓고 달걀을 꺼냈다. 윤 여사는 자기 무릎 높이에서 떨어질까 봐 그의 팔꿈치를 붙잡았다."
+        },
+        {
+          "beatIndex": 6,
+          "text": "서인은 상자 밑을 펴 달걀판을 넣었다. 남은 물건은 윤 여사가 들었다. 둘이 짐을 나누고 나서야 가게 앞에서 비켰다."
+        },
+        {
+          "beatIndex": 12,
+          "text": "노인정에서는 김 영감이 혼자 담요를 펴고 있었다. 윤 여사가 사탕 봉지를 내려놓자 그가 바로 뜯었다. 그녀는 봉지 입구를 접지도 않고 자기 방석 옆에 뒀다."
+        },
+        {
+          "beatIndex": 15,
+          "text": "김 영감이 턱으로 부엌 쪽을 가리켰다. 순덕 할머니가 달걀 왔느냐고 물었다. 서인은 상자를 부엌 앞에 내려놓았다. 윤 여사가 자기 몫을 골라 봉지에 옮기는 동안 그는 상자 밑을 다시 살폈다. 달걀은 깨지지 않았다. 순덕 할머니도 남은 자기 몫을 별도 봉지에 옮겼다. 두 봉지를 부엌에 두고 빈 상자는 문 옆에 세웠다."
+        },
+        {
+          "beatIndex": 21,
+          "text": "윤 여사가 빈 장바구니를 옆으로 눕혔다. 손잡이 두 개 중 하나만 바닥에 닿았다. 서인은 수선집에 가져가 보겠다고 하려다 자기 상자를 접지 않고 그대로 뒀다. 윤 여사는 돌아갈 때 달걀을 거기에 담아 가겠다고 했다."
+        },
+        {
+          "beatIndex": 34,
+          "text": "서인이 비켜 앉았다. 윤 여사는 옮긴 달걀 수를 다시 세고 있었다."
+        },
+        {
+          "beatIndex": 36,
+          "text": "윤 여사가 물었다. 서인은 가방을 자기 무릎 쪽으로 가져왔다. 두 장을 바로 꺼내지 않고, 자신이 따로 쓴 글이 있다고 말했다."
+        },
+        {
+          "beatIndex": 45,
+          "text": "서인은 문서를 꺼냈다. 윤 여사 쪽으로 돌려놓고 해당 줄을 읽었다."
+        },
+        {
+          "beatIndex": 49,
+          "text": "윤 여사는 그 줄부터 보려고 돋보기를 다시 내렸다. 서인은 생활을 보전한다는 항목이 있는 첫 장을 앞에 놓으려다 그대로 뒀다. 그녀가 읽던 장을 넘기지 않았다."
+        },
+        {
+          "beatIndex": 58,
+          "text": "그는 문서를 내려놓았다."
+        },
+        {
+          "beatIndex": 75,
+          "text": "순덕 할머니는 화면으로 돌아갔다. 서인은 그녀에게도 의견을 더 물으려다가 가방 위의 자기 종이를 모았다. 순덕 할머니는 방금 돌아본 바다 그림에서 더 내려가지 않았다."
+        },
+        {
+          "beatIndex": 91,
+          "text": "서인은 첫 장을 뒤집지 않았다. 생활 보전과 필수 서비스 유지가 적힌 면이 위로 나와 있었다. 그가 아직 알아보지 못한 곳마다 표시를 해 놓은 장이었다."
+        },
+        {
+          "beatIndex": 96,
+          "text": "김 영감이 화투갑을 열었다. 윤 여사는 돋보기를 집에 가져갈 봉지 위에 놓았다. 순덕 할머니는 아직 자기 휴대폰을 보고 있었다. 셋 중 누구도 서인에게 가라고 하지는 않았다."
+        },
+        {
+          "beatIndex": 97,
+          "text": "서인은 자기 앞에 놓인 방석을 무릎으로 당겼다. 김 영감이 패를 나누려는데 윤 여사가 부엌 쪽을 봤다."
+        },
+        {
+          "beatIndex": 99,
+          "text": "순덕 할머니가 윤 여사의 봉지를 부엌에서 가져왔다. 윤 여사는 그 달걀 봉지를 가리켰다."
+        },
+        {
+          "beatIndex": 100,
+          "text": "“총각아. 저 상자 좀.”"
+        },
+        {
+          "beatIndex": 101,
+          "text": "서인은 일어나 상자를 들고 왔다. 자기 문서 위에 놓지 않고 빈자리에 받쳤다. 윤 여사가 달걀 봉지를 옮기려다 손잡이 찢어진 장바구니를 다시 쳐다봤다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [
+        {
+          "severity": "blocking",
+          "title": "재사용 빈 상자가 봉인 배송상자로 보임",
+          "minimumCorrectionPrompt": "Keep Seo-in bringing the reused cardboard box beside his documents, Yoon holding her egg bag, the damaged shopping-basket handle, and the familiar floor-level senior-center room in Friday afternoon. Make the box visibly EMPTY and OPEN at the top, with untaped reused flaps, ready to receive/support the egg BAG. Remove the sealed taped shipping-box appearance. Keep it OFF Seo-in documents; do not put loose eggs back in it or repair/replace the torn basket by magic. No label, count or new delivery."
+        }
+      ],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "104",
+      "selectedBeat": 55,
+      "path": "/workspace/generated_images/exec-08b23789-8591-470d-9981-8ec8bf38fd63.png",
+      "sha256": "eaa9948b0e54e0b7a525e2fdd6df87edcd3a6fc15a763b8643c8ac7868ec8005",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "status": "PASS",
+      "assessment": "머뭇거리던 서인이 폰을 내려놓고 TOKEN 쪽 남자가 손을 내미는 관계가 명확하다.찬성·수락·전송 완료를 덧붙이지 않았다.다른 참석자는 화면 밖일 수 있어 한 컷에 억지로 늘리지 않았다.",
+      "source": {
+        "anchor": "서인은 남자의 휴대폰을 돌려주지 못했다. 남자가 손을 내밀었다. 그제야 탁자에 내려놓았다.",
+        "fingerprint": "56b9dbae",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "5d33f16f6491c88dd25db868e535aa93a41591cb0c49d8ce1669b94de06d2991",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 55,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep104-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "“그 답은 내가 못 쓰겠어.”"
+        },
+        {
+          "beatIndex": 1,
+          "text": "토요일 오후, 클리닉 위층 상담실에서 도윤이 서인의 휴대폰을 돌려줬다. 화면에는 조건을 확인할 사람들에게 보낼 문의가 열려 있었다. 가운데 한 항목만 답을 못 붙인 채였다."
+        },
+        {
+          "beatIndex": 3,
+          "text": "소현이 자기 쪽 종이에도 같은 항목을 찾았다. 오늘 함께 읽을 사람은 서인이 어제 밤에 받은 명단으로 확인했다. 소현과 나경, 우석, TOKEN 쪽 남자에 도윤까지였다. 서인은 그 범위에 나경의 반대 의견도 함께 놓아도 되는지 다시 확인한 뒤 탁자에 폈다."
+        },
+        {
+          "beatIndex": 13,
+          "text": "서인이 자기 화면을 앞으로 가져왔다. 그 항목 옆에 도윤 이름을 넣으려던 것은 아니었다. 이름을 받기 전에 문장을 같이 만들면 되는 줄 알았다. 그는 문의를 보내지 않고 질문을 받는 사람의 이름도 비워 뒀다."
+        },
+        {
+          "beatIndex": 19,
+          "text": "나경이 자기 이름을 쓴 반대 의견을 앞으로 옮겼다."
+        },
+        {
+          "beatIndex": 28,
+          "text": "소현의 휴대폰에 전화가 왔다. 그녀는 거절하고 탁자에 놓았다. 조금 뒤 짧은 연락이 와 화면이 다시 켜졌다."
+        },
+        {
+          "beatIndex": 34,
+          "text": "서인이 말했다. 소현이 연락을 보낸 사람에게 지금은 통화할 수 없다고 답했다. 서인은 그녀가 보낸 답을 자기 쪽의 찬성 의견으로 적지 않았다."
+        },
+        {
+          "beatIndex": 35,
+          "text": "TOKEN 쪽 남자가 화면에서 문의받을 항목을 고르고 있었다. 기계를 바꾸지 않고 가능한지 묻는 일과 대체 공급을 알아보는 일을 나눴다. 현재 재원이 있다는 말은 하지 않았다."
+        },
+        {
+          "beatIndex": 41,
+          "text": "도윤이 물었다. 남자가 손가락을 화면에서 뗐다. 우석은 소현에게 빌려 보던 화면을 돌려줬다."
+        },
+        {
+          "beatIndex": 47,
+          "text": "소현이 입을 다물었다. 그녀는 동의한다는 표시를 하지 않았다. 자기 문의에 도윤의 답을 그대로 받아 적었다."
+        },
+        {
+          "beatIndex": 48,
+          "text": "TOKEN 쪽 남자가 다음에 보낼 기술 문의를 서인에게 보여 줬다. 맨 위에는 기존 공급을 줄이려면 확인할 조건이라고만 적혀 있었다. 개인의 복귀를 막는 조항은 문의 대상에서 빠져 있었다."
+        },
+        {
+          "beatIndex": 49,
+          "text": "“그건 뒤에 붙어야 합니다.”"
+        },
+        {
+          "beatIndex": 51,
+          "text": "“이 안으로는 안 보낼게요. 공급을 덜 쓰면 얼마가 필요한지는 다른 안에도 쓸 수 있으니까 그거부터 묻겠습니다.”"
+        },
+        {
+          "beatIndex": 53,
+          "text": "남자가 고개를 끄덕였다."
+        },
+        {
+          "beatIndex": 54,
+          "text": "“그렇겠죠. 그런데 나는 지금 돌아오려는 사람을 막는 쪽까지 받아서 물어볼 자신은 없어요.”"
+        },
+        {
+          "beatIndex": 55,
+          "text": "서인은 남자의 휴대폰을 돌려주지 못했다. 남자가 손을 내밀었다. 그제야 탁자에 내려놓았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts."
+    },
+    {
+      "chapterId": "105",
+      "selectedBeat": 7,
+      "path": "/workspace/generated_images/exec-4b9e0bd9-6089-4993-957b-93ab268e7b85.png",
+      "sha256": "e34ea829d24643e0b9e1bccc931cc310c9adcea9503ac2ef76514a2d86e79f4e",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "status": "PASS",
+      "assessment": "서인이 노트북을 돌리고 한 여성 검토자가 읽는 행동,뒤/옆에서 우석과 도윤이 종이를 보는 병행 행동이 구분된다.두 여성 중 한 명은 화면에 나타나지 않지만 화면밖 인물의 가능성이 있어 누락만으로 새 인물 추가를 요구하지 않는다.두 여성을 모두 묘사했다는 완전성 주장은 하지 않는다.",
+      "source": {
+        "anchor": "그는 제목을 이번에 받은 의견으로 고쳤다. 화면을 돌려 두 사람이 읽게 했다. 도윤은 장부실 안쪽에서 우석이 들고 온 종이를 함께 보고 있었다. TOKEN 쪽 남자는 오늘 참석하지 않아 자기 의견을 따로 보내 왔다. 서인은 그 답도 다른 사람의 말과 합치지 않았다.",
+        "fingerprint": "2e8232b5",
+        "sourceStatus": "main-source-missing; source-in-open-pr; internal-draft-only",
+        "internalDraft": true,
+        "held": false,
+        "prefixSha256": "c0fe6c7262fc8a12882695bbcd3c10d8e92233aa1bed73b317d15d00d35d07a8",
+        "readScope": {
+          "firstBeat": 0,
+          "lastBeat": 7,
+          "containsFutureBeats": false
+        },
+        "job": "/workspace/vn-work-session/jobs/ep105-event.json"
+      },
+      "sourceEvidence": [
+        {
+          "beatIndex": 0,
+          "text": "“그럼 이걸로 진행하자는 뜻은 아닌 거죠?”"
+        },
+        {
+          "beatIndex": 1,
+          "text": "일요일 오후, 소현이 클리닉 지하 2층 장부실에서 서인의 노트북을 돌려놓았다. 서인은 받아 온 의견을 묶어 내부 검토자들에게 보낼 글을 쓰고 있었다. 맨 위에는 보류라고 적혀 있었다."
+        },
+        {
+          "beatIndex": 2,
+          "text": "“진행은 못 합니다.”"
+        },
+        {
+          "beatIndex": 4,
+          "text": "서인은 두 번째 문장을 쓰다 말고 손을 뗐다. 옆에서 나경이 그가 적은 첫 줄을 읽었다. 도윤의 반대와 나경의 반대가 모두 검토 완료 아래에 들어가 있었다."
+        },
+        {
+          "beatIndex": 5,
+          "text": "“저는 완료했다고 보낸 적 없어요.”"
+        },
+        {
+          "beatIndex": 6,
+          "text": "그녀가 말했다. 서인은 자기 파일의 제목을 다시 봤다. 자료를 받은 일이 끝났다는 뜻으로 붙인 말이었다. 그 아래의 보류까지 읽으면 어떤 검토가 끝났는지 다르게 보였다."
+        },
+        {
+          "beatIndex": 7,
+          "text": "그는 제목을 이번에 받은 의견으로 고쳤다. 화면을 돌려 두 사람이 읽게 했다. 도윤은 장부실 안쪽에서 우석이 들고 온 종이를 함께 보고 있었다. TOKEN 쪽 남자는 오늘 참석하지 않아 자기 의견을 따로 보내 왔다. 서인은 그 답도 다른 사람의 말과 합치지 않았다."
+        }
+      ],
+      "inspection": {
+        "nativeOriginalViewed": true,
+        "contained390Viewed": true,
+        "previewMethod": "proportional390px WebP contact strip in memory; original native PNG also viewed; no preview/image file written",
+        "appPlaybackReviewed": false
+      },
+      "checks": {
+        "hands": "No blocking extra/fused-finger defect identified at native/390px",
+        "currentAction": "readable; source correction if listed",
+        "style": "Detailed teaser-painted treatment consistent across this event batch",
+        "future": "No subsequent result accepted as current; no source after selected used",
+        "textDigits": "No legible baked number/phrase identified, except issue88"
+      },
+      "issues": [],
+      "releaseRestriction": "INTERNAL DRAFT ONLY. Art verdict is not canon/publication approval or permission to merge missing-main manuscripts.",
+      "nonblockingNote": "Not a complete cast depiction: only one of two target women visible. Accept as a cropped portion of the source event; do not describe it as showing both women."
+    }
+  ],
+  "limits": [
+    "Still-art/source review only, no app/runtime/mobile crop/audio certification or full-episode quality score.",
+    "All20 remain internal drafts. Held86–90 remain HELD; no manuscript/setting/publication approval.",
+    "Already-present supporting roles may receive new designs; unknown face itself never caused CHANGES.",
+    "No checkout/source/image modifications. Review contact strips generated only in memory.",
+    "No later-than-selected chapter source consulted. Existing Doyun reference used only to compare identity.",
+    "One reference lookup used a nonexistent core-doyun.webp path and failed; actual doy un reference was then found at teaser-style/doyun-canonical.webp and visually inspected. No resulting file changes."
+  ]
+}

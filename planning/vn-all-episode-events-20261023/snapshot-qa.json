@@ -1,0 +1,33 @@
+{
+  "status": "DRAFT_NOT_PRODUCTION_COMPLETE",
+  "newFrames": 92,
+  "runtimeConnected": 7,
+  "latestImageReviews": {
+    "PASS": 56,
+    "PENDING": 5,
+    "CHANGES": 31
+  },
+  "sourceStorySha256": "08859eb53dc91dd85300db6ec5f2e2df3fa9ebce2cbaee39ab2e2f707e35e264",
+  "fullAppPlayQa": "PENDING",
+  "pendingCorrectedFrames": [
+    "45",
+    "55",
+    "58",
+    "60",
+    "62"
+  ],
+  "publication": "Draft PR only; not merged or deployed.",
+  "checks": {
+    "vnTestFiles": 19,
+    "vnTestFilesPassed": 19,
+    "vnTestFilesFailed": 0,
+    "diffCheck": "PASS",
+    "nativeCandidateEncoding": {
+      "frames": 92,
+      "dimensionOrHashMismatch": 0,
+      "resizeOrCrop": false
+    },
+    "publicReleaseRegression": "PASS: actual root-copy build excludes this production planning directory and all candidate artwork; demo remains18chapters/4242beats",
+    "fullAppPlayQa": "PENDING"
+  }
+}

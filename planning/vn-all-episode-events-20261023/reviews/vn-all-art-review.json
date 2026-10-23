@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "recovery": {
+    "reconstructed": true,
+    "reason": "Execution environment /tmp reset during later review. Reconstructed from this reviewer conversation decisions, candidate IDs and source evidence; not byte-identical original JSON. Hashes/dimensions recalculated from preserved PNGs.",
+    "sourceDecisionPreserved": true
+  },
+  "scope": "Only listed candidates; historical rejected versions retained as historical decisions. Later correction PASS is in a separate report. Not a whole-story completion verdict.",
+  "method": {
+    "native": "All listed PNGs had been viewed at native size in the original review.",
+    "mobile": "All had390px-contained in-memory previews; not actual app QA.",
+    "writeScope": "Only /workspace/vn-work-session/reviews, checkout untouched."
+  },
+  "summary": {
+    "PASS": 2,
+    "CHANGES": 4
+  },
+  "records": [
+    {
+      "chapterId": "31",
+      "selectedBeat": 115,
+      "candidatePath": "/workspace/generated_images/exec-92a45779-5070-4104-976a-c234d14e44b2.png",
+      "verdict": "CHANGES",
+      "reason": "현관·실외화·영상 제시 관계는 맞지만390px에서 폰속 다은의 얼굴이 약25px라 꾹 다문 입/긴장을 식별하기 어렵다. 폰을 전경 확대해야 한다.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "현관·실외화·영상 제시 관계는 맞지만390px에서 폰속 다은의 얼굴이 약25px라 꾹 다문 입/긴장을 식별하기 어렵다. 폰을 전경 확대해야 한다."
+      ],
+      "sha256": "6f762cb36a8a9c1637c2d2b17304c8f2011f0400341f957122e5ef8f89cd615c",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "32",
+      "selectedBeat": 150,
+      "candidatePath": "/workspace/generated_images/exec-5ee1d6ab-58db-489e-9406-404294255cdf.png",
+      "verdict": "CHANGES",
+      "reason": "127~128은 남자가 의자가 있어도 서 있다고 명시하지만 원화에서는 앉았다. 단말을 돌려주는 서 있는 자세로 교정.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "127~128은 남자가 의자가 있어도 서 있다고 명시하지만 원화에서는 앉았다. 단말을 돌려주는 서 있는 자세로 교정."
+      ],
+      "sha256": "2a0692b22067d1405f1f1b8cfbf32e15cf5125d7c5ba625edf597134a7ccfc0c",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "36",
+      "selectedBeat": 99,
+      "candidatePath": "/workspace/generated_images/exec-07e6dbb5-5939-42e0-9572-cee339628416.png",
+      "verdict": "PASS",
+      "reason": "서인이 요청을 저장한 뒤 손을 쉬고 윤세라가 같은 화면을 말없이 보는 관계. 참조 인물/의상·제출하지 않은 중립 화면·390px 상황 가독성 정합.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "1d7ae4097884d52d8c7229fa9c0292ee9f179234f85ec2e2ab4138ebfe2ae355",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "38",
+      "selectedBeat": 235,
+      "candidatePath": "/workspace/generated_images/exec-8d6f44fb-6454-4402-aa4f-12cc7067d302.png",
+      "verdict": "PASS",
+      "reason": "하진26세 인상·대충 묶은머리·회색티/검은바지·오후 집. 단말의 보류 뒤 서인의 숨을 내쉬는 반응이 읽히며30일/참여/연결해제 결과 선공개 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "fb77ab228e9616ffc7515a5f11857c104319d9eb026fd7bbf7916b9238f0ed7e",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "39",
+      "selectedBeat": 41,
+      "candidatePath": "/workspace/generated_images/exec-d4173123-7cb6-45b7-b3d5-b5ca0f6b3686.png",
+      "verdict": "CHANGES",
+      "reason": "14의 군용담요가 꽃이불로 바뀌었고29/34의 순덕 목손수건이 없다. 승인 보여주기 관계와 나이/미래결과 경계는 맞음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "14의 군용담요가 꽃이불로 바뀌었고29/34의 순덕 목손수건이 없다. 승인 보여주기 관계와 나이/미래결과 경계는 맞음."
+      ],
+      "sha256": "a6f8802c4af0df60fb30d9f1294238cde6b3c4c8f6754a6719b1a623711cc484",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "40",
+      "selectedBeat": 162,
+      "candidatePath": "/workspace/generated_images/exec-11f2df23-e681-41bf-b45b-3c632904b820.png",
+      "verdict": "CHANGES",
+      "reason": "153에서 엎어 놓은 패가 앞면 꽃으로 보임. 군용담요 대신 꽃담요이고43저녁출발/45여덟시반/66밤아홉시 뒤 장면인데 낮 햇빛. 뒷면·군용담요·밤 조명으로 교정.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "153에서 엎어 놓은 패가 앞면 꽃으로 보임. 군용담요 대신 꽃담요이고43저녁출발/45여덟시반/66밤아홉시 뒤 장면인데 낮 햇빛. 뒷면·군용담요·밤 조명으로 교정."
+      ],
+      "sha256": "9ec8003d33ae1412d200a22a0bbe768438dddf167ef0df8396e1f1e0a2b8a4d8",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    }
+  ]
+}

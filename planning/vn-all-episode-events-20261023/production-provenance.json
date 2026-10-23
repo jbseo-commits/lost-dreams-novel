@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "scope": "Only seven independently PASS-reviewed event CGs are registered. One additional chapter33 candidate needs correction; other candidates, rejected work, held chapters, and pending generation remain outside runtime.",
+  "encoding": "Pillow WebP quality=96 method=6; no resize or crop. PNG originals remain in /workspace/generated_images.",
+  "reviews": {
+    "initial": "/tmp/vn-all-art-review.json",
+    "corrected": "/tmp/vn-corrected-art-review.json",
+    "scopeNote": "Initial review PASS: chapters 36 and 38; correction batch 1 PASS: chapters 35 and 37; correction batch 2 PASS: chapters 32, 39 and 40. All review verdicts are visual/source reviews, not full play QA.",
+    "correctedBatch2": "/tmp/vn-corrected-art-review-2.json"
+  },
+  "assets": [
+    {
+      "id": "ep35-event",
+      "chapterId": "35",
+      "selectedBeat": 117,
+      "anchor": "손끝이 떨렸다.",
+      "fingerprint": "1616c174",
+      "sourcePng": "/workspace/generated_images/exec-04c4be52-6aeb-485d-8f30-5af48e8df11d.png",
+      "sourceSha256": "080be92bba0e1ab46eaf1edc8234fc7037fa2ec1ad31496cb512756a2ab9c618",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "assets/generated-events/ep35-event.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 247078,
+      "sha256": "2bd90210bd89ea38e992a2a39568ef7ed621892a99e82515fc9c73623bdc8eb8",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-ea0bfa95-6e0d-4133-8216-46ba3b78dada.png",
+          "sourceSha256": "e1fba35021c7c9dc72a383fc88d871dff992470171f9fb8f69d7d04e7beaedae",
+          "reason": "390px에서 노인 손의 떨림과 어머니의 손을 구분하기 어려웠다.",
+          "prompt": "Paint ONE original high-quality cinematic visual novel frame in the same mature Korean animated teaser / detailed hand-painted anime style as the reference characters. Native WIDESCREEN 16:9 landscape composition. This is a new physical scene/camera view, not a crop or enlargement of a reference sprite. Preserve named reference identities, genders, hair and age; Seoin is an adult MAN. Reference background/pose is not the requested event. Use believable anatomy and prop grips, natural restrained emotion, nuanced warm skin with cool shadows. Center the key action so it reads at 390px when the entire image is contained above a dialogue panel. NO baked dialogue, readable text, numbers, logos, watermark, diagrams, panel collage, or success badges. Use only facts already disclosed at the selected source moment. \nSCENE: Close cinematic view in a cramped night-application agency above a market at late night: an elderly woman's open hand has trembling fingertips in lamplight. Her other hand keeps a small phone on her knee. Show the vulnerability as lived anatomy and a small effort to steady her palm, not dehumanization, machinery or an exaggerated medical illness. The same mature mother in the reference and Seoin may be partial softly blurred observers sitting close by among ordinary older visitors, not young glamorous people. A worn chair edge and knees anchor the crowded waiting room. Do not reveal any locked room, price list, paid priority or later offer. No legible text or number.\nSOURCE MOMENT: 옆자리 할머니가 손을 펴 보였다.\nFOLLOWING SOURCE FACT: 손끝이 떨렸다.\nHIDE: 뒤 복도 닫힌 방과 가격표의 정보는126이후 공개 전에는 넣지 않는다. 떨리는 손을 조롱하거나 기계 부품으로 바꾸지 않는다.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/mother-warm-mature.webp"
+          ]
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-04c4be52-6aeb-485d-8f30-5af48e8df11d.png",
+          "sourceSha256": "080be92bba0e1ab46eaf1edc8234fc7037fa2ec1ad31496cb512756a2ab9c618",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Paint the exact STORY MOMENT '옆자리 할머니가 손을 펴 보였다. 손끝이 떨렸다.' Native widescreen16:9, detailed mature Korean animated teaser painting style. CLOSE HANDS-AND-KNEES DETAIL, ALL FACES OUTSIDE FRAME. An UNRELATED ELDERLY WOMAN next to Seoin's mother extends her wrinkled palm and subtly trembling fingertips in a cramped market night-application office. Her cuff is muted BROWN knit, her other hand holds a phone on HER knee. The purple-cardigan grey-bob-haired reference woman is SEOIN'S MOTHER and MUST NOT be the woman with the trembling hand. At the distant blurred edge show at most part of the observing mother's PURPLE sleeve and adult male Seoin's CHARCOAL suit shoulder, not their faces/hands replacing the unrelated woman's open palm. Only one coherent elderly open palm, credible hands, worn chair and practical dark clothing, soft late-night office lamp. Do not invent a named illness or machinery. No locked room/price list/future offer, no readable text/digits/icons/collage/logo/watermark.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/mother-warm-mature.webp"
+          ],
+          "reviewVerdict": "PASS"
+        }
+      ],
+      "review": {
+        "verdict": "PASS",
+        "reviewSource": "/tmp/vn-corrected-art-review.json",
+        "sourceEvidence": [
+          {
+            "beat": 90,
+            "text": "밤 11시 20분."
+          },
+          {
+            "beat": 98,
+            "text": "문을 열자 작은 사무실에 노인들이 빽빽하게 앉아 있었다."
+          },
+          {
+            "beat": 99,
+            "text": "모두 휴대폰을 무릎 위에 올려 두고 있었다."
+          },
+          {
+            "beat": 116,
+            "text": "옆자리 할머니가 손을 펴 보였다."
+          },
+          {
+            "beat": 117,
+            "text": "손끝이 떨렸다."
+          }
+        ],
+        "passed": [
+          "갈색 니트 소매의 주름진 노인 손과 관찰자의 보라 소매를 분리해 어머니가 아닌 옆자리 할머니의 손으로 읽힌다. 얼굴을 잘라 잘못된 인물 재사용을 피한다.",
+          "휴대폰은 할머니의 다른 손과 무릎 위에 있으며 밤의 비좁은 사무실 조명이 정합하다.",
+          "390px에서도 펼친 노인 손과 약하게 구부러진 손끝, 무릎 위 휴대폰이 식별된다. 손가락은 다섯이며 손/휴대폰 그립이 자연스럽다.",
+          "기계 부품·진단명·뒤 방의 가격표·후속 제안·읽을 수 있는 글자를 넣지 않았고 참조 화풍을 유지한다."
+        ],
+        "issues": []
+      }
+    },
+    {
+      "id": "ep36-event",
+      "chapterId": "36",
+      "selectedBeat": 99,
+      "anchor": "윤세라는 그 화면을 봤지만 아무것도 묻지 않았다.",
+      "fingerprint": "3e6c1271",
+      "sourcePng": "/workspace/generated_images/exec-07e6dbb5-5939-42e0-9572-cee339628416.png",
+      "sourceSha256": "1d7ae4097884d52d8c7229fa9c0292ee9f179234f85ec2e2ab4138ebfe2ae355",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "assets/generated-events/ep36-event.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 273804,
+      "sha256": "97b9c17794c9017cad596cc5cdff6a87fb76046e8cd4216d1b36ca66b3917358",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-07e6dbb5-5939-42e0-9572-cee339628416.png",
+          "sourceSha256": "1d7ae4097884d52d8c7229fa9c0292ee9f179234f85ec2e2ab4138ebfe2ae355",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Paint ONE original high-quality cinematic visual novel frame in the same mature Korean animated teaser / detailed hand-painted anime style as the reference characters. Native WIDESCREEN 16:9 landscape composition. This is a new physical scene/camera view, not a crop or enlargement of a reference sprite. Preserve named reference identities, genders, hair and age; Seoin is an adult MAN. Reference background/pose is not the requested event. Use believable anatomy and prop grips, natural restrained emotion, nuanced warm skin with cool shadows. Center the key action so it reads at 390px when the entire image is contained above a dialogue panel. NO baked dialogue, readable text, numbers, logos, watermark, diagrams, panel collage, or success badges. Use only facts already disclosed at the selected source moment. \nSCENE: Office close two-shot: Seoin has just SAVED a request rather than submitting it and has withdrawn his hand slightly from the terminal. Yoon Sera, the seated woman from the dark audit-room reference (not Baek Yoonha), looks at that same screen in silence without questioning him. Follow her gaze to his resting hand and the unsent document on the physically angled screen. Interface is restrained abstract document lines and neutral controls, no readable words and no bright submitted checkmark. He has not deleted the request or sent it. Keep existing character hair/clothes/teaser illustration style. Morning quiet office, no new family photos, no future system revelations.\nSOURCE MOMENT: 서인은 제출 대신 저장을 눌렀다. 상태 칸이 바뀌었다.\nFOLLOWING SOURCE FACT: 윤세라는 그 화면을 봤지만 아무것도 묻지 않았다.\nHIDE: 실제로 제출하거나 삭제한 장면으로 바꾸지 않는다. 보류 표시는98뒤 원문UI로 남기며 후속 다섯 시스템 정보를 먼저 넣지 않는다.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/sequence19-22/ep20-box-vn.webp"
+          ],
+          "reviewVerdict": "PASS"
+        }
+      ],
+      "review": {
+        "verdict": "PASS",
+        "reviewSource": "/tmp/vn-all-art-review.json",
+        "sourceEvidence": [
+          {
+            "beat": 97,
+            "text": "서인은 제출 대신 저장을 눌렀다. 상태 칸이 바뀌었다."
+          },
+          {
+            "beat": 98,
+            "text": "보류 (작성자)."
+          },
+          {
+            "beat": 99,
+            "text": "윤세라는 그 화면을 봤지만 아무것도 묻지 않았다."
+          }
+        ],
+        "passed": [
+          "윤세라의 어두운 감사실 참조 원화와 헤어·옷·성인 인상은 이어진다. 서인은 정본 곱슬머리 남성이다.",
+          "손을 단말 근처에 둔 서인과 같은 화면을 말없이 보는 윤세라의 관계가 390px에서도 읽힌다.",
+          "중립적 문서 화면이며 제출 완료·삭제·후속 시스템의 비밀 정보를 보이지 않는다. 손 구조에서 blocking 오류를 발견하지 않았다."
+        ],
+        "issues": []
+      }
+    },
+    {
+      "id": "ep37-event",
+      "chapterId": "37",
+      "selectedBeat": 80,
+      "anchor": "서인은 손가락으로 그 줄을 짚었다.",
+      "fingerprint": "acbb5e78",
+      "sourcePng": "/workspace/generated_images/exec-a8c407c0-b7b1-479a-9139-063082e35d29.png",
+      "sourceSha256": "11f0b90ff6f46783accbc31a4eacf030fe836f481469c4b4426f2c43a959fc3f",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "assets/generated-events/ep37-event.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 315420,
+      "sha256": "809397cfb5c37e310378a1a64a9d443af8e2d9abeb62d51809e492ce8ee676fb",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-729a3785-3fac-420a-8abd-5f8c667cce3e.png",
+          "sourceSha256": "f3dee161cbbeedbc7692001f8e4d7327fcffcd8eefae02b87b6afc9e611f154c",
+          "reason": "서인 대신 마정훈으로 오인되는 인물 배치가 있었다.",
+          "prompt": "Paint ONE original high-quality cinematic visual novel frame in the same mature Korean animated teaser / detailed hand-painted anime style as the reference characters. Native WIDESCREEN 16:9 landscape composition. This is a new physical scene/camera view, not a crop or enlargement of a reference sprite. Preserve named reference identities, genders, hair and age; Seoin is an adult MAN. Reference background/pose is not the requested event. Use believable anatomy and prop grips, natural restrained emotion, nuanced warm skin with cool shadows. Center the key action so it reads at 390px when the entire image is contained above a dialogue panel. NO baked dialogue, readable text, numbers, logos, watermark, diagrams, panel collage, or success badges. Use only facts already disclosed at the selected source moment. \nSCENE: Cinematic discovery detail across a morning meeting table. Seoin's index finger rests on the SAME small abstract clause in the four first-page contract panels displayed on a tablet that Baek Yoonha has pushed toward him. His gaze follows the finger; her short-dark-haired suited figure from the reference quietly watches. One physical tablet or neat set of first pages, clear hand/document spatial relation, coherent fingers, not floating dashboards or an infographic. All text merely soft grey strokes; no account names, family pictures, private medical information, company logos or readable numbers. No later revelation about her mother.\nSOURCE MOMENT: 그녀는 태블릿을 서인 쪽으로 밀었다.\nFOLLOWING SOURCE FACT: 서인은 손가락으로 그 줄을 짚었다.\nHIDE: 백윤하 사적 의료 계정과 어머니의 계약은89이후에 밝혀진다.72컷에서 계정명이나 가족 사진을 먼저 보이지 않는다.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/sequence19-22/ep22-1-paper-vn.webp"
+          ]
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-a8c407c0-b7b1-479a-9139-063082e35d29.png",
+          "sourceSha256": "11f0b90ff6f46783accbc31a4eacf030fe836f481469c4b4426f2c43a959fc3f",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Paint ONE corrected scene for chapter37, native widescreen16:9, mature detailed Korean teaser/anime painting. EXACTLY TWO PEOPLE: Seoin is the YOUNG ADULT MAN with CURLY BLACK HAIR, CHARCOAL SUIT and OPEN LIGHT COLLAR from portrait reference; HE is the one pointing with an index finger to a clause on the physical tablet. His face, shoulder and pointing arm clearly belong to the SAME curly-haired young man. Baek Yoonha is the SHORT DARK-HAIRED WOMAN in BLACK BUSINESS SUIT/light blouse who is the CENTER WOMAN of the hospital reference; preserve HER identity, she watches his pointing finger/document quietly beside/across the table. NO OLDER WHITE-SHIRTED SLICKED-BACK MAN: that would be Ma Jeonghoon and he is NOT IN THIS SCENE. No third foreground person, no male replacement for Yoonha. Four first contract pages are on the one physical tablet as neutral abstract page panels, not floating infographics. Morning meeting room, no hospital. Follow Seoin's gaze down to his finger on the repeated clause, woman's restrained listening in soft focus. No legible text/numbers/account name/family picture/private medical data, no later revelation about Yoonha's mother. No subtitles/logo/watermark. Exact already-read source: '서인은 손가락으로 그 줄을 짚었다.'",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/generated_images/exec-5ee1d6ab-58db-489e-9406-404294255cdf.png"
+          ],
+          "reviewVerdict": "PASS"
+        }
+      ],
+      "review": {
+        "verdict": "PASS",
+        "reviewSource": "/tmp/vn-corrected-art-review.json",
+        "sourceEvidence": [
+          {
+            "beat": 56,
+            "text": "오전 10시 03분."
+          },
+          {
+            "beat": 57,
+            "text": "백윤하가 회의실로 들어왔다."
+          },
+          {
+            "beat": 72,
+            "text": "그녀는 태블릿을 서인 쪽으로 밀었다."
+          },
+          {
+            "beat": 73,
+            "text": "공개 가능한 계약 네 건의 첫 장이었다."
+          },
+          {
+            "beat": 80,
+            "text": "서인은 손가락으로 그 줄을 짚었다."
+          }
+        ],
+        "passed": [
+          "곱슬 검은 머리·짙은 정장·열린 밝은 셔츠의 서인이 자기 검지로 태블릿의 한 줄을 짚는다. 이전 잘못된 흰 셔츠 중년 남자는 없다.",
+          "짧은 검은 머리·검은 정장 여성 백윤하가 같은 화면을 보며 두 인물이 자연스럽게 연결된다. 병원이 아닌 아침 회의실이다.",
+          "계약 네 장은 한 물리 태블릿의 네 구역으로 보이며 손가락과 대상 줄이390px에서도 명확하다. 손 구조·테이블/태블릿 접촉에 blocking 오류를 발견하지 않았다.",
+          "읽을 수 있는 계정명·가족사진·사적 의료정보·어머니의 후속 사실은 없다. 참조 teaser 화풍과 인물 인상을 유지한다."
+        ],
+        "issues": []
+      }
+    },
+    {
+      "id": "ep38-event",
+      "chapterId": "38",
+      "selectedBeat": 235,
+      "anchor": "서인은 자기도 모르게 숨을 내쉬었다.",
+      "fingerprint": "fc1ab92b",
+      "sourcePng": "/workspace/generated_images/exec-8d6f44fb-6454-4402-aa4f-12cc7067d302.png",
+      "sourceSha256": "fb77ab228e9616ffc7515a5f11857c104319d9eb026fd7bbf7916b9238f0ed7e",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "assets/generated-events/ep38-event.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 336076,
+      "sha256": "1bb9d0c5e363e418468f387b0aee55cb672e61c70c4b7b26a6412762729d3f65",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-8d6f44fb-6454-4402-aa4f-12cc7067d302.png",
+          "sourceSha256": "fb77ab228e9616ffc7515a5f11857c104319d9eb026fd7bbf7916b9238f0ed7e",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Paint ONE original high-quality cinematic visual novel frame in the same mature Korean animated teaser / detailed hand-painted anime style as the reference characters. Native WIDESCREEN 16:9 landscape composition. This is a new physical scene/camera view, not a crop or enlargement of a reference sprite. Preserve named reference identities, genders, hair and age; Seoin is an adult MAN. Reference background/pose is not the requested event. Use believable anatomy and prop grips, natural restrained emotion, nuanced warm skin with cool shadows. Center the key action so it reads at 390px when the entire image is contained above a dialogue panel. NO baked dialogue, readable text, numbers, logos, watermark, diagrams, panel collage, or success badges. Use only facts already disclosed at the selected source moment. \nSCENE: An intimate daylight living-room choice/reaction shot in an ordinary older apartment. A 26ish woman Hajin with roughly tied dark hair, grey T-shirt and black cotton trousers has just touched a neutral deferral option on the consultation tablet; her hand rests after the press. Seoin beside her releases the breath he was holding, shoulders subtly easing, with no smile of victory. Show them at the same table with the screen angled between them, so action and his involuntary response read immediately. Do not show family disconnected, participation accepted, or permanent refusal; do not bake '30 days' or any labels into the screen. Current elderly reference-layer mother remains off-camera, not magically recovered. Plain credible domestic setting and quiet daylight.\nSOURCE MOMENT: 하진이 보류를 눌렀다.\nFOLLOWING SOURCE FACT: 서인은 자기도 모르게 숨을 내쉬었다.\nHIDE: 보류 선택을 참여·거부·연결 해제로 바꾸지 않는다.30일과 현 기준자 유지 결과는237~239 문장 뒤 원문UI로만 보인다.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp"
+          ],
+          "reviewVerdict": "PASS"
+        }
+      ],
+      "review": {
+        "verdict": "PASS",
+        "reviewSource": "/tmp/vn-all-art-review.json",
+        "sourceEvidence": [
+          {
+            "beat": 17,
+            "text": "문을 연 사람은 스물여섯쯤 되어 보이는 여자였다."
+          },
+          {
+            "beat": 18,
+            "text": "회색 티셔츠에 검은 면바지."
+          },
+          {
+            "beat": 19,
+            "text": "머리는 대충 묶여 있었다."
+          },
+          {
+            "beat": 233,
+            "text": "오후 3시 04분."
+          },
+          {
+            "beat": 234,
+            "text": "하진이 보류를 눌렀다."
+          },
+          {
+            "beat": 235,
+            "text": "서인은 자기도 모르게 숨을 내쉬었다."
+          }
+        ],
+        "passed": [
+          "하진은 대충 묶은 머리·회색 티셔츠·검은 바지의 20대 여성으로 읽히며, 집의 오후 선택 장면이다.",
+          "단말 앞에 손을 둔 하진과 힘이 풀린 서인의 가까운 반응 구도가 390px에서도 읽힌다.",
+          "참여·영구 거부·연결 해제나 30일 유지 결과를 이미지에 넣지 않았다. 배경의 다른 가족을 그리지 않은 것은 인과 모순이나 정체 선공개를 만들지 않는다. 손/소품 구조에서 blocking 오류를 발견하지 않았다."
+        ],
+        "issues": []
+      }
+    },
+    {
+      "id": "ep32-event",
+      "chapterId": "32",
+      "selectedBeat": 150,
+      "anchor": "남자는 접수서의 계정명을 확인하고서야 단말을 돌려줬다.",
+      "fingerprint": "82821b25",
+      "sourcePng": "/workspace/generated_images/exec-adadfe03-37f1-421f-b6de-1ac874d91d49.png",
+      "sourceSha256": "42a66e7d3dae4a6cf3ac9e99b4c605f763e0982b10d19c93194a499afc25d5be",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "assets/generated-events/ep32-event.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 319876,
+      "sha256": "ce9dd9186caafe7d39ec5b8da71861d10c2b61b102fb8dabae6d75b49c52c4ff",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "attempts": [
+        {
+          "status": "changes-requested",
+          "sourcePng": "/workspace/generated_images/exec-5ee1d6ab-58db-489e-9406-404294255cdf.png",
+          "sourceSha256": "2a0692b22067d1405f1f1b8cfbf32e15cf5125d7c5ba625edf597134a7ccfc0c",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "reason": "남자가 대기 의자에 앉아 단말을 돌려준다. 선택 beat까지 원문은 남자가 의자가 있어도 앉지 않고 서 있다고 명시한다.",
+          "reviewVerdict": "CHANGES"
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-adadfe03-37f1-421f-b6de-1ac874d91d49.png",
+          "sourceSha256": "42a66e7d3dae4a6cf3ac9e99b4c605f763e0982b10d19c93194a499afc25d5be",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Native widescreen 16:9 detailed mature Korean animated teaser / cinematic hand-painted anime style, same identities and age. Correct the actual narrative action, readable on a 390px contained image. No readable writing, numbers, subtitles, watermark, collage, diagrams or future outcomes. Repaint this hospital waiting-room handover with the IMPORTANT corrected posture: the middle-aged worried male patient is STANDING UPRIGHT, refusing to sit even though EMPTY waiting chairs are behind him. He returns the physical tablet to Baek Yoonha, the short black-haired WOMAN in the black business suit/light blouse in the center of the reference. She and curly-haired young adult male Seoin must also stand so the handover is natural, tablet held at waist/chest level; do not make all three sit. Retain the same faces, hair, genders and wardrobe from this reference. Focus on the standing man's tense grip releasing the tablet after checking the account and Yoonha's careful receiving hands. Hospital corridor in daytime, no text/accountname/medicalresult/future conclusion.",
+          "references": [
+            "/workspace/generated_images/exec-5ee1d6ab-58db-489e-9406-404294255cdf.png"
+          ],
+          "reviewVerdict": "PASS"
+        }
+      ],
+      "review": {
+        "verdict": "PASS",
+        "reviewSource": "/tmp/vn-corrected-art-review-2.json",
+        "sourceReadRange": "chapter 32: beats0..150",
+        "sourceEvidence": [],
+        "passed": [
+          "중년 남자가 빈 대기 의자 앞에 계속 서 있고, 백윤하에게 단말을 돌려주는 손과 서인의 관찰이390px에서도 명확하다.",
+          "낮 병원·인물 정체성·단말 그립은 이어지며 읽을 수 있는 계정명이나 검사 결과/치료 완료가 없다."
+        ],
+        "issues": []
+      }
+    },
+    {
+      "id": "ep39-event",
+      "chapterId": "39",
+      "selectedBeat": 41,
+      "anchor": "“보름 가까이 기다렸어. 들어간 사람들이 첫날은 일찍 누우래.”",
+      "fingerprint": "60aecf80",
+      "sourcePng": "/workspace/generated_images/exec-8b689212-6e26-4297-8278-3831f175b7a7.png",
+      "sourceSha256": "e9d5c0b223733ba365911d6a0941d7cb5bbd1e30e7f1f1e47fd61a208ec174a7",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "assets/generated-events/ep39-event.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 445604,
+      "sha256": "500784983b34b886d38de589a42800ebb84a79a9143798b4e7be72697bae6d13",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "attempts": [
+        {
+          "status": "changes-requested",
+          "sourcePng": "/workspace/generated_images/exec-d4173123-7cb6-45b7-b3d5-b5ca0f6b3686.png",
+          "sourceSha256": "a6f8802c4af0df60fb30d9f1294238cde6b3c4c8f6754a6719b1a623711cc484",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "reason": "원문이 구분 표지로 사용하는 순덕 할머니의 목 손수건이 없고, 군용 담요는 꽃무늬 푹신한 이불로 바뀌었다.",
+          "reviewVerdict": "CHANGES"
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-8b689212-6e26-4297-8278-3831f175b7a7.png",
+          "sourceSha256": "e9d5c0b223733ba365911d6a0941d7cb5bbd1e30e7f1f1e47fd61a208ec174a7",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Native widescreen 16:9 detailed mature Korean animated teaser / cinematic hand-painted anime style, same identities and age. Correct the actual narrative action, readable on a 390px contained image. No readable writing, numbers, subtitles, watermark, collage, diagrams or future outcomes. Edit/repaint this senior-center scene to source continuity: the floor surface beneath the hwatu cards and eggs is a plain worn OLIVE GREEN MILITARY WOOL BLANKET, without any floral quilting, flowers or decorative pattern. The elderly woman on the LEFT who shows the phone is Sunduk, an unrelated grandmother, and has a visibly tied practical HANDKERCHIEF AROUND HER NECK above her floral blouse. Preserve her identity, Seoin's face and his own mother's grey short bob / purple cardigan on the RIGHT. Lighting is FRIDAY EVENING 7pm under warm indoor ceiling lamps; outside windows cool dark evening, no golden sunbeams. Remove the large green checkmark on phone; screen only neutral blurred pale lines, do not bake completion/result marks. The card backs or existing ordinary hwatu in the distant floor are secondary. Core action the elderly woman turns her phone toward Seoin, who looks and listens, not a celebratory result. Native composition all figures anatomy and natural grips.",
+          "references": [
+            "/workspace/generated_images/exec-d4173123-7cb6-45b7-b3d5-b5ca0f6b3686.png"
+          ],
+          "reviewVerdict": "PASS"
+        }
+      ],
+      "review": {
+        "verdict": "PASS",
+        "reviewSource": "/tmp/vn-corrected-art-review-2.json",
+        "sourceReadRange": "chapter 39: beats0..41",
+        "sourceEvidence": [],
+        "passed": [
+          "순덕 할머니 목에 손수건이 있고, 바닥은 군용 올리브색 담요이며 창밖 저녁과 실내등이 정합하다.",
+          "휴대폰을 서인에게 보여 주는 동작과 어머니의 관찰, 삶은달걀/화투가390px에서도 읽힌다.",
+          "기존 승인 checkmark는 사라졌고 중립적 추상 폰화면만 있어 참여완료·미래수면결과를 선노출하지 않는다. 손/그립은 자연스럽다."
+        ],
+        "issues": []
+      }
+    },
+    {
+      "id": "ep40-event",
+      "chapterId": "40",
+      "selectedBeat": 162,
+      "anchor": "패가 담요 끝을 넘어가 장판 위로 떨어졌다.",
+      "fingerprint": "69f99f55",
+      "sourcePng": "/workspace/generated_images/exec-2d189140-ce82-4586-9cdb-0870e92f9cc3.png",
+      "sourceSha256": "7b4c6ebc309c896a117fed015cd83453077cf95a266e54b03b8466836ab0a2e8",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "assets/generated-events/ep40-event.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 383602,
+      "sha256": "6337360a2ec6a9e79a5ef26bb961f0b26efec2c7dbaa13200aa0dedffc2998d0",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "attempts": [
+        {
+          "status": "changes-requested",
+          "sourcePng": "/workspace/generated_images/exec-11f2df23-e681-41bf-b45b-3c632904b820.png",
+          "sourceSha256": "9ec8003d33ae1412d200a22a0bbe768438dddf167ef0df8396e1f1e0a2b8a4d8",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "reason": "밀려난 패가 꽃 그림 앞면으로 보이지만 원문153에서 엎은 채 놓은 패이며 뒤집는 행동이 없다. 놀이 표면도 앞 화의 군용 담요 대신 꽃무늬 담요다.",
+          "reviewVerdict": "CHANGES"
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-2d189140-ce82-4586-9cdb-0870e92f9cc3.png",
+          "sourceSha256": "7b4c6ebc309c896a117fed015cd83453077cf95a266e54b03b8466836ab0a2e8",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Native widescreen 16:9 detailed mature Korean animated teaser / cinematic hand-painted anime style, same identities and age. Correct the actual narrative action, readable on a 390px contained image. No readable writing, numbers, subtitles, watermark, collage, diagrams or future outcomes. Correct/repaint this exact floor-level hand detail. The card just pushed by the elderly woman's index finger has its RED BACK FACE UP; its floral PICTURE FACE IS DOWN and entirely invisible. It has fallen over the edge of the plain OLIVE GREEN MILITARY WOOL BLANKET onto vinyl floor, with one corner near the blanket edge. All three cards of this vote were placed FACE DOWN; any cards near this hand are plain red backs, not flower faces. Replace the decorative floral quilt entirely with coarse olive military wool. Set source-correct NIGHT indoors, after9pm, using warm diffuse ceiling-lamp light and cool ambient shadows; REMOVE SUNLIGHT and window sunbeams. Retain elderly credible pointing hand, lower-body crop/all faces out. No faceup symbol, score, later argument, overturned table or new outcome. Core event the red-backed tile-sized hwatu card has just crossed the blanket border onto the vinyl.",
+          "references": [
+            "/workspace/generated_images/exec-11f2df23-e681-41bf-b45b-3c632904b820.png"
+          ],
+          "reviewVerdict": "PASS"
+        }
+      ],
+      "review": {
+        "verdict": "PASS",
+        "reviewSource": "/tmp/vn-corrected-art-review-2.json",
+        "sourceReadRange": "chapter 40: beats0..162",
+        "sourceEvidence": [],
+        "passed": [
+          "붉은 뒷면이 위인 패가 군용 올리브 담요 경계 밖 장판으로 밀려 나와 있어153엎은패/161밀기/162떨어짐과 정합하다.",
+          "밤의 실내등과 배경램프로 낮 햇빛 오류가 해소됐다.",
+          "390px에서도 한 손가락→엎어진패→담요 바깥 경계가 명확하다. 손은 자연스럽고 승인자4얼굴/패줍기/이후표결결과를 드러내지 않는다."
+        ],
+        "issues": []
+      }
+    }
+  ],
+  "nonRuntimeCandidates": [
+    {
+      "id": "ep33-event",
+      "chapterId": "33",
+      "selectedBeat": 177,
+      "sourcePng": "/workspace/generated_images/exec-894eae2c-26a5-47c3-bf98-4b6536bab577.png",
+      "sourceSha256": "8330654bcd07198cc5dfa21bcb89f92560861187fc08358a3f917a8241303d4a",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "status": "candidate-needs-correction",
+      "reviewSource": "/tmp/vn-corrected-art-review-2.json",
+      "reviewVerdict": "CHANGES",
+      "sourceReadRange": "chapter 33: beats0..177",
+      "issues": [
+        {
+          "severity": "source-clothing",
+          "sourceBeat": 5,
+          "sourceText": "서인은 모자를 눌러쓰고 정미경과 다은 뒤에 섰다.",
+          "reason": "배경 서인은 곱슬머리가 완전히 드러난 채 모자가 없다. 선택 beat177까지 모자를 벗는 행동이 없다.",
+          "minimumCorrection": "배경 서인에게 source의 눌러쓴 모자를 유지한다. 현재 다은의 발견/반응 구도는 유지한다."
+        }
+      ],
+      "runtimeAsset": null
+    }
+  ]
+}

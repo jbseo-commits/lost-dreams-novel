@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "recovery": {
+    "reconstructed": true,
+    "reason": "Execution environment /tmp reset during later review. Reconstructed from this reviewer conversation decisions, candidate IDs and source evidence; not byte-identical original JSON. Hashes/dimensions recalculated from preserved PNGs.",
+    "sourceDecisionPreserved": true
+  },
+  "scope": "Only listed candidates; historical rejected versions retained as historical decisions. Later correction PASS is in a separate report. Not a whole-story completion verdict.",
+  "method": {
+    "native": "All listed PNGs had been viewed at native size in the original review.",
+    "mobile": "All had390px-contained in-memory previews; not actual app QA.",
+    "writeScope": "Only /workspace/vn-work-session/reviews, checkout untouched."
+  },
+  "summary": {
+    "PASS": 2,
+    "CHANGES": 1
+  },
+  "records": [
+    {
+      "chapterId": "34",
+      "selectedBeat": 155,
+      "candidatePath": "/workspace/generated_images/exec-9548c047-84fe-486d-896d-49fa87f8303f.png",
+      "verdict": "CHANGES",
+      "reason": "번호표 ID사진 오류는 해소. 그러나141 가방에 달린 이름표가 목 랜야드 가슴에 있어155 가슴 만지기가 됨. 가방 이름표를 만지도록 교정.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "번호표 ID사진 오류는 해소. 그러나141 가방에 달린 이름표가 목 랜야드 가슴에 있어155 가슴 만지기가 됨. 가방 이름표를 만지도록 교정."
+      ],
+      "sha256": "9653265ba44b8e340546ed16828902db956060faec0557297203bb84659d7f3c",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "35",
+      "selectedBeat": 117,
+      "candidatePath": "/workspace/generated_images/exec-04c4be52-6aeb-485d-8f30-5af48e8df11d.png",
+      "verdict": "PASS",
+      "reason": "갈색소매 노인의 펼친 주름손과 무릎 폰, 관찰 어머니의 보라소매 분리. 얼굴 재사용 오류 해소. 밤 비좁은 사무실·손 다섯개/그립·390px 가독성 정합.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "080be92bba0e1ab46eaf1edc8234fc7037fa2ec1ad31496cb512756a2ab9c618",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "37",
+      "selectedBeat": 80,
+      "candidatePath": "/workspace/generated_images/exec-a8c407c0-b7b1-479a-9139-063082e35d29.png",
+      "verdict": "PASS",
+      "reason": "곱슬 서인이 검지로 태블릿 계약 줄을 짚고 짧은머리 여성 백윤하가 봄. 마정훈 대체 오류 해소. 네 페이지·아침 회의실·390px 손 대상 연결 정합, 사적 의료정보 선공개 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "11f0b90ff6f46783accbc31a4eacf030fe836f481469c4b4426f2c43a959fc3f",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    }
+  ]
+}
