@@ -1,0 +1,32 @@
+{
+  "episode": 19,
+  "canonical_base": "388477363a59f09082dd2071bad10e38c76527d5",
+  "before_body_non_whitespace": 4709,
+  "before_sha256": "063deac8cf7881b600b33d964b25765baa997794402f25ff01fd80486764d9ed",
+  "body_non_whitespace": 4697,
+  "sha256": "d0898b4179cfdb5a507cb54d2ca4c17f875e6158c53941b7d81053ebddf65354",
+  "current_authorized_edit_stage": "2026-10-24 one-episode Hyona prose edit",
+  "current_stage_revision_total": 1,
+  "prior_rewrite_record": {
+    "date": "2026-10-19",
+    "document": "planning/ep019-020-causal-rewrite-20261019.md",
+    "recorded_revisions": 3,
+    "preserved": true
+  },
+  "editorial_final_whole_episode_read": true,
+  "continuity": "PASS",
+  "prose_reading_review": "PASS_WITHIN_EP019",
+  "illustrations": "ISSUES_REMAIN",
+  "full_masterpiece": "NOT_CLAIMED",
+  "source_hook_changes": 1,
+  "images_replaced_or_generated": 0,
+  "publication": "LOCAL_REVIEW_ONLY",
+  "stop_after_episode": 19,
+  "next_requires_fresh_user_usage": true,
+  "tests": {
+    "command": "node --test reader-inline-direction.test.mjs reader-sequence19-22.test.mjs reader-info-graphics.test.mjs",
+    "result": "PASS",
+    "test_files": 3
+  },
+  "independent_packaging_check": "PASS"
+}
