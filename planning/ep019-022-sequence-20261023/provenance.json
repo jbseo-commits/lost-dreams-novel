@@ -1897,6 +1897,51 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ep19-b-preview",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-27c389e0-9876-4c0f-8f01-623b6c55e45c.png",
+      "sourceSha256": "1c1f776b752f32ebf2774f60a9fdab57dbfa23028fbc646e6a8e7ac9eb19d5cf",
+      "requestedDimensions": "landscape 3:2",
+      "actualNativeDimensions": [
+        1536,
+        1024
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep19-b-preview-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 584784,
+      "sha256": "f2c1111bb56928603d1f0952e93ecb7ad25564f0d6b77a4f0522b11eb9cdb979",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Create ONE finished cinematic illustration for a Korean literary science-fiction visual novel, landscape 3:2 composition. Use the two attached images ONLY as the established painterly anime art direction, color/material/lighting reference. This is a new environment shot, NOT a diagram or UI mockup. Story moment: a simulated preview of choosing B, at 3 AM an entire densely populated residential neighborhood wakes when the dream connection is restarted. A convincing intimate aerial camera angle over several apartment buildings and modest homes in a deep navy-blue sleeping city; hundreds of small warm amber-lit windows spread through the residential area all at once, concrete balconies, roofs, believable depth and scale, distant buildings recede in cool midnight haze. The street itself stays dark; windows are the emotional focus, making us feel the large number of homes disturbed at night. Beautiful feature-film background painting, deliberate composition, fine hand-painted texture, restrained glow, warm human interiors glimpsed only as light, premium art-book finish matching the references. Foreground architecture gives parallax layering. No visible people, no characters, no interior vignettes, no silhouettes of residents. No holographic grid, no interface, no menus, no floating cards, no letters A or B, no text or numerals, no arrows, no dots or schematic branches, no split screen, no watermark. Do not reveal an alternate neighborhood/choice: this frame shows ONLY the broadly illuminated B preview. Leave a quiet band of midnight sky in the top fifth. Do not add any sun or dawn. The image must be fully finished original artwork suitable for a large reader illustration, not a sketch or placeholder.",
+      "references": [
+        "/workspace/lost-dreams-character-candidates/assets/sequence19-22/ep19-home-life-web.webp",
+        "/workspace/lost-dreams-character-candidates/assets/sequence19-22/ep19-windows-web.webp"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-27c389e0-9876-4c0f-8f01-623b6c55e45c.png",
+          "sourceSha256": "1c1f776b752f32ebf2774f60a9fdab57dbfa23028fbc646e6a8e7ac9eb19d5cf",
+          "actualNativeDimensions": [
+            1536,
+            1024
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "promptSource": "/tmp/ep19-b-preview-generation.json",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/assets/sequence19-22/ep19-home-life-web.webp",
+            "/workspace/lost-dreams-character-candidates/assets/sequence19-22/ep19-windows-web.webp"
+          ]
+        }
+      ]
     }
   ],
   "internalCharacterReference": {
