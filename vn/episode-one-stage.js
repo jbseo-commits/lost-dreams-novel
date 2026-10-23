@@ -1,7 +1,7 @@
 export class EpisodeOneStage {
   constructor(host,assets,{onInspect,onEvidence}={}){
     this.host=host;this.assets=assets;this.currentCg='';this.currentScene=-1;this.actorState=new Map();
-    this.frameTimer=0;
+    this.frameTimer=0;this.frameGeneration=0;this.frameDecodePending=false;this.frameAutoCompleted=false;this.noMotion=false;
     this.cg=document.createElement('div');this.cg.className='ep1-cg';
     this.actors=document.createElement('div');this.actors.className='ep1-actors';
     this.panel=document.createElement('section');this.panel.className='ep1-document';this.panel.hidden=true;this.panel.setAttribute('aria-label','장면 속 퇴직 의사 확인서');
@@ -11,7 +11,7 @@ export class EpisodeOneStage {
     this.inspect=document.createElement('button');this.inspect.type='button';this.inspect.className='ep12-art-button';this.inspect.textContent='전체 그림';this.inspect.hidden=true;
     this.inspect.addEventListener('click',event=>{event.stopPropagation();if(this.inspectCue&&onInspect)onInspect(this.inspectCue);});
     this.frameButton=document.createElement('button');this.frameButton.type='button';this.frameButton.className='ep12-art-button ep1-frame-button';this.frameButton.textContent='세부 장면';this.frameButton.hidden=true;
-    this.frameButton.addEventListener('click',event=>{event.stopPropagation();clearTimeout(this.frameTimer);this.frameTimer=0;this.frameIndex=(this.frameIndex+1)%this.frameCount;this.paintFrame();});
+    this.frameButton.addEventListener('click',event=>{event.stopPropagation();this.showNextFrameManually();});
     this.board=document.createElement('section');this.board.className='core-board';this.board.hidden=true;
     this.boardButton=document.createElement('button');this.boardButton.type='button';this.boardButton.textContent='관찰 기록 펼치기';
     this.boardButton.addEventListener('click',event=>{event.stopPropagation();if(this.boardCue&&onEvidence)onEvidence(this.boardCue);});
@@ -33,6 +33,7 @@ export class EpisodeOneStage {
     stage.dataset.ep1DocumentPhase=cue.document?.phase||'';
     stage.classList.toggle('ep1-blackout',cue.blackout);stage.classList.toggle('ep1-intro',cue.intro);stage.classList.toggle('ep1-cg-active',Boolean(cue.cg));
     const noMotion=instant||reducedMotion||matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.noMotion=noMotion;
     this.host.classList.toggle('ep1-no-motion',noMotion);
     this.host.dataset.shot=cue.shot;
     this.host.dataset.cg=cue.cg||'';
@@ -47,15 +48,17 @@ export class EpisodeOneStage {
       this.cg.dataset.impact=String(impact);
     }
     const frameSignature=JSON.stringify(cue.cutscene?.frames||[]);
-    if(cue.cg!==this.currentCg||frameSignature!==this.frameSignature){
-      clearTimeout(this.frameTimer);this.frameTimer=0;
+    const frameSetChanged=cue.cg!==this.currentCg||frameSignature!==this.frameSignature;
+    if(frameSetChanged){
+      this.cancelFrameTransition();this.frameDecodePending=false;this.frameAutoCompleted=false;
       this.frameList=cue.cutscene?.frames?.length?cue.cutscene.frames:cue.cg?[{cg:cue.cg,alt:cue.cutscene?.alt||''}]:[];this.frameCount=this.frameList.length;this.frameIndex=noMotion&&this.frameCount?this.frameCount-1:0;this.frameSignature=frameSignature;
       this.cg.replaceChildren();this.cg.style.backgroundImage=cue.cg?`url("${this.assets[cue.cg]}")`:'';
       for(let i=0;i<this.frameList.length;i++){const img=document.createElement('img');img.src=this.assets[this.frameList[i].cg];img.alt=this.frameList[i].alt||'';img.dataset.frame=String(i);if(i)img.hidden=true;this.cg.append(img);}
       this.currentCg=cue.cg;
-      if(!noMotion&&this.frameCount>1){this.frameTimer=setTimeout(()=>{this.frameTimer=0;if(this.frameSignature===frameSignature){this.frameIndex=this.frameCount-1;this.paintFrame();}},1400);}
     }
-    if(noMotion&&this.frameCount){clearTimeout(this.frameTimer);this.frameTimer=0;this.frameIndex=this.frameCount-1;}
+    if(noMotion&&this.frameCount){this.cancelFrameTransition();this.frameDecodePending=false;this.frameAutoCompleted=true;this.frameIndex=this.frameCount-1;}
+    else if(!frameSetChanged&&this.frameAutoCompleted){}
+    else if(this.frameCount>1&&!this.frameDecodePending&&!this.frameTimer)this.scheduleFrameTransition();
     this.paintFrame();this.frameButton.hidden=this.frameCount<2;
     this.cg.hidden=!cue.cg;this.wall.hidden=!cue.wallAd;
     this.lids.classList.toggle('closed',cue.intro||cue.blackout);
@@ -98,8 +101,54 @@ export class EpisodeOneStage {
     this.frameButton.textContent=this.frameIndex===0?'세부 장면':'전체 장면';
     this.frameButton.setAttribute('aria-label',this.frameIndex===0?'세부 장면 보기':'전체 장면 보기');
   }
+  cancelFrameTransition(){
+    clearTimeout(this.frameTimer);this.frameTimer=0;this.frameGeneration++;
+  }
+  async decodeFrameImages(generation){
+    const images=[...this.cg.querySelectorAll('img')];
+    if(images.length<2)return false;
+    const ready=await Promise.all(images.map(img=>this.decodeFrameImage(img,generation)));
+    return generation===this.frameGeneration?{ready,allReady:ready.every(Boolean)}:{ready:[],allReady:false};
+  }
+  async decodeFrameImage(img,generation){
+    if(!img)return false;
+    if(!img.complete){await new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true});});}
+    if(generation!==this.frameGeneration||!img.complete||img.naturalWidth<=0)return false;
+    try{await img.decode();}catch{return false;}
+    return generation===this.frameGeneration&&img.complete&&img.naturalWidth>0;
+  }
+  scheduleFrameTransition(){
+    if(this.frameAutoCompleted||this.frameDecodePending||this.frameCount<2||this.noMotion)return;
+    const generation=++this.frameGeneration,signature=this.frameSignature;
+    this.frameDecodePending=true;
+    this.decodeFrameImages(generation).then(ready=>{
+      if(generation!==this.frameGeneration||this.frameSignature!==signature)return;
+      this.frameDecodePending=false;
+      if(!ready.allReady){
+        if(!ready.ready[this.frameIndex]){const fallback=ready.ready.findIndex(Boolean);if(fallback>=0){this.frameIndex=fallback;this.paintFrame();}}
+        this.frameAutoCompleted=true;return;
+      }
+      if(this.noMotion){this.frameAutoCompleted=true;this.frameIndex=this.frameCount-1;this.paintFrame();return;}
+      this.frameTimer=setTimeout(()=>{
+        this.frameTimer=0;
+        if(generation!==this.frameGeneration||this.frameSignature!==signature||this.noMotion)return;
+        this.frameAutoCompleted=true;this.frameIndex=this.frameCount-1;this.paintFrame();
+      },1400);
+    });
+  }
+  async showNextFrameManually(){
+    if(this.frameCount<2)return;
+    const generation=++this.frameGeneration;clearTimeout(this.frameTimer);this.frameTimer=0;this.frameAutoCompleted=true;this.frameDecodePending=true;
+    const images=[...this.cg.querySelectorAll('img')];
+    const target=(this.frameIndex+1)%this.frameCount;
+    const ready=await this.decodeFrameImage(images[target],generation);
+    if(generation!==this.frameGeneration)return;
+    this.frameDecodePending=false;
+    if(ready)this.frameIndex=target;
+    this.paintFrame();
+  }
   clear(){
-    clearTimeout(this.frameTimer);this.frameTimer=0;
+    this.cancelFrameTransition();this.frameDecodePending=false;this.frameAutoCompleted=true;this.noMotion=false;
     this.host.hidden=true;this.host.parentElement.classList.remove('episode-one','episode-two','core-scene','ep1-blackout','ep1-intro','ep1-cg-active');this.host.parentElement.dataset.ep1Actors='';this.host.parentElement.dataset.ep1DocumentPhase='';this.actorState.clear();this.actors.replaceChildren();this.currentScene=-1;
     this.cg.replaceChildren();this.cg.style.backgroundImage='';this.cg.classList.remove('ep12-cut-impact');this.cg.dataset.impact='';this.cg.dataset.phase='';this.currentCg='';this.frameSignature='';this.frameList=[];this.frameCount=0;this.frameIndex=0;this.frameButton.hidden=true;
     this.host.dataset.cutscene='';this.host.dataset.cg='';this.host.dataset.shot='';this.host.dataset.dream='false';this.host.dataset.holdMotion='false';this.panel.hidden=true;this.wall.hidden=true;this.inspect.hidden=true;this.inspectCue=null;
