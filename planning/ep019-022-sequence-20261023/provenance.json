@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "scope": "18 cinematic scenes, each with separately generated web and VN artwork (36 final files). PNG originals remain in /workspace/generated_images; no resize or crop.",
+  "scope": "18 static web scene illustrations plus 19 VN cutscene images (37 packaged files). The new ep19-b-preview is VN-only, copied byte-for-byte from the accepted 1536×1024 WebP; original PNGs remain preserved.",
   "status": "complete",
   "sourcePolicy": "PNG originals remain in /workspace/generated_images; do not resize or crop. Native dimensions returned by generation are recorded even when they differ from requested dimensions.",
   "assets": [
@@ -1900,7 +1900,7 @@
     },
     {
       "id": "ep19-b-preview",
-      "format": "web",
+      "format": "vn",
       "sourcePng": "/workspace/generated_images/exec-27c389e0-9876-4c0f-8f01-623b6c55e45c.png",
       "sourceSha256": "1c1f776b752f32ebf2774f60a9fdab57dbfa23028fbc646e6a8e7ac9eb19d5cf",
       "requestedDimensions": "landscape 3:2",
@@ -1909,7 +1909,7 @@
         1024
       ],
       "sourceMode": "RGB",
-      "encodedFile": "assets/sequence19-22/ep19-b-preview-web.webp",
+      "encodedFile": "vn/assets/sequence19-22/ep19-b-preview-vn.webp",
       "mime": "image/webp",
       "encodedDimensions": [
         1536,
@@ -1941,7 +1941,8 @@
             "/workspace/lost-dreams-character-candidates/assets/sequence19-22/ep19-windows-web.webp"
           ]
         }
-      ]
+      ],
+      "role": "B-preview cinematic VN cut at chapter 19 beat 46; copied byte-for-byte from existing web art, no re-encoding/crop/resize."
     }
   ],
   "internalCharacterReference": {

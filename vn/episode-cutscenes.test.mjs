@@ -13,8 +13,8 @@ const box={window:{}};vm.runInNewContext(await readFile(new URL('./story-data.js
 const chapter=id=>box.window.STORY.chapters.find(c=>c.id===id);
 const at=(id,i)=>id==='1'?episodeOneDirection(chapter(id),i):id==='2'?episodeTwoDirection(chapter(id),i):eventCutsceneDirection(chapter(id),i);
 
-test('52 event inserts cover the original 30 chapters plus the authorized 19–22 interludes and exact source actions',()=>{
-  assert.equal(EPISODE_CUTSCENES.length,52);
+test('53 event inserts cover the original 30 chapters plus the authorized 19–22 interludes and exact source actions',()=>{
+  assert.equal(EPISODE_CUTSCENES.length,53);
   assert.deepEqual([...new Set(EPISODE_CUTSCENES.map(c=>c.chapter))],Array.from({length:30},(_,i)=>String(i+1)).concat(['19-1','20-1','21-1','22-1']));
   for(const cut of EPISODE_CUTSCENES){
     assert.equal(chapter(cut.chapter).beats[cut.start].text,cut.anchor);
@@ -27,6 +27,15 @@ test('52 event inserts cover the original 30 chapters plus the authorized 19–2
     const changedEnd=structuredClone(chapter(cut.chapter));changedEnd.beats[cut.end].text='다른 끝';assert.equal(withEpisodeCutscene(original,changedEnd,cut.start),original);
   }
 });
+test('B preview is placed at beat 46 with exact fingerprint and native image copy',async()=>{
+ const cut=EPISODE_CUTSCENES.find(c=>c.cg==='ep19-b-preview');assert.ok(cut);assert.equal(cut.chapter,'19');assert.equal(cut.start,46);assert.equal(cut.end,46);
+ assert.equal(chapter('19').beats[46].text,'새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다.');assert.equal(at('19',46).cg,'ep19-b-preview');
+ assert.equal(EP1_ASSETS['ep19-b-preview'],'assets/sequence19-22/ep19-b-preview-vn.webp');
+ const vn=await readFile(new URL('./assets/sequence19-22/ep19-b-preview-vn.webp',import.meta.url));
+ assert.equal(createHash('sha256').update(vn).digest('hex'),'f2c1111bb56928603d1f0952e93ecb7ad25564f0d6b77a4f0522b11eb9cdb979');
+ const manifest=JSON.parse(await readFile(new URL('../planning/ep019-022-sequence-20261023/provenance.json',import.meta.url)));const record=manifest.assets.find(a=>a.id==='ep19-b-preview'&&a.format==='vn');assert.deepEqual(record.encodedDimensions,[1536,1024]);assert.equal(record.resizedOrCropped,false);assert.equal(record.bytes,vn.length);
+});
+
 test('approval color, risks and separate press events follow source order without a new choice',()=>{
   assert.equal(at('1',122).cutscene.phase,'plain');assert.equal(at('1',122).cutscene.impact,122);
   assert.equal(at('1',123).cutscene.phase,'amber');assert.equal(at('1',123).document.showRisks,false);
@@ -94,15 +103,16 @@ test('every selected drawing is distinct, packaged, and matches its recorded pro
     }else if(path?.startsWith('assets/sequence19-22/')){
       assert.equal(path,`assets/sequence19-22/${cut.cg}-vn.webp`);
       const asset=sequence.assets.find(item=>item.id===cut.cg&&item.format==='vn');assert.ok(asset,cut.cg);
-      assert.ok(!ids.has(asset.sha256),cut.cg);ids.add(asset.sha256);
+      if(cut.cg==='ep19-b-preview') assert.equal(asset.encodedDimensions.join('x'),'1536x1024');
+      else {assert.ok(!ids.has(asset.sha256),cut.cg);ids.add(asset.sha256);}
       const bytes=await readFile(new URL('./'+path,import.meta.url));
       assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);assert.equal(bytes.length,asset.bytes);
       assert.equal(bytes.subarray(0,4).toString(),'RIFF');assert.equal(bytes.subarray(8,12).toString(),'WEBP');
     }else assert.ok(path?.startsWith('assets/cutscenes/'),cut.cg);
   }
-  for(const id of [...new Set(EPISODE_CUTSCENES.filter(c=>/^(19|20|21|22)/.test(c.chapter)).map(c=>c.cg).filter(c=>c.startsWith('ep')))]){
+  for(const id of [...new Set(EPISODE_CUTSCENES.filter(c=>/^(19|20|21|22)/.test(c.chapter)).map(c=>c.cg).filter(c=>c.startsWith('ep')&&c!=='ep19-b-preview'))]){
     const asset=sequence.assets.find(item=>item.id===id&&item.format==='web');assert.ok(asset,id);
-    assert.ok(!ids.has(asset.sha256),id);ids.add(asset.sha256);
+    if(id!=='ep19-b-preview'){assert.ok(!ids.has(asset.sha256),id);ids.add(asset.sha256);}
     const bytes=await readFile(new URL('../assets/sequence19-22/'+id+'-web.webp',import.meta.url));
     assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);assert.equal(bytes.length,asset.bytes);
     assert.equal(bytes.subarray(0,4).toString(),'RIFF');assert.equal(bytes.subarray(8,12).toString(),'WEBP');

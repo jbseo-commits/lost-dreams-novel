@@ -1,4 +1,4 @@
-import {coreDemoStory} from './core-demo.js?v=ep03-cinematic-20261023-r3';
+import {coreDemoStory} from './core-demo.js?v=ep03-media-split-20261023-r1';
 
 // 실제 판매처가 확정되면 HTTPS 구매 주소만 지정한다. 브라우저에서 본편을 해제하지 않는다.
 export const RELEASE = Object.freeze({

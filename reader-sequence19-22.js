@@ -1,9 +1,8 @@
 // The text stays authoritative: show each frame only after its exact source paragraph.
 window.ReaderSequences = (() => {
   const cuts = [
-    { ep: '19', id: 'ep19-door', anchor: '서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.', alt: '붉은 문턱 밖에 멈춘 서인과 안쪽의 강연우, 두 사람 사이의 면담실 문', motion: {kind:'wrist-dissolve',durationMs:2600} },
-    { ep: '19', id: 'ep19-wrist-detail', anchor: '띠 아래 오른손목에는 어제 붙잡혔던 자국이 시퍼렇게 남아 있었다. 띠를 자국 위에서 살짝 비켜 끼우자 강연우의 눈이 그 손에 머물렀다. 서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.', alt: '강연우의 시선이 머문 서인의 오른 손목 띠와 푸른 멍 자국', motion: {kind:'wrist-dissolve',durationMs:2600} },
-    { ep: '19', id: 'ep19-b-preview', anchor: '새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다.', alt: '새벽의 주택가를 내려다본 장면. 어두운 거리와 따뜻하게 불이 켜진 창문들.', caption: 'B 미리보기.', motion: {kind:'window-light',durationMs:2700} },
+    { ep: '19', id: 'ep19-door', anchor: '서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.', alt: '붉은 문턱 밖에 멈춘 서인과 안쪽의 강연우, 두 사람 사이의 면담실 문' },
+    { ep: '19', id: 'ep19-wrist-detail', anchor: '띠 아래 오른손목에는 어제 붙잡혔던 자국이 시퍼렇게 남아 있었다. 띠를 자국 위에서 살짝 비켜 끼우자 강연우의 눈이 그 손에 머물렀다. 서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.', alt: '강연우의 시선이 머문 서인의 오른 손목 띠와 푸른 멍 자국' },
     { ep: '19', id: 'ep19-windows', anchor: 'A를 누르자 옆 동네에 불이 몇 개 켜졌다. 서른여섯 집. 그것도 운이 나쁠 때 얘기였다.', alt: '최종 선택 전, A와 B의 예상 영향을 나란히 보여 주는 지도. 한쪽은 넓은 구역에 많은 불빛, 다른 쪽은 36집의 불빛이다.', caption: '아직 최종 선택 전인 A와 B 미리보기: 두 선택의 예상 영향을 나란히 보여 준다.' },
     { ep: '19', id: 'ep19-home-life', anchor: '예측 화면일 뿐인데 불빛만은 진짜 같았다.', alt: 'B를 선택할 경우의 예상 생활을 보여 주는 불 켜진 창들: 아기를 안고 일어나는 집, 잠들지 못해 부엌에 선 사람, 앞당긴 출근 알람', caption: 'B를 선택할 경우의 예상 생활. 지금 일어나는 현실 장면이 아니라 예측 화면이다.' },
     { ep: '19-1', id: 'ep19-1-alley', anchor: '냉장차가 컨테이너 사이를 꽉 막고 섰다.', alt: '컨테이너 통로에서 냉장차와 지게차가 회색 승합차의 길을 막고 서인을 돕는 장면' },
@@ -22,8 +21,6 @@ window.ReaderSequences = (() => {
     { ep: '22-1', id: 'ep22-1-paper', anchor: '백윤하가 종이 한 장을 탁자 가운데로 밀었다.', alt: '아침 임원회의의 긴 탁자 가운데로 종이를 미는 백윤하의 손' },
   ];
 
-  let observer = null, classObserver = null, motionMedia = null, motionChange = null, motionListener = null, lifecycle = 0;
-  const reduced = () => document.body.classList.contains('ldx-off') || !!motionMedia?.matches;
   function image(cut, extra='') {
     return `<img class="sequence-frame ${extra}" data-cut-id="${cut.id}" src="assets/sequence19-22/${cut.id}-web.webp" alt="${cut.alt}" loading="lazy" decoding="async">`;
   }
@@ -32,76 +29,11 @@ window.ReaderSequences = (() => {
     const result = [];
     for (let i=0; i<matched.length; i++) {
       const cut = matched[i];
-      if (cut.id === 'ep19-door' && matched[i+1]?.id === 'ep19-wrist-detail') {
-        const detail = matched[++i];
-        result.push(`<figure class="sequence-cut sequence-cut-pair" data-cut-id="ep19-door+ep19-wrist-detail" data-sequence-motion="wrist-dissolve" style="--motion-duration:${cut.motion.durationMs}ms"><div class="sequence-cut-frames">${image(cut,'sequence-frame-wide')}${image(detail,'sequence-frame-detail')}</div><details class="sequence-frame-access"><summary>두 장면 함께 보기</summary><a href="assets/sequence19-22/${cut.id}-web.webp" target="_blank" rel="noopener">문턱 전체 장면</a><a href="assets/sequence19-22/${detail.id}-web.webp" target="_blank" rel="noopener">손목 세부 장면</a></details></figure>`);
-        continue;
-      }
-      const motion = cut.motion ? ` data-sequence-motion="${cut.motion.kind}" style="--motion-duration:${cut.motion.durationMs}ms"` : '';
-      result.push(`<figure class="sequence-cut" data-cut-id="${cut.id}"${motion}>${image(cut)}${cut.caption?`<figcaption>${cut.caption}</figcaption>`:''}</figure>`);
+      result.push(`<figure class="sequence-cut" data-cut-id="${cut.id}">${image(cut)}${cut.caption?`<figcaption>${cut.caption}</figcaption>`:''}</figure>`);
     }
     return result;
   }
-  function settle(el) {
-    el.classList.remove('is-moving');
-    el.classList.add('is-settled');
-    if (reduced()) el.classList.add('is-no-motion');
-  }
-  function imageReady(img) {
-    if (!img) return Promise.resolve();
-    const loaded = img.complete ? Promise.resolve() : new Promise(resolve => {
-      img.addEventListener('load',resolve,{once:true});
-      img.addEventListener('error',resolve,{once:true});
-    });
-    return loaded.then(()=>typeof img.decode==='function' ? img.decode().catch(()=>{}) : undefined);
-  }
-  function restore() {
-    lifecycle++;
-    if (observer) observer.disconnect(); observer=null;
-    if (classObserver) classObserver.disconnect(); classObserver=null;
-    if (motionListener) document.removeEventListener('animationend',motionListener); motionListener=null;
-    if (motionMedia && motionChange) {
-      if (motionMedia.removeEventListener) motionMedia.removeEventListener('change',motionChange);
-      else motionMedia.removeListener(motionChange);
-    }
-    motionMedia=null; motionChange=null;
-  }
-  function mount() {
-    restore();
-    const current = lifecycle;
-    const figures=[...document.querySelectorAll('[data-sequence-motion]')];
-    if (!figures.length) return;
-    motionMedia=window.matchMedia?.('(prefers-reduced-motion: reduce)')||null;
-    const reveal=el=>{
-      if (el.classList.contains('is-moving')||el.classList.contains('is-settled')) return;
-      if (reduced()) { settle(el); return; }
-      const frames=[...el.querySelectorAll('img.sequence-frame')];
-      Promise.all(frames.map(imageReady)).then(()=>{
-        if (current !== lifecycle || !el.isConnected || el.classList.contains('is-settled')) return;
-        if (reduced() || frames.some(frame=>!frame.complete || frame.naturalWidth===0)) {
-          el.classList.add('is-no-motion'); settle(el); return;
-        }
-        el.classList.add('is-moving');
-      });
-    };
-    motionListener=event=>{ if (event.target?.closest?.('[data-sequence-motion]')) settle(event.target.closest('[data-sequence-motion]')); };
-    document.addEventListener('animationend',motionListener);
-    const stopAll=()=>figures.filter(el=>el.classList.contains('is-moving')).forEach(settle);
-    classObserver=new MutationObserver(()=>{ if (document.body.classList.contains('ldx-off')) stopAll(); });
-    classObserver.observe(document.body,{attributes:true,attributeFilter:['class']});
-    motionChange=event=>{ if(event.matches) stopAll(); };
-    if(motionMedia) {
-      if(motionMedia.addEventListener) motionMedia.addEventListener('change',motionChange);
-      else motionMedia.addListener(motionChange);
-    }
-    if (!('IntersectionObserver' in window)) {
-      figures.forEach(el=>{el.classList.add('is-no-motion');settle(el);});
-      return;
-    }
-    observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
-      if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target);}
-    }),{threshold:.08,rootMargin:'0px 0px 24px 0px'});
-    figures.forEach(el=>observer.observe(el));
-  }
+  function restore() {}
+  function mount() {}
   return Object.freeze({cuts:Object.freeze(cuts.map(Object.freeze)),afterParagraph,mount,restore});
 })();

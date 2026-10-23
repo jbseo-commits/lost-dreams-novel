@@ -1,0 +1,675 @@
+{
+  "status": "PASS",
+  "scope": "Web Reader information graphics plus actual VN app B-cut scene; VN app uses a Playwright-only full-story/canRead fixture, while production public demo remains limited to 18 chapters through chapter 11.",
+  "externalRequests": "aborted by Playwright route",
+  "results": {
+    "web19": {
+      "delivery": {
+        "fx": {
+          "ariaPressed": "true",
+          "bodyLdxOff": false
+        },
+        "start": {
+          "className": "reader-info-graphic reveal seen",
+          "width": 326,
+          "height": 168.578125,
+          "viewport": {
+            "w": 390,
+            "h": 844
+          },
+          "effectiveOpacity": 0.307958,
+          "ancestorFilters": [],
+          "minTextFont": 14,
+          "textFonts": [
+            {
+              "text": "한 주문의 약속·예상과 07:00 출차",
+              "size": 14
+            },
+            {
+              "text": "07:00",
+              "size": 14
+            },
+            {
+              "text": "교대 기사 출차",
+              "size": 14
+            },
+            {
+              "text": "06:00 전",
+              "size": 14
+            },
+            {
+              "text": "안내 약속",
+              "size": 14
+            },
+            {
+              "text": "07:00 이후",
+              "size": 14
+            },
+            {
+              "text": "시스템 예상",
+              "size": 14
+            }
+          ],
+          "animations": [
+            {
+              "name": "info-track",
+              "state": "running",
+              "currentTime": 16.69499998791224
+            },
+            {
+              "name": "info-arrive-point",
+              "state": "running",
+              "currentTime": 16.69499998791224
+            },
+            {
+              "name": "info-arrive-point",
+              "state": "running",
+              "currentTime": 16.69499998791224
+            }
+          ],
+          "transforms": [
+            {
+              "class": "info-axis-line",
+              "opacity": "1",
+              "transform": "matrix(0.0641336, 0, 0, 1, 0, 0)"
+            },
+            {
+              "class": "info-delivery-point",
+              "opacity": "0.458633",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)"
+            },
+            {
+              "class": "info-delivery-point",
+              "opacity": "0.45",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          ]
+        },
+        "painted": {
+          "effectiveOpacity": 0.995043,
+          "ancestorFilters": []
+        },
+        "middle": {
+          "animations": [
+            {
+              "name": "info-track",
+              "state": "finished",
+              "currentTime": 1900
+            },
+            {
+              "name": "info-arrive-point",
+              "state": "finished",
+              "currentTime": 1800
+            },
+            {
+              "name": "info-arrive-point",
+              "state": "running",
+              "currentTime": 1916.594999987911
+            }
+          ],
+          "transforms": [
+            {
+              "class": "info-axis-line",
+              "opacity": "1",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)"
+            },
+            {
+              "class": "info-delivery-point",
+              "opacity": "1",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)"
+            },
+            {
+              "class": "info-delivery-point",
+              "opacity": "0.98079",
+              "transform": "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          ]
+        },
+        "end": {
+          "className": "reader-info-graphic reveal seen id-still",
+          "height": 168.578125,
+          "settled": true,
+          "animations": []
+        },
+        "toggle": null
+      },
+      "choice": {
+        "fx": {
+          "ariaPressed": "true",
+          "bodyLdxOff": false
+        },
+        "start": {
+          "className": "reader-info-graphic reveal seen",
+          "width": 326,
+          "height": 100.671875,
+          "viewport": {
+            "w": 390,
+            "h": 844
+          },
+          "effectiveOpacity": 0.43795,
+          "ancestorFilters": [],
+          "minTextFont": 14,
+          "textFonts": [
+            {
+              "text": "선택에 따른 영향",
+              "size": 14
+            },
+            {
+              "text": "B",
+              "size": 14
+            },
+            {
+              "text": "2,400집이 한꺼번에 깸",
+              "size": 14
+            },
+            {
+              "text": "↔",
+              "size": 14
+            },
+            {
+              "text": "A",
+              "size": 14
+            },
+            {
+              "text": "36집 · 운이 나쁠 때",
+              "size": 14
+            }
+          ],
+          "animations": [
+            {
+              "name": "info-arrive",
+              "state": "running",
+              "currentTime": 116.69899998249811
+            },
+            {
+              "name": "relation-arrive",
+              "state": "running",
+              "currentTime": 116.69899998249811
+            },
+            {
+              "name": "info-arrive",
+              "state": "running",
+              "currentTime": 116.69899998249811
+            }
+          ],
+          "transforms": [
+            {
+              "class": "",
+              "opacity": "0.500124",
+              "transform": "matrix(1, 0, 0, 1, 0, 1.52689)"
+            },
+            {
+              "class": "",
+              "opacity": "0.45",
+              "transform": "matrix(1, 0, 0, 1, 0, 1.68)"
+            }
+          ]
+        },
+        "painted": {
+          "effectiveOpacity": 0.995043,
+          "ancestorFilters": []
+        },
+        "middle": {
+          "animations": [
+            {
+              "name": "info-arrive",
+              "state": "running",
+              "currentTime": 1899.9329999825002
+            },
+            {
+              "name": "relation-arrive",
+              "state": "running",
+              "currentTime": 1899.9329999825002
+            },
+            {
+              "name": "info-arrive",
+              "state": "running",
+              "currentTime": 1899.9329999825002
+            }
+          ],
+          "transforms": [
+            {
+              "class": "",
+              "opacity": "0.991461",
+              "transform": "matrix(1, 0, 0, 1, 0, 0.0260814)"
+            },
+            {
+              "class": "",
+              "opacity": "0.92465",
+              "transform": "matrix(1, 0, 0, 1, 0, 0.230161)"
+            }
+          ]
+        },
+        "end": {
+          "className": "reader-info-graphic reveal seen id-still",
+          "height": 100.671875,
+          "settled": true,
+          "animations": []
+        },
+        "toggle": null
+      },
+      "desktop": {
+        "width": 700,
+        "height": 189.15625,
+        "overflow": false
+      },
+      "fxOffOn": {
+        "toggleOff": {
+          "className": "reader-info-graphic reveal seen id-still",
+          "activeAnimations": []
+        },
+        "toggleOn": {
+          "className": "reader-info-graphic reveal seen id-still",
+          "activeAnimations": []
+        }
+      },
+      "reducedMotion": {
+        "className": "reader-info-graphic reveal seen id-still",
+        "animations": []
+      }
+    },
+    "web22": {
+      "computeBranch": {
+        "fx": {
+          "ariaPressed": "true",
+          "bodyLdxOff": false
+        },
+        "start": {
+          "className": "reader-info-graphic reveal seen",
+          "width": 326,
+          "height": 120.96875,
+          "viewport": {
+            "w": 390,
+            "h": 844
+          },
+          "effectiveOpacity": 0.335145,
+          "ancestorFilters": [],
+          "minTextFont": 14,
+          "textFonts": [
+            {
+              "text": "연산 회수와 진행 유지",
+              "size": 14
+            },
+            {
+              "text": "회수",
+              "size": 14
+            },
+            {
+              "text": "아이의 네 번째 검증을 당김 · 공공 검증 중단",
+              "size": 14
+            },
+            {
+              "text": "↔",
+              "size": 14
+            },
+            {
+              "text": "유지",
+              "size": 14
+            },
+            {
+              "text": "공공 검사 11건 끝까지 · 대기 4건은 내일",
+              "size": 14
+            }
+          ],
+          "animations": [
+            {
+              "name": "info-arrive",
+              "state": "running",
+              "currentTime": 50.00500000398489
+            },
+            {
+              "name": "relation-arrive",
+              "state": "running",
+              "currentTime": 50.00500000398489
+            },
+            {
+              "name": "info-arrive",
+              "state": "running",
+              "currentTime": 50.00500000398489
+            }
+          ],
+          "transforms": [
+            {
+              "class": "",
+              "opacity": "0.474152",
+              "transform": "matrix(1, 0, 0, 1, 0, 1.60623)"
+            },
+            {
+              "class": "",
+              "opacity": "0.45",
+              "transform": "matrix(1, 0, 0, 1, 0, 1.68)"
+            }
+          ]
+        },
+        "painted": {
+          "effectiveOpacity": 0.992752,
+          "ancestorFilters": []
+        },
+        "middle": {
+          "animations": [
+            {
+              "name": "info-arrive",
+              "state": "running",
+              "currentTime": 1866.607000003988
+            },
+            {
+              "name": "relation-arrive",
+              "state": "running",
+              "currentTime": 1866.607000003988
+            },
+            {
+              "name": "info-arrive",
+              "state": "running",
+              "currentTime": 1866.607000003988
+            }
+          ],
+          "transforms": [
+            {
+              "class": "",
+              "opacity": "0.999685",
+              "transform": "matrix(1, 0, 0, 1, 0, 0.000961563)"
+            },
+            {
+              "class": "",
+              "opacity": "0.952743",
+              "transform": "matrix(1, 0, 0, 1, 0, 0.144348)"
+            }
+          ]
+        },
+        "end": {
+          "className": "reader-info-graphic reveal seen id-still",
+          "height": 120.96875,
+          "settled": true,
+          "animations": []
+        },
+        "toggle": null
+      }
+    },
+    "webDomCoverage": {
+      "19": {
+        "expected": 2,
+        "actual": 2
+      },
+      "20": {
+        "expected": 3,
+        "actual": 3
+      },
+      "21": {
+        "expected": 2,
+        "actual": 2
+      },
+      "22": {
+        "expected": 3,
+        "actual": 3
+      },
+      "19-1": {
+        "expected": 2,
+        "actual": 2
+      },
+      "20-1": {
+        "expected": 1,
+        "actual": 1
+      },
+      "21-1": {
+        "expected": 2,
+        "actual": 2
+      },
+      "22-1": {
+        "expected": 3,
+        "actual": 3
+      }
+    },
+    "webMotionCoverage": {
+      "19": {
+        "kind": "delivery",
+        "start": {
+          "height": 168.578125,
+          "animations": [
+            null,
+            null,
+            "info-track",
+            "info-arrive-point",
+            "info-arrive-point"
+          ]
+        },
+        "end": {
+          "height": 168.578125,
+          "settled": true,
+          "active": []
+        }
+      },
+      "20": {
+        "kind": "compare",
+        "start": {
+          "height": 145.046875,
+          "animations": [
+            null,
+            null,
+            "info-arrive",
+            "relation-arrive",
+            "info-arrive"
+          ]
+        },
+        "end": {
+          "height": 145.046875,
+          "settled": true,
+          "active": []
+        }
+      },
+      "21": {
+        "kind": "compare",
+        "start": {
+          "height": 120.96875,
+          "animations": [
+            null,
+            null,
+            "info-arrive",
+            "relation-arrive",
+            "info-arrive"
+          ]
+        },
+        "end": {
+          "height": 120.96875,
+          "settled": true,
+          "active": []
+        }
+      },
+      "22": {
+        "kind": "compute-branch",
+        "start": {
+          "height": 120.96875,
+          "animations": [
+            null,
+            null,
+            "info-arrive",
+            "relation-arrive",
+            "info-arrive"
+          ]
+        },
+        "end": {
+          "height": 120.96875,
+          "settled": true,
+          "active": []
+        }
+      },
+      "19-1": {
+        "kind": "promise",
+        "start": {
+          "height": 102.765625,
+          "animations": [
+            null,
+            null,
+            "info-track",
+            "info-arrive",
+            "info-arrive",
+            "info-arrive"
+          ]
+        },
+        "end": {
+          "height": 102.765625,
+          "settled": true,
+          "active": []
+        }
+      },
+      "20-1": {
+        "kind": "alarms",
+        "start": {
+          "height": 123.046875,
+          "animations": [
+            null,
+            null,
+            "info-arrive",
+            "info-arrive"
+          ]
+        },
+        "end": {
+          "height": 123.046875,
+          "settled": true,
+          "active": []
+        }
+      },
+      "21-1": {
+        "kind": "structure",
+        "start": {
+          "height": 136.375,
+          "animations": [
+            null,
+            null,
+            "info-arrive",
+            "brace-slide"
+          ]
+        },
+        "end": {
+          "height": 136.375,
+          "settled": true,
+          "active": []
+        }
+      },
+      "22-1": {
+        "kind": "promise",
+        "start": {
+          "height": 226.28125,
+          "animations": [
+            null,
+            null,
+            "info-arrive",
+            "info-arrive",
+            "info-arrive",
+            "info-arrive",
+            "info-arrive",
+            "info-arrive"
+          ]
+        },
+        "end": {
+          "height": 226.28125,
+          "settled": true,
+          "active": []
+        }
+      }
+    },
+    "vn19B": {
+      "chapterLabel": "19화",
+      "chapterTitle": "제19화. 문 앞에 선 사람",
+      "sourceText": "새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다.",
+      "image": {
+        "src": "assets/sequence19-22/ep19-b-preview-vn.webp",
+        "alt": "새벽 주택가의 창문에 불빛이 들어온 장면. 아직 A 선택이나 생활 상세는 나오지 않는다.",
+        "natural": [
+          1536,
+          1024
+        ],
+        "objectFit": "contain",
+        "rect": {
+          "x": 0,
+          "y": 109.71875,
+          "w": 390,
+          "h": 489.515625
+        }
+      },
+      "scene": "ep19-b-preview",
+      "publicRuntimeBoundary": "teaser-art-20261021-r1",
+      "saveAt46": {
+        "progress": {
+          "chapterId": "19",
+          "beatIndex": 46,
+          "choices": {},
+          "finished": false
+        },
+        "timestamp": 1792735120938,
+        "preview": "새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다."
+      },
+      "reloadContinue": {
+        "text": "새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다.",
+        "cg": "ep19-b-preview"
+      },
+      "navigation": {
+        "before": {
+          "text": "B 위에 손가락을 올리자 미리보기가 떴다.",
+          "cg": ""
+        },
+        "returned": {
+          "text": "새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다.",
+          "cg": "ep19-b-preview"
+        },
+        "next": {
+          "text": "우는 아기를 안고 일어나는 그림, 다시 잠들지 못해 부엌으로 나가는 그림, 출근 알람을 세 시간 앞당겨 맞추는 그림. 창마다 작은 그림이 흘러갔다. 예측 화면일 뿐인데 불빛만은 진짜 같았다.",
+          "cg": "ep19-home-life"
+        }
+      },
+      "qaFixture": "Playwright-only full-story/canRead fixture; production demo build remains 18 chapters through 11"
+    },
+    "verification": {
+      "unitTests": {
+        "webReaderFiles": 2,
+        "webReaderCases": 2,
+        "webReaderFailures": 0,
+        "vnCutsceneCases": 9,
+        "vnCutsceneFailures": 0,
+        "fullVNFiles": 17,
+        "fullVNFailures": 0
+      },
+      "syntax": "node tools/check-pilot-syntax.cjs passed (1/1 script blocks)",
+      "diffCheck": "git diff --check passed",
+      "publicBuild": {
+        "command": "node tools/build-vn-public.mjs /workspace/lost-dreams-character-candidates /tmp/reader-public-build",
+        "status": "passed",
+        "chapters": 18,
+        "sourceBeats": 4242,
+        "offlineBytes": 79267437,
+        "publishedChapterIdsEndAt": "11",
+        "chapter19BAbsentFromPublishedRuntimeAndAssets": true,
+        "sourceCheckoutModified": false
+      },
+      "browserQA": {
+        "status": "passed",
+        "mobileViewport": "390x844",
+        "desktopViewport": "1440x900",
+        "webDOMCoverage": "all eight episodes, exact expected cue counts match rendered graphic counts",
+        "motion": "one representative graphic per episode starts and settles; start/middle/final checked in representative web19 and web22; figure height remains fixed",
+        "fxToggle": "actual UI off/on verified; settled graphic does not replay",
+        "reducedMotion": "reduced motion presents completed static state",
+        "vnB": "actual app chapter 19 beat 46 under a Playwright-only full-story/canRead fixture; source/image rendered, app-written timestamp and source preview persisted, reload/continue restored B, previous/return/next followed cut map",
+        "externalRequests": "aborted by Playwright route"
+      }
+    }
+  },
+  "errors": [],
+  "screenshots": [
+    "vn/notes/reader-media-separation-proof/web19-delivery-390-start.png",
+    "vn/notes/reader-media-separation-proof/web19-delivery-390-middle.png",
+    "vn/notes/reader-media-separation-proof/web19-delivery-390-final.png",
+    "vn/notes/reader-media-separation-proof/web19-choice-390-final.png",
+    "vn/notes/reader-media-separation-proof/web19-delivery-desktop.png",
+    "vn/notes/reader-media-separation-proof/web22-compute-branch-390-final.png",
+    "vn/notes/reader-media-separation-proof/vn19-b-preview-app-390.png"
+  ],
+  "historicalQA": {
+    "status": "withdrawn",
+    "note": "An earlier browser run was marked PASS despite animationsStart=[] and unsettled figures. That PASS was invalid; all status and evidence above come from the corrected final run."
+  },
+  "independentReview": {
+    "status": "PASS",
+    "requiredFixes": 0,
+    "scope": "media separation, web graphics, mobile comparison capture, and actual VN B cut evidence"
+  }
+}

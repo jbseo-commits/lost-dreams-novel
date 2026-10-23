@@ -399,6 +399,17 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "19",
+    "start": 46,
+    "end": 46,
+    "cg": "ep19-b-preview",
+    "anchor": "새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다.",
+    "alt": "새벽 주택가의 창문에 불빛이 들어온 장면. 아직 A 선택이나 생활 상세는 나오지 않는다.",
+    "endAnchor": "새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다.",
+    "fingerprint": "39212851",
+    "mobilePosition": "50% 50%"
+  },
+  {
+    "chapter": "19",
     "start": 49,
     "end": 49,
     "cg": "ep19-windows",

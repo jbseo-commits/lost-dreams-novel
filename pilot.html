@@ -1376,8 +1376,8 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 .invitation-recipient{display:block;border-top:1px solid #eee9dc30;padding-top:16px;font:14px/1.8 system-ui,"Noto Sans KR",sans-serif;color:#eee9dc}
 @media(max-width:600px){body.ep8 .sys.invitation{margin:32px 0;padding:26px 22px}}
 </style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"><link rel="stylesheet" href="reader-scenes.css"><link rel="stylesheet" href="reader-sequence19-22.css?v=reader-cinematic-20261023-r1">
-<link rel="stylesheet" href="reader-inline-direction.css?v=reader-cinematic-20261023-r1"></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"><link rel="stylesheet" href="reader-scenes.css"><link rel="stylesheet" href="reader-sequence19-22.css?v=reader-medium-split-20261023-r1"><link rel="stylesheet" href="reader-info-graphics.css?v=reader-medium-split-20261023-r1">
+<link rel="stylesheet" href="reader-inline-direction.css?v=reader-medium-split-20261023-r1"></head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><button class="pick" id="pick" aria-haspopup="true" aria-expanded="false" aria-controls="pickMenu"><b id="pickNo">EP 01</b><span class="pk-t" id="pickT">오늘 밤의 행복은 12토큰입니다</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ldx-controls"><button type="button" id="fxToggle" aria-pressed="true"><b id="fxState">연출 켜짐</b></button><button type="button" id="soundToggle" aria-pressed="false">생활음 꺼짐</button><span class="ldx-position" aria-label="읽은 위치"><b id="sync">0%</b></span><span hidden><b id="link">ONLINE</b><b id="token"></b></span></div></header><div class="progress"></div>
 <nav class="nav"><small>MEMORY INDEX</small><div id="nav"></div></nav><div class="pick-scrim" id="pickScrim"></div><nav class="pick-menu" id="pickMenu" aria-label="화 선택"><small>MEMORY INDEX · 전체 <span id="pickTotal"></span>화</small><ol id="pickList"></ol></nav>
@@ -1902,8 +1902,8 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <script src="reader-effects.js"></script>
 <script src="reader-scenes.js"></script>
 <script src="reader-bumper-scenes.js"></script>
-<script src="reader-sequence19-22.js?v=reader-cinematic-20261023-r1"></script>
-<script src="reader-inline-direction.js?v=reader-cinematic-20261023-r1"></script>
+<script src="reader-sequence19-22.js?v=reader-medium-split-20261023-r1"></script><script src="reader-info-graphics.js?v=reader-medium-split-20261023-r1"></script>
+<script src="reader-inline-direction.js?v=reader-medium-split-20261023-r1"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
@@ -2107,14 +2107,14 @@ const KEY={
 // '0.8초.' '침묵.' '1초.'처럼 한 줄로 떨어진 시간은 이야기 속 멈춤이다. 독자도 그만큼 기다린다.
 function beatMs(x){if(x==='침묵.')return 600;const m=x.match(/^(\d+(?:\.\d+)?)초\.$/);return m?Math.min(1000,Math.round(+m[1]*1000)):0}
 function render(md){const lines=md.replace(/\r/g,'').split('\n'),items=[],keys=KEY[state.ep]||[];let sys=[],inBold=false;
-const flush=()=>{if(sys.length){items.push({t:'sys',x:sys.join(' '),html:sys.map(inline).join('<br>')});sys=[]}};
+const flush=()=>{if(sys.length){const source=sys.join(' ');items.push({t:'sys',x:source,html:sys.map(inline).join('<br>')});for(const graphic of window.ReaderInfoGraphics?.afterParagraph(state.ep,source)||[])items.push({raw:graphic});sys=[]}};
 let pi=0;for(let i=1;i<lines.length;i++){let x=lines[i].trim();
  if(inBold){if(!x)continue;if(/\*\*$/.test(x)){inBold=false;x=x.slice(0,-2)}sys.push(x);continue}
  if(!x){flush();continue}
  if(x==='***'||x==='---'){flush();items.push({raw:'<div class="divider reveal"></div>'});continue}
  if(/^\*\*.+\*\*$/.test(x)){sys.push(x.replace(/^\*\*|\*\*$/g,''));continue}
  if(x.startsWith('**')&&!x.slice(2).includes('**')){flush();inBold=true;sys.push(x.slice(2));continue}
- flush();pi++;const sc=sceneMarkup(state.ep,pi);if(sc)items.push({raw:sc});items.push({t:'p',x});const trace=ReadingEffects.paragraph(state.ep,x);if(trace)items.push({raw:trace});for(const cut of window.ReaderSequences?.afterParagraph(state.ep,x)||[])items.push({raw:cut})}
+ flush();pi++;const sc=sceneMarkup(state.ep,pi);if(sc)items.push({raw:sc});items.push({t:'p',x});const trace=ReadingEffects.paragraph(state.ep,x);if(trace)items.push({raw:trace});for(const cut of window.ReaderSequences?.afterParagraph(state.ep,x)||[])items.push({raw:cut});for(const graphic of window.ReaderInfoGraphics?.afterParagraph(state.ep,x)||[])items.push({raw:graphic})}
 flush();
 // 구판 초대장에 실제로 적힌 두 필드만 결합한다. 개정 원고에 없는 내용을 만들지 않는다.
 if(state.ep===8){for(let k=0;k<items.length-1;k++){const q=items[k],recipient=items[k+1];
@@ -2132,7 +2132,7 @@ return items.map((q,k)=>{if(q.raw)return q.raw;const extra=q.last?' last':'',fin
 // 모바일 망에서 응답이 멈추면 '불러오는 중'에 갇히지 않게 12초 제한 후 한 번 더 시도하고, 그래도 안 되면 '다시 연결'을 띄운다.
 async function load(n){const url=new URL('manuscript/ep'+epFile(n)+'.md?v=8',document.baseURI).href;let last;for(let i=0;i<2;i++){const c=new AbortController(),t=setTimeout(()=>c.abort(),12000);try{const r=await fetch(url,{cache:'no-store',signal:c.signal});if(!r.ok)throw Error('HTTP '+r.status);return await r.text()}catch(e){last=e.name==='AbortError'?Error('응답 지연'):e}finally{clearTimeout(t)}}throw last}
 async function openEp(n){
- window.ReaderInlineDirection?.restore();window.ReaderSequences?.restore();ReadingEffects.restore();closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];state.armed=0;state.userScrolled=false;state.openedAt=performance.now();const d=D[n];state.ep=n;
+ window.ReaderInlineDirection?.restore();window.ReaderSequences?.restore();window.ReaderInfoGraphics?.restore();ReadingEffects.restore();closeSp(true);state.timers.forEach(clearTimeout);state.timers=[];state.armed=0;state.userScrolled=false;state.openedAt=performance.now();const d=D[n];state.ep=n;
  document.body.className=n===8?'ep8':'reading';document.body.dataset.ep=n;ReadingEffects.apply();
  document.documentElement.style.setProperty('--accent',d.a);document.documentElement.style.setProperty('--accent2',d.b);
  hero.style.display='none';reader.classList.add('on');num.textContent='MEMORY '+epNo(n)+' / '+MAX;
@@ -2142,7 +2142,7 @@ async function openEp(n){
  try{
   const md=await load(n);
   titleEl.textContent=md.split('\n')[0].replace(/^#\s*제[\d-]+화\.\s*/,'');chapterHead.dataset.ghost=d.ghost;meta.textContent='LIVE MANUSCRIPT · '+md.length.toLocaleString('ko-KR')+'자';
-  prose.innerHTML=render(md);{const g=!!(ReadingEffects.enabled()&&(d.sp||(d.more||[]).length)&&!state.fired.has(n));nextBtn.closest('.end').classList.toggle('sp-gap',g);nextBtn.classList.toggle('wait',g)}hook.textContent='';ReadingEffects.mount();window.ReaderInlineDirection?.mount();window.ReaderSequences?.mount();linkEl.textContent=n===2?'OFFLINE':'ONLINE';
+  prose.innerHTML=render(md);{const g=!!(ReadingEffects.enabled()&&(d.sp||(d.more||[]).length)&&!state.fired.has(n));nextBtn.closest('.end').classList.toggle('sp-gap',g);nextBtn.classList.toggle('wait',g)}hook.textContent='';ReadingEffects.mount();window.ReaderInlineDirection?.mount();window.ReaderSequences?.mount();window.ReaderInfoGraphics?.mount();linkEl.textContent=n===2?'OFFLINE':'ONLINE';
   const nx=ORDER[ORDER.indexOf(n)+1];nextBtn.textContent=nx?'NEXT SIGNAL / 제'+nx+'화 →':'처음으로 돌아가기';nextBtn.onclick=()=>nx?openEp(nx):location.reload();
   observe();toastMsg('MEMORY '+epNo(n)+' CONNECTED');
  }catch(e){
