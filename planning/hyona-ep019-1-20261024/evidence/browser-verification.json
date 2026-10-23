@@ -1,0 +1,57 @@
+{
+  "url": "http://127.0.0.1:8765/pilot.html#ep19-1",
+  "manuscript_sha256": "231eb82fe767726cc01eaa6352c314885e14e4003a823b61e9ff3df709cdabca",
+  "viewport": {
+    "width": 400,
+    "height": 900
+  },
+  "reduced_motion": "reduce",
+  "figures": [
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "오후 현장 시간\n17:06\n벽시계\n17:31\n공동주방에 전화\n17:40\n답변 기한",
+      "width": 336,
+      "height": 102.765625,
+      "images": []
+    },
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "width": 336,
+      "height": 443.0625,
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep19-1-alley-web.webp",
+          "complete": true,
+          "naturalWidth": 1092,
+          "naturalHeight": 1440
+        }
+      ]
+    },
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "width": 336,
+      "height": 443.0625,
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep19-1-window-web.webp",
+          "complete": true,
+          "naturalWidth": 1092,
+          "naturalHeight": 1440
+        }
+      ]
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "다음 날 새벽 · 도착과 출차\n07:00\n교대 기사 출차\n05:18\n실제 납품\n07:40\n시스템 예상",
+      "width": 336,
+      "height": 168.578125,
+      "images": []
+    }
+  ],
+  "page_errors": [],
+  "horizontal_overflow": false,
+  "scope": "episode19-1 static illustrations and information graphics only; no VN or animation timing certification",
+  "visual_issue": "delivery graphic07:00 and07:40 captions overlap at400px; existing CSS unchanged"
+}
