@@ -420,7 +420,7 @@ export function withEpisodeCutscene(cue,chapter,index){
     const start=beats.findIndex(b=>b.text==='그날 둘은 편의점 앞에서 맥주를 마셨다.');
     const nails=beats.findIndex(b=>b.text==='지우의 손톱 밑에는 씻어도 빠지지 않은 흙이 조금 남아 있었다.');
     const toast=beats.findIndex(b=>b.text==='서인은 그걸 보다가 자기 캔을 지우의 캔에 가볍게 부딪쳤다.');
-    const previous=beats.findIndex(b=>b.text==='둘이 웃었다.',start>=0?start:0);
+    const previous=beats.findIndex((b,i)=>i>=start&&b.text==='둘이 웃었다.');
     if(start>=0&&previous===start+9&&nails===start+10&&toast===nails+1&&index>=start&&index<=toast){
       const cg=index===nails?'clayUnderNails':index===toast?'convenienceToast':'convenienceGaze';
       const point=index===nails?nails:index===toast?toast:start;
