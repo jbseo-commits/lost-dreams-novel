@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-23",
+  "status": "PASS",
+  "integrity": [
+    {
+      "id": "yeonwooA",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    },
+    {
+      "id": "yeonwooB",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    },
+    {
+      "id": "yoonseraA",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    },
+    {
+      "id": "yoonseraB",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    },
+    {
+      "id": "yoonhaA",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    },
+    {
+      "id": "yoonhaB",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    },
+    {
+      "id": "eunkyungA",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    },
+    {
+      "id": "eunkyungB",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    },
+    {
+      "id": "ma-jeonghoonA",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    },
+    {
+      "id": "ma-jeonghoonB",
+      "nativePngHashMatches": true,
+      "webpHashMatches": true,
+      "realAlpha": true
+    }
+  ],
+  "browser": [
+    {
+      "viewportWidth": 400,
+      "loadedImages": 14,
+      "noHorizontalOverflow": true,
+      "lightAndChecker": true,
+      "small160": true,
+      "allFiveSelections": true,
+      "switchAndClear": true,
+      "touch": true
+    },
+    {
+      "viewportWidth": 1440,
+      "loadedImages": 14,
+      "noHorizontalOverflow": true,
+      "lightAndChecker": true,
+      "small160": true,
+      "allFiveSelections": true,
+      "switchAndClear": true,
+      "touch": false
+    }
+  ],
+  "scope": "후보 비교만 검사. VN 화면 연결 없음.",
+  "errors": [],
+  "preservedOriginals": [
+    {
+      "file": "vn/assets/yeonwoo.webp",
+      "sha256": "b9e9c220dc7cdb0658d9c1e331e8fc2b1a0b965c2f6f9e81c635495463688852"
+    },
+    {
+      "file": "vn/assets/yoonsera.webp",
+      "sha256": "2a69d2a1b0efd42bad6ed91564a98565572acd6385f72893dc02af8d25a67dd9"
+    },
+    {
+      "file": "vn/assets/yoonha.webp",
+      "sha256": "51b953aa40dc66ba5afa9c103a630e3dfa472e652e21cc78d02e5abfa1d0d899"
+    },
+    {
+      "file": "vn/assets/eunkyung.webp",
+      "sha256": "be831d27c7919aaaa10d9331510bec6905f4a9df112082cb21bc549c34ffca9a"
+    },
+    {
+      "file": "vn/assets/teaser-style/provenance.json",
+      "sha256": "d8f53b427bc601d088dc72441d453b5becb6136de95ef7363f5d9f050d7dc08c"
+    }
+  ],
+  "nativeAlphaPreservation": {
+    "checked": 10,
+    "result": "PNG와 WebP의 모든 alpha 바이트가 일치함"
+  },
+  "independentVisualReview": {
+    "status": "PASS",
+    "scope": "여성4인8장 및 교정 마정훈2장. 원본·티저·160px 비교. 최종 선택은 작가."
+  }
+}
