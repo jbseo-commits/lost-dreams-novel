@@ -1,3 +1,5 @@
+2026-10-23 19~22화 이해형 컷신은 공통 캐시 버전 `ep03-cinematic-20261023-r3`와 원문 위치, 웹/VN 원화 연결, wide/detail 전환을 사용합니다. [원문과 실제 Web/VN 컷 비교](notes/sequence19-22-review.html) · [시퀀스 설계/출고 조건](../planning/ep019-022-cinematic-sequence-20261023.md).
+
 2026-10-23 3화 편의점 손톱 흙 컷신: 공방 미소→서인의 시선→씻긴 손톱 밑의 작은 흙→가벼운 건배를 네 장면으로 연결했습니다. 새 손톱 인서트와 캐시 갱신 파일명·진입/import 버전 `ep03-cinematic-20261023-r1`, 390/400px·PC/오프라인 검증을 반영했습니다. [검증·자산 해시·두 번의 원화 시도](notes/ep03-cutscene-qa.json) · [주요 화면](notes/ep03-cutscene-proof/README.md). 자동 검사 17개 통과.
 
 2026-10-21 어머니 연령대 보정: 지우 아버지와 비슷한 중년으로 보이도록 어머니 표정 3종과 관련 사건 그림 4장의 얼굴 윤곽·눈꺼풀·볼·목·손을 함께 수정했습니다. 실제 티저 화풍과 인물 정체성, 조리·식사 동작과 수면 접속부를 유지했습니다. 숫자 나이를 설정으로 확정한 것은 아닙니다. [제작·교정 이력](assets/parent-style/provenance.json) · [최신 화면 검증](notes/parent-style-qa.json).

@@ -1,0 +1,23 @@
+.sequence-cut {
+  margin: 1.35em 0 2.15em;
+  width: 100%;
+  overflow: hidden;
+  background: #0b1118;
+  border: 1px solid #ffffff12;
+  border-radius: 4px;
+}
+.sequence-cut img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.sequence-cut figcaption {
+  padding: .65em .9em;
+  color: #cad4dd;
+  font-size: .92em;
+  line-height: 1.45;
+}
+@media (max-width: 600px) {
+  .sequence-cut { margin: 1.1em 0 1.8em; border-radius: 2px; }
+}

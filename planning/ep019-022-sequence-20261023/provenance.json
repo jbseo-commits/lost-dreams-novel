@@ -1,0 +1,1930 @@
+{
+  "date": "2026-10-23",
+  "scope": "18 cinematic scenes, each with separately generated web and VN artwork (36 final files). PNG originals remain in /workspace/generated_images; no resize or crop.",
+  "status": "complete",
+  "sourcePolicy": "PNG originals remain in /workspace/generated_images; do not resize or crop. Native dimensions returned by generation are recorded even when they differ from requested dimensions.",
+  "assets": [
+    {
+      "id": "ep19-door",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png",
+      "sourceSha256": "5f0116a4d7f3ebf1fd1a38746defbcd3302ac2719e2bfe48514628315288fd36",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep19-door-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 309874,
+      "sha256": "b5807b684b2ef0f64ca321fea0dc735e462763cf5e1f9581c6975b13e9b49e50",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Create a finished cinematic Korean science fiction novel illustration, LANDSCAPE 16:9 composition 1920x1080 requested. Scene ep19-door, exact moment just BEFORE an authority hearing. First three refs identify Seoin(male black dense CURLY hair charcoal blazer gray shirt), Yeonwoo(female short STRAIGHT black hair navy blazer black turtleneck), Yoonsera(female neat low bun gray suit beige blouse). Fourth ref is FILM STYLE only: intricate irregular ink contours, layered hand-painted angular shadows, tactile fabrics/material, restrained color, rich cold blue and muted white light, mature animated film, not glossy 3D or flat poster. Camera low over Seoin's left back shoulder in dark corridor OUTSIDE room: he stands at the left foreground, front shoe halted just BEFORE a thin red floor threshold crossing open door. His RIGHT wrist at his side has a narrow dark access band shifted slightly exposing edge of small purple bruise, fingers deliberately splayed open reassuringly. Across threshold INSIDE at mid right Yeonwoo faces him, gaze down to his hand; deep inside Yoonsera seated at a table with file, neutral expression. Doorframe/floor visibly separates outside from inside; three characters at different depths, no duplicate characters. No legible text, no UI, no symbols or logos, no additional people, no dramatic emotion not in source. The important details red threshold / stopped shoe / opened fingers stay visible at ordinary reading size, lower fifth can be used by VN text without covering those actions. This is an actual scene, no standing sprite sheet.",
+      "references": [
+        "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+        "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+        "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp",
+        "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png",
+          "sourceSha256": "5f0116a4d7f3ebf1fd1a38746defbcd3302ac2719e2bfe48514628315288fd36",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Create a finished cinematic Korean science fiction novel illustration, LANDSCAPE 16:9 composition 1920x1080 requested. Scene ep19-door, exact moment just BEFORE an authority hearing. First three refs identify Seoin(male black dense CURLY hair charcoal blazer gray shirt), Yeonwoo(female short STRAIGHT black hair navy blazer black turtleneck), Yoonsera(female neat low bun gray suit beige blouse). Fourth ref is FILM STYLE only: intricate irregular ink contours, layered hand-painted angular shadows, tactile fabrics/material, restrained color, rich cold blue and muted white light, mature animated film, not glossy 3D or flat poster. Camera low over Seoin's left back shoulder in dark corridor OUTSIDE room: he stands at the left foreground, front shoe halted just BEFORE a thin red floor threshold crossing open door. His RIGHT wrist at his side has a narrow dark access band shifted slightly exposing edge of small purple bruise, fingers deliberately splayed open reassuringly. Across threshold INSIDE at mid right Yeonwoo faces him, gaze down to his hand; deep inside Yoonsera seated at a table with file, neutral expression. Doorframe/floor visibly separates outside from inside; three characters at different depths, no duplicate characters. No legible text, no UI, no symbols or logos, no additional people, no dramatic emotion not in source. The important details red threshold / stopped shoe / opened fingers stay visible at ordinary reading size, lower fifth can be used by VN text without covering those actions. This is an actual scene, no standing sprite sheet.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-door",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-3120f524-d5f7-461e-b70f-3040f3693eca.png",
+      "sourceSha256": "5475662bf822438e700a0cc08794e4dd1c42f1a709ae59871eab151b60bf9c80",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep19-door-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 407126,
+      "sha256": "9a99b18db2297063a4d9a0e9afa93ee92416f0629019545e1520b127e6f2b86a",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Recompose this exact cinematic scene as a separately drawn PORTRAIT 4:5 novel illustration, requested1080x1350, not a crop or panels. Preserve this scene's character identities, costumes, low-angle direction, blue-gray painted film art and spatial continuity. Seoin male curls in left foreground OUTSIDE, right hand fingers spread (exactly five anatomical fingers) and wrist dark band with small bruise edge; shoe visibly stops BEFORE thin red threshold. Yeonwoo female short straight hair navy blazer INSIDE at right looking toward the hand, Yoonsera female gray suit lowbun seated deeper inside behind. All three depths and doorway fit naturally in portrait frame, no text/logos/UI/extra people. Important hand/threshold may be staged in middle rather than bottom crop. Rich inked/painterly animation film texture.",
+      "references": [
+        "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png",
+        "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+        "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+        "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-3120f524-d5f7-461e-b70f-3040f3693eca.png",
+          "sourceSha256": "5475662bf822438e700a0cc08794e4dd1c42f1a709ae59871eab151b60bf9c80",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Recompose this exact cinematic scene as a separately drawn PORTRAIT 4:5 novel illustration, requested1080x1350, not a crop or panels. Preserve this scene's character identities, costumes, low-angle direction, blue-gray painted film art and spatial continuity. Seoin male curls in left foreground OUTSIDE, right hand fingers spread (exactly five anatomical fingers) and wrist dark band with small bruise edge; shoe visibly stops BEFORE thin red threshold. Yeonwoo female short straight hair navy blazer INSIDE at right looking toward the hand, Yoonsera female gray suit lowbun seated deeper inside behind. All three depths and doorway fit naturally in portrait frame, no text/logos/UI/extra people. Important hand/threshold may be staged in middle rather than bottom crop. Rich inked/painterly animation film texture.",
+          "references": [
+            "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png",
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-wrist-detail",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-ea743e2a-7cd5-4ba4-abd7-4748fa259ecd.png",
+      "sourceSha256": "d39bfc1016b7df5eb24945e42e407a944440a3087080e10ee93d9a0175eaa788",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep19-wrist-detail-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 231640,
+      "sha256": "39de5c3e80fdd40e5786dea713ede333964a94dae2b28289ae11b7f86bf6dbe6",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. POV DETAIL continuing supplied doorway scene: only Seoin's anatomically RIGHT hand and forearm in charcoal blazer/gray rolled cuff, palm turned slightly toward viewer and exactly five fingers deliberately splayed. Narrow dark access wrist band shifted just enough to expose edge of a small purple bruise on wrist, no blood. Hands natural slender adult male. Out of focus red threshold diagonal and navy trouser edge inside room establish same orientation. The discovery is bruise hidden under access band, not a large injury. No other hands/people shown. Keep crucial action in central safe area above bottom fifth for VN dialogue.",
+      "references": [
+        "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png",
+        "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-ea743e2a-7cd5-4ba4-abd7-4748fa259ecd.png",
+          "sourceSha256": "d39bfc1016b7df5eb24945e42e407a944440a3087080e10ee93d9a0175eaa788",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. POV DETAIL continuing supplied doorway scene: only Seoin's anatomically RIGHT hand and forearm in charcoal blazer/gray rolled cuff, palm turned slightly toward viewer and exactly five fingers deliberately splayed. Narrow dark access wrist band shifted just enough to expose edge of a small purple bruise on wrist, no blood. Hands natural slender adult male. Out of focus red threshold diagonal and navy trouser edge inside room establish same orientation. The discovery is bruise hidden under access band, not a large injury. No other hands/people shown. Keep crucial action in central safe area above bottom fifth for VN dialogue.",
+          "references": [
+            "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-wrist-detail",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-b37e729b-95c3-44e5-9e0f-83c3d919184f.png",
+      "sourceSha256": "e05e90dace65b926490eaff5284fac172fab76c56346352feddd408dcd4068d0",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep19-wrist-detail-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 293326,
+      "sha256": "9c145b35b744ab7b5b65689da418c59217212e72ab343b31850c71001fa738e9",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied exact scene as separately drawn PORTRAIT4:5 requested1080x1350 (not crop or collage). Keep identical characters, material, light, props and source moment. POV DETAIL continuing supplied doorway scene: only Seoin's anatomically RIGHT hand and forearm in charcoal blazer/gray rolled cuff, palm turned slightly toward viewer and exactly five fingers deliberately splayed. Narrow dark access wrist band shifted just enough to expose edge of a small purple bruise on wrist, no blood. Hands natural slender adult male. Out of focus red threshold diagonal and navy trouser edge inside room establish same orientation. The discovery is bruise hidden under access band, not a large injury. No other hands/people shown. IMPORTANT right wrist narrow darkaccessband (not finger ring), no injury on other wrist; no rings. For map retain both regions different density and simulation grid.",
+      "references": [
+        "/workspace/generated_images/exec-ea743e2a-7cd5-4ba4-abd7-4748fa259ecd.png",
+        "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-b37e729b-95c3-44e5-9e0f-83c3d919184f.png",
+          "sourceSha256": "e05e90dace65b926490eaff5284fac172fab76c56346352feddd408dcd4068d0",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied exact scene as separately drawn PORTRAIT4:5 requested1080x1350 (not crop or collage). Keep identical characters, material, light, props and source moment. POV DETAIL continuing supplied doorway scene: only Seoin's anatomically RIGHT hand and forearm in charcoal blazer/gray rolled cuff, palm turned slightly toward viewer and exactly five fingers deliberately splayed. Narrow dark access wrist band shifted just enough to expose edge of a small purple bruise on wrist, no blood. Hands natural slender adult male. Out of focus red threshold diagonal and navy trouser edge inside room establish same orientation. The discovery is bruise hidden under access band, not a large injury. No other hands/people shown. IMPORTANT right wrist narrow darkaccessband (not finger ring), no injury on other wrist; no rings. For map retain both regions different density and simulation grid.",
+          "references": [
+            "/workspace/generated_images/exec-ea743e2a-7cd5-4ba4-abd7-4748fa259ecd.png",
+            "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-windows",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-1ed5da5d-91a9-4fdd-89df-5bac0790a141.png",
+      "sourceSha256": "fc6a7f6c53a592f40a60fcce67b24fd09bea506ba3ad164223186c55fae2c6bb",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep19-windows-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 359078,
+      "sha256": "d8ecc901e7c959f55c63b4c01f4acdecbbd98ffc9476de4734681673e94c5b65",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Correct this exact illustration, preserving all map layout, dramatic painted style, faces, poses, outfits, lighting and framing. Essential continuity fix: the black band currently wrongly drawn like a RING on pointing finger must be REMOVED. No rings anywhere. Put ONE NARROW BLACK ACCESS BAND AROUND THE WRIST of the pointing RIGHT hand, just above hand at jacket cuff, with a SMALL purple bruise edge visible next to band. The other hand supporting chin must have NO band and NO bruise. No jewelry, no extra injury. Keep index hovering above simulated map, do not press, same bright dense neighborhood and sparse dark adjacent one, no text. Adjust sleeve slightly to reveal correct pointing wrist band. Nothing else changes.",
+      "references": [
+        "/workspace/generated_images/exec-67de35ff-e7c2-4d92-bad8-729bc88f7374.png",
+        "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-67de35ff-e7c2-4d92-bad8-729bc88f7374.png",
+          "sourceSha256": "77aaacea9f8c6cf49094619a7a0fb697a9f4dab16df3754a3e6eae71c5a365df",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Over shoulder Seoin (male dense black CURLS,charcoal blazer gray shirt), a simulated miniature night residential MAP hovering above hearing table. This is an uncommitted PREVIEW not actual awakening. One dense neighborhood has thousands of amber windows lit as tiny dots; separate adjacent neighborhood largely dark with only a sparse handful of lit windows. Distinct regions and connection routes separated by dark streets. Seoin right index with dark band and small wrist bruise HOVERS before selection, not pressing. Yoonsera file hand and Yeonwoo pen at frame edge out of focus. Ghostly translucent grid under whole map makes simulation evident. No letters, digits, symbols, household inset yet. Clear big-region vs tiny-region consequence. Keep crucial action in central safe area above bottom fifth for VN dialogue.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-1ed5da5d-91a9-4fdd-89df-5bac0790a141.png",
+          "sourceSha256": "fc6a7f6c53a592f40a60fcce67b24fd09bea506ba3ad164223186c55fae2c6bb",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Correct this exact illustration, preserving all map layout, dramatic painted style, faces, poses, outfits, lighting and framing. Essential continuity fix: the black band currently wrongly drawn like a RING on pointing finger must be REMOVED. No rings anywhere. Put ONE NARROW BLACK ACCESS BAND AROUND THE WRIST of the pointing RIGHT hand, just above hand at jacket cuff, with a SMALL purple bruise edge visible next to band. The other hand supporting chin must have NO band and NO bruise. No jewelry, no extra injury. Keep index hovering above simulated map, do not press, same bright dense neighborhood and sparse dark adjacent one, no text. Adjust sleeve slightly to reveal correct pointing wrist band. Nothing else changes.",
+          "references": [
+            "/workspace/generated_images/exec-67de35ff-e7c2-4d92-bad8-729bc88f7374.png",
+            "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-windows",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-97a8c94b-4f89-4f68-bda5-aaf26136590b.png",
+      "sourceSha256": "6092b9f12d7b5f34f74344659f6e50369a32fa7e4672825bb6a3dcce26f4a2e3",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep19-windows-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 440656,
+      "sha256": "94bcd3ef8ebd61f52f468d7a6247c2ff97331ba56d8727b4753817d2c7dfe8d8",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied exact scene as separately drawn PORTRAIT4:5 requested1080x1350 (not crop or collage). Keep identical characters, material, light, props and source moment. Over shoulder Seoin (male dense black CURLS,charcoal blazer gray shirt), a simulated miniature night residential MAP hovering above hearing table. This is an uncommitted PREVIEW not actual awakening. One dense neighborhood has thousands of amber windows lit as tiny dots; separate adjacent neighborhood largely dark with only a sparse handful of lit windows. Distinct regions and connection routes separated by dark streets. Seoin right index with dark band and small wrist bruise HOVERS before selection, not pressing. Yoonsera file hand and Yeonwoo pen at frame edge out of focus. Ghostly translucent grid under whole map makes simulation evident. No letters, digits, symbols, household inset yet. Clear big-region vs tiny-region consequence. IMPORTANT right wrist narrow darkaccessband (not finger ring), no injury on other wrist; no rings. For map retain both regions different density and simulation grid.",
+      "references": [
+        "/workspace/generated_images/exec-1ed5da5d-91a9-4fdd-89df-5bac0790a141.png",
+        "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+        "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp",
+        "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-97a8c94b-4f89-4f68-bda5-aaf26136590b.png",
+          "sourceSha256": "6092b9f12d7b5f34f74344659f6e50369a32fa7e4672825bb6a3dcce26f4a2e3",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied exact scene as separately drawn PORTRAIT4:5 requested1080x1350 (not crop or collage). Keep identical characters, material, light, props and source moment. Over shoulder Seoin (male dense black CURLS,charcoal blazer gray shirt), a simulated miniature night residential MAP hovering above hearing table. This is an uncommitted PREVIEW not actual awakening. One dense neighborhood has thousands of amber windows lit as tiny dots; separate adjacent neighborhood largely dark with only a sparse handful of lit windows. Distinct regions and connection routes separated by dark streets. Seoin right index with dark band and small wrist bruise HOVERS before selection, not pressing. Yoonsera file hand and Yeonwoo pen at frame edge out of focus. Ghostly translucent grid under whole map makes simulation evident. No letters, digits, symbols, household inset yet. Clear big-region vs tiny-region consequence. IMPORTANT right wrist narrow darkaccessband (not finger ring), no injury on other wrist; no rings. For map retain both regions different density and simulation grid.",
+          "references": [
+            "/workspace/generated_images/exec-1ed5da5d-91a9-4fdd-89df-5bac0790a141.png",
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-home-life",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-16da0108-0235-41be-97b4-64343597a7f5.png",
+      "sourceSha256": "cb23634bfb0ecf32606e682304cd6b39c8ae01290a27ef62f973bd3f8faa2025",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep19-home-life-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 401394,
+      "sha256": "14b0b0b97ffa4cecc2ea745c839e36651703832f1358dba6c492fd6bc61a816c",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Edit only the foreground hand in this exact illustration: completely REMOVE the foreground hand, wrist, band/bandage and arm from the image. Fill that area naturally with continuing TABLETOP and projected map grid (or table surface for empty-slot scene), in matching hand-painted cinematic style, with NO new objects. Preserve every other pixel's intended composition and every panel/image/character/lighting. The three translucent predicted household windows (crying baby, sleepless kitchen, blank clock), their miniature houses, whole grid, warm lights and simulation remain exactly as before. No people outside those preview windows. No text/digits/logos, keep same native composition/aspect.",
+      "references": [
+        "/workspace/generated_images/exec-1b66c0e0-d37f-44a6-822b-958aabbbe369.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-1b66c0e0-d37f-44a6-822b-958aabbbe369.png",
+          "sourceSha256": "82c615a9478941ab9a978701f3640c5cef489af9228c3f81f5d6aa988dda5dd5",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. A separate close POV INTO the projected miniature-neighborhood simulation from ep19, showing three miniature domestic preview windows as translucent moving-image panes above the cool hearing table: a parent holding a crying baby just getting up at night, a sleepless adult entering tiny kitchen, and a hand setting an earlier bedside alarm with blank/unreadable face. Anonymous figures, no recognizable character faces. Same cold digital grid/translucent edges, warm window interiors, amber dots receding across imaginary miniature district. These are predicted consequences of interrupting sleep, not three real scenes occurring now. Seoin's right index hovering at bottom edge, dark wrist access band/purple bruise. Narrative costs become human everyday routines; keep simple readable visual. Keep crucial action in central safe area above bottom fifth for VN dialogue.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ],
+          "reason": "Reviewer found a foreground hand with a left/right wrist continuity error; replacement removes the foreground hand and preserves the projected household panels."
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-16da0108-0235-41be-97b4-64343597a7f5.png",
+          "sourceSha256": "cb23634bfb0ecf32606e682304cd6b39c8ae01290a27ef62f973bd3f8faa2025",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Edit only the foreground hand in this exact illustration: completely REMOVE the foreground hand, wrist, band/bandage and arm from the image. Fill that area naturally with continuing TABLETOP and projected map grid (or table surface for empty-slot scene), in matching hand-painted cinematic style, with NO new objects. Preserve every other pixel's intended composition and every panel/image/character/lighting. The three translucent predicted household windows (crying baby, sleepless kitchen, blank clock), their miniature houses, whole grid, warm lights and simulation remain exactly as before. No people outside those preview windows. No text/digits/logos, keep same native composition/aspect.",
+          "references": [
+            "/workspace/generated_images/exec-1b66c0e0-d37f-44a6-822b-958aabbbe369.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-home-life",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-ca0d9833-666f-46a9-af58-923969a26cbe.png",
+      "sourceSha256": "0a67fb24c580e9463d820ec03e5076e29f8616102f2c22b6d30790a9b20eb14a",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep19-home-life-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 434168,
+      "sha256": "2b980910f1fb8617589c6567113502e943891e4666395442770fd83df4033bab",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Edit only the foreground hand in this exact illustration: completely REMOVE the foreground hand, wrist, band/bandage and arm from the image. Fill that area naturally with continuing TABLETOP and projected map grid (or table surface for empty-slot scene), in matching hand-painted cinematic style, with NO new objects. Preserve every other pixel's intended composition and every panel/image/character/lighting. The three translucent predicted household windows (crying baby, sleepless kitchen, blank clock), their miniature houses, whole grid, warm lights and simulation remain exactly as before. No people outside those preview windows. No text/digits/logos, keep same native composition/aspect.",
+      "references": [
+        "/workspace/generated_images/exec-98b01b7d-8231-4102-b0ec-02273a48d006.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-98b01b7d-8231-4102-b0ec-02273a48d006.png",
+          "sourceSha256": "1ad049299a5970f73b1fcaacc9230f752247420671c3b650b1493cd3dc948172",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied exact scene as separately drawn PORTRAIT4:5 requested1080x1350 (not crop or collage). Keep identical characters, material, light, props and source moment. A separate close POV INTO the projected miniature-neighborhood simulation from ep19, showing three miniature domestic preview windows as translucent moving-image panes above the cool hearing table: a parent holding a crying baby just getting up at night, a sleepless adult entering tiny kitchen, and a hand setting an earlier bedside alarm with blank/unreadable face. Anonymous figures, no recognizable character faces. Same cold digital grid/translucent edges, warm window interiors, amber dots receding across imaginary miniature district. These are predicted consequences of interrupting sleep, not three real scenes occurring now. Seoin's right index hovering at bottom edge, dark wrist access band/purple bruise. Narrative costs become human everyday routines; keep simple readable visual. IMPORTANT right wrist narrow darkaccessband (not finger ring), no injury on other wrist; no rings. For map retain both regions different density and simulation grid.",
+          "references": [
+            "/workspace/generated_images/exec-1b66c0e0-d37f-44a6-822b-958aabbbe369.png",
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp"
+          ],
+          "reason": "Reviewer found a foreground hand with a left/right wrist continuity error; replacement removes the foreground hand and preserves the projected household panels."
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-ca0d9833-666f-46a9-af58-923969a26cbe.png",
+          "sourceSha256": "0a67fb24c580e9463d820ec03e5076e29f8616102f2c22b6d30790a9b20eb14a",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Edit only the foreground hand in this exact illustration: completely REMOVE the foreground hand, wrist, band/bandage and arm from the image. Fill that area naturally with continuing TABLETOP and projected map grid (or table surface for empty-slot scene), in matching hand-painted cinematic style, with NO new objects. Preserve every other pixel's intended composition and every panel/image/character/lighting. The three translucent predicted household windows (crying baby, sleepless kitchen, blank clock), their miniature houses, whole grid, warm lights and simulation remain exactly as before. No people outside those preview windows. No text/digits/logos, keep same native composition/aspect.",
+          "references": [
+            "/workspace/generated_images/exec-98b01b7d-8231-4102-b0ec-02273a48d006.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-1-alley",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-518e4b50-ec52-459f-abc1-545c2daaf0b5.png",
+      "sourceSha256": "09e375e1659ebee6fccea9e50bc343f125d158fcbf385ded1e8b91a72ec18c09",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep19-1-alley-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 351658,
+      "sha256": "0d92bfbcf09c6466910805a41893de2f5f446ff124b47fbc175c6c2ae6b07e44",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Edit ONLY the grabbed wrist/access band in this exact illustration; all composition, arms, faces, clothes, sunset, van, phone and rescuers stay same. The bruised RIGHT wrist of Seoin (curly man held behind back) MUST have his narrow dark access band wrapped around it, directly BELOW the purple bruise between bruise and his hand. Distinguish it from attacker's wristwatch: remove the ATTACKER's black wristwatch if confusing. Attacker's gripping fingers partly overlap Seoin's access band naturally but band clearly visible on Seoin's own wrist. It is NOT medical bandage, not ring. Keep LEFT palm bracing van and RIGHT arm behindback exactly. No added hands/text.",
+      "references": [
+        "/workspace/generated_images/exec-1ba2e2c5-c074-4d52-bf2b-3da4d20983a5.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-5ab1d270-2f18-44ad-9e60-47eb1d60bd24.png",
+          "sourceSha256": "48150e57acff0c10c8a4580405c657879df29e9477a3b6dd38aae5247585dbe0",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Dusk in very narrow passage between tall shipping containers. Seoin young male black dense curls charcoal blazer gray shirt at left foreground braces his LEFT hand against the open sliding-door frame of an unlit gray van. One attacker in black jacket/blank visitor lanyard directly behind him grips and twists Seoin's RIGHT wrist/arm behind back; dark wrist access band and bruise. Camera slightly left so left bracing arm and right captured arm readable as different arms. His fallen phone on ground near van. Far end of passage blocked by refrigerated truck and forklift, headlights backlight a truck driver running from cab and anonymous rescuers. Threat shown by blocked escape and bodily resistance, no blood/graphic injury. Attacker face hidden in shadow, no licenseplates/text. Strong spatial depth, not theatrical group portrait. Keep crucial action in central safe area above bottom fifth for VN dialogue.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        },
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-1ba2e2c5-c074-4d52-bf2b-3da4d20983a5.png",
+          "sourceSha256": "982543ee0f0c265962686779266a29338ebdfd8171a86547cf60ebcf12c447af",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Correct the EXACT supplied alley scene's arm orientation to the manuscript. Redraw Seoin with his BACK and LEFT REAR shoulder nearer the camera, looking back toward rescuers. His LEFT PALM braces against the van doorframe at image LEFT. His RIGHT arm is folded BEHIND HIS LOWER BACK toward image RIGHT, attacker behind him grips that RIGHT wrist, dark access band visible next to purple bruise. This requires body rotation, not mirroring clothes or adding arms. Exactly two arms, hands structurally sound. Preserve curls, charcoalblazer/grayshirt, grayvan slidingdoorleft, fallenphoneground, driver/rescuers/truckbacklight, narrowcontainerspassage and color. Darken dusk sky toward blue-gray after sunset, less orange. Attacker blank visitorlanyard face shadow. No extra people invented, text or gore.",
+          "references": [
+            "/workspace/generated_images/exec-5ab1d270-2f18-44ad-9e60-47eb1d60bd24.png",
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp"
+          ],
+          "reason": "Rejected after reviewer found the access band could read as the aggressor’s watch; replacement restores Seoin’s right-wrist band only."
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-518e4b50-ec52-459f-abc1-545c2daaf0b5.png",
+          "sourceSha256": "09e375e1659ebee6fccea9e50bc343f125d158fcbf385ded1e8b91a72ec18c09",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Edit ONLY the grabbed wrist/access band in this exact illustration; all composition, arms, faces, clothes, sunset, van, phone and rescuers stay same. The bruised RIGHT wrist of Seoin (curly man held behind back) MUST have his narrow dark access band wrapped around it, directly BELOW the purple bruise between bruise and his hand. Distinguish it from attacker's wristwatch: remove the ATTACKER's black wristwatch if confusing. Attacker's gripping fingers partly overlap Seoin's access band naturally but band clearly visible on Seoin's own wrist. It is NOT medical bandage, not ring. Keep LEFT palm bracing van and RIGHT arm behindback exactly. No added hands/text.",
+          "references": [
+            "/workspace/generated_images/exec-1ba2e2c5-c074-4d52-bf2b-3da4d20983a5.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-1-alley",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-7b4aecdb-ea17-4fe5-9422-e48939c5a438.png",
+      "sourceSha256": "a98891b28886c1c95ced59710d98aa1e366e90a3762e5abee14dd0d325ceb5cd",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep19-1-alley-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 542092,
+      "sha256": "c6e67c48cc1665fa117ed28660253717532c8c3dc061afc597a3fd6c3fa4505c",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Edit ONLY the grabbed wrist/access band in this exact illustration; all composition, arms, faces, clothes, sunset, van, phone and rescuers stay same. The bruised RIGHT wrist of Seoin (curly man held behind back) MUST have his narrow dark access band wrapped around it, directly BELOW the purple bruise between bruise and his hand. Distinguish it from attacker's wristwatch: remove the ATTACKER's black wristwatch if confusing. Attacker's gripping fingers partly overlap Seoin's access band naturally but band clearly visible on Seoin's own wrist. It is NOT medical bandage, not ring. Keep LEFT palm bracing van and RIGHT arm behindback exactly. No added hands/text.",
+      "references": [
+        "/workspace/generated_images/exec-040604c4-8f15-447d-9eb0-88e25dd29627.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-040604c4-8f15-447d-9eb0-88e25dd29627.png",
+          "sourceSha256": "961b88631b70bab015fde3c0199281de371bf54131d01c3f7f5868e2d416b099",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw this supplied exact scene as a separately composed PORTRAIT4:5 requested1080x1350 novel image, NOT crop. Preserve all character identities, costumes, precise source action and props, lighting and screen directions, omit any new text. Important elements fit naturally without cropping. Back threequarter Seoin LEFT hand braces van at imageleft; RIGHT arm held behindback by attacker at imageright (right wristband/bruise). Preserve back-facing torso rotation! Fallenphone and driver at truck/forklift passage end visible.",
+          "references": [
+            "/workspace/generated_images/exec-1ba2e2c5-c074-4d52-bf2b-3da4d20983a5.png"
+          ],
+          "reason": "Rejected after reviewer found the access band could read as the aggressor’s watch; replacement restores Seoin’s right-wrist band only."
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-7b4aecdb-ea17-4fe5-9422-e48939c5a438.png",
+          "sourceSha256": "a98891b28886c1c95ced59710d98aa1e366e90a3762e5abee14dd0d325ceb5cd",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Edit ONLY the grabbed wrist/access band in this exact illustration; all composition, arms, faces, clothes, sunset, van, phone and rescuers stay same. The bruised RIGHT wrist of Seoin (curly man held behind back) MUST have his narrow dark access band wrapped around it, directly BELOW the purple bruise between bruise and his hand. Distinguish it from attacker's wristwatch: remove the ATTACKER's black wristwatch if confusing. Attacker's gripping fingers partly overlap Seoin's access band naturally but band clearly visible on Seoin's own wrist. It is NOT medical bandage, not ring. Keep LEFT palm bracing van and RIGHT arm behindback exactly. No added hands/text.",
+          "references": [
+            "/workspace/generated_images/exec-040604c4-8f15-447d-9eb0-88e25dd29627.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-1-window",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-52295fb2-efbe-4cf7-8b0a-de9ec6f80e3e.png",
+      "sourceSha256": "da33e8ce6c034c574b4dad4967a78cb914d698f57643f48c5784d616dabb5116",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep19-1-window-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 332172,
+      "sha256": "46f9bdd8a5d1fedd68fe66fde2939afb904fd96de1d74d24dd351c1ddaa205e2",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Predawn dark indigo residential courtyard, quiet wide master shot. Male curly Seoin stands small on outdoor stair landing, looking up toward his own apartment's DARK unlit window. Below stair parked ordinary car (NOT gray kidnapping van), female Yeonwoo short straight black hair navy blazer reclines asleep in driver seat visible through glass, accompanying him. Across courtyard a separate communal kitchen window glows warm. Own home window MUST remain dark, no mother, no other people. Clear visual triangle stair observer→dark home→car companion. Cold before-dawn air, one warm kitchen rectangle, worn housing material. Keep crucial action in central safe area above bottom fifth for VN dialogue.",
+      "references": [
+        "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+        "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+        "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-52295fb2-efbe-4cf7-8b0a-de9ec6f80e3e.png",
+          "sourceSha256": "da33e8ce6c034c574b4dad4967a78cb914d698f57643f48c5784d616dabb5116",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Predawn dark indigo residential courtyard, quiet wide master shot. Male curly Seoin stands small on outdoor stair landing, looking up toward his own apartment's DARK unlit window. Below stair parked ordinary car (NOT gray kidnapping van), female Yeonwoo short straight black hair navy blazer reclines asleep in driver seat visible through glass, accompanying him. Across courtyard a separate communal kitchen window glows warm. Own home window MUST remain dark, no mother, no other people. Clear visual triangle stair observer→dark home→car companion. Cold before-dawn air, one warm kitchen rectangle, worn housing material. Keep crucial action in central safe area above bottom fifth for VN dialogue.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep19-1-window",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-575da0cc-c421-44fe-baf1-b2578acaed55.png",
+      "sourceSha256": "e95a16706cde364403ad5317d8ba4292a801a02c1f0d698290ed6a4613b03a6d",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep19-1-window-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 415142,
+      "sha256": "69826592372608ef9c6579479f8b858af41273ff2076522b062ebc0ca1ff4c62",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw this supplied exact scene as a separately composed PORTRAIT4:5 requested1080x1350 novel image, NOT crop. Preserve all character identities, costumes, precise source action and props, lighting and screen directions, omit any new text. Important elements fit naturally without cropping. Dark own apartment window above Seoin stairlanding; sleeping female Yeonwoo in ordinary parked car below; separate warm communal kitchen acrossyard; NOT ownhome lit.",
+      "references": [
+        "/workspace/generated_images/exec-52295fb2-efbe-4cf7-8b0a-de9ec6f80e3e.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-575da0cc-c421-44fe-baf1-b2578acaed55.png",
+          "sourceSha256": "e95a16706cde364403ad5317d8ba4292a801a02c1f0d698290ed6a4613b03a6d",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw this supplied exact scene as a separately composed PORTRAIT4:5 requested1080x1350 novel image, NOT crop. Preserve all character identities, costumes, precise source action and props, lighting and screen directions, omit any new text. Important elements fit naturally without cropping. Dark own apartment window above Seoin stairlanding; sleeping female Yeonwoo in ordinary parked car below; separate warm communal kitchen acrossyard; NOT ownhome lit.",
+          "references": [
+            "/workspace/generated_images/exec-52295fb2-efbe-4cf7-8b0a-de9ec6f80e3e.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep20-door",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-57b31fe3-217a-479c-991f-3606395e1588.png",
+      "sourceSha256": "956c8a91ef86c3988d2de78dd06a203cf918b3e27487b9613aee065ce431c522",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep20-door-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 307898,
+      "sha256": "8d952c8d99c458b5a95e3dbff67f52d433300401aea0a24893e04b7c6bfe1f0e",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Preserve this exact illustration including every face, curls, outfits, doorway, positions, paper sheets, light and style. Fix only wrist-bandage continuity: Seoin is facing camera. His anatomical RIGHT wrist is the hand on the LEFT SIDE OF THE PICTURE holding the paper. Put WHITE compression bandage on that wrist. Remove white wrap entirely from the hand on the RIGHT SIDE OF PICTURE, which is his anatomical left wrist. Only ONE wrist is bandaged. No dark wrist band, no rings. Do not swap characters or mirror the whole image, don't change paper grip or expressions.",
+      "references": [
+        "/workspace/generated_images/exec-8694f3b4-5ed1-4270-8f3c-3d7e02c1a7ff.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-8694f3b4-5ed1-4270-8f3c-3d7e02c1a7ff.png",
+          "sourceSha256": "179e213da01b0b8136c3bafbdd614889f4eedcf07a3c2a24ea3d52968d797c57",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Same hearing/audit doorway geometry as supplied doorway ref, low eye camera. Yoonsera female low black bun gray suit beige blouse at LEFT inside holds metal door handle, body turned to leave but face looks back directly toward Seoin at RIGHT who now faces her squarely, holding two plain printed sheets (driving/departure records) at chest height. Seoin male dense black CURLS charcoal blazer gray shirt, RIGHT wrist WHITE compression bandage, ABSOLUTELY NO access band. Yeonwoo female shortstraightblackhair navyblazer blackturtleneck stopped further behind Seoin. Cold ceiling stripe and narrow room light through door gap; clear reversal from earlier threshold inequality into direct encounter. No text/signs, no dramatic invented expressions. Keep crucial action in central safe area above bottom fifth for VN dialogue.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+            "/workspace/generated_images/exec-b783195d-7953-498e-8d26-556405d66165.png",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-57b31fe3-217a-479c-991f-3606395e1588.png",
+          "sourceSha256": "956c8a91ef86c3988d2de78dd06a203cf918b3e27487b9613aee065ce431c522",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Preserve this exact illustration including every face, curls, outfits, doorway, positions, paper sheets, light and style. Fix only wrist-bandage continuity: Seoin is facing camera. His anatomical RIGHT wrist is the hand on the LEFT SIDE OF THE PICTURE holding the paper. Put WHITE compression bandage on that wrist. Remove white wrap entirely from the hand on the RIGHT SIDE OF PICTURE, which is his anatomical left wrist. Only ONE wrist is bandaged. No dark wrist band, no rings. Do not swap characters or mirror the whole image, don't change paper grip or expressions.",
+          "references": [
+            "/workspace/generated_images/exec-8694f3b4-5ed1-4270-8f3c-3d7e02c1a7ff.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep20-door",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-745d034c-4115-47e3-ac9d-ad381eee71f1.png",
+      "sourceSha256": "c6df67fbd7ba51953f428169634c216a0166d06cd2a206f96553333fe54546cb",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep20-door-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 362726,
+      "sha256": "99bed167e9fb6f561ba3fe74446c1a9f03b5579870107644a0058b3498a7be2b",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw this supplied exact scene as a separately composed PORTRAIT4:5 requested1080x1350 novel image, NOT crop. Preserve all character identities, costumes, precise source action and props, lighting and screen directions, omit any new text. Important elements fit naturally without cropping. Seoin front-facing male curls holds two sheets, white compression bandage ONLY on hand at image LEFT, his anatomical RIGHT; other wrist bare, noaccessband. Yoonsera gray suit hand ondoorhandle left and Yeonwoo navy behind, precise identities.",
+      "references": [
+        "/workspace/generated_images/exec-57b31fe3-217a-479c-991f-3606395e1588.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-745d034c-4115-47e3-ac9d-ad381eee71f1.png",
+          "sourceSha256": "c6df67fbd7ba51953f428169634c216a0166d06cd2a206f96553333fe54546cb",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw this supplied exact scene as a separately composed PORTRAIT4:5 requested1080x1350 novel image, NOT crop. Preserve all character identities, costumes, precise source action and props, lighting and screen directions, omit any new text. Important elements fit naturally without cropping. Seoin front-facing male curls holds two sheets, white compression bandage ONLY on hand at image LEFT, his anatomical RIGHT; other wrist bare, noaccessband. Yoonsera gray suit hand ondoorhandle left and Yeonwoo navy behind, precise identities.",
+          "references": [
+            "/workspace/generated_images/exec-57b31fe3-217a-479c-991f-3606395e1588.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep20-box",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-2126e885-a692-4f19-b9e5-6409f99e2b47.png",
+      "sourceSha256": "e38e3d8d54c7e2a07801972b875944c4b1c9b4c6259e6ab82a7ae3c67f0898a3",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep20-box-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 236390,
+      "sha256": "b539d184a61d4c37d91041c4325d6ee6a1cc8228122c6508d8309f9e5d7ae86f",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Edit ONLY RIGHT evidence panel in this exact illustration. Remove all cityscapes, streetphotos, maps and especially red strings/nodes, which falsely imply a secret investigation board. Replace within that same panel with ONE ordinary PHOTO of a COMMUNAL KITCHEN WHITEBOARD beside stainless serving counter/empty delivery crates: thick wiped marker timetable rows, vertical delivery-route columns, a few unrecognizable blurred strokes, no readable text/numbers. Simple everyday kitchen delivery schedule, no surveillance or conspiracy. Preserve left single blank confirmation slot and amber waitingrow, Yoonsera female lowbungraysuit, three empty remote seats with lights, table, framing, painted film style, no hands or new people.",
+      "references": [
+        "/workspace/generated_images/exec-eee34700-7df7-4549-81c1-e06ea50432f6.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-c3dac54a-2b0d-48d7-9cac-0d65edefec61.png",
+          "sourceSha256": "17e280e11e61725e659cb9250f68b99cbcde9a2700058ecc116ace7722510934",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Close view of Seoin's RIGHT hand with white compression wrist bandage NO dark access band, pointing beside an empty broad rectangular confirmer box on one floating panel and a second panel containing blurry whiteboard photograph with route lines. Broad EMPTY slot, single amber waiting row beneath. Finger rests/indicates but has not pressed. Panels without legible words, letters or digits. In deep blurred background audit table FOUR positions: only Yoonsera female lowbun gray suit physically present at ONE seat; THREE empty remote seats have abstract small connection lights. Participant4 is ONLY a light, never human shape, face, silhouette or identity. Cool white-blue panel light and muted dark hearing room. Focus on one empty slot versus two evidence surfaces, no outcome yet. Only a right hand in back-of-hand view with thumb on viewer LEFT when fingers point upward/right, anatomically accurate. The action readable above lowerfifth.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        },
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-eee34700-7df7-4549-81c1-e06ea50432f6.png",
+          "sourceSha256": "c4e76a8a2c0a48a53a720a5d6e08efc21546013bd07cb4880c0c472b6cd38ed8",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Edit only the foreground hand in this exact illustration: completely REMOVE the foreground hand, wrist, band/bandage and arm from the image. Fill that area naturally with continuing TABLETOP and projected map grid (or table surface for empty-slot scene), in matching hand-painted cinematic style, with NO new objects. Preserve every other pixel's intended composition and every panel/image/character/lighting. Keep Yoonsera seated and exactly three empty remote seats/lights in background, broad empty confirmation slot with amber waitingrow plus whiteboard/photo secondpanel. No silhouetted remote people. No text/digits/logos, keep same native composition/aspect.",
+          "references": [
+            "/workspace/generated_images/exec-c3dac54a-2b0d-48d7-9cac-0d65edefec61.png"
+          ],
+          "reason": "Rejected after reviewer found the evidence map read like an investigation board; replacement uses the kitchen whiteboard and cafeteria-tray photo."
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-2126e885-a692-4f19-b9e5-6409f99e2b47.png",
+          "sourceSha256": "e38e3d8d54c7e2a07801972b875944c4b1c9b4c6259e6ab82a7ae3c67f0898a3",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Edit ONLY RIGHT evidence panel in this exact illustration. Remove all cityscapes, streetphotos, maps and especially red strings/nodes, which falsely imply a secret investigation board. Replace within that same panel with ONE ordinary PHOTO of a COMMUNAL KITCHEN WHITEBOARD beside stainless serving counter/empty delivery crates: thick wiped marker timetable rows, vertical delivery-route columns, a few unrecognizable blurred strokes, no readable text/numbers. Simple everyday kitchen delivery schedule, no surveillance or conspiracy. Preserve left single blank confirmation slot and amber waitingrow, Yoonsera female lowbungraysuit, three empty remote seats with lights, table, framing, painted film style, no hands or new people.",
+          "references": [
+            "/workspace/generated_images/exec-eee34700-7df7-4549-81c1-e06ea50432f6.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep20-box",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-3440d577-358a-4cee-af90-58205bd0c48a.png",
+      "sourceSha256": "e42474660cfef923b4838b4dacc75ba90e7ed0f913b17e0eee9e980ab285a59e",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1122,
+        1402
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep20-box-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1122,
+        1402
+      ],
+      "bytes": 328360,
+      "sha256": "3a0768b826859b5756463682bd3caa3eb3db126e7a57bb87dae862d88aad1335",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Edit ONLY RIGHT evidence panel in this exact illustration. Remove all cityscapes, streetphotos, maps and especially red strings/nodes, which falsely imply a secret investigation board. Replace within that same panel with ONE ordinary PHOTO of a COMMUNAL KITCHEN WHITEBOARD beside stainless serving counter/empty delivery crates: thick wiped marker timetable rows, vertical delivery-route columns, a few unrecognizable blurred strokes, no readable text/numbers. Simple everyday kitchen delivery schedule, no surveillance or conspiracy. Preserve left single blank confirmation slot and amber waitingrow, Yoonsera female lowbungraysuit, three empty remote seats with lights, table, framing, painted film style, no hands or new people.",
+      "references": [
+        "/workspace/generated_images/exec-e7ec6158-ef7b-4822-b08e-926562fbb190.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-e7ec6158-ef7b-4822-b08e-926562fbb190.png",
+          "sourceSha256": "d5170bbfa1de413a39906aee8fcdde4feb7d79a37d0cb9bbd744f4928cbeac8a",
+          "actualNativeDimensions": [
+            1122,
+            1402
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw this supplied exact scene as a separately composed PORTRAIT4:5 requested1080x1350 novel image, NOT crop. Preserve all character identities, costumes, precise source action and props, lighting and screen directions, omit any new text. Important elements fit naturally without cropping. Only panels/emptybroadconfirmerbox+amberwaitingrow and evidence/whiteboardphoto, Yoonsera alone at audit table, three empty remoteseats connectionlights, NO foreground hand/arm or extra people.",
+          "references": [
+            "/workspace/generated_images/exec-eee34700-7df7-4549-81c1-e06ea50432f6.png"
+          ],
+          "reason": "Rejected after reviewer found the evidence map read like an investigation board; replacement uses the kitchen whiteboard and cafeteria-tray photo."
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-3440d577-358a-4cee-af90-58205bd0c48a.png",
+          "sourceSha256": "e42474660cfef923b4838b4dacc75ba90e7ed0f913b17e0eee9e980ab285a59e",
+          "actualNativeDimensions": [
+            1122,
+            1402
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Edit ONLY RIGHT evidence panel in this exact illustration. Remove all cityscapes, streetphotos, maps and especially red strings/nodes, which falsely imply a secret investigation board. Replace within that same panel with ONE ordinary PHOTO of a COMMUNAL KITCHEN WHITEBOARD beside stainless serving counter/empty delivery crates: thick wiped marker timetable rows, vertical delivery-route columns, a few unrecognizable blurred strokes, no readable text/numbers. Simple everyday kitchen delivery schedule, no surveillance or conspiracy. Preserve left single blank confirmation slot and amber waitingrow, Yoonsera female lowbungraysuit, three empty remote seats with lights, table, framing, painted film style, no hands or new people.",
+          "references": [
+            "/workspace/generated_images/exec-e7ec6158-ef7b-4822-b08e-926562fbb190.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep20-rooftop",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-bfea7307-3674-4bb7-b009-ea132d1ba8e3.png",
+      "sourceSha256": "3c58f54278a5def0b5e8ad4c2886b64f6db75cab772f166dd8bb00c1cb6de164",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep20-rooftop-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 380840,
+      "sha256": "ab46ab73de8864d7c98ddadb3824b47f42d2772717deb34641b7eff22dd30333",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Edit this exact rooftop illustration preserving faces, charcoal suit/hoodie, cup/chopstick action and all lighting. Remove Seoin's phone entirely, because he has not looked at it at this point in the source. His anatomical RIGHT hand (at picture LEFT, currently holding phone) is now relaxed naturally near knee, with WHITE wrist compression bandage. His anatomical LEFT hand (at picture RIGHT, currently wrapped, pressing cup lid) is BARE and UNBANDAGED; keep that hand pressing lid. ONE bandaged wrist only, no darkband. Make both ramen cups plain rust-red paper cups WITHOUT labels/logos/lettering. Doyun still puts woodenchopsticks over Seoin's cup, same frame/native dimensions. Nothing else changes.",
+      "references": [
+        "/workspace/generated_images/exec-77c0844f-b84f-4741-84f1-24d7e70fd35a.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-77c0844f-b84f-4741-84f1-24d7e70fd35a.png",
+          "sourceSha256": "c63e6d73aadcdd165a96fbc0689fcd7ca29c6c8ee7981330265dc2ec3ac86d00",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Night after9 on clean modern CORPORATE TOWER rooftop, maintained railings, city lights and far warm lower residential district below. Seoin male dense black CURLS charcoal blazer gray shirt sits left pressing lid on cup ramen with his RIGHT hand (white compression wrist bandage NO dark band); his other hand holds phone with soft blank glow. Doyun male messy straight black hair gray hoodie white T-shirt right smiles easily and lays ONE pair wooden chopsticks across Seoin's cup. Two cup ramens and steam, clean corporate roof not shabby housing. Action is friend giving chopsticks while heavy phone work continues, gentle pause, no additional people/text. If a bandaged hand seen FROM BEHIND it is anatomically RIGHT with fingers upward and THUMB ON VIEWER LEFT; if front-facing man's body his RIGHT is at picture LEFT. Keep crucial action above bottom fifth.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/doyun-canonical.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-bfea7307-3674-4bb7-b009-ea132d1ba8e3.png",
+          "sourceSha256": "3c58f54278a5def0b5e8ad4c2886b64f6db75cab772f166dd8bb00c1cb6de164",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Edit this exact rooftop illustration preserving faces, charcoal suit/hoodie, cup/chopstick action and all lighting. Remove Seoin's phone entirely, because he has not looked at it at this point in the source. His anatomical RIGHT hand (at picture LEFT, currently holding phone) is now relaxed naturally near knee, with WHITE wrist compression bandage. His anatomical LEFT hand (at picture RIGHT, currently wrapped, pressing cup lid) is BARE and UNBANDAGED; keep that hand pressing lid. ONE bandaged wrist only, no darkband. Make both ramen cups plain rust-red paper cups WITHOUT labels/logos/lettering. Doyun still puts woodenchopsticks over Seoin's cup, same frame/native dimensions. Nothing else changes.",
+          "references": [
+            "/workspace/generated_images/exec-77c0844f-b84f-4741-84f1-24d7e70fd35a.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep20-rooftop",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-505e5327-5707-4d67-9d09-269f99a57936.png",
+      "sourceSha256": "15029a29d6bd7d49fda3d6e71d8b6c4d91967156d48d1a6ce81cc033677550c7",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep20-rooftop-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 387486,
+      "sha256": "10a9b581b207ffa3644cd8d8da4b2c92f24b857f4464d9a006273715681bf16c",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Correct only Doyun's chopsticks action in this exact portrait scene. Doyun (grayhoodie on RIGHT) must reach across with one hand and place pair of wooden chopsticks across SEOIN'S ramen cup at pictureLEFT, NOT his owncup atpictureRIGHT. His own cup onRIGHT stays without chopsticks. Seoin's RIGHT wrist bandage pictureLEFT stays, hand may rest on/next to LEFTcuplid, phoneabsent. Two unbranded plainrustredcups. Preserve all faces/hair/costumes/corporateroof/light/frame. No extra hands or text.",
+      "references": [
+        "/workspace/generated_images/exec-1d4664dc-f143-484e-91bb-63d3790861fb.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-505e5327-5707-4d67-9d09-269f99a57936.png",
+          "sourceSha256": "15029a29d6bd7d49fda3d6e71d8b6c4d91967156d48d1a6ce81cc033677550c7",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Correct only Doyun's chopsticks action in this exact portrait scene. Doyun (grayhoodie on RIGHT) must reach across with one hand and place pair of wooden chopsticks across SEOIN'S ramen cup at pictureLEFT, NOT his owncup atpictureRIGHT. His own cup onRIGHT stays without chopsticks. Seoin's RIGHT wrist bandage pictureLEFT stays, hand may rest on/next to LEFTcuplid, phoneabsent. Two unbranded plainrustredcups. Preserve all faces/hair/costumes/corporateroof/light/frame. No extra hands or text.",
+          "references": [
+            "/workspace/generated_images/exec-1d4664dc-f143-484e-91bb-63d3790861fb.png"
+          ]
+        },
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-1d4664dc-f143-484e-91bb-63d3790861fb.png",
+          "sourceSha256": "0dfc103501d2f623ed8fee782a31a51cad261497b69ea4c082a6b81995969547",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied EXACT scene as a newly drawn PORTRAIT4:5 requested1080x1350 novel image, not a crop. Preserve character identity, body, precise costume and source action, left/right orientation and lighting, naturally fit essential props/actions into portrait composition, no extra people or symbols. Seoin male dense curls LEFT resting anatomicalRIGHT bandagedwrist (pictureLEFT) on knee, anatomicalLEFT barehand(pictureRIGHT) presses redplainramencuplid. Doyun grayhoodie RIGHT lays chopsticks acrosscup. Two plainrustredramencups NO logos/text, no phone yet. Clean corporate tower roof.",
+          "references": [
+            "/workspace/generated_images/exec-bfea7307-3674-4bb7-b009-ea132d1ba8e3.png"
+          ],
+          "referenceTraceVerified": false,
+          "referenceTraceNote": "중간 생성 기록 병합 과정에서 이 거절 시도의 입력 참조 연결은 재구성되었으므로 확정 출처로 사용하지 않는다. 현재 수락된 수정본의 입력 PNG 연결은 직접 도구 호출로 확인했다.",
+          "reason": "중간 수정본이 기준에 맞지 않아 최종 수락본으로 교체됐다."
+        }
+      ]
+    },
+    {
+      "id": "ep20-1-kitchens",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-c2179291-4ea4-4fea-b55b-e2ba8518281e.png",
+      "sourceSha256": "be0ab5f4f7c4ae65573cf4fc5a739c1c1e6bb57bc9175f4137d0eeea5bc96f9b",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep20-1-kitchens-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 381472,
+      "sha256": "69ce72435d5b059f4ddca68e5fb326a54a1c78fee974205b6073cd8a07fa56c9",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. TWO DIFFERENT small domestic kitchens at same night, no people. A fine vertical seam separates two equal views, not same building exterior. LEFT warm tablelamp: workboots next to distant entry, water bottle and EMPTY milk carton on worn dining table, dark-screen phone. RIGHT cool streetlight: bowl of rice porridge with one spoon, near entry bag with plain hospital envelope poking out, phone just laid near charger with cable connected. These everyday leftovers make two households distinct. No alarm digits or envelope/carton words, no humans/reflections. Detailed film background painting, restrained lived-in objects, no invented luxury. If a bandaged hand seen FROM BEHIND it is anatomically RIGHT with fingers upward and THUMB ON VIEWER LEFT; if front-facing man's body his RIGHT is at picture LEFT. Keep crucial action above bottom fifth.",
+      "references": [
+        "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-c2179291-4ea4-4fea-b55b-e2ba8518281e.png",
+          "sourceSha256": "be0ab5f4f7c4ae65573cf4fc5a739c1c1e6bb57bc9175f4137d0eeea5bc96f9b",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. TWO DIFFERENT small domestic kitchens at same night, no people. A fine vertical seam separates two equal views, not same building exterior. LEFT warm tablelamp: workboots next to distant entry, water bottle and EMPTY milk carton on worn dining table, dark-screen phone. RIGHT cool streetlight: bowl of rice porridge with one spoon, near entry bag with plain hospital envelope poking out, phone just laid near charger with cable connected. These everyday leftovers make two households distinct. No alarm digits or envelope/carton words, no humans/reflections. Detailed film background painting, restrained lived-in objects, no invented luxury. If a bandaged hand seen FROM BEHIND it is anatomically RIGHT with fingers upward and THUMB ON VIEWER LEFT; if front-facing man's body his RIGHT is at picture LEFT. Keep crucial action above bottom fifth.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep20-1-kitchens",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-e94e024a-a3ab-48f7-b82f-9c5a0b18d37e.png",
+      "sourceSha256": "e7bbb35661145a7dac1f117bb3623de2984a31127f63c1b01bda8fdefc23825e",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep20-1-kitchens-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 413608,
+      "sha256": "d0c208d27a8a2cf7b341ea1c29b60b7855e8dd11f288f7b6c725b620252cee23",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied EXACT scene as a newly drawn PORTRAIT4:5 requested1080x1350 novel image, not a crop. Preserve character identity, body, precise costume and source action, left/right orientation and lighting, naturally fit essential props/actions into portrait composition, no extra people or symbols. Two DIFFERENT EMPTY kitchens side by side with thinverticalseam even within portrait, LEFT warmer workboots/water/emptymilkcarton/darkphone, RIGHT cooler porridge/spoon/bagwithhospitalenvelope/chargingphone. No people, no text, no clockdigits.",
+      "references": [
+        "/workspace/generated_images/exec-c2179291-4ea4-4fea-b55b-e2ba8518281e.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-e94e024a-a3ab-48f7-b82f-9c5a0b18d37e.png",
+          "sourceSha256": "e7bbb35661145a7dac1f117bb3623de2984a31127f63c1b01bda8fdefc23825e",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied EXACT scene as a newly drawn PORTRAIT4:5 requested1080x1350 novel image, not a crop. Preserve character identity, body, precise costume and source action, left/right orientation and lighting, naturally fit essential props/actions into portrait composition, no extra people or symbols. Two DIFFERENT EMPTY kitchens side by side with thinverticalseam even within portrait, LEFT warmer workboots/water/emptymilkcarton/darkphone, RIGHT cooler porridge/spoon/bagwithhospitalenvelope/chargingphone. No people, no text, no clockdigits.",
+          "references": [
+            "/workspace/generated_images/exec-c2179291-4ea4-4fea-b55b-e2ba8518281e.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep21-contracts",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-52496c1d-adc1-4387-950a-d8678eb846a4.png",
+      "sourceSha256": "e73e71012b64acadc4aaa028d27857e296373924b5fbb64686ae4c1e0c774d4e",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep21-contracts-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 360480,
+      "sha256": "edb9d97b264ab502569e40fbd4111c7aadc299fc726d6ce10eb5f8dd556d191d",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Eye level at night meeting table, two translucent contract panels side by side for SAME household: identical layout/frame/grid, left neat bright warm-white, right same layout heavier dimmer with ONE amber charge/recovery row. All rows blank or abstract unreadable strokes; NO numbers/letters, no red warning. Seoin's RIGHT hand white compression bandage at bottom approaches LEFT panel but not yet pointing (source pointing next paragraph). Settlement clerk seen ONLY neutral sleeve and hand pushing second panel across, no face invented. Rich cold fluorescent room and contrasting screen light. The discovery is that apparently identical contracts have different consequences; readable same-frame/different-row, not generic floating boxes. If a bandaged hand seen FROM BEHIND it is anatomically RIGHT with fingers upward and THUMB ON VIEWER LEFT; if front-facing man's body his RIGHT is at picture LEFT. Keep crucial action above bottom fifth.",
+      "references": [
+        "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+        "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-52496c1d-adc1-4387-950a-d8678eb846a4.png",
+          "sourceSha256": "e73e71012b64acadc4aaa028d27857e296373924b5fbb64686ae4c1e0c774d4e",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Eye level at night meeting table, two translucent contract panels side by side for SAME household: identical layout/frame/grid, left neat bright warm-white, right same layout heavier dimmer with ONE amber charge/recovery row. All rows blank or abstract unreadable strokes; NO numbers/letters, no red warning. Seoin's RIGHT hand white compression bandage at bottom approaches LEFT panel but not yet pointing (source pointing next paragraph). Settlement clerk seen ONLY neutral sleeve and hand pushing second panel across, no face invented. Rich cold fluorescent room and contrasting screen light. The discovery is that apparently identical contracts have different consequences; readable same-frame/different-row, not generic floating boxes. If a bandaged hand seen FROM BEHIND it is anatomically RIGHT with fingers upward and THUMB ON VIEWER LEFT; if front-facing man's body his RIGHT is at picture LEFT. Keep crucial action above bottom fifth.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep21-contracts",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-4d3b450b-9f38-44fa-b912-558a95f3a0b3.png",
+      "sourceSha256": "3f35f110afab55d2815eca273037c19c89aea5df4f2420e0d6435a45a861cf57",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1122,
+        1402
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep21-contracts-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1122,
+        1402
+      ],
+      "bytes": 404818,
+      "sha256": "49c29ba8990f10274848fca3c58f2e7712743bfd3740cace71242fc18af487d1",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied EXACT scene as a newly drawn PORTRAIT4:5 requested1080x1350 novel image, not a crop. Preserve character identity, body, precise costume and source action, left/right orientation and lighting, naturally fit essential props/actions into portrait composition, no extra people or symbols. Two IDENTICAL-layout household contract panels side by side, LEFT bright/neat/white RIGHTsameformat dim withONEambercharge row. Seoin malecurls RIGHTwrist atpictureLEFT bandaged, handapproachesbutnotpressing; opposite clerk only sleevehand. NO legibletext/numbers, preserve row count/layoutcomparison.",
+      "references": [
+        "/workspace/generated_images/exec-52496c1d-adc1-4387-950a-d8678eb846a4.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-4d3b450b-9f38-44fa-b912-558a95f3a0b3.png",
+          "sourceSha256": "3f35f110afab55d2815eca273037c19c89aea5df4f2420e0d6435a45a861cf57",
+          "actualNativeDimensions": [
+            1122,
+            1402
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied EXACT scene as a newly drawn PORTRAIT4:5 requested1080x1350 novel image, not a crop. Preserve character identity, body, precise costume and source action, left/right orientation and lighting, naturally fit essential props/actions into portrait composition, no extra people or symbols. Two IDENTICAL-layout household contract panels side by side, LEFT bright/neat/white RIGHTsameformat dim withONEambercharge row. Seoin malecurls RIGHTwrist atpictureLEFT bandaged, handapproachesbutnotpressing; opposite clerk only sleevehand. NO legibletext/numbers, preserve row count/layoutcomparison.",
+          "references": [
+            "/workspace/generated_images/exec-52496c1d-adc1-4387-950a-d8678eb846a4.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep21-confirmation",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-a2fb99b3-0e67-4cb6-95e4-a5d42588863b.png",
+      "sourceSha256": "dc283add891cfdd3e7885108ff98855068496d492f084984e9cf9a8b4b93731d",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep21-confirmation-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 321498,
+      "sha256": "aa377b66dafa5963024a4f528c14a6642d24125d3bc11aab23c90b0daf45d4b5",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Edit ONLY the translucent screen and Seoin pointing fingertip position in this exact image, all faces/hands/costumes/style/light stay same. Current screen wrongly has only list checkboxes. It needs at TOP a SINGLE BROAD EMPTY RECTANGULAR name-confirmation SLOT, clearly empty and sized for ONE person, with Seoin's RIGHT bandaged wrist index hovering just above that ONE EMPTY slot without touching. UNDER that slot put several faint list rows, very LAST row shaded dim gray (mother-house row). No checkboxgrid; no letters/digits, no mother face. Make screen taller if needed while retaining coffee/Yeonwoo hospitalcall/Yoonsera quietly watching. The discovery is one-person confirmation plus bottom gray household, no name alreadyentered. No extrafingers.",
+      "references": [
+        "/workspace/generated_images/exec-d804303c-aa11-47c7-8da8-0e38461a8600.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-d804303c-aa11-47c7-8da8-0e38461a8600.png",
+          "sourceSha256": "2ad8078b8bbe971ceb0bbce5f9e7a9b15251f6d3f9d43b24e0363949e76a59dd",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Over shoulder male Seoin dense black CURLS charcoal blazer gray shirt: his right index stopped just ABOVE a SINGLE-PERSON empty confirmer box, white compression bandage wrist NO access band. List beneath has a distinctly dim gray LAST row, no words/digits and no mother image. Behind right female Yeonwoo short straight blackhair navy blazer blackturtleneck opens hospital phone call beside just-set-down coffee cup; behind left Yoonsera female gray suit low blackbun silently looks at same bottom row, composed neutral face. Early morning1am screen bluewhite light, exhausted stillness. Do not show name already entered/pressing, no dramatic faces, no new UI text. Tight focus on halted finger and gray row with observer gaze. If a bandaged hand seen FROM BEHIND it is anatomically RIGHT with fingers upward and THUMB ON VIEWER LEFT; if front-facing man's body his RIGHT is at picture LEFT. Keep crucial action above bottom fifth.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonsera-a.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-a2fb99b3-0e67-4cb6-95e4-a5d42588863b.png",
+          "sourceSha256": "dc283add891cfdd3e7885108ff98855068496d492f084984e9cf9a8b4b93731d",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Edit ONLY the translucent screen and Seoin pointing fingertip position in this exact image, all faces/hands/costumes/style/light stay same. Current screen wrongly has only list checkboxes. It needs at TOP a SINGLE BROAD EMPTY RECTANGULAR name-confirmation SLOT, clearly empty and sized for ONE person, with Seoin's RIGHT bandaged wrist index hovering just above that ONE EMPTY slot without touching. UNDER that slot put several faint list rows, very LAST row shaded dim gray (mother-house row). No checkboxgrid; no letters/digits, no mother face. Make screen taller if needed while retaining coffee/Yeonwoo hospitalcall/Yoonsera quietly watching. The discovery is one-person confirmation plus bottom gray household, no name alreadyentered. No extrafingers.",
+          "references": [
+            "/workspace/generated_images/exec-d804303c-aa11-47c7-8da8-0e38461a8600.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep21-confirmation",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-a9a20f34-eca1-459d-9bfc-1da173d11a4a.png",
+      "sourceSha256": "93139ef8e7d9f15f7c6b651544a8bdbbd22d706354b7d8f52fbf63552584c3e0",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1122,
+        1402
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep21-confirmation-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1122,
+        1402
+      ],
+      "bytes": 364634,
+      "sha256": "a8919f1236d05c455be7a3d44d1d76b59099f2645fcba784f2a78882704ee937",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Fix ONLY translucent panel in this exact portrait scene: REMOVE ALL CHECKBOXES. At TOP draw ONE SINGLE BROAD EMPTY RECTANGULAR confirmer/name SLOT, wide enough foroneperson, index hovering at TOP SLOT without touching. BELOW it place4or5 faint blank horizontal listrows, LAST row dimGRAY. No numbers/words/names/digits. One empty top slot plus bottomgrayrow MUST be obvious. Keep all three faces, handRIGHTbandage onpictureLEFT, outfits, phones/coffee and frame identical. No signatures/pressing.",
+      "references": [
+        "/workspace/generated_images/exec-a8035058-a6f7-4686-b350-76724f3c3540.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-a9a20f34-eca1-459d-9bfc-1da173d11a4a.png",
+          "sourceSha256": "93139ef8e7d9f15f7c6b651544a8bdbbd22d706354b7d8f52fbf63552584c3e0",
+          "actualNativeDimensions": [
+            1122,
+            1402
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Fix ONLY translucent panel in this exact portrait scene: REMOVE ALL CHECKBOXES. At TOP draw ONE SINGLE BROAD EMPTY RECTANGULAR confirmer/name SLOT, wide enough foroneperson, index hovering at TOP SLOT without touching. BELOW it place4or5 faint blank horizontal listrows, LAST row dimGRAY. No numbers/words/names/digits. One empty top slot plus bottomgrayrow MUST be obvious. Keep all three faces, handRIGHTbandage onpictureLEFT, outfits, phones/coffee and frame identical. No signatures/pressing.",
+          "references": [
+            "/workspace/generated_images/exec-a8035058-a6f7-4686-b350-76724f3c3540.png"
+          ]
+        },
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-a8035058-a6f7-4686-b350-76724f3c3540.png",
+          "sourceSha256": "455bee22e81210af280f358293d8252183a6505318510dbf8c9cc4d4e4fe1af5",
+          "actualNativeDimensions": [
+            1122,
+            1402
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Recompose the supplied EXACT scene as a newly drawn PORTRAIT4:5 requested1080x1350 novel image, not a crop. Preserve character identity, body, precise costume and source action, left/right orientation and lighting, naturally fit essential props/actions into portrait composition, no extra people or symbols. Same three characters and RIGHT wrist bandage pictureLEFT, stopped index hovering at ONE BROAD EMPTY confirmation SLOT at TOP of panel, list below with LAST dimgrayrow. Yoonsera lowbungraysuit silent background, Yeonwoo shortstraightblackhairnavysuit on hospitalcall at right bycoffee. Preserve single empty slot and no enteredname, no text.",
+          "references": [
+            "/workspace/generated_images/exec-a2fb99b3-0e67-4cb6-95e4-a5d42588863b.png"
+          ],
+          "referenceTraceVerified": false,
+          "referenceTraceNote": "중간 생성 기록 병합 과정에서 이 거절 시도의 입력 참조 연결은 재구성되었으므로 확정 출처로 사용하지 않는다. 현재 수락된 수정본의 입력 PNG 연결은 직접 도구 호출로 확인했다.",
+          "reason": "중간 수정본이 기준에 맞지 않아 최종 수락본으로 교체됐다."
+        }
+      ]
+    },
+    {
+      "id": "ep21-call-transfer",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-4744f37f-874f-48d3-9004-4184611059c3.png",
+      "sourceSha256": "7d741b37f6be02c8fc337e24cce3943dfb2eb2862b8a75d623672682a82c8dcb",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep21-call-transfer-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 324168,
+      "sha256": "221e5f9c54760cc8ff7476ae2ec1a7c4711573436a150d63588124c6227cd3f5",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Correct the TABLETOP CONTACTS ONLY of this exact scene, keeping Seoin's rightbandagedwrist, Yeonwoo withphone/coffeecup, faces/costumes/style/light. REMOVE all blank PAPER cards (these are digital hospital contact LISTS, not paper). In their place put TWO clearly digital faintblue translucent small panels parallel to tabletop. LEFT panel near Seoin contains EXACTLY ONE horizontal blank contact row. RIGHT panel near Yeonwoo contains EXACTLY SIX horizontal blank contact rows stacked vertically, separated evenly; NO other rows, NO logos/numbers/words. Seoin's hand sliding SIX-row panel toward Yeonwoo. Make difference1row/sixrows unambiguous, no new hands/people.",
+      "references": [
+        "/workspace/generated_images/exec-3480e82c-17ee-494c-837f-8a49cbabaee5.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-4744f37f-874f-48d3-9004-4184611059c3.png",
+          "sourceSha256": "7d741b37f6be02c8fc337e24cce3943dfb2eb2862b8a75d623672682a82c8dcb",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Correct the TABLETOP CONTACTS ONLY of this exact scene, keeping Seoin's rightbandagedwrist, Yeonwoo withphone/coffeecup, faces/costumes/style/light. REMOVE all blank PAPER cards (these are digital hospital contact LISTS, not paper). In their place put TWO clearly digital faintblue translucent small panels parallel to tabletop. LEFT panel near Seoin contains EXACTLY ONE horizontal blank contact row. RIGHT panel near Yeonwoo contains EXACTLY SIX horizontal blank contact rows stacked vertically, separated evenly; NO other rows, NO logos/numbers/words. Seoin's hand sliding SIX-row panel toward Yeonwoo. Make difference1row/sixrows unambiguous, no new hands/people.",
+          "references": [
+            "/workspace/generated_images/exec-3480e82c-17ee-494c-837f-8a49cbabaee5.png"
+          ]
+        },
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-3480e82c-17ee-494c-837f-8a49cbabaee5.png",
+          "sourceSha256": "34d4233a8af88eb125899e92f7cf39e9780e9a03d24a8099c58d9748ce65a61f",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Separate cinematic action detail at night hearing table: Seoin's right hand white wristbandage in charcoal blazer sleeve pushes SIX small plain hospital contact cards as one group across tabletop projection toward female Yeonwoo at right, leaving ONE contact card by himself at left. Distinct visible one-versus-six grouping, no text/digits/letters or institution logos. Yeonwoo navy blazer/blackturtleneck short straight blackhair sets coffee cup down with left hand and opens first phone call with right, gaze moving from cards to phone, restrained determination not cheerful. Screenlight catches moving hands and cup; no extra hands/cards beyond 1 and6. Do not show later confirmation signature. If Seoin shown front-facing anatomical RIGHT wrist at picture LEFT only is bandaged. If OTS camera from behind his rightarm enters at viewerRIGHT thumbviewerLEFT. Action in safe central area above bottomfifth.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ],
+          "referenceTraceVerified": false,
+          "referenceTraceNote": "중간 생성 기록의 입력 참조는 재구성되어 확정 출처로 사용할 수 없다.",
+          "reason": "중간 수정본이 기준에 맞지 않아 최종 수락본으로 교체됐다."
+        }
+      ]
+    },
+    {
+      "id": "ep21-call-transfer",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-d770c6fe-f6d6-44e2-bb03-2d5f817b4f41.png",
+      "sourceSha256": "db9364fdabed6f895ee50fb41daf9e1f1c795247248a0ee23fa71526259b2df8",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep21-call-transfer-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 359102,
+      "sha256": "585c5944ea55e38a97015a2be533a8949e1b706f32f193aceb2d226445476d39",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. Seoin curlymale atLEFT RIGHTwristwhitebandage slides DIGITAL hospital list panel of EXACTLY6 stacked blank rows toward femaleYeonwoo RIGHT oncall besidecoffee; retains small ONErowpanel byhim. Notpapercards, no extra rows/words/digits.",
+      "references": [
+        "/workspace/generated_images/exec-4744f37f-874f-48d3-9004-4184611059c3.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-d770c6fe-f6d6-44e2-bb03-2d5f817b4f41.png",
+          "sourceSha256": "db9364fdabed6f895ee50fb41daf9e1f1c795247248a0ee23fa71526259b2df8",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. Seoin curlymale atLEFT RIGHTwristwhitebandage slides DIGITAL hospital list panel of EXACTLY6 stacked blank rows toward femaleYeonwoo RIGHT oncall besidecoffee; retains small ONErowpanel byhim. Notpapercards, no extra rows/words/digits.",
+          "references": [
+            "/workspace/generated_images/exec-4744f37f-874f-48d3-9004-4184611059c3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep21-1-rescue",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-c8d339d0-2fc3-45fd-b163-8f207d4db5ba.png",
+      "sourceSha256": "2d885a6bad1c9107b6ca9faa509ddab3e7461065ad5e292195978723895aea28",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep21-1-rescue-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 486758,
+      "sha256": "77fd57dce63a6e69320160c6d44f7fee5484bee975db6144016323f05e0dce1c",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Correct ONLY Eunkyung's hand injury in this exact burning-tower scene. REMOVE all white bandages/gauze from her hand/wrist completely: she has had NO treatment in the dream. Instead show the same natural bare hand with a SMALL raw scrape on palm edge and grime, modest nongraphic injury; exactly five fingers natural hand grip around elderly person's forearm. Keep dusty navyworkjacket/graytee/blackcargopants/workboots, kneeinjury, elderly arms with NO face, window/steelbrace/neighborroof/fire/smoke/camera all unchanged. No blood drips, no bandage on any hand, no text.",
+      "references": [
+        "/workspace/generated_images/exec-b1bb6b62-7260-4aa4-b09f-690489046936.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-b1bb6b62-7260-4aa4-b09f-690489046936.png",
+          "sourceSha256": "2e05447caa17d8df895434f019f4fec111d74b4b276f09e424b3db9fa96139de",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "reason": "Rejected earlier rescue drawing because Eunkyung’s bandage was on the wrong hand; corrected final art removes the bandage."
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-c8d339d0-2fc3-45fd-b163-8f207d4db5ba.png",
+          "sourceSha256": "2d885a6bad1c9107b6ca9faa509ddab3e7461065ad5e292195978723895aea28",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Correct ONLY Eunkyung's hand injury in this exact burning-tower scene. REMOVE all white bandages/gauze from her hand/wrist completely: she has had NO treatment in the dream. Instead show the same natural bare hand with a SMALL raw scrape on palm edge and grime, modest nongraphic injury; exactly five fingers natural hand grip around elderly person's forearm. Keep dusty navyworkjacket/graytee/blackcargopants/workboots, kneeinjury, elderly arms with NO face, window/steelbrace/neighborroof/fire/smoke/camera all unchanged. No blood drips, no bandage on any hand, no text.",
+          "references": [
+            "/workspace/generated_images/exec-b1bb6b62-7260-4aa4-b09f-690489046936.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep21-1-rescue",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-5ee90c81-321c-4f11-963d-bc026c9c9137.png",
+      "sourceSha256": "320108e27dd5f811ce953803ed8e83415716ed2cfd42e84a58a7a66fd27ff1fa",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep21-1-rescue-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 594558,
+      "sha256": "6d647787e2cc592bd2a569dd7aeecf0f3398e3f26cf163f521391798350e3470",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw this exact cinematic rescue scene as a separately composed PORTRAIT4:5 requested1080x1350, not a crop, and preserve ALL source continuity. Adult WORKING WOMAN Eunkyung lowblackponytail dusty navyworkjacket graytee blackcargopants brownboots, scraped bare hand with NO BANDAGE or gauze, injuredknee, carries elderlyperson whose arms only visible no face. Inside broken towerwindow atLEFT BEFORE escape, diagonal precarious steelbrace spans to neighboring rooftop atRIGHT clearly within portraitframe, orangefire/coolgraybluesmoke in gap. Keep entire route window→brace→neighborroof readable, woman still before crossing; no jump,landing,rescuecount/outcome, no new people,text, symbols. Correct female fullbody, natural fivefinger grip.",
+      "references": [
+        "/workspace/generated_images/exec-c8d339d0-2fc3-45fd-b163-8f207d4db5ba.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-5ee90c81-321c-4f11-963d-bc026c9c9137.png",
+          "sourceSha256": "320108e27dd5f811ce953803ed8e83415716ed2cfd42e84a58a7a66fd27ff1fa",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw this exact cinematic rescue scene as a separately composed PORTRAIT4:5 requested1080x1350, not a crop, and preserve ALL source continuity. Adult WORKING WOMAN Eunkyung lowblackponytail dusty navyworkjacket graytee blackcargopants brownboots, scraped bare hand with NO BANDAGE or gauze, injuredknee, carries elderlyperson whose arms only visible no face. Inside broken towerwindow atLEFT BEFORE escape, diagonal precarious steelbrace spans to neighboring rooftop atRIGHT clearly within portraitframe, orangefire/coolgraybluesmoke in gap. Keep entire route window→brace→neighborroof readable, woman still before crossing; no jump,landing,rescuecount/outcome, no new people,text, symbols. Correct female fullbody, natural fivefinger grip.",
+          "references": [
+            "/workspace/generated_images/exec-c8d339d0-2fc3-45fd-b163-8f207d4db5ba.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep22-corridor",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-129019f6-15fe-4f19-9133-194e12363fa1.png",
+      "sourceSha256": "022274dfb2f4ce91dfdab6b8091b02ed30834729bbd7afc4c24efbbbad81f3d7",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        940
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep22-corridor-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        940
+      ],
+      "bytes": 309990,
+      "sha256": "1c48e2f00a7d36ed9639445b429edb09ab6dda2949d92b47dc719ba86258867d",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Preserve this exact hospital scene and characters/light/composition, edit only cover on sleeping daughter: REMOVE invented textured blue blanket. Replace it with a plain dark navy ADULT COAT draped over daughter, same matching dark coat beneath her head used as pillow, practical folded broad fabric/lapel/seam not wool blanket texture. Child face turned away, lower legs concealed by coat/chair orientation, no shoes visible. No text. Ma white misbuttonedshirt, female Yoonha charcoal suit half-sitting, male curly Seoin behind all unchanged.",
+      "references": [
+        "/workspace/generated_images/exec-6bb1be55-24b0-4f77-8d07-1a677e817c3e.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-129019f6-15fe-4f19-9133-194e12363fa1.png",
+          "sourceSha256": "022274dfb2f4ce91dfdab6b8091b02ed30834729bbd7afc4c24efbbbad81f3d7",
+          "actualNativeDimensions": [
+            1672,
+            940
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Preserve this exact hospital scene and characters/light/composition, edit only cover on sleeping daughter: REMOVE invented textured blue blanket. Replace it with a plain dark navy ADULT COAT draped over daughter, same matching dark coat beneath her head used as pillow, practical folded broad fabric/lapel/seam not wool blanket texture. Child face turned away, lower legs concealed by coat/chair orientation, no shoes visible. No text. Ma white misbuttonedshirt, female Yoonha charcoal suit half-sitting, male curly Seoin behind all unchanged.",
+          "references": [
+            "/workspace/generated_images/exec-6bb1be55-24b0-4f77-8d07-1a677e817c3e.png"
+          ]
+        },
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-6bb1be55-24b0-4f77-8d07-1a677e817c3e.png",
+          "sourceSha256": "a2821f2c060d3ddd4baababcf14c574e762a857d2fe080719f023a3639a3a7e0",
+          "actualNativeDimensions": [
+            1672,
+            940
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. High three-quarter shot of midnight hospital corridor waiting chairs. Ma Jeonghoon same adult male slickblackhair graytemples longrectangularface broadshoulders suddenly stood in foreground RIGHT, leans forward slightly toward Yoonha. He wears ONLY rumpled WHITE dress shirt open collar misbuttoned offset placket/navytrousers/blackOxfords, no jacket, no tie, same tired face. Small daughter sleeping SIDEWAYS on folded coat across central chairs, face turned away/hidden, lower legs covered, floor underchair obscured so NO shoes introduced early. Female Yoonha chinlengthblackbob charcoalsuit/whiteopenblouse at LEFT stopped mid-half-sit as he rose. Far behind them curly youngmale Seoin charcoalblazer has just halted, small but recognizable. Plain doors blank walls no signage, low pale ceiling lights, no triumphant emotion/outcome. If Seoin shown front-facing anatomical RIGHT wrist at picture LEFT only is bandaged. If OTS camera from behind his rightarm enters at viewerRIGHT thumbviewerLEFT. Action in safe central area above bottomfifth.",
+          "references": [
+            "/workspace/generated_images/exec-1d808f74-1b56-40be-9542-fec77d4d7355.png",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonha-a.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/seoin-standing.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ],
+          "referenceTraceVerified": false,
+          "referenceTraceNote": "중간 생성 기록의 입력 참조는 재구성되어 확정 출처로 사용할 수 없다.",
+          "reason": "중간 수정본이 기준에 맞지 않아 최종 수락본으로 교체됐다."
+        }
+      ]
+    },
+    {
+      "id": "ep22-corridor",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-feb0d137-626b-4069-9d42-00a4c233f476.png",
+      "sourceSha256": "3ee976f3d276a122372b84b43e644ee1f87cbbb38e72ccb200746837dd3dfd37",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep22-corridor-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 420802,
+      "sha256": "01d0720ddd39525bd9d6fca9038b0edd7e8cc4f99687f41fd0fe2b1651b286d2",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. Ma WHITEshirt misbuttoned atRIGHT leanstanding, femaleYoonha shortbob charcoalsuit LEFT stoppedhalfseated, daughter sidewayslying on darkadultCOAT with matchingCOATcover no blanket/shoes/face visible, curlymaleSeoin behind. Maintain waitingroomspatialrelation.",
+      "references": [
+        "/workspace/generated_images/exec-129019f6-15fe-4f19-9133-194e12363fa1.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-feb0d137-626b-4069-9d42-00a4c233f476.png",
+          "sourceSha256": "3ee976f3d276a122372b84b43e644ee1f87cbbb38e72ccb200746837dd3dfd37",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. Ma WHITEshirt misbuttoned atRIGHT leanstanding, femaleYoonha shortbob charcoalsuit LEFT stoppedhalfseated, daughter sidewayslying on darkadultCOAT with matchingCOATcover no blanket/shoes/face visible, curlymaleSeoin behind. Maintain waitingroomspatialrelation.",
+          "references": [
+            "/workspace/generated_images/exec-129019f6-15fe-4f19-9133-194e12363fa1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep22-shoe",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-f328aaf6-3fa2-4636-8852-da0898162b44.png",
+      "sourceSha256": "945481bf751ee9d888c63ac03d0c64afa1911750c92abe93acba62d691929377",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep22-shoe-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 296470,
+      "sha256": "acdabe2a0f2bf3069b73df0cc9b9867553820d9b8e8479bbd34374c93e8dd57f",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Extreme floor-height close detail in same hospital corridor. Adult father's large anatomically natural hand extends from rumpled WHITE shirt cuff and carefully pulls upright the folded back heel of his daughter's SMALL sneaker WHILE her foot is INSIDE it. One child ankle and shoe only, child standing, no faces or bodies. Show folded fabric heel becoming straight under thumb and index, delicate practical action. Blurred father's BLACK Oxford shoes behind, cool reflected ceilinglight on polished floor, navy trouser hem. No smiling/gratitude, no words/logos, no other hands. This is a quiet result AFTER prolonged waiting, not shoe fitting commercial. Any back-of-hand view right hand must have thumb on pictureLEFT when fingers point upward; keep sourceaction in safe middle area abovebottomfifth. Don't invent letters or symbols.",
+      "references": [
+        "/workspace/generated_images/exec-1d808f74-1b56-40be-9542-fec77d4d7355.png",
+        "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-f328aaf6-3fa2-4636-8852-da0898162b44.png",
+          "sourceSha256": "945481bf751ee9d888c63ac03d0c64afa1911750c92abe93acba62d691929377",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Extreme floor-height close detail in same hospital corridor. Adult father's large anatomically natural hand extends from rumpled WHITE shirt cuff and carefully pulls upright the folded back heel of his daughter's SMALL sneaker WHILE her foot is INSIDE it. One child ankle and shoe only, child standing, no faces or bodies. Show folded fabric heel becoming straight under thumb and index, delicate practical action. Blurred father's BLACK Oxford shoes behind, cool reflected ceilinglight on polished floor, navy trouser hem. No smiling/gratitude, no words/logos, no other hands. This is a quiet result AFTER prolonged waiting, not shoe fitting commercial. Any back-of-hand view right hand must have thumb on pictureLEFT when fingers point upward; keep sourceaction in safe middle area abovebottomfifth. Don't invent letters or symbols.",
+          "references": [
+            "/workspace/generated_images/exec-1d808f74-1b56-40be-9542-fec77d4d7355.png",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep22-shoe",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-1e98e4f0-5595-4fcd-a13a-e1af629ee7f9.png",
+      "sourceSha256": "b31db649666816342812327ccb4eab03d30b64fea0a702aa35f734527f658ac2",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep22-shoe-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 298576,
+      "sha256": "5536d912759d52e5e5ebd8841acbeaafd081eaf273c21bdc13e3661dc8354c18",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. Only father's whitecuff naturalhand pulling child's smallsneaker foldedheel straight whilechildwearsit; child'sankle/sock, fatherblackOxfords navytrousers, hospitalfloor reflection. No faces, no text. Heel repair readable.",
+      "references": [
+        "/workspace/generated_images/exec-f328aaf6-3fa2-4636-8852-da0898162b44.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-1e98e4f0-5595-4fcd-a13a-e1af629ee7f9.png",
+          "sourceSha256": "b31db649666816342812327ccb4eab03d30b64fea0a702aa35f734527f658ac2",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. Only father's whitecuff naturalhand pulling child's smallsneaker foldedheel straight whilechildwearsit; child'sankle/sock, fatherblackOxfords navytrousers, hospitalfloor reflection. No faces, no text. Heel repair readable.",
+          "references": [
+            "/workspace/generated_images/exec-f328aaf6-3fa2-4636-8852-da0898162b44.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep22-compute-choice",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-971b8074-71bd-4603-8f8b-c715e3e66af2.png",
+      "sourceSha256": "ae48471a4e634fe32acb60283af4920169c898a4f17c301862aa041dcd26b567",
+      "requestedDimensions": "not stated",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep22-compute-choice-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 452158,
+      "sha256": "2aee5d0a9818de1fe5a8585eea046b3eceb826285b53c50d541db65d1d0bc383",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Tighten composition of this EXACT hospital scheduling POV so the background people's HEADS/FACES ARE NOT SHOWN (remove all three heads from view via new cinematic camera framing). The uppermost strip behind screen shows ONLY father's tired WHITE misbuttoned shirt torso, female Yoonha charcoal-suited arm, and edge of daughter's darkcoat; faces and child entirely outside image, no invented postures. Hospital waitingbench corridor remains. All eleven blue ongoing tiles (6top+5below) plus four gray deferred tiles below remain entirely visible at large readable size, no xrays or medical organs/text/digits. No foreground hand, cup or document. Preserve handpaintedstyle/native16:9 and blue/gray decision logic.",
+      "references": [
+        "/workspace/generated_images/exec-4ff3577f-43ca-4279-884a-85a9c159688d.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-971b8074-71bd-4603-8f8b-c715e3e66af2.png",
+          "sourceSha256": "ae48471a4e634fe32acb60283af4920169c898a4f17c301862aa041dcd26b567",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Tighten composition of this EXACT hospital scheduling POV so the background people's HEADS/FACES ARE NOT SHOWN (remove all three heads from view via new cinematic camera framing). The uppermost strip behind screen shows ONLY father's tired WHITE misbuttoned shirt torso, female Yoonha charcoal-suited arm, and edge of daughter's darkcoat; faces and child entirely outside image, no invented postures. Hospital waitingbench corridor remains. All eleven blue ongoing tiles (6top+5below) plus four gray deferred tiles below remain entirely visible at large readable size, no xrays or medical organs/text/digits. No foreground hand, cup or document. Preserve handpaintedstyle/native16:9 and blue/gray decision logic.",
+          "references": [
+            "/workspace/generated_images/exec-4ff3577f-43ca-4279-884a-85a9c159688d.png"
+          ]
+        },
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-4ff3577f-43ca-4279-884a-85a9c159688d.png",
+          "sourceSha256": "eabeaacd9e750e394f8ca749f3cd09f791e42f9dd48712d3b5e3e803312abed9",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Correct this exact scheduling POV, keeping native frame and painted art. REMOVE the foreground hand, wrist bandage and arm completely (it was wrongside), fill with tabletop. REMOVE all invented organ/xray diagrams from tiles: keep EXACTLY ELEVEN ongoing tiles arranged6top+5secondrow, abstract BLUE progressbar in each, first about83% but NO digits. Below keep EXACTLY FOUR pending tiles with EMPTY gray progressbar, distinct graygroup, small side route arrow pointing them sideways. NO words or medical organ icons. Background MUST be HOSPITAL CORRIDOR waiting area, not office/coffeetable: behind screen seated worried fatherMa WHITE misbuttonedshirt, femaleYoonha shortblackbob charcoalsuit whiteblouse tohisright, glimpse sleepingchild on darkcoat atleft withfacehidden, hospitalbench/blankdoors/coldpaleceilinglight. Remove cups/officedocuments, no new patients. Foreground scheduling screen is viewed from Seoin's eyes but Seoin himself NOT shown. Maintain 11active vs4deferred, no result complete.",
+          "references": [
+            "/workspace/generated_images/exec-6d56deae-c71a-4c43-a83f-cd425f5dcef7.png"
+          ],
+          "referenceTraceVerified": false,
+          "referenceTraceNote": "중간 생성 기록의 입력 참조는 재구성되어 확정 출처로 사용할 수 없다.",
+          "reason": "중간 수정본이 기준에 맞지 않아 최종 수락본으로 교체됐다."
+        }
+      ]
+    },
+    {
+      "id": "ep22-compute-choice",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-1d00ca6d-529c-4f60-8132-8ecf4b435ea3.png",
+      "sourceSha256": "f5d88f35a099f5fe84fd40315d99b110ebdaabf3c08ca9d7c14e3c0ae695a558",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1092,
+        1440
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep22-compute-choice-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1092,
+        1440
+      ],
+      "bytes": 492450,
+      "sha256": "351cf4a195a8ecc54f5fa8604ae563a73c2c69ea1f67e81d78745c11b5d72114",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. ONLYbodytorso/sleevesvisibleattop, NO HEADS/faces. Hospitalwaitingbench background, fatherwhiteMISBUTTONEDshirt torso/femaleYoonhacharcoalsuitarm/darkcoat edge. Main exact11 BLUE ongoingtiles arranged6+5 eachwithpartialprogressbar, separate4 GRAYdeferredtiles emptyprogressbar below+sidearrow. All15tiles mustfitandcountclearly, no xray/organ/text/digits/hand/cups/documents.",
+      "references": [
+        "/workspace/generated_images/exec-971b8074-71bd-4603-8f8b-c715e3e66af2.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-1d00ca6d-529c-4f60-8132-8ecf4b435ea3.png",
+          "sourceSha256": "f5d88f35a099f5fe84fd40315d99b110ebdaabf3c08ca9d7c14e3c0ae695a558",
+          "actualNativeDimensions": [
+            1092,
+            1440
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. ONLYbodytorso/sleevesvisibleattop, NO HEADS/faces. Hospitalwaitingbench background, fatherwhiteMISBUTTONEDshirt torso/femaleYoonhacharcoalsuitarm/darkcoat edge. Main exact11 BLUE ongoingtiles arranged6+5 eachwithpartialprogressbar, separate4 GRAYdeferredtiles emptyprogressbar below+sidearrow. All15tiles mustfitandcountclearly, no xray/organ/text/digits/hand/cups/documents.",
+          "references": [
+            "/workspace/generated_images/exec-971b8074-71bd-4603-8f8b-c715e3e66af2.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep22-1-paper",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-f7f2ccab-a549-4701-a3f4-a204848f5ffa.png",
+      "sourceSha256": "e702de59fa9d58f83ddf38c52f53944c6473983d4500e100184566d413c8e622",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "vn/assets/sequence19-22/ep22-1-paper-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 347260,
+      "sha256": "8a9e3c64e9486cccab4578fe120561c052b51da8c9c4fdbcf77c29211c1d64e7",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Morning corporate 25thfloor boardroom, high camera down long meeting table. FOREGROUND female Yoonha hand extending from charcoalsuit/whiteblouse sleeve pushes ONE plain printed paper to exact middle of table. At FAR OPPOSITE END sits tired Ma Jeonghoon same slickedbackblackhairgraytemples longrectangularface broadbuild, WHITE misbuttoned rumpled dressshirt open collar no tie/no jacket. Chairperson at head and legal/personnel other executives represented by indistinct shaded partial shoulders silhouettes, not fixed count. White morning windowlight strikes central paper, blurred unreadable gray printed lines, no letters/digits. Authority balance shifting through physical paper move; no invented smiles/anger, no result of vote shown. Any back-of-hand view right hand must have thumb on pictureLEFT when fingers point upward; keep sourceaction in safe middle area abovebottomfifth. Don't invent letters or symbols.",
+      "references": [
+        "/workspace/generated_images/exec-1d808f74-1b56-40be-9542-fec77d4d7355.png",
+        "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonha-a.webp",
+        "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-f7f2ccab-a549-4701-a3f4-a204848f5ffa.png",
+          "sourceSha256": "e702de59fa9d58f83ddf38c52f53944c6473983d4500e100184566d413c8e622",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. LANDSCAPE16:9 requested1920x1080. Morning corporate 25thfloor boardroom, high camera down long meeting table. FOREGROUND female Yoonha hand extending from charcoalsuit/whiteblouse sleeve pushes ONE plain printed paper to exact middle of table. At FAR OPPOSITE END sits tired Ma Jeonghoon same slickedbackblackhairgraytemples longrectangularface broadbuild, WHITE misbuttoned rumpled dressshirt open collar no tie/no jacket. Chairperson at head and legal/personnel other executives represented by indistinct shaded partial shoulders silhouettes, not fixed count. White morning windowlight strikes central paper, blurred unreadable gray printed lines, no letters/digits. Authority balance shifting through physical paper move; no invented smiles/anger, no result of vote shown. Any back-of-hand view right hand must have thumb on pictureLEFT when fingers point upward; keep sourceaction in safe middle area abovebottomfifth. Don't invent letters or symbols.",
+          "references": [
+            "/workspace/generated_images/exec-1d808f74-1b56-40be-9542-fec77d4d7355.png",
+            "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/yoonha-a.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep22-1-paper",
+      "format": "web",
+      "sourcePng": "/workspace/generated_images/exec-0e759539-a3c2-41b1-bfd3-d688e602542e.png",
+      "sourceSha256": "9dc5c44b4ba19b05df3acac35ed70fa0ae63fa31bf081da7d4232032855326d5",
+      "requestedDimensions": "1080x1350",
+      "actualNativeDimensions": [
+        1122,
+        1402
+      ],
+      "sourceMode": "RGB",
+      "encodedFile": "assets/sequence19-22/ep22-1-paper-web.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1122,
+        1402
+      ],
+      "bytes": 381456,
+      "sha256": "7eb457be580857bdd108f568acf7290c9a091742a016be2ca28ff5c596436ffb",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. ForegroundYoonha charcoalsleevehand pushesONEplainpaper into exactcenter longboardroomtable; farend tiredMa whiteMISBUTTONEDshirt notie/jacket, executives onlypartialshadedsilhouettes, brightmorningwindowlight. No legibletext or newemotion/outcome.",
+      "references": [
+        "/workspace/generated_images/exec-f7f2ccab-a549-4701-a3f4-a204848f5ffa.png"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-0e759539-a3c2-41b1-bfd3-d688e602542e.png",
+          "sourceSha256": "9dc5c44b4ba19b05df3acac35ed70fa0ae63fa31bf081da7d4232032855326d5",
+          "actualNativeDimensions": [
+            1122,
+            1402
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Finished cinematic mature Korean animated film illustration matching supplied style reference: intricate irregular ink contours, layered hand-painted angular shadows, restrained warm/cool light contrast, tactile worn materials and fabric, realistic anatomy, not glossy3D or flat poster. No baked-in text, numbers, letters, logos, watermarks, speech or UI lettering. Clear visual storytelling, natural film camera, important detail readable. Redraw supplied EXACT cinematic scene as a separately composed PORTRAIT4:5 requested1080x1350 illustration, not cropped, not collage. Preserve exact source moment, identity, costume, light, props and directions. ForegroundYoonha charcoalsleevehand pushesONEplainpaper into exactcenter longboardroomtable; farend tiredMa whiteMISBUTTONEDshirt notie/jacket, executives onlypartialshadedsilhouettes, brightmorningwindowlight. No legibletext or newemotion/outcome.",
+          "references": [
+            "/workspace/generated_images/exec-f7f2ccab-a549-4701-a3f4-a204848f5ffa.png"
+          ]
+        }
+      ]
+    }
+  ],
+  "internalCharacterReference": {
+    "id": "ma-jeonghoon-overnight",
+    "sourcePng": "/workspace/generated_images/exec-1d808f74-1b56-40be-9542-fec77d4d7355.png",
+    "sourceSha256": "bc901fd41f3bdb80d336cd12738995c1de32f0195aa8a2156c739606007582b8",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "sourceMode": "RGBA",
+    "encodedFile": "planning/ep019-022-sequence-20261023/assets/ma-jeonghoon-overnight-reference.webp",
+    "mime": "image/webp",
+    "encodedDimensions": [
+      1024,
+      1536
+    ],
+    "bytes": 215182,
+    "sha256": "b3329ba1dd0f4512c4ca211edb28d76ee0a0e76d724ccffcdb2e236d912c82d6",
+    "encoder": "Pillow WebP quality=96 method=6",
+    "referenceOnly": true,
+    "canonicalOrRuntimeConnected": false,
+    "prompt": "Edit the supplied Ma Jeonghoon character reference into an OVERNIGHT HOSPITAL STATE reference of exactly this same Korean adult male, same slicked-back black hair gray at temples, long rectangular face, small hooded eyes, broad shoulders, navy trousers and black Oxford shoes. Remove jacket, pocket square and tie entirely. White dress shirt with open collar, rumpled from a sleepless night, one button fastened one hole off so the front placket clearly sits asymmetrically. Subtle eye fatigue, hair slightly out of place, neutral reserved expression. Both arms naturally down, phone in left hand (viewer right). Full body reference, plain transparent background, no hospital or props beyond phone, no text. Match the supplied film art: fine irregular ink lines, layered painted angular shadows, restrained realistic anatomy, tactile fabric, warm edge light/cool shadows. Do not beautify or change identity. Keep collar moderate, no exposed chest emphasis.",
+    "references": [
+      "/workspace/lost-dreams-character-candidates/planning/character-candidates-20261023/assets/ma-jeonghoon-b.webp"
+    ],
+    "preservedPngCopy": "planning/ep019-022-sequence-20261023/assets/ma-jeonghoon-overnight-source.png",
+    "preservedPngCopyBytes": 1723267,
+    "preservedPngCopySha256": "bc901fd41f3bdb80d336cd12738995c1de32f0195aa8a2156c739606007582b8"
+  }
+}

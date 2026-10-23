@@ -1,8 +1,8 @@
 {
   "vnDirectory": "vn",
   "outputHtml": "play-offline.html",
-  "offlineBytes": 79263350,
-  "sha256": "a5028d5bb1ce3a9c3aca06a30afb416020683f64237446d0a86e75e8de21d1b7",
+  "offlineBytes": 79267437,
+  "sha256": "efd28cd8de18a824488c75b24cc06b50224e632678ff3522f5ec1109a5d963f7",
   "storyChapters": 18,
   "storyAssetKeys": 30,
   "ep1AssetKeys": [
@@ -1031,23 +1031,23 @@
         "withEpisodeCutscene",
         "eventCutsceneDirection"
       ],
-      "sourceSha256": "55c813a15a65563483ba158180be67d8456be5ba28892f25453b498d1e9849e0",
-      "compiledSourceSha256": "b92e3bab333017f5d0d4a0b489637ceb81a8b1fb29e4bb0d99fe880a8407ed1e"
+      "sourceSha256": "5102ddbf742ee73d179e6e8083d28e5fd4517dc156750d07f4b7045b8efc751f",
+      "compiledSourceSha256": "ce73b59020dedba236a43bab1128b754088e653ef1ffcd8bd31e7274d5962977"
     },
     "episode-one.js": {
       "exports": [
         "EPISODE_ONE_SCENES",
         "episodeOneDirection"
       ],
-      "sourceSha256": "fe28db0a7ac3fbc31f1f154146adae69a41d93241a21e1ccc8cd3d6cc25c6004",
+      "sourceSha256": "b69ac4978ca2bbdc0ad6dc172083711be5f89b74d72ebce9d38e6630c2f37550",
       "compiledSourceSha256": "bb25afa52a65676b8b78aac867bf16e46c05932754bf9b680241bb425014fc25"
     },
     "episode-one-stage.js": {
       "exports": [
         "EpisodeOneStage"
       ],
-      "sourceSha256": "c0b5d96fb9e348cd7370c92e822d748aca249b2c04be8e02b5c84cfcc3f63eb9",
-      "compiledSourceSha256": "17db00a8e81a5ffd96c560ec73fc192b88527fd662e09d70bdd860b1522f1ca4"
+      "sourceSha256": "e8dee024c2e1ebbe0d8fef8bf6e83b6529bf522046b56f8868a5a50eae25fd10",
+      "compiledSourceSha256": "e104df4581939a4e6ceef3c10ccbe3fe1145c6956720d152dd56582af708e46f"
     },
     "episode-one-audio.js": {
       "exports": [
@@ -1069,7 +1069,7 @@
         "episodeOnePreviousPage",
         "isEpisodeOneObservation"
       ],
-      "sourceSha256": "15c479c77032a2818d419cd8ea2e23419668a0f9471560fc6beb99d6586cc843",
+      "sourceSha256": "76a59113cdda7b27e08d08bbe4c06d08a5e0e9e1dffd0c16af72bc1f39e57b09",
       "compiledSourceSha256": "401eb7a2c3f7b000d9d8e31699e4d2cbe10f2fcd4863e913557dcedfa6811b33"
     },
     "episode-one-teaser.js": {
@@ -1093,7 +1093,7 @@
         "episodeTwoSpeaker",
         "episodeTwoDirection"
       ],
-      "sourceSha256": "f4b9d82e8e5b92b654af9b14bb755f2396721b8378cde2d6867400cf1c88e0a0",
+      "sourceSha256": "c3545954722b539d8111acc53663f1237a8202edd405bc3c773a3f363f107ece",
       "compiledSourceSha256": "8ee299bedc9ba56d5efd3490b73f7621c563b0bdb0f695e1ef8a3d845c8468b1"
     },
     "episode-two-reading.js": {
@@ -1101,7 +1101,7 @@
         "episodeTwoReadingPage",
         "episodeTwoPreviousPage"
       ],
-      "sourceSha256": "5610170054707a3721ee16e25cb9c7580bd4266b850e50eaa55ed8f4a53675af",
+      "sourceSha256": "894c15504b5e03159c15fa5e77516ba72756b8bc8f850c1ff09ff5f919536c6c",
       "compiledSourceSha256": "5e5995af5fde742baa34878632f81d2dece2ed8c26c325ba76a5277de8657f2c"
     },
     "episode-two-copyfix.js": {
@@ -1133,7 +1133,7 @@
         "CORE_CUTS",
         "CORE_MOMENTS"
       ],
-      "sourceSha256": "3061f7b60719ca76f01304b6451a3ddd46208749d48f169841f5ad88ecf0cc96",
+      "sourceSha256": "d83cef0599f989c6ff74b68ccf33eb5a6417650311bcaf1a4d21758535412158",
       "compiledSourceSha256": "7481f2bb5e75d2938fe2463862f20b9ba494df50d6fa161fb6143f16d9110be8"
     },
     "release.js": {
@@ -1144,7 +1144,7 @@
         "canReadChapter",
         "purchaseLink"
       ],
-      "sourceSha256": "dcec1ba1d9a4d24aad029a2edd66ce19722f19bc3a7174611f93dc68c2b99eae",
+      "sourceSha256": "34ba796ec153f2608ff7712bd314aef0d3b3ef7ca0c323f3b1adba66210a1b57",
       "compiledSourceSha256": "05843e5bf071cc948b12c9f1e0d840a4d20aa9d04025637483a64b4f489b57c9"
     },
     "core-reading.js": {
@@ -1152,13 +1152,13 @@
         "coreReadingPage",
         "corePreviousPage"
       ],
-      "sourceSha256": "cab915cce7536cb776c751cdccb528713b551cf68ce59bdbcdfbe96f48542884",
+      "sourceSha256": "ea67df5c6061e8a819210730af30121308e553d98a659c49ea89a2a267888b88",
       "compiledSourceSha256": "a7ce81d50ee9b6b04e4b0384c9c27a0ee0f93e2060213466c69e642fd1043afb"
     },
     "app.js": {
       "exports": [],
-      "sourceSha256": "538fd56695c314e906b097d18dc4eb379b4d194cd8d493b4498f300cc1c88373",
-      "compiledSourceSha256": "eb768940bd4d7a59fdeeb95a1b83cddbc520f55d493ee6ff68993240789da2d9"
+      "sourceSha256": "5179b53814a5cf68f6cc77f132c1793e46b4963b0a6700cb91231c745b10e75e",
+      "compiledSourceSha256": "82574bc1ed19fc5bc2853a832cca65e7314aabc81c2b48588fcc2a88f74a8a0a"
     }
   },
   "inlineScriptsParsed": 3,

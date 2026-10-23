@@ -1376,7 +1376,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 .invitation-recipient{display:block;border-top:1px solid #eee9dc30;padding-top:16px;font:14px/1.8 system-ui,"Noto Sans KR",sans-serif;color:#eee9dc}
 @media(max-width:600px){body.ep8 .sys.invitation{margin:32px 0;padding:26px 22px}}
 </style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B2%88%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"><link rel="stylesheet" href="reader-scenes.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"><link rel="stylesheet" href="reader-effects.css"><link rel="stylesheet" href="reader-scenes.css"><link rel="stylesheet" href="reader-sequence19-22.css?v=sequence19-22-20261023-r3">
 </head><body>
 <div class="world"></div><div class="noise"></div><div class="memory-whisper" id="whisper"></div>
 <header class="hud"><div class="brand">LOST <b>DREAMS</b></div><button class="pick" id="pick" aria-haspopup="true" aria-expanded="false" aria-controls="pickMenu"><b id="pickNo">EP 01</b><span class="pk-t" id="pickT">오늘 밤의 행복은 12토큰입니다</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ldx-controls"><button type="button" id="fxToggle" aria-pressed="true"><b id="fxState">연출 켜짐</b></button><button type="button" id="soundToggle" aria-pressed="false">생활음 꺼짐</button><span class="ldx-position" aria-label="읽은 위치"><b id="sync">0%</b></span><span hidden><b id="link">ONLINE</b><b id="token"></b></span></div></header><div class="progress"></div>
@@ -1902,6 +1902,7 @@ body.ep8 .sys.invitation{background:#141416;color:#eee9dc;border:1px solid #4442
 <script src="reader-effects.js"></script>
 <script src="reader-scenes.js"></script>
 <script src="reader-bumper-scenes.js"></script>
+<script src="reader-sequence19-22.js?v=sequence19-22-20261023-r3"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hero=$('hero'),reader=$('reader'),num=$('num'),titleEl=$('title'),chapterHead=$('chapterHead'),meta=$('meta'),prose=$('prose'),hook=$('hook'),token=$('token'),sync=$('sync'),linkEl=$('link'),fxState=$('fxState'),nextBtn=$('next'),toast=$('toast'),whisper=$('whisper'),interrupt=null;
@@ -1933,7 +1934,9 @@ const D={
 17:{a:'#d5c4a6',b:'#b1c6dc',token:'∞',sync:20,ghost:'NO CONSENT',hook:'신발 밑창이 바닥을 긁었다.',sp:'forcedexit',at:.99,on:'신발 밑창이 바닥을 긁었다.',w:500,ms:5000},
 18:{a:'#9fe3ff',b:'#c0a4ff',token:'∞',sync:21,ghost:'WITHDRAWN',hook:'이름이 가려진 누군가가, 서인이 그 문서를 열었다는 것을 확인했다.',sp:'lostintroduction',at:.99,on:'일정이 목록에서 사라졌다.',w:500,ms:5000},
 19:{a:'#b8ffe8',b:'#7dbdff',token:'∞',sync:19,ghost:'LEVEL 5',hook:"확인 주체: 참여자 4.",sp:'node31b',at:.4,on:"검증 정답: A.",w:900,ms:9000},
+'19-1':{a:'#b8ffe8',b:'#7dbdff',token:'∞',sync:19,ghost:'권한이 없는 현장',hook:'두부가 아직 따뜻했다.'},
 20:{a:'#caffea',b:'#8cbcff',token:'∞',sync:18,ghost:'LEVEL 6',hook:"차액 회수 예정.",sp:'graybutton',at:.78,on:"이번에는 서명했다.",w:900,ms:7800},
+'20-1':{a:'#caffea',b:'#8cbcff',token:'∞',sync:18,ghost:'두 집의 밤',hook:'해린의 휴대폰에는 06:00이 남아 있었다.'},
 21:{a:'#b8ffe8',b:'#ffd59b',token:'∞',sync:17,ghost:'UNSETTLED',hook:'확인자 칸에 자기 이름이 그대로 있었다.',sp:'nightload',at:.5,on:'끝난 데까지만 닫죠.',w:700,ms:7000},
 22:{a:'#c8ffe2',b:'#ffd9a0',token:'∞',sync:16,ghost:'4TH SAFETY',hook:'발신 부서 칸에 전략본부가 찍혀 있었다.',sp:'fourcheck',at:.69,on:'보상 문제가 아닙니다. 아이 문제입니다.',w:700,ms:8400},
 23:{a:'#b8ffe8',b:'#ffcf9a',token:'∞',sync:15,ghost:'71 → 43',hook:'그가 확인을 눌렀다.',sp:'recount43',at:.67,on:'오늘은 제 말 좀 그만 틀죠.',w:700,ms:9200},
@@ -2110,7 +2113,7 @@ let pi=0;for(let i=1;i<lines.length;i++){let x=lines[i].trim();
  if(x==='***'||x==='---'){flush();items.push({raw:'<div class="divider reveal"></div>'});continue}
  if(/^\*\*.+\*\*$/.test(x)){sys.push(x.replace(/^\*\*|\*\*$/g,''));continue}
  if(x.startsWith('**')&&!x.slice(2).includes('**')){flush();inBold=true;sys.push(x.slice(2));continue}
- flush();pi++;const sc=sceneMarkup(state.ep,pi);if(sc)items.push({raw:sc});items.push({t:'p',x});const trace=ReadingEffects.paragraph(state.ep,x);if(trace)items.push({raw:trace})}
+ flush();pi++;const sc=sceneMarkup(state.ep,pi);if(sc)items.push({raw:sc});items.push({t:'p',x});const trace=ReadingEffects.paragraph(state.ep,x);if(trace)items.push({raw:trace});for(const cut of window.ReaderSequences?.afterParagraph(state.ep,x)||[])items.push({raw:cut})}
 flush();
 // 구판 초대장에 실제로 적힌 두 필드만 결합한다. 개정 원고에 없는 내용을 만들지 않는다.
 if(state.ep===8){for(let k=0;k<items.length-1;k++){const q=items[k],recipient=items[k+1];

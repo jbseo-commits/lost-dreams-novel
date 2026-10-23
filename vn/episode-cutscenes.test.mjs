@@ -13,13 +13,13 @@ const box={window:{}};vm.runInNewContext(await readFile(new URL('./story-data.js
 const chapter=id=>box.window.STORY.chapters.find(c=>c.id===id);
 const at=(id,i)=>id==='1'?episodeOneDirection(chapter(id),i):id==='2'?episodeTwoDirection(chapter(id),i):eventCutsceneDirection(chapter(id),i);
 
-test('35 event inserts cover all 30 main chapters and stay inside their exact source actions',()=>{
-  assert.equal(EPISODE_CUTSCENES.length,35);
-  assert.deepEqual([...new Set(EPISODE_CUTSCENES.map(c=>c.chapter))],Array.from({length:30},(_,i)=>String(i+1)));
+test('52 event inserts cover the original 30 chapters plus the authorized 19–22 interludes and exact source actions',()=>{
+  assert.equal(EPISODE_CUTSCENES.length,52);
+  assert.deepEqual([...new Set(EPISODE_CUTSCENES.map(c=>c.chapter))],Array.from({length:30},(_,i)=>String(i+1)).concat(['19-1','20-1','21-1','22-1']));
   for(const cut of EPISODE_CUTSCENES){
     assert.equal(chapter(cut.chapter).beats[cut.start].text,cut.anchor);
     for(let i=cut.start;i<=cut.end;i++){
-      const cue=at(cut.chapter,i);assert.equal(cue.cg,cut.cg);assert.deepEqual(cue.actors,[]);assert.equal(cue.wallAd,false);assert.ok(cue.cutscene.alt);
+      const cue=at(cut.chapter,i);assert.ok(cue.cutscene.frames.some(frame=>frame.cg===cut.cg));assert.deepEqual(cue.actors,[]);assert.equal(cue.wallAd,false);assert.ok(cue.cutscene.alt);
     }
     for(const i of [cut.start-1,cut.end+1])assert.notEqual(at(cut.chapter,i)?.cg,cut.cg);
     const changed=structuredClone(chapter(cut.chapter));changed.beats[cut.start].text='다른 행동';
@@ -62,7 +62,7 @@ test('event-only cues leave the original later-chapter direction and sound contr
     assert.equal(JSON.stringify(c),before);
     for(const index of [-1,c.beats.length,1.5,undefined])assert.equal(eventCutsceneDirection(c,index),null);
   }
-  for(const c of box.window.STORY.chapters.filter(c=>c.id.includes('-')))for(let i=0;i<c.beats.length;i++)assert.equal(eventCutsceneDirection(c,i),null);
+  for(const c of box.window.STORY.chapters.filter(c=>c.id.includes('-')&&!['19-1','20-1','21-1','22-1'].includes(c.id)))for(let i=0;i<c.beats.length;i++)assert.equal(eventCutsceneDirection(c,i),null);
 });
 test('every selected drawing is distinct, packaged, and matches its recorded production hash',async()=>{
   const ids=new Set();
@@ -76,6 +76,7 @@ test('every selected drawing is distinct, packaged, and matches its recorded pro
   }
   const teaser=JSON.parse(await readFile(new URL('./assets/teaser-style/provenance.json',import.meta.url),'utf8'));
   const parents=JSON.parse(await readFile(new URL('./assets/parent-style/provenance.json',import.meta.url),'utf8'));
+  const sequence=JSON.parse(await readFile(new URL('../planning/ep019-022-sequence-20261023/provenance.json',import.meta.url),'utf8'));
   for(const cut of EPISODE_CUTSCENES){
     const path=EP1_ASSETS[cut.cg];
     if(path?.startsWith('assets/parent-style/')){
@@ -90,7 +91,21 @@ test('every selected drawing is distinct, packaged, and matches its recorded pro
       const bytes=await readFile(new URL('./'+path,import.meta.url));
       assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);
       assert.equal(bytes.length,asset.bytes);
+    }else if(path?.startsWith('assets/sequence19-22/')){
+      assert.equal(path,`assets/sequence19-22/${cut.cg}-vn.webp`);
+      const asset=sequence.assets.find(item=>item.id===cut.cg&&item.format==='vn');assert.ok(asset,cut.cg);
+      assert.ok(!ids.has(asset.sha256),cut.cg);ids.add(asset.sha256);
+      const bytes=await readFile(new URL('./'+path,import.meta.url));
+      assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);assert.equal(bytes.length,asset.bytes);
+      assert.equal(bytes.subarray(0,4).toString(),'RIFF');assert.equal(bytes.subarray(8,12).toString(),'WEBP');
     }else assert.ok(path?.startsWith('assets/cutscenes/'),cut.cg);
+  }
+  for(const id of [...new Set(EPISODE_CUTSCENES.filter(c=>/^(19|20|21|22)/.test(c.chapter)).map(c=>c.cg).filter(c=>c.startsWith('ep')))]){
+    const asset=sequence.assets.find(item=>item.id===id&&item.format==='web');assert.ok(asset,id);
+    assert.ok(!ids.has(asset.sha256),id);ids.add(asset.sha256);
+    const bytes=await readFile(new URL('../assets/sequence19-22/'+id+'-web.webp',import.meta.url));
+    assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);assert.equal(bytes.length,asset.bytes);
+    assert.equal(bytes.subarray(0,4).toString(),'RIFF');assert.equal(bytes.subarray(8,12).toString(),'WEBP');
   }
 });
 

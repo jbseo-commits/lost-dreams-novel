@@ -894,6 +894,7 @@ input.chapter-search,
 @keyframes ep12-insert-in{from{opacity:.3;transform:scale(1.018)}to{opacity:1;transform:scale(1)}}
 @keyframes ep12-press{0%,100%{transform:scale(1)}45%{transform:scale(1.008)}}
 .ep12-art-button{position:absolute;right:4%;top:8%;z-index:6;min-height:44px;padding:8px 15px;border:1px solid #d1c5a768;border-radius:3px;background:#0b1827c9;color:#e4dfd2;font-size:12px;pointer-events:auto;cursor:pointer}
+.ep1-frame-button{top:18%}
 .ep12-art-button[hidden]{display:none;pointer-events:none}
 .episode-one.ui-hidden .ep12-art-button{visibility:hidden;pointer-events:none}
 .cutscene-inspection{overflow:auto;max-height:70vh;margin-top:15px;border:1px solid #a9baa43d;touch-action:pan-x pan-y}
@@ -975,13 +976,36 @@ input.chapter-search,
  .ep1-stage[data-cutscene]:not([data-cutscene=""]) .ep1-cg::before{content:'';position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.28);transform:scale(1.1)}
  .ep1-stage[data-cutscene]:not([data-cutscene=""]) .ep1-cg img{position:absolute;top:13vh;height:58vh;object-fit:cover;object-position:var(--cut-position);animation:ep12-insert-in .65s ease both}
  .ep1-stage[data-cutscene="oneAppointment"]:not([data-cutscene=""]) .ep1-cg img{object-fit:contain}
+ .ep1-stage[data-cutscene="ep19-door"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-windows"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-home-life"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-wrist-detail"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-1-alley"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-1-window"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep20-door"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep20-box"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep20-rooftop"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep20-1-kitchens"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep21-contracts"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep21-confirmation"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep21-call-transfer"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep21-1-rescue"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep22-corridor"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep22-compute-choice"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep22-shoe"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep22-1-paper"] .ep1-cg img{object-fit:contain;object-position:center}
  .ep12-art-button{top:11%;right:4%;font-size:11px;min-height:44px;background:#0b1827e6}
+ .ep12-art-button.ep1-frame-button{top:calc(11% + 52px)}
  .ep1-stage[data-cutscene="retirementHand"] .ep1-cg::after{inset:9vh 0 35vh}
  .ep1-actor{height:55vh;width:65vw;bottom:38vh}.ep1-actor[data-side="left"]{left:22%}.ep1-actor[data-side="right"]{left:80%}
  .ep1-stage[data-shot="close"] .ep1-actor{height:61vh;bottom:36vh}.ep1-stage[data-shot="close"] .ep1-actor[data-side="left"]{left:17%}.ep1-stage[data-shot="close"] .ep1-actor[data-side="right"]{left:83%}
  .ep1-actor[data-pose="reclining"]{width:94vw;height:52vh;left:37%;bottom:28vh}
  .ep1-stage[data-shot="close"] .ep1-actor[data-pose="reclining"]{left:52%;bottom:28vh}
  .ep1-cg img{object-position:51% 40%;animation-duration:12s}.ep1-stage[data-shot="detail"] .ep1-cg img{object-position:50% 42%;object-fit:cover}
+ .ep1-stage[data-cutscene^="ep19-"] .ep1-cg img,
+ .ep1-stage[data-cutscene^="ep20-"] .ep1-cg img,
+ .ep1-stage[data-cutscene^="ep21-"] .ep1-cg img,
+ .ep1-stage[data-cutscene^="ep22-"] .ep1-cg img{object-fit:contain!important;object-position:center}
  .ep1-stage[data-cg="clay"] .ep1-cg,.ep1-stage[data-cg="night"] .ep1-cg,.ep1-stage[data-cg="table"] .ep1-cg{background-size:cover;background-position:center}
  .ep1-stage[data-cg="clay"] .ep1-cg::before,.ep1-stage[data-cg="night"] .ep1-cg::before,.ep1-stage[data-cg="table"] .ep1-cg::before{content:"";position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.35);transform:scale(1.1)}
  .ep1-stage[data-cg="clay"] .ep1-cg img{position:absolute;top:7vh;height:63vh;object-position:36% 42%}
@@ -4379,10 +4403,12 @@ function withEpisodeCutscene(cue,chapter,index){
         start:point,phase,impact:null}};
     }
   }
-  const insert=EPISODE_CUTSCENES.find(c=>c.chapter===chapter?.id&&index>=c.start&&index<=c.end);
-  if(!insert||!matchingSource(chapter,insert))return cue;
+  const inserts=EPISODE_CUTSCENES.filter(c=>c.chapter===chapter?.id&&index>=c.start&&index<=c.end&&matchingSource(chapter,c));
+  const insert=inserts[0];
+  if(!insert)return cue;
   const phase=insert.cg==='retirementHand'?(index>=126?'red':index>=123?'amber':'plain'):'';
-  return {...cue,cg:insert.cg,actors:[],wallAd:false,shot:'insert',cutscene:{id:insert.cg,alt:insert.alt,position:insert.mobilePosition,phase,impact:insert.cg==='retirementHand'&&(index===122||index===125)?index:null}};
+  const frames=inserts.map(item=>({cg:item.cg,alt:item.alt,position:item.mobilePosition}));
+  return {...cue,cg:insert.cg,actors:[],wallAd:false,shot:'insert',cutscene:{id:insert.cg,alt:insert.alt,position:insert.mobilePosition,phase,impact:insert.cg==='retirementHand'&&(index===122||index===125)?index:null,frames}};
 }
 
 // Chapters 3–30 keep their own authored audio, place and perception pathways.
@@ -4481,6 +4507,7 @@ __vnModules["episode-one-stage.js"]=(()=>{
 class EpisodeOneStage {
   constructor(host,assets,{onInspect,onEvidence}={}){
     this.host=host;this.assets=assets;this.currentCg='';this.currentScene=-1;this.actorState=new Map();
+    this.frameTimer=0;
     this.cg=document.createElement('div');this.cg.className='ep1-cg';
     this.actors=document.createElement('div');this.actors.className='ep1-actors';
     this.panel=document.createElement('section');this.panel.className='ep1-document';this.panel.hidden=true;this.panel.setAttribute('aria-label','장면 속 퇴직 의사 확인서');
@@ -4489,10 +4516,12 @@ class EpisodeOneStage {
     this.lids=document.createElement('div');this.lids.className='ep1-lids';this.lids.setAttribute('aria-hidden','true');
     this.inspect=document.createElement('button');this.inspect.type='button';this.inspect.className='ep12-art-button';this.inspect.textContent='전체 그림';this.inspect.hidden=true;
     this.inspect.addEventListener('click',event=>{event.stopPropagation();if(this.inspectCue&&onInspect)onInspect(this.inspectCue);});
+    this.frameButton=document.createElement('button');this.frameButton.type='button';this.frameButton.className='ep12-art-button ep1-frame-button';this.frameButton.textContent='세부 장면';this.frameButton.hidden=true;
+    this.frameButton.addEventListener('click',event=>{event.stopPropagation();clearTimeout(this.frameTimer);this.frameTimer=0;this.frameIndex=(this.frameIndex+1)%this.frameCount;this.paintFrame();});
     this.board=document.createElement('section');this.board.className='core-board';this.board.hidden=true;
     this.boardButton=document.createElement('button');this.boardButton.type='button';this.boardButton.textContent='관찰 기록 펼치기';
     this.boardButton.addEventListener('click',event=>{event.stopPropagation();if(this.boardCue&&onEvidence)onEvidence(this.boardCue);});
-    this.host.append(this.cg,this.wall,this.actors,this.panel,this.lids,this.inspect,this.board);
+    this.host.append(this.cg,this.wall,this.actors,this.panel,this.lids,this.inspect,this.frameButton,this.board);
   }
   render(cue,{instant=false,reducedMotion=false}={}){
     const stage=this.host.parentElement;
@@ -4509,7 +4538,8 @@ class EpisodeOneStage {
     stage.dataset.ep1Actors=cue.actors.length?'present':'';
     stage.dataset.ep1DocumentPhase=cue.document?.phase||'';
     stage.classList.toggle('ep1-blackout',cue.blackout);stage.classList.toggle('ep1-intro',cue.intro);stage.classList.toggle('ep1-cg-active',Boolean(cue.cg));
-    this.host.classList.toggle('ep1-no-motion',instant||reducedMotion||matchMedia('(prefers-reduced-motion: reduce)').matches);
+    const noMotion=instant||reducedMotion||matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.host.classList.toggle('ep1-no-motion',noMotion);
     this.host.dataset.shot=cue.shot;
     this.host.dataset.cg=cue.cg||'';
     this.host.dataset.cutscene=cue.cutscene?.id||'';
@@ -4522,11 +4552,17 @@ class EpisodeOneStage {
       if(impact!==''){void this.cg.offsetWidth;this.cg.classList.add('ep12-cut-impact');}
       this.cg.dataset.impact=String(impact);
     }
-    if(cue.cg!==this.currentCg){
-      this.cg.replaceChildren();this.cg.style.backgroundImage=cue.cg?`url("${this.assets[cue.cg]}")`:'';if(cue.cg){const img=document.createElement('img');img.src=this.assets[cue.cg];img.alt='';this.cg.append(img);}
+    const frameSignature=JSON.stringify(cue.cutscene?.frames||[]);
+    if(cue.cg!==this.currentCg||frameSignature!==this.frameSignature){
+      clearTimeout(this.frameTimer);this.frameTimer=0;
+      this.frameList=cue.cutscene?.frames?.length?cue.cutscene.frames:cue.cg?[{cg:cue.cg,alt:cue.cutscene?.alt||''}]:[];this.frameCount=this.frameList.length;this.frameIndex=noMotion&&this.frameCount?this.frameCount-1:0;this.frameSignature=frameSignature;
+      this.cg.replaceChildren();this.cg.style.backgroundImage=cue.cg?`url("${this.assets[cue.cg]}")`:'';
+      for(let i=0;i<this.frameList.length;i++){const img=document.createElement('img');img.src=this.assets[this.frameList[i].cg];img.alt=this.frameList[i].alt||'';img.dataset.frame=String(i);if(i)img.hidden=true;this.cg.append(img);}
       this.currentCg=cue.cg;
+      if(!noMotion&&this.frameCount>1){this.frameTimer=setTimeout(()=>{this.frameTimer=0;if(this.frameSignature===frameSignature){this.frameIndex=this.frameCount-1;this.paintFrame();}},1400);}
     }
-    const cgImage=this.cg.querySelector('img');if(cgImage)cgImage.alt=cue.cutscene?.alt||'';
+    if(noMotion&&this.frameCount){clearTimeout(this.frameTimer);this.frameTimer=0;this.frameIndex=this.frameCount-1;}
+    this.paintFrame();this.frameButton.hidden=this.frameCount<2;
     this.cg.hidden=!cue.cg;this.wall.hidden=!cue.wallAd;
     this.lids.classList.toggle('closed',cue.intro||cue.blackout);
     const visible=new Set(cue.actors.map(p=>p.id));
@@ -4561,9 +4597,17 @@ class EpisodeOneStage {
     const sceneKey=`${cue.chapterId||'1'}:${cue.sceneStart}`;
     if(this.currentScene!==sceneKey){this.host.classList.remove('ep1-scene-arrive');void this.host.offsetWidth;this.host.classList.add('ep1-scene-arrive');this.currentScene=sceneKey;}
   }
+  paintFrame(){
+    for(const img of this.cg.querySelectorAll('img'))img.hidden=Number(img.dataset.frame)!==this.frameIndex;
+    const frame=this.frameList[this.frameIndex];
+    if(frame)this.cg.style.backgroundImage=`url("${this.assets[frame.cg]}")`;
+    this.frameButton.textContent=this.frameIndex===0?'세부 장면':'전체 장면';
+    this.frameButton.setAttribute('aria-label',this.frameIndex===0?'세부 장면 보기':'전체 장면 보기');
+  }
   clear(){
+    clearTimeout(this.frameTimer);this.frameTimer=0;
     this.host.hidden=true;this.host.parentElement.classList.remove('episode-one','episode-two','core-scene','ep1-blackout','ep1-intro','ep1-cg-active');this.host.parentElement.dataset.ep1Actors='';this.host.parentElement.dataset.ep1DocumentPhase='';this.actorState.clear();this.actors.replaceChildren();this.currentScene=-1;
-    this.cg.replaceChildren();this.cg.style.backgroundImage='';this.cg.classList.remove('ep12-cut-impact');this.cg.dataset.impact='';this.cg.dataset.phase='';this.currentCg='';
+    this.cg.replaceChildren();this.cg.style.backgroundImage='';this.cg.classList.remove('ep12-cut-impact');this.cg.dataset.impact='';this.cg.dataset.phase='';this.currentCg='';this.frameSignature='';this.frameList=[];this.frameCount=0;this.frameIndex=0;this.frameButton.hidden=true;
     this.host.dataset.cutscene='';this.host.dataset.cg='';this.host.dataset.shot='';this.host.dataset.dream='false';this.host.dataset.holdMotion='false';this.panel.hidden=true;this.wall.hidden=true;this.inspect.hidden=true;this.inspectCue=null;
     this.board.hidden=true;this.boardCue=null;this.host.dataset.pressure='';
   }
@@ -6425,7 +6469,9 @@ function openVisual(visual) {
 function openCutscene(cue){
   const root=document.createElement('div');root.append(modalHeading('장면 그림',cue.cutscene.alt));
   const frame=document.createElement('div');frame.className='cutscene-inspection';frame.tabIndex=0;frame.setAttribute('aria-label','장면 그림. 확대하면 좌우로 밀어 볼 수 있습니다.');
-  const img=document.createElement('img');img.src=EP1_ASSETS[cue.cg];img.alt=cue.cutscene.alt;frame.append(img);
+  const frames=cue.cutscene.frames?.length?cue.cutscene.frames:[{cg:cue.cg,alt:cue.cutscene.alt}],img=document.createElement('img');let frameIndex=0;img.src=EP1_ASSETS[frames[frameIndex].cg];img.alt=frames[frameIndex].alt||cue.cutscene.alt;frame.append(img);
+  const frameStatus=document.createElement('p');frameStatus.className='modal-lead';frameStatus.setAttribute('aria-live','polite');frameStatus.textContent=frames.length>1?`장면 ${frameIndex+1} / ${frames.length}`:'';
+  if(frames.length>1){const next=actionButton('다음 장면',()=>{frameIndex=(frameIndex+1)%frames.length;img.src=EP1_ASSETS[frames[frameIndex].cg];img.alt=frames[frameIndex].alt||'';frameStatus.textContent=`장면 ${frameIndex+1} / ${frames.length}`;});root.append(next,frameStatus);}
   const zoom=document.createElement('button');zoom.type='button';zoom.className='small-button';zoom.textContent='세부 확대';zoom.setAttribute('aria-pressed','false');
   zoom.addEventListener('click',()=>{const active=frame.classList.toggle('detail');zoom.setAttribute('aria-pressed',String(active));zoom.textContent=active?'전체 맞춤':'세부 확대';});
   root.append(zoom,frame);showModal(root,'cutscene');

@@ -1,6 +1,7 @@
 export class EpisodeOneStage {
   constructor(host,assets,{onInspect,onEvidence}={}){
     this.host=host;this.assets=assets;this.currentCg='';this.currentScene=-1;this.actorState=new Map();
+    this.frameTimer=0;
     this.cg=document.createElement('div');this.cg.className='ep1-cg';
     this.actors=document.createElement('div');this.actors.className='ep1-actors';
     this.panel=document.createElement('section');this.panel.className='ep1-document';this.panel.hidden=true;this.panel.setAttribute('aria-label','장면 속 퇴직 의사 확인서');
@@ -9,10 +10,12 @@ export class EpisodeOneStage {
     this.lids=document.createElement('div');this.lids.className='ep1-lids';this.lids.setAttribute('aria-hidden','true');
     this.inspect=document.createElement('button');this.inspect.type='button';this.inspect.className='ep12-art-button';this.inspect.textContent='전체 그림';this.inspect.hidden=true;
     this.inspect.addEventListener('click',event=>{event.stopPropagation();if(this.inspectCue&&onInspect)onInspect(this.inspectCue);});
+    this.frameButton=document.createElement('button');this.frameButton.type='button';this.frameButton.className='ep12-art-button ep1-frame-button';this.frameButton.textContent='세부 장면';this.frameButton.hidden=true;
+    this.frameButton.addEventListener('click',event=>{event.stopPropagation();clearTimeout(this.frameTimer);this.frameTimer=0;this.frameIndex=(this.frameIndex+1)%this.frameCount;this.paintFrame();});
     this.board=document.createElement('section');this.board.className='core-board';this.board.hidden=true;
     this.boardButton=document.createElement('button');this.boardButton.type='button';this.boardButton.textContent='관찰 기록 펼치기';
     this.boardButton.addEventListener('click',event=>{event.stopPropagation();if(this.boardCue&&onEvidence)onEvidence(this.boardCue);});
-    this.host.append(this.cg,this.wall,this.actors,this.panel,this.lids,this.inspect,this.board);
+    this.host.append(this.cg,this.wall,this.actors,this.panel,this.lids,this.inspect,this.frameButton,this.board);
   }
   render(cue,{instant=false,reducedMotion=false}={}){
     const stage=this.host.parentElement;
@@ -29,7 +32,8 @@ export class EpisodeOneStage {
     stage.dataset.ep1Actors=cue.actors.length?'present':'';
     stage.dataset.ep1DocumentPhase=cue.document?.phase||'';
     stage.classList.toggle('ep1-blackout',cue.blackout);stage.classList.toggle('ep1-intro',cue.intro);stage.classList.toggle('ep1-cg-active',Boolean(cue.cg));
-    this.host.classList.toggle('ep1-no-motion',instant||reducedMotion||matchMedia('(prefers-reduced-motion: reduce)').matches);
+    const noMotion=instant||reducedMotion||matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.host.classList.toggle('ep1-no-motion',noMotion);
     this.host.dataset.shot=cue.shot;
     this.host.dataset.cg=cue.cg||'';
     this.host.dataset.cutscene=cue.cutscene?.id||'';
@@ -42,11 +46,17 @@ export class EpisodeOneStage {
       if(impact!==''){void this.cg.offsetWidth;this.cg.classList.add('ep12-cut-impact');}
       this.cg.dataset.impact=String(impact);
     }
-    if(cue.cg!==this.currentCg){
-      this.cg.replaceChildren();this.cg.style.backgroundImage=cue.cg?`url("${this.assets[cue.cg]}")`:'';if(cue.cg){const img=document.createElement('img');img.src=this.assets[cue.cg];img.alt='';this.cg.append(img);}
+    const frameSignature=JSON.stringify(cue.cutscene?.frames||[]);
+    if(cue.cg!==this.currentCg||frameSignature!==this.frameSignature){
+      clearTimeout(this.frameTimer);this.frameTimer=0;
+      this.frameList=cue.cutscene?.frames?.length?cue.cutscene.frames:cue.cg?[{cg:cue.cg,alt:cue.cutscene?.alt||''}]:[];this.frameCount=this.frameList.length;this.frameIndex=noMotion&&this.frameCount?this.frameCount-1:0;this.frameSignature=frameSignature;
+      this.cg.replaceChildren();this.cg.style.backgroundImage=cue.cg?`url("${this.assets[cue.cg]}")`:'';
+      for(let i=0;i<this.frameList.length;i++){const img=document.createElement('img');img.src=this.assets[this.frameList[i].cg];img.alt=this.frameList[i].alt||'';img.dataset.frame=String(i);if(i)img.hidden=true;this.cg.append(img);}
       this.currentCg=cue.cg;
+      if(!noMotion&&this.frameCount>1){this.frameTimer=setTimeout(()=>{this.frameTimer=0;if(this.frameSignature===frameSignature){this.frameIndex=this.frameCount-1;this.paintFrame();}},1400);}
     }
-    const cgImage=this.cg.querySelector('img');if(cgImage)cgImage.alt=cue.cutscene?.alt||'';
+    if(noMotion&&this.frameCount){clearTimeout(this.frameTimer);this.frameTimer=0;this.frameIndex=this.frameCount-1;}
+    this.paintFrame();this.frameButton.hidden=this.frameCount<2;
     this.cg.hidden=!cue.cg;this.wall.hidden=!cue.wallAd;
     this.lids.classList.toggle('closed',cue.intro||cue.blackout);
     const visible=new Set(cue.actors.map(p=>p.id));
@@ -81,9 +91,17 @@ export class EpisodeOneStage {
     const sceneKey=`${cue.chapterId||'1'}:${cue.sceneStart}`;
     if(this.currentScene!==sceneKey){this.host.classList.remove('ep1-scene-arrive');void this.host.offsetWidth;this.host.classList.add('ep1-scene-arrive');this.currentScene=sceneKey;}
   }
+  paintFrame(){
+    for(const img of this.cg.querySelectorAll('img'))img.hidden=Number(img.dataset.frame)!==this.frameIndex;
+    const frame=this.frameList[this.frameIndex];
+    if(frame)this.cg.style.backgroundImage=`url("${this.assets[frame.cg]}")`;
+    this.frameButton.textContent=this.frameIndex===0?'세부 장면':'전체 장면';
+    this.frameButton.setAttribute('aria-label',this.frameIndex===0?'세부 장면 보기':'전체 장면 보기');
+  }
   clear(){
+    clearTimeout(this.frameTimer);this.frameTimer=0;
     this.host.hidden=true;this.host.parentElement.classList.remove('episode-one','episode-two','core-scene','ep1-blackout','ep1-intro','ep1-cg-active');this.host.parentElement.dataset.ep1Actors='';this.host.parentElement.dataset.ep1DocumentPhase='';this.actorState.clear();this.actors.replaceChildren();this.currentScene=-1;
-    this.cg.replaceChildren();this.cg.style.backgroundImage='';this.cg.classList.remove('ep12-cut-impact');this.cg.dataset.impact='';this.cg.dataset.phase='';this.currentCg='';
+    this.cg.replaceChildren();this.cg.style.backgroundImage='';this.cg.classList.remove('ep12-cut-impact');this.cg.dataset.impact='';this.cg.dataset.phase='';this.currentCg='';this.frameSignature='';this.frameList=[];this.frameCount=0;this.frameIndex=0;this.frameButton.hidden=true;
     this.host.dataset.cutscene='';this.host.dataset.cg='';this.host.dataset.shot='';this.host.dataset.dream='false';this.host.dataset.holdMotion='false';this.panel.hidden=true;this.wall.hidden=true;this.inspect.hidden=true;this.inspectCue=null;
     this.board.hidden=true;this.boardCue=null;this.host.dataset.pressure='';
   }
