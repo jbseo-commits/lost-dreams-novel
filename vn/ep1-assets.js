@@ -3,6 +3,10 @@ import {PARENT_ASSETS} from './parent-art.js?v=mother-age-20261021-r1';
 export const EP1_ASSETS = Object.freeze({
   ...CORE_ASSETS,
   clayFailure:'assets/cutscenes/clay-failure.webp',
+  jiwooClaySmile:'assets/cutscenes/ep03-jiwoo-clay-smile.webp',
+  convenienceGaze:'assets/cutscenes/ep03-convenience-gaze.webp',
+  clayUnderNails:'assets/cutscenes/ep03-clay-under-nails-washed.webp',
+  convenienceToast:'assets/cutscenes/ep03-convenience-toast.webp',
   doyunRamen:'assets/teaser-style/doyun-ramen.webp',
   procedureFace:'assets/teaser-style/procedure-face.webp',
   hospitalShoe:'assets/cutscenes/hospital-shoe.webp',

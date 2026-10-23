@@ -1,4 +1,4 @@
-import { withEpisodeCutscene } from './episode-cutscenes.js?v=teaser-art-20261021-r1';
+import { withEpisodeCutscene } from './episode-cutscenes.js?v=ep03-cinematic-20261023-r1';
 // Presentation only. The source beats and all save coordinates stay unchanged.
 const SCENES = [
   [0,'광고 없는 아침','광고 없이 잔 첫날, 서인은 아무 꿈도 꾸지 않았다.'],

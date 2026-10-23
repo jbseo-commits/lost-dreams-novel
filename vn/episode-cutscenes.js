@@ -401,6 +401,36 @@ function matchingSource(chapter,insert){
   return checks.get(insert);
 }
 export function withEpisodeCutscene(cue,chapter,index){
+  // The cup collapsing and the later clay-covered smile are different events.
+  // Resolve exact source anchors rather than hand-maintaining save indices.
+  if(chapter?.id==='3'){
+    const beats=chapter.beats||[];
+    // The messy smile in the pottery studio has its own source-bound CG.
+    const smile=beats.findIndex(b=>b.text==='광고꿈에서 본 지우보다 훨씬 엉망인 얼굴이었다.');
+    const studioDirt=beats.findIndex(b=>b.text==='머리는 땀에 붙었고, 볼에는 흙이 묻었고, 앞치마는 엉망이었다.');
+    const smileEnd=beats.findIndex(b=>b.text==='그런데 지우는 계속 웃었다.');
+    if(smile>=0&&studioDirt===smile+1&&smileEnd===studioDirt+1&&index>=smile&&index<=smileEnd){
+      return {...cue,cg:'jiwooClaySmile',actors:[],wallAd:false,shot:'insert',
+        cutscene:{id:'jiwooClaySmile',alt:'땀에 젖고 흙이 묻은 지우가 물레 앞에서 계속 웃고 있다',
+          position:'55% 44%',start:smile,phase:'',impact:null}};
+    }
+
+    // The camera follows Seo-in's gaze down to the *small* dirt residue
+    // under Jiwoo's nails, then returns to their gentle can-clink.
+    const start=beats.findIndex(b=>b.text==='그날 둘은 편의점 앞에서 맥주를 마셨다.');
+    const nails=beats.findIndex(b=>b.text==='지우의 손톱 밑에는 씻어도 빠지지 않은 흙이 조금 남아 있었다.');
+    const toast=beats.findIndex(b=>b.text==='서인은 그걸 보다가 자기 캔을 지우의 캔에 가볍게 부딪쳤다.');
+    const previous=beats.findIndex((b,i)=>i>=start&&b.text==='둘이 웃었다.');
+    if(start>=0&&previous===start+9&&nails===start+10&&toast===nails+1&&index>=start&&index<=toast){
+      const cg=index===nails?'clayUnderNails':index===toast?'convenienceToast':'convenienceGaze';
+      const point=index===nails?nails:index===toast?toast:start;
+      const phase=index===nails?'detail':index===toast?'toast':'setup';
+      const alt=index===nails?'서인의 시선 끝, 지우 손톱 밑에 조금 남은 도자기 흙':index===toast?'서인이 지우의 캔에 자기 캔을 가볍게 부딪친다':'편의점 앞에서 맥주를 마시며 웃는 서인과 지우';
+      return {...cue,cg,actors:[],wallAd:false,shot:'insert',cutscene:{
+        id:cg,alt,position:index===nails?'50% 54%':'50% 47%',
+        start:point,phase,impact:null}};
+    }
+  }
   const insert=EPISODE_CUTSCENES.find(c=>c.chapter===chapter?.id&&index>=c.start&&index<=c.end);
   if(!insert||!matchingSource(chapter,insert))return cue;
   const phase=insert.cg==='retirementHand'?(index>=126?'red':index>=123?'amber':'plain'):'';
@@ -412,5 +442,5 @@ export function withEpisodeCutscene(cue,chapter,index){
 export function eventCutsceneDirection(chapter,index){
   if(!chapter||['1','2'].includes(chapter.id)||!Number.isInteger(index)||index<0||index>=chapter.beats?.length)return null;
   const cue=withEpisodeCutscene(null,chapter,index);
-  return cue?{...cue,chapterId:chapter.id,sceneStart:EPISODE_CUTSCENES.find(c=>c.cg===cue.cg&&c.chapter===chapter.id).start,focus:'',intro:false,blackout:false,holdMotion:true}:null;
+  return cue?{...cue,chapterId:chapter.id,sceneStart:cue.cutscene?.start??EPISODE_CUTSCENES.find(c=>c.cg===cue.cg&&c.chapter===chapter.id)?.start??index,focus:'',intro:false,blackout:false,holdMotion:true}:null;
 }

@@ -128,3 +128,41 @@
  .ep1-stage[data-cg="dreamBeach"] .ep1-cg::before{content:'';position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.35);transform:scale(1.1)}
  .ep1-stage[data-cg="dreamBeach"] .ep1-cg img{position:absolute;top:10vh;height:62vh;object-fit:cover;object-position:32% 40%}
 }
+
+/* Episode 3 source-bound inserts. Real painted CGs, not CSS dirt composites. */
+.ep1-stage[data-cutscene="jiwooClaySmile"]:not([data-cutscene=""]) .ep1-cg img{
+  object-position:55% 45%;
+}
+.ep1-stage[data-cutscene="clayUnderNails"]:not([data-cutscene=""]) .ep1-cg img{
+  object-position:50% 55%;
+  animation:ep03-nails-focus .65s ease-out both;
+}
+.ep1-stage[data-cutscene="convenienceToast"]:not([data-cutscene=""]) .ep1-cg img{
+  animation:ep03-return-toast .6s ease-out both;
+}
+@keyframes ep03-nails-focus{
+  from{opacity:.55;transform:scale(1.055) translateY(-7px)}
+  to{opacity:1;transform:scale(1) translateY(0)}
+}
+@keyframes ep03-return-toast{
+  from{opacity:.4;transform:scale(1.025)}
+  to{opacity:1;transform:scale(1)}
+}
+@media(max-width:640px){
+  .ep1-stage[data-cutscene="jiwooClaySmile"]:not([data-cutscene=""]) .ep1-cg img{
+    object-fit:cover;object-position:58% 42%;
+  }
+  .ep1-stage[data-cutscene="convenienceGaze"]:not([data-cutscene=""]) .ep1-cg img,
+  .ep1-stage[data-cutscene="convenienceToast"]:not([data-cutscene=""]) .ep1-cg img{
+    top:12vh;height:56vh;object-fit:contain;object-position:center;
+  }
+  .ep1-stage[data-cutscene="clayUnderNails"]:not([data-cutscene=""]) .ep1-cg img{
+    top:12vh;height:58vh;object-fit:cover;object-position:43% 55%;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .ep1-stage[data-cutscene="clayUnderNails"] .ep1-cg img,
+  .ep1-stage[data-cutscene="convenienceToast"] .ep1-cg img{
+    animation:none!important;
+  }
+}
