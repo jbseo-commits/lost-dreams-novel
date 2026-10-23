@@ -130,14 +130,14 @@
 }
 
 /* Episode 3 source-bound inserts. Real painted CGs, not CSS dirt composites. */
-.ep1-stage[data-cutscene="jiwooClaySmile"] .ep1-cg img{
+.ep1-stage[data-cutscene="jiwooClaySmile"]:not([data-cutscene=""]) .ep1-cg img{
   object-position:55% 45%;
 }
-.ep1-stage[data-cutscene="clayUnderNails"] .ep1-cg img{
+.ep1-stage[data-cutscene="clayUnderNails"]:not([data-cutscene=""]) .ep1-cg img{
   object-position:50% 55%;
   animation:ep03-nails-focus .65s ease-out both;
 }
-.ep1-stage[data-cutscene="convenienceToast"] .ep1-cg img{
+.ep1-stage[data-cutscene="convenienceToast"]:not([data-cutscene=""]) .ep1-cg img{
   animation:ep03-return-toast .6s ease-out both;
 }
 @keyframes ep03-nails-focus{
@@ -149,15 +149,15 @@
   to{opacity:1;transform:scale(1)}
 }
 @media(max-width:640px){
-  .ep1-stage[data-cutscene="jiwooClaySmile"] .ep1-cg img{
+  .ep1-stage[data-cutscene="jiwooClaySmile"]:not([data-cutscene=""]) .ep1-cg img{
     object-fit:cover;object-position:58% 42%;
   }
-  .ep1-stage[data-cutscene="convenienceGaze"] .ep1-cg img,
-  .ep1-stage[data-cutscene="convenienceToast"] .ep1-cg img{
+  .ep1-stage[data-cutscene="convenienceGaze"]:not([data-cutscene=""]) .ep1-cg img,
+  .ep1-stage[data-cutscene="convenienceToast"]:not([data-cutscene=""]) .ep1-cg img{
     top:12vh;height:56vh;object-fit:contain;object-position:center;
   }
-  .ep1-stage[data-cutscene="clayUnderNails"] .ep1-cg img{
-    top:12vh;height:58vh;object-fit:cover;object-position:50% 55%;
+  .ep1-stage[data-cutscene="clayUnderNails"]:not([data-cutscene=""]) .ep1-cg img{
+    top:12vh;height:58vh;object-fit:cover;object-position:43% 55%;
   }
 }
 @media(prefers-reduced-motion:reduce){

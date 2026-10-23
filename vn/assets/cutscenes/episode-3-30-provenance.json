@@ -923,6 +923,85 @@
       ],
       "bytes": 161126,
       "sha256": "b15d85418fee87f586836329a26a699b15f215b73fa6c6fe0dbf8440c84cb1ea"
+    },
+    {
+      "chapter": "3",
+      "start": 106,
+      "end": 106,
+      "cg": "clayUnderNails",
+      "name": "ep03-clay-under-nails-washed",
+      "title": "손톱 밑에 남은 흙",
+      "refs": [
+        "assets/cutscenes/ep03-convenience-gaze.webp",
+        "assets/cutscenes/ep03-convenience-toast.webp"
+      ],
+      "prompt": "Precise surgical edit of this exact close-up: change ONLY the FOUR VISIBLE FINGERNAILS and the tiny residual dirt immediately under TWO OR THREE nail tips. Keep the existing one hand, anatomical LEFT grip, fingers, green-and-cream can, sleeve, lighting, background and camera composition unchanged. The story is a pottery worker who has thoroughly WASHED her hands but a little dry brown clay remains UNDER some fingernails. Current image fails because its long glossy pink nails resemble a cosmetic manicure and show no readable clay. Make ALL four visible nails SHORT practical unpolished natural nails, clipped nearly FLUSH with fingertips, matte/slightly rough, no polish, no glossy pink finish, no artificial long white tips or nail extensions. At the free edge of the INDEX and MIDDLE nail only (optionally tiny trace at ring), show a CLEARLY VISIBLE small irregular earth-brown DRY CLAY CRESCENT trapped just UNDER the nail tip, roughly1mm deep, with a few specks by the nail corners. It must be readable as BROWN EARTH RESIDUE, NOT a decorative nail stripe, dark nail polish, blood or skin injury. Keep most of each nail pale natural matte and all finger skin/knuckles/back of hand COMPLETELY CLEAN. No spreading clay across skin, no dirty palm, no mud chunks or clay on clothes. The two or three small distinct brown residue crescents must be visible at a390px wide game image, the sole narrative detail the observer notices. Match the same hand-drawn cinematic anime rendering, drawn fine lines, warm sunlight and indigo shadows. Do not repaint the entire scene or introduce any extra hand, finger, ring, label, text, arrow or inset diagram. Native landscape1672x941, preserve framing.",
+      "source": "/workspace/generated_images/exec-1d9bdd3a-4140-4add-9580-4601d656fc28.png",
+      "generation": {
+        "referenced_image_paths": [
+          "/workspace/generated_images/exec-ad757097-779b-4e97-8450-4f7914922adf.png"
+        ],
+        "transparent_background": false,
+        "prompt": "Precise surgical edit of this exact close-up: change ONLY the FOUR VISIBLE FINGERNAILS and the tiny residual dirt immediately under TWO OR THREE nail tips. Keep the existing one hand, anatomical LEFT grip, fingers, green-and-cream can, sleeve, lighting, background and camera composition unchanged. The story is a pottery worker who has thoroughly WASHED her hands but a little dry brown clay remains UNDER some fingernails. Current image fails because its long glossy pink nails resemble a cosmetic manicure and show no readable clay. Make ALL four visible nails SHORT practical unpolished natural nails, clipped nearly FLUSH with fingertips, matte/slightly rough, no polish, no glossy pink finish, no artificial long white tips or nail extensions. At the free edge of the INDEX and MIDDLE nail only (optionally tiny trace at ring), show a CLEARLY VISIBLE small irregular earth-brown DRY CLAY CRESCENT trapped just UNDER the nail tip, roughly1mm deep, with a few specks by the nail corners. It must be readable as BROWN EARTH RESIDUE, NOT a decorative nail stripe, dark nail polish, blood or skin injury. Keep most of each nail pale natural matte and all finger skin/knuckles/back of hand COMPLETELY CLEAN. No spreading clay across skin, no dirty palm, no mud chunks or clay on clothes. The two or three small distinct brown residue crescents must be visible at a390px wide game image, the sole narrative detail the observer notices. Match the same hand-drawn cinematic anime rendering, drawn fine lines, warm sunlight and indigo shadows. Do not repaint the entire scene or introduce any extra hand, finger, ring, label, text, arrow or inset diagram. Native landscape1672x941, preserve framing."
+      },
+      "status": "used-event-cg",
+      "file": "ep03-clay-under-nails-washed.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 251882,
+      "sha256": "4e90394c219228fd87e436811ef9a58685512ba2246d761b1d6aa3feaf69ab0d",
+      "sourcePng": {
+        "path": "/workspace/generated_images/exec-1d9bdd3a-4140-4add-9580-4601d656fc28.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 1909973,
+        "sha256": "ad2c2149268e1d78fc125144b20d59d35b0a7e978a176f01452bafb15f8a449b"
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourcePng": {
+            "path": "/workspace/generated_images/exec-ad757097-779b-4e97-8450-4f7914922adf.png",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "bytes": 1965740,
+            "sha256": "bbcdb5bbeca52e3a06a4a840da43f5fb91372043a1d2cc8adcc3cba58a329e64"
+          },
+          "prompt": "Create the missing cinematic POV DETAIL INSERT between these two exact movie shots for a Korean visual novel. Ref1 is the seated pair outside a convenience store, ref2 the immediate following gentle can clink. Match their exact drawn anime linework, layered indigo/warm painted shadows, natural adult proportions and late-afternoon gold light. This is what the young man looks DOWN AT on the seated woman's LEFT HAND holding the SAME GREEN beer/drink can from ref1. Extreme close-up, show ONLY that ONE woman's hand loosely wrapping around the green can and a little forearm emerging from her rolled pale gray-blue overshirt cuff, against softly defocused convenience-store glass/golden street. Her thumb, index, middle, ring and pinky have anatomically correct grip, one hand total, no second hands overlapping, no face. The STORY DETAIL must be immediately clear: she has WASHED HER HANDS after the pottery workshop. Skin and back of hand, fingers and sleeve are CLEAN. Only a VERY THIN uneven brown trace of dry clay remains UNDER the free edges of TWO or THREE short fingernails, tiny residual crescents between nail and fingertip. Make those two or three fingernail tips large and sharp enough for a 390px mobile close-up. This is NOT wet mud on skin, NOT painted brown smears across fingers, NOT injury, NOT a manicure or dirt over all nails. Clean healthy woman's hand, relaxed and practical, recognizable same sleeve and green cylindrical can/grip as ref1. Frame from the observer seated to her left, camera directed toward the outside of her gripping hand so fingernail tips read. Warm light from upper right like the previous shot. Landscape cinematic16:9, native high resolution1672x941 if supported. No split frames, diagrams, arrows, UI, subtitles, new readable labels, logos or watermark. The can's existing packaging can be abstract green/cream markings without invented words. One exact sensory discovery, intimate quietly hopeful mood. No change to the previous/next two shots themselves.",
+          "referencedImagePaths": [
+            "/workspace/lost-dreams-novel/vn/assets/cutscenes/ep03-convenience-gaze.webp",
+            "/workspace/lost-dreams-novel/vn/assets/cutscenes/ep03-convenience-toast.webp"
+          ],
+          "transparentBackground": false,
+          "status": "rejected",
+          "reason": "손톱이 길고 광택이 강해 매니큐어처럼 보이며 작은 갈색 흙이 읽히지 않음"
+        },
+        {
+          "attempt": 2,
+          "sourcePng": {
+            "path": "/workspace/generated_images/exec-1d9bdd3a-4140-4add-9580-4601d656fc28.png",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "bytes": 1909973,
+            "sha256": "ad2c2149268e1d78fc125144b20d59d35b0a7e978a176f01452bafb15f8a449b"
+          },
+          "prompt": "Precise surgical edit of this exact close-up: change ONLY the FOUR VISIBLE FINGERNAILS and the tiny residual dirt immediately under TWO OR THREE nail tips. Keep the existing one hand, anatomical LEFT grip, fingers, green-and-cream can, sleeve, lighting, background and camera composition unchanged. The story is a pottery worker who has thoroughly WASHED her hands but a little dry brown clay remains UNDER some fingernails. Current image fails because its long glossy pink nails resemble a cosmetic manicure and show no readable clay. Make ALL four visible nails SHORT practical unpolished natural nails, clipped nearly FLUSH with fingertips, matte/slightly rough, no polish, no glossy pink finish, no artificial long white tips or nail extensions. At the free edge of the INDEX and MIDDLE nail only (optionally tiny trace at ring), show a CLEARLY VISIBLE small irregular earth-brown DRY CLAY CRESCENT trapped just UNDER the nail tip, roughly1mm deep, with a few specks by the nail corners. It must be readable as BROWN EARTH RESIDUE, NOT a decorative nail stripe, dark nail polish, blood or skin injury. Keep most of each nail pale natural matte and all finger skin/knuckles/back of hand COMPLETELY CLEAN. No spreading clay across skin, no dirty palm, no mud chunks or clay on clothes. The two or three small distinct brown residue crescents must be visible at a390px wide game image, the sole narrative detail the observer notices. Match the same hand-drawn cinematic anime rendering, drawn fine lines, warm sunlight and indigo shadows. Do not repaint the entire scene or introduce any extra hand, finger, ring, label, text, arrow or inset diagram. Native landscape1672x941, preserve framing.",
+          "referencedImagePaths": [
+            "/workspace/generated_images/exec-ad757097-779b-4e97-8450-4f7914922adf.png"
+          ],
+          "transparentBackground": false,
+          "status": "accepted",
+          "reason": "짧은 자연손톱, 검지·중지 손톱 끝의 작은 마른 흙이 390px 가독성을 갖고 피부는 깨끗함"
+        }
+      ]
     }
   ],
   "finalSourceBaseline": "be4fec8"

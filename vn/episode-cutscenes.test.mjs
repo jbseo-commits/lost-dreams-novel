@@ -132,6 +132,7 @@ test('episode 3 gaze -> small dirt under nails -> can toast uses distinct CG in 
   assert.equal(at('3',toast).sceneStart,toast);
   assert.notEqual(at('3',toast+1)?.cg,'convenienceToast');
   for(const id of ['convenienceGaze','clayUnderNails','convenienceToast'])assert.ok(EP1_ASSETS[id].endsWith('.webp'));
+  assert.equal(EP1_ASSETS.clayUnderNails,'assets/cutscenes/ep03-clay-under-nails-washed.webp');
 
   // Altering the detail text invalidates the entire insert instead of drifting.
   const changed=structuredClone(c);changed.beats[nails].text='흙은 없었다.';

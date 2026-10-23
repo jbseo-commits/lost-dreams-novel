@@ -5,7 +5,7 @@ export const EP1_ASSETS = Object.freeze({
   clayFailure:'assets/cutscenes/clay-failure.webp',
   jiwooClaySmile:'assets/cutscenes/ep03-jiwoo-clay-smile.webp',
   convenienceGaze:'assets/cutscenes/ep03-convenience-gaze.webp',
-  clayUnderNails:'assets/cutscenes/ep03-clay-under-nails.webp',
+  clayUnderNails:'assets/cutscenes/ep03-clay-under-nails-washed.webp',
   convenienceToast:'assets/cutscenes/ep03-convenience-toast.webp',
   doyunRamen:'assets/teaser-style/doyun-ramen.webp',
   procedureFace:'assets/teaser-style/procedure-face.webp',
