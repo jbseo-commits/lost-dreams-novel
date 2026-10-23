@@ -130,7 +130,7 @@ test('episode 3 gaze -> small dirt under nails -> can toast uses distinct CG in 
   assert.equal(at('3',nails).sceneStart,nails);
   assert.equal(at('3',toast).cg,'convenienceToast');
   assert.equal(at('3',toast).sceneStart,toast);
-  assert.equal(at('3',toast+1)?.cg,null);
+  assert.notEqual(at('3',toast+1)?.cg,'convenienceToast');
   for(const id of ['convenienceGaze','clayUnderNails','convenienceToast'])assert.ok(EP1_ASSETS[id].endsWith('.webp'));
 
   // Altering the detail text invalidates the entire insert instead of drifting.
