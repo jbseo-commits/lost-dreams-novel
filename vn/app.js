@@ -9,22 +9,22 @@ import { presentationForBeat } from './neural-cues.js?v=teaser-art-20261021-r1';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js?v=teaser-art-20261021-r1';
-import { EP1_ASSETS } from './ep1-assets.js?v=parent-art-20261021-r2';
+import { EP1_ASSETS } from './ep1-assets.js?v=ep03-cinematic-20261023-r3';
 import { withTeaserCharacterAssets } from './teaser-art.js?v=teaser-art-20261021-r1';
-import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=teaser-art-20261021-r1';
-import { EpisodeOneStage } from './episode-one-stage.js?v=teaser-art-20261021-r1';
+import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=ep03-cinematic-20261023-r3';
+import { EpisodeOneStage } from './episode-one-stage.js?v=ep03-cinematic-20261023-r3';
 import { createEpisodeOneAudio } from './episode-one-audio.js?v=audio-balance-20261021-r1';
-import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=teaser-art-20261021-r1';
+import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep03-cinematic-20261023-r3';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
-import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=20261021-a';
-import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=20261021-a';
+import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep03-cinematic-20261023-r3';
+import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep03-cinematic-20261023-r3';
 import { syncEpisodeTwoCopy } from './episode-two-copyfix.js?v=20261021-a';
-import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=teaser-art-20261021-r1';
+import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=ep03-cinematic-20261023-r3';
 
-import {coreSceneDirection,isOptionalObservation,CORE_CUTS,CORE_MOMENTS,CORE_DEMO_STORAGE_SUFFIX} from './core-demo.js?v=teaser-art-20261021-r1';
-import {RELEASE,publicDemoStory,canReadChapter,purchaseLink} from './release.js?v=teaser-art-20261021-r1';
-import {coreReadingPage,corePreviousPage} from './core-reading.js?v=teaser-art-20261021-r1';
+import {coreSceneDirection,isOptionalObservation,CORE_CUTS,CORE_MOMENTS,CORE_DEMO_STORAGE_SUFFIX} from './core-demo.js?v=ep03-cinematic-20261023-r3';
+import {RELEASE,publicDemoStory,canReadChapter,purchaseLink} from './release.js?v=ep03-cinematic-20261023-r3';
+import {coreReadingPage,corePreviousPage} from './core-reading.js?v=ep03-cinematic-20261023-r3';
 const demoMode=true;
 if(demoMode)document.documentElement.dataset.coreDemo='true';
 const fullStory=normalizeStory(window.STORY);
@@ -303,7 +303,9 @@ function openVisual(visual) {
 function openCutscene(cue){
   const root=document.createElement('div');root.append(modalHeading('장면 그림',cue.cutscene.alt));
   const frame=document.createElement('div');frame.className='cutscene-inspection';frame.tabIndex=0;frame.setAttribute('aria-label','장면 그림. 확대하면 좌우로 밀어 볼 수 있습니다.');
-  const img=document.createElement('img');img.src=EP1_ASSETS[cue.cg];img.alt=cue.cutscene.alt;frame.append(img);
+  const frames=cue.cutscene.frames?.length?cue.cutscene.frames:[{cg:cue.cg,alt:cue.cutscene.alt}],img=document.createElement('img');let frameIndex=0;img.src=EP1_ASSETS[frames[frameIndex].cg];img.alt=frames[frameIndex].alt||cue.cutscene.alt;frame.append(img);
+  const frameStatus=document.createElement('p');frameStatus.className='modal-lead';frameStatus.setAttribute('aria-live','polite');frameStatus.textContent=frames.length>1?`장면 ${frameIndex+1} / ${frames.length}`:'';
+  if(frames.length>1){const next=actionButton('다음 장면',()=>{frameIndex=(frameIndex+1)%frames.length;img.src=EP1_ASSETS[frames[frameIndex].cg];img.alt=frames[frameIndex].alt||'';frameStatus.textContent=`장면 ${frameIndex+1} / ${frames.length}`;});root.append(next,frameStatus);}
   const zoom=document.createElement('button');zoom.type='button';zoom.className='small-button';zoom.textContent='세부 확대';zoom.setAttribute('aria-pressed','false');
   zoom.addEventListener('click',()=>{const active=frame.classList.toggle('detail');zoom.setAttribute('aria-pressed',String(active));zoom.textContent=active?'전체 맞춤':'세부 확대';});
   root.append(zoom,frame);showModal(root,'cutscene');

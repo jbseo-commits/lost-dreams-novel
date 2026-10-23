@@ -1,0 +1,513 @@
+{
+  "date": "2026-10-23",
+  "tool": "built-in image_gen",
+  "exactModel": "not exposed",
+  "status": "candidate-unselected",
+  "sourceBranch": "ccr-17702316-6m0jx0",
+  "sourceCommit": "8bd68230990f54988af72693934660de2dd97b60",
+  "mainBaseline": "43efd49b4aa6b3c0a04348687288cfb6143f1a5d",
+  "brief": "planning/character-reference-ep019-022-20261023.md",
+  "scope": "5인×2후보 원화는 19~22화 장면 제작의 내부 연속성 참고 자료. 이번 장면의 참고 조합은 Yeonwoo A, Yoon Sera A, Yoon Ha A, Eunkyung B, Ma Jeonghoon B이며 작가 최종 선택이나 canonical·설정 확정이 아님.",
+  "interpretationNotes": [
+    "제작문서의 해부학적 좌우 표기와 기존 원화의 소품 위치가 일부 다름. 기존 인물의 포즈·손 배치를 유지하기 위해 입력 원화의 화면상 좌우를 기준으로 고정했다.",
+    "작가 PC의 exec-58532ec4 원본은 이 환경에 없어 문서의 대체 화풍 입력 mira/reho canonical을 사용했다. 실제 배포 티저 3.5초 프레임도 화풍 보조 입력으로 사용했다.",
+    "마정훈 초기 후보 두 안은 레호와 얼굴·머리·주머니 포즈가 유사해 제외하고, 미라의 채색과 실제 티저 프레임을 화풍 참고로 삼아 더 독립적인 얼굴·뒤로 넘긴 머리·양손을 내린 포즈로 다시 제작했다. 실패 이력과 입력도 각 후보에 보존했다.",
+    "신규 마정훈의 외모와 숫자 나이는 제작문서에 따른 제안이며 설정집 확정 사항이 아니다."
+  ],
+  "preservedSources": [
+    {
+      "file": "vn/assets/yeonwoo.webp",
+      "sha256": "b9e9c220dc7cdb0658d9c1e331e8fc2b1a0b965c2f6f9e81c635495463688852"
+    },
+    {
+      "file": "vn/assets/yoonsera.webp",
+      "sha256": "2a69d2a1b0efd42bad6ed91564a98565572acd6385f72893dc02af8d25a67dd9"
+    },
+    {
+      "file": "vn/assets/yoonha.webp",
+      "sha256": "51b953aa40dc66ba5afa9c103a630e3dfa472e652e21cc78d02e5abfa1d0d899"
+    },
+    {
+      "file": "vn/assets/eunkyung.webp",
+      "sha256": "be831d27c7919aaaa10d9331510bec6905f4a9df112082cb21bc549c34ffca9a"
+    },
+    {
+      "file": "vn/assets/teaser-style/provenance.json",
+      "sha256": "d8f53b427bc601d088dc72441d453b5becb6136de95ef7363f5d9f050d7dc08c"
+    }
+  ],
+  "assets": [
+    {
+      "character": "yeonwoo",
+      "name": "강연우",
+      "candidate": "A",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/yeonwoo-a.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 159326,
+      "sha256": "7e43fbcc598a8fd9bfc070b9aefdc1eeed8084504c9e28ae99582d4c29890a32",
+      "source": "/workspace/generated_images/exec-f8b2a4e6-47c8-4538-9915-18c5e1811b13.png",
+      "nativePngSha256": "aa93c49d0db486509dd2d1a9b763a1749050d03f84707fca6e335d6aafdd9edc",
+      "references": [
+        {
+          "path": "vn/assets/yeonwoo.webp",
+          "sha256": "b9e9c220dc7cdb0658d9c1e331e8fc2b1a0b965c2f6f9e81c635495463688852"
+        },
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        }
+      ],
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite, independent candidate A. Input1 EDIT TARGET: Kang Yeonwoo, adult Korean WOMAN with short straight black hair cut above ears and side-swept bangs, NOT Seoin curls. Sharp observant eyes, faint amused half-smile, navy tailored blazer sleeves pushed up, black turtleneck, high-waisted black slacks, black leather shoes, slim dark tablet against hip, wristwatch and other hand in pocket. Preserve input1's recognizable face while making face AND body clearly an adult woman; confident, quick-witted practical coworker, natural suited shoulders/torso/hips, no sexualization or exaggerated curves. Keep original hand placement and pose from the image: tablet on VIEWER LEFT, pocket/watch on VIEWER RIGHT. No new prop or altered hair length. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear but layered cel-painted shadow planes, restrained indigo shadows, soft warm rim light, painterly material grain. Input3 is an exact actual teaser-movie frame for drawn anatomy/ink/paint consistency ONLY. Do not copy the reference people's identity, costumes, poses, props, scenery or HUD. Match that coherent cinematic animated film, with dimensional forms and naturally detailed mature faces; avoid oversimplified flat poster style, glossy3D, photographic airbrushing or beauty filters. Keep the EDIT TARGET person's own face/age, full-body pose, gaze, costume and props. Natural adult anatomy, clearly feminine adult build where female, well-drawn hands. Single figure head to BOTH complete shoes, original1024x1536 portrait framing. Genuinely transparent cutout: no scenery, floor, cast shadow, rectangle, painted glow backdrop, text, watermark, contact sheet or extra figures. Candidate A should preserve the same identity, anatomy, costume and exact hand arrangement; provide an independent carefully finished drawing with subtly different line/paint decisions, not a redesigned person.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-f8b2a4e6-47c8-4538-9915-18c5e1811b13.png",
+          "nativePngSha256": "aa93c49d0db486509dd2d1a9b763a1749050d03f84707fca6e335d6aafdd9edc"
+        }
+      ]
+    },
+    {
+      "character": "yeonwoo",
+      "name": "강연우",
+      "candidate": "B",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/yeonwoo-b.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 146340,
+      "sha256": "a61005b8cc8572ae6648c584495d330f9481e81a9c13002f84738f481f5589aa",
+      "source": "/workspace/generated_images/exec-c6c5fc9e-50de-4895-8885-30d5be4020c6.png",
+      "nativePngSha256": "f731a99ed7dd796464cbd1cdccf140116db30ecfecd5affa580af0b2236929ef",
+      "references": [
+        {
+          "path": "vn/assets/yeonwoo.webp",
+          "sha256": "b9e9c220dc7cdb0658d9c1e331e8fc2b1a0b965c2f6f9e81c635495463688852"
+        },
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        }
+      ],
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite, independent candidate B. Input1 EDIT TARGET: Kang Yeonwoo, adult Korean WOMAN with short straight black hair cut above ears and side-swept bangs, NOT Seoin curls. Sharp observant eyes, faint amused half-smile, navy tailored blazer sleeves pushed up, black turtleneck, high-waisted black slacks, black leather shoes, slim dark tablet against hip, wristwatch and other hand in pocket. Preserve input1's recognizable face while making face AND body clearly an adult woman; confident, quick-witted practical coworker, natural suited shoulders/torso/hips, no sexualization or exaggerated curves. Keep original hand placement and pose from the image: tablet on VIEWER LEFT, pocket/watch on VIEWER RIGHT. No new prop or altered hair length. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear but layered cel-painted shadow planes, restrained indigo shadows, soft warm rim light, painterly material grain. Input3 is an exact actual teaser-movie frame for drawn anatomy/ink/paint consistency ONLY. Do not copy the reference people's identity, costumes, poses, props, scenery or HUD. Match that coherent cinematic animated film, with dimensional forms and naturally detailed mature faces; avoid oversimplified flat poster style, glossy3D, photographic airbrushing or beauty filters. Keep the EDIT TARGET person's own face/age, full-body pose, gaze, costume and props. Natural adult anatomy, clearly feminine adult build where female, well-drawn hands. Single figure head to BOTH complete shoes, original1024x1536 portrait framing. Genuinely transparent cutout: no scenery, floor, cast shadow, rectangle, painted glow backdrop, text, watermark, contact sheet or extra figures. Candidate B should preserve the same identity, anatomy, costume and exact hand arrangement; provide an independent carefully finished drawing with subtly different line/paint decisions, not a redesigned person.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-c6c5fc9e-50de-4895-8885-30d5be4020c6.png",
+          "nativePngSha256": "f731a99ed7dd796464cbd1cdccf140116db30ecfecd5affa580af0b2236929ef"
+        }
+      ]
+    },
+    {
+      "character": "yoonsera",
+      "name": "윤세라",
+      "candidate": "A",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/yoonsera-a.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 175590,
+      "sha256": "b0392438d4f222c0f3309fbace6118bc8b6e479ee75e549abbe5b66672dede4c",
+      "source": "/workspace/generated_images/exec-4626053b-b6aa-4120-b5bb-295733f59947.png",
+      "nativePngSha256": "debcd05079c3c34392ab9593237dd8208e4bd42060bc15c2b6300bcba71c74fb",
+      "references": [
+        {
+          "path": "vn/assets/yoonsera.webp",
+          "sha256": "2a69d2a1b0efd42bad6ed91564a98565572acd6385f72893dc02af8d25a67dd9"
+        },
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        }
+      ],
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite, independent candidate A. Input1 EDIT TARGET: Yoon Sera, adult Korean WOMAN, black hair in a low neat bun with a few loose strands. Calm unreadable face, steady direct gaze, NO smile or overt emotional cue. Gray single-breasted pantsuit, beige collared blouse, black loafers, paper folder with pen held against it, metal wristwatch on the other wrist. Preserve input1's distinct face, actual standing pose and hand placement (folder on VIEWER RIGHT, watch/relaxed hand on VIEWER LEFT). Visibly more mature and formal than a young short-haired coworker: retain natural adult eyelid/cheek/jaw construction, not a teenage idol. Clearly a woman in tailored clothes, practical and restrained. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear but layered cel-painted shadow planes, restrained indigo shadows, soft warm rim light, painterly material grain. Input3 is an exact actual teaser-movie frame for drawn anatomy/ink/paint consistency ONLY. Do not copy the reference people's identity, costumes, poses, props, scenery or HUD. Match that coherent cinematic animated film, with dimensional forms and naturally detailed mature faces; avoid oversimplified flat poster style, glossy3D, photographic airbrushing or beauty filters. Keep the EDIT TARGET person's own face/age, full-body pose, gaze, costume and props. Natural adult anatomy, clearly feminine adult build where female, well-drawn hands. Single figure head to BOTH complete shoes, original1024x1536 portrait framing. Genuinely transparent cutout: no scenery, floor, cast shadow, rectangle, painted glow backdrop, text, watermark, contact sheet or extra figures. Candidate A should preserve the same identity, anatomy, costume and exact hand arrangement; provide an independent carefully finished drawing with subtly different line/paint decisions, not a redesigned person.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-4626053b-b6aa-4120-b5bb-295733f59947.png",
+          "nativePngSha256": "debcd05079c3c34392ab9593237dd8208e4bd42060bc15c2b6300bcba71c74fb"
+        }
+      ]
+    },
+    {
+      "character": "yoonsera",
+      "name": "윤세라",
+      "candidate": "B",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/yoonsera-b.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 180702,
+      "sha256": "2ae290b6224b73fc9c7cf68f0ab32f0c97928140ef7420f70ea830b8a383e562",
+      "source": "/workspace/generated_images/exec-bf2da7f2-458d-45c5-b66a-82241ad0afad.png",
+      "nativePngSha256": "8b2279d4e4b62bb264dfb699a88fe36b8b0c1e340f1398002700fc71f428495d",
+      "references": [
+        {
+          "path": "vn/assets/yoonsera.webp",
+          "sha256": "2a69d2a1b0efd42bad6ed91564a98565572acd6385f72893dc02af8d25a67dd9"
+        },
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        }
+      ],
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite, independent candidate B. Input1 EDIT TARGET: Yoon Sera, adult Korean WOMAN, black hair in a low neat bun with a few loose strands. Calm unreadable face, steady direct gaze, NO smile or overt emotional cue. Gray single-breasted pantsuit, beige collared blouse, black loafers, paper folder with pen held against it, metal wristwatch on the other wrist. Preserve input1's distinct face, actual standing pose and hand placement (folder on VIEWER RIGHT, watch/relaxed hand on VIEWER LEFT). Visibly more mature and formal than a young short-haired coworker: retain natural adult eyelid/cheek/jaw construction, not a teenage idol. Clearly a woman in tailored clothes, practical and restrained. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear but layered cel-painted shadow planes, restrained indigo shadows, soft warm rim light, painterly material grain. Input3 is an exact actual teaser-movie frame for drawn anatomy/ink/paint consistency ONLY. Do not copy the reference people's identity, costumes, poses, props, scenery or HUD. Match that coherent cinematic animated film, with dimensional forms and naturally detailed mature faces; avoid oversimplified flat poster style, glossy3D, photographic airbrushing or beauty filters. Keep the EDIT TARGET person's own face/age, full-body pose, gaze, costume and props. Natural adult anatomy, clearly feminine adult build where female, well-drawn hands. Single figure head to BOTH complete shoes, original1024x1536 portrait framing. Genuinely transparent cutout: no scenery, floor, cast shadow, rectangle, painted glow backdrop, text, watermark, contact sheet or extra figures. Candidate B should preserve the same identity, anatomy, costume and exact hand arrangement; provide an independent carefully finished drawing with subtly different line/paint decisions, not a redesigned person.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-bf2da7f2-458d-45c5-b66a-82241ad0afad.png",
+          "nativePngSha256": "8b2279d4e4b62bb264dfb699a88fe36b8b0c1e340f1398002700fc71f428495d"
+        }
+      ]
+    },
+    {
+      "character": "yoonha",
+      "name": "백윤하",
+      "candidate": "A",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/yoonha-a.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 198066,
+      "sha256": "269a11f43468d63c843e7cd26a238468702b26aede3a8364731d64296e20c952",
+      "source": "/workspace/generated_images/exec-a7590186-4ae3-40e2-9508-3f749fc7d09e.png",
+      "nativePngSha256": "d2d2d24e43819259bc6f663f127766556f142540c0bf94c10596fc5f8f41f714",
+      "references": [
+        {
+          "path": "vn/assets/yoonha.webp",
+          "sha256": "51b953aa40dc66ba5afa9c103a630e3dfa472e652e21cc78d02e5abfa1d0d899"
+        },
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        }
+      ],
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite, independent candidate A. Input1 EDIT TARGET: Baek Yunha, adult Korean WOMAN, chin-length black bob tucked behind one ear, cool level gaze, slightly raised chin. Charcoal tailored pantsuit and crisp white open-collar shirt, black loafers, one hand in trouser pocket and other arm relaxed, black leather-strap wristwatch. Preserve the distinct face and exact full-body pose of input1, pocket on VIEWER RIGHT and relaxed/watch arm on VIEWER LEFT. Mature female facial anatomy and body under the suit, not a male or adolescent. Must remain readily distinct from gray/beige-suit low-bun Yoon Sera: keep bob and charcoal/white palette. No added folder. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear but layered cel-painted shadow planes, restrained indigo shadows, soft warm rim light, painterly material grain. Input3 is an exact actual teaser-movie frame for drawn anatomy/ink/paint consistency ONLY. Do not copy the reference people's identity, costumes, poses, props, scenery or HUD. Match that coherent cinematic animated film, with dimensional forms and naturally detailed mature faces; avoid oversimplified flat poster style, glossy3D, photographic airbrushing or beauty filters. Keep the EDIT TARGET person's own face/age, full-body pose, gaze, costume and props. Natural adult anatomy, clearly feminine adult build where female, well-drawn hands. Single figure head to BOTH complete shoes, original1024x1536 portrait framing. Genuinely transparent cutout: no scenery, floor, cast shadow, rectangle, painted glow backdrop, text, watermark, contact sheet or extra figures. Candidate A should preserve the same identity, anatomy, costume and exact hand arrangement; provide an independent carefully finished drawing with subtly different line/paint decisions, not a redesigned person.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-a7590186-4ae3-40e2-9508-3f749fc7d09e.png",
+          "nativePngSha256": "d2d2d24e43819259bc6f663f127766556f142540c0bf94c10596fc5f8f41f714"
+        }
+      ]
+    },
+    {
+      "character": "yoonha",
+      "name": "백윤하",
+      "candidate": "B",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/yoonha-b.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 206216,
+      "sha256": "67ce544760b16e38b6e13a7735ee29a5877a8638ba0d952bb2a6c0bf4b49d6ca",
+      "source": "/workspace/generated_images/exec-51dcb9f3-7ca3-4540-902b-558506877ee0.png",
+      "nativePngSha256": "c57e6151c0cc6b431835f748daeb7e032ae49239b9a11fb8ac7afa11469b7a84",
+      "references": [
+        {
+          "path": "vn/assets/yoonha.webp",
+          "sha256": "51b953aa40dc66ba5afa9c103a630e3dfa472e652e21cc78d02e5abfa1d0d899"
+        },
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        }
+      ],
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite, independent candidate B. Input1 EDIT TARGET: Baek Yunha, adult Korean WOMAN, chin-length black bob tucked behind one ear, cool level gaze, slightly raised chin. Charcoal tailored pantsuit and crisp white open-collar shirt, black loafers, one hand in trouser pocket and other arm relaxed, black leather-strap wristwatch. Preserve the distinct face and exact full-body pose of input1, pocket on VIEWER RIGHT and relaxed/watch arm on VIEWER LEFT. Mature female facial anatomy and body under the suit, not a male or adolescent. Must remain readily distinct from gray/beige-suit low-bun Yoon Sera: keep bob and charcoal/white palette. No added folder. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear but layered cel-painted shadow planes, restrained indigo shadows, soft warm rim light, painterly material grain. Input3 is an exact actual teaser-movie frame for drawn anatomy/ink/paint consistency ONLY. Do not copy the reference people's identity, costumes, poses, props, scenery or HUD. Match that coherent cinematic animated film, with dimensional forms and naturally detailed mature faces; avoid oversimplified flat poster style, glossy3D, photographic airbrushing or beauty filters. Keep the EDIT TARGET person's own face/age, full-body pose, gaze, costume and props. Natural adult anatomy, clearly feminine adult build where female, well-drawn hands. Single figure head to BOTH complete shoes, original1024x1536 portrait framing. Genuinely transparent cutout: no scenery, floor, cast shadow, rectangle, painted glow backdrop, text, watermark, contact sheet or extra figures. Candidate B should preserve the same identity, anatomy, costume and exact hand arrangement; provide an independent carefully finished drawing with subtly different line/paint decisions, not a redesigned person.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-51dcb9f3-7ca3-4540-902b-558506877ee0.png",
+          "nativePngSha256": "c57e6151c0cc6b431835f748daeb7e032ae49239b9a11fb8ac7afa11469b7a84"
+        }
+      ]
+    },
+    {
+      "character": "eunkyung",
+      "name": "최은경",
+      "candidate": "A",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/eunkyung-a.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 223228,
+      "sha256": "54e6ff7ad7ec8db4992aba75c601c3516d1e6f3b5b045368db9948b5b3a1ee52",
+      "source": "/workspace/generated_images/exec-7fcf4905-fa8f-4d00-8633-34cc7ee81183.png",
+      "nativePngSha256": "a373235786248372421dd31b3718ee6acee7a64fe1e85cbb987489956907c035",
+      "references": [
+        {
+          "path": "vn/assets/eunkyung.webp",
+          "sha256": "be831d27c7919aaaa10d9331510bec6905f4a9df112082cb21bc549c34ffca9a"
+        },
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        }
+      ],
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite, independent candidate A. Input1 EDIT TARGET: Choi Eunkyung, adult Korean WOMAN and mother of a school-age daughter, black hair in low practical ponytail with loose strands, tired but steady mature eyes, lived-in face without glamour smoothing. Faded NAVY zip work jacket with old dust stains, GRAY crewneck tee, BLACK cargo trousers, worn BROWN lace-up work boots, OLIVE work gloves tucked in jacket pocket, phone at chest height. Preserve input1's distinct face and actual full-body standing pose/hand placement (phone on VIEWER RIGHT, empty relaxed hand on VIEWER LEFT), no green jacket or can from style reference! Distinct from Mira: navy clothing, gloves, worn face. No wounds, cuts, blood, knee bandages or injury: the later dream injuries are not on this baseline sprite. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear but layered cel-painted shadow planes, restrained indigo shadows, soft warm rim light, painterly material grain. Input3 is an exact actual teaser-movie frame for drawn anatomy/ink/paint consistency ONLY. Do not copy the reference people's identity, costumes, poses, props, scenery or HUD. Match that coherent cinematic animated film, with dimensional forms and naturally detailed mature faces; avoid oversimplified flat poster style, glossy3D, photographic airbrushing or beauty filters. Keep the EDIT TARGET person's own face/age, full-body pose, gaze, costume and props. Natural adult anatomy, clearly feminine adult build where female, well-drawn hands. Single figure head to BOTH complete shoes, original1024x1536 portrait framing. Genuinely transparent cutout: no scenery, floor, cast shadow, rectangle, painted glow backdrop, text, watermark, contact sheet or extra figures. Candidate A should preserve the same identity, anatomy, costume and exact hand arrangement; provide an independent carefully finished drawing with subtly different line/paint decisions, not a redesigned person.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-7fcf4905-fa8f-4d00-8633-34cc7ee81183.png",
+          "nativePngSha256": "a373235786248372421dd31b3718ee6acee7a64fe1e85cbb987489956907c035"
+        }
+      ]
+    },
+    {
+      "character": "eunkyung",
+      "name": "최은경",
+      "candidate": "B",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/eunkyung-b.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 221538,
+      "sha256": "361b38e152b2c96a55c5ba647889584cacbd4c1384946e051ed16d064269dec5",
+      "source": "/workspace/generated_images/exec-62071952-9047-4b08-b42d-57f86a58eb07.png",
+      "nativePngSha256": "3f24d0f00748025962b1d3019a223de3674b37f683873e008fd6a98a7cda53e6",
+      "references": [
+        {
+          "path": "vn/assets/eunkyung.webp",
+          "sha256": "be831d27c7919aaaa10d9331510bec6905f4a9df112082cb21bc549c34ffca9a"
+        },
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        }
+      ],
+      "prompt": "Use case: style-transfer. One production visual-novel character sprite, independent candidate B. Input1 EDIT TARGET: Choi Eunkyung, adult Korean WOMAN and mother of a school-age daughter, black hair in low practical ponytail with loose strands, tired but steady mature eyes, lived-in face without glamour smoothing. Faded NAVY zip work jacket with old dust stains, GRAY crewneck tee, BLACK cargo trousers, worn BROWN lace-up work boots, OLIVE work gloves tucked in jacket pocket, phone at chest height. Preserve input1's distinct face and actual full-body standing pose/hand placement (phone on VIEWER RIGHT, empty relaxed hand on VIEWER LEFT), no green jacket or can from style reference! Distinct from Mira: navy clothing, gloves, worn face. No wounds, cuts, blood, knee bandages or injury: the later dream injuries are not on this baseline sprite. Input2 rendering STYLE ONLY: hand-drawn anime ink linework, clear but layered cel-painted shadow planes, restrained indigo shadows, soft warm rim light, painterly material grain. Input3 is an exact actual teaser-movie frame for drawn anatomy/ink/paint consistency ONLY. Do not copy the reference people's identity, costumes, poses, props, scenery or HUD. Match that coherent cinematic animated film, with dimensional forms and naturally detailed mature faces; avoid oversimplified flat poster style, glossy3D, photographic airbrushing or beauty filters. Keep the EDIT TARGET person's own face/age, full-body pose, gaze, costume and props. Natural adult anatomy, clearly feminine adult build where female, well-drawn hands. Single figure head to BOTH complete shoes, original1024x1536 portrait framing. Genuinely transparent cutout: no scenery, floor, cast shadow, rectangle, painted glow backdrop, text, watermark, contact sheet or extra figures. Candidate B should preserve the same identity, anatomy, costume and exact hand arrangement; provide an independent carefully finished drawing with subtly different line/paint decisions, not a redesigned person.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-62071952-9047-4b08-b42d-57f86a58eb07.png",
+          "nativePngSha256": "3f24d0f00748025962b1d3019a223de3674b37f683873e008fd6a98a7cda53e6"
+        }
+      ]
+    },
+    {
+      "character": "ma-jeonghoon",
+      "name": "마정훈",
+      "candidate": "A",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/ma-jeonghoon-a.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 205700,
+      "sha256": "f223a5c8e72dc092a061b6faa5ef6020527ac9f2ee4358a516887ac2f2881f8d",
+      "source": "/workspace/generated_images/exec-0a2ddc3e-c793-4393-995b-8a1bd297a7d6.png",
+      "nativePngSha256": "cfb2c1e3ef8f3bdcec2565aa9831cdb1089a46d19639a34c63b4b2c9c22bda99",
+      "references": [
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-240.png",
+          "sha256": "c83337078e3119e1ea8af77af700708aaad03ef1444a14a996fd43a10e8444cd"
+        }
+      ],
+      "prompt": "NEW CHARACTER DESIGN PROPOSAL for Ma Jeonghoon, a Korean male strategy executive. All attached images are only hand-drawn animated-film RENDERING references; do NOT copy any reference face, hair, sex, body, pose, clothes, objects or scenery. Build a distinct NEW male face and silhouette. He must NOT look like a stubble-free version of Reho, the short loosely side-parted-haired friendly worker, and not Seoin or Doyun. Male,early-to-mid forties, taller broadly built corporate father, square jaw, no beard, no smile. Key DISTINCTIVE silhouette: black hair slicked COMPLETELY BACK off the forehead, visible hairline with mildly receding temples and narrow gray streaks, short close sides, no dangling forelock, no floppy side part, not curly or spiky. Long RECTANGULAR mature face, high straight nose bridge, small narrower HOODED eyes with heavier upper lids, low straight horizontal eyebrows (NOT large rounded friendly eyes/arched eyebrows), faint brow tension, thin firmly closed lips. Candidate A: strong broad squared chin and a slight hollow under cheekbone, stern appraising eyes beneath a heavy straight brow. Clothing: dark NAVY tailored two-piece business suit, WHITE collared dress shirt correctly buttoned, plain dark tie, BLACK Oxford lace-up shoes. Do not copy work jacket, gloves or can from the female style reference. Pose is an upright composed frontal three-quarter stance, both shoulders level, BOTH HANDS OUT OF POCKETS: anatomical LEFT hand loosely holding a small black phone vertically down beside his left thigh; anatomical RIGHT arm hanging clearly away from the torso at his right side with empty relaxed five-finger hand. NO hand in a pocket, no watch peeking from pocket, no bent-at-hip/pocket pose. Full body1024x1536 portrait head to both complete shoes with a little margin. Same cinematic anime ink contour, clear but layered painted shadow planes, restrained indigo shadow and warm rim light, brush/material grain as the teaser images; adult natural skin construction, not photographic/airbrushed3D or oversimplified flat poster. No background whatsoever: genuinely transparent alpha outside one figure, no floor shadow, colored glow, scenery, rectangle, diagram, contact sheet, text, logo, watermark or other people.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "rejected",
+          "source": "/workspace/generated_images/exec-bd66920f-776b-4efd-9e3c-101d735981b1.png",
+          "nativePngSha256": "078653335d627c082d7067bd83f51bee3d76133dd9330d9cd04b49337e68ba3d",
+          "prompt": "Use case: new-character / style-reference edit. Replace the reference figure with this NEW design, keeping ONLY the teaser rendering style: NEW CHARACTER DESIGN PROPOSAL, one Ma Jeonghoon, adult Korean MAN in early-to-mid forties, corporate strategy executive. Tall with broad shoulders, short black hair neatly combed back, slight gray at temples, square jaw, sharp observant tired eyes, no beard, NOT curly hair. Dark NAVY two-piece business suit, WHITE dress shirt, dark tie, BLACK Oxford shoes. Standing full-body, one hand relaxed at side, the other loosely holding a phone. Composed impatient authority, not a caricature villain. Read clearly as a mature working adult father, not a handsome college student. A NEW face distinct from Reho, Doyun and Seoin. No lunch bag, work shirt or stubble copied from style input. This is normal executive attire with correct buttons; not the later all-night hospital state. References are STYLE ONLY, not identity. Hand-drawn film ink contours, layered cel-painted shadow planes with material grain, restrained indigo shadows and warm rim light, natural adult anatomy/hands. Design candidate A: firmer angular brow and square jaw, a guarded assessing expression. One isolated full figure head to complete Oxford shoes,1024x1536 portrait. Real transparent alpha, no scenery/floor/shadow/glow backdrop/rectangle, no text, watermark, contact sheet or other characters. No photo/3D skin or flat poster simplification.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/reho-canonical.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ],
+          "reason": "레호와 얼굴·헤어 가르마·머리 실루엣·한 손 주머니 포즈가 지나치게 유사해 신규 인물 식별 실패"
+        },
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-0a2ddc3e-c793-4393-995b-8a1bd297a7d6.png",
+          "nativePngSha256": "cfb2c1e3ef8f3bdcec2565aa9831cdb1089a46d19639a34c63b4b2c9c22bda99"
+        }
+      ]
+    },
+    {
+      "character": "ma-jeonghoon",
+      "name": "마정훈",
+      "candidate": "B",
+      "status": "candidate-unselected",
+      "approved": false,
+      "file": "planning/character-candidates-20261023/assets/ma-jeonghoon-b.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 220666,
+      "sha256": "1422df0a2b3150f453e9037e9d99c853f74cd24ceebcab0f6f48b55371e1b7b1",
+      "source": "/workspace/generated_images/exec-dd73cfcb-be3a-4afe-bfb4-9705d80d749f.png",
+      "nativePngSha256": "d024f6e16aa2367510a8896ded9fdb0e1fa857808b17ac9fef16ca57c4fd2a58",
+      "references": [
+        {
+          "path": "vn/assets/teaser-style/mira-canonical.webp",
+          "sha256": "e856a39a632e6137e5fb391e7f5481b6408ff88cb57fee6cea4955dbd154af71"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-035.png",
+          "sha256": "d42f596f85bc7fddd5a312a9e5a0a0ea9fee6d94079806bbf0f2097705daee3b"
+        },
+        {
+          "path": "vn/assets/parent-style/references/teaser-240.png",
+          "sha256": "c83337078e3119e1ea8af77af700708aaad03ef1444a14a996fd43a10e8444cd"
+        }
+      ],
+      "prompt": "NEW CHARACTER DESIGN PROPOSAL for Ma Jeonghoon, a Korean male strategy executive. All attached images are only hand-drawn animated-film RENDERING references; do NOT copy any reference face, hair, sex, body, pose, clothes, objects or scenery. Build a distinct NEW male face and silhouette. He must NOT look like a stubble-free version of Reho, the short loosely side-parted-haired friendly worker, and not Seoin or Doyun. Male,early-to-mid forties, taller broadly built corporate father, square jaw, no beard, no smile. Key DISTINCTIVE silhouette: black hair slicked COMPLETELY BACK off the forehead, visible hairline with mildly receding temples and narrow gray streaks, short close sides, no dangling forelock, no floppy side part, not curly or spiky. Long RECTANGULAR mature face, high straight nose bridge, small narrower HOODED eyes with heavier upper lids, low straight horizontal eyebrows (NOT large rounded friendly eyes/arched eyebrows), faint brow tension, thin firmly closed lips. Candidate B: slightly longer rectangular facial planes and prominent high nose bridge, higher receding temple corners, level reserved eyes, distinctly different face from candidate A, still broad square jaw. Clothing: dark NAVY tailored two-piece business suit, WHITE collared dress shirt correctly buttoned, plain dark tie, BLACK Oxford lace-up shoes. Do not copy work jacket, gloves or can from the female style reference. Pose is an upright composed frontal three-quarter stance, both shoulders level, BOTH HANDS OUT OF POCKETS: anatomical LEFT hand loosely holding a small black phone vertically down beside his left thigh; anatomical RIGHT arm hanging clearly away from the torso at his right side with empty relaxed five-finger hand. NO hand in a pocket, no watch peeking from pocket, no bent-at-hip/pocket pose. Full body1024x1536 portrait head to both complete shoes with a little margin. Same cinematic anime ink contour, clear but layered painted shadow planes, restrained indigo shadow and warm rim light, brush/material grain as the teaser images; adult natural skin construction, not photographic/airbrushed3D or oversimplified flat poster. No background whatsoever: genuinely transparent alpha outside one figure, no floor shadow, colored glow, scenery, rectangle, diagram, contact sheet, text, logo, watermark or other people.",
+      "transparent": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "encoding": "WebP quality96/method6; native dimensions and alpha preserved; no retouch or image style filters",
+      "attempts": [
+        {
+          "status": "rejected",
+          "source": "/workspace/generated_images/exec-2786c9e6-548a-479a-a0a4-0f9d3ada8ad8.png",
+          "nativePngSha256": "8b6ce4c605179ee9a1ba88e3ff33aa9f79ccbfa222741f2091ecb37d843b8639",
+          "prompt": "Use case: new-character / style-reference edit. Replace the reference figure with this NEW design, keeping ONLY the teaser rendering style: NEW CHARACTER DESIGN PROPOSAL, one Ma Jeonghoon, adult Korean MAN in early-to-mid forties, corporate strategy executive. Tall with broad shoulders, short black hair neatly combed back, slight gray at temples, square jaw, sharp observant tired eyes, no beard, NOT curly hair. Dark NAVY two-piece business suit, WHITE dress shirt, dark tie, BLACK Oxford shoes. Standing full-body, one hand relaxed at side, the other loosely holding a phone. Composed impatient authority, not a caricature villain. Read clearly as a mature working adult father, not a handsome college student. A NEW face distinct from Reho, Doyun and Seoin. No lunch bag, work shirt or stubble copied from style input. This is normal executive attire with correct buttons; not the later all-night hospital state. References are STYLE ONLY, not identity. Hand-drawn film ink contours, layered cel-painted shadow planes with material grain, restrained indigo shadows and warm rim light, natural adult anatomy/hands. Design candidate B: equally square mature face but subtly heavier eyelids and a longer nose bridge, a composed neutral assessing expression. One isolated full figure head to complete Oxford shoes,1024x1536 portrait. Real transparent alpha, no scenery/floor/shadow/glow backdrop/rectangle, no text, watermark, contact sheet or other characters. No photo/3D skin or flat poster simplification.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/teaser-style/reho-canonical.webp",
+            "/workspace/lost-dreams-character-candidates/vn/assets/parent-style/references/teaser-035.png"
+          ],
+          "reason": "레호와 얼굴·헤어 가르마·머리 실루엣·한 손 주머니 포즈가 지나치게 유사해 신규 인물 식별 실패"
+        },
+        {
+          "status": "generated",
+          "source": "/workspace/generated_images/exec-dd73cfcb-be3a-4afe-bfb4-9705d80d749f.png",
+          "nativePngSha256": "d024f6e16aa2367510a8896ded9fdb0e1fa857808b17ac9fef16ca57c4fd2a58"
+        }
+      ]
+    }
+  ],
+  "internalContinuityReference": {
+    "yeonwoo": "A",
+    "yoonsera": "A",
+    "yoonha": "A",
+    "eunkyung": "B",
+    "ma-jeonghoon": "B",
+    "status": "scene-production-reference-only",
+    "authorFinalChoice": false,
+    "canonicalRegistration": false
+  }
+}

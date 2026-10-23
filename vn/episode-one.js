@@ -1,4 +1,4 @@
-import { withEpisodeCutscene } from './episode-cutscenes.js?v=teaser-art-20261021-r1';
+import { withEpisodeCutscene } from './episode-cutscenes.js?v=ep03-cinematic-20261023-r3';
 const SCENES = [
   [0,'눈을 뜨기 전','서인은 매일 아침 자신이 얼마나 행복했는지 숫자로 확인했다.','room',null],
   [12,'빌린 바다','방금 전까지 바다에 있었다.','coast','musicSea'],

@@ -1,4 +1,4 @@
-import {coreSceneDirection} from './core-demo.js?v=teaser-art-20261021-r1';
+import {coreSceneDirection} from './core-demo.js?v=ep03-cinematic-20261023-r3';
 import {presentationForBeat} from './neural-cues.js?v=teaser-art-20261021-r1';
 const maps=new WeakMap();
 const signature=(c,i)=>{const q=coreSceneDirection(c,i);return q&&JSON.stringify([q.sceneStart,q.background,q.backgroundAsset,q.actors,q.cg,q.board,q.shot,q.music,q.ambience,q.silence,q.cutscene]);};

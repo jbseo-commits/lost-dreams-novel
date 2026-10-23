@@ -19,6 +19,7 @@
 @keyframes ep12-insert-in{from{opacity:.3;transform:scale(1.018)}to{opacity:1;transform:scale(1)}}
 @keyframes ep12-press{0%,100%{transform:scale(1)}45%{transform:scale(1.008)}}
 .ep12-art-button{position:absolute;right:4%;top:8%;z-index:6;min-height:44px;padding:8px 15px;border:1px solid #d1c5a768;border-radius:3px;background:#0b1827c9;color:#e4dfd2;font-size:12px;pointer-events:auto;cursor:pointer}
+.ep1-frame-button{top:18%}
 .ep12-art-button[hidden]{display:none;pointer-events:none}
 .episode-one.ui-hidden .ep12-art-button{visibility:hidden;pointer-events:none}
 .cutscene-inspection{overflow:auto;max-height:70vh;margin-top:15px;border:1px solid #a9baa43d;touch-action:pan-x pan-y}
@@ -100,13 +101,36 @@
  .ep1-stage[data-cutscene]:not([data-cutscene=""]) .ep1-cg::before{content:'';position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.28);transform:scale(1.1)}
  .ep1-stage[data-cutscene]:not([data-cutscene=""]) .ep1-cg img{position:absolute;top:13vh;height:58vh;object-fit:cover;object-position:var(--cut-position);animation:ep12-insert-in .65s ease both}
  .ep1-stage[data-cutscene="oneAppointment"]:not([data-cutscene=""]) .ep1-cg img{object-fit:contain}
+ .ep1-stage[data-cutscene="ep19-door"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-windows"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-home-life"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-wrist-detail"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-1-alley"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep19-1-window"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep20-door"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep20-box"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep20-rooftop"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep20-1-kitchens"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep21-contracts"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep21-confirmation"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep21-call-transfer"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep21-1-rescue"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep22-corridor"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep22-compute-choice"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep22-shoe"] .ep1-cg img,
+ .ep1-stage[data-cutscene="ep22-1-paper"] .ep1-cg img{object-fit:contain;object-position:center}
  .ep12-art-button{top:11%;right:4%;font-size:11px;min-height:44px;background:#0b1827e6}
+ .ep12-art-button.ep1-frame-button{top:calc(11% + 52px)}
  .ep1-stage[data-cutscene="retirementHand"] .ep1-cg::after{inset:9vh 0 35vh}
  .ep1-actor{height:55vh;width:65vw;bottom:38vh}.ep1-actor[data-side="left"]{left:22%}.ep1-actor[data-side="right"]{left:80%}
  .ep1-stage[data-shot="close"] .ep1-actor{height:61vh;bottom:36vh}.ep1-stage[data-shot="close"] .ep1-actor[data-side="left"]{left:17%}.ep1-stage[data-shot="close"] .ep1-actor[data-side="right"]{left:83%}
  .ep1-actor[data-pose="reclining"]{width:94vw;height:52vh;left:37%;bottom:28vh}
  .ep1-stage[data-shot="close"] .ep1-actor[data-pose="reclining"]{left:52%;bottom:28vh}
  .ep1-cg img{object-position:51% 40%;animation-duration:12s}.ep1-stage[data-shot="detail"] .ep1-cg img{object-position:50% 42%;object-fit:cover}
+ .ep1-stage[data-cutscene^="ep19-"] .ep1-cg img,
+ .ep1-stage[data-cutscene^="ep20-"] .ep1-cg img,
+ .ep1-stage[data-cutscene^="ep21-"] .ep1-cg img,
+ .ep1-stage[data-cutscene^="ep22-"] .ep1-cg img{object-fit:contain!important;object-position:center}
  .ep1-stage[data-cg="clay"] .ep1-cg,.ep1-stage[data-cg="night"] .ep1-cg,.ep1-stage[data-cg="table"] .ep1-cg{background-size:cover;background-position:center}
  .ep1-stage[data-cg="clay"] .ep1-cg::before,.ep1-stage[data-cg="night"] .ep1-cg::before,.ep1-stage[data-cg="table"] .ep1-cg::before{content:"";position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.35);transform:scale(1.1)}
  .ep1-stage[data-cg="clay"] .ep1-cg img{position:absolute;top:7vh;height:63vh;object-position:36% 42%}
@@ -127,4 +151,42 @@
  .ep1-stage[data-cg="dreamBeach"] .ep1-cg{background-size:cover;background-position:38% center}
  .ep1-stage[data-cg="dreamBeach"] .ep1-cg::before{content:'';position:absolute;inset:0;background:inherit;filter:blur(22px) brightness(.35);transform:scale(1.1)}
  .ep1-stage[data-cg="dreamBeach"] .ep1-cg img{position:absolute;top:10vh;height:62vh;object-fit:cover;object-position:32% 40%}
+}
+
+/* Episode 3 source-bound inserts. Real painted CGs, not CSS dirt composites. */
+.ep1-stage[data-cutscene="jiwooClaySmile"]:not([data-cutscene=""]) .ep1-cg img{
+  object-position:55% 45%;
+}
+.ep1-stage[data-cutscene="clayUnderNails"]:not([data-cutscene=""]) .ep1-cg img{
+  object-position:50% 55%;
+  animation:ep03-nails-focus .65s ease-out both;
+}
+.ep1-stage[data-cutscene="convenienceToast"]:not([data-cutscene=""]) .ep1-cg img{
+  animation:ep03-return-toast .6s ease-out both;
+}
+@keyframes ep03-nails-focus{
+  from{opacity:.55;transform:scale(1.055) translateY(-7px)}
+  to{opacity:1;transform:scale(1) translateY(0)}
+}
+@keyframes ep03-return-toast{
+  from{opacity:.4;transform:scale(1.025)}
+  to{opacity:1;transform:scale(1)}
+}
+@media(max-width:640px){
+  .ep1-stage[data-cutscene="jiwooClaySmile"]:not([data-cutscene=""]) .ep1-cg img{
+    object-fit:cover;object-position:58% 42%;
+  }
+  .ep1-stage[data-cutscene="convenienceGaze"]:not([data-cutscene=""]) .ep1-cg img,
+  .ep1-stage[data-cutscene="convenienceToast"]:not([data-cutscene=""]) .ep1-cg img{
+    top:12vh;height:56vh;object-fit:contain;object-position:center;
+  }
+  .ep1-stage[data-cutscene="clayUnderNails"]:not([data-cutscene=""]) .ep1-cg img{
+    top:12vh;height:58vh;object-fit:cover;object-position:43% 55%;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .ep1-stage[data-cutscene="clayUnderNails"] .ep1-cg img,
+  .ep1-stage[data-cutscene="convenienceToast"] .ep1-cg img{
+    animation:none!important;
+  }
 }
