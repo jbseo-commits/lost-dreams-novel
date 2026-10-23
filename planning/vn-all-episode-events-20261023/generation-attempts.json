@@ -1,0 +1,1546 @@
+{
+  "schemaVersion": 1,
+  "scope": "Native PNG attempt inventory; latest drafts are in candidate-art-manifest.json. A completed generation is not an accepted or runtime-connected cut.",
+  "attempts": [
+    {
+      "key": "ep100-event",
+      "chapterId": "100",
+      "selectedBeat": 0,
+      "sourcePng": "/workspace/generated_images/exec-e467509b-3dd8-4ef9-a922-0876c150530c.png",
+      "sha256": "440970d2f1d12218dd4cc9e2a2aeb36790ef675cae7d523f4b17b43aeda77f54",
+      "nativeDimensions": [
+        1672,
+        940
+      ],
+      "promptKey": "ep100-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep101-event",
+      "chapterId": "101",
+      "selectedBeat": 13,
+      "sourcePng": "/workspace/generated_images/exec-12df5bd4-7c2a-416a-a051-0133beb238d5.png",
+      "sha256": "98c028e8141b3523cd387bcbb244a7bad4f4eb65fb1fdb40b9ae80f4cf8d278d",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep101-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep102-event",
+      "chapterId": "102",
+      "selectedBeat": 4,
+      "sourcePng": "/workspace/generated_images/exec-2f092d3b-5aaa-4fcb-bd6d-0c694f8de43b.png",
+      "sha256": "f05ff872b2d965e008ae18742ce5c2edcd986f792cb593d5100e4d5933df8343",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep102-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep103-event",
+      "chapterId": "103",
+      "selectedBeat": 101,
+      "sourcePng": "/workspace/generated_images/exec-1aa2cf01-1708-462c-9fa0-b060d6d1606e.png",
+      "sha256": "ae12f7aad206eec145ca9a3f62143695e3c47d1ebdf43ef353aeedfe92e9e87f",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep103-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep104-event",
+      "chapterId": "104",
+      "selectedBeat": 55,
+      "sourcePng": "/workspace/generated_images/exec-08b23789-8591-470d-9981-8ec8bf38fd63.png",
+      "sha256": "eaa9948b0e54e0b7a525e2fdd6df87edcd3a6fc15a763b8643c8ac7868ec8005",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep104-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep105-event",
+      "chapterId": "105",
+      "selectedBeat": 7,
+      "sourcePng": "/workspace/generated_images/exec-4b9e0bd9-6089-4993-957b-93ab268e7b85.png",
+      "sha256": "e34ea829d24643e0b9e1bccc931cc310c9adcea9503ac2ef76514a2d86e79f4e",
+      "nativeDimensions": [
+        1672,
+        940
+      ],
+      "promptKey": "ep105-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep12-1-event",
+      "chapterId": "12-1",
+      "selectedBeat": 167,
+      "sourcePng": "/workspace/generated_images/exec-a7c4afda-f21e-4c89-a112-c94c756ae268.png",
+      "sha256": "92a3780a3096729b47f9ff7799bca442055f8a7a699dc799c621ff2f46df0648",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep12-1-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep13-1-event",
+      "chapterId": "13-1",
+      "selectedBeat": 78,
+      "sourcePng": "/workspace/generated_images/exec-7f8ac3d0-0bf0-4d34-a002-21754214e0c1.png",
+      "sha256": "e6fa05f9880744ca6934187680a9a0519ad931826eaa57d1ce10a3e259d5ef92",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep13-1-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep13-2-event",
+      "chapterId": "13-2",
+      "selectedBeat": 51,
+      "sourcePng": "/workspace/generated_images/exec-1cea7c30-38d0-4cfb-a5b2-d410143365be.png",
+      "sha256": "ab4ca9053bd6aa39424c6cae94bf2753d4ec63738a257e125e5055f5427ea16c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep13-2-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep15-1-event",
+      "chapterId": "15-1",
+      "selectedBeat": 51,
+      "sourcePng": "/workspace/generated_images/exec-0bfb328e-1b04-4458-8e80-52195e450380.png",
+      "sha256": "998aabbd76d89ed0a02e88bcf896c23018bfca4d004d0e91aea141e2dc1727ce",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep15-1-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep16-1-event",
+      "chapterId": "16-1",
+      "selectedBeat": 163,
+      "sourcePng": "/workspace/generated_images/exec-49814f9b-1b46-40a1-b9d9-e77ac0f63b1b.png",
+      "sha256": "220f1a3b776ef1bab2aeb86542b640f4b90698362f9e0b73e3ccc0621903a7ff",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep16-1-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep24-1-event",
+      "chapterId": "24-1",
+      "selectedBeat": 89,
+      "sourcePng": "/workspace/generated_images/exec-91bbfc6a-135a-48ce-a42a-679ac21ed6d6.png",
+      "sha256": "ebe7b7ee392393e04320be47be9f78980cb8956900924dbb563747944108e8e9",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep24-1-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep25-1-event",
+      "chapterId": "25-1",
+      "selectedBeat": 181,
+      "sourcePng": "/workspace/generated_images/exec-dbbb812a-17d0-46ef-a116-001f36726f68.png",
+      "sha256": "d1de640e9e6dcfff6ef9a8efd3368508319a75726d29ff94954ad6d425d3e85b",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep25-1-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep30-1-event",
+      "chapterId": "30-1",
+      "selectedBeat": 43,
+      "sourcePng": "/workspace/generated_images/exec-b0eebf42-9f16-4156-8127-1e945a2434ac.png",
+      "sha256": "2d58297ceea2da1b25c493723d2fe63557e9f0006ce4a00a457f77fd257b2f0e",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep30-1-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep30-2-event",
+      "chapterId": "30-2",
+      "selectedBeat": 200,
+      "sourcePng": "/workspace/generated_images/exec-252ebf71-4f14-4805-87fc-d150fc855b9c.png",
+      "sha256": "ed041b36d8899d005a6120700ee612b83fb24bb13b78ac34be730e5f6ae916f6",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep30-2-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep31-event-corrected",
+      "chapterId": "31",
+      "selectedBeat": 115,
+      "sourcePng": "/workspace/generated_images/exec-be71007b-5b30-4fc4-b4a2-6b48500c3385.png",
+      "sha256": "7e22f095094f243bb9d264561757e32d5d680e877bd724888a6b72e84b73fdc9",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep31-event-corrected",
+      "latestForChapter": false,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep31-event-corrected2",
+      "chapterId": "31",
+      "selectedBeat": 115,
+      "sourcePng": "/workspace/generated_images/exec-6663ef73-2aa7-414c-80e6-7f2770283a3f.png",
+      "sha256": "9b7d551ac5dae6043842d8531cd6fec60533ef60b0716e8b119d372ab3559e47",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep31-event-corrected2",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep31-event",
+      "chapterId": "31",
+      "selectedBeat": 115,
+      "sourcePng": "/workspace/generated_images/exec-92a45779-5070-4104-976a-c234d14e44b2.png",
+      "sha256": "6f762cb36a8a9c1637c2d2b17304c8f2011f0400341f957122e5ef8f89cd615c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep31-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep32-event-corrected",
+      "chapterId": "32",
+      "selectedBeat": 150,
+      "sourcePng": "/workspace/generated_images/exec-adadfe03-37f1-421f-b6de-1ac874d91d49.png",
+      "sha256": "42a66e7d3dae4a6cf3ac9e99b4c605f763e0982b10d19c93194a499afc25d5be",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep32-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep32-event",
+      "chapterId": "32",
+      "selectedBeat": 150,
+      "sourcePng": "/workspace/generated_images/exec-5ee1d6ab-58db-489e-9406-404294255cdf.png",
+      "sha256": "2a0692b22067d1405f1f1b8cfbf32e15cf5125d7c5ba625edf597134a7ccfc0c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep32-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep33-event-corrected",
+      "chapterId": "33",
+      "selectedBeat": 177,
+      "sourcePng": "/workspace/generated_images/exec-9358df66-c5bf-44c3-a3e7-53fbf2d55c5f.png",
+      "sha256": "d7ecccc88d50f24036e120cbcdfe4cdedc8bdbab37114ba9f40097edfde6a498",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep33-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep33-event",
+      "chapterId": "33",
+      "selectedBeat": 177,
+      "sourcePng": "/workspace/generated_images/exec-894eae2c-26a5-47c3-bf98-4b6536bab577.png",
+      "sha256": "8330654bcd07198cc5dfa21bcb89f92560861187fc08358a3f917a8241303d4a",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep33-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep34-event-corrected",
+      "chapterId": "34",
+      "selectedBeat": 155,
+      "sourcePng": "/workspace/generated_images/exec-9548c047-84fe-486d-896d-49fa87f8303f.png",
+      "sha256": "9653265ba44b8e340546ed16828902db956060faec0557297203bb84659d7f3c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep34-event-corrected",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep34-event-corrected2",
+      "chapterId": "34",
+      "selectedBeat": 155,
+      "sourcePng": "/workspace/generated_images/exec-bcd8251b-82f8-4e09-89de-d282c9bd46db.png",
+      "sha256": "86e47153e92722b797b053fe21e986ffe4a6c2da8956748fbf8992a3226702bc",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep34-event-corrected2",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep34-event",
+      "chapterId": "34",
+      "selectedBeat": 155,
+      "sourcePng": "/workspace/generated_images/exec-33ba2692-9b71-4dc8-93fb-e2e95c0291af.png",
+      "sha256": "3eac177379e278cdae21ac6ed690f5dcbd8a48b47881173fc8e52932df87387a",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep34-event",
+      "latestForChapter": false,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep35-event-corrected",
+      "chapterId": "35",
+      "selectedBeat": 117,
+      "sourcePng": "/workspace/generated_images/exec-04c4be52-6aeb-485d-8f30-5af48e8df11d.png",
+      "sha256": "080be92bba0e1ab46eaf1edc8234fc7037fa2ec1ad31496cb512756a2ab9c618",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep35-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep35-event",
+      "chapterId": "35",
+      "selectedBeat": 117,
+      "sourcePng": "/workspace/generated_images/exec-ea0bfa95-6e0d-4133-8216-46ba3b78dada.png",
+      "sha256": "e1fba35021c7c9dc72a383fc88d871dff992470171f9fb8f69d7d04e7beaedae",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep35-event",
+      "latestForChapter": false,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep36-event",
+      "chapterId": "36",
+      "selectedBeat": 99,
+      "sourcePng": "/workspace/generated_images/exec-07e6dbb5-5939-42e0-9572-cee339628416.png",
+      "sha256": "1d7ae4097884d52d8c7229fa9c0292ee9f179234f85ec2e2ab4138ebfe2ae355",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep36-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep37-event-corrected",
+      "chapterId": "37",
+      "selectedBeat": 80,
+      "sourcePng": "/workspace/generated_images/exec-a8c407c0-b7b1-479a-9139-063082e35d29.png",
+      "sha256": "11f0b90ff6f46783accbc31a4eacf030fe836f481469c4b4426f2c43a959fc3f",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep37-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep37-event",
+      "chapterId": "37",
+      "selectedBeat": 80,
+      "sourcePng": "/workspace/generated_images/exec-729a3785-3fac-420a-8abd-5f8c667cce3e.png",
+      "sha256": "f3dee161cbbeedbc7692001f8e4d7327fcffcd8eefae02b87b6afc9e611f154c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep37-event",
+      "latestForChapter": false,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep38-event",
+      "chapterId": "38",
+      "selectedBeat": 235,
+      "sourcePng": "/workspace/generated_images/exec-8d6f44fb-6454-4402-aa4f-12cc7067d302.png",
+      "sha256": "fb77ab228e9616ffc7515a5f11857c104319d9eb026fd7bbf7916b9238f0ed7e",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep38-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep39-event-corrected",
+      "chapterId": "39",
+      "selectedBeat": 41,
+      "sourcePng": "/workspace/generated_images/exec-8b689212-6e26-4297-8278-3831f175b7a7.png",
+      "sha256": "e9d5c0b223733ba365911d6a0941d7cb5bbd1e30e7f1f1e47fd61a208ec174a7",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep39-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep39-event",
+      "chapterId": "39",
+      "selectedBeat": 41,
+      "sourcePng": "/workspace/generated_images/exec-d4173123-7cb6-45b7-b3d5-b5ca0f6b3686.png",
+      "sha256": "a6f8802c4af0df60fb30d9f1294238cde6b3c4c8f6754a6719b1a623711cc484",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep39-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep4-1-event",
+      "chapterId": "4-1",
+      "selectedBeat": 42,
+      "sourcePng": "/workspace/generated_images/exec-1b605641-7401-4e46-988b-25585c8d7c2c.png",
+      "sha256": "fc6a121954b0ac8a9c443105918b60196468f1590c495f2fd14576c50b85ebf7",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep4-1-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep40-event-corrected",
+      "chapterId": "40",
+      "selectedBeat": 162,
+      "sourcePng": "/workspace/generated_images/exec-2d189140-ce82-4586-9cdb-0870e92f9cc3.png",
+      "sha256": "7b4c6ebc309c896a117fed015cd83453077cf95a266e54b03b8466836ab0a2e8",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep40-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep40-event",
+      "chapterId": "40",
+      "selectedBeat": 162,
+      "sourcePng": "/workspace/generated_images/exec-11f2df23-e681-41bf-b45b-3c632904b820.png",
+      "sha256": "9ec8003d33ae1412d200a22a0bbe768438dddf167ef0df8396e1f1e0a2b8a4d8",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep40-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep41-event-corrected",
+      "chapterId": "41",
+      "selectedBeat": 225,
+      "sourcePng": "/workspace/generated_images/exec-4b9d6d5e-1fad-4249-83a4-59af8405a2de.png",
+      "sha256": "d17a3240953104890e5b2c63f375cd8dfbb8345592f04e472f351666f088fa8d",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep41-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep41-event",
+      "chapterId": "41",
+      "selectedBeat": 225,
+      "sourcePng": "/workspace/generated_images/exec-0cd0af8c-1b56-4538-ad46-8296ff2c5fa5.png",
+      "sha256": "88cba9b839fc0c09ef4e4734277fadc39ffd28f573608a51d3df7db2e046eb1c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep41-event",
+      "latestForChapter": false,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep42-event",
+      "chapterId": "42",
+      "selectedBeat": 120,
+      "sourcePng": "/workspace/generated_images/exec-e10cbc38-13ed-4cf0-a56f-7d28da3cecd3.png",
+      "sha256": "a60d19ca3dd99b163027e453ed454ef09105777a0638cc92b87bbf739d64c879",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep42-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep43-event-corrected",
+      "chapterId": "43",
+      "selectedBeat": 90,
+      "sourcePng": "/workspace/generated_images/exec-5de9b721-f7c6-4cc7-9da0-f02f0acfb90d.png",
+      "sha256": "b6a96ad9f4a816a68d4d6f434ac6d78123bb05a92ec5c1664e8c6f39cd59e570",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep43-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep43-event",
+      "chapterId": "43",
+      "selectedBeat": 90,
+      "sourcePng": "/workspace/generated_images/exec-c3924f8c-a266-4c52-8b02-8c741ec26c3a.png",
+      "sha256": "2bf88c3f1cde8ca0ef1b562c77c8d48c0c963902c5db2a1fcf50806791abbfb2",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep43-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep44-event-corrected",
+      "chapterId": "44",
+      "selectedBeat": 92,
+      "sourcePng": "/workspace/generated_images/exec-47c6ec0b-13e9-4a00-9436-4d4391503ee2.png",
+      "sha256": "4bafcd08c8510e0b28ede7f96b75dd49461311118e78f968729f939b14126700",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep44-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep44-event",
+      "chapterId": "44",
+      "selectedBeat": 92,
+      "sourcePng": "/workspace/generated_images/exec-a09ca593-3930-411c-9b39-99ad26766dd4.png",
+      "sha256": "d1331dcf1cb326ca77bdee62b4b74af7dccd210327b2d21558c8e03c4f690a44",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep44-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep45-event-corrected",
+      "chapterId": "45",
+      "selectedBeat": 71,
+      "sourcePng": "/workspace/generated_images/exec-7596f4eb-8455-4b62-b6f2-e98c599d9c22.png",
+      "sha256": "490d5119c1aa86d34a2d17b362b5893790ba0370b74eeb828d5b27d2e908c13f",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep45-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep45-event",
+      "chapterId": "45",
+      "selectedBeat": 71,
+      "sourcePng": "/workspace/generated_images/exec-17d6e1ba-ff39-4697-ad31-aee5da91c878.png",
+      "sha256": "77e36d3b749ecdd88431d381dca71d61509ce45983ca05a717677df9eb68b2a1",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep45-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep46-event",
+      "chapterId": "46",
+      "selectedBeat": 97,
+      "sourcePng": "/workspace/generated_images/exec-527bf815-373a-4b74-93c7-d3b25c721877.png",
+      "sha256": "81ce792d1f97f25ec611326bb5d9ed9ae24d30b6daa250db73c4a19c3d9acf74",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep46-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep47-event",
+      "chapterId": "47",
+      "selectedBeat": 46,
+      "sourcePng": "/workspace/generated_images/exec-2bb12a75-e8f0-40ba-aa78-7fdad33dbf84.png",
+      "sha256": "9a51443c4a5ba3cb8bb8547f1a111e22e1f85dad496fa325455a37e55ec7f1db",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep47-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep48-event",
+      "chapterId": "48",
+      "selectedBeat": 71,
+      "sourcePng": "/workspace/generated_images/exec-0777fdd5-396b-4b5e-bfd8-ebb6d1b4a4cc.png",
+      "sha256": "86f6ec19a4f437b7eb9846a528c9991b5acf4baf046e45d263e5b242d4dfb2ea",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep48-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep49-1-event",
+      "chapterId": "49-1",
+      "selectedBeat": 75,
+      "sourcePng": "/workspace/generated_images/exec-0ad353bd-d50a-408a-a182-5c68a9f6e852.png",
+      "sha256": "2e4c0745016967cc258088fc4a6dc079ccd9c928fcfbedd4778b4a982cbb1c98",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep49-1-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep49-event",
+      "chapterId": "49",
+      "selectedBeat": 41,
+      "sourcePng": "/workspace/generated_images/exec-039c7f5e-9956-43c4-9d82-36ed9075949e.png",
+      "sha256": "61f857aac4190423a2d3c56b61accb1e6925b94ed4c2bc538c47ccf590c8de73",
+      "nativeDimensions": [
+        1672,
+        940
+      ],
+      "promptKey": "ep49-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep50-1-event",
+      "chapterId": "50-1",
+      "selectedBeat": 63,
+      "sourcePng": "/workspace/generated_images/exec-5844fa32-e1a5-4ea5-bfe0-2a9f542c2e1f.png",
+      "sha256": "8d293b4572efcf8faec4412d04ccb8d1d37442e85398b55036a11e59ce51a1a4",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep50-1-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep50-event",
+      "chapterId": "50",
+      "selectedBeat": 147,
+      "sourcePng": "/workspace/generated_images/exec-c9ef9f99-b25a-4e2c-8faf-3e8f1870d760.png",
+      "sha256": "b1f97e58cf12e00283668df18c05db7b6874990edaf12f9ddb153ad7e08a5c2a",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep50-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep51-event",
+      "chapterId": "51",
+      "selectedBeat": 105,
+      "sourcePng": "/workspace/generated_images/exec-05d5879d-302d-4da0-a421-dea1dda775be.png",
+      "sha256": "238a2253052c84a6a7799acdcd465404cd206f64fcee4e29271017b84b1bfc27",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep51-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep52-event",
+      "chapterId": "52",
+      "selectedBeat": 52,
+      "sourcePng": "/workspace/generated_images/exec-2e4a6b29-7e3e-41a8-98cb-5f0a52f08314.png",
+      "sha256": "6da9f79a54150944d853a123f422cae087e76bdd6df1e57d32a5a43f2906e646",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep52-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep53-event",
+      "chapterId": "53",
+      "selectedBeat": 58,
+      "sourcePng": "/workspace/generated_images/exec-1ee1d3ea-c7bf-4f3f-bf46-ffbee609206c.png",
+      "sha256": "6af99f50b4dd00b5802dd896166072e8ea8c84c188430f7d8614bfd0072677b6",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep53-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep54-event",
+      "chapterId": "54",
+      "selectedBeat": 69,
+      "sourcePng": "/workspace/generated_images/exec-40b3fe1d-9039-4733-9f44-e662d100a036.png",
+      "sha256": "985b22433cefeaa74d4327b8a802aef30f2322326b244fbe6d59f2f9c0751144",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep54-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep55-event-corrected",
+      "chapterId": "55",
+      "selectedBeat": 137,
+      "sourcePng": "/workspace/generated_images/exec-1d773511-58ba-4be9-afaa-b60bf3207e90.png",
+      "sha256": "127418659816f475fe73f0e3c1d72ae46b1bd74c5e616900d65118b8a9ddc53e",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep55-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep55-event",
+      "chapterId": "55",
+      "selectedBeat": 137,
+      "sourcePng": "/workspace/generated_images/exec-9984e06d-6b6a-428e-a764-d370890a3183.png",
+      "sha256": "f5eb4b3d16ff67b12cede1b6b894ac0d9741a7902b97a00e8eac9e9b90c2dc9b",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep55-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep56-event",
+      "chapterId": "56",
+      "selectedBeat": 72,
+      "sourcePng": "/workspace/generated_images/exec-472a714a-fa90-4129-b49f-5eb4ec15ce1e.png",
+      "sha256": "024a0827c3df82d5d95b518a389fa1c54ea260bb645ada422b64c3238eac2dff",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep56-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep57-event",
+      "chapterId": "57",
+      "selectedBeat": 1,
+      "sourcePng": "/workspace/generated_images/exec-01e6aeda-5332-40f1-bdb5-771b855288e6.png",
+      "sha256": "d5a5ba0dee749e63a79cace5ed8945c986099c176aa47bd44427bdbc48e8754f",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep57-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep58-event-corrected",
+      "chapterId": "58",
+      "selectedBeat": 114,
+      "sourcePng": "/workspace/generated_images/exec-a67d9bc6-bf52-45af-bbe8-fb91a5e3051e.png",
+      "sha256": "7be964250befaf8a69243aa37ead0ceff9987458c93cd037b493f764d16daa4e",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep58-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep58-event",
+      "chapterId": "58",
+      "selectedBeat": 114,
+      "sourcePng": "/workspace/generated_images/exec-4d403e52-5d78-4c1d-ad48-f76bd0af6f13.png",
+      "sha256": "ac5c4544a63a16baf5e190a9406fdb9806cc026661a426555fecb0e031dc5470",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep58-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep59-event",
+      "chapterId": "59",
+      "selectedBeat": 43,
+      "sourcePng": "/workspace/generated_images/exec-68679bb2-f8ed-4797-a272-20b1b77bd221.png",
+      "sha256": "17f80aac4369d8045f37e46b37d63f04e8b7bd8a2b4834c65595dcef2a4693a8",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep59-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep6-1-event",
+      "chapterId": "6-1",
+      "selectedBeat": 66,
+      "sourcePng": "/workspace/generated_images/exec-cea758f9-dd94-4c5b-8e9e-42c8b5ae909a.png",
+      "sha256": "e551cce36162239f60bb984126e09a5a46f2b023a3cba274de7387dcc3235f80",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep6-1-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep60-event-corrected",
+      "chapterId": "60",
+      "selectedBeat": 106,
+      "sourcePng": "/workspace/generated_images/exec-c7e0c2f7-1fa4-421f-91aa-1f7b57f1d674.png",
+      "sha256": "686c9bb94faa85f96ddb47081829c8824607b623a9b46d804c365244a7b2ae9f",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep60-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep60-event",
+      "chapterId": "60",
+      "selectedBeat": 106,
+      "sourcePng": "/workspace/generated_images/exec-4100da7e-6699-49f2-a34c-3895493b963e.png",
+      "sha256": "521e633ec006070b80539e970ced11f5e606e2f94e87e0adde66cf6bc513e614",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep60-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep61-event",
+      "chapterId": "61",
+      "selectedBeat": 75,
+      "sourcePng": "/workspace/generated_images/exec-7df2a122-d36d-43be-bec8-a88a32c0c299.png",
+      "sha256": "72e600914b3217aa98d484a0456836a11f057c9a6bbb45ef0b083e3b8c61decf",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep61-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep62-event-corrected",
+      "chapterId": "62",
+      "selectedBeat": 26,
+      "sourcePng": "/workspace/generated_images/exec-90235ea0-2f78-4d6c-8bb4-2fce9547212f.png",
+      "sha256": "b1b40e16738262152400c9803c9b5e456af3c012287dd393e037b39c33fcb9e7",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep62-event-corrected",
+      "latestForChapter": true,
+      "imageReview": "PENDING"
+    },
+    {
+      "key": "ep62-event",
+      "chapterId": "62",
+      "selectedBeat": 26,
+      "sourcePng": "/workspace/generated_images/exec-40a6aaea-0c08-429a-90cb-29dfe1708c89.png",
+      "sha256": "5c204b646d7022384001aa63ff72cf5189e94e5f272468e34bbe1fca8d020637",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep62-event",
+      "latestForChapter": false,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep63-event",
+      "chapterId": "63",
+      "selectedBeat": 34,
+      "sourcePng": "/workspace/generated_images/exec-eba43503-1bbd-4720-9825-72f9ab558556.png",
+      "sha256": "540754a6265a2ef99a0c7438ef71e58ace38eec6335fd0ae175b3e365b8e3a2d",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep63-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep64-event",
+      "chapterId": "64",
+      "selectedBeat": 14,
+      "sourcePng": "/workspace/generated_images/exec-2bedc65c-1d24-4261-8a5e-ddf15a77eda2.png",
+      "sha256": "066451407de1e0766eb6b8419ffa394279283b9e5427b570835bfd953a224f16",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep64-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep65-event",
+      "chapterId": "65",
+      "selectedBeat": 44,
+      "sourcePng": "/workspace/generated_images/exec-1860a983-fdce-4abf-8a8c-a69d34609af6.png",
+      "sha256": "11c0ecf944293359c553c01e0d03f1c8e0769ba65f52d43aea992fc006d8848d",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep65-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep66-event",
+      "chapterId": "66",
+      "selectedBeat": 63,
+      "sourcePng": "/workspace/generated_images/exec-6532e649-f06d-4b1f-9d08-e88a15823913.png",
+      "sha256": "60eb52021d5ab23979f34e2739b80ed10abfa638e66ecb133f567e82304c45ba",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep66-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep67-event",
+      "chapterId": "67",
+      "selectedBeat": 151,
+      "sourcePng": "/workspace/generated_images/exec-31f21fb7-14e9-4df2-8ff0-4455b95551a9.png",
+      "sha256": "db0df918813059560fa66b670328e338229b1d2e12fc54b14cf4e911501c4fbc",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep67-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep68-event",
+      "chapterId": "68",
+      "selectedBeat": 84,
+      "sourcePng": "/workspace/generated_images/exec-be6075b2-d586-4ce3-a0e8-9e03373c0cb9.png",
+      "sha256": "9fbf0fd2e1bcf941f8078e5a5174f1a1d47a52a97372b32f940daf806bbb662c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep68-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep69-event",
+      "chapterId": "69",
+      "selectedBeat": 113,
+      "sourcePng": "/workspace/generated_images/exec-13151306-5231-43c5-91dd-c92801dc07e0.png",
+      "sha256": "f3eac67ea2c0bf698efc1e4a878373dbbbec251de59d1222d9b92016a44a8f20",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep69-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep7-2-event",
+      "chapterId": "7-2",
+      "selectedBeat": 165,
+      "sourcePng": "/workspace/generated_images/exec-b1bdcdca-fd1f-4491-a462-2c1f440aff5c.png",
+      "sha256": "36c575f76028c2b2186acf885ad7823ffca62489fec4b44d612db611f6b4e40e",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep7-2-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep70-event",
+      "chapterId": "70",
+      "selectedBeat": 111,
+      "sourcePng": "/workspace/generated_images/exec-557d86d7-1f9e-4a41-9c2a-6b644099cd89.png",
+      "sha256": "7e0ca73955a3d4e0ee9ed96a84077b0295d9d83759e95101ff09e29e5850b159",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep70-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep71-event",
+      "chapterId": "71",
+      "selectedBeat": 150,
+      "sourcePng": "/workspace/generated_images/exec-d35f1cc9-557d-4a28-8c85-af23452d71d7.png",
+      "sha256": "02c513ae2834ee522e34df76ca72b54baf912bfbf7f26e1458f50f0876d5523d",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep71-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep72-event",
+      "chapterId": "72",
+      "selectedBeat": 30,
+      "sourcePng": "/workspace/generated_images/exec-5e566e7f-0a2e-44a9-bab6-1f2e5e6bec04.png",
+      "sha256": "24c8d5d337d5fec47c39404c339529b6630161b1b4a701561379b6057040b7b4",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep72-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep73-event",
+      "chapterId": "73",
+      "selectedBeat": 48,
+      "sourcePng": "/workspace/generated_images/exec-c8684268-d1ed-4d0f-a5d0-3fa8e8669a50.png",
+      "sha256": "f5dca5d85ae2d59d19910543de27ca1c53b19fd03489b8af539a4733bff10043",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep73-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep74-event",
+      "chapterId": "74",
+      "selectedBeat": 34,
+      "sourcePng": "/workspace/generated_images/exec-b52606a7-b187-405e-af84-16e8751ad068.png",
+      "sha256": "c34ef3108e6fd2ad58aefed3205e5ed89db49e385610675fb1675c58926f1960",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep74-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep75-event",
+      "chapterId": "75",
+      "selectedBeat": 74,
+      "sourcePng": "/workspace/generated_images/exec-a8f51221-7a8b-4c3b-8230-44952deeb239.png",
+      "sha256": "5de70e493e064ba46ba4bbf6de8b2ff1d7dce9f3e37765a6c128f77df66d4870",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep75-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep76-event",
+      "chapterId": "76",
+      "selectedBeat": 43,
+      "sourcePng": "/workspace/generated_images/exec-1011ee39-901d-490c-86fd-7c90eb48fee5.png",
+      "sha256": "5f360d4ee42b424fdf34591fcaf13039cbb4a8e1be94ed8bdfc27b93d72b0fa7",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep76-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep77-event",
+      "chapterId": "77",
+      "selectedBeat": 32,
+      "sourcePng": "/workspace/generated_images/exec-5e0a103c-bcd7-4009-8dfd-da9db40ae0f6.png",
+      "sha256": "274542ebf597bb30f44ddeb906bb63f60fb9d2f2777739e56337265067212a5c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep77-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep78-event",
+      "chapterId": "78",
+      "selectedBeat": 55,
+      "sourcePng": "/workspace/generated_images/exec-427e278d-6ded-4994-90f2-5cff5e456efd.png",
+      "sha256": "0fd269065ef00942325dd345d0bcdbd69c91e988d9fc50aeb3388a8245187264",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep78-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep79-event",
+      "chapterId": "79",
+      "selectedBeat": 14,
+      "sourcePng": "/workspace/generated_images/exec-b5a8428f-6a73-47a1-8d1c-a387a9288338.png",
+      "sha256": "bbc1aa4c08649603e9adffb1e0e34e9ce254a012e66c08d99643f3790a42341d",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep79-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep8-1-event",
+      "chapterId": "8-1",
+      "selectedBeat": 9,
+      "sourcePng": "/workspace/generated_images/exec-63adb0aa-2689-47a9-9c91-95d8603e2348.png",
+      "sha256": "7f0f61b791b67efedd1c52ddf6d84abd6b317140532dc61e00eaeac1a57b98be",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep8-1-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep8-3-event",
+      "chapterId": "8-3",
+      "selectedBeat": 83,
+      "sourcePng": "/workspace/generated_images/exec-91f35b44-1981-4185-8a2e-0bfd6d5f073a.png",
+      "sha256": "3947bac12380b0dea74416130834aa3055618768bb2e2b1d74bb781d3b037353",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep8-3-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep80-event",
+      "chapterId": "80",
+      "selectedBeat": 45,
+      "sourcePng": "/workspace/generated_images/exec-27638d44-fb61-488e-81c7-f19538f1cbd1.png",
+      "sha256": "7b2db0bf032976c5a53b44913d83ae238d05e65254edc845706c59a0c608becc",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep80-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep81-event",
+      "chapterId": "81",
+      "selectedBeat": 97,
+      "sourcePng": "/workspace/generated_images/exec-f5ad4f2f-506d-451f-a8b7-d577233facd8.png",
+      "sha256": "b9fd5db02eb15e61d2e34129debaf0150cbb1ccc605847d2b54298348c7d2859",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep81-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep82-event",
+      "chapterId": "82",
+      "selectedBeat": 61,
+      "sourcePng": "/workspace/generated_images/exec-9dba3efc-9cf9-4345-abf4-348de3d8adf1.png",
+      "sha256": "1670752430542b5d14e880715d465ee49f2a30d7b44ee70f96089044575ea330",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep82-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep83-event",
+      "chapterId": "83",
+      "selectedBeat": 89,
+      "sourcePng": "/workspace/generated_images/exec-48719a4a-69d4-4d63-a313-29ed4b355488.png",
+      "sha256": "43f76bffb86af19cd3502f36a69073ca2bc7e4677c7ad3701e512680b487faea",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep83-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep84-event",
+      "chapterId": "84",
+      "selectedBeat": 32,
+      "sourcePng": "/workspace/generated_images/exec-c056129b-579f-41fe-8b8e-2dbbaceccdaf.png",
+      "sha256": "5d20a927ba363980cdecc77c9aa7f14336dbe304993fde2a03f6b505fa393ec8",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep84-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep85-event",
+      "chapterId": "85",
+      "selectedBeat": 46,
+      "sourcePng": "/workspace/generated_images/exec-0de14768-f699-425f-8659-04775a9e49ee.png",
+      "sha256": "bd5c7a1dab58fb3ec08e2d5cc2da6767538ccc47c663d36ee970c3007f6fbd0a",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep85-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep86-event",
+      "chapterId": "86",
+      "selectedBeat": 20,
+      "sourcePng": "/workspace/generated_images/exec-a896fcc9-3e14-4ac5-89d9-e56af6c0a927.png",
+      "sha256": "85955b5e9a1c8a9066b07369c777344b138e2d27ebaaf557b2cbea464d9fdcfc",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep86-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep87-event",
+      "chapterId": "87",
+      "selectedBeat": 91,
+      "sourcePng": "/workspace/generated_images/exec-2e0d9ee8-9808-4460-9a77-23d687dc5baf.png",
+      "sha256": "ad4ac75edbfe535a0803972ffa489fe600e1e16eebbec06445def687e9ac68a4",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep87-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep88-event",
+      "chapterId": "88",
+      "selectedBeat": 17,
+      "sourcePng": "/workspace/generated_images/exec-68663772-fad4-4475-a066-fe1f528cffbb.png",
+      "sha256": "8067c5ff8949f5b3355b24db020c27a12395329b0cb07da05db8297eb3e6456e",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep88-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep89-event",
+      "chapterId": "89",
+      "selectedBeat": 8,
+      "sourcePng": "/workspace/generated_images/exec-3e8d2304-8158-43a0-9d85-90ded6c8449d.png",
+      "sha256": "cffe5b03aa3e7408ccdd870cafcd5ac496173da241fb969e6455c12d288116b5",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep89-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep9-1-event",
+      "chapterId": "9-1",
+      "selectedBeat": 192,
+      "sourcePng": "/workspace/generated_images/exec-2514def5-2623-43e4-87f6-799334bd29fa.png",
+      "sha256": "3db417803242adb6814b2994f21af81cefe5011aec38803c81cdfa0601d65327",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep9-1-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep90-event",
+      "chapterId": "90",
+      "selectedBeat": 47,
+      "sourcePng": "/workspace/generated_images/exec-32ffc2f5-cf12-44e0-ae0f-9f75f639d7e4.png",
+      "sha256": "3e1d7110760f7ca5923639e2d001ecbab1e9111d26200fb3eb1e464e99397352",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep90-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep91-event",
+      "chapterId": "91",
+      "selectedBeat": 100,
+      "sourcePng": "/workspace/generated_images/exec-1f77f8b0-40f4-4bfc-882b-b83742568596.png",
+      "sha256": "55f182267752c74c36f929b777349902234bf44b99b99c83646065602900b04f",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep91-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep92-event",
+      "chapterId": "92",
+      "selectedBeat": 2,
+      "sourcePng": "/workspace/generated_images/exec-f2ad26c8-2fcb-4644-9972-58e2934918af.png",
+      "sha256": "3b6deb6ff6d3610c816135fed76f1f8dbb381ca987d1c8770b7e020436c7b42a",
+      "nativeDimensions": [
+        1672,
+        940
+      ],
+      "promptKey": "ep92-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep93-event",
+      "chapterId": "93",
+      "selectedBeat": 16,
+      "sourcePng": "/workspace/generated_images/exec-76c662ae-514a-4ef5-9980-557a4334e7f8.png",
+      "sha256": "b4eba3b1840a7a96d42812be0e18532df0a21eca21eb8385e45b894fe51061e7",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep93-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep94-event",
+      "chapterId": "94",
+      "selectedBeat": 18,
+      "sourcePng": "/workspace/generated_images/exec-a2a664b9-db44-40c6-965d-dce54f187ccc.png",
+      "sha256": "08fd1a9fc37cace654abec379a3ea02864159ac5578a941078ca3c560f6f05a2",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep94-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep95-event",
+      "chapterId": "95",
+      "selectedBeat": 20,
+      "sourcePng": "/workspace/generated_images/exec-e7df8c51-3de5-4884-88a5-356697282725.png",
+      "sha256": "bbc2b88dce46cbdd26a81378841225582f6d7c17606214b02454a9e0816adfcd",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep95-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep96-event",
+      "chapterId": "96",
+      "selectedBeat": 11,
+      "sourcePng": "/workspace/generated_images/exec-b38fb9ad-c51a-4c70-bfd6-4995afa2eaab.png",
+      "sha256": "74810fa20cd9575f65f565b017eb546365aeb16e353be1a5a6e6d21a624a44e8",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep96-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    },
+    {
+      "key": "ep97-event",
+      "chapterId": "97",
+      "selectedBeat": 23,
+      "sourcePng": "/workspace/generated_images/exec-7e481a15-1814-4d5b-9b9c-6be4a7a8e76e.png",
+      "sha256": "ca6ff7d858d72e4547ea22de5607aa17158ef4f368b6cbca0bd43bba05b9caff",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep97-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep98-event",
+      "chapterId": "98",
+      "selectedBeat": 19,
+      "sourcePng": "/workspace/generated_images/exec-abb52d29-b5b9-47b0-ac1c-bd69b1468c8c.png",
+      "sha256": "1cc9da56a3d504fb1e2f5545d4e06201713936d54dc58b6c832cb546790f8e97",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep98-event",
+      "latestForChapter": true,
+      "imageReview": "CHANGES"
+    },
+    {
+      "key": "ep99-event",
+      "chapterId": "99",
+      "selectedBeat": 14,
+      "sourcePng": "/workspace/generated_images/exec-feff95f9-4b73-4155-8ead-834e0779deec.png",
+      "sha256": "776c014d4da865e0b4b578a19405f84d04a71895ec54ef77e4ab66ee1361f877",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "promptKey": "ep99-event",
+      "latestForChapter": true,
+      "imageReview": "PASS"
+    }
+  ]
+}

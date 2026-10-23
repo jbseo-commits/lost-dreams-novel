@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "scope": "All17 delivered interlude candidates only;notwhole-story completion.",
+  "environmentNote": "Duringreview /tmpreset;continuedfrompreservedworkspace story-data.js and restoredmetadata. All17metadata/PNGwerepresent,including6-1/9-1.",
+  "method": {
+    "source": "Full current chapter prefix0..selected read for each17.",
+    "native": "All17nativePNGs viewed.",
+    "mobile": "All17viewedat390px-containedin-memorypreviews;notactualappQA.",
+    "guards": "Identity/body/gender/age,hands/props/currentaction,futurefacts checked;new supporting-character designs themselves are allowed.",
+    "writeScope": "Reviewartifactonly;checkoutunchanged."
+  },
+  "summary": {
+    "PASS": 9,
+    "CHANGES": 8,
+    "PENDING": 0
+  },
+  "records": [
+    {
+      "chapterId": "4-1",
+      "selectedBeat": 42,
+      "candidatePath": "/workspace/generated_images/exec-1b605641-7401-4e46-988b-25585c8d7c2c.png",
+      "sha256": "fc6a121954b0ac8a9c443105918b60196468f1590c495f2fd14576c50b85ebf7",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..42",
+      "verdict": "PASS",
+      "reason": "회의실 비품함 메모지 한장 뜯기/미리 쓰지 않은 종이/참관인들 정합.390px에서 손과 종이의 행동이 명확하다.",
+      "issues": []
+    },
+    {
+      "chapterId": "6-1",
+      "selectedBeat": 66,
+      "candidatePath": "/workspace/generated_images/exec-cea758f9-dd94-4c5b-8e9e-42c8b5ae909a.png",
+      "sha256": "e551cce36162239f60bb984126e09a5a46f2b023a3cba274de7387dcc3235f80",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..66",
+      "verdict": "CHANGES",
+      "reason": "58오븐열고닫기/64오븐확인까지 장갑 상태인데 새원화는 맨손으로 턱을 괸 재호를 추가했다. 주역 딸의 네귀퉁이 테이핑 자체는 맞다.",
+      "issues": [
+        {
+          "sourceBeat": 49,
+          "sourceText": "재호는 오븐 장갑을 낀 채 그걸 봤다.",
+          "reason": "58오븐열고닫기/64오븐확인까지 장갑 상태인데 새원화는 맨손으로 턱을 괸 재호를 추가했다. 주역 딸의 네귀퉁이 테이핑 자체는 맞다.",
+          "minimumCorrection": "불필요한 재호의 맨손 턱괴기 포즈를 크롭하거나 오븐장갑을 유지해 교정한다."
+        }
+      ]
+    },
+    {
+      "chapterId": "7-2",
+      "selectedBeat": 165,
+      "candidatePath": "/workspace/generated_images/exec-b1bdcdca-fd1f-4491-a462-2c1f440aff5c.png",
+      "sha256": "36c575f76028c2b2186acf885ad7823ffca62489fec4b44d612db611f6b4e40e",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..165",
+      "verdict": "CHANGES",
+      "reason": "도윤의 후드를 빌려입은 서인이 직접 가방을 열고 젖은종이를 들고, 도윤은 보기만 한다. 행동주체가 반대다.",
+      "issues": [
+        {
+          "sourceBeat": 165,
+          "sourceText": "도윤이 가방을 열었다. 바닥에 고인 물을 먹은 종이가 한 덩어리로 불어 있었다.",
+          "reason": "도윤의 후드를 빌려입은 서인이 직접 가방을 열고 젖은종이를 들고, 도윤은 보기만 한다. 행동주체가 반대다.",
+          "minimumCorrection": "도윤이 물먹은 가방을 열고 종이덩어리를 확인하게 한다. 서인의 빌린후드는 유지."
+        }
+      ]
+    },
+    {
+      "chapterId": "8-1",
+      "selectedBeat": 9,
+      "candidatePath": "/workspace/generated_images/exec-63adb0aa-2689-47a9-9c91-95d8603e2348.png",
+      "sha256": "7f0f61b791b67efedd1c52ddf6d84abd6b317140532dc61e00eaeac1a57b98be",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..9",
+      "verdict": "PASS",
+      "reason": "끝쪽 두번째에 앉은 서인과 가까운 끝자리 인물이 보여 서인이 의장석이 아님이 읽힌다. 홀로그램과 종이없는 긴탁자, 아침 회의실 정합. 전체13의자는 크롭되어 전수계수하지 않았지만 반대 수량을 새로 확정한 명백한 오류 없음.",
+      "issues": []
+    },
+    {
+      "chapterId": "8-3",
+      "selectedBeat": 83,
+      "candidatePath": "/workspace/generated_images/exec-91f35b44-1981-4185-8a2e-0bfd6d5f073a.png",
+      "sha256": "3947bac12380b0dea74416130834aa3055618768bb2e2b1d74bb781d3b037353",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..83",
+      "verdict": "CHANGES",
+      "reason": "도윤의 셔츠/어긋난단추가 후드와라운드티 참조의상으로 바뀌었다.83의자에서 손무릎/미회복서인 관계는 맞다.",
+      "issues": [
+        {
+          "sourceBeat": 56,
+          "sourceText": "셔츠 단추가 하나 어긋난 남자가 서 있었다.",
+          "reason": "도윤의 셔츠/어긋난단추가 후드와라운드티 참조의상으로 바뀌었다.83의자에서 손무릎/미회복서인 관계는 맞다.",
+          "minimumCorrection": "도윤을 어긋난 단추가 있는 셔츠 차림으로 유지하고 손을 무릎에 거둔 자세 유지."
+        }
+      ]
+    },
+    {
+      "chapterId": "9-1",
+      "selectedBeat": 192,
+      "candidatePath": "/workspace/generated_images/exec-2514def5-2623-43e4-87f6-799334bd29fa.png",
+      "sha256": "3db417803242adb6814b2994f21af81cefe5011aec38803c81cdfa0601d65327",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..192",
+      "verdict": "CHANGES",
+      "reason": "188의 두 작업판에 이름쓰기 대신 서인 작업물이 평평한 진흙명패/돋운 진흙글자로 바뀌었다.183~187의 찌그러진 정체불명 기물/손자국 남은 흙덩이가 사라졌다.",
+      "issues": [
+        {
+          "sourceBeat": 189,
+          "sourceText": "서인은 자기 이름을 썼다.",
+          "reason": "188의 두 작업판에 이름쓰기 대신 서인 작업물이 평평한 진흙명패/돋운 진흙글자로 바뀌었다.183~187의 찌그러진 정체불명 기물/손자국 남은 흙덩이가 사라졌다.",
+          "minimumCorrection": "나무 작업판에 쓴 이름(원화에서는 추상손글씨) 끝에 흙을 남기고 손을 거둔다. 판위의 찌그러진 실제 기물과 지우컵을 유지."
+        }
+      ]
+    },
+    {
+      "chapterId": "12-1",
+      "selectedBeat": 167,
+      "candidatePath": "/workspace/generated_images/exec-a7c4afda-f21e-4c89-a112-c94c756ae268.png",
+      "sha256": "92a3780a3096729b47f9ff7799bca442055f8a7a699dc799c621ff2f46df0648",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..167",
+      "verdict": "PASS",
+      "reason": "밤 차안에서 엎은폰 옆, 열린 글러브박스와 손바닥수첩에 볼펜을 쓰는 태석.390px에서 매체/행동 명확. 이름·기관번호·미래보고내용을 굽지 않는다.",
+      "issues": []
+    },
+    {
+      "chapterId": "13-1",
+      "selectedBeat": 78,
+      "candidatePath": "/workspace/generated_images/exec-7f8ac3d0-0bf0-4d34-a002-21754214e0c1.png",
+      "sha256": "e6fa05f9880744ca6934187680a9a0519ad931826eaa57d1ce10a3e259d5ef92",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..78",
+      "verdict": "CHANGES",
+      "reason": "여성지우와 손진흙발견은 맞지만 진흙이 손목을 넘어 양팔뚝 중간까지 두껍게 올라왔다.",
+      "issues": [
+        {
+          "sourceBeat": 78,
+          "sourceText": "지우는 손을 내려다봤다. 진흙이 손목까지 올라와 있었다.",
+          "reason": "여성지우와 손진흙발견은 맞지만 진흙이 손목을 넘어 양팔뚝 중간까지 두껍게 올라왔다.",
+          "minimumCorrection": "진흙 양과 경계를 손끝~손목으로 제한하고 팔뚝은 드러나게 교정. 공방시선/여성정체성 유지."
+        }
+      ]
+    },
+    {
+      "chapterId": "13-2",
+      "selectedBeat": 51,
+      "candidatePath": "/workspace/generated_images/exec-1cea7c30-38d0-4cfb-a5b2-d410143365be.png",
+      "sha256": "ab4ca9053bd6aa39424c6cae94bf2753d4ec63738a257e125e5055f5427ea16c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..51",
+      "verdict": "PASS",
+      "reason": "밤 편의점 창가의 개봉안한 삼각김밥, 수첩으로 내린 태석 눈과 종이를 누르는 펜, 밖에서는 얼굴 안 보이는 행인.390px 시선회피 상황 읽힘.12-1태석 인상과 모순 없음.",
+      "issues": []
+    },
+    {
+      "chapterId": "15-1",
+      "selectedBeat": 51,
+      "candidatePath": "/workspace/generated_images/exec-0bfb328e-1b04-4458-8e80-52195e450380.png",
+      "sha256": "998aabbd76d89ed0a02e88bcf896c23018bfca4d004d0e91aea141e2dc1727ce",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..51",
+      "verdict": "PASS",
+      "reason": "밤 공용주방에서 도윤이 주머니냅킨을 꺼냄. 쟁반의 죽그릇1/숟가락1/간장종지1·손그립·canonical정체성 정합. 아직 냅킨에 후속내용을 쓰지 않음.",
+      "issues": []
+    },
+    {
+      "chapterId": "16-1",
+      "selectedBeat": 163,
+      "candidatePath": "/workspace/generated_images/exec-49814f9b-1b46-40a1-b9d9-e77ac0f63b1b.png",
+      "sha256": "220f1a3b776ef1bab2aeb86542b640f4b90698362f9e0b73e3ccc0621903a7ff",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..163",
+      "verdict": "CHANGES",
+      "reason": "163까지 앉는 행동 없이 서있는 서인이 원화에서는 의자에 앉아 종이뭉치를 건넨다. 실제는 남은 온라인 확인을 위임하고 업무접속을 끊는 순간이다.",
+      "issues": [
+        {
+          "sourceBeat": 29,
+          "sourceText": "서인은 앉지 않았다.",
+          "reason": "163까지 앉는 행동 없이 서있는 서인이 원화에서는 의자에 앉아 종이뭉치를 건넨다. 실제는 남은 온라인 확인을 위임하고 업무접속을 끊는 순간이다.",
+          "minimumCorrection": "서인은 계속 서서 업무화면을 닫고 배차담당에게 나머지확인을 넘기는 관계로 교정. 불필요한 종이뭉치를 핵심매체로 만들지 않는다."
+        }
+      ]
+    },
+    {
+      "chapterId": "24-1",
+      "selectedBeat": 89,
+      "candidatePath": "/workspace/generated_images/exec-91bbfc6a-135a-48ce-a42a-679ac21ed6d6.png",
+      "sha256": "ebe7b7ee392393e04320be47be9f78980cb8956900924dbb563747944108e8e9",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..89",
+      "verdict": "PASS",
+      "reason": "컨테이너 설명회에서 서인이 자기폰으로 결제코드를 찍음.390px 행동 선명. QR형태는 source 결제코드 소품이며 결제완료/환불/후속폭로는 그리지 않음.",
+      "issues": []
+    },
+    {
+      "chapterId": "25-1",
+      "selectedBeat": 181,
+      "candidatePath": "/workspace/generated_images/exec-dbbb812a-17d0-46ef-a116-001f36726f68.png",
+      "sha256": "d1de640e9e6dcfff6ef9a8efd3368508319a75726d29ff94954ad6d425d3e85b",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..181",
+      "verdict": "PASS",
+      "reason": "집에서 손을 닦은 어머니가 약관을 처음 읽는 상태. 행주·집식탁·canonical 회색단발/보라카디건·미확인동의칸/무서명 유지. source는181의 읽는 매체를 명시하지 않아 종이+단말 선택 자체만으로 모순 확정하지 않았다.390px 읽는 행동 명확.",
+      "issues": []
+    },
+    {
+      "chapterId": "30-1",
+      "selectedBeat": 43,
+      "candidatePath": "/workspace/generated_images/exec-b0eebf42-9f16-4156-8127-1e945a2434ac.png",
+      "sha256": "2d58297ceea2da1b25c493723d2fe63557e9f0006ce4a00a457f77fd257b2f0e",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..43",
+      "verdict": "PASS",
+      "reason": "도윤이 베인손을 쥐면서 먼저 반쯤 붙은 현관 종이를 바라봄. 제한된 출혈, 철판·소금빵·찢긴종이/그립과390px 시선인과 읽힘. 하린의 후속 매달림/새폭력결과 없음.",
+      "issues": []
+    },
+    {
+      "chapterId": "30-2",
+      "selectedBeat": 200,
+      "candidatePath": "/workspace/generated_images/exec-252ebf71-4f14-4805-87fc-d150fc855b9c.png",
+      "sha256": "ed041b36d8899d005a6120700ee612b83fb24bb13b78ac34be730e5f6ae916f6",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..200",
+      "verdict": "PASS",
+      "reason": "하경이 네벽종이중 한장을 다시 붙임. canonical/서인은 도움전 관찰/도윤은 라면앞 정합.390px 종이 재부착행동 선명. 네갈래를 하나의 합의문으로 합치지 않는다.",
+      "issues": []
+    },
+    {
+      "chapterId": "49-1",
+      "selectedBeat": 75,
+      "candidatePath": "/workspace/generated_images/exec-0ad353bd-d50a-408a-a182-5c68a9f6e852.png",
+      "sha256": "2e4c0745016967cc258088fc4a6dc079ccd9c928fcfbedd4778b4a982cbb1c98",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..75",
+      "verdict": "CHANGES",
+      "reason": "75까지 유지되는 서인 서있기/두칸아래 위치가 지우옆계단에 앉기로 바뀜.47지퍼를 잡은 외투도 현재는 지퍼없는 정장재킷이다.",
+      "issues": [
+        {
+          "sourceBeat": 31,
+          "sourceText": "서인은 두 칸 아래에 섰다.",
+          "reason": "75까지 유지되는 서인 서있기/두칸아래 위치가 지우옆계단에 앉기로 바뀜.47지퍼를 잡은 외투도 현재는 지퍼없는 정장재킷이다.",
+          "minimumCorrection": "서인은 지우보다 두칸아래에서 서있는채 봉투를 놓지못한다. source의 지퍼있는외투와 지우의 앞치마/마른손흙 유지."
+        }
+      ]
+    },
+    {
+      "chapterId": "50-1",
+      "selectedBeat": 63,
+      "candidatePath": "/workspace/generated_images/exec-5844fa32-e1a5-4ea5-bfe0-2a9f542c2e1f.png",
+      "sha256": "8d293b4572efcf8faec4412d04ccb8d1d37442e85398b55036a11e59ce51a1a4",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceReadRange": "0..63",
+      "verdict": "CHANGES",
+      "reason": "손님은 깨끗한 재킷 차림이고63까지 벗지않았으나 새원화는 흰셔츠만 입었다. 펜이 종이위에 멈춘 행동은 읽힌다.",
+      "issues": [
+        {
+          "sourceBeat": 4,
+          "sourceText": "재킷이 깨끗했다.",
+          "reason": "손님은 깨끗한 재킷 차림이고63까지 벗지않았으나 새원화는 흰셔츠만 입었다. 펜이 종이위에 멈춘 행동은 읽힌다.",
+          "minimumCorrection": "손님의 깨끗한 재킷을 유지한다. 주방장앞치마/수첩위멈춘펜과 밤국수집은 유지."
+        }
+      ]
+    }
+  ]
+}

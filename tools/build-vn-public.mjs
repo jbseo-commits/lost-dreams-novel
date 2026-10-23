@@ -36,7 +36,12 @@ export async function buildPublicSite(sourceRoot,outputRoot,{copyRoot=true}={}){
  if((await fs.readdir(out)).length)throw Error('출력 폴더가 비어 있지 않습니다.');
  if(copyRoot)for(const entry of await fs.readdir(root,{withFileTypes:true})){
   if(entry.name.startsWith('.')||['vn','node_modules'].includes(entry.name))continue;
-  await fs.cp(path.join(root,entry.name),path.join(out,entry.name),{recursive:true,filter:src=>!path.relative(root,src).split(path.sep).some(p=>p.startsWith('.')||p==='node_modules')});
+  await fs.cp(path.join(root,entry.name),path.join(out,entry.name),{recursive:true,filter:src=>{
+   const relative=slash(path.relative(root,src));
+   return !relative.split('/').some(p=>p.startsWith('.')||p==='node_modules')
+    && relative!=='planning/vn-all-episode-events-20261023'
+    && !relative.startsWith('planning/vn-all-episode-events-20261023/');
+  }});
  }
  const input=path.join(root,'vn'),vn=path.join(out,'vn');await fs.mkdir(vn);
  const box={window:{}};vm.runInNewContext(await fs.readFile(path.join(input,'story-data.js'),'utf8'),box);

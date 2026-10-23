@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "recovery": {
+    "reconstructed": true,
+    "reason": "Execution environment /tmp reset during later review. Reconstructed from this reviewer conversation decisions, candidate IDs and source evidence; not byte-identical original JSON. Hashes/dimensions recalculated from preserved PNGs.",
+    "sourceDecisionPreserved": true
+  },
+  "scope": "Only listed candidates; historical rejected versions retained as historical decisions. Later correction PASS is in a separate report. Not a whole-story completion verdict.",
+  "method": {
+    "native": "All listed PNGs had been viewed at native size in the original review.",
+    "mobile": "All had390px-contained in-memory previews; not actual app QA.",
+    "writeScope": "Only /workspace/vn-work-session/reviews, checkout untouched."
+  },
+  "summary": {
+    "PASS": 9,
+    "CHANGES": 4
+  },
+  "records": [
+    {
+      "chapterId": "42",
+      "selectedBeat": 120,
+      "candidatePath": "/workspace/generated_images/exec-e10cbc38-13ed-4cf0-a56f-7d28da3cecd3.png",
+      "verdict": "PASS",
+      "reason": "보안직원 둘 중 한 명 관자놀이패치, 다른 한 명 단말/밴드 수거. 오전 전략실/행정검사/390px 관계와 그립 정합.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "a60d19ca3dd99b163027e453ed454ef09105777a0638cc92b87bbf739d64c879",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "45",
+      "selectedBeat": 71,
+      "candidatePath": "/workspace/generated_images/exec-17d6e1ba-ff39-4697-ad31-aee5da91c878.png",
+      "verdict": "CHANGES",
+      "reason": "이마에 대는 천이 몸판/허리옷단과 연결되지 않아 별도수건처럼 보임. 도윤은 겉옷을 입고 있는데10에서는 서인 등뒤 말린 받침. 셔츠 허리자락이 연결되게 교정.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "이마에 대는 천이 몸판/허리옷단과 연결되지 않아 별도수건처럼 보임. 도윤은 겉옷을 입고 있는데10에서는 서인 등뒤 말린 받침. 셔츠 허리자락이 연결되게 교정."
+      ],
+      "sha256": "77e36d3b749ecdd88431d381dca71d61509ce45983ca05a717677df9eb68b2a1",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "46",
+      "selectedBeat": 97,
+      "candidatePath": "/workspace/generated_images/exec-527bf815-373a-4b74-93c7-d3b25c721877.png",
+      "verdict": "PASS",
+      "reason": "접은 수기 종이/밀가루손/두번 묶은 앞치마의 재호/하린/가정 제빵 오븐 정합.390px 행동 읽힘, 후속 제안 결과 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "81ce792d1f97f25ec611326bb5d9ed9ae24d30b6daa250db73c4a19c3d9acf74",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "48",
+      "selectedBeat": 71,
+      "candidatePath": "/workspace/generated_images/exec-0777fdd5-396b-4b5e-bfd8-ebb6d1b4a4cc.png",
+      "verdict": "PASS",
+      "reason": "하진엄마가 깎던 사과를 접시에 놓음. 긴 껍질/과도/두번째사과·오후집·390px 동작 정합.51과 세대/인상 모순 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "86f6ec19a4f437b7eb9846a528c9991b5acf4baf046e45d263e5b242d4dfb2ea",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "52",
+      "selectedBeat": 52,
+      "candidatePath": "/workspace/generated_images/exec-2e4a6b29-7e3e-41a8-98cb-5f0a52f08314.png",
+      "verdict": "PASS",
+      "reason": "밤 장부실 빈 요청자칸 위에서 서인 펜이 멈춤. 서명표시 없음. 안경여자/남자 관찰 관계·390px 가독성 정합.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "6da9f79a54150944d853a123f422cae087e76bdd6df1e57d32a5a43f2906e646",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "53",
+      "selectedBeat": 58,
+      "candidatePath": "/workspace/generated_images/exec-1ee1d3ea-c7bf-4f3f-bf46-ffbee609206c.png",
+      "verdict": "PASS",
+      "reason": "오후 주민센터 휠체어 노인은 앞,40세쯤 아들은 옆에서 무릎서류철 두고 폰 조작. 낮만 받는 결과를 굽지 않음.390px 정합.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "6af99f50b4dd00b5802dd896166072e8ea8c84c188430f7d8614bfd0072677b6",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "54",
+      "selectedBeat": 69,
+      "candidatePath": "/workspace/generated_images/exec-40b3fe1d-9039-4733-9f44-e662d100a036.png",
+      "verdict": "PASS",
+      "reason": "밤 원룸 누운 민석의 계산기 조작. 결과/차액/지원금 값은 읽히지 않음. 보편0~9키는 root가 도구눈금으로 허용.390px 정합.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "985b22433cefeaa74d4327b8a802aef30f2322326b244fbe6d59f2f9c0751144",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "55",
+      "selectedBeat": 137,
+      "candidatePath": "/workspace/generated_images/exec-9984e06d-6b6a-428e-a764-d370890a3183.png",
+      "verdict": "CHANGES",
+      "reason": "옥상에서 폰에 작성한 미실행 문서를 여는데 두꺼운 종이서류철 펼침으로 바뀜. 종이 제거하고 밤 빵집밖 폰문서 열기 유지.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "옥상에서 폰에 작성한 미실행 문서를 여는데 두꺼운 종이서류철 펼침으로 바뀜. 종이 제거하고 밤 빵집밖 폰문서 열기 유지."
+      ],
+      "sha256": "f5eb4b3d16ff67b12cede1b6b894ac0d9741a7902b97a00e8eac9e9b90c2dc9b",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "56",
+      "selectedBeat": 72,
+      "candidatePath": "/workspace/generated_images/exec-472a714a-fa90-4129-b49f-5eb4ec15ce1e.png",
+      "verdict": "PASS",
+      "reason": "하경 canonical과50대명진 셔츠/닫힌소매 정합. 빈칸 종이와펜을 서인 앞으로 밀기390px 명확, 사전서명 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "024a0827c3df82d5d95b518a389fa1c54ea260bb645ada422b64c3238eac2dff",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "57",
+      "selectedBeat": 1,
+      "candidatePath": "/workspace/generated_images/exec-01e6aeda-5332-40f1-bdb5-771b855288e6.png",
+      "verdict": "PASS",
+      "reason": "하경이 물리 코르크판 가운데 세로선을 매직으로 긋기390px 명확. 저녁장부실, 미래결과 종이/임의글자 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "d5a5ba0dee749e63a79cace5ed8945c986099c176aa47bd44427bdbc48e8754f",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "58",
+      "selectedBeat": 114,
+      "candidatePath": "/workspace/generated_images/exec-4d403e52-5d78-4c1d-ad48-f76bd0af6f13.png",
+      "verdict": "CHANGES",
+      "reason": "폰의 보이는 화면과 같은 면에 후면4카메라 배열이 있어 불가능한 구조. 화면앞면과 후면카메라 분리 교정.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "폰의 보이는 화면과 같은 면에 후면4카메라 배열이 있어 불가능한 구조. 화면앞면과 후면카메라 분리 교정."
+      ],
+      "sha256": "ac5c4544a63a16baf5e190a9406fdb9806cc026661a426555fecb0e031dc5470",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "59",
+      "selectedBeat": 43,
+      "candidatePath": "/workspace/generated_images/exec-68679bb2-f8ed-4797-a272-20b1b77bd221.png",
+      "verdict": "PASS",
+      "reason": "낮은 놀이탁자에서 아이 오른손 노란해/파란바다, 왼손은 서인의 종이누르는 한손가락 옆.390px 인과·낮춘높이·손상태 정합, 완치/영구장애 없음.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [],
+      "sha256": "17f80aac4369d8045f37e46b37d63f04e8b7bd8a2b4834c65595dcef2a4693a8",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "chapterId": "60",
+      "selectedBeat": 106,
+      "candidatePath": "/workspace/generated_images/exec-4100da7e-6699-49f2-a34c-3895493b963e.png",
+      "verdict": "CHANGES",
+      "reason": "105세장이 위에서 아래로 걸렸으나 원화는 좌우3열. 세장 위아래배치와 별도07풀 종이앞 안경남자의 펜들기 유지 필요.",
+      "nativeViewed": true,
+      "contained390Viewed": true,
+      "issues": [
+        "105세장이 위에서 아래로 걸렸으나 원화는 좌우3열. 세장 위아래배치와 별도07풀 종이앞 안경남자의 펜들기 유지 필요."
+      ],
+      "sha256": "521e633ec006070b80539e970ced11f5e606e2f94e87e0adde66cf6bc513e614",
+      "nativeDimensions": [
+        1672,
+        941
+      ]
+    }
+  ]
+}
