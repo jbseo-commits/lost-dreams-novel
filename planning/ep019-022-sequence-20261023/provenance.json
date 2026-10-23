@@ -1,7 +1,7 @@
 {
   "date": "2026-10-23",
-  "scope": "18 static web scene illustrations plus 19 VN cutscene images (37 packaged files). The new ep19-b-preview is VN-only, copied byte-for-byte from the accepted 1536×1024 WebP; original PNGs remain preserved.",
-  "status": "complete",
+  "scope": "18 unchanged Web artworks, 22 active VN cut images, and one superseded beat-71 VN rescue file retained for provenance (41 tracked image records total). Four new VN-only images cover 19-1 aftermath, 21-1 discovery/landing, and 22-1 clause reading.",
+  "status": "this four-cut addition is complete; broader 19–22 sequence audit remains in progress",
   "sourcePolicy": "PNG originals remain in /workspace/generated_images; do not resize or crop. Native dimensions returned by generation are recorded even when they differ from requested dimensions.",
   "assets": [
     {
@@ -1464,7 +1464,10 @@
             "/workspace/generated_images/exec-b1bb6b62-7260-4aa4-b09f-690489046936.png"
           ]
         }
-      ]
+      ],
+      "supersededForVnBy": "ep21-1-discovery",
+      "supersededReason": "The accepted image showed Eunkyung already crossing on the brace, a later action than the VN beat-71 discovery anchor. The original remains in provenance and the Web artwork is unchanged.",
+      "activeCutMap": false
     },
     {
       "id": "ep21-1-rescue",
@@ -1943,6 +1946,198 @@
         }
       ],
       "role": "B-preview cinematic VN cut at chapter 19 beat 46; copied byte-for-byte from existing web art, no re-encoding/crop/resize."
+    },
+    {
+      "id": "ep19-1-aftermath",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-017c4986-d5db-48cd-8365-2528d8ab0da6.png",
+      "sourceSha256": "ba797588e230ca897c1b93e47810fcf315e9507cc89387a8e5831832f506e653",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "vn/assets/sequence19-22/ep19-1-aftermath-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 309056,
+      "sha256": "6eca372d444d9d2bcc9d2ddafd9aad995131362859bb7d12887781ac3d9b160a",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Correct ONLY the arm laterality in this cinematic illustration while keeping the same adult male Seoin, recognizable curly black hair/face, charcoal suit and open light shirt, seated exhausted against the shipping container after rescue, dusk lighting, restrained mature Korean animated teaser painting style, native widescreen 16:9. RECOMPOSE THE HANDOFF TO MAKE ANATOMY UNAMBIGUOUS: his torso faces the camera. His ANATOMICAL RIGHT arm (on the VIEWER'S LEFT) hangs weakly across his lap, hand limp, with the thin BLACK ACCESS BAND and purple bruise on THAT RIGHT WRIST. His ANATOMICAL LEFT hand (on the VIEWER'S RIGHT) is open to RECEIVE the fallen terminal from the dispatcher crouching to the VIEWER'S RIGHT. The dispatcher reaches from the right side of the image into Seoin's LEFT palm. Show both shoulders and track each forearm clearly, no arm crossing that hides which hand belongs to which shoulder. Put phone handoff at right of center and weak bruised/banded right wrist at left of center. Exactly one believable pair of hands belongs to Seoin. Do NOT put the access band or purple bruising on his left wrist; no band on the receiving wrist. NO new white bandage. His attention goes to the receiving left hand, not the limp right hand. Attackers are already gone, no attacker holds him, no new friend arriving. Preserve style, clothes and shipping-yard context; do not add text, numbers, symbols, logos, watermark or extra people/fingers. This is a strict source correction: RIGHT hand unresponsive, LEFT hand receives terminal. The original reference has those reversed.",
+      "references": [
+        "/workspace/generated_images/exec-0cdd4062-762b-409e-8255-f7571e489a85.png"
+      ],
+      "attempts": [
+        {
+          "status": "rejected",
+          "sourcePng": "/workspace/generated_images/exec-0cdd4062-762b-409e-8255-f7571e489a85.png",
+          "sourceSha256": "9ea57395eb5696bf138014d0b321883c2a4aa140f3e18a604602f24447993bda",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Create ONE new cinematic visual novel illustration, native widescreen 16:9 landscape, matching exactly the mature Korean animated teaser / detailed hand-painted anime style, restrained ink lines, faces, clothing, orange dusk light against cool blue shipping containers of the reference. This is the NEXT SHOT AFTER the reference assault, not a repeat or crop. Story moment: the attackers have already departed. Seoin, the same young ADULT MALE with messy curly black hair, charcoal suit jacket and open collar light shirt, has slid down to sit with his back against a corrugated container. His RIGHT hand is weak and rests uselessly in his lap, the right wrist still has the thin black access band with purple bruising beneath; NO new white bandage yet. A dispatcher crouching beside him is gently placing the fallen small black terminal into Seoin's open LEFT hand. Make that left-hand handoff and his exhausted, shaken attention the central readable visual action. Medium close three-quarter shot from his knees to head, injured right wrist and receiving left palm anatomically unambiguous, both near the middle of the composition; terminal screen dark, not readable. Dispatcher is only a work-jacket shoulder and one believable handing hand at the side, no new prominent face. Containers and warehouse headlights softly recede behind. No attacker touching him, no arriving friend, no ambulance, no gore, no readable text, numbers, subtitles, logos, UI diagram, panel collage, or watermark. The handoff must be clear at phone size. This is a separately painted camera view, not an enlargement of the existing picture.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/sequence19-22/ep19-1-alley-vn.webp"
+          ],
+          "reason": "Rejected after review because the weak bruised right wrist and terminal-receiving left hand were reversed."
+        },
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-017c4986-d5db-48cd-8365-2528d8ab0da6.png",
+          "sourceSha256": "ba797588e230ca897c1b93e47810fcf315e9507cc89387a8e5831832f506e653",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Correct ONLY the arm laterality in this cinematic illustration while keeping the same adult male Seoin, recognizable curly black hair/face, charcoal suit and open light shirt, seated exhausted against the shipping container after rescue, dusk lighting, restrained mature Korean animated teaser painting style, native widescreen 16:9. RECOMPOSE THE HANDOFF TO MAKE ANATOMY UNAMBIGUOUS: his torso faces the camera. His ANATOMICAL RIGHT arm (on the VIEWER'S LEFT) hangs weakly across his lap, hand limp, with the thin BLACK ACCESS BAND and purple bruise on THAT RIGHT WRIST. His ANATOMICAL LEFT hand (on the VIEWER'S RIGHT) is open to RECEIVE the fallen terminal from the dispatcher crouching to the VIEWER'S RIGHT. The dispatcher reaches from the right side of the image into Seoin's LEFT palm. Show both shoulders and track each forearm clearly, no arm crossing that hides which hand belongs to which shoulder. Put phone handoff at right of center and weak bruised/banded right wrist at left of center. Exactly one believable pair of hands belongs to Seoin. Do NOT put the access band or purple bruising on his left wrist; no band on the receiving wrist. NO new white bandage. His attention goes to the receiving left hand, not the limp right hand. Attackers are already gone, no attacker holds him, no new friend arriving. Preserve style, clothes and shipping-yard context; do not add text, numbers, symbols, logos, watermark or extra people/fingers. This is a strict source correction: RIGHT hand unresponsive, LEFT hand receives terminal. The original reference has those reversed.",
+          "references": [
+            "/workspace/generated_images/exec-0cdd4062-762b-409e-8255-f7571e489a85.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep21-1-discovery",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-7f663385-8884-4763-b605-873d74afbac4.png",
+      "sourceSha256": "48a0102b6e1bc58644408ff851046f69058ab03684c63e1d12d137be42aecda4",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "vn/assets/sequence19-22/ep21-1-discovery-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 522492,
+      "sha256": "d5271ef22c069dd6a7f39e7c76f6319421fe4e2c8f600e2b9fdd302085b2a5a9",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Redraw this visual novel illustration as the EARLIER DISCOVERY SHOT, preserving the exact illustrated woman Eunkyung, her dark tied-back hair, blue work jacket, grey shirt, worn dark work trousers, laced work boots, scratched hands and torn/scuffed knee, the elderly man carried on her back in the same beige/brown jacket, the same navy smoky night / orange firelight and mature Korean anime painting style. Native widescreen 16:9 landscape. CRITICAL STORY POSITION: both of Eunkyung's boots are firmly ON THE INTERIOR ROOM FLOOR, behind the broken window sill. She has NOT climbed onto the sill and NOT touched or stepped onto the brace. She is inside the damaged tower room, looking through its broken window at an EMPTY diagonal steel support reaching toward the neighboring flat rooftop across a frightening gap. Camera just behind and to the side of her, her face in a small clear three-quarter profile, her gaze leading to the steel brace and the roof on the right. The carried old man's forearms are around her shoulders; show no unnecessary new faces. The brace must be completely empty, the distance from the window to the neighboring rooftop immediately readable, with an intact landing surface on that roof. Interior feet visibly behind the sill are essential. No jump, no body on the bridge, no landing, no collapsing tower, no success celebration, no rescue counters, no text/numbers/logos/watermark. Central framing must preserve the empty brace and her indoor stance at phone size. This corrects the reference showing an action before the source has reached it; do not reproduce that advanced pose.",
+      "references": [
+        "/workspace/lost-dreams-character-candidates/vn/assets/sequence19-22/ep21-1-rescue-vn.webp"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-7f663385-8884-4763-b605-873d74afbac4.png",
+          "sourceSha256": "48a0102b6e1bc58644408ff851046f69058ab03684c63e1d12d137be42aecda4",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Redraw this visual novel illustration as the EARLIER DISCOVERY SHOT, preserving the exact illustrated woman Eunkyung, her dark tied-back hair, blue work jacket, grey shirt, worn dark work trousers, laced work boots, scratched hands and torn/scuffed knee, the elderly man carried on her back in the same beige/brown jacket, the same navy smoky night / orange firelight and mature Korean anime painting style. Native widescreen 16:9 landscape. CRITICAL STORY POSITION: both of Eunkyung's boots are firmly ON THE INTERIOR ROOM FLOOR, behind the broken window sill. She has NOT climbed onto the sill and NOT touched or stepped onto the brace. She is inside the damaged tower room, looking through its broken window at an EMPTY diagonal steel support reaching toward the neighboring flat rooftop across a frightening gap. Camera just behind and to the side of her, her face in a small clear three-quarter profile, her gaze leading to the steel brace and the roof on the right. The carried old man's forearms are around her shoulders; show no unnecessary new faces. The brace must be completely empty, the distance from the window to the neighboring rooftop immediately readable, with an intact landing surface on that roof. Interior feet visibly behind the sill are essential. No jump, no body on the bridge, no landing, no collapsing tower, no success celebration, no rescue counters, no text/numbers/logos/watermark. Central framing must preserve the empty brace and her indoor stance at phone size. This corrects the reference showing an action before the source has reached it; do not reproduce that advanced pose.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/sequence19-22/ep21-1-rescue-vn.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep21-1-landing",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-f87b51b7-47aa-45d2-83f5-95fde9080b25.png",
+      "sourceSha256": "f41b3ef7151eeb777cda82d1a3b3b02a8d20e01d8021276ba7142b5937d3a091",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "vn/assets/sequence19-22/ep21-1-landing-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 526088,
+      "sha256": "112833afe1bbf511f6042c0701a069629254c64586cdd6b18677250351e816e5",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Paint ONE distinct new cinematic next-action frame for a visual novel, native widescreen 16:9, exactly matching the mature detailed Korean anime / animated teaser style, nighttime navy city and restrained orange firelight, and the SAME Eunkyung and elderly rescued man shown in the reference. Story moment AFTER the crossing: they have just rolled over the parapet INTO THE INSIDE OF THE NEIGHBORING FLAT ROOFTOP. Eunkyung, same black tied-back hair, blue work jacket, grey shirt, worn dark trousers and laced work boots, scratched hands and already injured knee, is on her side on the roof and still gripping the elderly man's forearm so he cannot slide back. The elderly man in the same brown/beige work jacket has rolled with her, safely on the rooftop beside her. Their faces show breathless effort, no smile or celebration. Low close camera from INSIDE the rooftop; a low parapet runs behind them, both bodies unambiguously on its safe interior side, not suspended in midair. Their continuing forearm grip and scraped concrete foreground are the main action in the center, clear coherent hands and limbs. In the soft distant background, the damaged tower and diagonal brace are still standing: NO tower collapse yet, no explosion, no falling bodies. No counter or 12/12, no coughing or laughter, no subtitles or readable text, no collage, no logos/watermark. Do not crop/enlarge the reference; make a separately composed action/result shot that shows how the dangerous route has brought them onto this roof.",
+      "references": [
+        "/workspace/lost-dreams-character-candidates/vn/assets/sequence19-22/ep21-1-rescue-vn.webp"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-f87b51b7-47aa-45d2-83f5-95fde9080b25.png",
+          "sourceSha256": "f41b3ef7151eeb777cda82d1a3b3b02a8d20e01d8021276ba7142b5937d3a091",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Paint ONE distinct new cinematic next-action frame for a visual novel, native widescreen 16:9, exactly matching the mature detailed Korean anime / animated teaser style, nighttime navy city and restrained orange firelight, and the SAME Eunkyung and elderly rescued man shown in the reference. Story moment AFTER the crossing: they have just rolled over the parapet INTO THE INSIDE OF THE NEIGHBORING FLAT ROOFTOP. Eunkyung, same black tied-back hair, blue work jacket, grey shirt, worn dark trousers and laced work boots, scratched hands and already injured knee, is on her side on the roof and still gripping the elderly man's forearm so he cannot slide back. The elderly man in the same brown/beige work jacket has rolled with her, safely on the rooftop beside her. Their faces show breathless effort, no smile or celebration. Low close camera from INSIDE the rooftop; a low parapet runs behind them, both bodies unambiguously on its safe interior side, not suspended in midair. Their continuing forearm grip and scraped concrete foreground are the main action in the center, clear coherent hands and limbs. In the soft distant background, the damaged tower and diagonal brace are still standing: NO tower collapse yet, no explosion, no falling bodies. No counter or 12/12, no coughing or laughter, no subtitles or readable text, no collage, no logos/watermark. Do not crop/enlarge the reference; make a separately composed action/result shot that shows how the dangerous route has brought them onto this roof.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/sequence19-22/ep21-1-rescue-vn.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep22-1-document",
+      "format": "vn",
+      "sourcePng": "/workspace/generated_images/exec-4b386851-dede-4fff-8750-031106521859.png",
+      "sourceSha256": "c6b860d0fb180d4c30449a0a505be212edc7a2502dfd2cfe4e3dbcb3404a33c2",
+      "requestedDimensions": "1920x1080",
+      "actualNativeDimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "sourceFormat": "PNG",
+      "encodedFile": "vn/assets/sequence19-22/ep22-1-document-vn.webp",
+      "mime": "image/webp",
+      "encodedDimensions": [
+        1672,
+        941
+      ],
+      "bytes": 274290,
+      "sha256": "18af42f49d7d0ac8fd5877a41e5dfff4f4565fa740ca9cba2321e8311fddc8f4",
+      "encoder": "Pillow WebP quality=96 method=6",
+      "resizedOrCropped": false,
+      "prompt": "Create ONE separately painted cinematic visual novel detail/POV shot, native widescreen 16:9, continuing this exact morning executive meeting scene, its polished dark conference table, cool pale city window daylight, warm skin accents and the same mature Korean animated teaser/anime painting style. Story moment: the legal director has already picked up the single paper and is reading its authorization clause aloud. CLOSE OVER-SHOULDER / DOCUMENT SHOT: two credible adult hands holding ONE plain printed sheet above the table, the rim of the legal director's ordinary reading glasses and a dark suit shoulder at the extreme near edge; the legal director's face is outside the frame so no new character portrait is introduced. Printed matter is only subtle grey abstract lines, NO legible letters, no words, no numbers, no signature, no name or proposer field visible. The document and reading gesture take center focus; the EXISTING short-dark-haired woman Baek Yoonha from the reference sits softly out of focus across the table, looking calmly at the document, not triumphantly. Quiet listening posture, no pointing, no shocked expressions, no accusations, no frozen or clenched hand from Ma Jeonghoon, no reveal of the proposer name, no new slide or futuristic UI. Keep geography and morning light consistent. The point is the room attending to the evidence just read, BEFORE the later proposer-name reveal. Glass of water and tabletop may anchor the setting. No captions, logos, watermark, collage, or diagram. The paper and reading hands must remain readable as an action at mobile size.",
+      "references": [
+        "/workspace/lost-dreams-character-candidates/vn/assets/sequence19-22/ep22-1-paper-vn.webp"
+      ],
+      "attempts": [
+        {
+          "status": "accepted",
+          "sourcePng": "/workspace/generated_images/exec-4b386851-dede-4fff-8750-031106521859.png",
+          "sourceSha256": "c6b860d0fb180d4c30449a0a505be212edc7a2502dfd2cfe4e3dbcb3404a33c2",
+          "actualNativeDimensions": [
+            1672,
+            941
+          ],
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "prompt": "Create ONE separately painted cinematic visual novel detail/POV shot, native widescreen 16:9, continuing this exact morning executive meeting scene, its polished dark conference table, cool pale city window daylight, warm skin accents and the same mature Korean animated teaser/anime painting style. Story moment: the legal director has already picked up the single paper and is reading its authorization clause aloud. CLOSE OVER-SHOULDER / DOCUMENT SHOT: two credible adult hands holding ONE plain printed sheet above the table, the rim of the legal director's ordinary reading glasses and a dark suit shoulder at the extreme near edge; the legal director's face is outside the frame so no new character portrait is introduced. Printed matter is only subtle grey abstract lines, NO legible letters, no words, no numbers, no signature, no name or proposer field visible. The document and reading gesture take center focus; the EXISTING short-dark-haired woman Baek Yoonha from the reference sits softly out of focus across the table, looking calmly at the document, not triumphantly. Quiet listening posture, no pointing, no shocked expressions, no accusations, no frozen or clenched hand from Ma Jeonghoon, no reveal of the proposer name, no new slide or futuristic UI. Keep geography and morning light consistent. The point is the room attending to the evidence just read, BEFORE the later proposer-name reveal. Glass of water and tabletop may anchor the setting. No captions, logos, watermark, collage, or diagram. The paper and reading hands must remain readable as an action at mobile size.",
+          "references": [
+            "/workspace/lost-dreams-character-candidates/vn/assets/sequence19-22/ep22-1-paper-vn.webp"
+          ]
+        }
+      ]
     }
   ],
   "internalCharacterReference": {

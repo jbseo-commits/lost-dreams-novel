@@ -4,4 +4,4 @@
 
 [컷신 카드와 원문 배치](../ep019-022-cinematic-sequence-20261023.md) · [생성·인코딩 이력과 해시](provenance.json) · [마정훈 밤샘 상태 내부 참고](assets/ma-jeonghoon-overnight-reference.webp).
 
-36개 원화(18장면×웹/VN)를 네이티브 치수로 인코딩했다. provenance에는 원본 PNG와 WebP의 해시·MIME·치수·바이트, 수락·거절 시도가 기록되어 있다. [통합 QA 결과](../../vn/notes/sequence19-22-qa.json)와 [대표 브라우저 증거](../../vn/notes/sequence19-22-proof/)에 원문 배치, 모바일, VN 조작, 공개 오프라인 경계를 기록했다. 통합 독립 코드 검토를 기다린다.
+현재 맵은 18개 웹 컷을 유지하고 VN에는 기존 컷, B 미리보기, 이번 VN 전용 4개 연결 컷을 관리한다. provenance에는 현재 활성 Web 18개·VN 22개와 beat 71에서 대체된 VN 원화 1개를 합쳐 41개 기록이 있다. beat 71의 기존 `ep21-1-rescue` VN 원화는 다음 동작을 먼저 보여 주어 새 발견 컷으로 맵에서 대체했으며, 기존 파일과 제작 이력은 보존했다. Web rescue 원화는 바꾸지 않았다. 새 4개 PNG는 네이티브 1672×941 치수 그대로 WebP quality 96/method 6으로 인코딩하고 provenance에 source/encoded 해시, MIME, 치수, 프롬프트, 참조를 기록했다. [이전 통합 QA](../../vn/notes/sequence19-22-qa.json)와 이번 [4개 VN 컷 QA](../../vn/notes/sequence19-22-followup-qa.json)·[실제 앱 캡처](../../vn/notes/sequence19-22-followup-proof/)는 별도 기록이다. 이번 테스트는 4컷 slice와 기존 2-frame decode/fallback만 다루며, 전체 시퀀스 audit은 진행 중이다.

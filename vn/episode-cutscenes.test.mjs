@@ -13,8 +13,8 @@ const box={window:{}};vm.runInNewContext(await readFile(new URL('./story-data.js
 const chapter=id=>box.window.STORY.chapters.find(c=>c.id===id);
 const at=(id,i)=>id==='1'?episodeOneDirection(chapter(id),i):id==='2'?episodeTwoDirection(chapter(id),i):eventCutsceneDirection(chapter(id),i);
 
-test('53 event inserts cover the original 30 chapters plus the authorized 19–22 interludes and exact source actions',()=>{
-  assert.equal(EPISODE_CUTSCENES.length,53);
+test('56 event inserts cover the original 30 chapters plus the authorized 19–22 interludes and exact source actions',()=>{
+  assert.equal(EPISODE_CUTSCENES.length,56);
   assert.deepEqual([...new Set(EPISODE_CUTSCENES.map(c=>c.chapter))],Array.from({length:30},(_,i)=>String(i+1)).concat(['19-1','20-1','21-1','22-1']));
   for(const cut of EPISODE_CUTSCENES){
     assert.equal(chapter(cut.chapter).beats[cut.start].text,cut.anchor);
@@ -26,6 +26,28 @@ test('53 event inserts cover the original 30 chapters plus the authorized 19–2
     const original={cg:null};assert.equal(withEpisodeCutscene(original,changed,cut.start),original);
     const changedEnd=structuredClone(chapter(cut.chapter));changedEnd.beats[cut.end].text='다른 끝';assert.equal(withEpisodeCutscene(original,changedEnd,cut.start),original);
   }
+});
+test('the aftermath, escape discovery/landing, and legal clause cuts follow their exact source beats',()=>{
+  const expected=[
+    ['19-1',114,'ep19-1-aftermath','서인은 컨테이너에 등을 붙인 채 미끄러져 앉았다. 오른손이 말을 듣지 않았다. 배차 담당이 바닥에 떨어진 단말을 주워 왼손에 쥐여 줬다.'],
+    ['21-1',71,'ep21-1-discovery','깨진 창 너머로 옆 건물 옥상이 보였다. 그냥 뛰어서는 닿지 않을 것 같았다. 사이로 송출탑의 버팀대가 비스듬히 걸려 있었다. 끝이 흔들렸다.'],
+    ['21-1',82,'ep21-1-landing','은경은 발끝에 아직 닿아 있던 버팀대 끝을 디뎌 찼다. 둘이 한꺼번에 옥상 안쪽으로 굴렀다.'],
+    ['22-1',42,'ep22-1-document','“‘공공 의료 검증 지원 요청 시, 제4 검증층 예비 연산의 일시 전환은 인지안전실장 전결로 한다. 지연 한도 3시간. 사후 보고.’”']
+  ];
+  for(const [id,index,cg,text] of expected){
+    const cut=EPISODE_CUTSCENES.find(item=>item.cg===cg);
+    assert.ok(cut,cg);assert.equal(cut.chapter,id);assert.equal(cut.start,index);assert.equal(cut.end,index);
+    assert.equal(cut.anchor,text);assert.equal(chapter(id).beats[index].text,text);assert.equal(at(id,index).cg,cg);
+    assert.notEqual(at(id,index-1)?.cg,cg);assert.notEqual(at(id,index+1)?.cg,cg);
+  }
+  assert.equal(EPISODE_CUTSCENES.some(item=>item.cg==='ep21-1-rescue'),false);
+  assert.equal(at('19-1',118)?.cg,undefined,'the follow-up phone call stays at its own source beat');
+  assert.equal(at('21-1',83)?.cg,undefined,'tower collapse remains after the landing cut');
+  assert.equal(at('21-1',86)?.cg,undefined,'the 12/12 result remains after the landing cut');
+  assert.equal(at('22-1',49)?.cg,undefined,'the proposer is not revealed by the clause cut');
+  assert.equal(at('22-1',50)?.cg,undefined,'Ma Jeonghoon reaction is not revealed by the clause cut');
+  assert.equal(chapter('22-1').beats[49].text,'“제안, 전략본부 마정훈.”');
+  assert.equal(chapter('22-1').beats[50].text,'마 상무의 손이 탁자 위에서 멈췄다.');
 });
 test('B preview is placed at beat 46 with exact fingerprint and native image copy',async()=>{
  const cut=EPISODE_CUTSCENES.find(c=>c.cg==='ep19-b-preview');assert.ok(cut);assert.equal(cut.chapter,'19');assert.equal(cut.start,46);assert.equal(cut.end,46);
@@ -111,7 +133,8 @@ test('every selected drawing is distinct, packaged, and matches its recorded pro
     }else assert.ok(path?.startsWith('assets/cutscenes/'),cut.cg);
   }
   for(const id of [...new Set(EPISODE_CUTSCENES.filter(c=>/^(19|20|21|22)/.test(c.chapter)).map(c=>c.cg).filter(c=>c.startsWith('ep')&&c!=='ep19-b-preview'))]){
-    const asset=sequence.assets.find(item=>item.id===id&&item.format==='web');assert.ok(asset,id);
+    const asset=sequence.assets.find(item=>item.id===id&&item.format==='web');
+    if(!asset){assert.ok(['ep19-1-aftermath','ep21-1-discovery','ep21-1-landing','ep22-1-document'].includes(id),`${id} may be VN-only only when explicitly listed`);continue;}
     if(id!=='ep19-b-preview'){assert.ok(!ids.has(asset.sha256),id);ids.add(asset.sha256);}
     const bytes=await readFile(new URL('../assets/sequence19-22/'+id+'-web.webp',import.meta.url));
     assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);assert.equal(bytes.length,asset.bytes);
