@@ -9,6 +9,7 @@ export const EP1_ASSETS = Object.freeze({
   convenienceToast:'assets/cutscenes/ep03-convenience-toast.webp',
   'ep19-door':'assets/sequence19-22/ep19-door-vn.webp',
   'ep19-wrist-detail':'assets/sequence19-22/ep19-wrist-detail-vn.webp',
+  'ep19-b-preview':'assets/sequence19-22/ep19-b-preview-vn.webp',
   'ep19-windows':'assets/sequence19-22/ep19-windows-vn.webp',
   'ep19-home-life':'assets/sequence19-22/ep19-home-life-vn.webp',
   'ep19-1-alley':'assets/sequence19-22/ep19-1-alley-vn.webp',
