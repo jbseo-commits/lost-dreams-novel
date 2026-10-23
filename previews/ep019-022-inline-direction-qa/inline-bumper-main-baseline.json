@@ -1,0 +1,11 @@
+{
+  "baselineCommit": "43efd49b4aa6b3c0a04348687288cfb6143f1a5d",
+  "exit": 1,
+  "failures": [
+    "FAIL bump file exists: ep004-2.md",
+    "FAIL bump in manifest: ep004-2.md",
+    "FAIL hook verbatim in manuscript/ep008-1.md [8-1]",
+    "FAIL hook verbatim in manuscript/ep008-2.md [8-2]",
+    "FAIL hook verbatim in manuscript/ep008-3.md [8-3]"
+  ]
+}
