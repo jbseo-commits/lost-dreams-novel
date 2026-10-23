@@ -1,0 +1,862 @@
+{
+  "status": "PASS",
+  "externalNetwork": "blocked",
+  "results": [
+    {
+      "episode": "19",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep19-door+ep19-wrist-detail",
+          "w": 326,
+          "h": 463,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-door-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            },
+            {
+              "src": "assets/sequence19-22/ep19-wrist-detail-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep19-b-preview",
+          "w": 326,
+          "h": 244,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-b-preview-web.webp",
+              "natural": [
+                1536,
+                1024
+              ],
+              "w": 326,
+              "h": 217
+            }
+          ]
+        },
+        {
+          "id": "ep19-home-life",
+          "w": 326,
+          "h": 478,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-home-life-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep19-windows",
+          "w": 326,
+          "h": 478,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-windows-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "20",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep20-door",
+          "w": 326,
+          "h": 430,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep20-door-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep20-box",
+          "w": 326,
+          "h": 407,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep20-box-web.webp",
+              "natural": [
+                1122,
+                1402
+              ],
+              "w": 326,
+              "h": 407
+            }
+          ]
+        },
+        {
+          "id": "ep20-rooftop",
+          "w": 326,
+          "h": 430,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep20-rooftop-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "21-1",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep21-1-rescue",
+          "w": 326,
+          "h": 430,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep21-1-rescue-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "19",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "viewport": 1440,
+      "figures": [
+        {
+          "id": "ep19-door+ep19-wrist-detail",
+          "w": 700,
+          "h": 957,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-door-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 700,
+              "h": 923
+            },
+            {
+              "src": "assets/sequence19-22/ep19-wrist-detail-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 700,
+              "h": 923
+            }
+          ]
+        },
+        {
+          "id": "ep19-b-preview",
+          "w": 700,
+          "h": 494,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-b-preview-web.webp",
+              "natural": [
+                1536,
+                1024
+              ],
+              "w": 700,
+              "h": 467
+            }
+          ]
+        },
+        {
+          "id": "ep19-home-life",
+          "w": 700,
+          "h": 951,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-home-life-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 700,
+              "h": 923
+            }
+          ]
+        },
+        {
+          "id": "ep19-windows",
+          "w": 700,
+          "h": 951,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-windows-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 700,
+              "h": 923
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "20",
+      "width": 400,
+      "scrollWidth": 400,
+      "viewport": 400,
+      "figures": [
+        {
+          "id": "ep20-door",
+          "w": 336,
+          "h": 443,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep20-door-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 336,
+              "h": 443
+            }
+          ]
+        },
+        {
+          "id": "ep20-box",
+          "w": 336,
+          "h": 420,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep20-box-web.webp",
+              "natural": [
+                1122,
+                1402
+              ],
+              "w": 336,
+              "h": 420
+            }
+          ]
+        },
+        {
+          "id": "ep20-rooftop",
+          "w": 336,
+          "h": 443,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep20-rooftop-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 336,
+              "h": 443
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "21",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep21-contracts",
+          "w": 326,
+          "h": 434,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep21-contracts-web.webp",
+              "natural": [
+                1122,
+                1402
+              ],
+              "w": 326,
+              "h": 407
+            }
+          ]
+        },
+        {
+          "id": "ep21-call-transfer",
+          "w": 326,
+          "h": 478,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep21-call-transfer-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep21-confirmation",
+          "w": 326,
+          "h": 407,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep21-confirmation-web.webp",
+              "natural": [
+                1122,
+                1402
+              ],
+              "w": 326,
+              "h": 407
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "22",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep22-corridor",
+          "w": 326,
+          "h": 430,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep22-corridor-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep22-compute-choice",
+          "w": 326,
+          "h": 478,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep22-compute-choice-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep22-shoe",
+          "w": 326,
+          "h": 430,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep22-shoe-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "19-1",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep19-1-alley",
+          "w": 326,
+          "h": 430,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-1-alley-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep19-1-window",
+          "w": 326,
+          "h": 430,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-1-window-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "20-1",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep20-1-kitchens",
+          "w": 326,
+          "h": 457,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep20-1-kitchens-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "22-1",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep22-1-paper",
+          "w": 326,
+          "h": 407,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep22-1-paper-web.webp",
+              "natural": [
+                1122,
+                1402
+              ],
+              "w": 326,
+              "h": 407
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "19",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep19-door+ep19-wrist-detail",
+          "w": 326,
+          "h": 905,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-door-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            },
+            {
+              "src": "assets/sequence19-22/ep19-wrist-detail-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep19-b-preview",
+          "w": 326,
+          "h": 244,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-b-preview-web.webp",
+              "natural": [
+                1536,
+                1024
+              ],
+              "w": 326,
+              "h": 217
+            }
+          ]
+        },
+        {
+          "id": "ep19-home-life",
+          "w": 326,
+          "h": 478,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-home-life-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep19-windows",
+          "w": 326,
+          "h": 478,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-windows-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    },
+    {
+      "episode": "19",
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "figures": [
+        {
+          "id": "ep19-door+ep19-wrist-detail",
+          "w": 326,
+          "h": 905,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-door-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            },
+            {
+              "src": "assets/sequence19-22/ep19-wrist-detail-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep19-b-preview",
+          "w": 326,
+          "h": 244,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-b-preview-web.webp",
+              "natural": [
+                1536,
+                1024
+              ],
+              "w": 326,
+              "h": 217
+            }
+          ]
+        },
+        {
+          "id": "ep19-home-life",
+          "w": 326,
+          "h": 478,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-home-life-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        },
+        {
+          "id": "ep19-windows",
+          "w": 326,
+          "h": 478,
+          "images": [
+            {
+              "src": "assets/sequence19-22/ep19-windows-web.webp",
+              "natural": [
+                1092,
+                1440
+              ],
+              "w": 326,
+              "h": 430
+            }
+          ]
+        }
+      ],
+      "svg": 0,
+      "cards": 0
+    }
+  ],
+  "motion": {
+    "decodeWaitMs": 2200,
+    "before": {
+      "h": 463,
+      "moving": false,
+      "wide": 429.875,
+      "detail": 429.875,
+      "decodePending": true
+    },
+    "motionStart": {
+      "h": 463,
+      "moving": true
+    },
+    "after": {
+      "h": 463,
+      "settled": true,
+      "classes": [
+        "sequence-cut",
+        "sequence-cut-pair",
+        "is-settled"
+      ]
+    },
+    "city": {
+      "start": {
+        "filter": "brightness(0.58) saturate(0.78)",
+        "animation": "sequence-window-light",
+        "time": 0
+      },
+      "middleFilter": {
+        "filter": "brightness(0.826472) saturate(0.930622)",
+        "time": 1350
+      },
+      "end": {
+        "moving": false,
+        "settled": true,
+        "name": "none",
+        "duration": "2700ms",
+        "filter": "none"
+      }
+    }
+  },
+  "reducedMotion": {
+    "settled": {
+      "settled": true,
+      "noMotion": true,
+      "moving": false,
+      "images": [
+        {
+          "opacity": "1",
+          "position": "static",
+          "w": 326,
+          "h": 430
+        },
+        {
+          "opacity": "1",
+          "position": "static",
+          "w": 326,
+          "h": 430
+        }
+      ]
+    },
+    "afterReturn": {
+      "settled": true,
+      "moving": false
+    }
+  },
+  "effectsOffOn": {
+    "off": {
+      "settled": true,
+      "noMotion": true,
+      "moving": false,
+      "images": [
+        {
+          "opacity": "1",
+          "w": 326,
+          "h": 430
+        },
+        {
+          "opacity": "1",
+          "w": 326,
+          "h": 430
+        }
+      ]
+    },
+    "afterReturn": {
+      "settled": true,
+      "moving": false
+    }
+  },
+  "rescuePaint": {
+    "complete": true,
+    "naturalWidth": 1092,
+    "naturalHeight": 1440,
+    "opacity": "1",
+    "display": "block",
+    "rect": {
+      "w": 326,
+      "h": 430
+    }
+  },
+  "originalMessageUiCount": 3,
+  "debugDiagrams": {
+    "svg": 0,
+    "inlineFigures": 0,
+    "cutFigures": 1
+  },
+  "errors": [],
+  "blockedRequests": [
+    "https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap&text=%20.01245679%C2%B7%EB%93%B1%EB%B0%98%EB%B0%A4%EB%B6%84%EC%82%B0%EC%86%8C%EC%8B%9C%EC%8B%A0%EC%9A%94%EC%A1%B0%EC%B0%B8%EC%B2%AD%ED%92%80%ED%95%84"
+  ],
+  "proof": "vn/notes/reader-cinematic-direction-proof",
+  "qaDate": "2026-10-23",
+  "taskScope": {
+    "episodes": [
+      "19",
+      "19-1",
+      "20",
+      "20-1",
+      "21",
+      "21-1",
+      "22",
+      "22-1"
+    ],
+    "rejectedRevision": "사용자가 저품질로 거절한 SVG 디버그 도식 버전은 이 교체본의 시각 품질 합격 근거로 쓰지 않았다. 이번 결과는 8편 원문 UI와 선택된 컷신만 확인한다.",
+    "rendering": "문턱 wide→손목 detail 및 B 미리보기만 움직임. 그 밖의 sequence art는 정지 이미지.",
+    "manuscript": "본문 원고는 변경하지 않았음."
+  },
+  "browser": "Playwright Chromium, local HTTP preview; external requests blocked. Google Fonts CSS request was blocked by test routing; no local page errors.",
+  "screenshots": [
+    "ep19-wrist-load-pending-mobile.png",
+    "ep19-wrist-start-mobile.png",
+    "ep19-wrist-mid-mobile.png",
+    "ep19-wrist-mobile.png",
+    "ep19-wrist-desktop.png",
+    "ep19-b-preview-start-mobile.png",
+    "ep19-b-preview-mid-mobile.png",
+    "ep19-b-preview-mobile.png",
+    "ep20-system-mobile.png",
+    "ep20-system-400.png",
+    "ep21-1-rescue-mobile.png"
+  ],
+  "checks": [
+    "Eight connected chapters: figure order matched manuscript anchors and every local image loaded with native dimensions.",
+    "390px, 400px, 1440px: no horizontal overflow; figure widths stayed within viewport.",
+    "Pair stage stayed 463px tall from delayed-decode pending through motion completion; mocked 2200ms decode delay kept the wide image fixed until both frames decoded.",
+    "B exposure sampled at animation time 0, 1350ms, and completion; computed start filter brightness(.58)/saturate(.78), intermediate brightness(.826)/saturate(.931), settled no filter.",
+    "21-1 rescue art decoded and painted before screenshot: complete, natural 1092×1440, visible at 326×430px.",
+    "Reduced-motion media preference showed both pair frames as static full-size images; returning to no-preference did not replay.",
+    "Real #fxToggle control used to turn effects off, opened the episode while persisted off, and turned them on again; the viewed pair remained settled without replay.",
+    "No inline-direction SVG diagrams or generated diagram figures remain; zero JavaScript page errors."
+  ],
+  "automatedChecks": [
+    "node --check reader-inline-direction.js",
+    "node --check reader-sequence19-22.js",
+    "node --test reader-inline-direction.test.mjs reader-sequence19-22.test.mjs (2 test files pass)",
+    "root independently ran individual cases: inline-direction 5 pass + sequence 4 pass (9 total)",
+    "git diff --check"
+  ],
+  "independentReview": "PASS: final screen/diff review of this replacement revision; score 8/10 by editorial judgment, 0 required visual changes. The prior rejected SVG revision score is not carried forward.",
+  "reviewCounts": {
+    "Node test runner summary": {
+      "files": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "independent individual cases": {
+      "inlineDirection": 5,
+      "sequence": 4,
+      "passed": 9,
+      "failed": 0
+    }
+  }
+}
