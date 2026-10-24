@@ -1,0 +1,28 @@
+[
+  {
+    "width": 400,
+    "pageerrors": [],
+    "targets": [
+      "node31b",
+      "rescue",
+      "ledger288",
+      "threesec",
+      "letname",
+      "midnight100",
+      "farthestdot"
+    ]
+  },
+  {
+    "width": 1440,
+    "pageerrors": [],
+    "targets": [
+      "node31b",
+      "rescue",
+      "ledger288",
+      "threesec",
+      "letname",
+      "midnight100",
+      "farthestdot"
+    ]
+  }
+]

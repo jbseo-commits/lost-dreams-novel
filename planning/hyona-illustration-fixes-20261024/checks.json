@@ -1,0 +1,51 @@
+{
+  "baseline": "a63a217a5759e7caa71108863a47896d98af2e78",
+  "source_sha256": {
+    "pilot.html": "c7a5392e125d0a1e1fa91585cd639ab98171af2760433cbfaa910d84cfa1053c",
+    "reader-scenes.js": "0540980444d47bedcd81c6ca854ebf3dc32d29b5d1f7a2e680895f87022bcbeb",
+    "reader-info-graphics.js": "e8b981f5ae09263c9dda9e54c9847f51bc7a7c266bcbfa955acdf2e916f30997",
+    "reader-info-graphics.css": "16760e3130df1fbcdaf3271b4395c2cff9f006ebf96fdb769355b1c52ecfa18c"
+  },
+  "manuscript_settings_unchanged": 114,
+  "raster_assets_unchanged": true,
+  "imagegen_needed": false,
+  "episodes_changed": [
+    "19",
+    "19-1",
+    "21-1",
+    "22-1",
+    "30",
+    "33",
+    "34",
+    "35",
+    "37"
+  ],
+  "widths": [
+    400,
+    1440
+  ],
+  "viewport_height": 1000,
+  "pageerrors": 0,
+  "delivery_label_overlaps": 0,
+  "horizontal_overflow": 0,
+  "close_taps_mobile": 7,
+  "close_clicks_pc": 7,
+  "decoded_rasters_per_width": 7,
+  "tests": {
+    "command": "node --test reader-inline-direction.test.mjs reader-sequence19-22.test.mjs reader-info-graphics.test.mjs",
+    "passed_files": 3,
+    "failures": 0
+  },
+  "main_sync": "Already up to date",
+  "unverified": [
+    "natural scroll trigger",
+    "default automatic closing time",
+    "audio/BGM",
+    "full animation beyond observed states"
+  ],
+  "first_harness_error": "close locator used visible text instead of aria-label; corrected; final checks passed",
+  "publication": "LOCAL_ONLY; no push/merge/deploy",
+  "prose_editing": "STOPPED_AFTER38; not resumed",
+  "last_actual_user_usage": 59,
+  "auto_usage_reading": false
+}
