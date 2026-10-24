@@ -1,0 +1,22 @@
+{
+  "episode": "32",
+  "sha256": "e13770bb3f5d339001e8447c9200ab0499ac74b37b5891dc8c2e1591f6acf8a2",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "runtimes": [
+    {
+      "id": "practicesheet",
+      "inline": false,
+      "method": "direct existing showSp; final snapshot only",
+      "visible": true,
+      "text": "상자 아래에서 떨어진 종이\n엄마한테 물어본다.\n모르겠습니다.\n아니오.\n엄마한테 물어본다.\n모르겠습니다.\n아니오.\n다시 물어본다.\n갖다줘.　일요일에 돌려줄 종이였다.\n머물러 보기\n본문으로"
+    }
+  ],
+  "page_errors": [],
+  "horizontal_overflow": false
+}
