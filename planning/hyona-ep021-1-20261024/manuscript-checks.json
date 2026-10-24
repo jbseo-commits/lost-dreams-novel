@@ -1,0 +1,24 @@
+{
+  "episode": "21-1",
+  "before_body_non_whitespace": 2315,
+  "body_non_whitespace": 2312,
+  "before_sha256": "8be5d0acfedd84439855851de6e11b8f6c6c89f41ee3d140549a20df93c728c7",
+  "sha256": "2a220400406cd04fcdb40467ea8d894a0e908af93ef9e029f69a0f970686f4c6",
+  "revision": 1,
+  "changes": 1,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_CHANGED_AND_LINKED_CONTEXT",
+  "visual": "MAINTAIN_IMAGE_WITH_RECOMMENDATIONS; OVERLAY_COUNT_DISPLAY_NEEDS_REVIEW",
+  "source_hook_changes": 0,
+  "images_changed": 0,
+  "tests": {
+    "files": 3,
+    "result": "PASS"
+  },
+  "short_existing_bumper_retained": true,
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch_unit": 2,
+  "estimated_remaining_after_unit": 70,
+  "estimate_rule": "76 minus3 points per completed installment; not live measurement"
+}
