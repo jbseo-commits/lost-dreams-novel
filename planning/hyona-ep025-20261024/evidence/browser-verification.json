@@ -1,0 +1,28 @@
+{
+  "episode": "25",
+  "sha256": "b947c3d973d10053847671c93bc8bc2e80b5b10365436e189b37236e0280a0e8",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "horizontal_overflow": false,
+  "page_errors": [],
+  "overlays": [
+    {
+      "id": "samethree",
+      "method": "direct existing showSp; natural trigger/default duration/audio/touch unverified",
+      "visible": true,
+      "text": "광고꿈 야간 추가 계약 모집 · +3.0 TOKEN · 같은 조건\n동부 27번\n82%\n남부 14번\n57%\n중앙 6번\n21%\n서북 3번\n11%\n동부+남부 · 인구 31%\n추가 신청의 68%\n추가 계약 지역 편중도\n높음 · 경고 아님\n오후 4시 11분 · 어머니 · 프라이팬 소리\n“안 해도 되지. 그래서 한 건데.”\n“이번 주말에 진짜 달걀 좀 사려고.”\n서인 → 운영국\n지역별 신청 사유 요청\n운영국 회신\n비참여 및 참여 사유는 수집하지 않습니다.\n자기가 요구했던 규칙이었다.\n머물러 보기\n본문으로",
+      "closed": true
+    },
+    {
+      "id": "wantedit",
+      "method": "direct existing showSp; natural trigger/default duration/audio/touch unverified",
+      "visible": true,
+      "text": "지역 편중 경고선 · 인구 비중 대비 추가 신청 1.6배\n동부 27번\n신규 승인 일시 중지 · 대기 2,931명\n남부 14번 · 40분 뒤\n중지\n편중도\n조금 낮아짐\n밤 9시 18분 · 민원\n\n내가 신청했는데 왜 주소 때문에 대기입니까?\n\n돈이 필요한 것도 차별입니까?\n\n안 하게 해 달라는 사람은 보호하면서, 하겠다는 사람은 왜 막습니까?\n\n밤 10시 02분 · 엄마\n\n나 대기 걸렸네.\n\n이거 네가 한 거야?\n\n나는 하고 싶었는데.\n\n머물러 보기\n본문으로",
+      "closed": true
+    }
+  ]
+}
