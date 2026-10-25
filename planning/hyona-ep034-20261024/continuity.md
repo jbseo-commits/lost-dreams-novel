@@ -1,7 +1,9 @@
 # 제34화 초기 사실·연속성 검수
 
-원문: `manuscript/ep034.md`  
-SHA-256: `49f26b9d4bb92038a26ff79eb009f162f53eede53ccf3e107d1025b3eb751f74`  
+원문: `manuscript/ep034.md`
+
+SHA-256: `49f26b9d4bb92038a26ff79eb009f162f53eede53ccf3e107d1025b3eb751f74`
+
 본문: 공백 제외 3,837자
 
 ## 판정: CHANGES

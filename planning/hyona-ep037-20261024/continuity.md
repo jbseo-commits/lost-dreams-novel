@@ -1,7 +1,9 @@
 # 제37화 초기 사실·연속성 검수
 
-원문: `manuscript/ep037.md`  
-SHA-256: `a41d72fc9bbfeceac0ceb811228622337d6044a22cc7582af5299ad8ba1c9617`  
+원문: `manuscript/ep037.md`
+
+SHA-256: `a41d72fc9bbfeceac0ceb811228622337d6044a22cc7582af5299ad8ba1c9617`
+
 본문: 공백 제외 3,820자
 
 ## 초기 판정: CHANGES (아래 원문 재대조로 현재 판정 PASS)

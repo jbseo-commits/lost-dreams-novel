@@ -1,7 +1,9 @@
 # 제36화 초기 사실·연속성 검수
 
-원문: `manuscript/ep036.md`  
-SHA-256: `d291dcfc5bd6d84ca6221a43ae2939d0c16e41ea25b7dde5cd7142754e1e86a0`  
+원문: `manuscript/ep036.md`
+
+SHA-256: `d291dcfc5bd6d84ca6221a43ae2939d0c16e41ea25b7dde5cd7142754e1e86a0`
+
 본문: 공백 제외 4,199자
 
 ## 초기 판정: CHANGES (r1 이후 최종 PASS)

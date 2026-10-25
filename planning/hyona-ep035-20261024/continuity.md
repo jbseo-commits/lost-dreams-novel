@@ -1,7 +1,9 @@
 # 제35화 초기 사실·연속성 검수
 
-원문: `manuscript/ep035.md`  
-SHA-256: `5d9f23adcc79e3cacebf4e2a7c530489b80beb08933b0fd670a14a052e166a5a`  
+원문: `manuscript/ep035.md`
+
+SHA-256: `5d9f23adcc79e3cacebf4e2a7c530489b80beb08933b0fd670a14a052e166a5a`
+
 본문: 공백 제외 3,965자
 
 ## 판정: CHANGES
