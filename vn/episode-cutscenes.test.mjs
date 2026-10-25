@@ -29,7 +29,7 @@ test('56 event inserts cover the original 30 chapters plus the authorized 19–2
 });
 test('the aftermath, escape discovery/landing, and legal clause cuts follow their exact source beats',()=>{
   const expected=[
-    ['19-1',114,'ep19-1-aftermath','서인은 컨테이너에 등을 붙인 채 미끄러져 앉았다. 오른손이 말을 듣지 않았다. 배차 담당이 바닥에 떨어진 단말을 주워 왼손에 쥐여 줬다.'],
+    ['19-1',117,'ep19-1-aftermath','서인은 컨테이너에 등을 붙인 채 미끄러져 앉았다. 오른손이 말을 듣지 않았다. 배차 담당이 바닥에 떨어진 단말을 주워 왼손에 쥐여 줬다.'],
     ['21-1',71,'ep21-1-discovery','깨진 창 너머로 옆 건물 옥상이 보였다. 그냥 뛰어서는 닿지 않을 것 같았다. 사이로 송출탑의 버팀대가 비스듬히 걸려 있었다. 끝이 흔들렸다.'],
     ['21-1',82,'ep21-1-landing','은경은 발끝에 아직 닿아 있던 버팀대 끝을 디뎌 찼다. 둘이 한꺼번에 옥상 안쪽으로 굴렀다.'],
     ['22-1',42,'ep22-1-document','“‘공공 의료 검증 지원 요청 시, 제4 검증층 예비 연산의 일시 전환은 인지안전실장 전결로 한다. 지연 한도 3시간. 사후 보고.’”']
@@ -48,6 +48,29 @@ test('the aftermath, escape discovery/landing, and legal clause cuts follow thei
   assert.equal(at('22-1',50)?.cg,undefined,'Ma Jeonghoon reaction is not revealed by the clause cut');
   assert.equal(chapter('22-1').beats[49].text,'“제안, 전략본부 마정훈.”');
   assert.equal(chapter('22-1').beats[50].text,'마 상무의 손이 탁자 위에서 멈췄다.');
+});
+test('reflowed event cuts retain their original action anchors wherever the manuscript text remains',()=>{
+  const expected=[
+    ['signedCost','20',81,81,'윤세라는 다음 사례로 넘기기 전에 바뀐 보고에 서명했다.'],
+    ['heldCall','21',123,124,'서인은 다음 기록으로 넘기던 화면을 문해린의 기록으로 되돌렸다. 문해린의 목소리가 작아졌다.','“학교는 못 간다고 해야 하는지, 그것도 아직 모르는 거죠?”'],
+    ['paleDistrict','25',262,266,'동부 27번의 색은 어제보다 옅었다.','어머니는 자신이 고른 밤을 받지 못하고 있었다.'],
+    ['memorySale','27',113,113,'어머니는 그 한 줄을 3토큰에 건넸다.'],
+    ['handsCenter','29',199,201,'지우가 뒤에서 서인의 손목을 잡아 줬다.','흙이 잠깐 가운데를 찾았다.'],
+    ['ep19-1-alley','19-1',106,106,'대기선의 냉장차였다. 운전석에서 졸던 물병 기사가 불 꺼진 승합차를 봤고, 경적을 누른 채 무전으로 배차실을 불렀다. 냉장차가 서인 뒤쪽 통로로 들어왔다. 하역장 쪽에서 지게차 한 대가 전조등을 번쩍이며 밀고 들어왔다. 물병 기사가 운전석에서 뛰어내렸다.'],
+    ['ep19-1-window','19-1',150,150,'서인은 4시 반에 집을 나섰다. 등 뒤에서 어머니가 문을 두 번 잠그는 소리가 났다. 공동주방 앞이 아니라 맞은편 계단참에 섰다. 자기 집 창이 올려다보이는 자리였다. 계단 아래 세워 둔 차 안에서는 강연우가 의자를 젖힌 채 졸고 있었다. 혼자는 못 보낸다며 따라온 참이었다.'],
+    ['ep20-box','20',146,146,'“이 칸 누르면, 기다리는 사람까지 보호받은 걸로 남습니다. 공동주방에 온 7시 40분짜리 경로처럼요.”'],
+    ['ep20-rooftop','20',190,190,'도윤이 서인의 컵 위에 젓가락 한 벌을 올려 주었다.'],
+    ['ep21-confirmation','21',146,146,'윤세라도 그 줄을 봤다. 아무 말도 하지 않았다.'],
+    ['ep19-home-life','19',47,47,'우는 아기를 안고 일어나는 그림, 다시 잠들지 못해 부엌으로 나가는 그림, 출근 알람까지 남은 시간을 확인하는 그림. 창마다 작은 그림이 흘러갔다. 예측 화면일 뿐인데 불빛만은 진짜 같았다.'],
+    ['ep21-call-transfer','21',143,143,'곧바로 첫 병원 회선을 열었다.'],
+    ['ep19-1-aftermath','19-1',117,117,'서인은 컨테이너에 등을 붙인 채 미끄러져 앉았다. 오른손이 말을 듣지 않았다. 배차 담당이 바닥에 떨어진 단말을 주워 왼손에 쥐여 줬다.']
+  ];
+  for(const [cg,id,start,end,anchor,endAnchor=anchor] of expected){
+    const cut=EPISODE_CUTSCENES.find(item=>item.cg===cg);assert.ok(cut,cg);
+    assert.equal(cut.chapter,id);assert.equal(cut.start,start,cg);assert.equal(cut.end,end,cg);
+    assert.equal(cut.anchor,anchor,cg);assert.equal(cut.endAnchor,endAnchor,cg);
+    assert.equal(chapter(id).beats[start].text,anchor,cg);assert.equal(chapter(id).beats[end].text,endAnchor,cg);
+  }
 });
 test('B preview is placed at beat 46 with exact fingerprint and native image copy',async()=>{
  const cut=EPISODE_CUTSCENES.find(c=>c.cg==='ep19-b-preview');assert.ok(cut);assert.equal(cut.chapter,'19');assert.equal(cut.start,46);assert.equal(cut.end,46);
