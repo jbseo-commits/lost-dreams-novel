@@ -56,6 +56,10 @@ export class EpisodeOneStage {
       for(let i=0;i<this.frameList.length;i++){const img=document.createElement('img');img.src=this.assets[this.frameList[i].cg];img.alt=this.frameList[i].alt||'';img.dataset.frame=String(i);if(i)img.hidden=true;this.cg.append(img);}
       this.currentCg=cue.cg;
     }
+    const studioFit=cue.cutscene?.fit||'';
+    this.cg.style.backgroundSize=studioFit;
+    this.cg.style.backgroundColor=studioFit==='contain'?'#091319':'';
+    for(const img of this.cg.querySelectorAll('img'))img.style.objectFit=studioFit;
     if(noMotion&&this.frameCount){this.cancelFrameTransition();this.frameDecodePending=false;this.frameAutoCompleted=true;this.frameIndex=this.frameCount-1;}
     else if(!frameSetChanged&&this.frameAutoCompleted){}
     else if(this.frameCount>1&&!this.frameDecodePending&&!this.frameTimer)this.scheduleFrameTransition();
@@ -68,8 +72,11 @@ export class EpisodeOneStage {
       let slot=this.actorState.get(person.id);
       if(!slot){slot=document.createElement('div');slot.className='ep1-actor';slot.dataset.id=person.id;const body=document.createElement('div');body.className='ep1-actor-body';slot.append(body);this.actorState.set(person.id,slot);this.actors.append(slot);}
       slot.dataset.side=person.side;slot.dataset.gaze=person.gaze;slot.dataset.pose=person.pose;
+      const transform=person.studioTransform;
+      slot.querySelector('.ep1-actor-body').style.translate=transform?`${transform.x}% ${transform.y}%`:'';
+      slot.querySelector('.ep1-actor-body').style.scale=transform?String(transform.scale):'';
       slot.classList.toggle('speaking',cue.focus===person.name);slot.classList.toggle('listening',Boolean(cue.focus)&&cue.focus!==person.name);
-      if(slot.dataset.asset!==person.asset){
+      if(slot.dataset.asset!==person.asset||slot.querySelector('.ep1-current:not(.ep1-previous)')?.getAttribute('src')!==this.assets[person.asset]){
         slot.querySelectorAll('.ep1-previous').forEach(n=>n.remove());
         const previous=slot.querySelector('img');if(previous){previous.classList.add('ep1-previous');previous.setAttribute('aria-hidden','true');}
         const img=document.createElement('img');img.src=this.assets[person.asset];img.alt=person.name;img.className='ep1-current';slot.querySelector('.ep1-actor-body').append(img);slot.dataset.asset=person.asset;

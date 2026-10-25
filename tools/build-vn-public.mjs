@@ -36,7 +36,7 @@ export async function buildPublicSite(sourceRoot,outputRoot,{copyRoot=true}={}){
  if((await fs.readdir(out)).length)throw Error('출력 폴더가 비어 있지 않습니다.');
  if(copyRoot)for(const entry of await fs.readdir(root,{withFileTypes:true})){
   if(entry.name.startsWith('.')||['vn','node_modules'].includes(entry.name))continue;
-  await fs.cp(path.join(root,entry.name),path.join(out,entry.name),{recursive:true,filter:src=>!path.relative(root,src).split(path.sep).some(p=>p.startsWith('.')||p==='node_modules')});
+  await fs.cp(path.join(root,entry.name),path.join(out,entry.name),{recursive:true,filter:src=>!slash(path.relative(root,src)).startsWith('tools/art-studio')&&!path.relative(root,src).split(path.sep).some(p=>p.startsWith('.')||p==='node_modules')});
  }
  const input=path.join(root,'vn'),vn=path.join(out,'vn');await fs.mkdir(vn);
  const box={window:{}};vm.runInNewContext(await fs.readFile(path.join(input,'story-data.js'),'utf8'),box);
@@ -68,6 +68,10 @@ export async function buildPublicSite(sourceRoot,outputRoot,{copyRoot=true}={}){
  neural=neural.replace(supported,'const SUPPORTED_CHAPTERS = new Set('+JSON.stringify(DEMO_CHAPTER_IDS)+');');
  generated.set('neural-cues.js',neural);
  const files=new Set(),media=new Set([...Object.values(episodeAssets),...Object.values(assets)]);
+ let artManifest={version:1,overrides:[]};
+ try{const value=JSON.parse(await fs.readFile(path.join(input,'art-direction.json'),'utf8'));if(value.version!==1||!Array.isArray(value.overrides))throw Error('지원하지 않는 제작툴 적용 자료입니다.');artManifest={version:1,overrides:value.overrides.filter(row=>ids.has(row.target?.chapterId))};}catch(error){if(error.code!=='ENOENT')throw error;}
+ for(const row of artManifest.overrides){if(!row.asset?.startsWith('assets/studio/'))throw Error('제작툴 적용 에셋의 경로를 확인하세요.');media.add(row.asset);}
+ await fs.writeFile(path.join(vn,'art-direction.json'),JSON.stringify(artManifest));
  async function copy(relative){
   const src=local(input,relative),key=slash(path.relative(input,src));if(files.has(key))return;files.add(key);
   const destination=local(vn,key);await fs.mkdir(path.dirname(destination),{recursive:true});

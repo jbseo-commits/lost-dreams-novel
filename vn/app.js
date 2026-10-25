@@ -9,7 +9,8 @@ import { presentationForBeat } from './neural-cues.js?v=teaser-art-20261021-r1';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js?v=teaser-art-20261021-r1';
-import { EP1_ASSETS } from './ep1-assets.js?v=ep03-connected-cuts-20261023-r1';
+import { EP1_ASSETS as BASE_EP1_ASSETS } from './ep1-assets.js?v=ep03-connected-cuts-20261023-r1';
+import {chapterFingerprints,createArtDirector,createPreviewStorage,readArtManifest,safeArtPath} from './art-studio.js';
 import { withTeaserCharacterAssets } from './teaser-art.js?v=teaser-art-20261021-r1';
 import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=ep03-connected-cuts-20261023-r1';
 import { EpisodeOneStage } from './episode-one-stage.js?v=ep03-connected-cuts-20261023-r1';
@@ -29,7 +30,10 @@ const demoMode=true;
 if(demoMode)document.documentElement.dataset.coreDemo='true';
 const fullStory=normalizeStory(window.STORY);
 syncEpisodeTwoCopy(fullStory);
-const story=withTeaserCharacterAssets(publicDemoStory(fullStory),EP1_ASSETS);
+const story=withTeaserCharacterAssets(publicDemoStory(fullStory),BASE_EP1_ASSETS);
+const studioPreview=new URLSearchParams(location.search).get('studio')==='1'&&['127.0.0.1','localhost'].includes(location.hostname);
+const artDirector=createArtDirector({manifest:await readArtManifest(),fingerprints:await chapterFingerprints(story),baseAssets:BASE_EP1_ASSETS});
+let EP1_ASSETS=artDirector.assets;
 const activeStorageKey=STORAGE_KEY+(demoMode?CORE_DEMO_STORAGE_SUFFIX:'');
 document.documentElement.dataset.vnBuild='teaser-art-20261021-r1';
 const $ = (id) => document.getElementById(id);
@@ -42,10 +46,11 @@ const secondaryPortraitWrap = $('secondaryPortraitWrap'), secondaryPortraitImage
 const sceneLayers = [$('sceneLayerA'), $('sceneLayerB')];
 const storyText = $('storyText'), speakerNode = $('speaker'), choiceArea = $('choiceArea');
 const directionCard = $('directionCard'), castRail = $('castRail'), placeRibbon = $('placeRibbon'), motifStage = $('motifStage');
-let browserStorage; try { browserStorage = localStorage; } catch { browserStorage = null; }
+let browserStorage; try { browserStorage = studioPreview?createPreviewStorage():localStorage; } catch { browserStorage = null; }
 let store = readStore(browserStorage, story, activeStorageKey), progress = freshProgress(story);
 // Playback always waits for a fresh action after loading or continuing a save.
 store.settings.auto = false; store.settings.skip = false;
+if(studioPreview){store.settings.sound=false;store.settings.instant=true;}
 let storageHealthy = Boolean(browserStorage), storageWarningShown = false, restoreFocus = null;
 let typeTimer = 0, fullText = '', typing = false, modalMode = '', backlog = [];
 let backlogRestore = null, transientBacklog = false, autoTimer = 0, previousPlace = '';
@@ -366,6 +371,13 @@ function renderBeat({ revisit = false } = {}) {
   currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex) || episodeTwoDirection(chapter, progress.beatIndex);
   currentCoreCue=coreSceneDirection(chapter,progress.beatIndex);
   currentEventCutscene=eventCutsceneDirection(chapter,progress.beatIndex);
+  const originalCue=currentEpisodeCue||currentCoreCue||currentEventCutscene;
+  const directedCue=artDirector.cue(originalCue,chapter,progress.beatIndex);
+  if(directedCue!==originalCue){
+    if(currentEpisodeCue)currentEpisodeCue=directedCue;
+    else if(currentCoreCue)currentCoreCue=directedCue;
+    else {currentEpisodeCue=directedCue;currentEventCutscene=null;}
+  }
   prepareNearbyCutscenes(chapter,progress.beatIndex);
   if (currentEpisodeCue && currentReadingPage?.entries.length > 1) currentEpisodeCue.focus = currentReadingPage.focus;
   $('storyBox').classList.toggle('reading-page', Boolean(currentReadingPage?.entries.length > 1));
@@ -383,7 +395,7 @@ function renderBeat({ revisit = false } = {}) {
   const dreamEnd = dreamStart >= 0 ? chapter.beats.findIndex((item, index) => index > dreamStart && item.text?.includes('서인은 버튼을 눌렀다')) : -1;
   const inJiwooDream = dreamStart >= 0 && progress.beatIndex >= dreamStart && (dreamEnd < 0 || progress.beatIndex <= dreamEnd);
   $('stage').classList.toggle('ep2-jiwoo-dream', inJiwooDream);
-  const background = inJiwooDream ? EP1_ASSETS.dreamBeach : (performanceCue()?.backgroundAsset ? EP1_ASSETS[performanceCue().backgroundAsset] : story.assets?.[scene]);
+  const background = performanceCue()?.backgroundAsset?.startsWith('studio_')?EP1_ASSETS[performanceCue().backgroundAsset]:inJiwooDream ? EP1_ASSETS.dreamBeach : (performanceCue()?.backgroundAsset ? EP1_ASSETS[performanceCue().backgroundAsset] : story.assets?.[scene]);
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
@@ -402,6 +414,7 @@ function renderBeat({ revisit = false } = {}) {
   storyText.hidden = primary;
   $('perceptionAdvance').hidden = !primary;
   renderDirection(beat, { quiet: revisit });
+  if(studioPreview&&window.parent!==window)window.parent.postMessage({type:'art-studio:ready',chapterId:chapter.id,beatIndex:progress.beatIndex,appliedIds:directedCue?.studioApplied||[],renderedArt:[...episodeStage.actors.querySelectorAll('.ep1-current:not(.ep1-previous)'),...episodeStage.cg.querySelectorAll('img:not([hidden])')].map(img=>img.getAttribute('src')),text:beat.text},location.origin);
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
   directionCard.hidden = Boolean(currentEpisodeCue||currentCoreCue?.cg||currentEventCutscene) || Boolean(currentPerception) || !beat.direction?.visual;
@@ -918,6 +931,16 @@ if (!story.chapters.length) {
 }
 syncSoundButton();
 syncContinueInfo(); syncReadingTools();
+
+// Local previews use memory saves and only accept candidate messages from this studio.
+if(studioPreview)window.addEventListener('message',event=>{
+  if(event.origin!==location.origin||event.source!==window.parent||event.data?.type!=='art-studio:preview')return;
+  const row=event.data.override;
+  if(row&&!safeArtPath(row.asset))return;
+  artDirector.preview(row||null);EP1_ASSETS=artDirector.assets;episodeStage.assets=EP1_ASSETS;
+  episodeStage.currentCg='';episodeStage.frameSignature='';
+  renderBeat({revisit:true});
+});
 
 // Open a reviewed scene without changing the saved chapter selection menu.
 const reviewLink = new URLSearchParams(location.search);

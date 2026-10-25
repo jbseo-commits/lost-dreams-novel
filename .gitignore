@@ -13,3 +13,6 @@ teaser/fonts/
 
 # Local verification dependencies
 node_modules/
+
+# Local art studio candidates, generation jobs and working-copy integration
+.art-studio/

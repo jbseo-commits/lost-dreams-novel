@@ -99,6 +99,13 @@ export async function buildOffline(vnDirectory, outputHtml) {
   }
   const storyAssetKeys=Object.keys(story.assets??{});
   story.assets={};
+  let artManifest={version:1,overrides:[]};
+  try{artManifest=JSON.parse(await fs.readFile(path.join(vn,'art-direction.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
+  const artAssetAssignments=[];
+  for(const [index,row]of(artManifest.overrides||[]).entries()){
+    if(!row.asset?.startsWith('assets/studio/'))throw Error('제작툴 적용 에셋의 경로를 확인하세요.');
+    artAssetAssignments.push(`globalThis.VN_ART_DIRECTION.overrides[${index}].asset=${await assetVariable(row.asset)};`);
+  }
 
   // Evaluate only the tiny pure asset-map module, then replace every runtime
   // source path with the same shared data-URL variables used above.
@@ -185,7 +192,7 @@ export async function buildOffline(vnDirectory, outputHtml) {
     // An unrecognized import/export must never be silently dropped. Script
     // parsing provides the final language-level check after transformation.
     const exportObject=[...exports].map(([publicName,local])=>`${jsonSafe(publicName)}:${local}`).join(',');
-    const bundled=`__vnModules[${jsonSafe(moduleKey)}]=(()=>{\n'use strict';\n${dependencyBindings.join('\n')}\n${source}\nreturn Object.freeze({${exportObject}});\n})();`;
+    const bundled=`__vnModules[${jsonSafe(moduleKey)}]=(${moduleKey==='app.js'?'async ':''}()=>{\n'use strict';\n${dependencyBindings.join('\n')}\n${source}\nreturn Object.freeze({${exportObject}});\n})();`;
     new vm.Script(bundled,{filename:`offline:${moduleKey}`});
     modules.set(moduleKey,{source:bundled,exports:[...exports.keys()],sourceSha256:hash(sourceOriginal),compiledSourceSha256:hash(source)});
     visiting.delete(moduleKey);order.push(moduleKey);
@@ -193,7 +200,7 @@ export async function buildOffline(vnDirectory, outputHtml) {
   for (const key of REQUIRED_MODULES) await visit(key);
   await visit('app.js');
 
-  const storySource=`window.STORY=${jsonSafe(story)};\n${assetDeclarations.join('\n')}\n${storyAssetAssignments.join('\n')}`;
+  const storySource=`window.STORY=${jsonSafe(story)};\nglobalThis.VN_ART_DIRECTION=${jsonSafe(artManifest)};\n${assetDeclarations.join('\n')}\n${storyAssetAssignments.join('\n')}\n${artAssetAssignments.join('\n')}`;
   const appSource=`'use strict';\nconst __vnModules=Object.create(null);\n${order.map(key=>`\n/* module: ${key} */\n${modules.get(key).source}`).join('\n')}`;
   // Also catches accidental identifier collisions across the generated outer
   // scope, apart from each independently parsed module IIFE above.

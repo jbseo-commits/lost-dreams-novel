@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-25",
+  "project": "SCENE / STUDIO",
+  "location": "local Windows application",
+  "url": "http://127.0.0.1:4321/",
+  "branch": "codex/game-art-studio-20261025",
+  "initialSourceHead": "388477363a59f09082dd2071bad10e38c76527d5",
+  "integratedMainHead": "18b08283607cc86948590ba136a6b00fb5b9ea39",
+  "scope": {
+    "vn": "Current public demo: episodes 1–11 and 7 interludes, 18 runtime chapters. Public release locks remain in force.",
+    "baseball": "Read-only adapter for the local 9-baseball-integrate working copy. This working copy is not claimed to be the newest remote baseball revision.",
+    "baseballRuntimeSlots": ["batter-runtime: 2048x1536, 4x2, 7 keyposes", "pitcher-atlas: 2560x3072, 10x12, 120 frames"],
+    "baseballPortraits": "Canonical references and image generation/comparison only. Nonconsumed portrait slots are blocked from live application.",
+    "manuscriptAndSettingsEditedByThisTask": false,
+    "originalArtworkEdited": false,
+    "baseballSourceFilesEdited": false,
+    "publicDeploymentPerformed": false
+  },
+  "generation": {
+    "userSelectedProvider": "codex / ChatGPT subscription",
+    "workflowAccessCheck": "ready; login ready; user explicitly confirmed image access",
+    "quota": "not measured",
+    "imageModelId": "not independently verified; provider codex is recorded",
+    "automaticPaidApiFallback": false,
+    "actualCompletedJobs": [
+      {"id":"job-3b871b37-b3e0-4214-89c7-40f397d0a1d6","candidateId":"gen-fdcd9040-ed52-4702-8c8a-801a26cbc802","kind":"actor","width":1024,"height":1536,"reference":"seoinStanding","status":"draft"},
+      {"id":"job-b653beae-c304-42fb-abe2-fc1db56271aa","candidateId":"gen-149854f0-fa0a-4875-97ce-c5a446237d9f","kind":"cg","width":1672,"height":941,"references":["seoinStanding","jiwooRelaxed"],"status":"draft"}
+    ],
+    "note": "Generation completion is not art approval. The two new images were visually inspected and remain review candidates. Complete animated atlases are imported from the established sprite pipeline."
+  },
+  "actualBrowserChecks": [
+    "Desktop: reference/candidate library, independent candidate selection, side-by-side and wipe comparison.",
+    "Actual VN engine: ephemeral actor A to B replacement changed the rendered image path in the same scene.",
+    "Existing approved Seo-in artwork: approve and apply to chapter 1 beat indexes 118–121; actual rendered path became assets/studio/candidate-138d68b1-d7c0-4b9c-aa27-04f8d0ed5c94.webp.",
+    "Advance to index 122: applied IDs became empty and the original retirement-hand cutscene returned.",
+    "Undo: the original chapter 1 direction returned. Reapply/undo was also clicked at a 400x850 viewport.",
+    "At the 400px override, document clientWidth and scrollWidth were both 385px including the native scrollbar; no horizontal document overflow.",
+    "Generated multi-reference cutscene: actual VN iframe displayed /candidates/gen-149854f0-fa0a-4875-97ce-c5a446237d9f.png, with ephemeral preview ID only.",
+    "Mobile CG contain mode: both faces and the central hand action remained visible; cover mode and composition center controls are available.",
+    "Baseball atlas scrub/play: 7 keyposes, pause, speed selection and canonical portrait comparison.",
+    "Actual baseball CinemaLab: WebGL2 active, visible production batter sheet and Red Rush atlas, replay clicked; production pitch timing displayed 2237ms.",
+    "Live Vite module verification while applied: selectedBatterOverrideVerified=true, productionPitchTiming=true, frame box CSS present.",
+    "Baseball undo: final active override count 0. Original baseball image hashes remained unchanged.",
+    "Final browser error log: no errors. Temporary viewport override reset. Studio tab kept open as the deliverable."
+  ],
+  "automatedChecks": {
+    "latestMainVnRegression": {"tests":123,"passed":123,"failed":0,"includes":"release packaging, offline HTML, save portability, audio lifecycle, existing direction, art provenance and studio bridge"},
+    "baseballPreviewUnit": {"tests":5,"passed":5,"failed":0,"includes":"exact import replacement, external URL refusal, Windows path normalization, nonzero production sprite frame styling"},
+    "backendRegression": "Completed successfully: persistence, MIME/image verification, Origin/Host and traversal limits, project isolation, reference mutation, anchors/fingerprints, actor/CG conflicts, shared asset in disjoint ranges, subject/atlas validation, reference-only slot refusal, apply/undo.",
+    "liveReadOnlyVerifier": "Successful after restoring all QA overrides: baseball preview and production pitch timing true; completed generation jobs 2; active VN overrides 0; active baseball overrides 0."
+  },
+  "resolvedVerificationFailures": [
+    "Offline bundler originally rejected import.meta and top-level await; embedded art manifest and asynchronous application wrapper now pass the release test.",
+    "Parent preview messages originally arrived before the VN listener; explicit ready handshake now gates candidate messages.",
+    "Candidate actor key reuse originally retained a prior image; current image URL is now compared without the fading previous image.",
+    "Windows slash differences originally skipped the Vite hook; normalized path matching is covered by a regression test and a live transformed-module assertion.",
+    "CinemaLab lacked the ballpark-scoped sheet frame box; isolated preview CSS now gives the production sheet nonzero geometry. The original game files remain unchanged."
+  ],
+  "finalState": {"vnOverrides":0,"baseballOverrides":0,"newGeneratedCandidates":"two draft images retained in ignored .art-studio storage","existingArtworkCandidates":"approved QA reference candidates retained for reuse"},
+  "evidence": ["studio-desktop.png","mobile-cutscene-fit.png","baseball-game.png"]
+}
