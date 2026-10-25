@@ -1,0 +1,21 @@
+{
+  "episode": "27",
+  "before_body_non_whitespace": 3796,
+  "body_non_whitespace": 3865,
+  "before_sha256": "a8f832986b657a1f1b167c3816a8a62d44f998443797c32306b76ed6ca38b049",
+  "sha256": "1a0a8c41acd459160686ebe1b9f432089f04549fa0b2e0b747e2eec860fb0f4b",
+  "revision": 1,
+  "changes": 4,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_WITH_LINKED_CONTEXT",
+  "visual": "본문 정적 원화/인라인0개. ReaderScenes가 교체한 onenight 실제 화면은 설문 보상3.0 영수증과4200 상품 카드를 나란히 두어 값의 간극을 명확히 보인다. ‘침착하게/손도 안 떨고’에 사선이 그어져 기억의 차이를 보조한다. 기록과 카드 중심이라 실제 소년의 떨리는 손이나 어머니 표정은 보여 주지 못한다. 같은 이야기의 두 가격이라는 비교 기능은 적합하여 유지 판단,인물 사건 컷신 수준으로 평가하지 않는다.400×900,최종 화면 표시/닫힘,pageerror0,가로 넘침 없음.",
+  "images_changed": 0,
+  "source_hook_changes": 0,
+  "tests": "final batch verification; not independently run for this prose-only unit",
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch": "renewed68-percent",
+  "batch_unit": 3,
+  "estimated_remaining_after_unit": 65,
+  "estimate_rule": "user reported68 after prior8 units+report from76; empirical1pp/unit, not live measurement"
+}

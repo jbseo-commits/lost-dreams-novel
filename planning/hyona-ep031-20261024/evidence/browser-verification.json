@@ -1,0 +1,37 @@
+{
+  "episode": "31",
+  "sha256": "0568209bc2d710be57f85aee8ef2a78b81494e2b8a55a7e97b946077d0ea2dde",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "observed_frames": [
+    {
+      "after_preview_start_ms": 1600,
+      "answer": "엄마한테 물어본다.",
+      "log": ""
+    },
+    {
+      "after_preview_start_ms": 4500,
+      "answer": "모르겠습니다.",
+      "log": "엄마한테 물어본다."
+    },
+    {
+      "after_preview_start_ms": 7500,
+      "answer": "아니오.",
+      "log": "엄마한테 물어본다.\n\n모르겠습니다."
+    }
+  ],
+  "runtime": {
+    "id": "erased2",
+    "method": "direct existing showSp; three sampled animation frames, natural trigger/default timing unverified",
+    "visible": true,
+    "text": "HUMAN ONLY OPEN · 정다은\n문제\n38.4도의 열이 하루 이어지는 만 3세 아이. 구토 두 번. 오늘 응급실을 방문해야 합니까?\n아니오.\n\n엄마한테 물어본다.\n\n모르겠습니다.\n\n운영 AI 기준 정답: 예\n일치도 0% · 인간 오답 사례 2,114\n라운드 하이라이트 · 조회 61만\n아니오.\n하이라이트 영상에는 마지막 답만 남아 있었다.\n머물러 보기\n본문으로",
+    "closed": true
+  },
+  "page_errors": [],
+  "horizontal_overflow": false
+}

@@ -1,0 +1,23 @@
+{
+  "episode": "24",
+  "before_body_non_whitespace": 3926,
+  "body_non_whitespace": 3934,
+  "before_sha256": "c40f98c7729ab074cdd5dd7fd40b773bc78ff1173626de99936c40f1223b3508",
+  "sha256": "5394cebf1de218380321f903fee662939da6df638054e3804b0ea012f8517307",
+  "revision": 1,
+  "changes": 2,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_CHANGED_AND_LINKED_CONTEXT",
+  "visual": "NO_STATIC_ILLUSTRATIONS; EXISTING_OVERLAY_REVIEWED",
+  "source_hook_changes": 0,
+  "images_changed": 0,
+  "tests": {
+    "files": 3,
+    "result": "PASS"
+  },
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch_unit": 6,
+  "estimated_remaining_after_unit": 58,
+  "estimate_rule": "76 minus 3 points per installment; not live measurement"
+}

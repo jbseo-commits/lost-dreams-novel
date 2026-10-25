@@ -1,0 +1,20 @@
+{
+  "episode": "27",
+  "sha256": "1a0a8c41acd459160686ebe1b9f432089f04549fa0b2e0b747e2eec860fb0f4b",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "runtime": {
+    "id": "onenight",
+    "method": "direct showSp, actual ReaderScenes replacement; final snapshot only",
+    "visible": true,
+    "text": "같은 이야기의 두 가격\n설문 보상\n+3.0\n어머니\n성장 환경 증언\n의료 상황 판단 일화\n4,200\n구매 문의 11\n추가 증언 요청 5\n침착하게,\n손도 안 떨고.\n직접 면담 1 · 발신 비공개\n손이 떨리던 기억과 시장에 나온 증언.\n머물러 보기\n본문으로",
+    "closed": true
+  },
+  "page_errors": [],
+  "horizontal_overflow": false
+}

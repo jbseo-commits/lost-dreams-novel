@@ -1,0 +1,23 @@
+{
+  "episode": "25",
+  "before_body_non_whitespace": 3648,
+  "body_non_whitespace": 3585,
+  "before_sha256": "5cc796e39388d65719417517cccd7cad4c6a006e6f50defddb19ae1779955f7d",
+  "sha256": "b947c3d973d10053847671c93bc8bc2e80b5b10365436e189b37236e0280a0e8",
+  "revision": 1,
+  "changes": 5,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_CHANGED_AND_LINKED_CONTEXT",
+  "visual": "NO_STATIC_ILLUSTRATIONS; TWO_EXISTING_OVERLAYS_REVIEWED",
+  "tests": {
+    "files": 3,
+    "result": "PASS"
+  },
+  "images_changed": 0,
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch_unit": 8,
+  "estimated_remaining_after_unit": 52,
+  "estimate_rule": "76 minus 3 points per installment; not live measurement",
+  "stop_reason": "maximum 8 installments reached; no next episode editing"
+}

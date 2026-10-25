@@ -1,0 +1,48 @@
+{
+  "viewport": [
+    400,
+    900
+  ],
+  "motion": "normal for this verification; six previous figure captures used reduced motion",
+  "figures": [
+    {
+      "label": "ep19-door",
+      "width": 336,
+      "height": 443.0625
+    },
+    {
+      "label": "ep19-wrist-detail",
+      "width": 336,
+      "height": 443.0625
+    },
+    {
+      "label": "ep19-home-life",
+      "width": 336,
+      "height": 491.46875
+    },
+    {
+      "label": "ep19-windows",
+      "width": 336,
+      "height": 491.46875
+    },
+    {
+      "label": "compare",
+      "width": 336,
+      "height": 100.671875
+    },
+    {
+      "label": "delivery",
+      "width": 336,
+      "height": 168.578125
+    }
+  ],
+  "images": 4,
+  "info_graphics": 2,
+  "release_hook": "손을 화면에서 뗐다.",
+  "page_errors": [],
+  "horizontal_overflow": false,
+  "ending_svg_preview": "existing showSp invoked for inspection, not natural-scroll trigger verification",
+  "ending_svg_visible": true,
+  "ending_svg_text": "같은 크기의 창 · 서로 다른 선택B · 2,400가구모두 4.2초 중단A · 36가구과부하 가능성 +3.8%발생하면 최대 18분선택은 A로 바뀌었다.작은 쪽도 빈 창이 아니다.머물러 보기본문으로",
+  "earlier_capture_limitation": "reduced-motion run verified six figures and hook but original #node31b screenshot timed out; not counted as successful end-overlay capture"
+}

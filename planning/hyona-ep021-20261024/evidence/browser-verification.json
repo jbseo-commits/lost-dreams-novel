@@ -1,0 +1,59 @@
+{
+  "episode": "21",
+  "sha256": "de48903972f222ca110dcf124217d86e2b9e66d1073adb73046c459c92f55b79",
+  "viewport": [
+    400,
+    900
+  ],
+  "reduced_motion": true,
+  "figures": [
+    {
+      "classes": "sequence-cut",
+      "text": "왼쪽: 신청한 집이 본 화면 / 오른쪽: 실제 처리 화면.",
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep21-contracts-web.webp",
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "신청 화면과 실제 계약 조건\n신청 화면\n예상 정산액 · 기존 계약 기준\n↔\n실제 변경\n받는 금액은 더 적음",
+      "images": []
+    },
+    {
+      "classes": "sequence-cut",
+      "text": "서인은 문해린의 병원 한 곳을 남기고, 나머지 여섯 곳은 연우가 맡는다.",
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep21-call-transfer-web.webp",
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep21-confirmation-web.webp",
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "약속과 실제 연락\n01:32\n남은 시간 7분\n01:36\n실제 재통화\n01:39\n다시 걸기로 한 시각",
+      "images": []
+    }
+  ],
+  "page_errors": [],
+  "horizontal_overflow": false,
+  "overlay": {
+    "method": "direct existing showSp preview; automatic trigger/default duration unverified",
+    "visible": true,
+    "text": "동부 27번 · 신청한 집만 변경\n이용자가 본 안내\n신청 접수\n일괄 실행 뒤 정산\n차액 회수\n오늘 밤\n계약 변경 실행\n잘못 안내된 차액\n회수 유예 · 미확정\n“끝난 데까지만 닫죠.”\n머물러 보기\n본문으로",
+    "closed": true
+  }
+}

@@ -12,9 +12,9 @@ window.ReaderScenes=(()=>{
   return null;
  }
  function install(D,RUN){
-  // 19: 두 경로에서 실제로 영향받는 가구 수의 면적 차이. 수치는 복제 검증의 값.
+  // 19: 복제 검증의 미리보기. A의 영향은 확정 피해가 아니라 조건부 위험이다.
   const small=windows(2400,60,18,40,3.2,1.8);
-  root('node31b',frame('같은 크기의 창 · 서로 다른 선택',`${text(18,20,'B · 2,400가구','warm')}<g class="lights" fill="#eac79a" stroke="none">${small}</g>${text(18,269,'모두 4.2초 중단','muted')}<g data-t="2">${text(226,312,'A · 36가구','cold')}${windows(36,6,241,326,3.2,1.8)}${line('M232 320 h44 v43 h-44 Z','coldline')}${text(18,320,'과부하 가능성 +3.8%','small')}${text(18,342,'발생하면 최대 18분','small')}</g>${text(18,382,'선택은 A로 바뀌었다.','muted','data-t="4.8"')}`,'<strong>작은 쪽도 빈 창이 아니다.</strong>'));
+  root('node31b',frame('복제 검증 · 선택에 따른 예상 영향',`${text(18,20,'B · 2,400가구','warm')}<g class="lights" fill="#eac79a" stroke="none">${small}</g>${text(18,269,'연결된 집이 모두 깸','muted')}<g data-t="2">${text(226,312,'A · 36가구','cold')}${windows(36,6,241,326,3.2,1.8)}${line('M232 320 h44 v43 h-44 Z','coldline')}${text(18,320,'우회한 쪽의 끊김 위험','small')}${text(18,342,'운이 나쁠 때','small')}</g>${text(18,382,'선택은 A로 바뀌었다.','muted','data-t="4.8"')}`,'<strong>작은 쪽도 빈 창이 아니다.</strong>'));
   RUN.node31b=()=>{};D[19].ms=9000;
   // 20: 기존 보호와 신규 심사 대기를 분리한 뒤, 확인한 범위에만 서명한다.
   root('graybutton',frame('보호 범위 열람 확인',`<g data-t=".2">${text(18,28,'72시간','large cold')}${line('M18 49 H322','faint')}<rect x="18" y="74" width="143" height="187" fill="#14232a"/>${text(30,103,'기존 승인·계약','small')}${text(30,133,'보호 유지','cold')}${line('M32 153 H145 M32 169 H129 M32 185 H143','faint')}</g><g data-t="1.8"><rect x="179" y="74" width="143" height="187" class="empty"/>${text(191,103,'신규 요청','small')}${text(191,133,'별도 심사','warm')}${line('M193 153 H306 M193 169 H290','faint')}${text(191,234,'대기','warm')}</g><g data-t="3.4">${line('M170 66 V273','empty')}${text(18,299,'보호 범위 열람 확인','small muted')}${line('M18 346 H322','faint')}</g>${line('M34 329 q14-20 27-1 l19-15 q8 27 27 5 l18 8','trace','pathLength="1" data-t="4.5" stroke="#b5ccd4"')}`,'그 서명이 끝나도 신규 요청의 대기 표시는 그대로였다.'));

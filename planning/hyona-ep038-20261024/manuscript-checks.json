@@ -1,0 +1,21 @@
+{
+  "episode": "38",
+  "before_body_non_whitespace": 4494,
+  "body_non_whitespace": 4497,
+  "before_sha256": "ae84e04ccf8e30380a1f12299f8baa288f2285045e466b81d04034488deef1ea",
+  "sha256": "681546a677c738b12485e578517fb5677997e211ff20f29a94bc8599f0d2ca96",
+  "revision": 1,
+  "changes": 1,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_WITH_LINKED_CONTEXT",
+  "visual": "본문 원화/인라인0개. 선택전1.6초프레임에서참여/보류/거부의실제폭360·높이45와글자/배경/테두리색이모두같음을확인했다.8.6초프레임은보류만강조하고30일·현기준자계획유지·자발성높음/빈비고를보여준다. 표면상의동등한선택과기록을보조하므로유지판단이다. 어머니의6년부담과사과/가족표정은화면만으로드러나지않아본문이그대가를담는다.400×900,pageerror0,가로넘침없음,직접표시/닫힘확인. 자연발동·실제터치·음향은미검증.",
+  "images_changed": 0,
+  "source_hook_changes": 0,
+  "tests": "final batch verification; not independently run for this prose-only unit",
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch": "renewed68-percent",
+  "batch_unit": 16,
+  "estimated_remaining_after_unit": 52,
+  "estimate_rule": "user reported68 after prior8 units+report from76; empirical1pp/unit, not live measurement"
+}

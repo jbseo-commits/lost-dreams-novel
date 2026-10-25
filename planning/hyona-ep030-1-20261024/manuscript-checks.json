@@ -1,0 +1,21 @@
+{
+  "episode": "30-1",
+  "before_body_non_whitespace": 2580,
+  "body_non_whitespace": 2580,
+  "before_sha256": "918e6d453f726e12f39817d1e695ea6c58d98e663068db9c37239a3fccb514e9",
+  "sha256": "f13c6b67753f4841d6e547be50befa36f62ab5f1f92fc9d2464fa6d068b74f66",
+  "revision": 1,
+  "changes": 1,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_WITH_LINKED_CONTEXT",
+  "visual": "본문 정적 원화/인라인0개. 실제 retape 최종 화면은 테이프 네 귀퉁이/손바닥 세 번을 큰 글씨로 보여 주고 빵집 간판 글자를 남긴다. 소품에 초점을 맞추는 방향은 적합하지만,최종 프레임에서는 숫자·문구 요약이 더 두드러지고 찢어진 종이와 아이 손의 감각이 약하다. 본문 감정 장면을 더 직접 보여 줄 개선 후보로 기록한다. 전체 애니메이션 전 과정을 관찰했다고 주장하지 않는다.400×900,pageerror0,가로 넘침 없음,표시/닫힘 확인.",
+  "images_changed": 0,
+  "source_hook_changes": 0,
+  "tests": "final batch verification; not independently run for this prose-only unit",
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch": "renewed68-percent",
+  "batch_unit": 7,
+  "estimated_remaining_after_unit": 61,
+  "estimate_rule": "user reported68 after prior8 units+report from76; empirical1pp/unit, not live measurement"
+}

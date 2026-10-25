@@ -1,0 +1,598 @@
+[
+  {
+    "width": 400,
+    "pageerrors": [],
+    "checks": [
+      {
+        "id": "node31b",
+        "text": "복제 검증 · 선택에 따른 예상 영향\nB · 2,400가구\n연결된 집이 모두 깸\nA · 36가구\n우회한 쪽의 끊김 위험\n운이 나쁠 때\n선택은 A로 바뀌었다.\n작은 쪽도 빈 창이 아니다.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 20,
+          "y": 224.984375,
+          "width": 360,
+          "height": 486.03125
+        },
+        "visible": true
+      },
+      {
+        "id": "node31b",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "rescue",
+        "text": "송출탑 · 은경의 꿈\n은경·노인\n구조 인원 집계 · 12명\n아래 점은 구조한 열두 명의 집계. 옥상은 마지막에 건너간 은경과 노인의 위치다.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 20,
+          "y": 214.1875,
+          "width": 360,
+          "height": 507.625
+        },
+        "visible": true
+      },
+      {
+        "id": "rescue",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "ledger288",
+        "stage": "initial",
+        "label": "도윤 · 지급 준비 전 개인 몫",
+        "balance": "3,092.2"
+      },
+      {
+        "id": "ledger288",
+        "stage": "after_allowances",
+        "label": "수당 2,800을 뺀 잔액",
+        "balance": "292.2"
+      },
+      {
+        "id": "ledger288",
+        "text": "지하 2층 장부실 · 90일 참가자 후속 관찰 수당\n컵라면 3.9까지 뺀 최종 잔액\n288.3\n참가자 062 김재호 · 수당 지급분\n−1,400\n참가자 118 한미라 · 수당 지급분\n−1,400\n하경\n“‘대납’이라고 하지 마. 이건 미지급분이야.”\n하경이 말한 것 · 장부에 없던 줄\n서인 시술 후 회복 11일 · 침대 값과 약값 · 저 사람 몫에서 두 달에 걸쳐\n밤 10시 40분 · 클리닉 옆 편의점 · 컵라면\n−3.9\n컵라면 값 · 이전 → 오늘\n3.7 → 3.9\n288.3 ÷ 3.9 · 컵라면으로 73개였다.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 20,
+          "y": 282.59375,
+          "width": 360,
+          "height": 370.8125
+        },
+        "visible": true
+      },
+      {
+        "id": "ledger288",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "threesec",
+        "text": "HUMAN ONLY OPEN 2차 · 성인 공개 동의자 하이라이트\n참가자 0512 · 일치도 78%\n인간다움 가산 +6\n참가자 0519 · 일치도 81%\n인간다움 가산 +7\n0512\n0519\n0502\n0526\n쓰다 멈춤 → 지움 → 다시 씀\n네 명 모두 정확히 3초 · 같은 망설임\n택배 조끼 남자의 키보드\n손톱만 한 검은 칩 · “입력 보조 장치요.” “손이 이래서.” · 12 TOKEN\n옆자리 청년도 같은 칩을 만지작거렸다. 그 옆 여자도.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 20,
+          "y": 293.71875,
+          "width": 360,
+          "height": 348.546875
+        },
+        "visible": true
+      },
+      {
+        "id": "threesec",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "letname",
+        "text": "합의서 초안 · 휴머나이즈 랩\n1. 제품 즉시 판매 중단\n2. 구매자 명단 제출\n3. 현 잔액 4,300 TOKEN 구매자 환급\n4. 원고 참가인은 ‘서인 방식’ 명칭 침해 청구를 취하\n취하하지 않으면 · 확인 반소 가능성\n“보호받을 만큼 실재하는 판단 방식인지”\n구매자 9,400명 · 응답 312명 · 복수 선택\n면접·서류 지원\n61%\n대출·보증 심사\n9%\nHUMAN ONLY\n22%\n기타\n8%\n환급 창구 · 한빛물류 상담원\n“12 TOKEN이 문제가 아니라.” “이걸 다시 물어볼까 봐요.”\n서인\n“이름은 놓을게요.” “그러니까 이름 없어도 돼요.”\n전자 서명\n서인\n사기 청구 및 구매자 환급 청구는 유지됩니다.\n명칭 침해 청구 취하\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 20,
+          "y": 196.140625,
+          "width": 360,
+          "height": 543.71875
+        },
+        "visible": true
+      },
+      {
+        "id": "letname",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "midnight100",
+        "text": "동부 27번 시장 2층 · 동부 야간 신청 대행 · 24시간\n신속 배정 시세표 · 닫힌 문 옆 벽\n30번 안 140 · 31~60번 90 · 61~100번 38\n주경태네 · 눌러 주는 값\n2 TOKEN · 달걀 반 판도 안 됨\n00:00:00\n닫힌 문 · 틈새 형광빛\n사람이 자판을 치는 소리가 아님 · 규칙적\n유형별 집계 · 배치 예시\nK-7 71개\n어르신 4명\n나머지 개별 계정 25개\n어르신들 휴대폰\n72 · 81 · 89 · 96\n동부 27번 접수 결과\n1~100번 점유: 계정군 K-7 (71개)\n서인\n“저기서 눌렀군요.” 주경태 “누르는 게 아니에요. 저건 돌리는 거예요.”\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 20,
+          "y": 210.75,
+          "width": 360,
+          "height": 514.5
+        },
+        "visible": true
+      },
+      {
+        "id": "midnight100",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "farthestdot",
+        "text": "독립 검증 4 · 원시 경로 · 점 네 개\n장회전 3.8%\n\n점: 네 모델의 후보 · 간격: 답의 거리(개념도)\n\n인간 참조계층 04 · 기준값 입력\n가장 먼 후보 · 세 번은 버려졌습니다.\n이번에는 남음\n답이 아니었다. 거리였다.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 20,
+          "y": 356.109375,
+          "width": 360,
+          "height": 223.765625
+        },
+        "visible": true
+      },
+      {
+        "id": "farthestdot",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "다음 날 새벽 · 도착과 출차",
+        "text": "다음 날 새벽 · 도착과 출차\n07:00\n교대 기사 출차\n05:18\n실제 납품\n07:40\n시스템 예상",
+        "rects": [
+          {
+            "text": "07:00",
+            "x": 178.875,
+            "y": 445.8125,
+            "right": 222.125,
+            "bottom": 466.109375
+          },
+          {
+            "text": "교대 기사 출차",
+            "x": 152.984375,
+            "y": 496.90625,
+            "right": 248.03125,
+            "bottom": 520.546875
+          },
+          {
+            "text": "05:18",
+            "x": 43.3359375,
+            "y": 432.515625,
+            "right": 77.9140625,
+            "bottom": 452.8125
+          },
+          {
+            "text": "실제 납품",
+            "x": 32.2109375,
+            "y": 452.8125,
+            "right": 89.0390625,
+            "bottom": 470.3125
+          },
+          {
+            "text": "07:40",
+            "x": 238.28125,
+            "y": 523.5,
+            "right": 274.53125,
+            "bottom": 543.796875
+          },
+          {
+            "text": "시스템 예상",
+            "x": 221.390625,
+            "y": 543.796875,
+            "right": 291.421875,
+            "bottom": 561.296875
+          }
+        ],
+        "overlaps": [],
+        "overflow": false
+      },
+      {
+        "id": "한 주문의 약속·예상과 07:00 출차",
+        "text": "한 주문의 약속·예상과 07:00 출차\n07:00\n교대 기사 출차\n06:00 전\n안내 약속\n07:00 이후\n시스템 예상",
+        "rects": [
+          {
+            "text": "07:00",
+            "x": 178.875,
+            "y": 446.25,
+            "right": 222.125,
+            "bottom": 466.546875
+          },
+          {
+            "text": "교대 기사 출차",
+            "x": 152.984375,
+            "y": 497.34375,
+            "right": 248.03125,
+            "bottom": 520.984375
+          },
+          {
+            "text": "06:00 전",
+            "x": 90.2578125,
+            "y": 432.953125,
+            "right": 143.8203125,
+            "bottom": 453.25
+          },
+          {
+            "text": "안내 약속",
+            "x": 88.6328125,
+            "y": 453.25,
+            "right": 145.4609375,
+            "bottom": 470.75
+          },
+          {
+            "text": "07:00 이후",
+            "x": 252.921875,
+            "y": 523.9375,
+            "right": 319.59375,
+            "bottom": 544.234375
+          },
+          {
+            "text": "시스템 예상",
+            "x": 251.25,
+            "y": 544.234375,
+            "right": 321.28125,
+            "bottom": 561.734375
+          }
+        ],
+        "overlaps": [],
+        "overflow": false
+      },
+      {
+        "id": "바뀐 표시 이름",
+        "text": "바뀐 표시 이름\n이전 이름\n조직별 참여율\n새 이름\n소속 조직 평균",
+        "rects": [],
+        "overlaps": [],
+        "overflow": false
+      },
+      {
+        "id": "ep19-door",
+        "decoded": true,
+        "width": 336,
+        "src": "assets/sequence19-22/ep19-door-web.webp"
+      },
+      {
+        "id": "ep19-wrist-detail",
+        "decoded": true,
+        "width": 336,
+        "src": "assets/sequence19-22/ep19-wrist-detail-web.webp"
+      },
+      {
+        "id": "ep19-home-life",
+        "decoded": true,
+        "width": 336,
+        "src": "assets/sequence19-22/ep19-home-life-web.webp"
+      },
+      {
+        "id": "ep19-windows",
+        "decoded": true,
+        "width": 336,
+        "src": "assets/sequence19-22/ep19-windows-web.webp"
+      },
+      {
+        "id": "ep20-door",
+        "decoded": true,
+        "width": 336,
+        "src": "assets/sequence19-22/ep20-door-web.webp"
+      },
+      {
+        "id": "ep20-box",
+        "decoded": true,
+        "width": 336,
+        "src": "assets/sequence19-22/ep20-box-web.webp"
+      },
+      {
+        "id": "ep20-rooftop",
+        "decoded": true,
+        "width": 336,
+        "src": "assets/sequence19-22/ep20-rooftop-web.webp"
+      },
+      {
+        "id": "reduced-node31b",
+        "text": "복제 검증 · 선택에 따른 예상 영향B · 2,400가구연결된 집이 모두 깸A · 36가구우회한 쪽의 끊김 위험운이 나쁠 때선택은 A로 바뀌었다.작은 쪽도 빈 창이 아니다.머물러 보기본문으로"
+      }
+    ],
+    "method": "direct showSp; real wait 8.5s; 400px real touch; natural trigger/audio untested"
+  },
+  {
+    "width": 1440,
+    "pageerrors": [],
+    "checks": [
+      {
+        "id": "node31b",
+        "text": "복제 검증 · 선택에 따른 예상 영향\nB · 2,400가구\n연결된 집이 모두 깸\nA · 36가구\n우회한 쪽의 끊김 위험\n운이 나쁠 때\n선택은 A로 바뀌었다.\n작은 쪽도 빈 창이 아니다.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 510,
+          "y": 189.828125,
+          "width": 420,
+          "height": 556.34375
+        },
+        "visible": true
+      },
+      {
+        "id": "node31b",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "rescue",
+        "text": "송출탑 · 은경의 꿈\n은경·노인\n구조 인원 집계 · 12명\n아래 점은 구조한 열두 명의 집계. 옥상은 마지막에 건너간 은경과 노인의 위치다.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 510,
+          "y": 189.828125,
+          "width": 420,
+          "height": 556.34375
+        },
+        "visible": true
+      },
+      {
+        "id": "rescue",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "ledger288",
+        "stage": "initial",
+        "label": "도윤 · 지급 준비 전 개인 몫",
+        "balance": "3,092.2"
+      },
+      {
+        "id": "ledger288",
+        "stage": "after_allowances",
+        "label": "수당 2,800을 뺀 잔액",
+        "balance": "292.2"
+      },
+      {
+        "id": "ledger288",
+        "text": "지하 2층 장부실 · 90일 참가자 후속 관찰 수당\n컵라면 3.9까지 뺀 최종 잔액\n288.3\n참가자 062 김재호 · 수당 지급분\n−1,400\n참가자 118 한미라 · 수당 지급분\n−1,400\n하경\n“‘대납’이라고 하지 마. 이건 미지급분이야.”\n하경이 말한 것 · 장부에 없던 줄\n서인 시술 후 회복 11일 · 침대 값과 약값 · 저 사람 몫에서 두 달에 걸쳐\n밤 10시 40분 · 클리닉 옆 편의점 · 컵라면\n−3.9\n컵라면 값 · 이전 → 오늘\n3.7 → 3.9\n288.3 ÷ 3.9 · 컵라면으로 73개였다.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 410,
+          "y": 291.9375,
+          "width": 620,
+          "height": 352.125
+        },
+        "visible": true
+      },
+      {
+        "id": "ledger288",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "threesec",
+        "text": "HUMAN ONLY OPEN 2차 · 성인 공개 동의자 하이라이트\n참가자 0512 · 일치도 78%\n인간다움 가산 +6\n참가자 0519 · 일치도 81%\n인간다움 가산 +7\n0512\n0519\n0502\n0526\n쓰다 멈춤 → 지움 → 다시 씀\n네 명 모두 정확히 3초 · 같은 망설임\n택배 조끼 남자의 키보드\n손톱만 한 검은 칩 · “입력 보조 장치요.” “손이 이래서.” · 12 TOKEN\n옆자리 청년도 같은 칩을 만지작거렸다. 그 옆 여자도.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 410,
+          "y": 303.921875,
+          "width": 620,
+          "height": 328.15625
+        },
+        "visible": true
+      },
+      {
+        "id": "threesec",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "letname",
+        "text": "합의서 초안 · 휴머나이즈 랩\n1. 제품 즉시 판매 중단\n2. 구매자 명단 제출\n3. 현 잔액 4,300 TOKEN 구매자 환급\n4. 원고 참가인은 ‘서인 방식’ 명칭 침해 청구를 취하\n취하하지 않으면 · 확인 반소 가능성\n“보호받을 만큼 실재하는 판단 방식인지”\n구매자 9,400명 · 응답 312명 · 복수 선택\n면접·서류 지원\n61%\n대출·보증 심사\n9%\nHUMAN ONLY\n22%\n기타\n8%\n환급 창구 · 한빛물류 상담원\n“12 TOKEN이 문제가 아니라.” “이걸 다시 물어볼까 봐요.”\n서인\n“이름은 놓을게요.” “그러니까 이름 없어도 돼요.”\n전자 서명\n서인\n사기 청구 및 구매자 환급 청구는 유지됩니다.\n명칭 침해 청구 취하\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 410,
+          "y": 216.53125,
+          "width": 620,
+          "height": 502.9375
+        },
+        "visible": true
+      },
+      {
+        "id": "letname",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "midnight100",
+        "text": "동부 27번 시장 2층 · 동부 야간 신청 대행 · 24시간\n신속 배정 시세표 · 닫힌 문 옆 벽\n30번 안 140 · 31~60번 90 · 61~100번 38\n주경태네 · 눌러 주는 값\n2 TOKEN · 달걀 반 판도 안 됨\n00:00:00\n닫힌 문 · 틈새 형광빛\n사람이 자판을 치는 소리가 아님 · 규칙적\n유형별 집계 · 배치 예시\nK-7 71개\n어르신 4명\n나머지 개별 계정 25개\n어르신들 휴대폰\n72 · 81 · 89 · 96\n동부 27번 접수 결과\n1~100번 점유: 계정군 K-7 (71개)\n서인\n“저기서 눌렀군요.” 주경태 “누르는 게 아니에요. 저건 돌리는 거예요.”\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 410,
+          "y": 197.1875,
+          "width": 620,
+          "height": 541.625
+        },
+        "visible": true
+      },
+      {
+        "id": "midnight100",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "farthestdot",
+        "text": "독립 검증 4 · 원시 경로 · 점 네 개\n장회전 3.8%\n\n점: 네 모델의 후보 · 간격: 답의 거리(개념도)\n\n인간 참조계층 04 · 기준값 입력\n가장 먼 후보 · 세 번은 버려졌습니다.\n이번에는 남음\n답이 아니었다. 거리였다.\n머물러 보기\n본문으로",
+        "overflow": false,
+        "frame": {
+          "x": 410,
+          "y": 355.265625,
+          "width": 620,
+          "height": 225.46875
+        },
+        "visible": true
+      },
+      {
+        "id": "farthestdot",
+        "closed": true,
+        "display": "none",
+        "pointer_events": "none"
+      },
+      {
+        "id": "다음 날 새벽 · 도착과 출차",
+        "text": "다음 날 새벽 · 도착과 출차\n07:00\n교대 기사 출차\n05:18\n실제 납품\n07:40\n시스템 예상",
+        "rects": [
+          {
+            "text": "07:00",
+            "x": 695.40625,
+            "y": 438.421875,
+            "right": 745.609375,
+            "bottom": 461.609375
+          },
+          {
+            "text": "교대 기사 출차",
+            "x": 665.5625,
+            "y": 496.8125,
+            "right": 775.4375,
+            "bottom": 523.8125
+          },
+          {
+            "text": "05:18",
+            "x": 407.859375,
+            "y": 423.234375,
+            "right": 448.140625,
+            "bottom": 446.421875
+          },
+          {
+            "text": "실제 납품",
+            "x": 395.140625,
+            "y": 446.421875,
+            "right": 460.859375,
+            "bottom": 466.421875
+          },
+          {
+            "text": "07:40",
+            "x": 817.0703125,
+            "y": 527.21875,
+            "right": 859.2734375,
+            "bottom": 550.40625
+          },
+          {
+            "text": "시스템 예상",
+            "x": 797.6953125,
+            "y": 550.40625,
+            "right": 878.6484375,
+            "bottom": 570.40625
+          }
+        ],
+        "overlaps": [],
+        "overflow": false
+      },
+      {
+        "id": "한 주문의 약속·예상과 07:00 출차",
+        "text": "한 주문의 약속·예상과 07:00 출차\n07:00\n교대 기사 출차\n06:00 전\n안내 약속\n07:00 이후\n시스템 예상",
+        "rects": [
+          {
+            "text": "07:00",
+            "x": 695.40625,
+            "y": 437.890625,
+            "right": 745.609375,
+            "bottom": 461.078125
+          },
+          {
+            "text": "교대 기사 출차",
+            "x": 665.5625,
+            "y": 496.28125,
+            "right": 775.4375,
+            "bottom": 523.28125
+          },
+          {
+            "text": "06:00 전",
+            "x": 515.046875,
+            "y": 422.703125,
+            "right": 577.328125,
+            "bottom": 445.890625
+          },
+          {
+            "text": "안내 약속",
+            "x": 513.328125,
+            "y": 445.890625,
+            "right": 579.046875,
+            "bottom": 465.890625
+          },
+          {
+            "text": "07:00 이후",
+            "x": 862.0234375,
+            "y": 526.6875,
+            "right": 939.4609375,
+            "bottom": 549.875
+          },
+          {
+            "text": "시스템 예상",
+            "x": 860.2734375,
+            "y": 549.875,
+            "right": 941.2265625,
+            "bottom": 569.875
+          }
+        ],
+        "overlaps": [],
+        "overflow": false
+      },
+      {
+        "id": "바뀐 표시 이름",
+        "text": "바뀐 표시 이름\n이전 이름\n조직별 참여율\n새 이름\n소속 조직 평균",
+        "rects": [],
+        "overlaps": [],
+        "overflow": false
+      },
+      {
+        "id": "ep19-door",
+        "decoded": true,
+        "width": 700,
+        "src": "assets/sequence19-22/ep19-door-web.webp"
+      },
+      {
+        "id": "ep19-wrist-detail",
+        "decoded": true,
+        "width": 700,
+        "src": "assets/sequence19-22/ep19-wrist-detail-web.webp"
+      },
+      {
+        "id": "ep19-home-life",
+        "decoded": true,
+        "width": 700,
+        "src": "assets/sequence19-22/ep19-home-life-web.webp"
+      },
+      {
+        "id": "ep19-windows",
+        "decoded": true,
+        "width": 700,
+        "src": "assets/sequence19-22/ep19-windows-web.webp"
+      },
+      {
+        "id": "ep20-door",
+        "decoded": true,
+        "width": 700,
+        "src": "assets/sequence19-22/ep20-door-web.webp"
+      },
+      {
+        "id": "ep20-box",
+        "decoded": true,
+        "width": 700,
+        "src": "assets/sequence19-22/ep20-box-web.webp"
+      },
+      {
+        "id": "ep20-rooftop",
+        "decoded": true,
+        "width": 700,
+        "src": "assets/sequence19-22/ep20-rooftop-web.webp"
+      },
+      {
+        "id": "reduced-node31b",
+        "text": "복제 검증 · 선택에 따른 예상 영향B · 2,400가구연결된 집이 모두 깸A · 36가구우회한 쪽의 끊김 위험운이 나쁠 때선택은 A로 바뀌었다.작은 쪽도 빈 창이 아니다.머물러 보기본문으로"
+      }
+    ],
+    "method": "direct showSp; real wait 8.5s; 400px real touch; natural trigger/audio untested"
+  }
+]

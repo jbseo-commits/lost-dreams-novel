@@ -1,0 +1,84 @@
+{
+  "url": "http://127.0.0.1:8765/pilot.html#ep20",
+  "manuscript_sha256": "aa01e206ae3345b735393980e0a1aeb21394b93062bc07bf89008ec3c26f4641",
+  "viewport": {
+    "width": 400,
+    "height": 900
+  },
+  "reduced_motion": "reduce",
+  "figures": [
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "width": 336,
+      "height": 443.0625,
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep20-door-web.webp",
+          "complete": true,
+          "naturalWidth": 1092,
+          "naturalHeight": 1440
+        }
+      ]
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "한 건의 납품 기록\n시스템 대체 경로\n07:40 · 조건 미충족\n↔\n실제 납품\n예비 차량 수동 출동\n\n07:00 출차 조건을 충족한 것은 실제 납품",
+      "width": 336,
+      "height": 145.046875,
+      "images": []
+    },
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "width": 336,
+      "height": 419.84375,
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep20-box-web.webp",
+          "complete": true,
+          "naturalWidth": 1122,
+          "naturalHeight": 1402
+        }
+      ]
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "기존 보호 범위와 신규 요청을 분리\n기존 범위\n보호 확인\n|\n새 요청\n별도 심사",
+      "width": 336,
+      "height": 100.671875,
+      "images": []
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "보호와 신규 심사\n보호 확인\n기존 범위\n14:02 의료 지원\n신규 · 심사 대기",
+      "width": 336,
+      "height": 123.046875,
+      "images": []
+    },
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "width": 336,
+      "height": 443.0625,
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep20-rooftop-web.webp",
+          "complete": true,
+          "naturalWidth": 1092,
+          "naturalHeight": 1440
+        }
+      ]
+    }
+  ],
+  "page_errors": [],
+  "horizontal_overflow": false,
+  "scope": "web novel episode20 static illustrations and information graphics; VN excluded",
+  "overlay_preview": {
+    "method": "existing showSp(graybutton,15000) direct preview; automatic scroll trigger not verified",
+    "visible": true,
+    "text": "보호 범위 열람 확인\n72시간\n기존 승인·계약\n보호 유지\n신규 요청\n별도 심사\n대기\n보호 범위 열람 확인\n그 서명이 끝나도 신규 요청의 대기 표시는 그대로였다.\n머물러 보기\n본문으로",
+    "closed": true
+  },
+  "capture_note": "Initial figure5 capture was covered by temporary MEMORY20 toast; same unchanged figure recaptured after4000ms and visually checked."
+}
