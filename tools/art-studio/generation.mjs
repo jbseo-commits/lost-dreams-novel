@@ -19,10 +19,10 @@ export function buildPrompt(input, referencePath) {
   return [
     `Create original ${input.project==='baseball'?'baseball game':'visual novel'} art. Preserve the depicted people as: ${identities}.`,
     `Artwork type: ${form}.`,
-    `Expression: ${input.expression || 'neutral'}. Pose: ${input.pose || 'standing'}. Gaze: ${input.gaze || 'forward'}.`,
+    input.promptMode === 'free' ? 'Follow the requested expression, pose, gaze, action and framing in the description. Where unspecified, choose a natural composition; do not override the description with preset directions.' : `Expression: ${input.expression || 'neutral'}. Pose: ${input.pose || 'standing'}. Gaze: ${input.gaze || 'forward'}.`,
     `Description: ${intent}`,
     'Use each attached locked canonical reference for that named person. Preserve each face, hairstyle, age, gender presentation and clothing. Keep the established reference linework, brush texture, color palette, lighting and shading; do not impose another generic art style. Do not copy a reference pose unless specified.',
-    'Include only people named in the request. Keep relationships and interaction exactly as described; do not add romance, intimacy, or an implied relationship unless explicitly requested. Avoid extra people, extra limbs, logos, lettering, signatures or watermarks.'
+    kind === 'background' ? 'The attached references provide art style only. Do not include any people in this environment.' : 'Include only the people requested above; reference attachment alone is not a request for an extra person. Keep relationships and interaction exactly as described; do not add romance, intimacy, or an implied relationship unless explicitly requested. Avoid extra people, extra limbs, logos, lettering, signatures or watermarks.'
   ].join('\n');
 }
 
@@ -66,7 +66,7 @@ export function createGenerator({ root, pythonPath = python, skillPath = skillRo
         const id = `gen-${crypto.randomUUID()}`;
         const destDir = path.join(path.dirname(stateFile),'candidates'); await fs.mkdir(destDir,{recursive:true});
         const dest = path.join(destDir,`${id}.png`); await fs.copyFile(output,dest);
-        const info = { id, project:request.project, assetId:null, label:request.label, subject:request.subject, kind:request.kind, expression:request.expression, pose:request.pose, gaze:request.gaze, description:request.description, provider:'codex', url:`/candidates/${id}.png`, sourcePath:`.art-studio/candidates/${id}.png`, sha256:sha(data), width:data.readUInt32BE(16), height:data.readUInt32BE(20), referenceSha256:reference.sha256, referenceLocks:references.map(({subject,assetId,sha256})=>({subject,assetId,sha256})), status:'draft', checks:{identity:false,style:false,anatomy:false,scene:false}, note:'', createdAt:new Date().toISOString(), prompt };
+        const info = { id, project:request.project, assetId:null, label:request.label, subject:request.subject, kind:request.kind, expression:request.expression, pose:request.pose, gaze:request.gaze, description:request.description, promptMode:request.promptMode||'direction', userPrompt:request.userPrompt, provider:'codex', url:`/candidates/${id}.png`, sourcePath:`.art-studio/candidates/${id}.png`, sha256:sha(data), width:data.readUInt32BE(16), height:data.readUInt32BE(20), referenceSha256:reference.sha256, referenceLocks:references.map(({subject,assetId,sha256})=>({subject,assetId,sha256})), status:'draft', checks:{identity:false,style:false,anatomy:false,scene:false}, note:'', createdAt:new Date().toISOString(), prompt };
         await onComplete(info, job.id); return info;
       } catch(error) { throw Object.assign(new Error(cleanOutput(error.message)),{ generation:true }); }
       finally { running = false; }

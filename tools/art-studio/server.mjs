@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { createVnCatalog, createBaseballCatalog, safePath, sha } from './catalog.mjs';
 import { readJson, writeJsonAtomic } from './store.mjs';
 import { createGenerator } from './generation.mjs';
+import { resolvePromptInput } from './prompt-input.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const MIME = { '.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.mp3':'audio/mpeg','.wav':'audio/wav','.mp4':'video/mp4' };
@@ -101,7 +102,7 @@ export function createStudioServer(options = {}) {
       if(req.method==='GET'&&url.pathname.startsWith('/media/vn/')) return await serveMedia(vnRoot,url.pathname.slice('/media/vn/'.length),res);
       if(req.method==='GET'&&url.pathname.startsWith('/media/baseball/')) return await serveMedia(baseballRoot,url.pathname.slice('/media/baseball/'.length),res);
       if(req.method==='GET'&&url.pathname.startsWith('/vn/')) return await serveVnStatic(url.pathname.slice('/vn/'.length),res);
-      if(req.method==='GET'&&(url.pathname==='/'||url.pathname==='/studio.css'||url.pathname==='/app.js')) {
+      if(req.method==='GET'&&(url.pathname==='/'||url.pathname==='/studio.css'||url.pathname==='/app.js'||url.pathname==='/prompt-input.mjs')) {
         const leaf=url.pathname==='/'?'index.html':url.pathname.slice(1); return await serveStaticFile(path.resolve(__dirname),leaf,res);
       }
       return json(res,404,{error:'Not found'});
@@ -145,7 +146,8 @@ export function createStudioServer(options = {}) {
   }
   async function promptFor(input) {
     if(!['vn','baseball'].includes(input.project))throw err('Unknown project',400);
-    const cat=await projectState(input.project),subject=cat.subjects.find(x=>x.id===input.subject); if(!subject)throw err('Subject not found',404);
+    const cat=await projectState(input.project);try{input=resolvePromptInput(input,cat.subjects);}catch(error){throw err(error.message);}
+    const subject=cat.subjects.find(x=>x.id===input.subject); if(!subject)throw err('Subject not found',404);
     const requested=[...new Set(Array.isArray(input.referenceSubjects)?input.referenceSubjects:[input.subject])];
     if(!requested.includes(input.subject))requested.unshift(input.subject);
     if(requested.length>6)throw err('Use up to six canonical character references');
@@ -162,7 +164,8 @@ export function createStudioServer(options = {}) {
   async function generate(input) {
     if(input.provider!=='codex')throw err('Only the explicit Codex provider is supported',400);
     if(input.accessConfirmed!==true)throw err('Confirm Codex subscription access before generation',400);
-    const prompt=await promptFor(input),cat=await projectState(input.project),subject=cat.subjects.find(x=>x.id===input.subject);
+    const cat=await projectState(input.project);try{input=resolvePromptInput(input,cat.subjects);}catch(error){throw err(error.message);}
+    const prompt=await promptFor(input),subject=cat.subjects.find(x=>x.id===input.subject);
     if(!['actor','cg','background'].includes(input.kind))throw err('동작 시트는 기존 스프라이트 파이프라인에서 추출·정렬한 결과를 가져오세요.');
     const id=`job-${crypto.randomUUID()}`,job={id,project:input.project,status:'running',startedAt:new Date().toISOString(),label:String(input.label||'').slice(0,160)};
     const s=await stateRead();if(s.jobs.some(x=>x.status==='running'))throw err('A generation job is already running',409);s.jobs.push(job);await saveState(s);

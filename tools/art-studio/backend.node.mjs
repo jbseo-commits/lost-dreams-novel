@@ -26,6 +26,12 @@ try{
   let response=await call('/api/bootstrap');assert.equal(response.status,200,await response.clone().text());const bootstrap=await response.json();assert.deepEqual(bootstrap.projects.map(x=>x.id),['vn','baseball']);
   response=await call('/api/project?project=vn');assert.equal(response.status,200);let catalog=await response.json();assert.equal(catalog.chapters[0].id,'1');assert.match(catalog.fingerprints['1'],/^[a-f0-9]{64}$/);
   let baseball=await (await call('/api/project?project=baseball')).json();assert.equal(baseball.assets.find(x=>x.id==='batter-runtime').kind,'atlas');assert.equal(baseball.assets.find(x=>x.id==='batter-runtime').width,2048);
+  const freeRequest={project:'vn',subject:'seoin',promptMode:'free',userPrompt:'서인이 아래를 보며 앉아 있다.',outputKind:'auto',expression:'웃음',pose:'standing',gaze:'right',provider:'codex',accessConfirmed:true};
+  response=await call('/api/prompt','POST',freeRequest);assert.equal(response.status,200);const freePrompt=await response.json();assert.match(freePrompt.prompt,/서인이 아래를 보며 앉아 있다/);assert.doesNotMatch(freePrompt.prompt,/Expression:|Pose: standing/);assert.equal(freePrompt.references[0].subject,'seoin');
+  for(const patch of [{userPrompt:' '},{userPrompt:'a'.repeat(4001)},{promptMode:'unknown'},{outputKind:'unknown'}]){response=await call('/api/generate','POST',{...freeRequest,...patch});assert.equal(response.status,400,await response.clone().text());}
+  for(const provider of ['openai','grok',undefined]){response=await call('/api/generate','POST',{...freeRequest,provider});assert.equal(response.status,400,'no API or alternate-provider route');}
+  assert.equal((await (await call('/api/jobs')).json()).jobs.length,0,'rejected requests never start a generation');
+  response=await call('/prompt-input.mjs');assert.equal(response.status,200,'shared prompt module served to browser');
   response=await call('/vn/demo.html');assert.equal(response.status,200,'VN preview path resolves under vnRoot');
   response=await call('/baseball-game/','POST',{});assert.equal(response.status,405,'game preview does not accept mutation requests');
   response=await call('/api/candidate','POST',{project:'vn',assetId:sample.id,label:'draft',subject:'seoin',kind:'cg'});assert.equal(response.status,201,await response.clone().text());const candidate=await response.json();

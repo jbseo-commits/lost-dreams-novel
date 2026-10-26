@@ -1,0 +1,32 @@
+{
+  "verifiedOn": "2026-10-26",
+  "feature": "프롬프트 입력으로 구독 이미지 생성",
+  "tests": {"promptAndBaseball": {"passed": 15, "failed": 0}, "vnArtAdapter": {"passed": 8, "failed": 0}, "backendRegression": "passed"},
+  "actualGeneration": {
+    "jobId": "job-5022c4cf-061c-4008-adab-174b69cdf8b0",
+    "candidateId": "gen-16ad86fe-fee2-4d90-8970-2c252c9b6f04",
+    "provider": "codex",
+    "status": "completed",
+    "candidateReview": "draft",
+    "size": [1024, 1536],
+    "reference": "vn-seoinStanding",
+    "referenceSha256": "7a9a3777024d2aa6d251978e527c7c3c49f6fe566e33dfc3e9a93f30bd8df488",
+    "apiRouteUsed": false
+  },
+  "browser": {
+    "autoSelectedSubmittedCandidate": true,
+    "editedPromptSurvivedCompletion": true,
+    "projectDraftsPreserved": true,
+    "twoNamedCharacterReferencesVerified": ["seoin", "jiwoo"],
+    "mobileViewport": [400, 850],
+    "mobileDocumentWidth": 385,
+    "mobileScrollWidth": 385,
+    "mobilePromptDialogOpenedAndClosed": true,
+    "vnTemporaryPreview": {"chapterId":"1","startBeatIndex":118,"endBeatIndex":121,"renderedArt":["/candidates/gen-16ad86fe-fee2-4d90-8970-2c252c9b6f04.png","assets/teaser-style/jiwoo-tease.webp"]},
+    "consoleErrors": [],
+    "screenshots": ["prompt-desktop.png", "prompt-mobile.png"]
+  },
+  "persistentSceneOverridesAdded": 0,
+  "independentReview": "진행 중인 프로젝트 전환과 완료 poll 충돌 지적 반영: busy인 동안 완료 선택을 미루고 제출 기록 보존",
+  "publication": "local only"
+}
