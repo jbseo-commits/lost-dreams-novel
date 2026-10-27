@@ -32,6 +32,14 @@ test('B neighborhood is not inserted in web prose, and its old A/detail cuts sta
 test('the web renders both door and wrist source images as static illustrations',()=>{
   const text='띠 아래 오른손목에는 어제 붙잡혔던 자국이 시퍼렇게 남아 있었다. 띠를 자국 위에서 살짝 비켜 끼우자 강연우의 눈이 그 손에 머물렀다. 서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.';
   const markup=sequences.afterParagraph('19',text).join('');
-  assert.match(markup,/ep19-door-web\.webp/);assert.match(markup,/ep19-wrist-detail-web\.webp/);
+  assert.match(markup,/ep19-door-web-v2\.webp/);assert.match(markup,/ep19-wrist-detail-web-v2\.webp/);
   assert.equal((markup.match(/<img\b/g)||[]).length,2);assert.doesNotMatch(markup,/data-sequence-motion/);
+});
+
+test('EP19 replacements preserve the 4:3 door and 16:9 wrist image mapping',()=>{
+  const full=sequences.afterParagraph('19','띠 아래 오른손목에는 어제 붙잡혔던 자국이 시퍼렇게 남아 있었다. 띠를 자국 위에서 살짝 비켜 끼우자 강연우의 눈이 그 손에 머물렀다. 서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.').join('');
+  assert.match(full,/ep19-door-web-v2\.webp/);
+  assert.match(full,/ep19-wrist-detail-web-v2\.webp/);
+  assert.equal((full.match(/<figure\b/g)||[]).length,2);
+  assert.doesNotMatch(full,/object-fit:\s*cover/);
 });
