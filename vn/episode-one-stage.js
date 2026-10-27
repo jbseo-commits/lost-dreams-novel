@@ -1,7 +1,7 @@
 import {ep04ClueFor} from './episode-four-clues.js?v=ep04-clue-gallery-20261028-r1';
 export class EpisodeOneStage {
   constructor(host,assets,{onInspect,onEvidence}={}){
-    this.host=host;this.assets=assets;this.currentCg='';this.currentScene=-1;this.actorState=new Map();
+    this.host=host;this.assets=assets;this.onEvidence=onEvidence;this.currentCg='';this.currentScene=-1;this.actorState=new Map();
     this.frameTimer=0;this.frameGeneration=0;this.frameDecodePending=false;this.frameAutoCompleted=false;this.noMotion=false;
     this.cg=document.createElement('div');this.cg.className='ep1-cg';
     this.actors=document.createElement('div');this.actors.className='ep1-actors';
@@ -42,7 +42,7 @@ export class EpisodeOneStage {
             const heading=document.createElement('strong');heading.className='core-clue-name';heading.textContent=label;
             const detail=document.createElement('span');detail.className='core-clue-detail';detail.textContent=value;
             button.append(frame,heading,detail);
-            button.addEventListener('click',event=>{event.stopPropagation();if(onEvidence)onEvidence(cue,label);});
+            button.addEventListener('click',event=>{event.stopPropagation();this.onEvidence?.(cue,label);});
             gallery.append(button);
           }
           this.board.append(gallery,this.boardButton);
