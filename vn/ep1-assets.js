@@ -1,5 +1,5 @@
 import {CORE_ASSETS} from './core-assets.js?v=teaser-art-20261021-r1';
-import {PARENT_ASSETS} from './parent-art.js?v=mother-age-20261021-r1';
+import {PARENT_ASSETS} from './parent-art.js?v=mother-age-20261027-r2';
 export const EP1_ASSETS = Object.freeze({
   ...CORE_ASSETS,
   clayFailure:'assets/cutscenes/clay-failure.webp',
