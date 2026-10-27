@@ -1,14 +1,15 @@
 import {coreSceneDirection} from './core-demo.js?v=ep03-connected-cuts-20261023-r1';
 import {presentationForBeat} from './neural-cues.js?v=teaser-art-20261021-r1';
+import {settlementShotForBeat} from './episode-three-settlement.js?v=ep03-settlement-20261027-r1';
 const maps=new WeakMap();
 const signature=(c,i)=>{const q=coreSceneDirection(c,i);return q&&JSON.stringify([q.sceneStart,q.background,q.backgroundAsset,q.actors,q.cg,q.board,q.shot,q.music,q.ambience,q.silence,q.cutscene]);};
 function pageMap(c){
  if(!coreSceneDirection(c,0))return null;if(maps.has(c))return maps.get(c);
  const map=new Map();
  for(let start=0;start<c.beats.length;){let end=start,length=c.beats[start].text.length;const first=c.beats[start];
-  if(first.kind==='narration'&&!first.choice&&!presentationForBeat(c,first,start))for(let next=start+1;next<Math.min(start+3,c.beats.length);next++){
+  if(first.kind==='narration'&&!first.choice&&!settlementShotForBeat(c,start)&&!presentationForBeat(c,first,start))for(let next=start+1;next<Math.min(start+3,c.beats.length);next++){
    const b=c.beats[next],q=coreSceneDirection(c,next);
-   if(b.kind!=='narration'||b.choice||b.direction?.pauseMs||q?.fx||q?.gap||presentationForBeat(c,b,next)||signature(c,next)!==signature(c,start)||length+b.text.length>160)break;
+   if(b.kind!=='narration'||b.choice||settlementShotForBeat(c,next)||b.direction?.pauseMs||q?.fx||q?.gap||presentationForBeat(c,b,next)||signature(c,next)!==signature(c,start)||length+b.text.length>160)break;
    length+=b.text.length;end=next;
   }
   for(let n=start;n<=end;n++)map.set(n,{start,end});start=end+1;
