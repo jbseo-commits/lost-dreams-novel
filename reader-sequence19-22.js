@@ -1,8 +1,8 @@
 // The text stays authoritative: show each frame only after its exact source paragraph.
 window.ReaderSequences = (() => {
   const cuts = [
-    { ep: '19', id: 'ep19-door', anchor: '서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.', alt: '붉은 문턱 밖에 멈춘 서인과 안쪽의 강연우, 두 사람 사이의 면담실 문' },
-    { ep: '19', id: 'ep19-wrist-detail', anchor: '띠 아래 오른손목에는 어제 붙잡혔던 자국이 시퍼렇게 남아 있었다. 띠를 자국 위에서 살짝 비켜 끼우자 강연우의 눈이 그 손에 머물렀다. 서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.', alt: '강연우의 시선이 머문 서인의 오른 손목 띠와 푸른 멍 자국' },
+    { ep: '19', id: 'ep19-door', asset: 'ep19-door-web-v2.webp', anchor: '서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.', alt: '붉은 문턱 밖에 멈춘 서인과 안쪽의 강연우, 두 사람 사이의 면담실 문' },
+    { ep: '19', id: 'ep19-wrist-detail', asset: 'ep19-wrist-detail-web-v2.webp', anchor: '띠 아래 오른손목에는 어제 붙잡혔던 자국이 시퍼렇게 남아 있었다. 띠를 자국 위에서 살짝 비켜 끼우자 강연우의 눈이 그 손에 머물렀다. 서인은 괜찮다는 듯 손가락을 쫙 펴 보였다.', alt: '강연우의 시선이 머문 서인의 오른 손목 띠와 푸른 멍 자국' },
     { ep: '19', id: 'ep19-windows', anchor: 'A를 누르자 옆 동네에 불이 몇 개 켜졌다. 서른여섯 집. 그것도 운이 나쁠 때 얘기였다.', alt: '최종 선택 전, A와 B의 예상 영향을 나란히 보여 주는 지도. 한쪽은 넓은 구역에 많은 불빛, 다른 쪽은 36집의 불빛이다.', caption: '아직 최종 선택 전인 A와 B 미리보기: 두 선택의 예상 영향을 나란히 보여 준다.' },
     { ep: '19', id: 'ep19-home-life', anchor: '예측 화면일 뿐인데 불빛만은 진짜 같았다.', alt: 'B를 선택할 경우의 예상 생활을 보여 주는 불 켜진 창들: 아기를 안고 일어나는 집, 잠들지 못해 부엌에 선 사람, 앞당긴 출근 알람', caption: 'B를 선택할 경우의 예상 생활. 지금 일어나는 현실 장면이 아니라 예측 화면이다.' },
     { ep: '19-1', id: 'ep19-1-alley', anchor: '냉장차가 서인 뒤쪽 통로로 들어왔다.', alt: '컨테이너 통로에서 서인을 붙잡은 남자와 승합차, 불빛을 비추며 달려오는 기지 사람들' },
@@ -22,7 +22,8 @@ window.ReaderSequences = (() => {
   ];
 
   function image(cut, extra='') {
-    return `<img class="sequence-frame ${extra}" data-cut-id="${cut.id}" src="assets/sequence19-22/${cut.id}-web.webp" alt="${cut.alt}" loading="lazy" decoding="async">`;
+    const filename = cut.asset || `${cut.id}-web.webp`;
+    return `<img class="sequence-frame ${extra}" data-cut-id="${cut.id}" src="assets/sequence19-22/${filename}" alt="${cut.alt}" loading="lazy" decoding="async">`;
   }
   function afterParagraph(ep, paragraph) {
     const matched = cuts.filter(cut => cut.ep === String(ep) && paragraph.includes(cut.anchor));
