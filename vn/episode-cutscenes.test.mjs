@@ -61,7 +61,7 @@ test('reflowed event cuts retain their original action anchors wherever the manu
     ['ep20-box','20',146,146,'“이 칸 누르면, 기다리는 사람까지 보호받은 걸로 남습니다. 공동주방에 온 7시 40분짜리 경로처럼요.”'],
     ['ep20-rooftop','20',190,190,'도윤이 서인의 컵 위에 젓가락 한 벌을 올려 주었다.'],
     ['ep21-confirmation','21',146,146,'윤세라도 그 줄을 봤다. 아무 말도 하지 않았다.'],
-    ['ep19-home-life','19',47,47,'우는 아기를 안고 일어나는 그림, 다시 잠들지 못해 부엌으로 나가는 그림, 출근 알람까지 남은 시간을 확인하는 그림. 창마다 작은 그림이 흘러갔다. 예측 화면일 뿐인데 불빛만은 진짜 같았다.'],
+    ['ep19-home-life','19',46,46,'우는 아기를 안고 일어나는 그림, 다시 잠들지 못해 부엌으로 나가는 그림, 출근 알람까지 남은 시간을 확인하는 그림. 창마다 작은 그림이 흘러갔다. 예측 화면일 뿐인데 불빛만은 진짜 같았다.'],
     ['ep21-call-transfer','21',143,143,'곧바로 첫 병원 회선을 열었다.'],
     ['ep19-1-aftermath','19-1',117,117,'서인은 컨테이너에 등을 붙인 채 미끄러져 앉았다. 오른손이 말을 듣지 않았다. 배차 담당이 바닥에 떨어진 단말을 주워 왼손에 쥐여 줬다.']
   ];
@@ -72,9 +72,9 @@ test('reflowed event cuts retain their original action anchors wherever the manu
     assert.equal(chapter(id).beats[start].text,anchor,cg);assert.equal(chapter(id).beats[end].text,endAnchor,cg);
   }
 });
-test('B preview is placed at beat 46 with exact fingerprint and native image copy',async()=>{
- const cut=EPISODE_CUTSCENES.find(c=>c.cg==='ep19-b-preview');assert.ok(cut);assert.equal(cut.chapter,'19');assert.equal(cut.start,46);assert.equal(cut.end,46);
- assert.equal(chapter('19').beats[46].text,'새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다.');assert.equal(at('19',46).cg,'ep19-b-preview');
+test('B preview is placed at beat 45 with exact fingerprint and native image copy',async()=>{
+ const cut=EPISODE_CUTSCENES.find(c=>c.cg==='ep19-b-preview');assert.ok(cut);assert.equal(cut.chapter,'19');assert.equal(cut.start,45);assert.equal(cut.end,45);
+ assert.equal(chapter('19').beats[45].text,'새벽 3시의 주택가. 창문 2,400개에 한꺼번에 불이 들어왔다.');assert.equal(at('19',45).cg,'ep19-b-preview');
  assert.equal(EP1_ASSETS['ep19-b-preview'],'assets/sequence19-22/ep19-b-preview-vn.webp');
  const vn=await readFile(new URL('./assets/sequence19-22/ep19-b-preview-vn.webp',import.meta.url));
  assert.equal(createHash('sha256').update(vn).digest('hex'),'f2c1111bb56928603d1f0952e93ecb7ad25564f0d6b77a4f0522b11eb9cdb979');
