@@ -23,6 +23,16 @@ const cgKeys = [
   'coreCupBadge','coreShore','coreOverload','coreMotherSleep','coreMotherDinner',
 ];
 const teaserKeys = [...spriteKeys, ...cgKeys];
+const ageSvgKeys=new Set(['motherCare','motherWarm','motherSearching','kitchenAd','table','coreMotherSleep','coreMotherDinner']);
+function embeddedWebp(svg,key){
+  const xml=svg.toString('utf8');
+  assert.match(xml,/^<\?xml version="1\.0"/,key);
+  assert.match(xml,/<svg\b[^>]*xmlns="http:\/\/www\.w3\.org\/2000\/svg"/,key);
+  assert.doesNotMatch(xml,/<script\b|\bonload\s*=/i,`${key}: static art must be inert`);
+  const match=xml.match(/data:image\/webp;base64,([A-Za-z0-9+/=]+)/);
+  assert.ok(match,`${key}: base WebP is embedded`);
+  return Buffer.from(match[1],'base64');
+}
 const kebab = value => value.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`).replace(/^-/, '');
 const source = name => new URL(name, import.meta.url);
 
@@ -72,11 +82,12 @@ test('27 runtime sprites and 16 cutscenes resolve to the packaged art including 
     assert.equal(EP1_ASSETS[key], PARENT_ASSETS[key]??`assets/teaser-style/${kebab(key)}.webp`, key);
     const bytes = await readFile(source(EP1_ASSETS[key]));
     assert.ok((await stat(source(EP1_ASSETS[key]))).size > 0, key);
-    const { width, height } = webpDimensions(bytes);
+    const raw=ageSvgKeys.has(key)?embeddedWebp(bytes,key):bytes;
+    const { width, height } = webpDimensions(raw);
     if (spriteKeys.includes(key)) {
       assert.ok(width >= 1024 && height >= 1536, `${key}: native portrait resolution`);
-      assert.equal(bytes.toString('ascii', 12, 16), 'VP8X', `${key}: extended alpha format`);
-      assert.ok(bytes[20] & 0x10, `${key}: actual alpha channel`);
+      assert.equal(raw.toString('ascii', 12, 16), 'VP8X', `${key}: extended alpha format`);
+      assert.ok(raw[20] & 0x10, `${key}: actual alpha channel`);
     } else assert.ok(width >= 1536 && height >= 900, `${key}: event CG resolution`);
     if (key === 'dreamBeach') {
       assert.deepEqual({ width, height }, { width: 1536, height: 1024 });
@@ -128,11 +139,23 @@ test('every authored parent pose in the public demo and the father close-up use 
   assert.ok(EPISODE_CUTSCENES.some(c=>c.chapter==='2'&&c.cg==='medicalTablet'));
   assert.equal(EP1_ASSETS.medicalTablet,PARENT_ASSETS.medicalTablet);
   const manifest=JSON.parse(await readFile(source('assets/parent-style/provenance.json'),'utf8'));
+  const age=JSON.parse(await readFile(source('assets/parent-style/age-v2-provenance.json'),'utf8'));
+  assert.equal(age.assets.length,7);
+  assert.deepEqual(new Set(age.assets.map(a=>a.key)),ageSvgKeys);
+  const pass=new Map(age.assets.map(a=>[a.key,a]));
   assert.equal(manifest.assets.length,10);
   for(const item of manifest.assets){
     const bytes=await readFile(source(item.file));
     assert.equal(createHash('sha256').update(bytes).digest('hex'),item.sha256);
-    assert.equal(EP1_ASSETS[item.key],item.file);
+    if(pass.has(item.key)){
+      const update=pass.get(item.key);
+      assert.equal(EP1_ASSETS[item.key],update.file);
+      assert.equal(update.base,item.file);
+      const svg=await readFile(source(update.file));
+      const embedded=embeddedWebp(svg,item.key);
+      assert.equal(createHash('sha256').update(embedded).digest('hex'),item.sha256,`${item.key}: preserves source portrait/CG`);
+      assert.deepEqual(webpDimensions(embedded),{width:update.dimensions[0],height:update.dimensions[1]});
+    }else assert.equal(EP1_ASSETS[item.key],item.file);
     const original=await readFile(source(item.original));
     assert.equal(createHash('sha256').update(original).digest('hex'),item.sourceSha256);
   }
