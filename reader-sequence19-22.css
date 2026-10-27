@@ -3,3 +3,14 @@
 .sequence-cut img { display:block; width:100%; height:auto; }
 .sequence-cut figcaption { padding:.38em 0 0; color:#aeb9b8; font-size:.84em; line-height:1.45; }
 @media (max-width:600px) { .sequence-cut { margin:1em 0 1.45em; } .sequence-cut figcaption { font-size:.82em; } }
+
+/* EP19: approved single-scene 4:3 redraw and independent 16:9 wrist detail.
+   Respect native proportions instead of enlarging the old portrait cuts. */
+.sequence-cut[data-cut-id="ep19-door"] { margin:1em 0 .24em; }
+.sequence-cut[data-cut-id="ep19-wrist-detail"] { margin:.24em 0 1.4em; }
+.sequence-cut[data-cut-id="ep19-door"] img { aspect-ratio:4 / 3; object-fit:contain; }
+.sequence-cut[data-cut-id="ep19-wrist-detail"] img { aspect-ratio:16 / 9; object-fit:contain; }
+@media (max-width:600px) {
+  .sequence-cut[data-cut-id="ep19-door"] { margin:.85em 0 .18em; }
+  .sequence-cut[data-cut-id="ep19-wrist-detail"] { margin:.18em 0 1.15em; }
+}
