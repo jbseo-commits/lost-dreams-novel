@@ -21,6 +21,7 @@ import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './ep
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep03-connected-cuts-20261023-r1';
 import { syncEpisodeTwoCopy } from './episode-two-copyfix.js?v=20261021-a';
 import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=ep03-connected-cuts-20261023-r1';
+import {EpisodeThreeSettlement} from './episode-three-settlement.js?v=ep03-settlement-20261027-r1';
 
 import {coreSceneDirection,isOptionalObservation,CORE_CUTS,CORE_MOMENTS,CORE_DEMO_STORAGE_SUFFIX} from './core-demo.js?v=ep03-connected-cuts-20261023-r1';
 import {RELEASE,publicDemoStory,canReadChapter,purchaseLink} from './release.js?v=ep03-connected-cuts-20261023-r1';
@@ -53,6 +54,7 @@ let pendingChapter = null;
 const audio = createAudioDirector(() => store.settings);
 const neuralStage = new NeuralStage($('neuralStage'));
 const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS,{onInspect:openCutscene,onEvidence:openCoreEvidence});
+const settlementStage = new EpisodeThreeSettlement($('stage'), EP1_ASSETS);
 const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {onStatus:(status,tracks={})=>{
   $('soundToggle').dataset.audioStatus=status;
   $('soundToggle').dataset.music=tracks.music||'';
@@ -402,6 +404,7 @@ function renderBeat({ revisit = false } = {}) {
   storyText.hidden = primary;
   $('perceptionAdvance').hidden = !primary;
   renderDirection(beat, { quiet: revisit });
+  settlementStage.render(chapter,progress.beatIndex,{quiet:revisit,reducedMotion:store.settings.reducedMotion});
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
   directionCard.hidden = Boolean(currentEpisodeCue||currentCoreCue?.cg||currentEventCutscene) || Boolean(currentPerception) || !beat.direction?.visual;
@@ -877,7 +880,7 @@ function setUiHidden(hidden) {
 }
 $('hideUiButton').addEventListener('click',()=>{setUiHidden(!$('stage').classList.contains('ui-hidden'));if(!$('uiReveal').hidden)$('uiReveal').focus();});
 $('uiReveal').addEventListener('click',()=>{setUiHidden(false);$('hideUiButton').focus();});
-$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); episodeStage.clear(); currentEpisodeCue=null; currentCoreCue=null; currentEventCutscene=null; neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
+$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); episodeStage.clear(); settlementStage.clear(); currentEpisodeCue=null; currentCoreCue=null; currentEventCutscene=null; neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
 $('modalClose').addEventListener('click', closeModal);
 modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
 modal.addEventListener('cancel', (event) => { event.preventDefault(); closeModal(); });

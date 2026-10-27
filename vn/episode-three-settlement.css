@@ -1,0 +1,53 @@
+/* Episode 3: Jiwoo's family settlement. All imagery reuses canonical portraits. */
+.ep03-settlement{position:absolute;inset:0;z-index:3;isolation:isolate;overflow:hidden;pointer-events:none}
+.ep03-settlement[hidden]{display:none!important;pointer-events:none!important}
+.stage.ep03-settlement-playing .portrait-wrap,.stage.ep03-settlement-playing #episodeOneStage{opacity:0!important;pointer-events:none!important}
+.ep03-settlement-shade{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 36%,rgba(11,23,31,.18),rgba(2,8,13,.68) 76%);pointer-events:none}
+.ep03-settlement-figures{position:absolute;inset:9% 0 25%;overflow:hidden}
+.ep03-settlement-figures img{position:absolute;bottom:-9%;height:107%;width:58%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 12px 28px #0009);transition:filter .55s,opacity .55s,transform .65s}
+.ep03-settlement-seoin{left:-8%;transform:translateX(-3%) scale(.96)}
+.ep03-settlement-jiwoo{right:-8%;transform:translateX(3%) scale(.96)}
+.ep03-settlement-phone{position:absolute;left:52%;top:38%;width:clamp(220px,39vw,355px);height:clamp(290px,48vh,425px);transform:translate(-50%,-50%) rotate(-6deg) scale(.75);transform-origin:50% 52%;transition:transform .75s cubic-bezier(.2,.7,.2,1),left .7s,top .7s,opacity .4s;filter:drop-shadow(1px 30px 30px rgba(0,0,0,.74));z-index:2}
+.ep03-settlement-device{height:100%;padding:10px;border:2px solid #656968;border-radius:25px;background:linear-gradient(135deg,#323a43,#050b11 40%,#29353b 94%);box-shadow:inset 0 0 0 2px #0b0d12,0 0 25px #0009}
+.ep03-settlement-device-bar{position:absolute;left:43%;top:10px;width:14%;height:5px;background:#030608;border-radius:20px}
+.ep03-settlement-screen{height:100%;border-radius:16px;padding:24px 18px 16px;background:linear-gradient(160deg,#172c38,#08151e 70%);border:1px solid #38535e;box-shadow:inset 0 0 30px #061017;overflow:hidden}
+.ep03-settlement-kicker{font-size:12px;color:#a4bac0;letter-spacing:.05em;margin:0 0 3px}
+.ep03-settlement-heading{font-weight:650;font-size:20px;line-height:1.4;color:#e9eee6;margin:0 0 18px}
+.ep03-settlement-date-card{border:1px solid #57736a;background:#20363c;border-radius:12px;padding:12px;box-shadow:0 0 0 0 #d1b77f33;transition:box-shadow .6s,border-color .6s}
+.ep03-settlement-day{display:flex;justify-content:space-between;align-items:center;padding:1px 0 11px;border-bottom:1px solid #9ba9a340;gap:10px}
+.ep03-settlement-day span{font-size:12px;color:#b2c1c2}.ep03-settlement-day strong{font-size:15px;color:#f0d3a0;font-weight:600;white-space:nowrap}
+.ep03-settlement-entry{display:flex;align-items:center;gap:10px;padding-top:15px;font-size:15px;font-weight:500;color:#e9eee9;white-space:nowrap}
+.ep03-settlement-entry i{width:8px;height:8px;flex:none;border-radius:50%;background:#d8b784;box-shadow:0 0 0 3px #bda27122}
+.ep03-settlement-screen-lines{display:grid;gap:9px;padding:20px 3px}
+.ep03-settlement-screen-lines b{height:5px;width:80%;background:#56707755;border-radius:10px}
+.ep03-settlement-screen-lines b:nth-child(2){width:95%}.ep03-settlement-screen-lines b:nth-child(3){width:58%}
+.ep03-settlement-glance{position:absolute;z-index:1;top:25%;left:47%;height:2px;width:0;background:linear-gradient(90deg,transparent,#ecd9af,transparent);transform:rotate(-15deg);opacity:0}
+.ep03-settlement[data-shot="offer"] .ep03-settlement-phone{left:58%;top:43%;transform:translate(-50%,-50%) rotate(-8deg) scale(.71)}
+.ep03-settlement[data-shot="discover"] .ep03-settlement-phone{left:50%;top:39%;transform:translate(-50%,-50%) rotate(0) scale(1.03)}
+.ep03-settlement[data-shot="discover"] .ep03-settlement-figures img{filter:blur(3px) brightness(.46);opacity:.72}
+.ep03-settlement[data-shot="discover"] .ep03-settlement-date-card{border-color:#efc98d;box-shadow:0 0 0 2px #e3bd784d,0 0 35px #ecc17b20}
+.ep03-settlement[data-shot="withdraw"] .ep03-settlement-phone{left:79%;top:46%;transform:translate(-50%,-50%) rotate(12deg) scale(.57);opacity:.5}
+.ep03-settlement[data-shot="withdraw"] .ep03-settlement-seoin{filter:brightness(.65);transform:translateX(-7%) scale(.94)}
+.ep03-settlement[data-shot="withdraw"] .ep03-settlement-jiwoo{transform:translateX(-3%) scale(1.05)}
+.ep03-settlement[data-shot="question"] .ep03-settlement-phone{left:82%;top:51%;transform:translate(-50%,-50%) rotate(16deg) scale(.47);opacity:.25}
+.ep03-settlement[data-shot="question"] .ep03-settlement-seoin{filter:brightness(.62)}
+.ep03-settlement[data-shot="question"] .ep03-settlement-jiwoo{transform:translateX(-7%) scale(1.11)}
+.ep03-settlement[data-shot="accept"] .ep03-settlement-phone{left:50%;top:38%;transform:translate(-50%,-50%) rotate(0) scale(1.02);opacity:1}
+.ep03-settlement[data-shot="accept"] .ep03-settlement-figures img{filter:brightness(.5);opacity:.68}
+.ep03-settlement[data-motion="off"] *{animation:none!important;transition:none!important}
+@media(max-width:640px){
+  .ep03-settlement-figures{inset:12% 0 30%}
+  .ep03-settlement-figures img{height:108%;width:83%;bottom:-7%}
+  .ep03-settlement-seoin{left:-29%}.ep03-settlement-jiwoo{right:-27%}
+  .ep03-settlement-phone{width:min(78vw,300px);height:min(45vh,354px)}
+  .ep03-settlement[data-shot="offer"] .ep03-settlement-phone{top:40%;left:60%;transform:translate(-50%,-50%) rotate(-8deg) scale(.71)}
+  .ep03-settlement[data-shot="discover"] .ep03-settlement-phone,
+  .ep03-settlement[data-shot="accept"] .ep03-settlement-phone{top:37%;transform:translate(-50%,-50%) scale(1)}
+  .ep03-settlement[data-shot="withdraw"] .ep03-settlement-phone{top:46%;left:79%}
+  .ep03-settlement[data-shot="question"] .ep03-settlement-phone{top:48%;left:82%}
+  .ep03-settlement-screen{padding:24px 13px 10px}
+  .ep03-settlement-heading{font-size:19px;margin-bottom:13px}
+  .ep03-settlement-entry{font-size:14px;padding-top:13px}
+}
+@media(max-height:710px){.ep03-settlement-phone{top:34%;height:44vh!important}.ep03-settlement[data-shot] .ep03-settlement-phone{top:35%}}
+@media(prefers-reduced-motion:reduce){.ep03-settlement *{animation:none!important;transition:none!important}}
