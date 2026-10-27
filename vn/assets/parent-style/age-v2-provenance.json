@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-27",
+  "scope": "서인과 어머니의 화풍 통일을 위한 7종 중장년 외형 보정",
+  "method": "embedded-original-WebP SVG overlay (nondestructive contour and shadow correction)",
+  "status": "candidate for visual review; not a from-scratch rerender",
+  "reference": "서인의 반실사 잉크 라인, 야간 주황/청색 광원",
+  "constraints": [
+    "원고·설정·장면 순서·인물 배치 보존",
+    "50대 후반 인상의 눈가·팔자주름·목주름·손등 텍스처",
+    "실제 인물 설정 나이는 미확정",
+    "원본 mature WebP는 삭제하지 않음"
+  ],
+  "assets": [
+    {
+      "key": "motherCare",
+      "file": "assets/parent-style/mother-care-age-v2.svg",
+      "base": "assets/parent-style/mother-care-mature.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "faceTransform": {
+        "cx": 482,
+        "cy": 296,
+        "scale": 2.2,
+        "rotation": 5
+      }
+    },
+    {
+      "key": "motherWarm",
+      "file": "assets/parent-style/mother-warm-age-v2.svg",
+      "base": "assets/parent-style/mother-warm-mature.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "faceTransform": {
+        "cx": 510,
+        "cy": 292,
+        "scale": 2.15,
+        "rotation": 2
+      }
+    },
+    {
+      "key": "motherSearching",
+      "file": "assets/parent-style/mother-searching-age-v2.svg",
+      "base": "assets/parent-style/mother-searching-mature.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "faceTransform": {
+        "cx": 508,
+        "cy": 299,
+        "scale": 2.15,
+        "rotation": -4
+      }
+    },
+    {
+      "key": "kitchenAd",
+      "file": "assets/parent-style/kitchen-ad-age-v2.svg",
+      "base": "assets/parent-style/kitchen-ad-mature.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "faceTransform": {
+        "cx": 1400,
+        "cy": 339,
+        "scale": 0.9,
+        "rotation": 6
+      }
+    },
+    {
+      "key": "table",
+      "file": "assets/parent-style/table-age-v2.svg",
+      "base": "assets/parent-style/table-mature.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "faceTransform": {
+        "cx": 1314,
+        "cy": 335,
+        "scale": 1.25,
+        "rotation": -1
+      }
+    },
+    {
+      "key": "coreMotherSleep",
+      "file": "assets/parent-style/core-mother-sleep-age-v2.svg",
+      "base": "assets/parent-style/core-mother-sleep-mature.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "faceTransform": {
+        "cx": 1364,
+        "cy": 293,
+        "scale": 1.74,
+        "rotation": 8
+      }
+    },
+    {
+      "key": "coreMotherDinner",
+      "file": "assets/parent-style/core-mother-dinner-age-v2.svg",
+      "base": "assets/parent-style/core-mother-dinner-mature.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "faceTransform": {
+        "cx": 303,
+        "cy": 175,
+        "scale": 0.84,
+        "rotation": 12
+      }
+    }
+  ]
+}
