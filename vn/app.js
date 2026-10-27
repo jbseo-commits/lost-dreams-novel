@@ -9,10 +9,10 @@ import { presentationForBeat } from './neural-cues.js?v=teaser-art-20261021-r1';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
 import { exportSaveData, importSaveData } from './save-portability.js?v=teaser-art-20261021-r1';
-import { EP1_ASSETS } from './ep1-assets.js?v=ep03-connected-cuts-20261023-r1';
+import { EP1_ASSETS } from './ep1-assets.js?v=ep04-clue-gallery-20261028-r2';
 import { withTeaserCharacterAssets } from './teaser-art.js?v=teaser-art-20261021-r1';
 import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=ep03-connected-cuts-20261023-r1';
-import { EpisodeOneStage } from './episode-one-stage.js?v=ep03-connected-cuts-20261023-r1';
+import { EpisodeOneStage } from './episode-one-stage.js?v=ep04-clue-gallery-20261028-r2';
 import { createEpisodeOneAudio } from './episode-one-audio.js?v=audio-balance-20261021-r1';
 import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep03-connected-cuts-20261023-r1';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
@@ -24,6 +24,7 @@ import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.j
 import {EpisodeThreeSettlement} from './episode-three-settlement.js?v=ep03-settlement-20261027-r1';
 
 import {coreSceneDirection,isOptionalObservation,CORE_CUTS,CORE_MOMENTS,CORE_DEMO_STORAGE_SUFFIX} from './core-demo.js?v=ep03-connected-cuts-20261023-r1';
+import {ep04ClueFor} from './episode-four-clues.js?v=ep04-clue-gallery-20261028-r1';
 import {RELEASE,publicDemoStory,canReadChapter,purchaseLink} from './release.js?v=ep03-connected-cuts-20261023-r1';
 import {coreReadingPage,corePreviousPage} from './core-reading.js?v=ep03-connected-cuts-20261023-r1';
 const demoMode=true;
@@ -286,7 +287,21 @@ function renderDirection(beat, { quiet = false } = {}) {
   syncSoundButton();
 }
 
-function openCoreEvidence(cue){const root=document.createElement('div');root.className='core-evidence';root.append(modalHeading(cue.board.title,'여기까지 보인 행동만 다시 살핍니다. 이야기의 선택이나 결말은 바뀌지 않습니다.'));for(const [key,value]of cue.board.rows){const p=document.createElement('p');p.textContent=key+' · '+value;root.append(p);}showModal(root,'evidence');}
+function openCoreEvidence(cue, selectedLabel = null){
+  const root=document.createElement('div');root.className='core-evidence';
+  root.append(modalHeading(cue.board.title,'여기까지 보인 행동만 다시 살핍니다. 이야기의 선택이나 결말은 바뀌지 않습니다.'));
+  for(const [key,value] of cue.board.rows){
+    if(selectedLabel && selectedLabel!==key)continue;
+    const clue=cue.board.kind==='clues' ? ep04ClueFor(key) : null;
+    if(clue){
+      const figure=document.createElement('figure');figure.className='core-evidence-figure';
+      const img=document.createElement('img');img.src=EP1_ASSETS[clue.asset];img.alt=clue.alt;
+      const caption=document.createElement('figcaption');caption.textContent=key+' · '+value;
+      figure.append(img,caption);root.append(figure);
+    }else{const p=document.createElement('p');p.textContent=key+' · '+value;root.append(p);}
+  }
+  showModal(root,'evidence');
+}
 function openVisual(visual) {
   const root = document.createElement('div'); root.append(modalHeading(visual.title || '장면 기록', visual.kicker || '이 장면에 나타난 정보'));
   const cgUrl = story.assets?.[visual.image];
