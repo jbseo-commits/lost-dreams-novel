@@ -9,16 +9,11 @@ export const SETTLEMENT_SOURCE = Object.freeze([
 ]);
 
 const SHOTS = Object.freeze(['offer','discover','withdraw','question','accept']);
-const sourceStarts = new WeakMap();
 export function settlementShotForBeat(chapter, index) {
   if (chapter?.id !== '3' || !Number.isInteger(index) || index < 0 || !Array.isArray(chapter.beats)) return null;
-  let start = sourceStarts.get(chapter);
-  if (start === undefined) {
-    const beats = chapter.beats;
-    start = beats.findIndex((beat, i) => beat.text === SETTLEMENT_SOURCE[0] &&
-      SETTLEMENT_SOURCE.every((text, offset) => beats[i + offset]?.text === text));
-    sourceStarts.set(chapter, start);
-  }
+  const beats = chapter.beats;
+  const start = beats.findIndex((beat, i) => beat.text === SETTLEMENT_SOURCE[0] &&
+    SETTLEMENT_SOURCE.every((text, offset) => beats[i + offset]?.text === text));
   const offset = index - start;
   return start < 0 || offset < 0 || offset >= SHOTS.length ? null :
     { start, index, shot: SHOTS[offset] };
