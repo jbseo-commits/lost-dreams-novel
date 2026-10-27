@@ -43,6 +43,8 @@ export async function buildPublicSite(sourceRoot,outputRoot,{copyRoot=true}={}){
  const original=JSON.parse(JSON.stringify(box.window.STORY)),raw=withTeaserCharacterAssets(publicDemoStory(original),EP1_ASSETS),story=normalizeStory(raw);
  const ids=new Set(DEMO_CHAPTER_IDS),keys=new Set(['teaserVideo','sea']);
  const storyKeys=new Set(['city']);
+ // This authored chapter-three insert uses canonical portraits outside the core cue tables.
+ if(ids.has('3'))for(const asset of ['seoinWorry','jiwooGuarded'])keys.add(asset);
  for(const c of story.chapters)for(let i=0;i<c.beats.length;i++){
   const b=c.beats[i];storyKeys.add(b.scene);storyKeys.add(b.portrait);storyKeys.add(b.direction?.visual?.image);
   for(const p of b.direction?.cast||[])storyKeys.add(p.id);
