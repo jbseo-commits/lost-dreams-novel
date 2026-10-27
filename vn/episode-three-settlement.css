@@ -34,7 +34,7 @@
 .ep03-settlement[data-shot="question"] .ep03-settlement-jiwoo{transform:translateX(-7%) scale(1.11)}
 .ep03-settlement[data-shot="accept"] .ep03-settlement-phone{left:50%;top:38%;transform:translate(-50%,-50%) rotate(0) scale(1.02);opacity:1}
 .ep03-settlement[data-shot="accept"] .ep03-settlement-figures img{filter:brightness(.5);opacity:.68}
-.ep03-settlement[data-motion="off"] *,@media (prefers-reduced-motion:reduce){.ep03-settlement *{animation:none!important;transition:none!important}}
+.ep03-settlement[data-motion="off"] *{animation:none!important;transition:none!important}
 @media(max-width:640px){
   .ep03-settlement-figures{inset:12% 0 30%}
   .ep03-settlement-figures img{height:108%;width:83%;bottom:-7%}
