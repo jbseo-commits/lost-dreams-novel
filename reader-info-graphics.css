@@ -142,3 +142,54 @@
 .reader-info-graphic.id-still .info-choice,
 .reader-info-graphic.id-still .info-choice>* { animation:none; }
 @media(max-width:420px) { .info-choices { gap:.5em; } .info-choice { padding:.65em .55em .7em; } }
+
+/* EP19 공동주방 새벽: 시간 막대가 지나가며 약속·수령·출차·도착이 차례로 켜진다. 최종 상태가 기본값이다. */
+.mo-axis { position:relative; height:10.6em; margin:.2em .4em 0; --y:5.1em; }
+.mo-line { position:absolute; left:0; right:0; top:var(--y); height:2px; background:#56706a; }
+.mo-tick { position:absolute; left:var(--x); top:calc(var(--y) - .3em); width:1px; height:.6em; background:#7d958e; font-style:normal; }
+.mo-tick em { position:absolute; top:-1.6em; left:0; color:#7f918b; font-size:.78em; font-style:normal; white-space:nowrap; }
+.mo-tick:last-of-type em { left:auto; right:0; }
+.mo-head { position:absolute; top:calc(var(--y) - 2.2em); left:100%; width:1px; height:4.4em; background:linear-gradient(#e9dcc0 0,#e9dcc055 100%); opacity:0; }
+.mo-mark { position:absolute; left:var(--x); top:var(--y); width:0; height:0; z-index:2; }
+.mo-mark::before { content:""; position:absolute; left:-.32em; top:-.32em; width:.64em; height:.64em; border-radius:50%; background:#c9d4cf; border:2px solid #121a18; }
+.mo-promise::before { background:#e2bd85; }
+.mo-box::before { border-radius:2px; background:#cdb48a; }
+.mo-depart::before { background:#9dcbc1; }
+.mo-arrive::before { background:#e0705a; }
+.mo-label { position:absolute; left:50%; transform:translateX(-50%); display:grid; justify-items:center; width:max-content; max-width:6.6em; text-align:center; line-height:1.25; }
+.mo-label b { font-variant-numeric:tabular-nums; white-space:nowrap; }
+.mo-label small { color:#c5cec9; font-size:.86em; }
+.mo-label.is-top { bottom:1.75em; }
+.mo-label.is-bottom { top:1.95em; }
+.mo-promise b { color:#f0d4a8; }
+.mo-arrive b { color:#f0a08c; }
+/* 출차한 자리: 두 대가 떠나고 점선 자리만 남는다. */
+.mo-trucks { position:absolute; left:var(--x); top:calc(var(--y) - 1.55em); display:flex; gap:.2em; transform:translateX(-50%); }
+.mo-trucks i { width:1.25em; height:.85em; border:1px dashed #9dcbc155; border-radius:2px; opacity:1; }
+.mo-trucks i::after { content:""; display:block; height:100%; background:#9dcbc1; border-radius:2px; opacity:0; }
+.mo-van { position:absolute; left:var(--x); top:calc(var(--y) + .55em); transform:translateX(-50%); }
+.mo-van i { display:none; }
+.mo-van::before { content:""; position:absolute; left:-.95em; top:-1.95em; width:1.9em; height:1em; border-radius:2px 5px 2px 2px; background:#e0705a; box-shadow:inset -.45em 0 0 #b5543f; }
+.mo-van::after { content:""; position:absolute; left:-.75em; top:-.98em; width:1.5em; height:.32em; background:radial-gradient(circle at .2em 50%,#121a18 .16em,transparent .17em),radial-gradient(circle at 1.3em 50%,#121a18 .16em,transparent .17em); }
+.mo-van { z-index:1; }
+.mo-note { color:#e7c2b6!important; }
+.reader-info-graphic.seen:not(.id-still) .mo-head { animation:mo-sweep 2.6s .1s linear both; }
+.reader-info-graphic.seen:not(.id-still) .mo-promise { animation:mo-pop .45s .95s ease-out both; }
+.reader-info-graphic.seen:not(.id-still) .mo-box { animation:mo-pop .45s 1.38s ease-out both; }
+.reader-info-graphic.seen:not(.id-still) .mo-depart { animation:mo-pop .45s 1.82s ease-out both; }
+.reader-info-graphic.seen:not(.id-still) .mo-trucks i::after { animation:mo-leave 1s 1.2s ease-in both; }
+.reader-info-graphic.seen:not(.id-still) .mo-trucks i:last-child::after { animation-delay:1.3s; }
+.reader-info-graphic.seen:not(.id-still) .mo-arrive { animation:mo-pop .4s 2.7s ease-out both; }
+.reader-info-graphic.seen:not(.id-still) .mo-van { animation:mo-drive .85s 2.2s cubic-bezier(.2,.7,.3,1) both; }
+.reader-info-graphic.seen:not(.id-still) .mo-note { animation:info-choice-text .4s 2.85s ease-out both; }
+@keyframes mo-sweep { 0% { left:0; opacity:1; } 92% { opacity:1; } 100% { left:100%; opacity:0; } }
+@keyframes mo-pop { from { opacity:0; transform:translateY(.25em); } to { opacity:1; transform:none; } }
+/* 출차 전까지 차가 서 있다가(불투명) 7시에 오른쪽으로 빠져나간다. */
+@keyframes mo-leave { 0%,62% { opacity:1; transform:none; } 100% { opacity:0; transform:translateX(3.2em); } }
+@keyframes mo-drive { from { opacity:0; transform:translateX(-4.5em); } 30% { opacity:1; } to { opacity:1; transform:translateX(-50%); } }
+.reader-info-graphic.id-still .mo-head,
+.reader-info-graphic.id-still .mo-mark,
+.reader-info-graphic.id-still .mo-trucks i::after,
+.reader-info-graphic.id-still .mo-van,
+.reader-info-graphic.id-still .mo-note { animation:none; }
+@media(max-width:420px) { .mo-label { max-width:5.9em; } .mo-label small { font-size:.82em; } }

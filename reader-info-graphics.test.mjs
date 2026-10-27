@@ -42,3 +42,10 @@ test('episode 19 practice map and A/B cards follow their source lines without la
  const css=await readFile(new URL('./reader-info-graphics.css',import.meta.url),'utf8');
  assert.match(css,/\.reader-info-graphic\.id-still \.info-choice/);assert.match(css,/@property --info-sweep/);
 });
+test('episode 19 morning axis shows promise, pickup, departure and late arrival without later facts',()=>{
+ const html=graphics.afterParagraph('19','차가 다 떠난 뒤에야 물건이 온다. 그런데 공동주방에 나간 안내문에는 오전 6시 전 도착이라고 버젓이 적혀 있었다.').join('');
+ assert.match(html,/data-info-kind="morning"/);
+ const text=html.replace(/<[^>]*>/g,' ');
+ for(const fact of ['06:00 전','06:30','07:00','7시 이후'])assert.ok(text.includes(fact),fact);
+ assert.doesNotMatch(text,/05:18|07:40|예비/);
+});

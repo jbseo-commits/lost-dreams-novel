@@ -3,7 +3,7 @@ window.ReaderInfoGraphics = (() => {
   const cues = [
     {ep:'19', anchor:'진짜 동네를 그대로 베껴 만든 연습 지도. 새벽 3시의 주택가였다.', kind:'dotmap', label:'연습 지도 · 새벽 3시 주택가', note:'붉게 번지는 구역 · 이대로 두면 꿈이 엉킴'},
     {ep:'19', anchor:'전부 한 번 끊었다가 다시 붙입니다. 확실히 고쳐집니다. 대신 끊는 순간 연결된 집은 전부 깹니다.', kind:'choices', label:'고칠 방법 두 가지', options:[['A','옆 동네 기계로 넘김','자는 사람은 안 깸','운이 나쁘면 옆 동네가 한동안 끊김'],['B','전부 끊었다가 다시 붙임','확실히 고쳐짐','연결된 집은 전부 깸']]},
-    {ep:'19', anchor:'공동주방에 나간 안내문에는 오전 6시 전 도착이라고 버젓이 적혀 있었다.', kind:'delivery', label:'한 주문의 약속·예상과 07:00 출차', points:[['06:00 전','안내 약속',25],['07:00 이후','시스템 예상',76]]},
+    {ep:'19', anchor:'공동주방에 나간 안내문에는 오전 6시 전 도착이라고 버젓이 적혀 있었다.', kind:'morning', label:'동부 사택 공동주방 · 그다음 날 새벽'},
     {ep:'19', anchor:'A를 누르자 옆 동네에 불이 몇 개 켜졌다. 서른여섯 집. 그것도 운이 나쁠 때 얘기였다.', kind:'compare', label:'선택에 따른 영향', left:'B', leftValue:'2,400집이 한꺼번에 깸', right:'A', rightValue:'36집 · 운이 나쁠 때'},
     {ep:'19-1', anchor:'5시 31분. 서인이 식품 담당자 대신 공동주방에 전화를 걸었다.', kind:'promise', label:'오후 현장 시간', points:[['17:06','벽시계'],['17:31','공동주방에 전화'],['17:40','답변 기한']]},
     {ep:'19-1', anchor:'05:18 도착. 07:00 전원 출차.', kind:'delivery', label:'다음 날 새벽 · 도착과 출차', points:[['05:18','실제 납품',8],['07:40','시스템 예상',67]]},
@@ -34,6 +34,20 @@ window.ReaderInfoGraphics = (() => {
     const tangle=`M${x-38} ${y-13} C${x-14} ${y-30} ${x+6} ${y+24} ${x-12} ${y+8} S${x+30} ${y-28} ${x+22} ${y-4} S${x-26} ${y+30} ${x+36} ${y+14}`;
     return `<svg class="info-dotmap" viewBox="0 0 320 156" role="img" aria-label="격자 지도 한 구역에서 선이 붉게 엉킴"><g class="info-map-lines">${lines}</g><path class="info-map-tangle" d="${tangle}" pathLength="1"/><g class="info-map-dots">${dots}</g></svg>`;
   }
+  // 새벽 시간축을 지나가며 약속 → 도시락 → 출차 → 재료 도착 순서로 보여 준다. 05:00~08:00.
+  function morning() {
+    const at=t=>{const [h,m]=t.split(':').map(Number);return ((h-5)*60+m)/180*100;};
+    const mark=(cls,x,top,time,role)=>`<span class="mo-mark ${cls}" style="--x:${x}%"><span class="mo-label ${top?'is-top':'is-bottom'}"><b>${time}</b><small>${role}</small></span></span>`;
+    const ticks=['05:00','06:00','07:00','08:00'].map((t,i,all)=>`<i class="mo-tick" style="--x:${at(t)}%">${i===0||i===all.length-1?`<em>새벽 ${Number(t.slice(0,2))}시</em>`:''}</i>`).join('');
+    return `<div class="mo-axis" role="img" aria-label="안내문은 6시 전 도착, 6시 반 도시락 수령, 7시 기사 출차, 재료는 7시 이후 도착 예상"><span class="mo-line"></span>${ticks}<span class="mo-head"></span>`
+      +mark('mo-promise',at('06:00'),true,'06:00 전','안내문 약속')
+      +mark('mo-box',at('06:30'),false,'06:30','도시락 수령')
+      +mark('mo-depart',at('07:00'),true,'07:00','기사 출차')
+      +`<span class="mo-trucks" style="--x:${at('07:00')}%"><i></i><i></i></span>`
+      +mark('mo-arrive',at('07:25'),false,'7시 이후','재료 도착 예상')
+      +`<span class="mo-van" style="--x:${at('07:25')}%"><i>두부·채소</i></span></div>`
+      +`<p class="info-note mo-note">차가 다 떠난 뒤에 재료가 온다</p>`;
+  }
   const choice = ([key,how,gain,cost]) => `<div class="info-choice" data-choice="${esc(key)}"><b>${esc(key)}</b><strong>${esc(how)}</strong><span class="info-choice-gain">${esc(gain)}</span><span class="info-choice-cost">${esc(cost)}</span></div>`;
   const point = ([time,label], i, active) => `<li class="info-point${i===active?' is-active':''}"><span class="info-time">${esc(time)}</span><span class="info-role">${esc(label)}</span></li>`;
   function markup(c) {
@@ -49,6 +63,7 @@ window.ReaderInfoGraphics = (() => {
     if(c.kind==='progress') body=`<div class="info-progress"><span>${esc(c.title)}</span><strong><i>${esc(c.from)}</i><b aria-hidden="true">→</b><i>${esc(c.to)}</i></strong></div>`;
     if(c.kind==='dotmap') body=`${dotmap()}<p class="info-note">${esc(c.note)}</p>`;
     if(c.kind==='choices') body=`<div class="info-choices">${c.options.map(choice).join('')}</div>`;
+    if(c.kind==='morning') body=morning();
     if(c.kind==='zero') body=`<div class="info-zero"><strong>${esc(c.value)}</strong><span>${esc(c.note)}</span></div>`;
     return `<figure class="reader-info-graphic reveal" data-info-kind="${esc(c.kind)}" aria-label="${esc(c.label)}"><figcaption>${esc(c.label)}</figcaption>${body}</figure>`;
   }
