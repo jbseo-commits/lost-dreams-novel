@@ -1,3 +1,4 @@
+import {ep04ClueFor} from './episode-four-clues.js?v=ep04-clue-gallery-20261028-r1';
 export class EpisodeOneStage {
   constructor(host,assets,{onInspect,onEvidence}={}){
     this.host=host;this.assets=assets;this.currentCg='';this.currentScene=-1;this.actorState=new Map();
@@ -24,7 +25,35 @@ export class EpisodeOneStage {
     stage.classList.toggle('core-scene',Boolean(cue.core));
     this.host.dataset.pressure=cue.pressure||'';
     this.board.hidden=!cue.board||Boolean(cue.cg);this.boardCue=cue.board?cue:null;
-    if(cue.board&&!cue.cg){const signature=JSON.stringify(cue.board);if(this.board.dataset.signature!==signature){this.board.replaceChildren();const title=document.createElement('h3');title.textContent=cue.board.title;this.board.append(title);for(const [label,value]of cue.board.rows){const row=document.createElement('p'),key=document.createElement('span'),body=document.createElement('strong');key.textContent=label;body.textContent=value;row.append(key,body);this.board.append(row);}if(cue.board.kind==='clues')this.board.append(this.boardButton);this.board.dataset.signature=signature;}this.board.dataset.kind=cue.board.kind;}
+    if(cue.board&&!cue.cg){
+      const signature=JSON.stringify(cue.board);
+      if(this.board.dataset.signature!==signature){
+        this.board.replaceChildren();
+        const title=document.createElement('h3');title.textContent=cue.board.title;this.board.append(title);
+        if(cue.board.kind==='clues'){
+          const eyebrow=document.createElement('p');eyebrow.className='core-clue-eyebrow';eyebrow.textContent='아르카디아 협상';this.board.insertBefore(eyebrow,title);
+          const gallery=document.createElement('div');gallery.className='core-clue-gallery';
+          for(const [label,value] of cue.board.rows){
+            const clue=ep04ClueFor(label);if(!clue)continue;
+            const button=document.createElement('button');button.className='core-clue-card';button.type='button';button.setAttribute('aria-label',label+' 단서 컷신 보기');
+            const img=document.createElement('img');img.src=this.assets[clue.asset];img.alt=clue.alt;img.loading='eager';img.decoding='async';
+            const play=document.createElement('span');play.className='core-clue-play';play.textContent='▶';play.setAttribute('aria-hidden','true');
+            const frame=document.createElement('span');frame.className='core-clue-image';frame.append(img,play);
+            const heading=document.createElement('strong');heading.className='core-clue-name';heading.textContent=label;
+            const detail=document.createElement('span');detail.className='core-clue-detail';detail.textContent=value;
+            button.append(frame,heading,detail);
+            button.addEventListener('click',event=>{event.stopPropagation();if(onEvidence)onEvidence(cue,label);});
+            gallery.append(button);
+          }
+          this.board.append(gallery,this.boardButton);
+        }else for(const [label,value] of cue.board.rows){
+          const row=document.createElement('p'),key=document.createElement('span'),body=document.createElement('strong');
+          key.textContent=label;body.textContent=value;row.append(key,body);this.board.append(row);
+        }
+        this.board.dataset.signature=signature;
+      }
+      this.board.dataset.kind=cue.board.kind;
+    }
     stage.classList.toggle('episode-two',cue.chapterId==='2');
     this.host.dataset.chapterId=cue.chapterId||'1';
     this.host.dataset.holdMotion=String(Boolean(cue.holdMotion));
