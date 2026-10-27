@@ -108,3 +108,37 @@
 
 .info-timeline-six .info-point { animation-duration:1.4s!important; }
 .info-timeline-six .info-point:nth-child(2){animation-delay:.1s!important}.info-timeline-six .info-point:nth-child(3){animation-delay:.2s!important}.info-timeline-six .info-point:nth-child(4){animation-delay:.3s!important}.info-timeline-six .info-point:nth-child(5){animation-delay:.4s!important}.info-timeline-six .info-point:nth-child(6){animation-delay:.5s!important}
+
+/* EP19 연습 지도: 집(점)과 꿈이 흐르는 선. 붉은 구역은 거리순으로 번진다. 최종 상태가 기본값이다. */
+.info-dotmap { display:block; width:100%; height:auto; overflow:visible; }
+.info-map-lines path { stroke:#7f9c95; stroke-width:.5; opacity:.32; fill:none; }
+.info-map-dots circle { fill:#8fb4ab; opacity:.55; }
+.info-map-dots circle.is-red { fill:#e0705a; opacity:1; }
+.info-map-tangle { fill:none; stroke:#e0705a; stroke-width:1.1; stroke-linecap:round; opacity:.85; stroke-dasharray:1; stroke-dashoffset:0; }
+.reader-info-graphic.seen:not(.id-still) .info-map-dots circle.is-red { animation:info-dot-red .9s var(--d) ease-out both; }
+.reader-info-graphic.seen:not(.id-still) .info-map-tangle { animation:info-tangle 2.4s .5s ease-in-out both; }
+@keyframes info-dot-red { 0% { fill:#8fb4ab; opacity:.55; } 55% { fill:#ff8a6e; opacity:1; } 100% { fill:#e0705a; opacity:1; } }
+@keyframes info-tangle { from { stroke-dashoffset:1; } to { stroke-dashoffset:0; } }
+
+/* EP19 A/B: 테두리가 한 바퀴 채워진 뒤 설명이 나온다. A 다음 B. */
+@property --info-sweep { syntax:'<angle>'; inherits:false; initial-value:360deg; }
+.info-choices { display:grid; grid-template-columns:1fr 1fr; gap:.7em; }
+.info-choice { --info-sweep:360deg; position:relative; min-width:0; display:grid; align-content:start; gap:.35em; padding:.75em .7em .8em; border:1.5px solid transparent; border-radius:3px;
+  background:linear-gradient(#121a18,#121a18) padding-box, conic-gradient(from -90deg at 50% 50%, #9dcbc1 var(--info-sweep), #ffffff18 0) border-box; }
+.info-choice[data-choice="B"] { background:linear-gradient(#121a18,#121a18) padding-box, conic-gradient(from -90deg at 50% 50%, #e2bd85 var(--info-sweep), #ffffff18 0) border-box; }
+.info-choice>b { font:600 1.35em/1 ui-monospace,monospace; color:#9dcbc1; }
+.info-choice[data-choice="B"]>b { color:#e2bd85; }
+.info-choice>strong { font-weight:600; line-height:1.35; }
+.info-choice-gain { color:#c8d6d0; }
+.info-choice-cost { padding-top:.35em; border-top:1px solid #ffffff1c; color:#e7b3a3; line-height:1.35; }
+.reader-info-graphic.seen:not(.id-still) .info-choice { animation:info-sweep 1.05s ease-in-out both; }
+.reader-info-graphic.seen:not(.id-still) .info-choice[data-choice="B"] { animation-delay:1.25s; }
+.reader-info-graphic.seen:not(.id-still) .info-choice>* { animation:info-choice-text .7s .9s ease-out both; }
+.reader-info-graphic.seen:not(.id-still) .info-choice[data-choice="B"]>* { animation-delay:2.15s; }
+@keyframes info-sweep { from { --info-sweep:0deg; } to { --info-sweep:360deg; } }
+@keyframes info-choice-text { from { opacity:0; transform:translateY(.15em); } to { opacity:1; transform:none; } }
+.reader-info-graphic.id-still .info-map-dots circle,
+.reader-info-graphic.id-still .info-map-tangle,
+.reader-info-graphic.id-still .info-choice,
+.reader-info-graphic.id-still .info-choice>* { animation:none; }
+@media(max-width:420px) { .info-choices { gap:.5em; } .info-choice { padding:.65em .55em .7em; } }

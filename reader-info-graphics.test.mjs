@@ -32,3 +32,13 @@ test('bold source emphasis does not break the actual 20-1 alarm cue',async()=>{
  const css=await readFile(new URL('./reader-info-graphics.css',import.meta.url),'utf8');
  assert.match(css,/\.reader-info-graphic\.seen:not\(\.id-still\) \.info-row/);
 });
+test('episode 19 practice map and A/B cards follow their source lines without later numbers',async()=>{
+ const map=graphics.afterParagraph('19','진짜 동네를 그대로 베껴 만든 연습 지도. 새벽 3시의 주택가였다. 집집마다 꿈이 흘러드는 가는 선이 지도 위에 깔려 있는데, 한 구역에서 그 선이 붉게 번져 가고 있었다. 이대로 두면 그 동네 꿈이 죄다 엉킨다.').join('');
+ assert.match(map,/data-info-kind="dotmap"/);assert.match(map,/class="is-red"/);
+ const cards=graphics.afterParagraph('19','“전부 한 번 끊었다가 다시 붙입니다. 확실히 고쳐집니다. 대신 끊는 순간 연결된 집은 전부 깹니다.”').join('');
+ assert.match(cards,/data-choice="A"[\s\S]*data-choice="B"/);
+ for(const html of [map,cards])assert.doesNotMatch(html.replace(/<[^>]*>/g,' '),/2,400|36|3\.8|18분/);
+ assert.equal(graphics.afterParagraph('19','“A. 이 구역 꿈을 옆 동네 기계로 넘깁니다.”').length,0);
+ const css=await readFile(new URL('./reader-info-graphics.css',import.meta.url),'utf8');
+ assert.match(css,/\.reader-info-graphic\.id-still \.info-choice/);assert.match(css,/@property --info-sweep/);
+});

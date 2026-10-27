@@ -1,6 +1,8 @@
 // Web-only information graphics: relationships are derived from already-read source paragraphs.
 window.ReaderInfoGraphics = (() => {
   const cues = [
+    {ep:'19', anchor:'진짜 동네를 그대로 베껴 만든 연습 지도. 새벽 3시의 주택가였다.', kind:'dotmap', label:'연습 지도 · 새벽 3시 주택가', note:'붉게 번지는 구역 · 이대로 두면 꿈이 엉킴'},
+    {ep:'19', anchor:'전부 한 번 끊었다가 다시 붙입니다. 확실히 고쳐집니다. 대신 끊는 순간 연결된 집은 전부 깹니다.', kind:'choices', label:'고칠 방법 두 가지', options:[['A','옆 동네 기계로 넘김','자는 사람은 안 깸','운이 나쁘면 옆 동네가 한동안 끊김'],['B','전부 끊었다가 다시 붙임','확실히 고쳐짐','연결된 집은 전부 깸']]},
     {ep:'19', anchor:'공동주방에 나간 안내문에는 오전 6시 전 도착이라고 버젓이 적혀 있었다.', kind:'delivery', label:'한 주문의 약속·예상과 07:00 출차', points:[['06:00 전','안내 약속',25],['07:00 이후','시스템 예상',76]]},
     {ep:'19', anchor:'A를 누르자 옆 동네에 불이 몇 개 켜졌다. 서른여섯 집. 그것도 운이 나쁠 때 얘기였다.', kind:'compare', label:'선택에 따른 영향', left:'B', leftValue:'2,400집이 한꺼번에 깸', right:'A', rightValue:'36집 · 운이 나쁠 때'},
     {ep:'19-1', anchor:'5시 31분. 서인이 식품 담당자 대신 공동주방에 전화를 걸었다.', kind:'promise', label:'오후 현장 시간', points:[['17:06','벽시계'],['17:31','공동주방에 전화'],['17:40','답변 기한']]},
@@ -21,6 +23,18 @@ window.ReaderInfoGraphics = (() => {
     {ep:'22-1', anchor:'첫 숫자가 0에서 올라가기 시작했다.', kind:'zero', label:'게시 이후', value:'0', note:'첫 숫자가 움직이기 시작함'},
   ];
   const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  // 격자 위 집(점)과 가는 선. 붉은 구역은 중심에서 거리순으로 번진다.
+  function dotmap() {
+    const cols=24, rows=11, gap=13, ox=10, oy=12, cx=16, cy=5, red=3.3;
+    let lines='', dots='';
+    for(let r=0;r<rows;r++) lines+=`<path d="M${ox} ${oy+r*gap} H${ox+(cols-1)*gap}"/>`;
+    for(let r=0;r<rows;r++) for(let c=0;c<cols;c++){const d=Math.hypot(c-cx,(r-cy)*1.15);
+      dots+=`<circle cx="${ox+c*gap}" cy="${oy+r*gap}" r="1.7"${d<=red?` class="is-red" style="--d:${(d*.38).toFixed(2)}s"`:''}/>`;}
+    const x=ox+cx*gap, y=oy+cy*gap;
+    const tangle=`M${x-38} ${y-13} C${x-14} ${y-30} ${x+6} ${y+24} ${x-12} ${y+8} S${x+30} ${y-28} ${x+22} ${y-4} S${x-26} ${y+30} ${x+36} ${y+14}`;
+    return `<svg class="info-dotmap" viewBox="0 0 320 156" role="img" aria-label="격자 지도 한 구역에서 선이 붉게 엉킴"><g class="info-map-lines">${lines}</g><path class="info-map-tangle" d="${tangle}" pathLength="1"/><g class="info-map-dots">${dots}</g></svg>`;
+  }
+  const choice = ([key,how,gain,cost]) => `<div class="info-choice" data-choice="${esc(key)}"><b>${esc(key)}</b><strong>${esc(how)}</strong><span class="info-choice-gain">${esc(gain)}</span><span class="info-choice-cost">${esc(cost)}</span></div>`;
   const point = ([time,label], i, active) => `<li class="info-point${i===active?' is-active':''}"><span class="info-time">${esc(time)}</span><span class="info-role">${esc(label)}</span></li>`;
   function markup(c) {
     let body='';
@@ -33,6 +47,8 @@ window.ReaderInfoGraphics = (() => {
     if(c.kind==='rows'||c.kind==='alarms') body=`<div class="info-rows">${c.rows.map(([a,b])=>`<div class="info-row"><span>${esc(a)}</span><strong>${esc(b)}</strong></div>`).join('')}</div>`;
     if(c.kind==='building') body=`<div class="info-building"><div class="info-levels">${c.levels.map(([floor,state])=>`<div class="info-level ${state==='완료'?'is-done':''}"><b>${esc(floor)}</b><span>${esc(state)}</span></div>`).join('')}</div><strong class="info-count">${esc(c.count)}</strong></div>`;
     if(c.kind==='progress') body=`<div class="info-progress"><span>${esc(c.title)}</span><strong><i>${esc(c.from)}</i><b aria-hidden="true">→</b><i>${esc(c.to)}</i></strong></div>`;
+    if(c.kind==='dotmap') body=`${dotmap()}<p class="info-note">${esc(c.note)}</p>`;
+    if(c.kind==='choices') body=`<div class="info-choices">${c.options.map(choice).join('')}</div>`;
     if(c.kind==='zero') body=`<div class="info-zero"><strong>${esc(c.value)}</strong><span>${esc(c.note)}</span></div>`;
     return `<figure class="reader-info-graphic reveal" data-info-kind="${esc(c.kind)}" aria-label="${esc(c.label)}"><figcaption>${esc(c.label)}</figcaption>${body}</figure>`;
   }
