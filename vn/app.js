@@ -20,7 +20,7 @@ import { createTitleAtmosphere } from './title-atmosphere.js';
 import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep03-connected-cuts-20261023-r1';
 import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep03-connected-cuts-20261023-r1';
 import { syncEpisodeTwoCopy } from './episode-two-copyfix.js?v=20261021-a';
-import { eventCutsceneDirection, EPISODE_CUTSCENES } from './episode-cutscenes.js?v=ep03-connected-cuts-20261023-r1';
+import { eventCutsceneDirection, EPISODE_CUTSCENES, episodeSixRooftopStart, EPISODE_SIX_ROOFTOP_FRAMES } from './episode-cutscenes.js?v=ep03-connected-cuts-20261023-r1';
 import {EpisodeThreeSettlement} from './episode-three-settlement.js?v=ep03-settlement-20261027-r1';
 
 import {coreSceneDirection,isOptionalObservation,CORE_CUTS,CORE_MOMENTS,CORE_DEMO_STORAGE_SUFFIX} from './core-demo.js?v=ep03-connected-cuts-20261023-r1';
@@ -68,7 +68,10 @@ const performanceCue=()=>currentEpisodeCue||currentCoreCue;
 let currentEventCutscene = null;
 const preparedCutscenes=new Set();
 function prepareNearbyCutscenes(chapter,index){
-  for(const cut of EPISODE_CUTSCENES.filter(c=>c.chapter===chapter.id&&c.end>=index).slice(0,2)){
+  const nearby=EPISODE_CUTSCENES.filter(c=>c.chapter===chapter.id&&c.end>=index).slice(0,2);
+  const rooftopStart=episodeSixRooftopStart(chapter);
+  if(rooftopStart>=0&&index>=rooftopStart-6&&index<=rooftopStart+2)nearby.push(...EPISODE_SIX_ROOFTOP_FRAMES);
+  for(const cut of nearby){
     const path=EP1_ASSETS[cut.cg];if(!path||preparedCutscenes.has(path))continue;
     preparedCutscenes.add(path);const image=new Image();image.src=path;
   }
@@ -734,6 +737,8 @@ function openChapters() {
 
 function chapterMoments(chapter) {
   const inserts=[...EPISODE_CUTSCENES,...CORE_CUTS].filter(c=>c.chapter===chapter.id).map(c=>({beatIndex:c.start,place:`컷신 · ${c.alt}`,cutscene:true,authored:true}));
+  const rooftopStart=episodeSixRooftopStart(chapter);
+  if(rooftopStart>=0)inserts.push({beatIndex:rooftopStart,place:'컷신 · 도시와 광고 송출탑',cutscene:true,authored:true});
   const merge=moments=>[...new Map([...moments,...inserts].map(m=>[m.beatIndex,m])).values()].sort((a,b)=>a.beatIndex-b.beatIndex);
   if (episodeOneDirection(chapter, 0)) return merge(EPISODE_ONE_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true})));
   if (episodeTwoDirection(chapter, 0)) return merge(EPISODE_TWO_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true})));
