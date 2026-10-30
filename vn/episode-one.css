@@ -190,3 +190,16 @@
     animation:none!important;
   }
 }
+
+
+/* Episode 6 rooftop epilogue: the city and the broadcast tower are the subject.
+   Letterbox each complete 16:9 painting on portrait screens, instead of cropping
+   out Seo-in, Do-yun, or the antenna at the sides. The ambient layer remains full bleed. */
+@media(max-width:640px) and (orientation:portrait){
+  .ep1-stage[data-cutscene="ep06RooftopTower"] .ep1-cg img{
+    top:12vh;
+    height:58vh;
+    object-fit:contain;
+    object-position:center;
+  }
+}

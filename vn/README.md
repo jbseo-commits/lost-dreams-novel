@@ -1,3 +1,5 @@
+2026-10-30 6화 옥상 결말 컷신: '서인은 도시를 내려다봤다'부터 '광고 송출탑은 평소처럼 빛났다'까지 원문 3행에 서인·도윤의 옥상 도시 전경→광고 송출탑 전용 원화 2컷을 연결했습니다. 신규 원화 2장은 1280×720 WebP이며 `assets/cutscenes/ep06-rooftop-silence.webp`, `assets/cutscenes/ep06-ad-tower.webp`입니다. 원화 해시·크기·출처는 `assets/cutscenes/ep06-rooftop-art-provenance.json`에 기록합니다. 원문·저장 좌표·main은 변경하지 않았습니다. 이미지 파일 정합성 자동 검사 외 실기기 모바일 플레이와 실제 배포는 별도 확인이 필요합니다.
+
 2026-10-27 3화 ‘지우의 집’ 정산 화면 컷신(별도 PR): 지우의 휴대폰 제시→서인의 날짜 발견/거절→지우가 팔을 내림→반문→화면을 함께 읽는 과정을 원문 연속 5비트에 연동했습니다. 기존 정본 인물 원화와 읽을 수 있는 DOM 단말 UI를 사용한 동작형 1차 구현이며 새 채색 CG는 아닙니다. 원문·진행 좌표·비밀 설정 불변. [연출 카드 및 출고 게이트](../planning/ep003-family-settlement-cutscene-20261027.md).
 
 2026-10-23 19~22화 이해형 컷신은 공통 캐시 버전 `ep03-cinematic-20261023-r3`와 원문 위치, 웹/VN 원화 연결, wide/detail 전환을 사용합니다. [원문과 실제 Web/VN 컷 비교](notes/sequence19-22-review.html) · [시퀀스 설계/출고 조건](../planning/ep019-022-cinematic-sequence-20261023.md).
