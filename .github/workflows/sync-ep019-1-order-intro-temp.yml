@@ -1,0 +1,42 @@
+name: 19-1화 대사 일시 동기화
+on:
+  push:
+    branches:
+      - fix/ep019-1-order-intro-20261031
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: 원고와 VN 대사 원문 일치
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = 'vn/story-data.js';
+          const before = '“딱 맞춰 오셨네. 지금 난리 난 게 그 주문이에요.”';
+          const after = '“마침 잘 오셨네요. 어제 전화하신 공동주방 납품 건이에요.”';
+          const source = fs.readFileSync(path, 'utf8');
+          if (source.split(before).length !== 2 || source.includes(after)) {
+            throw Error('VN 대사 원문 1건을 확인하지 못했습니다');
+          }
+          fs.writeFileSync(path, source.replace(before, after), 'utf8');
+          NODE
+      - name: 비주얼노벨 테스트
+        run: npm test --prefix vn
+      - name: 변경사항 기록 및 임시 워크플로 제거
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vn/story-data.js
+          git rm .github/workflows/sync-ep019-1-order-intro-temp.yml
+          git commit -m "비주얼노벨: 19-1화 주문 도입 대사 동기화"
+          git push origin HEAD:fix/ep019-1-order-intro-20261031
