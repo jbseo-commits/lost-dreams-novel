@@ -46,6 +46,9 @@ export const EP1_ASSETS = Object.freeze({
   settlementHands:'assets/cutscenes/settlement-hands.webp',
   sevenSeconds:'assets/cutscenes/seven-seconds.webp',
   breadChoice:'assets/cutscenes/bread-choice.webp',
+  // Episode 6 rooftop epilogue: two separate source paintings, not a reused character close-up.
+  ep06CitySilence:'assets/city.webp',
+  ep06AdTower:'assets/dreamtower.webp',
   sandShoe:'assets/cutscenes/sand-shoe.webp',
   unpricedSleep:'assets/cutscenes/unpriced-sleep.webp',
   decisionDoor:'assets/cutscenes/decision-door.webp',
