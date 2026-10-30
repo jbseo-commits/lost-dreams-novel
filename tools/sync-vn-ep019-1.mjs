@@ -1,4 +1,4 @@
-// Synchronize the separately authored VN episode 19-1 with its canonical manuscript.
+// Synchronize a separately authored VN chapter with its canonical manuscript.
 // Preserve the other 127 chapters verbatim at the data level. Re-align source
 // metadata and cutscene anchors, never rewrite the manuscript.
 import fs from 'node:fs';
