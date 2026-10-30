@@ -351,7 +351,7 @@
       "k": 38,
       "text": "“배송 경로 확보라면서요. 그래서 차가 몇 시에 오는데요?”",
       "kind": "dialogue",
-      "speaker": "서인",
+      "speaker": "식품 담당자",
       "sourceLine": 81,
       "place": "냉장동 3번 문",
       "scene": "depot"
@@ -396,7 +396,7 @@
       "k": 43,
       "text": "“우리가 못 보내는 건데 고객이 취소한 걸로 남기라고요?”",
       "kind": "dialogue",
-      "speaker": "서인",
+      "speaker": "식품 담당자",
       "sourceLine": 91,
       "place": "냉장동 3번 문",
       "scene": "depot"
@@ -414,7 +414,7 @@
       "k": 45,
       "text": "“차를 따로 빼는 건 기지 판단입니다. 추가 비용도 기지에서 내시고요.”",
       "kind": "dialogue",
-      "speaker": "서인",
+      "speaker": "운영팀 남자",
       "sourceLine": 95,
       "place": "냉장동 3번 문",
       "scene": "depot"
@@ -441,7 +441,7 @@
       "k": 48,
       "text": "“근처에서 살 수도 있잖습니까?”",
       "kind": "dialogue",
-      "speaker": "식품 담당자",
+      "speaker": "서인",
       "sourceLine": 101,
       "place": "냉장동 3번 문",
       "scene": "depot"
@@ -468,7 +468,7 @@
       "k": 51,
       "text": "“기사들은 다른 데서 먹으면 되지 않나요?”",
       "kind": "dialogue",
-      "speaker": "식품 담당자",
+      "speaker": "서인",
       "sourceLine": 107,
       "place": "냉장동 3번 문",
       "scene": "depot"
@@ -477,7 +477,7 @@
       "k": 52,
       "text": "“아이 데리고 오는 기사들도 있어요. 다섯을 그냥 굶기고 운전대 잡으라고 할 순 없잖아요. 다른 데서 밥 구하러 흩어지면 교대가 밀리고, 그 차들이 맡은 다음 배송도 늦어집니다.”",
       "kind": "dialogue",
-      "speaker": "서인",
+      "speaker": "식품 담당자",
       "sourceLine": 109,
       "place": "냉장동 3번 문",
       "scene": "depot"
@@ -765,7 +765,7 @@
       "k": 84,
       "text": "“잠깐만. 차 번호부터 받아.”",
       "kind": "dialogue",
-      "speaker": "서인",
+      "speaker": "공동주방 책임자",
       "sourceLine": 173,
       "place": "물류기지 배차실",
       "scene": "office"
@@ -792,7 +792,7 @@
       "k": 87,
       "text": "“두부하고 채소는 주문한 양 그대로 싣습니다.”",
       "kind": "dialogue",
-      "speaker": "공동주방 책임자",
+      "speaker": "서인",
       "sourceLine": 179,
       "place": "물류기지 배차실",
       "scene": "office"
@@ -801,7 +801,7 @@
       "k": 88,
       "text": "“알겠어요. 아침에 확인할게요.”",
       "kind": "dialogue",
-      "speaker": "예비차 기사",
+      "speaker": "공동주방 책임자",
       "sourceLine": 181,
       "place": "물류기지 배차실",
       "scene": "office"
@@ -1223,8 +1223,8 @@
     {
       "k": 135,
       "text": "배차 담당이 무전기를 고쳐 쥐었다.",
-      "kind": "dialogue",
-      "speaker": "서인",
+      "kind": "narration",
+      "speaker": "",
       "sourceLine": 277,
       "place": "물류기지 배차실",
       "scene": "office"
