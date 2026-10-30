@@ -22,12 +22,15 @@ jobs:
         with:
           node-version: '20'
       - name: 최신 정본에서 VN 데이터 및 19-1화 컷신 좌표 갱신
-        run: node tools/sync-vn-ep019-1.mjs
+        run: |
+          for chapter in 19 19-1 20 20-1 21 21-1 22; do
+            node tools/sync-vn-ep019-1.mjs "$chapter"
+          done
       - name: 정본 동기화 결과 커밋
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add vn/story-data.js vn/episode-cutscenes.js vn/notes/ep019-1-source-sync-review.json
+          git add vn/story-data.js vn/episode-cutscenes.js vn/notes/ep0*-source-sync-review.json
           if ! git diff --cached --quiet; then
             git commit -m "데이터: 19-1화 최신 원고와 컷신 위치 동기화"
             git push origin HEAD:fix/vn-ep019-1-source-sync-20261030
