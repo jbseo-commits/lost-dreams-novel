@@ -1,0 +1,52 @@
+name: 19-1화 납품 위기 문단 동기화
+on:
+  push:
+    branches:
+      - fix/ep019-1-ingredient-focus-20261031
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: 승인 문장 국소 교체 및 데이터 정합성 검증
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const original="어제 감사 자료에서 발견한 식재료 주문이었다. 새벽 6시 전에 두부와 채소가 와야 기사들이 6시 반에 도시락을 받아 갈 수 있는데, 시스템의 예상 도착은 7시 이후였다.";
+          const revised="어제 감사 자료에서 본 공동주방 납품 건이었다. 새벽 6시까지 식재료가 도착해야 기사들이 6시 반에 도시락을 받아 갈 수 있었다. 그런데 시스템의 예상 도착은 7시 이후였다.";
+          const paths=['manuscript/ep019-1.md','vn/story-data.js','vn/notes/ep019-1-source-sync-review.json'];
+          for(const file of paths){
+            const source=fs.readFileSync(file,'utf8');
+            if(source.split(original).length !== 2) throw Error(file+': 기존 문단이 정확히 한 번 나타나지 않습니다');
+            const updated=source.replace(original,revised);
+            if(updated.split(revised).length !== 2) throw Error(file+': 교체 검증 실패');
+            fs.writeFileSync(file,updated,'utf8');
+          }
+          const log='CHANGELOG.md';
+          const before=fs.readFileSync(log,'utf8');
+          fs.writeFileSync(log,"- 2026-10-31 · ChatGPT · 작가 승인: 19-1화 공동주방 납품 설명에서 '두부와 채소' 나열을 빼고 06:00 납품·06:30 도시락 수령·07:00 이후 도착 예상의 시각 충돌에 집중하도록 교체. 원고·VN 정본·원문 일치 기록을 동기화하고 문단·비트 수와 장면 좌표는 유지. 물품의 구체성은 후반 상차 행동에 남김.\\n".replace(/\\n/g,'\n')+before,'utf8');
+          const manuscript=fs.readFileSync(paths[0],'utf8');
+          const data=fs.readFileSync(paths[1],'utf8');
+          const notes=JSON.parse(fs.readFileSync(paths[2],'utf8'));
+          if(!manuscript.includes(revised)||!data.includes(revised)||!notes.beats.some(b=>b.text===revised)) throw Error('세 정본 불일치');
+          console.log('PASS: manuscript, vn, notes / 문단·비트 수 불변');
+          NODE
+      - name: 비주얼 노벨 테스트
+        run: npm test --prefix vn
+      - name: 결과 커밋 및 임시 워크플로 자체 삭제
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manuscript/ep019-1.md vn/story-data.js vn/notes/ep019-1-source-sync-review.json CHANGELOG.md
+          git rm .github/workflows/temp-ep019-1-ingredient-fix.yml
+          git commit -m "원고: 19-1화 납품 문단 시각 충돌 중심으로 명료화"
+          git push origin HEAD:fix/ep019-1-ingredient-focus-20261031
