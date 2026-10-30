@@ -69,8 +69,8 @@ test('reflowed event cuts retain their original action anchors wherever the manu
   ];
   for(const [cg,id,start,end,anchor,endAnchor=anchor] of expected){
     const cut=EPISODE_CUTSCENES.find(item=>item.cg===cg);assert.ok(cut,cg);
-    const point=id==='19-1'?chapter(id).beats.findIndex(b=>b.text===anchor):start;
-    const finish=id==='19-1'?chapter(id).beats.findIndex((b,i)=>i>=point&&b.text===endAnchor):end;
+    const point=['19-1','20'].includes(id)?chapter(id).beats.findIndex(b=>b.text===anchor):start;
+    const finish=['19-1','20'].includes(id)?chapter(id).beats.findIndex((b,i)=>i>=point&&b.text===endAnchor):end;
     assert.ok(point>=0&&finish>=point,cg);
     assert.equal(cut.chapter,id);assert.equal(cut.start,point,cg);assert.equal(cut.end,finish,cg);
     assert.equal(cut.anchor,anchor,cg);assert.equal(cut.endAnchor,endAnchor,cg);
