@@ -1,0 +1,28 @@
+{
+  "title": "6화 옥상 결말 시네마틱 전용 CG",
+  "production_date": "2026-10-30",
+  "origin": "AI generated original artwork for this scene; two matching 16:9 scenes",
+  "license_status": "user-requested original generation; provenance recorded for the project",
+  "scene": "manuscript/ep006.md — 서인은 도시를 내려다봤다. / 아무도 구해 달라고 소리치지 않았다. / 광고 송출탑은 평소처럼 빛났다.",
+  "output_files": [
+    {
+      "path": "ep06-rooftop-silence.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 93262,
+      "blob_sha": "fcb82e0d3d9bf2f17bfa2d09fa4d079869aa7e3d",
+      "subject": "서인과 도윤을 뒤에서 바라본 옥상 전경, 인물보다 불 밝힌 도시의 무심함을 강조"
+    },
+    {
+      "path": "ep06-ad-tower.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 109556,
+      "blob_sha": "39b15257c6a2a271ef040d421d77dab2e6734630",
+      "subject": "옥상 시점의 도시, 빛나는 광고 송출탑"
+    }
+  ],
+  "original_render": "1672x941 PNG, stored in the generating conversation's source archive; this GitHub PR contains optimized 1280x720 WebP copies",
+  "restrictions": "Do not bake narrative text into image. Original manuscript/reader coordinates unchanged.",
+  "current_qa": "File/header/Git SHA assertions are automated; mobile real-device examination remains unverified."
+}
