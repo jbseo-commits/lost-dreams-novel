@@ -1,0 +1,1692 @@
+{
+  "chapter": "22",
+  "previousBeats": 187,
+  "canonicalBeats": 187,
+  "exactMatches": 187,
+  "inferredDialogue": 0,
+  "beats": [
+    {
+      "k": 0,
+      "text": "“빌려준 연산, 지금 회사로 돌려받으면 우리 애 검사는 몇 시에 끝납니까?”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 3,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 1,
+      "text": "병원 검사실 앞. 아르카디아 전략본부 상무 마정훈은 백윤하가 엉덩이를 붙이기도 전에 몰아붙였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 5,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 2,
+      "text": "의자에는 아이 외투가 개켜져 있었다. 딸은 그걸 베고 모로 누워 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 7,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 3,
+      "text": "새벽 1시 12분. 네 번째 검증이 끝나기로 한 시각은 이미 지나 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 9,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 4,
+      "text": "백윤하가 대기 화면을 열었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 11,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 5,
+      "text": "“일단 담당자에게—”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 13,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 6,
+      "text": "“우리 애 검사에 쓸 연산을 실장님이 남한테 빌려주셨다면서요.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 15,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 7,
+      "text": "남자가 의자에서 벌떡 일어났다. 셔츠 단추 하나가 한 칸 밀려 끼워져 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 17,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 8,
+      "text": "“그러면 실장님한테 물어야죠.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 19,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 9,
+      "text": "두 사람 뒤에서 서인의 걸음이 멎었다. 그 승인서에는 서인의 이름도 들어 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 21,
+      "place": "다음 날 새벽 · 검사실 앞",
+      "scene": "hospital"
+    },
+    {
+      "k": 10,
+      "text": "전날 아침. 밤샘 보고서를 내고 눈 한 번 붙이기도 전에, 백윤하가 운영 회의실로 찾아왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 25,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 11,
+      "text": "아르카디아 인지안전실장. 백윤하는 서인의 보고서 둘째 장을 탁자에 펼쳤다. 의료 검증이 밀려 치료 예약이 날아갈 뻔했던 일곱 건이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 27,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 12,
+      "text": "“오늘 밤에도 생기겠죠.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 29,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 13,
+      "text": "“생길 수 있습니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 31,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 14,
+      "text": "“그래서 왔습니다. 회사 걸 한 번 빌려주려고요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 33,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 15,
+      "text": "강연우가 고개를 들었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 35,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 16,
+      "text": "“어디까지요?”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 37,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 17,
+      "text": "백윤하가 회사의 의료 계약을 열었다. 아르카디아 임원과 핵심 기술직, 그 가족 일부는 의료 판단을 모델 네 개로 검증받는다. 셋이 같은 답을 내도 넷째가 한 번 더 들여다보는 계약이다. 그 넷째가 밤에 남겨 두는 예비 연산을, 오늘 밤 딱 한 번 공공 의료 검증에 빌려주겠다는 얘기였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 39,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 18,
+      "text": "서인은 대상 자격부터 훑었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 41,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 19,
+      "text": "“병이 어려워야 받는 거예요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 43,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 20,
+      "text": "“계약에 들어 있어야 받습니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 45,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 21,
+      "text": "“회사를 나가면요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 47,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 22,
+      "text": "“끝납니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 49,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 23,
+      "text": "아내의 치료 후보를 늘리려고 회사 연산을 몰래 끌어다 썼던 박선호가 떠올랐다. 적용 직군을 한 번 더 읽었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 51,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 24,
+      "text": "빌려주는 동안 회사 쪽 네 번째 검증은 늦어진다. 백윤하는 세 번의 검증만으로도 치료 방향을 정할 수 있는 회사 건만 대기 명단에 올렸다. 네 번째 결과가 먼저 필요한 건은 뺐다. 그렇게 추려도 넷째 완료가 밀릴 수는 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 53,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 25,
+      "text": "기업 제4 의료 검증 지연 한도: 3시간.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 55,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 26,
+      "text": "지원: 오늘 밤 1회.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 57,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 27,
+      "text": "서인이 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 59,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 28,
+      "text": "“기다릴 사람들한테 물어봤어요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 61,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 29,
+      "text": "“아뇨.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 63,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 30,
+      "text": "“왜요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 65,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 31,
+      "text": "“물으면 다들 싫다고 하겠죠. 그래서 전결로 합니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 67,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 32,
+      "text": "“권한이 있으면 안 물어도 되고요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 69,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 33,
+      "text": "“회사가 그렇게 정했습니다. 그걸 쓰겠다는 사람은 저고요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 71,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 34,
+      "text": "강연우가 이름이 가려진 회사 대기표를 자기 쪽으로 끌어갔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 73,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 35,
+      "text": "“실장님도 이 계약에 들어갑니까?”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 75,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 36,
+      "text": "“가족까지요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 77,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 37,
+      "text": "강연우는 말없이 대기표를 백윤하 쪽으로 돌려놓았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 79,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 38,
+      "text": "회사는 한밤 지원의 대가로 익명화된 결과를 받기로 했다. 다음에 같은 지원이 필요하면 아르카디아와 먼저 협의한다는 조건도 달았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 81,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 39,
+      "text": "“다음에도 회사부터 찾아오라는 거네요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 83,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 40,
+      "text": "“다음엔 직원 동의까지 넣어서 다시 정해야 합니다. 오늘 승인이 자동으로 이어지진 않아요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 85,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 41,
+      "text": "원격으로 들어온 윤세라가 공공 의료 쪽 조건을 대조했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 87,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 42,
+      "text": "“기존 환자 순서는 안 바꿉니다. 아직 확정 안 된 추가 접수만 받는 겁니다.”",
+      "kind": "dialogue",
+      "speaker": "윤세라",
+      "sourceLine": 89,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 43,
+      "text": "확인란 셋이 열렸다. 서인이 요청을 넣고, 백윤하는 회사 지원에, 윤세라는 공공 의료 접수에 서명했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 91,
+      "place": "전날 아침 · 한밤의 지원 제안",
+      "scene": "meeting"
+    },
+    {
+      "k": 44,
+      "text": "나가기 전에 백윤하가 검토 메모 한 장을 서인 앞에 놓고 갔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 95,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 45,
+      "text": "서인 / 인간 단독 판단 가능성 높음.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 97,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 46,
+      "text": "AI 모델 도움 없이 혼자 판단하는 사람일 가능성이 높다는 뜻이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 99,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 47,
+      "text": "바로 밑에 한 줄이 더.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 101,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 48,
+      "text": "공공 의사결정 권한 추가 확대: 반대.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 103,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 49,
+      "text": "“같은 분이 쓴 거예요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 105,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 50,
+      "text": "“네.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 107,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 51,
+      "text": "“제가 모델 없이 판단하는 것 같아서 반대하시는 거예요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 109,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 52,
+      "text": "“그 부분은 가능성입니다. 반대는 제 판단이고요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 111,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 53,
+      "text": "백윤하가 어젯밤 검토 기록의 첫 줄을 손끝으로 짚었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 113,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 54,
+      "text": "요청자 거주 지역: 동부 27번. 교차 확인: 윤세라.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 115,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 55,
+      "text": "“이걸 남긴 건 좋았습니다. 다른 지역 같은 요청도 확인했고요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 117,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 56,
+      "text": "“그럼 다음에도 그렇게 하면 되잖아요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 119,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 57,
+      "text": "“두 사람이 매번 같은 답을 고르기 시작하면요?”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 121,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 58,
+      "text": "요청서에 나란히 박힌 이름 둘을 봤다. 교차 확인은 서로 다른 눈으로 보라고 붙여 둔 칸이다. 둘이 늘 같은 답을 내면, 칸이 하나인 거나 다를 게 없다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 123,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 59,
+      "text": "백윤하가 연락 책임자 칸을 자기 이름으로 채웠다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 125,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 60,
+      "text": "“오늘 밤 보호자 전화는 제가 받겠습니다. 다만 결정까지 제 쪽으로만 돌리지는 마세요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 127,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 61,
+      "text": "“저도 받겠습니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 129,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 62,
+      "text": "“받는 것과 정하는 것은 다릅니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 131,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 63,
+      "text": "백윤하는 반대 의견을 메모에 그대로 남겨 둔 채 자리에서 일어났다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 133,
+      "place": "권한 확대에 대한 반대",
+      "scene": "meeting"
+    },
+    {
+      "k": 64,
+      "text": "밤 열 시 조금 전, 회사 예비 연산의 임시 지원이 시작됐다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 137,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 65,
+      "text": "서인은 운영 회의실에서 공공 검증을, 백윤하는 기업 쪽을 맡았다. 윤세라는 들어온 순서와 실제 시작 여부를 맞춰 봤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 139,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 66,
+      "text": "밀려 있던 공공 검사들이 밤사이 하나둘 완료 표시를 달았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 141,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 67,
+      "text": "한 시간쯤 지나 공공 의료 담당자가 추가 접수를 더 열어도 되겠다고 했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 143,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 68,
+      "text": "백윤하는 회사 대기표부터 확인하고 답했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 145,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 69,
+      "text": "“아직 늘리지 마세요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 147,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 70,
+      "text": "서인도 추가 접수는 손대지 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 149,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 71,
+      "text": "자정을 넘기자 회사 쪽 보호자의 문의가 날아왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 151,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 72,
+      "text": "첫 세 검증이 끝났다는 안내는 받았습니다. 네 번째는 언제 나옵니까?",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 153,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 73,
+      "text": "백윤하가 예상 시각을 다시 뽑았다. 원래 완료 예정은 1시 12분. 새 예상은 2시 09분.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 155,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 74,
+      "text": "57분.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 157,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 75,
+      "text": "백윤하는 보호자에게, 자기 승인으로 회사 예비 연산 일부가 공공 의료 검증에 쓰이고 있다고 알렸다. 지연 보상도 같이 안내했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 159,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 76,
+      "text": "답이 돌아왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 161,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 77,
+      "text": "보상 문제가 아닙니다. 아이 문제입니다.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 163,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 78,
+      "text": "곧바로 통화 요청이 들어왔다. 백윤하가 받자 남자 목소리가 다짜고짜 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 165,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 79,
+      "text": "“지금 어디 계십니까?”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 167,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 80,
+      "text": "대답하기도 전에 남자가 병원 이름을 댔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 169,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 81,
+      "text": "“그리로 가겠습니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 171,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 82,
+      "text": "백윤하가 그렇게 답하자 서인도 의자를 밀었다. 강연우가 서인의 화면을 넘겨받았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 173,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 83,
+      "text": "“여긴 내가 볼게요. 이쪽 결과 미리 약속하진 말고요.”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 175,
+      "place": "기업 의료 예비량 지원",
+      "scene": "meeting"
+    },
+    {
+      "k": 84,
+      "text": "병원에 닿았을 때 딸은 외투를 베고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 179,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 85,
+      "text": "마정훈은 백윤하의 설명을 끝까지 듣고도 앉지 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 181,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 86,
+      "text": "“지금 돌려주면요.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 183,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 87,
+      "text": "백윤하가 의료 담당과 회선을 이었다. 서인도 들을 수 있게 상대의 동의를 받았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 185,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 88,
+      "text": "회사 연산을 지금 회수하면 아이의 네 번째 검증은 1시 40분 전후로 당겨질 수 있다. 대신 그 연산으로 돌고 있던 공공 검증을 중간에 끊어야 한다. 끊긴 검사를 다시 돌리면 언제 끝날지는 아무도 장담 못 한다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 187,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 89,
+      "text": "공공 쪽 목록을 열었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 189,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 90,
+      "text": "진행 중 열한 건. 맨 위는 일흔한 살 남자의 수술 전 검사. 진행률 82%.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 191,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 91,
+      "text": "마정훈의 시선이 서인에게 꽂혔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 193,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 92,
+      "text": "“그쪽이 서인 씨죠?”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 195,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 93,
+      "text": "“네.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 197,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 94,
+      "text": "“우리 아이는 세 번 정상 나왔으니까 뒤로 보내도 된다고 했습니까?”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 199,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 95,
+      "text": "“제가 정상을 판단한 건 아닙니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 201,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 96,
+      "text": "“그럼 누가 그랬어요.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 203,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 97,
+      "text": "백윤하가 대신 받았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 205,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 98,
+      "text": "“치료 판단에 네 번째가 먼저 필요한 경우는 뺐습니다. 하지만 약속한 네 번째를 제시간에 못 드린 건 맞습니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 207,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 99,
+      "text": "“그 얘기를 집에서 들었으면 안 왔죠.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 209,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 100,
+      "text": "마정훈이 외투 끝을 가리켰다. 의자 밑에 아이 신발이 가지런히 놓여 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 211,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 101,
+      "text": "“검사 끝나면 바로 나간다고 해서 차도 대 놨어요. 애가 안 자겠다고 버티다가 저렇게 누운 겁니다.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 213,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 102,
+      "text": "딸이 눈을 떴다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 215,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 103,
+      "text": "“아빠, 가?”",
+      "kind": "dialogue",
+      "speaker": "아이",
+      "sourceLine": 217,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 104,
+      "text": "남자가 곧장 고개를 숙였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 219,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 105,
+      "text": "“조금만 더.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 221,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 106,
+      "text": "“신발 신어?”",
+      "kind": "dialogue",
+      "speaker": "아이",
+      "sourceLine": 223,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 107,
+      "text": "“아직.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 225,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 108,
+      "text": "아이는 발을 도로 외투 밑으로 집어넣었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 227,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 109,
+      "text": "마정훈이 허리를 폈다. 이번엔 백윤하가 아니라 서인을 향했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 229,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 110,
+      "text": "“당신 이름도 들어간 승인이라면서요. 돌려요. 지금 빼면 우리 애는 1시 40분에 나온다면서요.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 231,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 111,
+      "text": "목록 맨 윗줄에서 82%가 83%로 넘어가고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 233,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 112,
+      "text": "공공 의료 담당에게 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 235,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 113,
+      "text": "“아직 시작 안 한 건은 몇 건입니까?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 237,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 114,
+      "text": "“대기 넷이요.”",
+      "kind": "dialogue",
+      "speaker": "공공 의료 담당",
+      "sourceLine": 239,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 115,
+      "text": "“그 넷은 오늘 밤 받지 말아 주세요. 지금 돌고 있는 열한 건은 끝까지 가고, 하나 끝날 때마다 그 연산은 바로 회사로 돌려보내 달라고 요청하겠습니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 241,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 116,
+      "text": "마정훈이 낮게 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 243,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 117,
+      "text": "“결국 우리 애는 기다리라는 거죠?”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 245,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 118,
+      "text": "요청서에 이름을 넣기 전에 남자를 똑바로 봤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 247,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 119,
+      "text": "“네. 진행 중인 걸 끊지 않는 쪽을 요청하겠습니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 249,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 120,
+      "text": "“당신은 그게 낫겠죠.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 251,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 121,
+      "text": "남자가 의자를 거칠게 잡아당겼다. 그 소리에 딸이 움찔하자 다시 천천히 밀어 놓았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 253,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 122,
+      "text": "“내 딸은 아직 네 번째가 안 나왔는데.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 255,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 123,
+      "text": "서인은 그 말을 그대로 보호자 반대 기록에 붙였다. 백윤하가 기업 쪽 유지에 서명하고, 윤세라가 원격으로, 진행 중인 열한 건을 끝까지 돌린다고 확인했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 257,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 124,
+      "text": "대기 넷은 내일로 넘어갔다. 이미 시작한 열한 건은 계속 돌았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 259,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 125,
+      "text": "의료 담당이 두 경우의 예상 시각을 보내왔다. 넷까지 받았다면 아이 결과는 2시 반을 넘겼을 것이다. 한 건씩 돌아오는 연산으로는 딸의 네 번째 완료 예상을 당길 수 없었다. 다만 2시 09분에서 더 밀리지도 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 261,
+      "place": "계약한 네 번째 검증",
+      "scene": "hospital"
+    },
+    {
+      "k": 126,
+      "text": "1시 40분. 회수했다면 결과가 나왔을 시각이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 265,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 127,
+      "text": "마정훈의 단말이 울렸다. 회사 번호. 남자는 화면만 내려다보고 받지 않았다. 옆 의자에 앉으려던 백윤하가 엉거주춤 몸을 세웠다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 267,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 128,
+      "text": "“불편하시면 밖에 있겠습니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 269,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 129,
+      "text": "“여기 계세요.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 271,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 130,
+      "text": "남자가 짧게 잘랐다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 273,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 131,
+      "text": "“나가시면 나중에 또 전화로 사과받아야 하잖아요. 그게 더 싫어요.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 275,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 132,
+      "text": "백윤하가 앉았다. 아이가 몸을 뒤척이는 바람에 외투가 흘러내리자 남자가 끌어 올려 줬다. 딸은 잠결에 아빠 손을 밀어냈다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 277,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 133,
+      "text": "“더워.”",
+      "kind": "dialogue",
+      "speaker": "아이",
+      "sourceLine": 279,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 134,
+      "text": "“그래.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 281,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 135,
+      "text": "외투를 접었다 폈다 하던 남자가 백윤하에게 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 283,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 136,
+      "text": "“네 번째도 정상일 거라고, 지금 말할 수 있습니까?”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 285,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 137,
+      "text": "“아직 말씀드릴 수 없습니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 287,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 138,
+      "text": "남자가 서인도 쳐다봤다. 서인은 고개를 저었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 289,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 139,
+      "text": "마정훈은 딸의 신발 한 짝을 의자 안쪽으로 밀어 넣었다. 사람들이 오갈 때마다 발에 채던 신발이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 291,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 140,
+      "text": "서인의 단말에 공공 검증 완료가 떴다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 293,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 141,
+      "text": "수술 전 검사 · 완료.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 295,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 142,
+      "text": "일흔한 살 남자의 줄이 목록에서 내려갔다. 서인은 단말 화면을 손바닥으로 가린 채 주머니에 넣었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 297,
+      "place": "같이 기다리는 사람들",
+      "scene": "hospital"
+    },
+    {
+      "k": 143,
+      "text": "2시 09분, 검사실 문이 열렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 301,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 144,
+      "text": "의료진이 결과를 설명하는 동안 백윤하와 서인은 한 걸음 물러나 있었다. 정상이었다. 마정훈이 아이를 흔들어 깨웠다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 303,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 145,
+      "text": "“신발 신자.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 305,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 146,
+      "text": "딸이 눈을 비비며 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 307,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 147,
+      "text": "“이제 가도 돼?”",
+      "kind": "dialogue",
+      "speaker": "아이",
+      "sourceLine": 309,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 148,
+      "text": "“응. 이제.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 311,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 149,
+      "text": "마정훈이 신발을 가져다주자 아이는 뒤축을 구겨 신었다. 그는 허리를 숙여 뒤축을 펴 줬다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 313,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 150,
+      "text": "백윤하가 지연 보상과 이의 신청 담당을 자기 이름으로 지정했다. 마정훈은 결과지를 챙기고 나서야 백윤하를 봤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 315,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 151,
+      "text": "“내일 회사에서 봅시다.”",
+      "kind": "dialogue",
+      "speaker": "마정훈",
+      "sourceLine": 317,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 152,
+      "text": "고맙다는 말은 끝내 없었다. 딸의 손을 잡고 복도 끝으로 사라졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 319,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 153,
+      "text": "서인이 복도 끝을 보며 말했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 321,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 154,
+      "text": "“저 때문이라고 하실 겁니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 323,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 155,
+      "text": "“제 승인입니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 325,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 156,
+      "text": "“유지 요청은 제가 했고요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 327,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 157,
+      "text": "“그래서 서인 씨 기록도 붙였습니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 329,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 158,
+      "text": "백윤하는 단말을 연 채 서 있었다. 약속한 시각과 실제 결과 사이, 기록에 57분이 찍혀 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 331,
+      "place": "약속보다 늦게 열린 문",
+      "scene": "hospital"
+    },
+    {
+      "k": 159,
+      "text": "회사로 돌아오니 직원 문의가 네 건 와 있었다. 자기 가족의 네 번째 검증도 이렇게 밀릴 수 있느냐는 질문들이었다. 그중 두 건엔 타사 이직 상담이 연결돼 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 335,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 160,
+      "text": "강연우가 빈 커피잔을 치우며 말했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 337,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 161,
+      "text": "“아침에 묻겠네요.”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 339,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 162,
+      "text": "“오늘 아침이죠.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 341,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 163,
+      "text": "백윤하는 보호자 문의를 보고서 본문에 넣었다. 지연 한도 안이었다는 문장 아래에, 사전 동의는 받지 않았다고 적었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 343,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 164,
+      "text": "서인은 공공 의료에서 실제로 끝난 검증과 끝내 받지 못한 접수를 나눠 넣었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 345,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 165,
+      "text": "강연우가 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 347,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 166,
+      "text": "“다음에도 같은 방식으로 합니까?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 349,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 167,
+      "text": "백윤하가 고개를 저었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 351,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 168,
+      "text": "“아뇨. 다음부터는 계약한 사람이 고르게 해야죠.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 353,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 169,
+      "text": "강연우가 다시 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 355,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 170,
+      "text": "“회사에서 허락할까요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 357,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 171,
+      "text": "백윤하가 문의 네 건을 한 묶음으로 엮었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 359,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 172,
+      "text": "“그것도 오늘 아침 회사에서 정해질 겁니다.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 361,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 173,
+      "text": "어제 아침에 받은 검토 메모를 꺼냈다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 363,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 174,
+      "text": "공공 의사결정 권한 추가 확대: 반대.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 365,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 175,
+      "text": "“이건 그대로고요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 367,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 176,
+      "text": "“네.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 369,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 177,
+      "text": "백윤하가 방금 쓴 보고서를 저장했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 371,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 178,
+      "text": "“오늘은 제 결정에 반대하는 사람도 옆에 있어야 했습니다. 권한이 있다는 답으로 시작했으니까요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 373,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 179,
+      "text": "서인이 유지 기록을 메모 옆에 펼쳤다. 서명란에 이름 셋. 그 밑에 보호자가 반대한다는 기록이 붙어 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 375,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 180,
+      "text": "“오늘은 셋이 같은 답을 골랐네요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 377,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 181,
+      "text": "“네. 동부 27번 그 밤에도 두 분은 같은 답이었고요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 379,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 182,
+      "text": "다음 지원 검토의 참석자 칸에 백윤하의 이름을 넣었다. 반대 의견도 함께 첨부했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 381,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 183,
+      "text": "“다음에도 와 주세요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 383,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 184,
+      "text": "문 앞에서 백윤하가 돌아봤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 385,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 185,
+      "text": "“그 전에 제가 회사에 남아 있으면요.”",
+      "kind": "dialogue",
+      "speaker": "백윤하",
+      "sourceLine": 387,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    },
+    {
+      "k": 186,
+      "text": "새벽, 백윤하의 단말에 새 회의 소집이 들어왔다. 발신 부서 칸에 전략본부가 찍혀 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 389,
+      "place": "남아 있는 반대 의견",
+      "scene": "office"
+    }
+  ]
+}

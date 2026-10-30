@@ -1,9 +1,9 @@
 {
   "chapter": "19-1",
-  "previousBeats": 194,
+  "previousBeats": 212,
   "canonicalBeats": 212,
-  "exactMatches": 173,
-  "inferredDialogue": 7,
+  "exactMatches": 212,
+  "inferredDialogue": 0,
   "beats": [
     {
       "k": 0,

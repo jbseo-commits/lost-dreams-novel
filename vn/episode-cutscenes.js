@@ -267,8 +267,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "20",
-    "start": 81,
-    "end": 81,
+    "start": 89,
+    "end": 89,
     "cg": "signedCost",
     "anchor": "윤세라는 다음 사례로 넘기기 전에 바뀐 보고에 서명했다.",
     "alt": "자기 이름으로 남긴 비용",
@@ -454,8 +454,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "20",
-    "start": 146,
-    "end": 146,
+    "start": 154,
+    "end": 154,
     "cg": "ep20-box",
     "anchor": "“이 칸 누르면, 기다리는 사람까지 보호받은 걸로 남습니다. 공동주방에 온 7시 40분짜리 경로처럼요.”",
     "alt": "서인의 시점에서 본 감사 확인란과 공동주방 화이트보드·배식대 사진. 아직 빈 확인 칸이 남아 있다.",
@@ -465,8 +465,8 @@ export const EPISODE_CUTSCENES = Object.freeze([
   },
   {
     "chapter": "20",
-    "start": 190,
-    "end": 190,
+    "start": 198,
+    "end": 198,
     "cg": "ep20-rooftop",
     "anchor": "도윤이 서인의 컵 위에 젓가락 한 벌을 올려 주었다.",
     "alt": "기업 옥상에서 도윤이 서인의 컵라면 위에 젓가락을 올려 주는 순간",
