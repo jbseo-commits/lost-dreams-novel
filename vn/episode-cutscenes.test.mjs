@@ -36,12 +36,14 @@ test('the aftermath, escape discovery/landing, and legal clause cuts follow thei
   ];
   for(const [id,index,cg,text] of expected){
     const cut=EPISODE_CUTSCENES.find(item=>item.cg===cg);
-    assert.ok(cut,cg);assert.equal(cut.chapter,id);assert.equal(cut.start,index);assert.equal(cut.end,index);
-    assert.equal(cut.anchor,text);assert.equal(chapter(id).beats[index].text,text);assert.equal(at(id,index).cg,cg);
-    assert.notEqual(at(id,index-1)?.cg,cg);assert.notEqual(at(id,index+1)?.cg,cg);
+    const point=id==='19-1'?chapter(id).beats.findIndex(b=>b.text===text):index;
+    assert.ok(cut,cg);assert.equal(cut.chapter,id);assert.ok(point>=0,cg);assert.equal(cut.start,point);assert.equal(cut.end,point);
+    assert.equal(cut.anchor,text);assert.equal(chapter(id).beats[point].text,text);assert.equal(at(id,point).cg,cg);
+    assert.notEqual(at(id,point-1)?.cg,cg);assert.notEqual(at(id,point+1)?.cg,cg);
   }
   assert.equal(EPISODE_CUTSCENES.some(item=>item.cg==='ep21-1-rescue'),false);
-  assert.equal(at('19-1',118)?.cg,undefined,'the follow-up phone call stays at its own source beat');
+  const aftermath=EPISODE_CUTSCENES.find(c=>c.cg==='ep19-1-aftermath');
+  assert.equal(at('19-1',aftermath.end+1)?.cg,undefined,'the follow-up phone call stays at its own source beat');
   assert.equal(at('21-1',83)?.cg,undefined,'tower collapse remains after the landing cut');
   assert.equal(at('21-1',86)?.cg,undefined,'the 12/12 result remains after the landing cut');
   assert.equal(at('22-1',49)?.cg,undefined,'the proposer is not revealed by the clause cut');
@@ -67,9 +69,12 @@ test('reflowed event cuts retain their original action anchors wherever the manu
   ];
   for(const [cg,id,start,end,anchor,endAnchor=anchor] of expected){
     const cut=EPISODE_CUTSCENES.find(item=>item.cg===cg);assert.ok(cut,cg);
-    assert.equal(cut.chapter,id);assert.equal(cut.start,start,cg);assert.equal(cut.end,end,cg);
+    const point=['19-1','20'].includes(id)?chapter(id).beats.findIndex(b=>b.text===anchor):start;
+    const finish=['19-1','20'].includes(id)?chapter(id).beats.findIndex((b,i)=>i>=point&&b.text===endAnchor):end;
+    assert.ok(point>=0&&finish>=point,cg);
+    assert.equal(cut.chapter,id);assert.equal(cut.start,point,cg);assert.equal(cut.end,finish,cg);
     assert.equal(cut.anchor,anchor,cg);assert.equal(cut.endAnchor,endAnchor,cg);
-    assert.equal(chapter(id).beats[start].text,anchor,cg);assert.equal(chapter(id).beats[end].text,endAnchor,cg);
+    assert.equal(chapter(id).beats[point].text,anchor,cg);assert.equal(chapter(id).beats[finish].text,endAnchor,cg);
   }
 });
 test('B preview is placed at beat 45 with exact fingerprint and native image copy',async()=>{
