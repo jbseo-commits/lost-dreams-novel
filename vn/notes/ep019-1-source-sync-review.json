@@ -1,0 +1,1917 @@
+{
+  "chapter": "19-1",
+  "previousBeats": 194,
+  "canonicalBeats": 212,
+  "exactMatches": 173,
+  "inferredDialogue": 7,
+  "beats": [
+    {
+      "k": 0,
+      "text": "“고객한테 취소하라고요? 우리가 제시간에 못 보내는데요!”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 3,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 1,
+      "text": "냉장동 3번 문 안에서 고함이 터졌다. 오후 5시 2분. 문턱을 넘던 서인의 발이 저절로 멈췄다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 5,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 2,
+      "text": "“어, 서인 씨?”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 7,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 3,
+      "text": "운반대 사이로 안전조끼가 비집고 나왔다. 냉장차 한 대가 사라질 뻔했던 그날 밤, 자정까지 배차실을 같이 지킨 배차 담당이다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 9,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 4,
+      "text": "“딱 맞춰 오셨네. 지금 난리 난 게 그 주문이에요.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 11,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 5,
+      "text": "배차 담당이 상자 하나를 휙 돌려 옆면을 들이밀었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 13,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 6,
+      "text": "배송지: 동부 사택 공동주방. 새벽 6시 이전 납품.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 15,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 7,
+      "text": "어제 감사 자료에서 발견한 식재료 주문이었다. 새벽 6시 전에 두부와 채소가 와야 기사들이 6시 반에 도시락을 받아 갈 수 있는데, 시스템의 예상 도착은 7시 이후였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 17,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 8,
+      "text": "이름을 가린 참여자 4까지 열어 보고 간 주문이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 19,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 9,
+      "text": "“자료에는 대체 경로 확보, 납품 지속 가능이라던데요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 21,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 10,
+      "text": "“확보요? 하.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 23,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 11,
+      "text": "웃음기라곤 없었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 25,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 12,
+      "text": "“차는 코빼기도 안 보여요.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 27,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 13,
+      "text": "그러다 배차 담당의 눈이 서인의 오른손목에 멎었다. 띠 가장자리로 시퍼런 자국이 드러나 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 29,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 14,
+      "text": "“손은 또 왜 그래요?”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 31,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 15,
+      "text": "“그저께 좀 붙잡혔습니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 33,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 16,
+      "text": "“붙잡혀요? 누구한테?”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 35,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 17,
+      "text": "대답하기 전에 출입구 쪽에서 낯선 목소리가 끼어들었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 37,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 18,
+      "text": "“본사에서 오신 서인 씨 맞으시죠?”",
+      "kind": "dialogue",
+      "speaker": "회색 승합차 남자",
+      "sourceLine": 39,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 19,
+      "text": "방문자 목걸이를 건 남자였다. 검은 재킷, 손에는 서류 봉투. 냉장동 안까지는 들어오지 않고 노란 선 밖에 서서 웃고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 41,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 20,
+      "text": "“그저께 일정이 중간에 끊겨서요. 저희 쪽 손님이 확인을 못 하셨거든요. 잠깐이면 됩니다. 밖에 차 대 놨어요.”",
+      "kind": "dialogue",
+      "speaker": "회색 승합차 남자",
+      "sourceLine": 43,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 21,
+      "text": "손목이 먼저 기억했다. 그날 복도에서 팔을 꺾던 손도 저렇게 웃는 얼굴 뒤에 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 45,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 22,
+      "text": "배차 담당이 서인보다 먼저 남자 앞을 막아섰다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 47,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 23,
+      "text": "“여기 출입 명단에 그쪽 없는데요.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 49,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 24,
+      "text": "“방문증 받았는데요.”",
+      "kind": "dialogue",
+      "speaker": "회색 승합차 남자",
+      "sourceLine": 51,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 25,
+      "text": "“사무동 방문증이죠. 여긴 냉장동이고.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 53,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 26,
+      "text": "배차 담당이 무전기를 들었다. 남자는 웃는 얼굴 그대로 봉투를 겨드랑이에 끼웠다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 55,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 27,
+      "text": "“다음에 다시 뵙죠.”",
+      "kind": "dialogue",
+      "speaker": "회색 승합차 남자",
+      "sourceLine": 57,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 28,
+      "text": "출구 쪽으로 걸어가는 뒷모습을 끝까지 지켜봤다. 주차장 끝에 회색 승합차 한 대가 시동을 건 채 서 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 59,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 29,
+      "text": "“저 사람 누구예요?”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 61,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 30,
+      "text": "손목이 욱신거렸다. 서인은 멍든 자리를 가리켰다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 63,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 31,
+      "text": "“이쪽인 것 같아요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 65,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 32,
+      "text": "배차 담당이 경비를 부르고 서인을 배차실로 이끌었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 67,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 33,
+      "text": "서인은 강연우에게 영상 회선을 열어 방금 나타난 남자부터 알렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 69,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 34,
+      "text": "배차실 화면에 떠 있는 건 달랑 두 줄이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 73,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 35,
+      "text": "기존 경로: 도착 07:10.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 75,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 36,
+      "text": "신규 경로: 확보. 도착 시각 —.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 77,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 37,
+      "text": "식품 담당자가 도착 시각의 줄표를 손가락으로 짚었다. 목덜미가 벌겋게 달아올라 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 79,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 38,
+      "text": "“배송 경로 확보라면서요. 그래서 차가 몇 시에 오는데요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 81,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 39,
+      "text": "스피커에서 운영팀 남자가 답했다. 지난번 예비차 대기료를 두고 실랑이하던 목소리였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 83,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 40,
+      "text": "“시스템상 배송은 됩니다. 여섯 시 전에 못 맞추면 공동주방에서 취소하게 하세요.”",
+      "kind": "dialogue",
+      "speaker": "운영팀 남자",
+      "sourceLine": 85,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 41,
+      "text": "식품 담당자가 자기 단말을 서인 쪽으로 돌렸다. 취소 사유를 고르는 창이 열려 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 87,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 42,
+      "text": "취소 사유: 고객 요청 / 처리 전.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 89,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 43,
+      "text": "“우리가 못 보내는 건데 고객이 취소한 걸로 남기라고요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 91,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 44,
+      "text": "스피커가 잠깐 조용해졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 93,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 45,
+      "text": "“차를 따로 빼는 건 기지 판단입니다. 추가 비용도 기지에서 내시고요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 95,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 46,
+      "text": "식품 담당자가 마이크를 덮고 서인에게 작은 화면 하나를 더 내밀었다. 공동주방 책임자의 연락이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 97,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 47,
+      "text": "17:40까지 도착 확답 요청. 근처 가게 대체 물량 확인 중.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 99,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 48,
+      "text": "“근처에서 살 수도 있잖습니까?”",
+      "kind": "dialogue",
+      "speaker": "식품 담당자",
+      "sourceLine": 101,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 49,
+      "text": "서인이 묻자 식품 담당자가 고개를 저었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 103,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 50,
+      "text": "“지금 새벽에 배송해 준다는 가게도 열두 끼가 한계래요. 애들만 열일곱인데, 누구 다섯을 빼요? 기사들 도시락 마흔한 개도 비고요.”",
+      "kind": "dialogue",
+      "speaker": "식품 담당자",
+      "sourceLine": 105,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 51,
+      "text": "“기사들은 다른 데서 먹으면 되지 않나요?”",
+      "kind": "dialogue",
+      "speaker": "식품 담당자",
+      "sourceLine": 107,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 52,
+      "text": "“아이 데리고 오는 기사들도 있어요. 다섯을 그냥 굶기고 운전대 잡으라고 할 순 없잖아요. 다른 데서 밥 구하러 흩어지면 교대가 밀리고, 그 차들이 맡은 다음 배송도 늦어집니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 109,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 53,
+      "text": "벽시계는 5시 6분.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 111,
+      "place": "냉장동 3번 문",
+      "scene": "depot"
+    },
+    {
+      "k": 54,
+      "text": "서인이 화면의 ‘고객 요청’을 다시 봤다. 책임자가 취소하겠다고 한 적은 없었다. 제시간에 재료를 보내 줄 수 있느냐고 물었을 뿐이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 113,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 55,
+      "text": "“남는 차는요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 115,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 56,
+      "text": "“밤에 의료 호출을 대비해 세워 둔 예비 냉장차 한 대가 있습니다.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 117,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 57,
+      "text": "스피커에서 운영팀이 다시 끼어들었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 119,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 58,
+      "text": "“그건 사고 때 쓰는 차예요. 지금은 경로가 확보돼 있잖습니까.”",
+      "kind": "dialogue",
+      "speaker": "운영팀 남자",
+      "sourceLine": 121,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 59,
+      "text": "창밖으로 눈이 갔다. 대기선에 냉장차 한 대가 서 있었다. 옆면 번호가 눈에 익었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 123,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 60,
+      "text": "계약서에서 지우지 않고 남겨 둔 차. 계약이 비던 6시간 동안 반납될 뻔했던 차. 그날 계약 회의실에서 강연우가 물었었다. 이 차 하나 빠지면 차이가 크냐고. 사고만 없으면 아무도 모를 거라고 답했다. 사고 나면요, 하고 다시 물었을 땐 대답을 못 했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 125,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 61,
+      "text": "그때 계약 화면에서 본 건 ‘확보’ 한 칸이 전부였다. 확보라더니 그 차는 반납 직전이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 127,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 62,
+      "text": "오늘 화면에 또 확보가 떠 있다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 129,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 63,
+      "text": "“그 예비차 계약서, 인쇄본 있습니까?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 131,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 64,
+      "text": "배차 담당이 서랍을 뒤져 종이 묶음을 꺼냈다. 둘째 장 중간에서 손가락이 멈췄다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 133,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 65,
+      "text": "출동 조건: 장애 발생 또는 배정 경로 미확정 시, 배차 담당 판단으로 출동.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 135,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 66,
+      "text": "서인은 종이를 스피커 쪽으로 돌려놓고 소리 내어 읽었다. ‘또는’에서 한 번 끊었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 137,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 67,
+      "text": "“확보는 됐는데, 확정은 안 됐네요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 139,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 68,
+      "text": "스피커가 잠잠해졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 141,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 69,
+      "text": "배차 담당이 그 줄을 읽고, 화면의 줄표를 보고, 다시 종이를 봤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 143,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 70,
+      "text": "“……이거, 내가 내보낼 수 있는 거잖아.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 145,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 71,
+      "text": "“새 경로의 도착 시각은 확인됐습니까?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 147,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 72,
+      "text": "스피커는 대답하지 못했다. 화면의 줄표가 대신 대답하고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 149,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 73,
+      "text": "스피커 너머 운영팀 남자가 화제를 돌렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 151,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 74,
+      "text": "“출동은 기지 판단으로 기록됩니다. 출동비가 기지 예산에서 나갈 수 있다는 것도 아시죠.”",
+      "kind": "dialogue",
+      "speaker": "운영팀 남자",
+      "sourceLine": 153,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 75,
+      "text": "배차 담당이 스피커 쪽으로 몸을 숙였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 155,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 76,
+      "text": "“알아요. 내 칸이잖아요. 30분 동안 몰랐을 뿐이지. 출동 판단, 배차 담당. 그렇게 적으세요.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 157,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 77,
+      "text": "그러고는 출동 기록에 자기 이름을 꾹꾹 눌러 넣었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 159,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 78,
+      "text": "출동 판단: 배차 담당.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 161,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 79,
+      "text": "뚝, 통화 종료음이 울렸다. 식품 담당자가 주먹으로 책상을 한 번 내리치더니 운반대를 끌고 뛰쳐나갔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 163,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 80,
+      "text": "“두부 먼저 실어! 채소는 위에!”",
+      "kind": "dialogue",
+      "speaker": "식품 담당자",
+      "sourceLine": 165,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 81,
+      "text": "5시 31분. 식품 담당자가 취소 처리 창을 닫기 전에 화면을 캡처해 서인에게 보냈다. ‘고객 요청’과 ‘처리 전’이 나란히 찍혔다. 서인이 그 옆에서 공동주방에 전화를 걸었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 167,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 82,
+      "text": "“예비 냉장차를 배차했습니다. 새벽 5시 20분에 도착합니다. 차 번호 불러 드릴게요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 169,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 83,
+      "text": "수화기 너머에서 누군가 대체 가게에 돈 보내냐고 물었다. 책임자의 목소리가 가까워졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 171,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 84,
+      "text": "“잠깐만. 차 번호부터 받아.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 173,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 85,
+      "text": "서인은 출동 기록에 적힌 번호를 읽었다. 끊기 전 책임자가 다시 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 175,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 86,
+      "text": "“그럼 아이들 아침이랑 기사들 도시락, 둘 다 되는 거죠?”",
+      "kind": "dialogue",
+      "speaker": "공동주방 책임자",
+      "sourceLine": 177,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 87,
+      "text": "“두부하고 채소는 주문한 양 그대로 싣습니다.”",
+      "kind": "dialogue",
+      "speaker": "공동주방 책임자",
+      "sourceLine": 179,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 88,
+      "text": "“알겠어요. 아침에 확인할게요.”",
+      "kind": "dialogue",
+      "speaker": "예비차 기사",
+      "sourceLine": 181,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 89,
+      "text": "물병을 챙겨 들고 내린 예비차 기사가 서인을 위아래로 훑었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 183,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 90,
+      "text": "“아, 그쪽이에요? 그날 이 차 반납 못 하게 자정까지 버티고 앉아 있었다는 본사 사람.”",
+      "kind": "dialogue",
+      "speaker": "예비차 기사",
+      "sourceLine": 185,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 91,
+      "text": "“앉아만 있었습니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 187,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 92,
+      "text": "“그 덕에 제가 이 차 받았잖아요. 가죠, 뭐.”",
+      "kind": "dialogue",
+      "speaker": "예비차 기사",
+      "sourceLine": 189,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 93,
+      "text": "강연우가 영상 회선 너머에서 입을 틀어막았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 191,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 94,
+      "text": "“그 차, 서인 씨가 남긴 그 차 맞죠?”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 193,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 95,
+      "text": "“네.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 195,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 96,
+      "text": "“사고 나면요, 했던 거.”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 197,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 97,
+      "text": "“지금이 그 사고네요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 199,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 98,
+      "text": "6시 정각에 상차 마감 벨이 울렸다. 강연우의 영상 회선도 그때 닫았다. 냉장차는 컨테이너 줄 끝 대기선으로 돌아가 냉장기를 켠 채 새벽 출발을 기다렸다. 물병 기사는 운전석에 남아 눈을 붙이겠다고 했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 203,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 99,
+      "text": "출입구 경비의 무전이 들어왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 205,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 100,
+      "text": "“회색 승합차, 방금 정문으로 나갔습니다.”",
+      "kind": "dialogue",
+      "speaker": "출입구 경비",
+      "sourceLine": 207,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 101,
+      "text": "배차 담당이 정류장까지 같이 가 주겠다고 했다. 야간조 배차표가 아직 반도 안 짜여 있었다. 서인은 고개를 저었다. 대신 강연우에게 다시 전화를 걸었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 209,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 102,
+      "text": "“정류장까지 가는 동안만 통화해 주실래요?”",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 211,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 103,
+      "text": "“가요. 듣고 있을게요.”",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 213,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 104,
+      "text": "차는 나갔고, 정류장까지는 하역장 뒤 컨테이너 사이로 5분이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 215,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 105,
+      "text": "배차실을 나섰을 땐 해가 다 넘어가 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 217,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 106,
+      "text": "절반쯤 갔을 때 뒤에서 발소리가 붙었다. 하나가 아니었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 219,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 107,
+      "text": "걸음을 빨리했다. 발소리도 빨라졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 221,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 108,
+      "text": "컨테이너 끝 모퉁이를 돌자 회색 승합차가 길을 막고 서 있었다. 화물 출입구로 불을 끄고 다시 들어온 모양이었다. 미닫이문이 열려 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 223,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 109,
+      "text": "“서인 씨.”",
+      "kind": "dialogue",
+      "speaker": "회색 승합차 남자",
+      "sourceLine": 225,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 110,
+      "text": "아까 그 남자였다. 웃음이 없었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 227,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 111,
+      "text": "“그저께는 회사 사람이 같이 있어서 일이 꼬였죠. 오늘은 조용히 갑시다. 저희 손님이 돈을 이미 냈거든요. 확인 한 번만 하면 다들 편해집니다.”",
+      "kind": "dialogue",
+      "speaker": "회색 승합차 남자",
+      "sourceLine": 229,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 112,
+      "text": "“그 돈은 중개사가 돌려줘야 하는 돈입니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 231,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 113,
+      "text": "“중개사가 돌려줄 돈이 없대요. 그럼 누가 메워야겠습니까.”",
+      "kind": "dialogue",
+      "speaker": "회색 승합차 남자",
+      "sourceLine": 233,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 114,
+      "text": "뒤에서 누군가 오른팔을 낚아챘다. 그저께 꺾였던 손목이 다시 반대로 돌아갔다. 눈앞이 하얘졌다. 무릎이 저절로 꺾였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 235,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 115,
+      "text": "“놓으세요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 237,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 116,
+      "text": "목소리가 갈라졌다. 등이 컨테이너 철벽에 부딪혔다. 단말이 손에서 튕겨 나가 바닥을 굴렀다. 통화가 끊겼다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 239,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 117,
+      "text": "“걸으시면 이런 거 안 합니다.”",
+      "kind": "dialogue",
+      "speaker": "회색 승합차 남자",
+      "sourceLine": 241,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 118,
+      "text": "존댓말이었다. 그날처럼.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 243,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 119,
+      "text": "남자 둘이 양쪽에서 끌기 시작했다. 신발 밑창이 자갈을 긁었다. 승합차 문턱이 무릎 앞까지 다가왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 245,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 120,
+      "text": "왼손으로 차 문틀을 짚었다. 버텼다. 손바닥이 미끄러졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 247,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 121,
+      "text": "그때 컨테이너 줄 끝에서 경적이 길게 울렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 249,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 122,
+      "text": "대기선의 냉장차였다. 운전석에서 졸던 물병 기사가 불 꺼진 승합차를 봤고, 경적을 누른 채 무전으로 배차실을 불렀다. 냉장차가 서인 뒤쪽 통로로 들어왔다. 하역장 쪽에서 지게차 한 대가 전조등을 번쩍이며 밀고 들어왔다. 물병 기사가 운전석에서 뛰어내렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 251,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 123,
+      "text": "“거기 뭐 해요!”",
+      "kind": "dialogue",
+      "speaker": "예비차 기사",
+      "sourceLine": 253,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 124,
+      "text": "배차 담당이 무전기를 든 채 달려오고 있었다. 식품 담당자가 지게차에서 내렸다. 야간조 기사 서넛이 장갑도 벗지 않은 채 뒤따랐다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 255,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 125,
+      "text": "“기지 안입니다. 다 찍히고 있어요.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 257,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 126,
+      "text": "배차 담당이 하역장 감시 기둥을 턱으로 가리켰다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 259,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 127,
+      "text": "팔을 쥔 손이 풀렸다. 남자가 한 발 물러섰다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 261,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 128,
+      "text": "“오해가 있으신 것 같은데. 저희는 일정 안내하러—”",
+      "kind": "dialogue",
+      "speaker": "회색 승합차 남자",
+      "sourceLine": 263,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 129,
+      "text": "“일정 안내를 차 문 열어 놓고 해요?”",
+      "kind": "dialogue",
+      "speaker": "식품 담당자",
+      "sourceLine": 265,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 130,
+      "text": "식품 담당자가 남자와 서인 사이로 끼어들었다. 덩치가 컸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 267,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 131,
+      "text": "승합차 미닫이문이 쾅 닫혔다. 승합차는 앞쪽 모퉁이를 돌아 출구 쪽으로 빠져나갔다. 물병 기사가 냉장차 블랙박스 화면을 들여다봤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 269,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 132,
+      "text": "“번호 찍혔어요.”",
+      "kind": "dialogue",
+      "speaker": "예비차 기사",
+      "sourceLine": 271,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 133,
+      "text": "서인은 컨테이너에 등을 붙인 채 미끄러져 앉았다. 오른손이 말을 듣지 않았다. 배차 담당이 바닥에 떨어진 단말을 주워 왼손에 쥐여 줬다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 273,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 134,
+      "text": "“나갔다고 해서 보냈더니.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 275,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 135,
+      "text": "배차 담당이 무전기를 고쳐 쥐었다.",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 277,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 136,
+      "text": "“다음엔 같이 가요. 배차표야 늦게 짜면 되니까.”",
+      "kind": "dialogue",
+      "speaker": "배차 담당",
+      "sourceLine": 279,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 137,
+      "text": "기지 경비가 뛰어왔다. 배차 담당이 블랙박스 영상을 넘기고, 식품 담당자가 번호를 불렀다. 단말에는 강연우의 부재중 전화가 세 통 떠 있었다. 서인은 왼손으로 전화를 걸었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 281,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 138,
+      "text": "“또예요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 283,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 139,
+      "text": "수화기 너머에서 숨 들이쉬는 소리가 났다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 285,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 140,
+      "text": "“기지 안이죠? 지금 갈게요.”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 287,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 141,
+      "text": "강연우가 기지에 닿은 건 밤 8시가 다 돼서였다. 신고와 진술이 끝났을 땐 9시가 넘었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 291,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 142,
+      "text": "경비 사무실 화면에 블랙박스에 찍힌 번호판이 떠 있었다. 강연우가 자기 단말과 대조했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 293,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 143,
+      "text": "“그저께 그 건물, 전용 호송 승강기 썼던 외주 업체 차예요. 같은 회사.”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 295,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 144,
+      "text": "“중개사가 돌려줄 돈이 없다고 했습니다. 구매자 쪽이 직접 받으러 온 거죠.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 297,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 145,
+      "text": "“돈 대신 서인 씨를요.”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 299,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 146,
+      "text": "대답 대신 오른손을 쥐었다 폈다. 손가락은 움직였다. 아픈 건 그다음이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 301,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 147,
+      "text": "그때 단말이 울렸다. 발신자 표시 없음.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 303,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 148,
+      "text": "평가 일정 재조정 안내. 대상 접근 확인 장소: 동부 사택.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 305,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 149,
+      "text": "동부 사택. 공동주방이 있는 곳. 서인과 어머니가 사는 곳.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 307,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 150,
+      "text": "강연우가 화면을 보고 굳었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 309,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 151,
+      "text": "“어머님한테 전화해요. 지금.”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 311,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 152,
+      "text": "어머니는 세 번째 신호에 받았다. 텔레비전 소리가 들렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 313,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 153,
+      "text": "“밥은 먹었어?”",
+      "kind": "dialogue",
+      "speaker": "어머니",
+      "sourceLine": 315,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 154,
+      "text": "“엄마, 나 금방 들어가. 그때까지 문 잠그고 있어. 누가 나 찾아와도 열지 마.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 317,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 155,
+      "text": "“왜. 무슨 일인데.”",
+      "kind": "dialogue",
+      "speaker": "어머니",
+      "sourceLine": 319,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 156,
+      "text": "“들어가서 다 얘기할게.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 321,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 157,
+      "text": "수화기 너머가 잠깐 조용해졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 323,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 158,
+      "text": "“……그래. 문 잠글게. 빨리 와.”",
+      "kind": "dialogue",
+      "speaker": "어머니",
+      "sourceLine": 325,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 159,
+      "text": "전화를 끊자 강연우가 회사 보안팀에 요청서를 넣고 있었다. 동부 사택 출입구 야간 순찰.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 327,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 160,
+      "text": "“회사가 해 줄까요?”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 329,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 161,
+      "text": "“해 주게 만들어야죠. 그저께 그 일, 오늘 이 일. 기록 다 있으니까.”",
+      "kind": "dialogue",
+      "speaker": "강연우",
+      "sourceLine": 331,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 162,
+      "text": "강연우가 요청서를 보내는 사이 알림이 하나 더 들어와 있었다. 운영팀이 배차 담당에게 예비차 출동을 소명하라고 요구했다는, 참조로 온 알림이었다. 본사 사람이 시켜서 차를 뺀 거 아니냐는 추궁이었다. 잘못하면 배차 담당이 징계를 받는다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 333,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 163,
+      "text": "서인은 왼손으로 단말 메모를 열어 한 줄을 남겼다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 335,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 164,
+      "text": "실제 운행: 야간 예비 차량. 출동 판단: 배차 담당. 출동 근거를 읽어 준 사람: 서인.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 337,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 165,
+      "text": "새벽 4시 50분, 동부 사택.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 341,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 166,
+      "text": "서인은 4시 반에 집을 나섰다. 등 뒤에서 어머니가 문을 두 번 잠그는 소리가 났다. 공동주방 앞이 아니라 맞은편 계단참에 섰다. 자기 집 창이 올려다보이는 자리였다. 계단 아래 세워 둔 차 안에서는 강연우가 의자를 젖힌 채 졸고 있었다. 혼자는 못 보낸다며 따라온 참이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 343,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 167,
+      "text": "강연우가 넣은 요청대로 사택 출입구에는 회사 경비 한 명이 서 있었다. 교대하러 온 경비가 서인을 보더니 수첩을 펼쳤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 345,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 168,
+      "text": "“새벽 3시쯤 회색 승합차 한 대가 입구 앞에 한참 서 있다 갔습니다. 번호 적어 뒀어요.”",
+      "kind": "dialogue",
+      "speaker": "사택 경비",
+      "sourceLine": 347,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 169,
+      "text": "어젯밤 블랙박스에 찍힌 그 번호였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 349,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 170,
+      "text": "5시 18분. 골목 끝에서 헤드라이트 두 개가 꺾여 들어왔다. 약속보다 2분 일찍이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 351,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 171,
+      "text": "“동부 사택 공동주방! 두부랑 채소요!”",
+      "kind": "dialogue",
+      "speaker": "예비차 기사",
+      "sourceLine": 353,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 172,
+      "text": "공동주방 문이 벌컥 열리고 쉰쯤 된 책임자가 앞치마에 손을 닦으며 뛰쳐나왔다. 물병 기사가 상자를 내리다 계단참의 서인을 발견하고 손을 흔들었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 355,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 173,
+      "text": "“밤새 여기 있었어요?”",
+      "kind": "dialogue",
+      "speaker": "예비차 기사",
+      "sourceLine": 357,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 174,
+      "text": "“잠이 안 와서요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 359,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 175,
+      "text": "책임자가 서인의 출입증을 봤다. 아르카디아. 전략실.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 361,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 176,
+      "text": "“당신이 그 전화한 사람이에요? 회사 사람이?”",
+      "kind": "dialogue",
+      "speaker": "공동주방 책임자",
+      "sourceLine": 363,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 177,
+      "text": "“네.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 365,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 178,
+      "text": "“여기 원래 애들 맡기던 방인 거 알아요? 당신네 회사가 돈 안 된다고 닫은.”",
+      "kind": "dialogue",
+      "speaker": "공동주방 책임자",
+      "sourceLine": 367,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 179,
+      "text": "“압니다. 그 회의에 저도 있었습니다.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 369,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 180,
+      "text": "책임자가 한참 서인을 쳐다봤다. 그러다 오른손목의 자국에 눈이 갔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 371,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 181,
+      "text": "“……들어와요. 추워.”",
+      "kind": "dialogue",
+      "speaker": "공동주방 책임자",
+      "sourceLine": 373,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 182,
+      "text": "6시 30분, 기사들이 줄을 섰다. 도시락 통이 손에서 손으로 넘어갔다. 몇몇은 아이 손을 잡고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 375,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 183,
+      "text": "7시 정각. 사택 앞 도로로 차들이 한 대씩 빠져나갔다. 빈손으로 나간 차는 없었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 377,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 184,
+      "text": "7시 2분. 책임자가 단말을 내밀었다. 어젯밤 9시 넘어 회사에서 온 자동 안내였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 379,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 185,
+      "text": "새 배송 경로로 주문이 도착합니다. 도착 예정 07:40.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 381,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 186,
+      "text": "“7시 40분이래요. 우리 기사들 다 나가고 40분 뒤.”",
+      "kind": "dialogue",
+      "speaker": "공동주방 책임자",
+      "sourceLine": 383,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 187,
+      "text": "회사 시스템은 이 주문이 아직도 자기 경로로 가는 중이라고 믿고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 385,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 188,
+      "text": "서인이 자기 단말을 옆에 나란히 놓았다. 감사 자료의 공동주방 줄이 그대로 떠 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 387,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 189,
+      "text": "대체 경로 확보. 납품 지속 가능.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 389,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 190,
+      "text": "책임자가 두 화면을 번갈아 보더니 웃음을 터뜨렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 391,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 191,
+      "text": "“지속 가능? 뭐가?”",
+      "kind": "dialogue",
+      "speaker": "공동주방 책임자",
+      "sourceLine": 393,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 192,
+      "text": "“모레 감사에서 이 줄 지우려고요.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 395,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 193,
+      "text": "책임자가 화이트보드 앞으로 가서 ‘기사 도시락 41. 아이 아침 17.’ 밑에 시각을 적었다. 다른 가게에서 확보할 수 있었던 건 열두 끼뿐이었다. 아이들 아침만 열일곱 끼였다. 그 옆에는 취소하지 않은 원주문 번호가 남아 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 397,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 194,
+      "text": "서인은 두 줄을 함께 찍었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 399,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 195,
+      "text": "05:18 도착. 07:00 전원 출차.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 401,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 196,
+      "text": "대체 구매 가능: 12끼. 취소 요청 없음.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 403,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 197,
+      "text": "“먹고 가요. 아침값은 받아요. 회사 사람이니까.”",
+      "kind": "dialogue",
+      "speaker": "공동주방 책임자",
+      "sourceLine": 405,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 198,
+      "text": "왼손으로 지갑을 꺼내 자기 몫을 냈다. 젓가락도 왼손으로 잡았다. 두부가 자꾸 깨졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 407,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 199,
+      "text": "안쪽 식탁의 아이 하나가 그걸 보고 한마디 했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 409,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 200,
+      "text": "“아저씨, 그렇게 잡으면 두부 다 깨져요.”",
+      "kind": "dialogue",
+      "speaker": "아이",
+      "sourceLine": 411,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 201,
+      "text": "“오른손을 다쳐서.”",
+      "kind": "dialogue",
+      "speaker": "서인",
+      "sourceLine": 413,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 202,
+      "text": "아이가 제 숟가락을 내밀었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 415,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 203,
+      "text": "“그럼 이걸로 먹어요.”",
+      "kind": "dialogue",
+      "speaker": "아이",
+      "sourceLine": 417,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 204,
+      "text": "숟가락을 받았다. 이번에는 부서진 쪽부터 떠먹었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 419,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 205,
+      "text": "창밖으로 집 창에 불이 켜지는 게 보였다. 어머니가 일어난 모양이었다. 출입구에는 경비가 둘로 늘어 있었다. 회색 승합차는 다시 오지 않았다. 아직은.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 421,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 206,
+      "text": "주머니에서 단말이 떨렸다. 권한 심사에서 등급 5를 내준 윤세라였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 423,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 207,
+      "text": "모레 감사실 들어가기 전에, 먼저 드릴 말씀이 있습니다.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 425,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 208,
+      "text": "바로 밑에 한 줄이 더 붙어 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 427,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 209,
+      "text": "어젯밤 기지 건 보고받았습니다. 감사 전까지 혼자 이동하지 마십시오.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 429,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 210,
+      "text": "단말을 그릇 옆에 엎어 두고 다음 두부를 떴다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 431,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    },
+    {
+      "k": 211,
+      "text": "두부가 아직 따뜻했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 433,
+      "place": "물류기지 배차실",
+      "scene": "office"
+    }
+  ]
+}
