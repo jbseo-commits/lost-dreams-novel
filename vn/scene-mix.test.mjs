@@ -33,6 +33,13 @@ test('interview, lunch call, rooftop and hospital keep the people in their actua
  assert.equal(atText('20','말리면 그만둘 거야').scene,'rooftop');
  assert(atText('20','오늘 밤 거니까').direction.cast.find(p=>p.id==='jiwoo').remote);
  assert.equal(atText('19-1','새 경로의 도착 시각은 확인됐습니까?').speaker,'서인');
+ assert.equal(atText('19-1','배송 경로 확보라면서요').speaker,'식품 담당자');
+ assert.equal(atText('19-1','차를 따로 빼는 건 기지 판단입니다').speaker,'운영팀 남자');
+ assert.equal(atText('19-1','근처에서 살 수도 있잖습니까').speaker,'서인');
+ assert.equal(atText('19-1','아이 데리고 오는 기사들도 있어요').speaker,'식품 담당자');
+ assert.equal(atText('19-1','차 번호부터 받아').speaker,'공동주방 책임자');
+ assert.equal(atText('19-1','두부하고 채소는 주문한 양').speaker,'서인');
+ assert.equal(atText('19-1','배차 담당이 무전기를 고쳐 쥐었다.').kind,'narration');
  assert.equal(atText('19-1','아침값은 받아요').speaker,'공동주방 책임자');
  assert.equal(atText('20-1','병원 끝나고 학교 갈').speaker,'문해린');
  assert.equal(atText('20-1','지난번에도 세 개였어').speaker,'은경의 딸');
