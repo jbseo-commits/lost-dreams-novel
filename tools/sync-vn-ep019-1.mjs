@@ -117,6 +117,25 @@ chapter.beats=now.map((entry,index)=>{
   if(copy.kind==='narration'&&isQuote){copy.kind='dialogue';if(!copy.speaker)copy.speaker='서인';}
   if(copy.direction?.visual)copy.direction={...copy.direction,visual:null};
  }
+ // Canonical voice corrections for dialogue newly rearranged in episode 19-1.
+ // These phrases are unique source anchors, not fragile beat indices.
+ if(episode==='19-1'){
+  const speakers=[
+   ['“배송 경로 확보라면서요.','식품 담당자'],
+   ['“우리가 못 보내는 건데','식품 담당자'],
+   ['“차를 따로 빼는 건','운영팀 남자'],
+   ['“근처에서 살 수도','서인'],
+   ['“기사들은 다른 데서','서인'],
+   ['“아이 데리고 오는 기사들도','식품 담당자'],
+   ['“잠깐만. 차 번호부터','공동주방 책임자'],
+   ['“두부하고 채소는 주문한','서인'],
+   ['“알겠어요. 아침에','공동주방 책임자']
+  ];
+  const correction=speakers.find(([prefix])=>entry.text.startsWith(prefix));
+  if(correction){copy.kind='dialogue';copy.speaker=correction[1];}
+ }
+ // A lingering old dialogue classification must not turn narration into speech.
+ if(copy.kind==='dialogue'&&!isQuote){copy.kind='narration';copy.speaker='';}
  if(copy.kind==='dialogue'&&!copy.speaker)throw Error('Dialogue without speaker at '+index);
  if(!story.assets[copy.scene])throw Error('Missing background at '+index+': '+copy.scene);
  return copy;
