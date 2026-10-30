@@ -1,0 +1,38 @@
+name: 19-1화 VN 정본 동기화 및 검증
+
+on:
+  push:
+    branches:
+      - fix/vn-ep019-1-source-sync-20261030
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 작업 브랜치 체크아웃
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Node 준비
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: 최신 정본에서 VN 데이터 및 19-1화 컷신 좌표 갱신
+        run: node tools/sync-vn-ep019-1.mjs
+      - name: 정본 동기화 결과 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vn/story-data.js vn/episode-cutscenes.js vn/notes/ep019-1-source-sync-review.json
+          if ! git diff --cached --quiet; then
+            git commit -m "데이터: 19-1화 최신 원고와 컷신 위치 동기화"
+            git push origin HEAD:fix/vn-ep019-1-source-sync-20261030
+          fi
+      - name: 비주얼노벨 전체 검사
+        run: npm test --prefix vn
+      - name: 배포 산출물 검사
+        run: node tools/build-vn-public.mjs "$GITHUB_WORKSPACE" "$RUNNER_TEMP/lost-dreams-public"
