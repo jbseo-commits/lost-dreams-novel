@@ -215,7 +215,7 @@ test('6화 옥상 정적은 도시에서 송출탑으로 넘어가고 빵을 건
   const c=chapter('6'),start=episodeSixRooftopStart(c);
   assert.ok(start>=0,'the exact five-line rooftop context exists in the VN snapshot');
   assert.equal(c.beats[start-1].text,'“맛있네.”');
-  assert.deepEqual(c.beats.slice(start,start+3).map(beat=>beat.text),[
+  assert.deepEqual(Array.from(c.beats.slice(start,start+3),beat=>beat.text),[
     '서인은 도시를 내려다봤다.',
     '아무도 구해 달라고 소리치지 않았다.',
     '광고 송출탑은 평소처럼 빛났다.'
