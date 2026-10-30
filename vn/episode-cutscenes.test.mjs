@@ -259,7 +259,7 @@ test('6화 신규 전용 컷신 2장은 완전한 1280x720 WebP 파일이며 임
     assert.equal(bytes.toString('ascii',12,16),'VP8 ');
     assert.equal(bytes.readUInt16LE(26)&0x3fff,1280);
     assert.equal(bytes.readUInt16LE(28)&0x3fff,720);
-    const gitHash=createHash('sha1').update(Buffer.concat([Buffer.from('blob '+bytes.length+'\\0'),bytes])).digest('hex');
+    const gitHash=createHash('sha1').update(Buffer.concat([Buffer.from('blob '+bytes.length+String.fromCharCode(0)),bytes])).digest('hex');
     assert.equal(gitHash,sha);
   }
 });
