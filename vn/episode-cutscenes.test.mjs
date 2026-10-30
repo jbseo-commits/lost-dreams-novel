@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {EP1_ASSETS} from './ep1-assets.js';
-import {EPISODE_CUTSCENES,withEpisodeCutscene,eventCutsceneDirection} from './episode-cutscenes.js';
+import {EPISODE_CUTSCENES,withEpisodeCutscene,eventCutsceneDirection,episodeSixRooftopStart,EPISODE_SIX_ROOFTOP_FRAMES} from './episode-cutscenes.js';
 import {episodeOneDirection} from './episode-one.js';
 import {episodeTwoDirection} from './episode-two.js';
 import {episodeOneReadingPage} from './episode-one-reading.js';
@@ -209,4 +209,32 @@ test('episode 3 gaze -> small dirt under nails -> can toast uses distinct CG in 
   const changed=structuredClone(c);changed.beats[nails].text='흙은 없었다.';
   assert.equal(withEpisodeCutscene(null,changed,nails),null);
   assert.equal(withEpisodeCutscene(null,changed,toast),null);
+});
+
+test('6화 옥상 정적은 도시에서 송출탑으로 넘어가고 빵을 건네기 전에 끝난다',()=>{
+  const c=chapter('6'),start=episodeSixRooftopStart(c);
+  assert.ok(start>=0,'the exact five-line rooftop context exists in the VN snapshot');
+  assert.equal(c.beats[start-1].text,'“맛있네.”');
+  assert.deepEqual(c.beats.slice(start,start+3).map(beat=>beat.text),[
+    '서인은 도시를 내려다봤다.',
+    '아무도 구해 달라고 소리치지 않았다.',
+    '광고 송출탑은 평소처럼 빛났다.'
+  ]);
+  assert.equal(c.beats[start+3].text,'도윤이 남은 빵 절반을 다시 내밀었다.');
+  assert.deepEqual(EPISODE_SIX_ROOFTOP_FRAMES.map(frame=>frame.cg),['ep06CitySilence','ep06AdTower']);
+  for(let i=start;i<=start+2;i++){
+    const cue=at('6',i);
+    assert.equal(cue.cg,'ep06CitySilence');
+    assert.equal(cue.cutscene.id,'ep06RooftopTower');
+    assert.deepEqual(cue.cutscene.frames,EPISODE_SIX_ROOFTOP_FRAMES);
+    assert.deepEqual(cue.actors,[]);
+    assert.equal(cue.wallAd,false);
+  }
+  assert.notEqual(at('6',start-1)?.cg,'ep06CitySilence');
+  assert.notEqual(at('6',start+3)?.cg,'ep06CitySilence');
+  const revised=structuredClone(c);
+  revised.beats[start+1].text='다른 문장';
+  assert.equal(episodeSixRooftopStart(revised),-1);
+  assert.notEqual(eventCutsceneDirection(revised,start)?.cg,'ep06CitySilence');
+  for(const frame of EPISODE_SIX_ROOFTOP_FRAMES)assert.ok(EP1_ASSETS[frame.cg],frame.cg);
 });
