@@ -7,7 +7,9 @@ import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const manuscript=path.join(root,'manuscript','ep019-1.md');
+const episode=process.argv[2]||'19-1';
+const epFilename='ep'+episode.replace(/^(\d+)/,(_all,digits)=>digits.padStart(3,'0'))+'.md';
+const manuscript=path.join(root,'manuscript',epFilename);
 const storyFile=path.join(root,'vn','story-data.js');
 const cutFile=path.join(root,'vn','episode-cutscenes.js');
 const raw=fs.readFileSync(manuscript,'utf8');
@@ -15,8 +17,8 @@ const original=fs.readFileSync(storyFile,'utf8');
 const context={window:{}};
 vm.runInNewContext(original,context,{timeout:15000});
 const story=JSON.parse(JSON.stringify(context.window.STORY));
-const chapter=story.chapters.find(c=>c.id==='19-1');
-if(!chapter||chapter.sourcePath!=='manuscript/ep019-1.md')throw Error('19-1 source path changed');
+const chapter=story.chapters.find(c=>c.id===episode);
+if(!chapter||chapter.sourcePath!=='manuscript/'+epFilename)throw Error('source path changed for '+episode);
 
 const lineParts=raw.split(/\r?\n/);
 const title=lineParts[0].replace(/^#\s*/,'');
@@ -35,7 +37,7 @@ for(let i=1;i<=lineParts.length;i++){
  if(!acc.length)begin=i+1;
  acc.push(l);
 }
-if(paragraphs.length<100||paragraphs.length>300)throw Error('Unexpected 19-1 paragraph count '+paragraphs.length);
+if(paragraphs.length<70||paragraphs.length>400)throw Error('Unexpected paragraph count '+episode+': '+paragraphs.length);
 
 const old=chapter.beats,now=paragraphs;
 function similarity(a,b){
@@ -126,7 +128,7 @@ for(let k=0;k<chapter.beats.length;k++){
 }
 console.log('Inferred dialogue speakers:',inferredDialogue);
 const chapterSummary=chapter.beats.map((b,k)=>({k,text:b.text,kind:b.kind,speaker:b.speaker,sourceLine:b.sourceLine,place:b.direction?.place||'',scene:b.scene}));
-fs.writeFileSync(path.join(root,'vn','notes','ep019-1-source-sync-review.json'),JSON.stringify({chapter:chapter.id,previousBeats:m,canonicalBeats:n,exactMatches:exact,inferredDialogue,beats:chapterSummary},null,2)+'\n');
+fs.writeFileSync(path.join(root,'vn','notes',epFilename.replace(/\.md$/, '-source-sync-review.json')),JSON.stringify({chapter:chapter.id,previousBeats:m,canonicalBeats:n,exactMatches:exact,inferredDialogue,beats:chapterSummary},null,2)+'\n');
 fs.writeFileSync(storyFile,'window.STORY = '+JSON.stringify(story)+';\n');
 
 const cutSource=fs.readFileSync(cutFile,'utf8');
@@ -136,7 +138,7 @@ if(start<0||end<0)throw Error('Unknown cutscene format');
 const arrayLiteral=cutSource.slice(start+prefix.length,end);
 const cuts=vm.runInNewContext(arrayLiteral,{});
 const finger=text=>{let h=2166136261;for(let i=0;i<text.length;i++)h=Math.imul(h^text.charCodeAt(i),16777619)>>>0;return h.toString(16);};
-for(const cut of cuts.filter(c=>c.chapter==='19-1')){
+for(const cut of cuts.filter(c=>c.chapter===episode)){
  const idx=chapter.beats.findIndex(b=>b.text===cut.anchor);
  const stop=chapter.beats.findIndex((b,k)=>k>=idx&&k<idx+50&&b.text===cut.endAnchor);
  if(idx<0||stop<idx)throw Error('Missing source-bound cutscene anchor '+cut.cg);
@@ -146,4 +148,4 @@ for(const cut of cuts.filter(c=>c.chapter==='19-1')){
 }
 const updated=cutSource.slice(0,start+prefix.length)+JSON.stringify(cuts,null,2)+cutSource.slice(end);
 fs.writeFileSync(cutFile,updated);
-console.log('Sync complete. Other chapter data preserved.');
+console.log('Sync complete for '+episode+'. Other chapter data preserved.');
