@@ -549,6 +549,33 @@ export const EPISODE_CUTSCENES = Object.freeze([
   {"chapter":"22-1","start":42,"end":42,"cg":"ep22-1-document","anchor":"“‘공공 의료 검증 지원 요청 시, 제4 검증층 예비 연산의 일시 전환은 인지안전실장 전결로 한다. 지연 한도 3시간. 사후 보고.’”","alt":"법무 이사가 의결 조항을 읽는 손과 종이에 모인 시선. 제안자 칸은 아직 드러나지 않는다.","endAnchor":"“‘공공 의료 검증 지원 요청 시, 제4 검증층 예비 연산의 일시 전환은 인지안전실장 전결로 한다. 지연 한도 3시간. 사후 보고.’”","fingerprint":"aee49191","mobilePosition":"50% 50%"}
 ].map(Object.freeze));
 
+
+/**
+ * Rooftop epilogue: the city and ad tower stay indifferent after Seo-in learns
+ * that the 147 participants chose to return. We bind the whole five-line
+ * context, not an index, because this chapter is periodically reflowed.
+ */
+const EPISODE_SIX_ROOFTOP_CONTEXT = Object.freeze([
+  '“맛있네.”',
+  '서인은 도시를 내려다봤다.',
+  '아무도 구해 달라고 소리치지 않았다.',
+  '광고 송출탑은 평소처럼 빛났다.',
+  '도윤이 남은 빵 절반을 다시 내밀었다.'
+]);
+export const EPISODE_SIX_ROOFTOP_FRAMES = Object.freeze([
+  Object.freeze({cg:'ep06CitySilence',alt:'옥상에서 내려다본 밤의 도시, 누구도 도움을 청하지 않는 불 켜진 창들',position:'50% 50%'}),
+  Object.freeze({cg:'ep06AdTower',alt:'밤에도 아무 일 없다는 듯 빛나는 광고 송출탑',position:'50% 45%'})
+]);
+export function episodeSixRooftopStart(chapter){
+  if(chapter?.id!=='6'||!Array.isArray(chapter.beats))return -1;
+  const beats=chapter.beats;
+  // Start at the first CITY line (the second context item).
+  return beats.findIndex((beat,i)=>
+    beat.text===EPISODE_SIX_ROOFTOP_CONTEXT[1] &&
+    EPISODE_SIX_ROOFTOP_CONTEXT.every((line,j)=>beats[i+j-1]?.text===line)
+  );
+}
+
 const validatedCuts=new WeakMap();
 function matchingSource(chapter,insert){
   if(!validatedCuts.has(chapter))validatedCuts.set(chapter,new Map());
@@ -591,6 +618,15 @@ export function withEpisodeCutscene(cue,chapter,index){
         id:cg,alt,position:index===nails?'50% 54%':'50% 47%',
         start:point,phase,impact:null}};
     }
+  }
+  // A two-shot cinematic insert on the three-line reading page. Preserve
+  // every original line, choice and save coordinate; exit before the bread is offered.
+  const rooftopStart=episodeSixRooftopStart(chapter);
+  if(rooftopStart>=0&&index>=rooftopStart&&index<=rooftopStart+2){
+    return {...cue,cg:EPISODE_SIX_ROOFTOP_FRAMES[0].cg,actors:[],wallAd:false,shot:'insert',
+      cutscene:{id:'ep06RooftopTower',alt:'무심한 도시와 여전히 빛나는 광고 송출탑',
+        position:'50% 50%',start:rooftopStart,phase:'',impact:null,
+        frames:EPISODE_SIX_ROOFTOP_FRAMES}};
   }
   const inserts=EPISODE_CUTSCENES.filter(c=>c.chapter===chapter?.id&&index>=c.start&&index<=c.end&&matchingSource(chapter,c));
   const insert=inserts[0];
