@@ -6,8 +6,10 @@
 - **173 「허용된 반항」 본문 PASS**: 최종 3518자·누적 2/3·같은 독립 사실(FACT_PASS)·편집 검수 본문 6항목 각 9/평균 9.00. 연출 미구현·모바일 미검증·점수 없음·미공개. 근거 `planning/autodrive/reviews/173/`, 인계 `loop/held/ep173-notes.md`.
 - **174 「동의하지 않은 아이들」 본문 PASS**: 3686자·누적 2/3·사실 FACT_PASS·편집 각 9/평균 9.00. 미공개. 근거 `planning/autodrive/reviews/174/`.
 - **175 「아버지가 고른 질문」 본문 PASS**: 3545자·누적 2/3·사실 FACT_PASS·편집 각 9/평균 9.00. 미공개. 근거 `planning/autodrive/reviews/175/`. **171~175 구간 종료.**
-- **다음 176 미작성**(176~180 `planning/ep176-180-doyoon-antagonist-reveal-arc.md`, 적용안 미작성). 작가 지시 전 시작하지 않는다. 173부터 171·172의 절차 보고투 대신 사건·직접 대사 결로 쓴다(작가 2026-10-24 문체 지적·hyona-reader).
-- 원격: GitHub 연결 계정이 `jjsjb88-alt`라 push 보류(규칙상 `jbseo-commits` 확인 필요). 로컬 커밋만.
+- 2026-11-21 작가 지시 “계속 집필”로 176~180 구간 시작. 적용안 `planning/autodrive/ep176-180-adaptation.md`.
+- **176 「누가 이 역사를 썼나」 본문 PASS**: 3683자·누적 2/3·사실 FACT_PASS·편집 각 9/평균 9.00. 미공개.
+- **177 집필 중.** 173부터 171·172의 절차 보고투 대신 사건·직접 대사 결로 쓴다(작가 2026-10-24 문체 지적·hyona-reader).
+- 원격: 2026-11-21 `jbseo-commits/lost-dreams-novel`의 `claude/inspiring-cannon-4zlu8l`로 push(세션 git 연결). main·PR 미변경.
 
 ## 2026-10-23 · 체인 집필 자율주행 (이번 실행의 최신 상태)
 
