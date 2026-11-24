@@ -1,0 +1,4 @@
+# 제199화 「끝까지 다른 사람」 설계 (작가 확정 순서 준수)
+- 일요일 0:06 지하 2층 레거시 실, 00:31. 도윤 "너만." 대면: 원안 대사(서인 "도윤 씨가 그걸 정하면, 바뀌는 게 아니에요." — 199 첫 '형' 보존 위해 치환), "많지… 알아서 내가 하는 거야. 너한테 시키지 않고." "제가 도윤 씨 생각대로 안 움직여서, 그래서 저를 골랐잖아요." "그게 문제였다."
+- 서인 패치로 끊기 → `MANUAL CUTOFF · OPERATOR LOAD · LIMIT: NONE`, `ESSENTIAL GRID · LOAD SHIFT · WARNING`, `EAST CHILDREN'S · ICU · BACKUP POWER`. 도윤이 패치를 옮겨 받음(사망 기술 원인 제안) → `MANUAL CUTOFF · OPERATOR: 도윤 · CONFIRMED` / `EXECUTION PATH · CLOSED BY OPERATOR` / `CONSENT CHECK BYPASS — CANCELLED`. 도윤 "이름." "요일." "됐다."
+- 별도 행동: `SUCCESSOR DELEGATION: ARMED · 서인` → `REVOKE` → `REVOKED BY HOLDER`, 다른 이름 없음. "처음엔 사흘이었어."(177) → "난 아직 네가 틀렸다고 생각해." "알아요." "넌 참 안 바뀌는구나." "형한테 배웠잖아요."(첫 '형') → 손을 조금 쥠. 맥박 세 번, "형, 우리 아직 얘기 안 끝났어요." 세아 손 얹기, 가람 "아빠", 세아 REVOKED 사진 두 번. 0:52, 도준 "무슨 사흘인데요?" 가람 "이건 나중에 적을게." 마지막 문장(제안) 그대로.
