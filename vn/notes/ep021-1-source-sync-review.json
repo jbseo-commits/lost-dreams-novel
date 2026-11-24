@@ -1,0 +1,1152 @@
+{
+  "chapter": "21-1",
+  "previousBeats": 127,
+  "canonicalBeats": 127,
+  "exactMatches": 127,
+  "inferredDialogue": 0,
+  "beats": [
+    {
+      "k": 0,
+      "text": "탑이 기울었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 3,
+      "place": "기울어지는 송출탑",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 1,
+      "text": "최은경은 난간을 붙잡았다. 철골 사이로 불꽃이 떨어지고, 송출탑 꼭대기의 붉은 등이 꺼졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 5,
+      "place": "기울어지는 송출탑",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 2,
+      "text": "구조 0 / 12.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 7,
+      "place": "기울어지는 송출탑",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 3,
+      "text": "아홉까지는 가 봤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 9,
+      "place": "기울어지는 송출탑",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 4,
+      "text": "그다음 사람을 데리러 올라갈 때마다 탑이 먼저 무너졌다. 아침이면 얼굴도 층수도 잊었다. 여기 들어오면 다시 알았다. 어느 문이 안 열리는지, 어느 계단에서 돌아가야 하는지.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 11,
+      "place": "기울어지는 송출탑",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 5,
+      "text": "은경은 작업화 끈을 묶었다. 꿈에서도 같은 신발이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 13,
+      "place": "기울어지는 송출탑",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 6,
+      "text": "오늘은 나가는 문부터 닫히지 않게 할 생각이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 15,
+      "place": "기울어지는 송출탑",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 7,
+      "text": "3층에서 남자 둘을 데리고 나왔다. 한 사람은 걸을 수 있었고, 다른 사람은 발을 디디지 못했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 19,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 8,
+      "text": "“팔 좀 받아요. 혼자 먼저 가지 말고.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 21,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 9,
+      "text": "둘이서 한 사람을 부축했다. 늘 어깨에 짊어지고 내려오던 계단을 이번에는 쉬지 않고 갔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 23,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 10,
+      "text": "구조 2 / 12.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 25,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 11,
+      "text": "은경은 출구의 철문 아래에 부러진 난간을 끼웠다. 문이 닫히려다 걸렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 27,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 12,
+      "text": "5층의 여자 셋은 서로 붙잡고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 29,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 13,
+      "text": "“내려가면 문 열려 있어요. 거기까지만 가요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 31,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 14,
+      "text": "한 명이 먼저 일어났다. 다른 두 명도 따라 일어났다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 33,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 15,
+      "text": "구조 5 / 12.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 35,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 16,
+      "text": "7층 복도에서는 네 사람이 엎드려 기침하고 있었다. 은경은 비상등 아래로 그들을 몰았다. 마지막 사람의 손이 소매를 놓지 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 37,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 17,
+      "text": "“같이 안 가요?”",
+      "kind": "dialogue",
+      "speaker": "구조 대상자",
+      "sourceLine": 39,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 18,
+      "text": "“위에 더 있어요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 41,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 19,
+      "text": "“무너진다고요.”",
+      "kind": "dialogue",
+      "speaker": "구조 대상자",
+      "sourceLine": 43,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 20,
+      "text": "은경은 그 손을 앞사람의 등에 얹었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 45,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 21,
+      "text": "“놓치지 마요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 47,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 22,
+      "text": "계단 아래에서 문이 덜컹였다. 끼워 둔 난간은 버텼다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 49,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 23,
+      "text": "구조 9 / 12.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 51,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 24,
+      "text": "은경은 10층으로 뛰었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 53,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 25,
+      "text": "청년 하나가 책상 밑에 웅크리고 있었다. 책상 위에서는 단말이 계속 울렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 55,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 26,
+      "text": "“나와요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 57,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 27,
+      "text": "청년이 단말을 가리켰다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 59,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 28,
+      "text": "“가져가야 돼요.”",
+      "kind": "dialogue",
+      "speaker": "청년",
+      "sourceLine": 61,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 29,
+      "text": "은경은 단말을 집어 셔츠 안에 넣고 계단으로 나왔다. 청년이 기어서 따라왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 63,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 30,
+      "text": "문밖에서야 단말을 돌려줬다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 65,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 31,
+      "text": "“이제 내려가요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 67,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 32,
+      "text": "은경은 그를 지나 위로 향했다. 아직 숫자는 아홉이었다. 청년이 출구를 통과하면 처음으로 열이 될 것이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 69,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 33,
+      "text": "11층에는 아이 하나가 있었다. 은경이 손을 내밀자 아이는 고개를 저었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 71,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 34,
+      "text": "“할아버지도.”",
+      "kind": "dialogue",
+      "speaker": "아이",
+      "sourceLine": 73,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 35,
+      "text": "위층에서 두드리는 소리가 들렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 75,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 36,
+      "text": "“데리고 올게.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 77,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 37,
+      "text": "은경은 아이를 데리고 한 층 내려갔다. 단말을 돌려받은 청년이 아직 계단에 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 79,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 38,
+      "text": "“이 아이 데리고 나가요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 81,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 39,
+      "text": "청년이 아이의 손을 잡았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 83,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 40,
+      "text": "“아주머니는요?”",
+      "kind": "dialogue",
+      "speaker": "청년",
+      "sourceLine": 85,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 41,
+      "text": "은경은 위를 가리켰다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 87,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 42,
+      "text": "둘이 내려가는 것을 보고 다시 뛰었다. 계단참을 돌아 나가는 작은 등이 보였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 89,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 43,
+      "text": "잠시 뒤 숫자가 열이 됐다. 곧 열하나가 됐다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 91,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 44,
+      "text": "구조 11 / 12.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 93,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 45,
+      "text": "열이라는 숫자는 제대로 보지도 못했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 95,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 46,
+      "text": "은경이 웃으며 다음 계단을 밟았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 97,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 47,
+      "text": "그때 발밑이 울렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 99,
+      "place": "열한 번째 사람까지",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 48,
+      "text": "계단 중간이 떨어져 나갔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 103,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 49,
+      "text": "은경은 멈추지 못하고 무릎으로 모서리를 찍었다. 벌어진 틈 아래로 불이 보였다. 무언가를 잡았는데 손바닥이 먼저 찢어졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 105,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 50,
+      "text": "난간이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 107,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 51,
+      "text": "발을 댈 칸이 없었다. 은경은 난간에 매달린 채 문 쪽으로 손을 옮겼다. 위층 문이 발끝에 닿을 듯 말 듯했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 109,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 52,
+      "text": "문 너머에서 다시 두드리는 소리가 났다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 111,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 53,
+      "text": "“거기 있어요?”",
+      "kind": "dialogue",
+      "speaker": "노인",
+      "sourceLine": 113,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 54,
+      "text": "“있어요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 115,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 55,
+      "text": "은경은 대답하고 나서 이를 악물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 117,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 56,
+      "text": "“문에서 떨어져요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 119,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 57,
+      "text": "난간을 잡고 몸을 흔들었다. 첫 발길질은 빗나갔다. 두 번째에 발뒤꿈치가 문을 쳤다. 문이 열리고 몸이 안쪽으로 쏟아졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 121,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 58,
+      "text": "노인이 바닥에 주저앉아 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 123,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 59,
+      "text": "“아이는요?”",
+      "kind": "dialogue",
+      "speaker": "노인",
+      "sourceLine": 125,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 60,
+      "text": "“내려갔어요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 127,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 61,
+      "text": "“정말?”",
+      "kind": "dialogue",
+      "speaker": "노인",
+      "sourceLine": 129,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 62,
+      "text": "은경이 등을 돌렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 131,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 63,
+      "text": "“가서 봐요. 업혀요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 133,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 64,
+      "text": "노인은 무거웠다. 일어서려는데 무릎이 접혔다. 은경은 책상에 손을 짚고 다시 폈다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 135,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 65,
+      "text": "돌아온 문밖에는 계단이 없었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 137,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 66,
+      "text": "무너진 자리를 보고 있는 동안 노인의 팔이 목에서 풀렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 139,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 67,
+      "text": "“놓고 가요.”",
+      "kind": "dialogue",
+      "speaker": "노인",
+      "sourceLine": 141,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 68,
+      "text": "은경은 노인의 손목을 붙잡았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 143,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 69,
+      "text": "“아까 애한테 온다고 했어요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 145,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 70,
+      "text": "노인은 더 말하지 않았다. 풀렸던 팔에 다시 힘이 들어왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 147,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 71,
+      "text": "깨진 창 너머로 옆 건물 옥상이 보였다. 그냥 뛰어서는 닿지 않을 것 같았다. 사이로 송출탑의 버팀대가 비스듬히 걸려 있었다. 끝이 흔들렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 149,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 72,
+      "text": "은경은 창틀에 올라섰다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 151,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 73,
+      "text": "“눈 감아요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 153,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 74,
+      "text": "“왜요.”",
+      "kind": "dialogue",
+      "speaker": "노인",
+      "sourceLine": 155,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 75,
+      "text": "“나까지 무서워지니까.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 157,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 76,
+      "text": "첫발을 버팀대에 놓았다. 철이 휘는 소리가 발밑에서 났다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 159,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 77,
+      "text": "두 번째 발을 디딜 때 창틀이 떨어졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 161,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 78,
+      "text": "은경은 뛰었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 163,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 79,
+      "text": "옥상 턱에 배가 걸렸다. 숨이 끊겼다. 등에서 노인이 미끄러졌다. 은경은 그의 팔을 놓지 않은 채 콘크리트를 긁었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 165,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 80,
+      "text": "노인이 먼저 턱을 잡았다. 매달린 채 소리쳤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 167,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 81,
+      "text": "“밀어요.”",
+      "kind": "dialogue",
+      "speaker": "노인",
+      "sourceLine": 169,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 82,
+      "text": "은경은 발끝에 아직 닿아 있던 버팀대 끝을 디뎌 찼다. 둘이 한꺼번에 옥상 안쪽으로 굴렀다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 171,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 83,
+      "text": "송출탑이 무너지는 소리가 등 뒤로 길게 지나갔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 173,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 84,
+      "text": "한동안 숫자가 바뀌지 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 175,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 85,
+      "text": "은경은 옆으로 고개를 돌렸다. 노인이 기침했다. 그 소리를 듣고서야 손을 놓았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 177,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 86,
+      "text": "구조 12 / 12.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 179,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 87,
+      "text": "은경은 웃었다. 노인도 웃었다. 둘 다 누운 채였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 181,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 88,
+      "text": "“이겼다.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 183,
+      "place": "마지막 한 사람",
+      "scene": "dreamtower"
+    },
+    {
+      "k": 89,
+      "text": "“엄마.”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 187,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 90,
+      "text": "어깨를 흔드는 손이 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 189,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 91,
+      "text": "“여섯 시 십이 분.”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 191,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 92,
+      "text": "은경이 일어났다. 딸은 교복을 입고 휴대폰을 들고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 193,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 93,
+      "text": "“알람은?”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 195,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 94,
+      "text": "“엄마가 껐어.”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 197,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 95,
+      "text": "“네 개 다?”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 199,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 96,
+      "text": "딸이 화면을 내밀었다. 05:40, 05:43, 05:47, 05:50.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 201,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 97,
+      "text": "“마지막 거 끄면서 조금만 더라고 했어.”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 203,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 98,
+      "text": "은경은 손바닥을 폈다. 상처는 없었다. 바지를 입으며 무릎을 굽혀 보았다. 그것도 멀쩡했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 205,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 99,
+      "text": "꿈에서 무언가를 붙잡고 있었는데, 벌써 손에 잡히지 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 207,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 100,
+      "text": "“몇 명이었지.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 209,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 101,
+      "text": "“뭐가?”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 211,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 102,
+      "text": "“아냐.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 213,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 103,
+      "text": "딸이 휴대폰을 식탁에 놓았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 215,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 104,
+      "text": "“우유. 오늘은 진짜.”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 217,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 105,
+      "text": "현관 앞에 둔 작업화가 있었다. 은경은 발을 넣고 끈을 당겼다. 어젯밤 끈을 느슨하게 맨 채 벗어 둔 덕분에 발이 금방 들어갔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 219,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 106,
+      "text": "단말에 정산 알림이 떴다. 평소와 같은 금액이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 221,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 107,
+      "text": "그 아래에 꿈 만족도를 묻는 창이 열렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 223,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 108,
+      "text": "은경은 가장 높은 칸을 눌렀다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 225,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 109,
+      "text": "좋았던 점을 남겨 주세요. (선택)",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 227,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 110,
+      "text": "“끝까지 갔어요.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 229,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 111,
+      "text": "음성이 문장으로 바뀌었다. 은경은 읽고, 그대로 남겼다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 231,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 112,
+      "text": "딸이 옆에서 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 233,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 113,
+      "text": "“어디를?”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 235,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 114,
+      "text": "“몰라. 이겼어.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 237,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 115,
+      "text": "“기억도 안 나는데?”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 239,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 116,
+      "text": "은경이 끈에서 손을 뗐다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 241,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 117,
+      "text": "“그것만 기억나.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 243,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 118,
+      "text": "딸은 냉장고를 열었다가 닫았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 245,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 119,
+      "text": "“그러면 우유 두 개.”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 247,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 120,
+      "text": "“하나 사 오라며.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 249,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 121,
+      "text": "“이긴 기념.”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 251,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 122,
+      "text": "은경은 문을 열었다. 내려가는 계단은 열두 칸이었다. 오늘도 똑같이 열두 칸인데, 마지막 칸에서 웃음이 났다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 253,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 123,
+      "text": "현관을 나서자 딸에게 메시지가 왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 255,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 124,
+      "text": "큰 걸로 두 개. 하나는 초코.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 257,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 125,
+      "text": "은경은 걸음을 늦추지 않고 답했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 259,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    },
+    {
+      "k": 126,
+      "text": "초코는 내 거야.",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 261,
+      "place": "여섯 시 십이 분의 아침",
+      "scene": "room"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import {presentationForBeat} from './neural-cues.js';
 const box={window:{}};
 vm.runInNewContext(await fs.readFile(new URL('./story-data.js',import.meta.url),'utf8'),box);
 const story=JSON.parse(JSON.stringify(box.window.STORY));
-const ids=['19','19-1','19-2','20','20-1','21','21-1','22'];
+const ids=['19','19-1','20','20-1','21','21-1','22'];
 const chapter=id=>story.chapters.find(c=>c.id===id);
 const atText=(id,text)=>chapter(id).beats.find(b=>b.text.includes(text));
 
@@ -31,9 +31,16 @@ test('interview, lunch call, rooftop and hospital keep the people in their actua
  assert(!atText('19','의심할 자격을 준 것').direction.cast.some(p=>p.id==='yoonsera'));
  assert.equal(atText('20','말리면 그만둘 거야').speaker,'도윤');
  assert.equal(atText('20','말리면 그만둘 거야').scene,'rooftop');
- assert(atText('20','내가 아침에 싫다고').direction.cast.find(p=>p.id==='jiwoo').remote);
- assert.equal(atText('19-1','확인 중입니다.').speaker,'서인');
- assert.equal(atText('19-2','그럼 원래 하기로 한 일은').speaker,'식품 담당자');
+ assert(atText('20','오늘 밤 거니까').direction.cast.find(p=>p.id==='jiwoo').remote);
+ assert.equal(atText('19-1','새 경로의 도착 시각은 확인됐습니까?').speaker,'서인');
+ assert.equal(atText('19-1','배송 경로 확보라면서요').speaker,'식품 담당자');
+ assert.equal(atText('19-1','차를 따로 빼는 건 기지 판단입니다').speaker,'운영팀 남자');
+ assert.equal(atText('19-1','근처에서 살 수도 있잖습니까').speaker,'서인');
+ assert.equal(atText('19-1','아이 데리고 오는 기사들도 있어요').speaker,'식품 담당자');
+ assert.equal(atText('19-1','차 번호부터 받아').speaker,'공동주방 책임자');
+ assert.equal(atText('19-1','두부하고 채소는 주문한 양').speaker,'서인');
+ assert.equal(atText('19-1','배차 담당이 무전기를 고쳐 쥐었다.').kind,'narration');
+ assert.equal(atText('19-1','아침값은 받아요').speaker,'공동주방 책임자');
  assert.equal(atText('20-1','병원 끝나고 학교 갈').speaker,'문해린');
  assert.equal(atText('20-1','지난번에도 세 개였어').speaker,'은경의 딸');
  assert.equal(atText('21-1','끝까지 갔어요').speaker,'최은경');
@@ -47,9 +54,9 @@ test('mixed narration and channel direction retain the secret boundary and real 
   assert(!restricted.test(JSON.stringify(b)),id+':'+i);
   const cue=presentationForBeat(c,b,i);if(cue)assert.equal(cue.body,b.text,id+' stale cue');
  }}
- assert(atText('19-1','환불 확인 대기'));
- assert(atText('19-2','추가 작업비: 28 TOKEN'));
+ assert(atText('19-1','출동 판단: 배차 담당'));
+ assert(atText('19-1','05:18 도착. 07:00 전원 출차.'));
  assert(atText('21','정확한 원인은 아직 확인하지 못했습니다'));
- assert(atText('22','다음 날 새벽 1시 12분'));
- assert(atText('22','처음 밤에도 두 분은 같은 답'));
+ assert(atText('22','새벽 1시 12분. 네 번째 검증이'));
+ assert(atText('22','그 밤에도 두 분은 같은 답'));
 });

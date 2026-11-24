@@ -1,0 +1,66 @@
+/* Editorial treatment stays on the source paragraph; it does not repeat its text in a graphic. */
+.prose p.direction-cue,
+.prose div.direction-cue { color:#e3e6e1; font-variant-numeric:tabular-nums lining-nums; }
+.prose .direction-cue strong { color:#f1d6a5; font-weight:650; }
+.prose .direction-cue em { color:#c2d8ce; }
+.prose .direction-mark { color:#f1d6a5; text-decoration:underline; text-decoration-color:#d4b57980; text-decoration-thickness:1px; text-underline-offset:.18em; font-variant-numeric:tabular-nums lining-nums; }
+
+/* Choice and consequence remain in the original narration. */
+.prose p.direction-fork-b { color:#f0dfc1; }
+.prose p.direction-fork-compare { padding-left:.85em; border-left:2px solid #c7a875; }
+.prose p.direction-fork-release { color:#bac0bd; }
+.prose p.direction-fork-a { color:#efe1c7; }
+.prose p.direction-queue-one,
+.prose p.direction-queue-two { padding-left:.85em; border-left:1px solid #99bbb0; }
+.prose p.direction-delivery-plan,
+.prose p.direction-delivery-system,
+.prose p.direction-delivery-promise,
+.prose p.direction-delivery-518,
+.prose p.direction-delivery-740,
+.prose p.direction-delivery-518-review,
+.prose p.direction-delivery-740-review,
+.prose p.direction-clock-506,
+.prose p.direction-clock-540,
+.prose p.direction-clock-531,
+.prose p.direction-clock-0132-0139,
+.prose p.direction-clock-0133,
+.prose p.direction-clock-0136,
+.prose p.direction-deadline-start,
+.prose p.direction-deadline-1030,
+.prose p.direction-deadline-0134,
+.prose p.direction-meeting-552,
+.prose p.direction-meeting-640,
+.prose p.direction-meeting-730,
+.prose p.direction-meeting-858,
+.prose p.direction-meeting-900,
+.prose p.direction-meeting-912 { font-variant-numeric:tabular-nums lining-nums; letter-spacing:.005em; }
+.prose p.direction-delivery-promise,
+.prose p.direction-deadline-1030,
+.prose p.direction-deadline-0134 { color:#ead4ac; }
+
+/* Phone and system messages retain their one original line as the interface. */
+.prose .direction-system { border-left-color:#a8d2c4; color:#d2e1d8; }
+.prose p.direction-personal { width:fit-content; max-width:92%; margin-right:auto; padding:.28em .68em!important; border:1px solid #d8c6a233; border-radius:1em 1em 1em .15em; background:#d8c6a208; color:#e8e1d3; }
+.prose div.direction-personal { border-left:1px solid #d8c6a2; padding-left:1em; color:#e8e1d3; }
+.prose p.direction-alarm-row,
+.prose p.direction-alarm-row-new { width:min(18em,78%); margin:-.72em 0 -.38em auto; padding:.18em .6em!important; border-bottom:1px solid #8fb9bf35; background:#91b7c108; color:#e4ece8; text-align:right; font:600 .78em/1.6 ui-monospace,monospace; letter-spacing:.04em; }
+.prose p.direction-alarm-row-new { border-bottom-color:#d2ad7780; color:#f0d7aa; }
+.prose .direction-phone-time { width:fit-content; max-width:100%; padding:.35em .7em!important; border:1px solid #8fb9bf55!important; border-radius:2px; background:#91b7c109!important; }
+.prose .direction-phone-time strong { color:#e6f0e9; font:600 1.05em ui-monospace,monospace; }
+.prose .direction-phone-0540 { margin-right:auto!important; }
+.prose .direction-phone-0600 { margin-left:auto!important; border-color:#d2ad7755!important; }
+.prose .direction-deadline-mark { width:fit-content; padding:.08em .45em!important; border-left:2px solid #e2bd85!important; color:#f0d4a8!important; font-size:1.08em!important; }
+.prose .direction-system-limit { padding:.25em .55em!important; border-left:2px solid #8fc3b8!important; color:#cfe5df!important; }
+.prose .direction-paper { color:#d4c3a7; }
+.prose .direction-two-cells strong,
+.prose .direction-row-moves strong,
+.prose .direction-compute-continue strong { color:#f1d6a5; }
+.prose .direction-alarm-rename { border-left:2px solid #d7bb8a!important; padding-left:.8em!important; }
+.direction-alarm-name-word { display:inline-block; color:#e6d4ae; clip-path:inset(0); }
+.direction-alarm-name.seen .direction-alarm-name-word:not(.id-still) { animation:direction-words-reveal .65s steps(14,end) both; }
+.direction-alarm-name-word.id-still { animation:none; clip-path:inset(0); }
+@keyframes direction-words-reveal { from {clip-path:inset(0 100% 0 0)} to {clip-path:inset(0)} }
+@media (prefers-reduced-motion:reduce) {
+  .direction-alarm-name-word { animation:none!important; clip-path:inset(0)!important; }
+}
+.ldx-off .direction-alarm-name-word { animation:none!important; clip-path:inset(0)!important; }

@@ -1,0 +1,21 @@
+{
+  "episode": "26",
+  "before_body_non_whitespace": 4409,
+  "body_non_whitespace": 4417,
+  "before_sha256": "09040e1efec58fa7c4ed5168819d2b91e9c7c04dd5e0ead126f3145630fc671c",
+  "sha256": "b51e0707d32304c1dafdf0c15a5d0225b5a02ba2d0bf096cb20c4950e5c5a297",
+  "revision": 1,
+  "changes": 10,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_WITH_LINKED_CONTEXT",
+  "visual": "모바일400×900에서 실제 row400 최종 화면을 확인했다. 본문 정적 원화/정보 그래픽/인라인0개.400개의 작은 칸과 일반399+면제1,412번 승인→일반400번 이월이 수량 관계를 보조한다. 다만 칸을 직접 세기 어렵고 어머니와 이웃의 표정은 글로만 전해져 사건 삽화보다 표의 성격이 강하다. 상단 긴 R-17 문구와 승인 문구는 줄바꿈되어 읽히지만 글자 밀도가 높다. 수치 관계 보조로 유지 가능,원화 품질 수준의 컷신으로 보지 않는다. 최종 프레임만 실제 관찰했고 숫자 변화 전 과정을 검증하지 않았다. pageerror0,가로 넘침 없음,표시/닫힘 확인.",
+  "images_changed": 0,
+  "source_hook_changes": 0,
+  "tests": "final batch verification; not independently run for this prose-only unit",
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch": "renewed68-percent",
+  "batch_unit": 2,
+  "estimated_remaining_after_unit": 66,
+  "estimate_rule": "user reported68 after prior8 units+report from76; empirical1pp/unit, not live measurement"
+}

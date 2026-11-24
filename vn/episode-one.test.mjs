@@ -139,7 +139,8 @@ test('all directed actors, CG, ambience, music and effects resolve to real packa
   }
   for (const key of used) assert.ok(EP1_ASSETS[key], `missing mapping for ${key}`);
   for (const [key, relativePath] of Object.entries(EP1_ASSETS)) {
-    const absolutePath = resolve(vnRoot, relativePath);
+    // Asset URLs can carry a cache version; the packaged file has no query.
+    const absolutePath = resolve(vnRoot, relativePath.split(/[?#]/, 1)[0]);
     assert.ok(absolutePath.startsWith(`${vnRoot}${sep}`), `asset path escapes runtime: ${key}`);
     const details = await stat(absolutePath);
     assert.ok(details.isFile() && details.size > 0, `empty or absent asset: ${key}`);

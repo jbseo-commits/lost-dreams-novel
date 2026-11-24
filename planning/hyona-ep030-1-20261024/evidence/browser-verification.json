@@ -1,0 +1,20 @@
+{
+  "episode": "30-1",
+  "sha256": "f13c6b67753f4841d6e547be50befa36f62ab5f1f92fc9d2464fa6d068b74f66",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "runtime": {
+    "id": "retape",
+    "method": "direct existing showSp; final snapshot only",
+    "visible": true,
+    "text": "현관문 안쪽 · 다시 붙인 밤\n테이프\n네 귀퉁이\n손바닥으로 누름\n세 번\n김하린 빵집\n매일 엽니다\n머물러 보기\n본문으로",
+    "closed": true
+  },
+  "page_errors": [],
+  "horizontal_overflow": false
+}

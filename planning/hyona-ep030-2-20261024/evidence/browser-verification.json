@@ -1,0 +1,20 @@
+{
+  "episode": "30-2",
+  "sha256": "e624957df7650e42a57c8d4ab1d1a3bd50cd6e09d1555f54646808b7d806f8f0",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "runtime": {
+    "id": "fourtitles",
+    "method": "direct existing showSp; final snapshot only",
+    "visible": true,
+    "text": "장부실 벽 · 종이 네 장\n1\n생계.\n2\n회복.\n3\nTOKEN 계약.\n4\n인지 공급 중단.\n맨 아래 · 하경이 적어 놓은 문장\n사람이 자기 삶을 고를 수 있어야 한다.\n벽에서\n종이는 완전히 떨어지지 않고 한쪽만 매달린 채 흔들렸다.\n머물러 보기\n본문으로",
+    "closed": true
+  },
+  "page_errors": [],
+  "horizontal_overflow": false
+}

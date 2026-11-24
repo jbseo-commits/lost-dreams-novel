@@ -8,9 +8,9 @@ const box={window:{}};vm.runInNewContext(await fs.readFile(new URL('./story-data
 const raw=JSON.parse(JSON.stringify(box.window.STORY)),story=normalizeStory(raw);
 const chapter=id=>story.chapters.find(c=>c.id===id);
 const at=(id,line)=>chapter(id).beats.find(b=>b.sourceLine>=line);
-test('all 30 episodes and all 21 included side stories have restorable authored stages',()=>{
+test('all 30 episodes and all 20 included side stories have restorable authored stages',()=>{
  const directed=story.chapters.filter(c=>Number(c.id.split('-')[0])<=30);
- assert.equal(directed.length,51);assert.equal(directed.filter(c=>c.kind==='bumper').length,21);
+ assert.equal(directed.length,50);assert.equal(directed.filter(c=>c.kind==='bumper').length,20);
  for(const c of directed)for(const b of c.beats){assert(b.direction?.place,c.id);assert(story.assets[b.scene]||b.scene==='neutral',c.id);}
  assert(story.chapters.filter(c=>Number(c.id.split('-')[0])>30).every(c=>c.beats.every(b=>!b.direction)));
 });
@@ -47,10 +47,10 @@ test('financial flow belongs to Doyun and never uses the full household amount t
  assert.deepEqual(after.direction.visual.chart.items.map(x=>x.value),['3,092.2','−2,800','292.2']);
 });
 test('interview, recovery and message staging do not leave the wrong person in the room',()=>{
- const interview=chapter('19').beats.find(b=>b.text==='“그 질문이 승급과 관련 있습니까?”');
+ const interview=chapter('19').beats.find(b=>b.text==='“오늘 심사받는 사람은 서인 씨입니다.”');
  assert(interview.direction.cast.some(p=>p.id==='yoonsera'));
  assert(interview.direction.cast.some(p=>p.id==='yeonwoo'));
- const corridor=chapter('19').beats.find(b=>b.text.startsWith('복도로 나온 서인은'));
+ const corridor=chapter('19').beats.find(b=>b.text.startsWith('복도로 나오자 강연우가'));
  assert(!corridor.direction.cast.some(p=>p.id==='yoonsera'));
  assert(corridor.direction.cast.some(p=>p.id==='yeonwoo'));
  assert(at('6',361).direction.cast.some(p=>p.id==='doyun'));

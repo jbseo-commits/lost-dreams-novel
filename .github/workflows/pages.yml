@@ -29,11 +29,11 @@ jobs:
         run: node scripts/build-manifest.mjs
       - name: 비주얼 노벨 검사
         run: npm test --prefix vn
-      - name: 최신 비주얼 노벨 오프라인판 생성
-        run: node tools/build-vn-offline.mjs "$GITHUB_WORKSPACE/vn" "$GITHUB_WORKSPACE/vn/play-offline.html"
+      - name: 공개 데모 전용 사이트와 단일 HTML 생성
+        run: node tools/build-vn-public.mjs "$GITHUB_WORKSPACE" "$RUNNER_TEMP/lost-dreams-public"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ${{ runner.temp }}/lost-dreams-public
       - id: deployment
         uses: actions/deploy-pages@v4

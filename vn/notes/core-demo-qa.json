@@ -1,0 +1,151 @@
+{
+  "build": "core-demo-20261021-r2",
+  "completed": "2026-10-21",
+  "initialBase": "da5040ea59aae3227b107b95c1b07b39305da560",
+  "integratedMain": "7d042e200a006704f1f235ac6509ae264ff17d6d",
+  "endpoint": "11",
+  "rationale": "인간의 관찰이 사건을 바꾼 뒤, 빠른 판단을 선택한 실제 대가와 다음 면담까지 체험",
+  "sequence": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "4-1",
+    "5",
+    "6",
+    "6-1",
+    "7",
+    "7-2",
+    "8",
+    "8-1",
+    "8-2",
+    "8-3",
+    "9",
+    "9-1",
+    "10",
+    "11"
+  ],
+  "canonicalSideStories": 7,
+  "excludedOldVariants": [
+    "manuscript/ep008-1.md",
+    "manuscript/ep008-2.md"
+  ],
+  "source": {
+    "chapters": 128,
+    "allBodyTextPreserved": true,
+    "changedPresentationOnly": [
+      "10:245",
+      "10:246",
+      "10:247",
+      "10:248",
+      "10:249",
+      "10:250",
+      "10:251",
+      "10:252",
+      "10:253",
+      "10:254",
+      "10:255",
+      "10:256",
+      "10:257",
+      "10:258",
+      "10:259"
+    ],
+    "manuscriptSettingsModified": false
+  },
+  "production": {
+    "eventArt": 6,
+    "characterArt": 3,
+    "assetCount": 9,
+    "newScores": 4,
+    "newAmbiences": 3,
+    "newEffects": 2,
+    "paidAudioCredits": 0,
+    "exactImageModel": "not exposed by built-in tool",
+    "artProvenance": "../assets/core/art-provenance.json",
+    "audioProvenance": "../assets/core/audio-provenance.json"
+  },
+  "actualUI": {
+    "sequentialViewport": [
+      1440,
+      900
+    ],
+    "frameObservations": 3342,
+    "sourceBeatsObserved": 4242,
+    "unread": [],
+    "consoleWarnings": 0,
+    "consoleErrors": 0,
+    "finalMobileViewport": [
+      400,
+      844
+    ],
+    "finalMobileCases": 9,
+    "allFinalMobileImagesLoaded": true,
+    "finalMobileOverflow": false,
+    "fastInputUnsettledImageFrames": 17,
+    "finalAllSixArtLoaded": true,
+    "endingReload": true,
+    "lastSceneReplay": true,
+    "fullEpisode12CTA": true,
+    "saveChecks": {
+      "coreExportEdition": "core11",
+      "coreToFullRejected": true,
+      "fullToCoreRejected": true,
+      "fullBefore": "이어 읽기 · 12화 · 1번째 문장",
+      "fullAfter": "이어 읽기 · 12화 · 1번째 문장",
+      "unchanged": true
+    },
+    "comfort": {
+      "autoBefore": "229–231 / 254",
+      "autoAfter": "238 / 254",
+      "autoAdvanced": true,
+      "optionalObservationSkippedTo": "181 / 374",
+      "optionalMemoSelected": "허락 없이 본 기록",
+      "manualSlot1": "5화 180번째",
+      "fontSize": 28,
+      "reducedMotion": true,
+      "hideReveal": true,
+      "fullArtZoomWidth": 1100,
+      "fullArtViewport": 275
+    },
+    "offline": [
+      {
+        "build": "core-demo-20261021-r2",
+        "chapter": "12화",
+        "url": "http://127.0.0.1:4184/vn/play-offline.html?chapter=12&beat=0"
+      },
+      {
+        "start": "핵심 데모 시작",
+        "title": "꿈을 잃은 세계 · 핵심 데모",
+        "url": "http://127.0.0.1:4184/vn/play-offline.html?demo=core11"
+      }
+    ]
+  },
+  "fixedDuringQA": [
+    "모바일 해변에서 물러나는 사람 잘림: 새 CG 전체 구도 표시",
+    "크레파스 손을 가리는 감각 표시: non-primary 감각 헤더 축약",
+    "관찰 표와 기존 도표 겹침 제거",
+    "0.8초 침묵을 통신 초점·음량 갱신이 덮던 문제 수정",
+    "단일 HTML에서 데모·본편 링크가 외부 파일로 빠지던 문제 수정"
+  ],
+  "tests": {
+    "count": 97,
+    "failed": 0,
+    "files": 15,
+    "artifact": "core-proof/test-output.txt"
+  },
+  "offline": {
+    "bytes": 81957404,
+    "assets": 143,
+    "sha256": "62e9d66234d36c18250adad3735c49a8a993f8d59522012814c323b64f5c010e",
+    "inlineScriptsParsed": 3,
+    "sameFileEditionNavigation": true,
+    "actualFileProtocolPlayed": false,
+    "actualUITarget": "served single HTML at localhost"
+  },
+  "limitations": [
+    "자연 속도 독서 시간·감상 평가는 측정하지 않음",
+    "사람의 최종 청감·상업용 사운드 마스터링·성우 녹음 없음",
+    "새 에셋 최종 로딩은 별도 장면 진입으로 재확인; 빠른 순차 입력 기록에는 로딩 전 순간도 포함",
+    "독립 검토는 코드·원화 범위, 상업성 인증 아님"
+  ]
+}

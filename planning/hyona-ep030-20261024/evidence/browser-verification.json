@@ -1,0 +1,21 @@
+{
+  "episode": "30",
+  "sha256": "f9d71175d7e6f8f1880280d0f0fe973161fd52b34905e4eb385de0ee6640db4f",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "trace_count": 1,
+  "runtime": {
+    "id": "ledger288",
+    "method": "direct existing showSp; final snapshot only",
+    "visible": true,
+    "text": "지하 2층 장부실 · 90일 참가자 후속 관찰 수당\n도윤 · 이번 달 개인 몫\n288.3\n참가자 062 김재호 · 미지급분\n−1,400\n참가자 118 한미라 · 미지급분\n−1,400\n하경\n“‘대납’이라고 하지 마. 이건 미지급분이야.”\n하경이 말한 것 · 장부에 없던 줄\n서인 시술 후 회복 11일 · 침대 값과 약값 · 저 사람 몫에서 두 달에 걸쳐\n밤 10시 40분 · 클리닉 옆 편의점 · 컵라면\n−3.9\n컵라면 값\n3.4 → 3.7 → 3.9\n288.3 ÷ 3.9 · 컵라면으로 73개였다.\n머물러 보기\n본문으로",
+    "closed": true
+  },
+  "page_errors": [],
+  "horizontal_overflow": false
+}

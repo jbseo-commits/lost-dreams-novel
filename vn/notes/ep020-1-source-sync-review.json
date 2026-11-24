@@ -1,0 +1,828 @@
+{
+  "chapter": "20-1",
+  "previousBeats": 91,
+  "canonicalBeats": 91,
+  "exactMatches": 91,
+  "inferredDialogue": 0,
+  "beats": [
+    {
+      "k": 0,
+      "text": "최은경은 작업화를 현관문 옆에 내놓았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 3,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 1,
+      "text": "새벽에 신으면 바닥 소리가 컸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 5,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 2,
+      "text": "딸은 방문을 반쯤 열고 서 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 7,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 3,
+      "text": "“엄마, 내일 아침에 깨워?”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 9,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 4,
+      "text": "“알람 있어.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 11,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 5,
+      "text": "“알람 끄고 또 자잖아.”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 13,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 6,
+      "text": "은경은 휴대폰을 들었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 15,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 7,
+      "text": "05:40.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 17,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 8,
+      "text": "알람은 세 개였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 19,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 9,
+      "text": "05:40.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 21,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 10,
+      "text": "05:43.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 23,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 11,
+      "text": "05:47.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 25,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 12,
+      "text": "“세 개나 해 놨어.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 27,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 13,
+      "text": "“지난번에도 세 개였어.”",
+      "kind": "dialogue",
+      "speaker": "은경의 딸",
+      "sourceLine": 29,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 14,
+      "text": "“그럼 네 개.”",
+      "kind": "dialogue",
+      "speaker": "최은경",
+      "sourceLine": 31,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 15,
+      "text": "은경이 05:50을 하나 더 만들었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 33,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 16,
+      "text": "딸은 그제야 문을 닫았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 35,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 17,
+      "text": "냉장고를 열자 물병이 하나 남아 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 37,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 18,
+      "text": "은경은 그걸 꺼내 식탁 위에 올려놓았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 39,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 19,
+      "text": "우유통은 비어 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 41,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 20,
+      "text": "손잡이만 잡았다가 다시 놓았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 43,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 21,
+      "text": "휴대폰에 메시지가 왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 45,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 22,
+      "text": "우유 없음",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 47,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 23,
+      "text": "방금 문을 닫은 딸이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 49,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 24,
+      "text": "은경이 답했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 51,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 25,
+      "text": "내일 사갈게",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 53,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 26,
+      "text": "잠깐 뒤 답이 왔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 55,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 27,
+      "text": "안 까먹게 알람 해",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 57,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 28,
+      "text": "은경은 웃었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 59,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 29,
+      "text": "05:40 알람 이름을 바꿨다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 61,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 30,
+      "text": "일어나기 / 우유",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 63,
+      "place": "은경의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 31,
+      "text": "문해린의 아이는 체육복을 찾고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 67,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 32,
+      "text": "침대 위에는 교복 셔츠와 체육복 바지가 뒤섞여 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 69,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 33,
+      "text": "“엄마, 위에 거 못 봤어?”",
+      "kind": "dialogue",
+      "speaker": "해린의 아이",
+      "sourceLine": 71,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 34,
+      "text": "해린은 식탁에 앉아 병원 앱을 보고 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 73,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 35,
+      "text": "“의자 뒤.”",
+      "kind": "dialogue",
+      "speaker": "문해린",
+      "sourceLine": 75,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 36,
+      "text": "아이는 의자 등받이에 걸린 체육복을 집었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 77,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 37,
+      "text": "식탁 한쪽에는 학교 가정통신문이 놓여 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 79,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 38,
+      "text": "그 옆에는 병원 서류 봉투가 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 81,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 39,
+      "text": "추가 검증 완료 예정 06:00",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 83,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 40,
+      "text": "치료 일정 08:00",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 85,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 41,
+      "text": "해린은 화면을 한 번 내렸다가 다시 올렸다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 87,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 42,
+      "text": "시간은 그대로였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 89,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 43,
+      "text": "아이가 체육복을 가방에 넣었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 91,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 44,
+      "text": "해린이 물었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 93,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 45,
+      "text": "“병원 끝나고 학교 갈 수 있겠어?”",
+      "kind": "dialogue",
+      "speaker": "문해린",
+      "sourceLine": 95,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 46,
+      "text": "“가야지.”",
+      "kind": "dialogue",
+      "speaker": "해린의 아이",
+      "sourceLine": 97,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 47,
+      "text": "“힘들면 안 가도 돼.”",
+      "kind": "dialogue",
+      "speaker": "문해린",
+      "sourceLine": 99,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 48,
+      "text": "“내일 체육 있어.”",
+      "kind": "dialogue",
+      "speaker": "해린의 아이",
+      "sourceLine": 101,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 49,
+      "text": "해린은 대답하지 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 103,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 50,
+      "text": "아이가 가방 지퍼를 닫다가 다시 열었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 105,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 51,
+      "text": "“엄마.”",
+      "kind": "dialogue",
+      "speaker": "해린의 아이",
+      "sourceLine": 107,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 52,
+      "text": "“응.”",
+      "kind": "dialogue",
+      "speaker": "문해린",
+      "sourceLine": 109,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 53,
+      "text": "“병원복 입고 학교 가도 돼?”",
+      "kind": "dialogue",
+      "speaker": "해린의 아이",
+      "sourceLine": 111,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 54,
+      "text": "해린은 병원 서류 봉투를 들었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 113,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 55,
+      "text": "학교 가방에 넣으려다가 멈췄다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 115,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 56,
+      "text": "“갈아입고 가면 돼.”",
+      "kind": "dialogue",
+      "speaker": "문해린",
+      "sourceLine": 117,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 57,
+      "text": "그녀는 봉투를 자기 가방에 넣었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 119,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 58,
+      "text": "아이는 고개를 끄덕였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 121,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 59,
+      "text": "가방 지퍼가 닫혔다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 123,
+      "place": "해린의 집",
+      "scene": "kitchen"
+    },
+    {
+      "k": 60,
+      "text": "밤 열 시가 조금 넘었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 127,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 61,
+      "text": "은경은 침대에 누워 단말을 켰다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 129,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 62,
+      "text": "화면 아래에 익숙한 문장이 떠 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 131,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 63,
+      "text": "광고꿈 감정형 패키지 / 활성",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 133,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 64,
+      "text": "정산 예상액이 그 아래에 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 135,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 65,
+      "text": "은경은 금액을 오래 보지 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 137,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 66,
+      "text": "활성을 눌렀다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 139,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 67,
+      "text": "확인창도 읽지 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 141,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 68,
+      "text": "매일 하던 일이었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 143,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 69,
+      "text": "은경은 05:40 알람을 다시 확인했다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 145,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 70,
+      "text": "일어나기 / 우유",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 147,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 71,
+      "text": "그 아래 05:43, 05:47, 05:50이 줄지어 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 149,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 72,
+      "text": "단말 화면이 어두워졌다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 151,
+      "place": "은경이 고른 광고꿈",
+      "scene": "room"
+    },
+    {
+      "k": 73,
+      "text": "해린의 아이는 먼저 잠들었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 155,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 74,
+      "text": "방문 아래로 불빛이 새어 나오지 않았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 157,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 75,
+      "text": "해린은 현관 앞에 자기 가방을 세워 두었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 159,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 76,
+      "text": "병원 서류 봉투가 가방 안쪽에서 조금 튀어나와 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 161,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 77,
+      "text": "휴대폰을 충전기에 꽂았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 163,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 78,
+      "text": "병원 앱을 다시 열었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 165,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 79,
+      "text": "추가 검증 완료 예정 06:00",
+      "kind": "system",
+      "speaker": "",
+      "sourceLine": 167,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 80,
+      "text": "변화 없음.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 169,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 81,
+      "text": "해린은 알람을 맞췄다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 171,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 82,
+      "text": "05:30.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 173,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 83,
+      "text": "아침에 아이가 먹을 죽을 냉장고에서 꺼내 앞쪽으로 옮겼다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 175,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 84,
+      "text": "숟가락도 하나 꺼내 식탁에 놓았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 177,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 85,
+      "text": "다시 휴대폰을 봤다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 179,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 86,
+      "text": "06:00.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 181,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 87,
+      "text": "그 숫자가 그대로였다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 183,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 88,
+      "text": "해린은 화면을 끄고 휴대폰을 충전기 옆에 내려놓았다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 185,
+      "place": "아이의 치료를 기다리는 밤",
+      "scene": "room"
+    },
+    {
+      "k": 89,
+      "text": "은경의 휴대폰에는 05:40이 켜져 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 189,
+      "place": "서로 다른 두 알람",
+      "scene": "room"
+    },
+    {
+      "k": 90,
+      "text": "해린의 휴대폰에는 06:00이 남아 있었다.",
+      "kind": "narration",
+      "speaker": "",
+      "sourceLine": 191,
+      "place": "서로 다른 두 알람",
+      "scene": "room"
+    }
+  ]
+}

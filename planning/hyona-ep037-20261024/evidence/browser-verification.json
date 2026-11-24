@@ -1,0 +1,22 @@
+{
+  "episode": "37",
+  "sha256": "a41d72fc9bbfeceac0ceb811228622337d6044a22cc7582af5299ad8ba1c9617",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "runtimes": [
+    {
+      "id": "farthestdot",
+      "inline": false,
+      "method": "direct existing showSp; sampled frame10000ms, natural trigger/default timing/audio/touch unverified",
+      "visible": true,
+      "text": "독립 검증 4 · 원시 경로 · 점 네 개\n장회전 3.8%\nDIVERGENCE RESOLUTION / HUMAN REFERENCE LINE 04\n세 번은 버려졌습니다.\n남음\n답이 아니었다. 거리였다.\n머물러 보기\n본문으로"
+    }
+  ],
+  "page_errors": [],
+  "horizontal_overflow": false
+}

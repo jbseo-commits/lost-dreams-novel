@@ -1,0 +1,64 @@
+{
+  "date_kst": "2026-10-22T06:06:39+09:00",
+  "request": "일단 모두 브랜치로 올려줘",
+  "repository": "jbseo-commits/lost-dreams-novel",
+  "branch": "codex/ep017-018-escape-rewrite-20261021",
+  "branch_url": "https://github.com/jbseo-commits/lost-dreams-novel/tree/codex/ep017-018-escape-rewrite-20261021",
+  "revision_commit": "1251122add5cd705707d86993d531d15a5aca2d0",
+  "latest_main_integrated": "4a20aabec4bd9ee99d4338218120f2374914e1c8",
+  "uploaded_snapshot_commit": "b90da8421cec659f90627331d38a973fd6d9b945",
+  "uploaded_snapshot_verified": true,
+  "verification": "git push 성공 후 git ls-remote의 해당 브랜치 HEAD와 로컬 HEAD 일치 확인",
+  "record_scope": "위 업로드를 확인한 후 작성한 기록. 이 기록을 추가하는 후속 커밋은 최종 원격 HEAD 확인으로 검증한다.",
+  "main_merge": false,
+  "deployment": false,
+  "included_revision": [
+    "17~18화 강제 이송·물리적 탈출 개고",
+    "19화 손목 후유증과 방문 범위·철수 합의 보강",
+    "pilot.html 17~18화 연출 및 제안 설정 기록",
+    "2026-10-21 독립 검토·모바일 조작 검증 기록과 화면 2장"
+  ],
+  "historical_qa": {
+    "file": "planning/ep017-018-rewrite-20261021/qa.json",
+    "scope": "2026-10-21 로컬 개고 완료 시점의 검증 기록. 당시 commit/push false와 원본 해시를 그대로 보존함. 최신 main 통합 후 파일의 현재 상태나 이번 업로드 여부는 이 파일로 판단하지 않는다."
+  },
+  "post_integration_verification": {
+    "17_18_identical_to_revision_commit": true,
+    "19_aftermath_and_withdrawal_agreement_preserved": true,
+    "19_1_19_2_20_21_identical_to_latest_main": true,
+    "latest_settings_and_vn_snapshot_preserved": true,
+    "pilot_script_blocks": "1/1 syntax valid",
+    "missing_setpiece_targets": 0,
+    "generated_manifest": "설정16/원고93",
+    "whitespace_diff": "clean",
+    "independent_reviewer": "/root/episode_threat_plan_review",
+    "review_result": "업로드를 막는 중요한 누락 없음. 파일 수정 없이 변경 범위·보존 여부 확인.",
+    "new_browser_playtest_after_integration": false
+  },
+  "pending_19_21_plan": {
+    "status": "대화에서 제안한 재구성 방향만 기록. 추가 원고 수정 미실행.",
+    "19": "후반부 목표를 참여자4에게 직접 질문할 기회 확보로 모으고, 윤세라의 답안 시험 반복을 줄인다. 강연우와의 대화·철수 합의를 보존한다.",
+    "19_1_19_2": "독립 두 편을 유지하기보다 예비차와 공동주방 아침 장면을 압축해 흡수한다. 예비차 출동 조항과 현장 당사자의 선택, 실제 납품 성공을 반복 증명하지 않는다. 파일·읽기 순서는 아직 변경하지 않았다.",
+    "20": "감사에서 물류 성공을 다시 입증하는 분량을 줄이고 11분 중단·철회와 중단이 생활 정산에 미치는 영향을 중심에 둔다. 지우의 내 건 끄지 마가 서인의 판단을 바꾸게 한다.",
+    "21": "첫 운영 밤의 잘못된 차액 회수와 별도 의료 예약 문제를 동시 압박으로 구성한다. 강연우·윤세라와의 역할 분담과 충돌을 강화한다.",
+    "preserve": [
+      "강연우와의 엘리베이터 대화",
+      "자기 꿈을 선택하는 지우",
+      "어머니가 실제로 즐긴 꿈",
+      "도윤과 컵라면을 먹는 장면"
+    ],
+    "constraints": [
+      "참여자4를 17~18화 중개 사건의 배후로 확정하지 않는다.",
+      "꿈 계약 변경과 의료 지연을 직접 인과로 연결하지 않는다.",
+      "의료 일곱 건과 22화 연결을 보존한다.",
+      "등급과 권한 범위 및 당사자의 결정권을 보존한다."
+    ]
+  },
+  "current_git_blob_hashes": {
+    "manuscript/ep017.md": "c827e1907024d16210a72d9c0e22c1e50798869a",
+    "manuscript/ep018.md": "4354edcf7735f3114692d9baecb82337e3707da3",
+    "manuscript/ep019.md": "c01cc3d2f8419db8e125bf40e72f84ec48a84b06",
+    "pilot.html": "8d1c4d2876bac5409f8c38c08935602e8d2fabe9",
+    "settings/05-open-questions.md": "5705d9261f893d21c87051bd0dedf81a9b95f500"
+  }
+}

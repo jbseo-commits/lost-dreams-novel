@@ -1,0 +1,21 @@
+{
+  "episode": "32",
+  "before_body_non_whitespace": 3780,
+  "body_non_whitespace": 3807,
+  "before_sha256": "5d0b05bbc9ccd9e6782fe5e6fd75dcb096e9d12cb2bd09387c3e07b400f7436e",
+  "sha256": "e13770bb3f5d339001e8447c9200ab0499ac74b37b5891dc8c2e1591f6acf8a2",
+  "revision": 1,
+  "changes": 3,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_WITH_LINKED_CONTEXT",
+  "visual": "본문 정적 원화/인라인0개. 실제 practicesheet는 접힌 종이 위에 세 답을 두 차례 적고 마지막 ‘다시 물어본다’를 남긴다. 글자를 추상화하지 않고 다은이 연습한 소품 자체를 보여 주어,다음 전화를 누르는 행동과 연결되는 정합성이 높아 유지 판단이다. 종이 형태와 반복 문장은 보이지만 다은의 손이나 보호자의 표정을 그리는 인물 컷신은 아니다.400×900,pageerror0,가로 넘침 없음,표시/닫힘 확인.",
+  "images_changed": 0,
+  "source_hook_changes": 0,
+  "tests": "final batch verification; not independently run for this prose-only unit",
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch": "renewed68-percent",
+  "batch_unit": 10,
+  "estimated_remaining_after_unit": 58,
+  "estimate_rule": "user reported68 after prior8 units+report from76; empirical1pp/unit, not live measurement"
+}

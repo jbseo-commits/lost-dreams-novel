@@ -1,0 +1,21 @@
+{
+  "episode": "35",
+  "before_body_non_whitespace": 3941,
+  "body_non_whitespace": 3957,
+  "before_sha256": "5d9f23adcc79e3cacebf4e2a7c530489b80beb08933b0fd670a14a052e166a5a",
+  "sha256": "560c26c31c1bf8d13883748838f8e5d151c9a112a77fae65fa7eb4760eb96374",
+  "revision": 1,
+  "changes": 4,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_WITH_LINKED_CONTEXT",
+  "visual": "본문 원화/인라인0개. 실제 midnight100에서71개가차지한색과일반배정,어르신의72/81/89/96을비교했다. 접수구조의편중은쉽게보이나작은100칸과숫자중심이라사람의손이나방안의긴장은본문으로따라가야한다. 색의범례와입력보조/자동세션의차이가직접설명되지는않아단독이해에는한계가있다. 현재시세와2TOKEN대행의문구는본문과맞아정보연출로유지가능.400×900,pageerror0,가로넘침없음,직접미리보기표시/닫힘확인.",
+  "images_changed": 0,
+  "source_hook_changes": 0,
+  "tests": "final batch verification; not independently run for this prose-only unit",
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch": "renewed68-percent",
+  "batch_unit": 13,
+  "estimated_remaining_after_unit": 55,
+  "estimate_rule": "user reported68 after prior8 units+report from76; empirical1pp/unit, not live measurement"
+}

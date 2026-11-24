@@ -71,6 +71,7 @@ export function exportSaveData(store, story) {
       version: VERSION,
       exportedAt: new Date().toISOString(),
       storyTitle,
+      edition: story.edition || 'full',
       store,
     }, null, 2);
   } catch {
@@ -88,6 +89,7 @@ export function importSaveData(text, story) {
   if (!isRecord(data) || data.format !== FORMAT) throw new Error('이 게임의 읽기 기록 파일이 아닙니다.');
   if (data.version !== VERSION) throw new Error('지원하지 않는 읽기 기록 파일 버전입니다.');
   if (typeof data.storyTitle !== 'string' || data.storyTitle !== storyTitle) throw new Error('다른 작품의 읽기 기록은 가져올 수 없습니다.');
+  if ((data.edition || 'full') !== (story.edition || 'full')) throw new Error('체험판과 본편의 기록은 각각 해당 버전에서 가져와 주세요. 기존 읽던 곳을 보호하기 위해 함께 적용하지 않습니다.');
   validateStore(data.store, story);
   return migrateStore(data.store, story);
 }

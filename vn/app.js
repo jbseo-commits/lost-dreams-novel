@@ -3,24 +3,37 @@ import {
   freshProgress, isSeen, makeSave, nextProgress,
   normalizeStory, previousProgress, readStore, selectChoice, writeStore,
 } from './state.js';
-import { createAudioDirector } from './audio.js';
+import { createAudioDirector } from './audio.js?v=audio-balance-20261021-r1';
 import { createMotifSVG, directedCast, sceneClass } from './direction.js';
-import { presentationForBeat } from './neural-cues.js?v=scene-mix-20261020';
+import { presentationForBeat } from './neural-cues.js?v=teaser-art-20261021-r1';
 import { NeuralStage } from './neural-stage.js';
 import { preparePerception, communicationReadDelay, sensoryContextForBeat } from './perception.js';
-import { exportSaveData, importSaveData } from './save-portability.js';
-import { EP1_ASSETS } from './ep1-assets.js?v=ep12-20261019-r3';
-import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=ep12-20261019-r3';
-import { EpisodeOneStage } from './episode-one-stage.js?v=ep12-20261019-r3';
-import { createEpisodeOneAudio } from './episode-one-audio.js?v=ep12-20261019-r3';
-import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep12-20261019-r3';
+import { exportSaveData, importSaveData } from './save-portability.js?v=teaser-art-20261021-r1';
+import { EP1_ASSETS } from './ep1-assets.js?v=ep04-clue-gallery-20261028-r2';
+import { withTeaserCharacterAssets } from './teaser-art.js?v=teaser-art-20261021-r1';
+import { episodeOneDirection, EPISODE_ONE_SCENES } from './episode-one.js?v=ep03-connected-cuts-20261023-r1';
+import { EpisodeOneStage } from './episode-one-stage.js?v=ep04-clue-gallery-20261028-r2';
+import { createEpisodeOneAudio } from './episode-one-audio.js?v=audio-balance-20261021-r1';
+import { episodeOneReadingPage, episodeOnePreviousPage, isEpisodeOneObservation } from './episode-one-reading.js?v=ep03-connected-cuts-20261023-r1';
 import { createEpisodeOneTeaser } from './episode-one-teaser.js';
 import { createTitleAtmosphere } from './title-atmosphere.js';
-import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep12-20261019-r3';
-import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep12-20261019-r3';
+import { episodeTwoDirection, episodeTwoSpeaker, EPISODE_TWO_SCENES } from './episode-two.js?v=ep03-connected-cuts-20261023-r1';
+import { episodeTwoReadingPage, episodeTwoPreviousPage } from './episode-two-reading.js?v=ep03-connected-cuts-20261023-r1';
+import { syncEpisodeTwoCopy } from './episode-two-copyfix.js?v=20261021-a';
+import { eventCutsceneDirection, EPISODE_CUTSCENES, episodeSixRooftopStart, EPISODE_SIX_ROOFTOP_FRAMES } from './episode-cutscenes.js?v=ep03-connected-cuts-20261023-r1';
+import {EpisodeThreeSettlement} from './episode-three-settlement.js?v=ep03-settlement-20261027-r1';
 
-const story = normalizeStory(window.STORY);
-document.documentElement.dataset.vnBuild='scene-mix-20261020';
+import {coreSceneDirection,isOptionalObservation,CORE_CUTS,CORE_MOMENTS,CORE_DEMO_STORAGE_SUFFIX} from './core-demo.js?v=ep03-connected-cuts-20261023-r1';
+import {ep04ClueFor} from './episode-four-clues.js?v=ep04-clue-gallery-20261028-r1';
+import {RELEASE,publicDemoStory,canReadChapter,purchaseLink} from './release.js?v=ep03-connected-cuts-20261023-r1';
+import {coreReadingPage,corePreviousPage} from './core-reading.js?v=ep03-connected-cuts-20261023-r1';
+const demoMode=true;
+if(demoMode)document.documentElement.dataset.coreDemo='true';
+const fullStory=normalizeStory(window.STORY);
+syncEpisodeTwoCopy(fullStory);
+const story=withTeaserCharacterAssets(publicDemoStory(fullStory),EP1_ASSETS);
+const activeStorageKey=STORAGE_KEY+(demoMode?CORE_DEMO_STORAGE_SUFFIX:'');
+document.documentElement.dataset.vnBuild='teaser-art-20261021-r1';
 const $ = (id) => document.getElementById(id);
 const titleScreen = $('titleScreen'), gameScreen = $('gameScreen');
 createTitleAtmosphere({screen:titleScreen,canvas:$('titleAtmosphere')});
@@ -32,7 +45,7 @@ const sceneLayers = [$('sceneLayerA'), $('sceneLayerB')];
 const storyText = $('storyText'), speakerNode = $('speaker'), choiceArea = $('choiceArea');
 const directionCard = $('directionCard'), castRail = $('castRail'), placeRibbon = $('placeRibbon'), motifStage = $('motifStage');
 let browserStorage; try { browserStorage = localStorage; } catch { browserStorage = null; }
-let store = readStore(browserStorage, story), progress = freshProgress(story);
+let store = readStore(browserStorage, story, activeStorageKey), progress = freshProgress(story);
 // Playback always waits for a fresh action after loading or continuing a save.
 store.settings.auto = false; store.settings.skip = false;
 let storageHealthy = Boolean(browserStorage), storageWarningShown = false, restoreFocus = null;
@@ -41,7 +54,8 @@ let backlogRestore = null, transientBacklog = false, autoTimer = 0, previousPlac
 let pendingChapter = null;
 const audio = createAudioDirector(() => store.settings);
 const neuralStage = new NeuralStage($('neuralStage'));
-const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS);
+const episodeStage = new EpisodeOneStage($('episodeOneStage'), EP1_ASSETS,{onInspect:openCutscene,onEvidence:openCoreEvidence});
+const settlementStage = new EpisodeThreeSettlement($('stage'), EP1_ASSETS);
 const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {onStatus:(status,tracks={})=>{
   $('soundToggle').dataset.audioStatus=status;
   $('soundToggle').dataset.music=tracks.music||'';
@@ -49,6 +63,19 @@ const episodeAudio = createEpisodeOneAudio(() => store.settings, EP1_ASSETS, {on
   $('soundToggle').setAttribute('aria-description',({playing:'음악 또는 장면 소리가 재생 중입니다.',silent:'이 장면은 조용히 재생합니다.',ready:'소리를 재생할 준비가 되었습니다.',blocked:'소리를 다시 눌러 재생해 주세요.',unavailable:'이 브라우저는 장면 음향을 지원하지 않습니다.'})[status]||'');
 }});
 let currentEpisodeCue = null;
+let currentCoreCue=null;
+const performanceCue=()=>currentEpisodeCue||currentCoreCue;
+let currentEventCutscene = null;
+const preparedCutscenes=new Set();
+function prepareNearbyCutscenes(chapter,index){
+  const nearby=EPISODE_CUTSCENES.filter(c=>c.chapter===chapter.id&&c.end>=index).slice(0,2);
+  const rooftopStart=episodeSixRooftopStart(chapter);
+  if(rooftopStart>=0&&index>=rooftopStart-6&&index<=rooftopStart+2)nearby.push(...EPISODE_SIX_ROOFTOP_FRAMES);
+  for(const cut of nearby){
+    const path=EP1_ASSETS[cut.cg];if(!path||preparedCutscenes.has(path))continue;
+    preparedCutscenes.add(path);const image=new Image();image.src=path;
+  }
+}
 let currentReadingPage = null;
 let currentPerception = null, lastCommunicationGroup = '';
 let sceneFront = 0, sceneBackground = '', lastEffectKey = '', currentVisualKey = 'unset';
@@ -60,9 +87,9 @@ $('storyTitle').textContent = story.title;
 
 function chapterAt(id = progress.chapterId) { return story.chapters.find((chapter) => chapter.id === id); }
 function beatAt(pos = progress) { return chapterAt(pos.chapterId)?.beats[pos.beatIndex] ?? null; }
-function needsChoice() { return Boolean(beatAt()?.choice && !isEpisodeOneObservation(chapterAt(), progress.beatIndex)); }
+function needsChoice() { return Boolean(beatAt()?.choice && !isOptionalObservation(chapterAt(), progress.beatIndex)); }
 function saveStore() {
-  const saved = Boolean(browserStorage) && writeStore(browserStorage, store, STORAGE_KEY);
+  const saved = Boolean(browserStorage) && writeStore(browserStorage, store, activeStorageKey);
   if (!saved && !storageWarningShown) { toast('브라우저에 저장하지 못했습니다. 저장과 백업에서 파일로 보관해 주세요.'); storageWarningShown = true; }
   if (saved) storageWarningShown = false;
   storageHealthy = saved; syncContinueInfo(); return saved;
@@ -171,19 +198,21 @@ function renderChart(chart, compact = false) {
 }
 
 function renderDirection(beat, { quiet = false } = {}) {
+  const staged=Boolean(performanceCue()||currentEventCutscene);
+  const eventPicture=currentEpisodeCue||currentCoreCue?.cg||currentEventCutscene;
   const direction = beat.direction;
   stageImage.dataset.mood = direction?.mood ?? 'quiet';
-  stageImage.dataset.episodeNight=String(currentEpisodeCue?.timeOfDay==='night');
+  stageImage.dataset.episodeNight=String(performanceCue()?.timeOfDay==='night');
   stageImage.dataset.camera = direction?.camera ?? 'wide';
   stageImage.dataset.effect = direction?.effect ?? '';
   stageImage.classList.toggle('reduced-motion', store.settings.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  const place = currentEpisodeCue?.place || direction?.place || '';
+  const place = performanceCue()?.place || direction?.place || '';
   if (place && place !== previousPlace) {
     placeRibbon.textContent = place; placeRibbon.hidden = false; placeRibbon.classList.remove('arrive');
     requestAnimationFrame(() => placeRibbon.classList.add('arrive'));
   } else if (!place) placeRibbon.hidden = true;
   previousPlace = place;
-  const cast = currentEpisodeCue ? [] : direction?.cast ?? [];
+  const cast = staged ? [] : direction?.cast ?? [];
   castRail.replaceChildren();
   cast.forEach((person) => {
     const chip = document.createElement('span'); chip.className = `cast-chip ${person.side}${person.remote ? ' remote' : ''}${person.id === direction?.focus ? ' focused' : ''}`;
@@ -192,7 +221,7 @@ function renderDirection(beat, { quiet = false } = {}) {
     castRail.append(chip);
   });
   castRail.hidden = !cast.length;
-  const portraits = currentEpisodeCue ? [] : directedCast(direction, story.assets, beat.portrait);
+  const portraits = staged ? [] : directedCast(direction, story.assets, beat.portrait);
   const setPortrait = (wrap, image, person) => {
     if (!person) { wrap.classList.remove('visible'); return; }
     if (image.getAttribute('src') !== story.assets[person.id]) image.src = story.assets[person.id];
@@ -201,7 +230,7 @@ function renderDirection(beat, { quiet = false } = {}) {
   };
   setPortrait(portraitWrap, portraitImage, portraits[0]);
   setPortrait(secondaryPortraitWrap, secondaryPortraitImage, portraits[1]);
-  const visual = currentEpisodeCue ? null : direction?.visual;
+  const visual = eventPicture ? null : direction?.visual;
   const cgFrame=Boolean(visual&&['object','dream'].includes(visual.type)&&story.assets?.[visual.image]);
   $('stage').classList.toggle('cg-active',cgFrame);
   motifStage.classList.toggle('cg-frame',cgFrame);
@@ -246,8 +275,14 @@ function renderDirection(beat, { quiet = false } = {}) {
     episodeStage.render(currentEpisodeCue, { instant: quiet, reducedMotion: store.settings.reducedMotion });
     if (!gameScreen.hidden && !modal.open) episodeAudio.render(currentEpisodeCue, { quiet });
     else episodeAudio.stop();
+  } else if(currentCoreCue){
+    stageImage.dataset.effect='';stageImage.classList.remove('effect-active');
+    episodeStage.render(currentCoreCue,{instant:quiet,reducedMotion:store.settings.reducedMotion});
+    if(!gameScreen.hidden&&!modal.open){audio.resume('silence');episodeAudio.render(currentCoreCue,{quiet});if(playEffect)audio.effect(direction.effect);}else{audio.stop();episodeAudio.stop();}
   } else {
-    episodeStage.clear(); episodeAudio.stop();
+    if(currentEventCutscene)episodeStage.render(currentEventCutscene,{instant:quiet,reducedMotion:store.settings.reducedMotion});
+    else episodeStage.clear();
+    episodeAudio.stop();
     if (direction?.music && !gameScreen.hidden && !modal.open) audio.resume(direction.music);
     else audio.stop();
     if (playEffect) audio.effect(direction.effect);
@@ -255,6 +290,21 @@ function renderDirection(beat, { quiet = false } = {}) {
   syncSoundButton();
 }
 
+function openCoreEvidence(cue, selectedLabel = null){
+  const root=document.createElement('div');root.className='core-evidence';
+  root.append(modalHeading(cue.board.title,'여기까지 보인 행동만 다시 살핍니다. 이야기의 선택이나 결말은 바뀌지 않습니다.'));
+  for(const [key,value] of cue.board.rows){
+    if(selectedLabel && selectedLabel!==key)continue;
+    const clue=cue.board.kind==='clues' ? ep04ClueFor(key) : null;
+    if(clue){
+      const figure=document.createElement('figure');figure.className='core-evidence-figure';
+      const img=document.createElement('img');img.src=EP1_ASSETS[clue.asset];img.alt=clue.alt;
+      const caption=document.createElement('figcaption');caption.textContent=key+' · '+value;
+      figure.append(img,caption);root.append(figure);
+    }else{const p=document.createElement('p');p.textContent=key+' · '+value;root.append(p);}
+  }
+  showModal(root,'evidence');
+}
 function openVisual(visual) {
   const root = document.createElement('div'); root.append(modalHeading(visual.title || '장면 기록', visual.kicker || '이 장면에 나타난 정보'));
   const cgUrl = story.assets?.[visual.image];
@@ -270,7 +320,19 @@ function openVisual(visual) {
   showModal(root, 'visual');
 }
 
+function openCutscene(cue){
+  const root=document.createElement('div');root.append(modalHeading('장면 그림',cue.cutscene.alt));
+  const frame=document.createElement('div');frame.className='cutscene-inspection';frame.tabIndex=0;frame.setAttribute('aria-label','장면 그림. 확대하면 좌우로 밀어 볼 수 있습니다.');
+  const frames=cue.cutscene.frames?.length?cue.cutscene.frames:[{cg:cue.cg,alt:cue.cutscene.alt}],img=document.createElement('img');let frameIndex=0;img.src=EP1_ASSETS[frames[frameIndex].cg];img.alt=frames[frameIndex].alt||cue.cutscene.alt;frame.append(img);
+  const frameStatus=document.createElement('p');frameStatus.className='modal-lead';frameStatus.setAttribute('aria-live','polite');frameStatus.textContent=frames.length>1?`장면 ${frameIndex+1} / ${frames.length}`:'';
+  if(frames.length>1){const next=actionButton('다음 장면',()=>{frameIndex=(frameIndex+1)%frames.length;img.src=EP1_ASSETS[frames[frameIndex].cg];img.alt=frames[frameIndex].alt||'';frameStatus.textContent=`장면 ${frameIndex+1} / ${frames.length}`;});root.append(next,frameStatus);}
+  const zoom=document.createElement('button');zoom.type='button';zoom.className='small-button';zoom.textContent='세부 확대';zoom.setAttribute('aria-pressed','false');
+  zoom.addEventListener('click',()=>{const active=frame.classList.toggle('detail');zoom.setAttribute('aria-pressed',String(active));zoom.textContent=active?'전체 맞춤':'세부 확대';});
+  root.append(zoom,frame);showModal(root,'cutscene');
+}
+
 function play(chapterId = story.chapters[0]?.id, beatIndex = 0, reset = false, savedProgress = null) {
+  if(!canReadChapter(chapterId)){openRelease(true);return;}
   if (!story.chapters.length) { openLibrary(); return; }
   clearTimers(); pauseReading(); document.querySelector('.end-screen')?.remove();
   if (store.autosave && (reset || chapterId !== store.autosave.progress.chapterId || beatIndex !== store.autosave.progress.beatIndex)) {
@@ -294,7 +356,8 @@ function play(chapterId = story.chapters[0]?.id, beatIndex = 0, reset = false, s
   titleScreen.hidden = true; gameScreen.hidden = false; pendingChapter = null;
   lastCommunicationGroup = '';
   renderBeat({ revisit: !reset });
-  if (currentEpisodeCue && store.settings.sound) episodeAudio.unlock().then(ok=>{if(ok&&currentEpisodeCue&&!gameScreen.hidden&&!modal.open)episodeAudio.render(currentEpisodeCue,{quiet:true});});
+  if(performanceCue()&&store.settings.sound)episodeAudio.unlock().then(ok=>{if(ok&&performanceCue()&&!gameScreen.hidden&&!modal.open&&!document.querySelector('.end-screen'))episodeAudio.render(performanceCue(),{quiet:true});});
+  if(demoMode&&progress.finished)renderChapterEnd(true);
 }
 
 function recordBacklog(chapter, beat, index) {
@@ -319,8 +382,11 @@ function renderBeat({ revisit = false } = {}) {
   const chapter = chapterAt(), beat = beatAt();
   if (!chapter || !beat) { renderChapterEnd(); return; }
   $('stage').dataset.chapterId = chapter.id;
-  currentReadingPage = episodeOneReadingPage(chapter, progress.beatIndex) || episodeTwoReadingPage(chapter, progress.beatIndex);
+  currentReadingPage = episodeOneReadingPage(chapter, progress.beatIndex) || episodeTwoReadingPage(chapter, progress.beatIndex) || coreReadingPage(chapter,progress.beatIndex);
   currentEpisodeCue = episodeOneDirection(chapter, progress.beatIndex) || episodeTwoDirection(chapter, progress.beatIndex);
+  currentCoreCue=coreSceneDirection(chapter,progress.beatIndex);
+  currentEventCutscene=eventCutsceneDirection(chapter,progress.beatIndex);
+  prepareNearbyCutscenes(chapter,progress.beatIndex);
   if (currentEpisodeCue && currentReadingPage?.entries.length > 1) currentEpisodeCue.focus = currentReadingPage.focus;
   $('storyBox').classList.toggle('reading-page', Boolean(currentReadingPage?.entries.length > 1));
   $('chapterLabel').textContent = chapter.label;
@@ -330,14 +396,14 @@ function renderBeat({ revisit = false } = {}) {
   $('progressText').textContent = `${progress.beatIndex === pageEnd ? progress.beatIndex + 1 : `${progress.beatIndex + 1}–${pageEnd + 1}`} / ${total}`;
   $('progressBar').style.width = `${total ? ((pageEnd + 1) / total) * 100 : 0}%`;
   stageImage.className = 'stage-image';
-  const scene = currentEpisodeCue?.background || beat.scene || 'room';
+  const scene = performanceCue()?.background || beat.scene || 'room';
   // The advertising dream begins at the beach and ends when Seoin leaves it.
   // Resolve by manuscript text rather than hard-coded beat numbers so saves stay stable.
   const dreamStart = chapter.id === '2' ? chapter.beats.findIndex(item => item.text?.includes('바다가 펼쳐졌다')) : -1;
   const dreamEnd = dreamStart >= 0 ? chapter.beats.findIndex((item, index) => index > dreamStart && item.text?.includes('서인은 버튼을 눌렀다')) : -1;
   const inJiwooDream = dreamStart >= 0 && progress.beatIndex >= dreamStart && (dreamEnd < 0 || progress.beatIndex <= dreamEnd);
   $('stage').classList.toggle('ep2-jiwoo-dream', inJiwooDream);
-  const background = inJiwooDream ? './assets/ep2/jiwoo-dream-beach.avif' : (currentEpisodeCue?.backgroundAsset ? EP1_ASSETS[currentEpisodeCue.backgroundAsset] : story.assets?.[scene]);
+  const background = inJiwooDream ? EP1_ASSETS.dreamBeach : (performanceCue()?.backgroundAsset ? EP1_ASSETS[performanceCue().backgroundAsset] : story.assets?.[scene]);
   if (background) {
     stageImage.classList.remove('no-background');
     if (background !== sceneBackground) {
@@ -356,14 +422,16 @@ function renderBeat({ revisit = false } = {}) {
   storyText.hidden = primary;
   $('perceptionAdvance').hidden = !primary;
   renderDirection(beat, { quiet: revisit });
+  settlementStage.render(chapter,progress.beatIndex,{quiet:revisit,reducedMotion:store.settings.reducedMotion});
   // Authored graphics return immediately when perception stops; do not leave a
   // stale hidden card merely because its visual id has not changed.
-  directionCard.hidden = Boolean(currentEpisodeCue) || Boolean(currentPerception) || !beat.direction?.visual;
+  directionCard.hidden = Boolean(currentEpisodeCue||currentCoreCue?.cg||currentEventCutscene) || Boolean(currentPerception) || !beat.direction?.visual;
   speakerNode.textContent = currentReadingPage?.speaker ?? episodeTwoSpeaker(chapter,progress.beatIndex) ?? beat.speaker ?? '';
   speakerNode.hidden = primary || !speakerNode.textContent;
   storyText.className = `story-text${beat.kind === 'system' ? ' system' : ''}${beat.direction?.emphasis ? ' authored-emphasis' : ''}`;
   choiceArea.replaceChildren();
-  const chosenIndex = progress.choices?.[`${chapter.id}:${progress.beatIndex}`];
+  const observation=isOptionalObservation(chapter,progress.beatIndex);
+  const chosenIndex = (observation?store.metadata.observations?.[`${chapter.id}:${progress.beatIndex}`]:undefined) ?? progress.choices?.[`${chapter.id}:${progress.beatIndex}`];
   if (beat.choice) renderChoices(beat, chapter, chosenIndex);
   fullText = currentReadingPage?.text ?? beat.text;
   choiceArea.hidden = Boolean(beat.choice && fullText);
@@ -387,10 +455,15 @@ function renderBeat({ revisit = false } = {}) {
       reducedMotion: store.settings.reducedMotion,
     });
     audio.setCommunicationFocus(currentPerception.source.priority === 'interrupt' ? 'interrupt' : currentPerception.source.kind);
-    if (!continuing && !currentEpisodeCue) audio.cue(currentPerception.source.kind, { priority: currentPerception.source.priority, instant: revisit || skipping });
+    episodeAudio.setCommunicationFocus?.(currentCoreCue?(currentPerception.source.priority==='interrupt'?'interrupt':currentPerception.source.kind):null);
+    if (!continuing && !currentEpisodeCue) {
+      const signal=currentPerception.source,key=chapter.id+':'+progress.beatIndex;
+      if(currentCoreCue)audio.resume('silence').then(ok=>{if(ok&&!modal.open&&!gameScreen.hidden&&key===progress.chapterId+':'+progress.beatIndex)audio.cue(signal.kind,{priority:signal.priority,instant:revisit||skipping});});
+      else audio.cue(signal.kind,{priority:signal.priority,instant:revisit||skipping});
+    }
     lastCommunicationGroup = currentPerception.groupId;
   } else {
-    neuralStage.clear(); audio.setCommunicationFocus(null); lastCommunicationGroup = '';
+    neuralStage.clear(); audio.setCommunicationFocus(null);episodeAudio.setCommunicationFocus?.(null); lastCommunicationGroup = '';
   }
   if (currentEpisodeCue?.blackout) neuralStage.clear();
   if (instant || !fullText) { storyText.textContent = fullText; typing = false; finishTyping(); }
@@ -427,9 +500,9 @@ function finishTyping() {
 
 function renderChoices(beat, chapter, chosenIndex) {
   let container = choiceArea;
-  if (isEpisodeOneObservation(chapter, progress.beatIndex)) {
+  if (isOptionalObservation(chapter, progress.beatIndex)) {
     const details = document.createElement('details'); details.className = 'optional-observation';
-    const summary = document.createElement('summary'); summary.textContent = '정산·수면 조건 다시 보기';
+    const summary = document.createElement('summary'); summary.textContent = chapter.id==='1'?'정산·수면 조건 다시 보기':'여기까지 확인한 내용 다시 보기';
     details.append(summary); choiceArea.append(details); container = details;
     details.addEventListener('click', event => event.stopPropagation());
     details.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') event.stopPropagation(); });
@@ -443,7 +516,9 @@ function renderChoices(beat, chapter, chosenIndex) {
     button.setAttribute('aria-pressed', chosenIndex === index ? 'true' : 'false');
     button.addEventListener('click', (event) => {
       event.stopPropagation(); clearTimeout(autoTimer); feedback();
-      progress = selectChoice(progress, chapter.id, progress.beatIndex, index);
+      if(isOptionalObservation(chapter,progress.beatIndex)){
+        store.metadata.observations={...(store.metadata.observations||{}),[chapter.id+':'+progress.beatIndex]:index};
+      }else progress = selectChoice(progress, chapter.id, progress.beatIndex, index);
       if (option.note) {
         container.querySelector('.choice-feedback')?.remove();
         const note = document.createElement('p'); note.className = 'choice-note choice-feedback'; note.textContent = option.note; container.append(note);
@@ -490,7 +565,7 @@ function goPrevious() {
   if (gameScreen.hidden || modal.open || document.querySelector('.end-screen')) return;
   if ($('stage').classList.contains('ui-hidden')) { setUiHidden(false); return; }
   pauseReading();
-  const pageIndex = episodeOnePreviousPage(chapterAt(), progress.beatIndex) ?? episodeTwoPreviousPage(chapterAt(), progress.beatIndex);
+  const pageIndex = episodeOnePreviousPage(chapterAt(), progress.beatIndex) ?? episodeTwoPreviousPage(chapterAt(), progress.beatIndex) ?? corePreviousPage(chapterAt(),progress.beatIndex);
   const previous = pageIndex === null ? previousProgress(progress, story) : { ...progress, beatIndex: pageIndex, finished: false };
   if (previous.chapterId !== progress.chapterId || previous.beatIndex !== progress.beatIndex) {
     progress = previous; if (!transientBacklog) saveCurrent(); renderBeat({ revisit: true });
@@ -500,23 +575,43 @@ function goPrevious() {
 function renderChapterEnd(final = false) {
   clearTimers(); pauseReading();
   episodeAudio.stop();
+  if(demoMode&&final)audio.stop();
   neuralStage.clear(); audio.setCommunicationFocus(null); lastCommunicationGroup = '';
   document.querySelector('.end-screen')?.remove();
   const ending = document.createElement('div'); ending.className = 'end-screen';
   const card = document.createElement('section'); card.className = 'end-card';
-  const eyebrow = document.createElement('p'); eyebrow.className = 'eyebrow'; eyebrow.textContent = final ? 'END OF STORY' : 'CHAPTER COMPLETE';
-  const title = document.createElement('h2'); title.textContent = progress.chapterId === '1' ? '자신과 단둘이' : final ? '마지막 페이지' : '잠시 숨을 고르고';
-  const message = document.createElement('p'); message.textContent = final ? '이야기의 끝에 도착했습니다. 함께 읽어 주셔서 고맙습니다.' : '이 장의 이야기를 마쳤습니다.';
+  const coreEnd=demoMode&&final;
+  ending.classList.toggle('public-ending',coreEnd);
+  const eyebrow = document.createElement('p'); eyebrow.className = 'eyebrow'; eyebrow.textContent = coreEnd?'END OF DEMO':final ? 'END OF STORY' : 'CHAPTER COMPLETE';
+  card.classList.toggle('release-ending',coreEnd);
+  const title = document.createElement('h2'); title.textContent = coreEnd?RELEASE.endingTitle:progress.chapterId === '1' ? '자신과 단둘이' : final ? '마지막 페이지' : '잠시 숨을 고르고';
+  const message = document.createElement('p'); message.textContent = coreEnd?RELEASE.endingBody:final ? '이야기의 끝에 도착했습니다. 함께 읽어 주셔서 고맙습니다.' : '이 장의 이야기를 마쳤습니다.';
   const actions = document.createElement('div'); actions.className = 'end-actions';
-  const nextButton = document.createElement('button'); nextButton.textContent = final ? '목차로' : '다음 장';
+  const nextButton = document.createElement('button'); nextButton.textContent = coreEnd?'데모 메뉴':final ? '목차로' : '다음 장';
   nextButton.addEventListener('click', () => {
     ending.remove();
     if (final) { titleScreen.hidden = false; gameScreen.hidden = true; return; }
     progress = { ...progress, chapterId: pendingChapter, beatIndex: 0, finished: false }; pendingChapter = null; saveCurrent(); renderBeat();
   });
-  const menuButton = document.createElement('button'); menuButton.textContent = '목차';
-  menuButton.addEventListener('click', () => { ending.remove(); titleScreen.hidden = false; gameScreen.hidden = true; openChapters(); });
-  actions.append(nextButton, menuButton); card.append(eyebrow, title, message, actions); ending.append(card); $('stage').append(ending);
+  const menuButton = document.createElement('button'); menuButton.textContent = coreEnd?(purchaseLink()?'정식판 구매하기':'출시 안내 보기'):'목차';
+  menuButton.classList.toggle('release-primary',coreEnd);
+  menuButton.addEventListener('click', () => {if(coreEnd){openRelease();return;} ending.remove(); titleScreen.hidden = false; gameScreen.hidden = true; openChapters(); });
+  if(coreEnd)actions.append(menuButton,nextButton);else actions.append(nextButton, menuButton);
+  if(coreEnd){const again=document.createElement('button');again.textContent='마지막 장면 다시 보기';again.addEventListener('click',()=>{ending.remove();play('11',228,false,{...progress,beatIndex:228,finished:false});});actions.append(again);}
+  card.append(eyebrow, title, message, actions); ending.append(card); $('stage').append(ending);
+}
+
+function openRelease(locked=false){
+ const root=document.createElement('div');root.className='release-info';
+ root.append(modalHeading('꿈을 잃은 세계 · 정식판',locked?'이곳부터는 정식판에서 이어집니다. 무료 데모는 11화까지 플레이할 수 있습니다.':'데모를 함께해 주셔서 고맙습니다.'));
+ const title=document.createElement('h3');title.textContent='더 빨리 내린 답이, 더 나은 선택일까.';
+ const body=document.createElement('p');body.textContent='서인의 다음 면담과 그 뒤의 이야기를 정식판에서 만나 보세요.';
+ const status=document.createElement('p');status.className='release-status';
+ const url=purchaseLink();status.textContent=url?'판매 페이지에서 가격과 이용 조건을 확인할 수 있습니다.':RELEASE.comingSoon;
+ root.append(title,body,status);
+ if(url){const link=document.createElement('a');link.className='release-primary release-buy-link';link.textContent='판매 페이지에서 구매하기';link.href=url;link.target='_blank';link.rel='noopener noreferrer';root.append(link);}
+ root.append(actionButton(locked?'데모 장 선택':'데모로 돌아가기',()=>{closeModal();if(locked)openChapters();}));
+ showModal(root,'release');
 }
 
 function showModal(content, mode) {
@@ -632,14 +727,23 @@ function openChapters() {
     }
     count.textContent = visible ? `${visible}개 장` : '일치하는 장이 없습니다.';
   };
-  search.addEventListener('input', filter); filter(); root.append(list); showModal(root, 'chapters');
+  search.addEventListener('input', filter); filter(); root.append(list);
+  const locked=document.createElement('section');locked.className='release-locked';
+  const label=document.createElement('h3');label.textContent='정식판 · 12화부터';
+  const copy=document.createElement('p');copy.textContent='서인의 다음 선택은 정식판에서 이어집니다.';
+  locked.append(label,copy,actionButton(purchaseLink()?'구매 안내 보기':'출시 안내 보기',()=>openRelease(true)));root.append(locked);
+  showModal(root, 'chapters');
 }
 
 function chapterMoments(chapter) {
-  if (episodeOneDirection(chapter, 0)) return EPISODE_ONE_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true}));
-  if (episodeTwoDirection(chapter, 0)) return EPISODE_TWO_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true}));
+  const inserts=[...EPISODE_CUTSCENES,...CORE_CUTS].filter(c=>c.chapter===chapter.id).map(c=>({beatIndex:c.start,place:`컷신 · ${c.alt}`,cutscene:true,authored:true}));
+  const rooftopStart=episodeSixRooftopStart(chapter);
+  if(rooftopStart>=0)inserts.push({beatIndex:rooftopStart,place:'컷신 · 도시와 광고 송출탑',cutscene:true,authored:true});
+  const merge=moments=>[...new Map([...moments,...inserts].map(m=>[m.beatIndex,m])).values()].sort((a,b)=>a.beatIndex-b.beatIndex);
+  if (episodeOneDirection(chapter, 0)) return merge(EPISODE_ONE_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true})));
+  if (episodeTwoDirection(chapter, 0)) return merge(EPISODE_TWO_SCENES.map(({index,title})=>({beatIndex:index,place:title,authored:true})));
   const seenVisuals = new Set(), seenSignals = new Set(); let previousPlace = '';
-  return chapter.beats.flatMap((beat, beatIndex) => {
+  return merge(chapter.beats.flatMap((beat, beatIndex) => {
     const direction = beat.direction, place = direction?.place || '';
     const placeChanged = Boolean(place && place !== previousPlace);
     previousPlace = place;
@@ -651,7 +755,7 @@ function chapterMoments(chapter) {
     const signalNew = Boolean(signal && !seenSignals.has(signalKey));
     if (signal) seenSignals.add(signalKey);
     return placeChanged || visualNew || signalNew ? [{ beatIndex, place: placeChanged ? place : '', visualType: visualNew ? visual.type : '', signal: signalNew ? signal : null }] : [];
-  });
+  }));
 }
 
 function openChapterScenes(chapter) {
@@ -663,7 +767,7 @@ function openChapterScenes(chapter) {
     const card = document.createElement('div'); card.className = 'chapter-card';
     const copy = document.createElement('div'); copy.className = 'chapter-copy';
     const title = document.createElement('strong'); title.textContent = `${String(index + 1).padStart(2, '0')} · ${moment.place || moment.signal?.title || '시각 기록'}`;
-    const detail = document.createElement('span'); detail.textContent = moment.authored ? `${chapter.label} 연출판 · 이 장면에서 시작` : moment.signal ? `${moment.signal.sender ? `${moment.signal.sender} · ` : ''}이 장면에서 시작` : `이 장면에서 시작 · ${moment.visualType ? '정보 패널 포함' : '장소 전환'}`;
+    const detail = document.createElement('span'); detail.textContent = moment.cutscene ? '사건 컷신 · 이 장면에서 시작' : moment.authored ? `${chapter.label} 연출판 · 이 장면에서 시작` : moment.signal ? `${moment.signal.sender ? `${moment.signal.sender} · ` : ''}이 장면에서 시작` : `이 장면에서 시작 · ${moment.visualType ? '정보 패널 포함' : '장소 전환'}`;
     const button = document.createElement('button'); button.className = 'small-button'; button.type = 'button'; button.textContent = '이곳에서 읽기';
     button.addEventListener('click', () => { closeModal(); play(chapter.id, moment.beatIndex, true); });
     copy.append(title, detail); card.append(copy, button); list.append(card);
@@ -710,13 +814,14 @@ function openHelp() {
   const shortcuts = document.createElement('dl'); shortcuts.className = 'shortcut-list';
   [['클릭 · Enter · Space · →', '다음 문장. 표시 중이면 현재 문장을 먼저 완성합니다.'], ['← · 이전', '이전 문장. 자동 진행을 멈춥니다.'], ['A · 자동', '문장 길이에 맞춰 자동 진행. 선택 장면과 장 끝에서 멈춥니다.'], ['K · 읽은 곳 넘김', '읽은 부분만 빠르게 이동. 미독 문장에 닿으면 멈춥니다.'], ['Esc', '자동 진행·넘김을 멈추거나 숨긴 화면을 복원합니다. 열린 창은 닫습니다.'], ['L · S · H · F', '지난 이야기 · 저장과 백업 · 화면 숨김 · 전체 화면'], ['?', '이 도움말을 엽니다.']].forEach(([key, description]) => { const term = document.createElement('dt'), detail = document.createElement('dd'); term.textContent = key; detail.textContent = description; shortcuts.append(term, detail); });
   const note = document.createElement('p'); note.className = 'modal-lead'; note.textContent = '설정·저장·지난 이야기 창을 열거나 다른 탭으로 이동하면 진행이 멈춥니다. 장과 장면을 옮기기 전 위치는 저장과 백업의 ‘이동 전 읽던 곳’에 남습니다. 파일 백업은 기기 간 수동 이동용입니다.';
-  root.append(shortcuts, note); showModal(root, 'help');
+  const observations=document.createElement('p');observations.className='modal-lead';observations.textContent='조건과 행동을 되짚는 세 곳의 관찰은 펼치지 않고 계속 읽을 수 있습니다. 마지막으로 살펴본 항목은 이 버전의 공용 수첩에 남으며, 저장 칸별 이야기 선택과는 별도로 기억합니다.';
+  root.append(shortcuts, note, observations); showModal(root, 'help');
 }
 
 function openLibrary() {
   const root = document.createElement('div'); root.append(modalHeading('기록과 만든 이', '이야기의 출처와 제작 정보를 모아 두었습니다.'));
   const credits = window.STORY?.credits ?? {};
-  const scope = document.createElement('p'); scope.className = 'modal-lead'; scope.textContent = '1~30화에는 장면별 카메라, 인물 배치, 공간음과 신경 접속을 통한 통신 연출이 적용되어 있습니다. 개인 AI의 응답, 메시지, 감각 경험, 정산과 방송을 서로 다른 방식으로 보여 줍니다. 이후 수록분은 원문 중심의 읽기 화면으로 이어집니다. 장면 자료와 소리는 이 작품을 위해 만든 오프라인 연출입니다.'; root.append(scope);
+  const scope = document.createElement('p'); scope.className = 'modal-lead'; scope.textContent = '현재 공개 버전은 본편 1~11화와 사이 이야기 7편을 담은 무료 데모입니다. 개인 AI·메시지·감각 경험에 서로 다른 연출을 적용했습니다. 정식판은 출시 안내에서 확인할 수 있습니다.'; root.append(scope);
   const author = document.createElement('p'); author.className = 'modal-lead'; author.textContent = credits.author ? `글 · ${credits.author}` : '제작 정보는 이야기 자료와 함께 표시됩니다.'; root.append(author);
   const list = document.createElement('div'); list.className = 'chapter-list';
   story.chapters.forEach((chapter) => {
@@ -745,14 +850,14 @@ function closeModal() {
   const restore = modalMode === 'backlog' ? backlogRestore : null;
   modal.close(); modalMode = ''; modalContent.replaceChildren();
   if (restore && transientBacklog) { progress = restore; backlogRestore = null; transientBacklog = false; renderBeat({ revisit: true }); }
-  else if (!gameScreen.hidden && beatAt()) renderBeat({ revisit: true });
+  else if (!gameScreen.hidden && beatAt()&&!document.querySelector('.end-screen')) renderBeat({ revisit: true });
   if (restoreFocus?.isConnected && !restoreFocus.closest('[hidden]')) restoreFocus.focus({ preventScroll: true });
 }
 
 function openEpisodeOneDemo() {
-  const root = document.createElement('div'); root.append(modalHeading('1화 · 빌린 꿈', '표정과 시선, 생활의 소리와 마지막 침묵까지.'));
+  const root = document.createElement('div'); root.append(modalHeading(demoMode?'핵심 데모 · 1~11화':'1화 · 빌린 꿈', '표정과 시선, 생활의 소리와 마지막 침묵까지.'));
   const note = document.createElement('p'); note.className = 'demo-mode-note';
-  note.textContent = '약 55초의 티저 영상 뒤에 1화가 시작됩니다. 영상은 언제든 건너뛸 수 있습니다. 본편은 클릭·Enter·Space로 진행하고, A로 자동 읽기, L로 지난 대사를 볼 수 있습니다. 언제든 저장하거나 글자 크기와 소리를 바꿀 수 있습니다.';
+  note.textContent = (demoMode?'본편 1~11화와 연결되는 사이 이야기 7편을 체험합니다. 데모의 읽던 곳은 브라우저에 저장됩니다. ':'')+'약 55초의 티저 영상 뒤에 1화가 시작됩니다. 영상은 언제든 건너뛸 수 있습니다. 본편은 클릭·Enter·Space로 진행하고, A로 자동 읽기, L로 지난 대사를 볼 수 있습니다. 언제든 저장하거나 글자 크기와 소리를 바꿀 수 있습니다.';
   const actions = document.createElement('div'); actions.className = 'demo-start-actions';
   const begin = (sound) => {
     store.settings.sound = sound; saveStore();
@@ -765,10 +870,12 @@ function openEpisodeOneDemo() {
   };
   actions.append(actionButton('소리 켜고 시작', () => begin(true)), actionButton('조용히 시작', () => begin(false)));
   root.append(note, actions); showModal(root, 'demo');
-  Object.entries(EP1_ASSETS).filter(([,path])=>path.endsWith('.webp')).forEach(([,path])=>{const image=new Image();image.src=path;});
+  Object.entries(EP1_ASSETS).filter(([,path])=>path.endsWith('.webp')&&!path.includes('/cutscenes/')).forEach(([,path])=>{const image=new Image();image.src=path;});
 }
-$('demoButton').addEventListener('click', openEpisodeOneDemo);
-$('startButton').addEventListener('click', () => play(story.chapters[0]?.id, 0, true));
+$('demoButton').querySelector('span').textContent=purchaseLink()?'정식판 구매 안내':'정식판 출시 안내';
+$('demoButton').addEventListener('click',()=>openRelease());
+if(demoMode){$('startButton').querySelector('span').textContent='핵심 데모 시작';document.title=story.title+' · 핵심 데모';}
+$('startButton').addEventListener('click', () => demoMode?openEpisodeOneDemo():play(story.chapters[0]?.id, 0, true));
 $('continueButton').addEventListener('click', () => store.autosave ? play(store.autosave.progress.chapterId, store.autosave.progress.beatIndex, false, store.autosave.progress) : play(story.chapters[0]?.id, 0, true));
 $('chaptersButton').addEventListener('click', openChapters);
 $('titleSaveButton').addEventListener('click', openSaves);
@@ -780,7 +887,7 @@ $('gameSettingsButton').addEventListener('click', openSettings);
 $('soundToggle').addEventListener('click', () => {
   store.settings.sound = !store.settings.sound; saveStore(); syncSoundButton();
   if (!store.settings.sound) { audio.stop(); episodeAudio.stop(); }
-  else if (currentEpisodeCue) episodeAudio.unlock().then(ok=>{if(ok&&!gameScreen.hidden&&!modal.open)episodeAudio.render(currentEpisodeCue,{quiet:true});});
+  else if (performanceCue()) episodeAudio.unlock().then(ok=>{if(ok&&!gameScreen.hidden&&!modal.open)episodeAudio.render(performanceCue(),{quiet:true});if(currentCoreCue)audio.resume('silence');});
   else { const dir = beatAt()?.direction; if (dir?.music) audio.resume(dir.music); }
 });
 function setUiHidden(hidden) {
@@ -793,7 +900,7 @@ function setUiHidden(hidden) {
 }
 $('hideUiButton').addEventListener('click',()=>{setUiHidden(!$('stage').classList.contains('ui-hidden'));if(!$('uiReveal').hidden)$('uiReveal').focus();});
 $('uiReveal').addEventListener('click',()=>{setUiHidden(false);$('hideUiButton').focus();});
-$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); episodeStage.clear(); currentEpisodeCue=null; neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
+$('homeButton').addEventListener('click', () => { pauseReading(); clearTimers(); audio.stop(); episodeAudio.stop(); episodeStage.clear(); settlementStage.clear(); currentEpisodeCue=null; currentCoreCue=null; currentEventCutscene=null; neuralStage.clear(); currentPerception = null; lastCommunicationGroup = ''; gameScreen.hidden = true; titleScreen.hidden = false; syncContinueInfo(); });
 $('modalClose').addEventListener('click', closeModal);
 modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
 modal.addEventListener('cancel', (event) => { event.preventDefault(); closeModal(); });
@@ -841,4 +948,4 @@ const reviewChapter = reviewLink.get('chapter');
 if (reviewChapter && chapterAt(reviewChapter)) {
   const index = Number.parseInt(reviewLink.get('beat'), 10) || 0;
   play(reviewChapter, Math.max(0, Math.min(chapterAt(reviewChapter).beats.length - 1, index)), true);
-}
+}else if(reviewChapter)openRelease(true);

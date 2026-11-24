@@ -1,0 +1,227 @@
+{
+  "date": "2026-10-23",
+  "scope": "18 cinematic scenes across chapters 19–22 and four interludes, each with independent web and VN artwork",
+  "artwork": {
+    "status": "complete",
+    "files": 36,
+    "web": 18,
+    "vn": 18,
+    "format": "image/webp",
+    "encoder": "Pillow quality=96 method=6",
+    "resizedOrCropped": false,
+    "productionSourceAndEncodedHashesNativeDimensionsMimeBytes": "planning/ep019-022-sequence-20261023/provenance.json",
+    "rejectedTraceCaveat": "Two intermediate web attempts (ep20-rooftop and ep21-confirmation) retain referenceTraceVerified=false and their provenance note; final accepted input paths are verified."
+  },
+  "rootReader": {
+    "result": "PASS",
+    "page": "pilot.html served over localhost",
+    "offOriginRequests": "blocked",
+    "fileUrl": "not tested; local file URLs are blocked by the managed browser",
+    "chapterAndInterludeOrder": {
+      "19": [
+        "ep19-door",
+        "ep19-wrist-detail",
+        "ep19-home-life",
+        "ep19-windows"
+      ],
+      "19-1": [
+        "ep19-1-alley",
+        "ep19-1-window"
+      ],
+      "20": [
+        "ep20-door",
+        "ep20-box",
+        "ep20-rooftop"
+      ],
+      "20-1": [
+        "ep20-1-kitchens"
+      ],
+      "21": [
+        "ep21-contracts",
+        "ep21-call-transfer",
+        "ep21-confirmation"
+      ],
+      "21-1": [
+        "ep21-1-rescue"
+      ],
+      "22": [
+        "ep22-corridor",
+        "ep22-compute-choice",
+        "ep22-shoe"
+      ],
+      "22-1": [
+        "ep22-1-paper"
+      ]
+    },
+    "viewportChecks": [
+      {
+        "chapter": "19",
+        "width": 1440,
+        "figureWidths": [
+          698,
+          698,
+          698,
+          698
+        ],
+        "documentWidth": 1440
+      },
+      {
+        "chapter": "19",
+        "width": 400,
+        "figureWidths": [
+          334,
+          334,
+          334,
+          334
+        ],
+        "documentWidth": 400
+      },
+      {
+        "chapter": "19",
+        "width": 390,
+        "figureWidths": [
+          324,
+          324,
+          324,
+          324
+        ],
+        "documentWidth": 390
+      },
+      {
+        "chapters": [
+          "19-1",
+          "20",
+          "20-1",
+          "21",
+          "21-1",
+          "22",
+          "22-1"
+        ],
+        "width": 390,
+        "allFiguresLoaded": true,
+        "noHorizontalOverflow": true
+      }
+    ],
+    "captionChecks": [
+      "ep19-home-life",
+      "ep19-windows",
+      "ep20-1-kitchens",
+      "ep21-contracts",
+      "ep21-call-transfer",
+      "ep22-compute-choice"
+    ],
+    "proof": [
+      "vn/notes/sequence19-22-proof/web-ep19-desktop.png",
+      "vn/notes/sequence19-22-proof/web-ep19-400.png",
+      "vn/notes/sequence19-22-proof/web-ep19-390.png"
+    ],
+    "captionText": {
+      "ep22-compute-choice": "진행 중인 공공 검사 11건은 계속. 대기 4건은 내일로."
+    }
+  },
+  "vnStage": {
+    "result": "PASS",
+    "harness": "single HTML served on localhost; off-origin requests blocked; full-art openCutscene function exercised with modal shell stubs",
+    "fileUrl": "not tested",
+    "normalMotion": "wide frame automatically advances to detail in 1.4s without another required click",
+    "manualFrameControl": "wide/detail toggling updates visible frame, label, aria-label, and blurred background image",
+    "reducedMotion": "detail is shown immediately with animation disabled; a preference change during the same cue cancels the timer and shows still detail",
+    "fullArt": "opens on wide frame; optional next-frame control and zoom both work",
+    "mobile": {
+      "viewport": "400x844",
+      "objectFit": "contain",
+      "nativeFrameDimensions": [
+        1672,
+        941
+      ],
+      "touchControlTaps": "wide → detail",
+      "controls": [
+        {
+          "label": "전체 그림",
+          "top": 92.8,
+          "bottom": 136.8,
+          "height": 44
+        },
+        {
+          "label": "전체 장면",
+          "ariaLabel": "전체 장면 보기",
+          "top": 144.8,
+          "bottom": 188.8,
+          "height": 44
+        }
+      ],
+      "gapBetweenControls": 8
+    },
+    "pageErrors": 0,
+    "proof": [
+      "vn/notes/sequence19-22-proof/ep19-vn-frame-desktop.png",
+      "vn/notes/sequence19-22-proof/ep19-vn-frame-400.png"
+    ],
+    "instant": "detail is shown immediately",
+    "saveRestore": "not tested; the harness exercises instant mode only"
+  },
+  "automatedChecks": {
+    "focusedCutsceneSuite": {
+      "passed": 8,
+      "failed": 0
+    },
+    "npmTestPrefixVn": {
+      "passed": 17,
+      "failed": 0
+    },
+    "syntaxAndDiffCheck": "PASS"
+  },
+  "publicOfflineBuild": {
+    "result": "PASS",
+    "chapters": 18,
+    "sourceBeats": 4242,
+    "chapterIds": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "4-1",
+      "5",
+      "6",
+      "6-1",
+      "7",
+      "7-2",
+      "8",
+      "8-1",
+      "8-2",
+      "8-3",
+      "9",
+      "9-1",
+      "10",
+      "11"
+    ],
+    "cutsceneChapters": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "mediaFiles": 114,
+    "sequence19to22MediaIncluded": false,
+    "internalReviewNotesReplacedWithPublicNotice": true,
+    "copiedIntoCheckout": [
+      "vn/play-offline.html",
+      "vn/play-offline.html.manifest.json"
+    ],
+    "offlineHtmlSha256": "efd28cd8de18a824488c75b24cc06b50224e632678ff3522f5ec1109a5d963f7",
+    "offlineManifestSha256": "de0641ceabcb488a8656fa840bf003fb3bfda9288638ddbfffbf2d664d68e914"
+  },
+  "sourcePreservation": {
+    "manuscriptEdited": false,
+    "characterSettingsEdited": false,
+    "saveCoordinatesEdited": false,
+    "parentStyleOrAudioChanged": false
+  }
+}

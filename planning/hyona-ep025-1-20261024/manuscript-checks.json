@@ -1,0 +1,21 @@
+{
+  "episode": "25-1",
+  "before_body_non_whitespace": 3580,
+  "body_non_whitespace": 3580,
+  "before_sha256": "ead0b92102133b76be865943ea14e3303ce1274284f7b87dd36eb76e65e0d54e",
+  "sha256": "ead0b92102133b76be865943ea14e3303ce1274284f7b87dd36eb76e65e0d54e",
+  "revision": 0,
+  "changes": 0,
+  "editorial": "PASS_ORIGINAL_WHOLE_READ; NO_REDUNDANT_REREAD",
+  "continuity": "PASS_WITH_LINKED_CONTEXT",
+  "visual": "실제 본문 원화0장,정보 그래픽 모듈0개,ReadingEffects 인라인 eggmath1개. 모바일400×900에서 달걀12개 윤곽과3.0−2.80=0.2를 직접 확인했다. 산술 관계는 즉시 읽혀 유지할 수 있으나,바로 앞 본문 계산과 겹치고 단순 선 그림이라 시장의 표정·서로의 돌봄을 그리는 힘은 약하다. 예전 팝업의 신청시각/신청완료 도장은 실제 표시가 아니다. 숫자 보조 연출로만 평가하며 고품질 사건 삽화나 VN 컷신으로 보지 않는다. pageerror0,가로 넘침 없음.",
+  "images_changed": 0,
+  "source_hook_changes": 0,
+  "tests": "final batch verification; not independently run for this prose-only unit",
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch": "renewed68-percent",
+  "batch_unit": 1,
+  "estimated_remaining_after_unit": 67,
+  "estimate_rule": "user reported68 after prior8 units+report from76; empirical1pp/unit, not live measurement"
+}

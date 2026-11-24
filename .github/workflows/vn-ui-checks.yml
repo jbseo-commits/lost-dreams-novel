@@ -5,6 +5,8 @@ on:
     paths:
       - 'vn/**'
       - 'tools/build-vn-offline.mjs'
+      - 'tools/build-vn-public.mjs'
+      - '.github/workflows/pages.yml'
       - '.github/workflows/vn-ui-checks.yml'
   workflow_dispatch:
 
@@ -21,5 +23,5 @@ jobs:
           node-version: 20
       - name: 비주얼노벨 기능과 타이틀 메뉴 검사
         run: npm test --prefix vn
-      - name: 오프라인판도 완전히 생성되는지 검사
-        run: node tools/build-vn-offline.mjs "$GITHUB_WORKSPACE/vn" "$RUNNER_TEMP/play-offline.html"
+      - name: 데모 전용 공개 산출물 생성 검사
+        run: node tools/build-vn-public.mjs "$GITHUB_WORKSPACE" "$RUNNER_TEMP/lost-dreams-public"

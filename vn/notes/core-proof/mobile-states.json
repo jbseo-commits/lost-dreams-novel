@@ -1,0 +1,250 @@
+[
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreCupBadge",
+    "chapter": "3화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/cup-and-badge.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "228 / 276",
+    "text": "식탁 위에는 찌그러진 컵과 회사 출입증이 나란히 놓여 있었다.",
+    "width": 400
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreShore",
+    "chapter": "7화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/empty-shore.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "252 / 267",
+    "text": "꿈속의 사람들은 다시 한 걸음 물러났다.",
+    "width": 400
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreOverload",
+    "chapter": "8-2화 · 사이 이야기",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/overload-room.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "74 / 116",
+    "text": "서인이 카펫 위로 무너지자, 부르지 않은 붉은 비상 응답 창이 저절로 켜졌다.",
+    "width": 400
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreMotherSleep",
+    "chapter": "10화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/mother-sleep.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "259–260 / 357",
+    "text": "서인은 손을 뻗었다가 멈췄다.\n광고 연결 표시를 끄지 않았다.",
+    "width": 400
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreCrayon",
+    "chapter": "11화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/crayon-room.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "77 / 254",
+    "text": "작은 손이 그 위에 선을 하나 더 그었다.",
+    "width": 400
+  },
+  {
+    "actors": [],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "coreMotherDinner",
+    "chapter": "11화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/mother-dinner.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "216–218 / 254",
+    "text": "대신 냉장고 문 화면을 눌러 검진을 가장 가까운 날짜로 다시 잡았다.\n3초가 걸렸다.\n어머니는 냄비를 젓느라 보지 못했다.",
+    "width": 400
+  },
+  {
+    "actors": [
+      {
+        "asset": "seoinQuestion",
+        "gaze": "right",
+        "id": "seoin",
+        "pose": "seated"
+      },
+      {
+        "asset": "coreDoyunListen",
+        "gaze": "left",
+        "id": "doyun",
+        "pose": "seated"
+      }
+    ],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "",
+    "chapter": "5화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/ep1/seoin-question.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/core/doyun-listening.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "181 / 374",
+    "text": "도윤은 오래된 수면 캡슐 하나를 열었다.",
+    "width": 400
+  },
+  {
+    "actors": [
+      {
+        "asset": "coreHakyung",
+        "gaze": "down",
+        "id": "hakyung",
+        "pose": "seated"
+      }
+    ],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "",
+    "chapter": "11화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/hakyung-clinical.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "91–92 / 254",
+    "text": "침대 옆 의자에 여자가 앉아 있었다.\n긴 머리를 대충 묶었고, 소매를 팔꿈치까지 걷어 올렸다. 손목 안쪽에 테이프 자국이 여러 겹 남아 있었다. 소독약 냄새가 났다.",
+    "width": 400
+  },
+  {
+    "actors": [
+      {
+        "asset": "coreSeoinAfter",
+        "gaze": "right",
+        "id": "seoin",
+        "pose": "still"
+      },
+      {
+        "asset": "motherCare",
+        "gaze": "left",
+        "id": "mother",
+        "pose": "seated"
+      }
+    ],
+    "audio": {
+      "ambience": "",
+      "audioStatus": "silent",
+      "music": ""
+    },
+    "board": "",
+    "cg": "",
+    "chapter": "11화",
+    "end": false,
+    "height": 844,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/core/seoin-after.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/ep12/mother-care.webp"
+      }
+    ],
+    "overflow": false,
+    "progress": "201 / 254",
+    "text": "어머니가 먼저 말했다.",
+    "width": 400
+  }
+]

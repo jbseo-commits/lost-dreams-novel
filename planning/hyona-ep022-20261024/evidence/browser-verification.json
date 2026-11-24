@@ -1,0 +1,64 @@
+{
+  "episode": "22",
+  "sha256": "ba9df839b2089eda0801a418948a3839ac902642e9cb07be5b898a1c1dfa9452",
+  "viewport": [
+    400,
+    900
+  ],
+  "figures": [
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep22-corridor-web.webp",
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "진행 중 검사 한 건\n71세 남성 · 수술 전 검사\n82%\n→\n83%",
+      "images": []
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "연산 회수와 진행 유지\n회수\n아이의 네 번째 검증을 당김 · 공공 검증 중단\n↔\n유지\n공공 검사 11건 끝까지 · 대기 4건은 내일",
+      "images": []
+    },
+    {
+      "classes": "sequence-cut",
+      "text": "진행 중인 공공 검사 11건은 계속. 대기 4건은 내일로.",
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep22-compute-choice-web.webp",
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "아이의 네 번째 검증과 연산 회수 결과\n대기 4건까지 수용\n아이 결과는 02:30 이후\n↔\n11건을 마치고 회수\n02:09 예상에서 더 밀리지 않음",
+      "images": []
+    },
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep22-shoe-web.webp",
+          "decoded": true
+        }
+      ]
+    }
+  ],
+  "reduced_motion": true,
+  "page_errors": [],
+  "horizontal_overflow": false,
+  "overlay": {
+    "method": "direct existing showSp; automatic trigger/default timing unverified",
+    "visible": true,
+    "text": "독립 검증 네 칸 · 보호자 이의 신청\n1\n2\n3\n4\n01:12\n02:09\n머물러 보기\n본문으로",
+    "closed": true
+  }
+}

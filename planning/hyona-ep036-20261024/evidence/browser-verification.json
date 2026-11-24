@@ -1,0 +1,22 @@
+{
+  "episode": "36",
+  "sha256": "0b1b679b05b006e68748ab5eeff8d5761a39fdf0ef8f010a625ff44a0c9f153a",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "runtimes": [
+    {
+      "id": "syncgap",
+      "inline": false,
+      "method": "direct existing showSp; sampled frame10000ms, natural trigger/default timing/audio/touch unverified",
+      "visible": true,
+      "text": "REFERENCE LINE 04 · 동부 의료망 · 같은 환자\n판정 보류\n23:52\nLAST SYNC\n03:14\n추가 촬영 확정\n03:16\n이 분\n그 이 분 뒤 · 한 사람의 촬영 순서\n정해짐\n계열 04 · 관찰기간 19년 2개월\n정서 기준 변화율 0.8%\n머물러 보기\n본문으로"
+    }
+  ],
+  "page_errors": [],
+  "horizontal_overflow": false
+}

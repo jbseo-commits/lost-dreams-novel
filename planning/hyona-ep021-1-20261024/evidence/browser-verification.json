@@ -1,0 +1,39 @@
+{
+  "episode": "21-1",
+  "sha256": "2a220400406cd04fcdb40467ea8d894a0e908af93ef9e029f69a0f970686f4c6",
+  "viewport": [
+    400,
+    900
+  ],
+  "figures": [
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep21-1-rescue-web.webp",
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "끊긴 계단에서 옆 건물 옥상으로\n송출탑 · 끊긴 계단\n계단 중간이 끊김\n비스듬한 버팀대\n옆 건물 옥상",
+      "images": []
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "네 개 모두 꺼진 알람\n05:40\n꺼짐\n05:43\n꺼짐\n05:47\n꺼짐\n05:50\n꺼짐",
+      "images": []
+    }
+  ],
+  "reduced_motion": true,
+  "page_errors": [],
+  "horizontal_overflow": false,
+  "overlay": {
+    "method": "direct existing showSp preview; auto scroll/default timing unverified",
+    "visible": true,
+    "text": "송출탑 · 은경의 꿈\n머물러 보기\n본문으로",
+    "closed": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "episode": "22-1",
+  "sha256": "a0f882834d4606d0f2aa8636642f600174b093e71efd0916e2662c05ab183990",
+  "viewport": [
+    400,
+    900
+  ],
+  "figures": [
+    {
+      "classes": "sequence-cut",
+      "text": "",
+      "images": [
+        {
+          "src": "assets/sequence19-22/ep22-1-paper-web.webp",
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "바뀐 집계 기준\n이전 이름\n지움\n새 이름\n소속 조직 평균",
+      "images": []
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "회의에서 게시까지\n05:52\n회의 소집\n06:40\n보고서 완료\n07:30\n회의\n08:58\n안전실\n09:00\n입력 멈춤\n09:12\n게시",
+      "images": []
+    },
+    {
+      "classes": "reader-info-graphic reveal seen id-still",
+      "text": "게시 이후\n0\n첫 숫자가 움직이기 시작함",
+      "images": []
+    }
+  ],
+  "reduced_motion": true,
+  "page_errors": [],
+  "horizontal_overflow": false,
+  "overlay": {
+    "method": "direct existing showSp; auto trigger/default timing unverified",
+    "visible": true,
+    "text": "작년 10월 이사회 · 의결 둘째 항 · 종이 한 장\n제4 검증층 일시 전환\n인지안전실장 전결\n지연 한도 3시간\n어젯밤 57분\n사후 보고\n06:40\n제안자\n전략본부 마정훈\n인지안전실장 해임안\n철회\n머물러 보기\n본문으로",
+    "closed": true
+  }
+}

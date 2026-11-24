@@ -1,0 +1,46 @@
+{
+  "episode": "38",
+  "sha256": "681546a677c738b12485e578517fb5677997e211ff20f29a94bc8599f0d2ca96",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "before_choice_styles": [
+    {
+      "text": "참여",
+      "width": 360,
+      "height": 45,
+      "color": "rgb(231, 237, 243)",
+      "background": "rgba(255, 255, 255, 0.03)",
+      "border": "rgba(255, 255, 255, 0.267)"
+    },
+    {
+      "text": "보류",
+      "width": 360,
+      "height": 45,
+      "color": "rgb(231, 237, 243)",
+      "background": "rgba(255, 255, 255, 0.03)",
+      "border": "rgba(255, 255, 255, 0.267)"
+    },
+    {
+      "text": "거부",
+      "width": 360,
+      "height": 45,
+      "color": "rgb(231, 237, 243)",
+      "background": "rgba(255, 255, 255, 0.03)",
+      "border": "rgba(255, 255, 255, 0.267)"
+    }
+  ],
+  "runtime": {
+    "id": "samebuttons",
+    "method": "direct existing showSp; frames1600ms and8600ms, natural trigger/default timing/audio/touch unverified",
+    "visible": true,
+    "text": "상담 화면 · 식탁 위 · 같은 크기, 같은 색\n참여\n보류\n거부\n결정 보류: 30일\n보류 기간 중 현 기준자 연결 계획 유지\n강제성 지표\n없음\n자발성\n높음\n비고\n비어 있음\n머물러 보기\n본문으로",
+    "closed": true
+  },
+  "page_errors": [],
+  "horizontal_overflow": false
+}

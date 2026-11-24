@@ -1,0 +1,284 @@
+{
+  "date": "2026-10-23",
+  "task": "PR #122 · 3화 편의점 손톱 흙 컷신",
+  "status": "PASS pending independent review",
+  "sequenceCard": {
+    "chapter": "3",
+    "beats": [
+      96,
+      107
+    ],
+    "startAnchor": "그날 둘은 편의점 앞에서 맥주를 마셨다.",
+    "detailAnchor": "지우의 손톱 밑에는 씻어도 빠지지 않은 흙이 조금 남아 있었다.",
+    "actionAnchor": "서인은 그걸 보다가 자기 캔을 지우의 캔에 가볍게 부딪쳤다.",
+    "camera": "96–105 편의점 투샷/웃음과 서인의 내려가는 시선 → 106 왼손 손톱 밑 작은 흙 → 107 가벼운 캔 건배",
+    "continuity": "초록 캔, 왼손, 회청색 체크 셔츠/검정 티, 늦은 오후 빛 유지. 씻긴 피부에 흙칠 없음. 새 대사와 효과음 없음; 원문·기존 오디오 보존."
+  },
+  "productionAssets": [
+    {
+      "file": "ep03-jiwoo-clay-smile.webp",
+      "mime": "image/webp",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 133336,
+      "sha256": "f7ff200bf296c9475c468026249b26a5259ce9e997e806f0ecf247dea63ee4f4"
+    },
+    {
+      "file": "ep03-convenience-gaze.webp",
+      "mime": "image/webp",
+      "dimensions": [
+        1200,
+        675
+      ],
+      "bytes": 96820,
+      "sha256": "e861d3b4b17892a4062b262ff345d6c2b960bc4c7468f1004269863a3ce1d71f"
+    },
+    {
+      "file": "ep03-clay-under-nails-washed.webp",
+      "mime": "image/webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 251882,
+      "sha256": "4e90394c219228fd87e436811ef9a58685512ba2246d761b1d6aa3feaf69ab0d"
+    },
+    {
+      "file": "ep03-convenience-toast.webp",
+      "mime": "image/webp",
+      "dimensions": [
+        1200,
+        675
+      ],
+      "bytes": 99636,
+      "sha256": "0562a4eb70e38a70e93ce9b930adc3c3b7920ab5201c11f94d5f62d6961a951e"
+    }
+  ],
+  "nailProduction": {
+    "file": "ep03-clay-under-nails-washed.webp",
+    "encoder": "WebP quality 96, method 6",
+    "sourceDimensions": [
+      1672,
+      941
+    ],
+    "productionSha256": "4e90394c219228fd87e436811ef9a58685512ba2246d761b1d6aa3feaf69ab0d",
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "rejected",
+        "sourcePng": {
+          "path": "/workspace/generated_images/exec-ad757097-779b-4e97-8450-4f7914922adf.png",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "bytes": 1965740,
+          "sha256": "bbcdb5bbeca52e3a06a4a840da43f5fb91372043a1d2cc8adcc3cba58a329e64"
+        },
+        "reason": "손톱이 길고 광택이 강해 매니큐어처럼 보이며 작은 갈색 흙이 읽히지 않음"
+      },
+      {
+        "attempt": 2,
+        "status": "accepted",
+        "sourcePng": {
+          "path": "/workspace/generated_images/exec-1d9bdd3a-4140-4add-9580-4601d656fc28.png",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "bytes": 1909973,
+          "sha256": "ad2c2149268e1d78fc125144b20d59d35b0a7e978a176f01452bafb15f8a449b"
+        },
+        "reason": "짧은 자연손톱, 검지·중지 손톱 끝의 작은 마른 흙이 390px 가독성을 갖고 피부는 깨끗함"
+      }
+    ]
+  },
+  "cacheVersion": {
+    "value": "ep03-cinematic-20261023-r1",
+    "entryPoints": [
+      "index.html",
+      "demo.html"
+    ],
+    "updatedUrls": [
+      "app.js",
+      "episode-one.css",
+      "ep1-assets.js",
+      "episode-one.js",
+      "episode-two.js",
+      "episode-cutscenes.js",
+      "core-demo.js",
+      "episode-one-reading.js",
+      "episode-two-reading.js",
+      "core-reading.js",
+      "release.js"
+    ],
+    "oldAssetsAvoided": "ep03-clay-under-nails-washed.webp"
+  },
+  "browser": {
+    "engine": "Playwright + /usr/bin/chromium",
+    "responsiveVisualReview": [
+      {
+        "cutscene": "clayUnderNails",
+        "src": "assets/cutscenes/ep03-clay-under-nails-washed.webp",
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "objectPosition": "43% 55%",
+        "objectFit": "cover",
+        "rect": {
+          "x": 0,
+          "y": 101.265625,
+          "width": 390,
+          "height": 489.515625
+        },
+        "overflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "screenshot": "ep03-cutscene-proof/ep03-nails-390x844.png"
+      },
+      {
+        "cutscene": "clayUnderNails",
+        "src": "assets/cutscenes/ep03-clay-under-nails-washed.webp",
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "objectPosition": "43% 55%",
+        "objectFit": "cover",
+        "rect": {
+          "x": 0,
+          "y": 101.265625,
+          "width": 400,
+          "height": 489.515625
+        },
+        "overflow": false,
+        "viewport": {
+          "width": 400,
+          "height": 844
+        },
+        "screenshot": "ep03-cutscene-proof/ep03-nails-400x844.png"
+      },
+      {
+        "cutscene": "clayUnderNails",
+        "src": "assets/cutscenes/ep03-clay-under-nails-washed.webp",
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "objectPosition": "50% 55%",
+        "objectFit": "contain",
+        "rect": {
+          "x": 0,
+          "y": 18,
+          "width": 1440,
+          "height": 594
+        },
+        "overflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "screenshot": "ep03-cutscene-proof/ep03-nails-1440x900.png"
+      }
+    ],
+    "sequenceScreenshotPaths": [
+      "ep03-cutscene-proof/ep03-gaze-390x844.png",
+      "ep03-cutscene-proof/ep03-nails-390x844.png",
+      "ep03-cutscene-proof/ep03-toast-390x844.png"
+    ],
+    "additionalScreenshots": [
+      "ep03-cutscene-proof/ep03-nails-400x844.png",
+      "ep03-cutscene-proof/ep03-nails-1440x900.png"
+    ],
+    "noHorizontalOverflow": true,
+    "reducedMotion": "enabled; key image animation duration 0s and image detail retained",
+    "mobileTouchAndSaveRestore": {
+      "autoAdvanced": true,
+      "skipTapped": true,
+      "autoBeat": 107,
+      "saveRestoreExact": true,
+      "nail": {
+        "cutscene": "clayUnderNails",
+        "objectPosition": "43% 55%",
+        "naturalWidth": 1672,
+        "naturalHeight": 941,
+        "rect": {
+          "x": 0,
+          "y": 101.265625,
+          "width": 390,
+          "height": 489.515625
+        }
+      }
+    },
+    "pageErrors": [],
+    "limitations": [
+      "Managed Chromium blocked file://, so localhost HTTP was used."
+    ]
+  },
+  "offline": {
+    "transport": "localhost HTTP; only play-offline.html allowed",
+    "blockedRequests": 0,
+    "cutscene": "clayUnderNails",
+    "objectPosition": "43% 55%",
+    "imageDimensions": [
+      1672,
+      941
+    ],
+    "screenshot": "ep03-cutscene-proof/ep03-nails-offline-390x844.png",
+    "htmlBytes": 79263350,
+    "htmlSha256": "a5028d5bb1ce3a9c3aca06a30afb416020683f64237446d0a86e75e8de21d1b7",
+    "manifestMatches": true,
+    "storyChapters": 18,
+    "externalScripts": false,
+    "externalStylesheets": false,
+    "buildSourceBeats": 4242,
+    "cutsceneChapters": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "latestFourEmbeddedAssets": [
+      {
+        "source": "assets/cutscenes/ep03-jiwoo-clay-smile.webp",
+        "mime": "image/webp",
+        "bytes": 133336,
+        "sha256": "f7ff200bf296c9475c468026249b26a5259ce9e997e806f0ecf247dea63ee4f4",
+        "variable": "__vnAsset48"
+      },
+      {
+        "source": "assets/cutscenes/ep03-convenience-gaze.webp",
+        "mime": "image/webp",
+        "bytes": 96820,
+        "sha256": "e861d3b4b17892a4062b262ff345d6c2b960bc4c7468f1004269863a3ce1d71f",
+        "variable": "__vnAsset49"
+      },
+      {
+        "source": "assets/cutscenes/ep03-clay-under-nails-washed.webp",
+        "mime": "image/webp",
+        "bytes": 251882,
+        "sha256": "4e90394c219228fd87e436811ef9a58685512ba2246d761b1d6aa3feaf69ab0d",
+        "variable": "__vnAsset50"
+      },
+      {
+        "source": "assets/cutscenes/ep03-convenience-toast.webp",
+        "mime": "image/webp",
+        "bytes": 99636,
+        "sha256": "0562a4eb70e38a70e93ce9b930adc3c3b7920ab5201c11f94d5f62d6961a951e",
+        "variable": "__vnAsset51"
+      }
+    ]
+  },
+  "automatedTests": {
+    "command": "npm test --prefix vn",
+    "passed": 17,
+    "failed": 0
+  },
+  "evidenceIndex": "notes/ep03-cutscene-proof/README.md"
+}

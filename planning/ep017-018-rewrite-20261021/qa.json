@@ -1,0 +1,119 @@
+{
+  "date_kst": "2026-10-21",
+  "base_sha": "5750889439a47b2ff5868cd235a2cf5845e1765c",
+  "branch": "codex/ep017-018-escape-rewrite-20261021",
+  "state": "local_revision_complete_not_published",
+  "author": "main assistant",
+  "files": [
+    {
+      "path": "manuscript/ep017.md",
+      "sha256": "ef30b9829d6fe0d95fb5cbcc7b4e1c3207cb419859fd20c115e54cdf93a90345",
+      "title": "제17화. 나를 판 사람",
+      "body_non_whitespace": 3767
+    },
+    {
+      "path": "manuscript/ep018.md",
+      "sha256": "c6c76ef0ed6ad86a7b65c1a1c4ec59e3437e9950496ebe8eb2c0417ae36aebe9",
+      "title": "제18화. 함께 나가는 조건",
+      "body_non_whitespace": 4046
+    },
+    {
+      "path": "manuscript/ep019.md",
+      "sha256": "526c212353a308751159542c348870b2fffdddc73933c79a174e6661d839c9fc",
+      "title": "제19화. 문 앞에 선 사람",
+      "body_non_whitespace": 4761
+    },
+    {
+      "path": "pilot.html",
+      "sha256": "93cfd50f464c88496c3e61baf951712fc5c9c19537ad6af2007032c24d6e31c1"
+    },
+    {
+      "path": "settings/05-open-questions.md",
+      "sha256": "81fd39287bb34ab9aa50d686564c5b71e4f64c9ff3ce7aded7e6aa4e6b1eb6ae"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "1b06365fb4d07e0d88e2650fb7907f2b2080ce876c1f4c513e37513ecbc2b751"
+    }
+  ],
+  "changes": {
+    "17": "기존 3사의 합법 제안은 유지. 서인이 자기 이름의 가예약금과 정보 제공자를 추적하다 강제 이송과 충돌. 원격 항만 평가 삭제.",
+    "18": "동의 기록 대조→호송 경비의 보류·바퀴 잠금→중개자의 잠금 해제→시설 경비의 승강기 차단→의자 제지·부축·문 개방·계단 이동. R-2 문제 세트 삭제.",
+    "19": "14화 과부하의 띠 설명 명료화, 손목 자국, 다음 현장 방문의 범위·철수 합의만 보강."
+  },
+  "remaining_losses": [
+    "제공자 이름 미확인·원본 복제 기회 상실",
+    "방문 열람 협의 종료·제공자 접촉 중개 철회",
+    "강연우의 다음 주 소개 실제 취소·사전 합의 요구",
+    "오른손목 자국과 통증"
+  ],
+  "preserved_connections": [
+    "14화 오판→15화 회복·사과·도윤 돌봄",
+    "16화 협상·16-1 냉장차 인계·식사",
+    "40분 띠·해제 일정",
+    "04-771 신청→계약 범위 제한 열람→0.8초→등급4/6 간극→다음날7시 참여자4 확인",
+    "19 등급5·20 제한 승인·21~24 후속 선택과 손실"
+  ],
+  "unchanged_verified": [
+    "manuscript/ep014.md",
+    "manuscript/ep015.md",
+    "manuscript/ep015-1.md",
+    "manuscript/ep016.md",
+    "manuscript/ep016-1.md",
+    "manuscript/ep019-1.md",
+    "manuscript/ep019-2.md",
+    "manuscript/ep020.md",
+    "manuscript/ep021.md",
+    "manuscript/ep022.md",
+    "manuscript/ep023.md",
+    "manuscript/ep024.md",
+    "vn/story-data.js"
+  ],
+  "independent_reviews": [
+    {
+      "agent": "/root/episode_replacement_map",
+      "kind": "continuity",
+      "scope": "17~19 및 14~16/19~24 연결",
+      "result": "추가 필수 충돌 없음. 19 띠 설명에 대한 첫 지적은 14 원문 대조 후 검수자가 철회."
+    },
+    {
+      "agent": "/root/episode_threat_plan_review",
+      "kind": "editorial_and_visibility",
+      "result": "초안 지적3건 수정·작은 지칭1건 수정 후 새 필수 결함 없음. 모바일 사진 직접 확인. 실제 버튼 조작은 메인이 수행."
+    }
+  ],
+  "validation": {
+    "manuscript_revision_rounds_after_first_review": 2,
+    "pilot_script_blocks": "1/1 syntax valid",
+    "missing_setpiece_targets": 0,
+    "hook_on_matches": true,
+    "whitespace_diff": "clean",
+    "generated_manifest": "settings16/manuscript93",
+    "mobile_viewport": "400x850",
+    "ui_actions": [
+      "17 연출 발동",
+      "17→18 다음화 실제 클릭",
+      "18 연출 발동",
+      "18 머물러 보기",
+      "18 본문 복귀",
+      "18→19 다음화 실제 클릭 및 제목 확인"
+    ],
+    "browser_error_logs": []
+  },
+  "screenshots": [
+    "planning\\ep017-018-rewrite-20261021\\ep017-rewrite-mobile-20261021.png",
+    "planning\\ep017-018-rewrite-20261021\\ep018-rewrite-mobile-20261021.png"
+  ],
+  "publication": {
+    "commit": false,
+    "push": false,
+    "merge": false,
+    "deploy": false
+  },
+  "limits": [
+    "초독 독자 검수·이탈률 검증·상업성 평가가 아님",
+    "7항목 전체 품질 점수/공개 PASS를 만들지 않음",
+    "VN 별도 대사 스냅샷 및 17~18 새 인물·컷신은 이번 원고 개고에 포함하지 않음",
+    "공식 loop/story-so-far.md와 공개 기록은 main 정본 유지. 이 JSON은 미공개 작업 브랜치 개고 요약."
+  ]
+}

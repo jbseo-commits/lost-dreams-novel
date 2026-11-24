@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-23",
+  "scope": "Four VN-only cuts and decode-safe existing two-frame transition; this is an incremental slice, not a claim that the full 19–22 sequence audit is complete.",
+  "environment": {
+    "browser": "Chromium via Playwright",
+    "fixture": "Internal full-story route fixture; production release.js/core-demo.js were not changed to unlock later chapters.",
+    "publicDemoBuild": {
+      "chapters": 18,
+      "sourceBeats": 4242,
+      "assets": 114,
+      "outputBytes": 79270059,
+      "newVnOnlyImagesPackaged": false,
+      "notesReplacedWithNotice": true
+    }
+  },
+  "newAssets": [
+    {
+      "id": "ep19-1-aftermath",
+      "sourceBeat": "19-1/114",
+      "dimensions": "1672x941",
+      "mime": "image/webp",
+      "sha256": "6eca372d444d9d2bcc9d2ddafd9aad995131362859bb7d12887781ac3d9b160a",
+      "srcPng": "/workspace/generated_images/exec-017c4986-d5db-48cd-8365-2528d8ab0da6.png",
+      "correction": "The first accepted attempt reversed the receiving left hand and weak bruised right wrist; it was rejected after independent review. Corrected version was captured at 400px with full source paragraph."
+    },
+    {
+      "id": "ep21-1-discovery",
+      "sourceBeat": "21-1/71",
+      "dimensions": "1672x941",
+      "mime": "image/webp",
+      "sha256": "d5271ef22c069dd6a7f39e7c76f6319421fe4e2c8f600e2b9fdd302085b2a5a9",
+      "srcPng": "/workspace/generated_images/exec-7f663385-8884-4763-b605-873d74afbac4.png"
+    },
+    {
+      "id": "ep21-1-landing",
+      "sourceBeat": "21-1/82",
+      "dimensions": "1672x941",
+      "mime": "image/webp",
+      "sha256": "112833afe1bbf511f6042c0701a069629254c64586cdd6b18677250351e816e5",
+      "srcPng": "/workspace/generated_images/exec-f87b51b7-47aa-45d2-83f5-95fde9080b25.png"
+    },
+    {
+      "id": "ep22-1-document",
+      "sourceBeat": "22-1/42",
+      "dimensions": "1672x941",
+      "mime": "image/webp",
+      "sha256": "18af42f49d7d0ac8fd5877a41e5dfff4f4565fa740ca9cba2321e8311fddc8f4",
+      "srcPng": "/workspace/generated_images/exec-4b386851-dede-4fff-8750-031106521859.png"
+    }
+  ],
+  "browserChecks": {
+    "viewportWidths": [
+      390,
+      400,
+      1280
+    ],
+    "allImages": {
+      "complete": true,
+      "naturalWidth": 1672,
+      "ancestorOpacity": "1 at all checked ancestors",
+      "chapterTitleAndExactSourceAnchor": "visible in actual app fixture",
+      "exactAnchorTextFullyTypedBeforeCapture": true
+    },
+    "proofFiles": [
+      "ep19-1-aftermath-400.png",
+      "ep19-frame-failure-fallback-390.png",
+      "ep19-manual-target-pending-400.png",
+      "ep21-1-discovery-1280.png",
+      "ep21-1-discovery-390.png",
+      "ep21-1-discovery-400.png",
+      "ep21-1-landing-1280.png",
+      "ep21-1-landing-390.png",
+      "ep21-1-landing-400.png",
+      "ep22-1-document-1280.png",
+      "ep22-1-document-390.png",
+      "ep22-1-document-400.png"
+    ],
+    "slowDecodePair": {
+      "viewport": "390x844",
+      "wristRequestDelayMs": 2200,
+      "firstFrameVisibleWhileLoading": true,
+      "secondFrameHiddenWhileLoading": true,
+      "afterDecodeHoldMs": 1400,
+      "stageHeightBeforeAndAfterPx": [
+        844,
+        844
+      ],
+      "settledFrame": "ep19-wrist-detail",
+      "settled": true
+    },
+    "failedFrameFallback": {
+      "scenario": "ep19-door returned HTTP 404 while ep19-wrist-detail loaded",
+      "result": "decoded wrist detail displayed; failed wide image hidden; no blank stage",
+      "proof": "ep19-frame-failure-fallback-390.png"
+    },
+    "manualTargetWhileCurrentPending": {
+      "viewport": "400x844",
+      "input": "actual tap on the VN frame button",
+      "currentFrame": "ep19-door request remains pending (complete=false)",
+      "targetFrame": "ep19-wrist-detail complete=true",
+      "result": "tap displays wrist detail without waiting for the wide image",
+      "proof": "ep19-manual-target-pending-400.png"
+    },
+    "correctedAftermath400": {
+      "chapter": "19-1/114",
+      "viewport": "400x844",
+      "exactParagraphFullyTyped": true,
+      "imageComplete": true,
+      "naturalWidth": 1672,
+      "hands": "screen-left/right arm hangs weakly with band and bruise; screen-right left hand receives terminal",
+      "proof": "ep19-1-aftermath-400.png"
+    }
+  },
+  "automatedChecks": {
+    "nodeTestFiles": {
+      "command": "node --test vn/episode-cutscenes.test.mjs vn/episode-one-stage.test.mjs vn/release.test.mjs",
+      "result": "3 files passed"
+    },
+    "directCases": {
+      "episodeCutscenes": "10 passed",
+      "episodeOneStage": "6 passed",
+      "release": "3 passed"
+    },
+    "syntax": "node --check vn/episode-one-stage.js and vn/episode-cutscenes.js passed",
+    "diffCheck": "git diff --check passed"
+  },
+  "publicBoundary": {
+    "chapters": 18,
+    "laterChaptersUnlocked": false,
+    "fourNewVnOnlyImagesInPublicBuild": false,
+    "oldWebRescueAssetRetained": true,
+    "notesReviewHtmlReplacedWithNotice": true
+  },
+  "history": "The previous VN ep21-1-rescue image remains in provenance but is superseded at beat 71 because it showed a later crossing action; its Web counterpart remains unchanged.",
+  "provenanceStatus": "This four-cut addition is complete; broader 19–22 sequence audit remains in progress."
+}

@@ -1,0 +1,29 @@
+{
+  "episode": "33",
+  "sha256": "a9c791f7fb32fb56da24ed80ceca6a74219b30d10ace3b820370ee846af35719",
+  "viewport": [
+    400,
+    900
+  ],
+  "body_figures": 0,
+  "body_images": 0,
+  "inline_ids": [],
+  "runtimes": [
+    {
+      "id": "threesec",
+      "inline": false,
+      "method": "direct existing showSp; final snapshot only",
+      "visible": true,
+      "text": "HUMAN ONLY OPEN 2차 · 성인 공개 동의자 하이라이트\n참가자 0512 · 일치도 78%\n인간다움 가산 +6\n참가자 0519 · 일치도 81%\n인간다움 가산 +7\n0512\n0519\n0502\n0526\n쓰다 멈춤 → 지움 → 다시 씀\n네 명 모두 정확히 3초 · 같은 망설임\n택배 조끼 남자의 키보드\n손톱만 한 검은 칩 · “입력 보조 장치요.” “손이 이래서.” · 12 TOKEN\n옆자리 청년도 같은 칩을 만지작거렸다. 그 옆 여자도.\n머물러 보기\n본문으로"
+    },
+    {
+      "id": "humanzero",
+      "inline": false,
+      "method": "direct existing showSp; final snapshot only",
+      "visible": true,
+      "text": "정다은 · 지우지 않음\n엄마한테 물어본다.\n모르겠습니다.\n예.\n일치도 72%\n인간다움 가산 +0\n다은\n“안 지울 거니까요.”\n서인\n“인간다움은 0.” 어머니 “사람이 답했는데?”\n“그럼 사람답지.”\n머물러 보기\n본문으로"
+    }
+  ],
+  "page_errors": [],
+  "horizontal_overflow": false
+}

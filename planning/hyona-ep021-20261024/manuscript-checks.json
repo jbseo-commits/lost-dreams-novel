@@ -1,0 +1,25 @@
+{
+  "episode": "21",
+  "before_body_non_whitespace": 5836,
+  "body_non_whitespace": 5487,
+  "before_sha256": "25a913eb30ddc8f0f017cc15b247b5cadd75dee2d9c6739335b1d3953d4d19dc",
+  "sha256": "de48903972f222ca110dcf124217d86e2b9e66d1073adb73046c459c92f55b79",
+  "revision": 1,
+  "changes": 28,
+  "editorial": "PASS_WITH_FINAL_WHOLE_READ",
+  "continuity": "PASS_CHANGED_AND_LINKED_CONTEXT",
+  "visual": "MAINTAIN_WITH_LIMITS",
+  "source_hook_changes": 1,
+  "images_changed": 0,
+  "tests": {
+    "files": 3,
+    "result": "PASS"
+  },
+  "natural_scroll_trigger_verified": false,
+  "publication": "LOCAL_ONLY",
+  "batch_unit": 1,
+  "last_user_reported_remaining": 76,
+  "estimated_remaining_after_unit": 73,
+  "estimate_rule": "76 minus3 points per completed installment; not live measurement",
+  "prior_edit_history_preserved": true
+}

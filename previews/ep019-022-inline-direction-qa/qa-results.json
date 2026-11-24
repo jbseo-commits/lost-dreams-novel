@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-23",
+  "scope": "Reader inline direction for episodes 19, 19-1, 20, 20-1, 21, 21-1, 22, and 22-1",
+  "browser": {
+    "engine": "Chromium",
+    "executable": "/usr/bin/chromium",
+    "entry": "http://localhost:8765/pilot.html",
+    "network": "Only localhost requests were allowed; external requests were blocked.",
+    "pageErrors": 0,
+    "notes": "After starting the repository-root server, /manifest.json returned HTTP 200. The browser harness emitted one console network-failure message for an intentionally blocked non-local request."
+  },
+  "automatedChecks": {
+    "readerInlineDirectionTests": "11 passed, 0 failed",
+    "nodeCheckReaderInlineDirection": "passed",
+    "pilotSyntax": "passed",
+    "gitDiffCheck": "passed",
+    "manifestBuild": "passed: 16 settings and 92 manuscript files",
+    "bumperOrder": {
+      "exit": 1,
+      "result": "Five existing failures remain, identical to main baseline 43efd49; no failure was introduced by this branch.",
+      "failures": [
+        "ep004-2.md missing: bump file exists and manifest entries",
+        "ep008-1.md hook does not match source verbatim",
+        "ep008-2.md hook does not match source verbatim",
+        "ep008-3.md hook does not match source verbatim"
+      ],
+      "branchComparison": "The initial branch baseline had the same four issues plus a 20-1 hook markdown mismatch. The 20-1 D hook was aligned with the source's **06:00** markup; that check now passes.",
+      "baselineEvidence": [
+        "inline-bumper-baseline.json",
+        "inline-bumper-main-baseline.json"
+      ]
+    }
+  },
+  "independentReview": {
+    "result": "PASS",
+    "reviewedScope": "The eight-episode web prose direction; review was an editorial judgment, not an automated score.",
+    "editorialAssessment": "8/10",
+    "evidenceCompared": "Latest 17 screenshots, browser measurements, and current diff",
+    "requiredChangesRemaining": 0
+  },
+  "browserChecks": {
+    "desktop": {
+      "viewport": "1440x900",
+      "forkComparisonFigureWidth": 560,
+      "visibleAfterRead": true
+    },
+    "mobile390": {
+      "chapterButtonTouchTarget": "46.4x44px",
+      "forkFigureWidth": 326,
+      "alarmTextEffectiveFont": "13.4px",
+      "directionNodeFont": "12px",
+      "horizontalOverflow": false
+    },
+    "mobile400": {
+      "computeBranchFigureWidth": 336,
+      "horizontalOverflow": false
+    },
+    "deliveryAxes": {
+      "shared0700X": 117,
+      "promiseIncludes0700Marker": true,
+      "promiseArrival0600X": 63,
+      "afterSevenUsesOpenEndedTail": true,
+      "afternoonTimesUseSeparateAxis": [
+        "17:06",
+        "17:31",
+        "17:40"
+      ]
+    },
+    "queueOne": {
+      "priorAndIncomingRectanglesAndLabelsMoveTogether": true,
+      "sampleAt900ms": {
+        "priorRectY": 394.79,
+        "priorTextY": 395.09,
+        "incomingRectY": 358.6,
+        "incomingTextY": 358.9
+      }
+    },
+    "twoCells": {
+      "wholeCellFinalOpacity": 0,
+      "splitPanelFinalWidths": [
+        141.26,
+        141.26
+      ]
+    },
+    "alarmStack": {
+      "newRowFinalHeight": 23.54,
+      "effectiveFont": "13.4px",
+      "emptyRailHeight": 0,
+      "fxOffAndReducedMotionEndAtFullState": true
+    },
+    "alarmRename": {
+      "singleOriginalWordSpan": true,
+      "unseenTextRemainsReadable": true,
+      "animationBeforeReading": false,
+      "readingAnimation": "0.65s clip reveal; at 533ms, 21.4% remained clipped",
+      "completedClassAfterAnimation": true,
+      "replayAfterFxOffOn": false,
+      "replayAfterReducedMotionToggle": false,
+      "secondSourceOccurrenceAnimated": false
+    },
+    "dawnTransition": {
+      "labels": 0,
+      "lightBandPixelsAt390": "296.9x10.9",
+      "completedOverlayOpacity": 1,
+      "emptyRailHeight": 0
+    },
+    "computeProgress": {
+      "firstTaskLabel": "71세 남성 수술 전 검사",
+      "sourceValueTransition": "82% to 83%",
+      "svgProgressSamples": [
+        "134.75/200 at about 150ms",
+        "135.71/200 at about 733ms",
+        "136.12/200 at completion"
+      ],
+      "branchAppearsAfterFirst11PublicChecks": true,
+      "branchLabelsIncludeRecoveryAndContinueConditions": true,
+      "pendingFourNotShownBeforeTheirSourceAnchor": true
+    },
+    "motionLifecycle": {
+      "fxOffOnKeepsCompletedGeometry": true,
+      "reducedMotionChangeKeepsCompletedGeometry": true,
+      "noReplayAfterToggle": true
+    }
+  },
+  "presentationChoices": {
+    "noGenericFallbackArt": true,
+    "styledSourceParagraphsWithoutExtraFigures": [
+      "the 3-hour single-use limit",
+      "the 12-minute deadline",
+      "the source's 05:40 and 06:00 phone paragraphs"
+    ],
+    "twoHouseIllustration": "Kept the existing illustration and source paragraphs; no repeated time card was added.",
+    "alarmRename": "The existing '05:40 알람 이름을 바꿨다.' paragraph is emphasized; only the first original '일어나기 / 우유' occurrence receives the reading-timed text reveal.",
+    "readerHookMetadata": "The 20-1 D hook preserves the manuscript's bold markup around 06:00 so the existing verbatim-hook check matches source.",
+    "dawn": "A short local warm-to-cool light band with no explanatory labels or card outline."
+  },
+  "screenshots": [
+    "ep19-fork-desktop.png",
+    "ep19-fork-390.png",
+    "ep19-queue-one-390.png",
+    "ep19-delivery-timeline-390.png",
+    "ep19-promise-390.png",
+    "ep19-after-seven-390.png",
+    "ep19-1-response-timeline-390.png",
+    "ep20-two-cells-390.png",
+    "ep20-1-alarm-motion-390.png",
+    "ep20-1-alarm-name-reveal-390.png",
+    "ep21-1-rescue-390.png",
+    "ep21-1-floor-390.png",
+    "ep21-1-dawn-final-390.png",
+    "ep22-compute-82-390.png",
+    "ep22-compute-83-400.png",
+    "ep22-compute-branch-390.png",
+    "ep22-compute-continue-390.png"
+  ],
+  "sourceIntegrity": {
+    "manuscriptTextChanged": false,
+    "settingsChanged": false,
+    "saveCoordinatesChanged": false,
+    "popupEngineChanged": false,
+    "audioChanged": false,
+    "displayHookMarkupAlignedToSource": true,
+    "manifestTracked": false
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "episode": 106,
+    "body_non_whitespace": 3541,
+    "sha256": "fba2154e98f4ac1c973e940b5d4441a95529893e4a5acc779567f8251b336357",
+    "revision_total": 3,
+    "body_review": "PASS",
+    "direction_review": "UNVERIFIED",
+    "publication": "UNPUBLISHED_CHAIN"
+  },
+  {
+    "episode": 107,
+    "body_non_whitespace": 3665,
+    "sha256": "432953a92fe27eccb76b424b931ecf3544e70954a2b6472ee97bc7e01c056695",
+    "revision_total": 3,
+    "body_review": "PASS",
+    "direction_review": "UNVERIFIED",
+    "publication": "UNPUBLISHED_CHAIN"
+  },
+  {
+    "episode": 108,
+    "body_non_whitespace": 3655,
+    "sha256": "8dd8197aea23eef6e4a6be147b07d234d6b67d04f4155f68f22c208f03d90f25",
+    "revision_total": 2,
+    "body_review": "PASS",
+    "direction_review": "UNVERIFIED",
+    "publication": "UNPUBLISHED_CHAIN"
+  },
+  {
+    "episode": 109,
+    "body_non_whitespace": 3779,
+    "sha256": "b6e221b7bc588a30c7dcfd48fbee7590bf87dd62ba7bc2f0f0727d4429eb4552",
+    "revision_total": 3,
+    "body_review": "PASS",
+    "direction_review": "UNVERIFIED",
+    "publication": "UNPUBLISHED_CHAIN"
+  },
+  {
+    "episode": 110,
+    "body_non_whitespace": 3583,
+    "sha256": "fd606ca9a78f2f6b34b3e175bc590ae33254f43d0ec9fce7b816ac3c6d39463a",
+    "revision_total": 3,
+    "body_review": "PASS",
+    "direction_review": "UNVERIFIED",
+    "publication": "UNPUBLISHED_CHAIN"
+  }
+]
