@@ -1,0 +1,62 @@
+[
+  {
+    "timestamp": "2026-10-15T12:30:10.204Z",
+    "target": "reader1_fast",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:30:13.700Z",
+    "target": "reader2_character",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:30:18.143Z",
+    "target": "reader3_sf",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:37:40.322Z",
+    "target": "reader1_fast",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:37:45.402Z",
+    "target": "reader2_character",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:37:49.599Z",
+    "target": "reader3_sf",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:41:16.490Z",
+    "target": "reader3_sf",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:53:06.847Z",
+    "target": "reader1_fast",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:53:12.825Z",
+    "target": "reader3_sf",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:59:22.901Z",
+    "target": "reader4_relationship",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:59:30.093Z",
+    "target": "reader5_tension",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  },
+  {
+    "timestamp": "2026-10-15T12:59:34.431Z",
+    "target": "reader6_general",
+    "message": "[공개용 사본에서 실행 암호문 제외]"
+  }
+]

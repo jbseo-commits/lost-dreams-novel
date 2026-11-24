@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "completedAtKst": "2026-10-15 22:39:34",
+  "sha": "7699855f8c31519ceaa9da0120b19430579f7548",
+  "readers": 6,
+  "model": "gpt-6.1-sol",
+  "effort": "ultra",
+  "filesPerReader": 125,
+  "mainEpisodes": 105,
+  "bumpers": 20,
+  "unreadPerReader": 0,
+  "firstC": [
+    {
+      "reader": 1,
+      "episode": "7",
+      "line": 399
+    },
+    {
+      "reader": 2,
+      "episode": "42",
+      "line": 351
+    },
+    {
+      "reader": 3,
+      "episode": "25-1",
+      "line": 587
+    },
+    {
+      "reader": 4,
+      "episode": null,
+      "voluntaryTo105": true
+    },
+    {
+      "reader": 5,
+      "episode": "46",
+      "line": 345
+    },
+    {
+      "reader": 6,
+      "episode": "7",
+      "line": 511
+    }
+  ],
+  "remainingAt105": 1,
+  "originalManuscriptsEdited": false,
+  "commitPushPrMergeDeploy": false,
+  "report": "reports/main-report.md"
+}
